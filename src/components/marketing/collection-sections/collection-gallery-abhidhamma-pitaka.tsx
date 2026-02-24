@@ -31,7 +31,7 @@ const collectionTexts = [
         darkColor: "dark:bg-gray-900/75",
     },
     {
-        english_title: "Discoursion of Elements",
+        english_title: "Discurssion of Elements",
         pali_title: "Dhātukathā",
         author_pali: "Buddha Shakyamuni",
         canon: "Systematic Treatises",
