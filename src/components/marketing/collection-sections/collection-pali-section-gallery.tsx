@@ -80,7 +80,7 @@ const PaliSectionCard = ({ section }: { section: PaliSection }) => {
                         <p className="text-sm font-normal pb-2">{section.canon}</p>
                         <h3 className="text-lg font-medium text-brand-200">{section.english_title}</h3>
                     </div>
-                    <p className="mt-2 text-sm md:text-regular text-pretty pb-4">{section.short_description}</p>
+                    <p className="mt-2 text-sm md:text-regular text-balance pb-4">{section.short_description}</p>
                 </div>
 
                 <Button
