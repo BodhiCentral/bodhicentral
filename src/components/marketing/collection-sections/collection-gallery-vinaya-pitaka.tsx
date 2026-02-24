@@ -12,11 +12,11 @@ export const CollectionGalleryVinayaPitaka = () => {
                 <div className="flex w-full flex-col justify-between md:flex-row">
                     <div className="flex flex-1 flex-col max-w-280 pr-4 md:pr-24">
                         <h2 className="text-display-md text-primary md:text-display-lg">Vinaya Piṭaka</h2>
-                        <p className="mt-1 text-base text-tertiary md:mt-2 md:text-lg">
+                        <p className="mt-1 text-base text-tertiary md:mt-2 md:text-lg text-balance">
                             The Vinaya Piṭaka, “the Basket of Monastic Law”, contains the rules that are binding on monastics and the regulations that apply to monastic communities.
                         </p>
                     </div>
-                    <div className="mt-8 flex flex-col gap-3 self-stretch md:mt-0 md:flex-row-reverse md:justify-center md:self-start">
+                    <div className="mt-8 flex flex-col gap-3 self-stretch md:mt-0 md:flex-row-reverse md:justify-center md:self-end">
                         <Button color="secondary" size="xl" iconLeading={Dataflow01}>
                             Vinayapiṭaka Outline
                         </Button>

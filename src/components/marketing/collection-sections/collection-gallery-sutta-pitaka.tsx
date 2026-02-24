@@ -12,11 +12,11 @@ export const CollectionGallerySuttaPitaka = () => {
                 <div className="flex w-full flex-col justify-between md:flex-row">
                     <div className="flex flex-1 flex-col max-w-280 pr-4 md:pr-24">
                         <h2 className="text-display-md text-primary md:text-display-lg">Sutta Piṭaka</h2>
-                        <p className="mt-1 text-base text-tertiary md:mt-2 md:text-lg">
+                        <p className="mt-1 text-base text-tertiary md:mt-2 md:text-lg text-balance">
                             The Sutta Piṭaka, the “basket of discourses,” is the most important body of sacred scripture in Buddhism. This collection contains the teachings of the Buddha and his disciples, as collected and transmitted by the schools of early Buddhism. This is the well-spring of Dhamma, from which the teachings and practices of the many schools of Buddhism are drawn.
                         </p>
                     </div>
-                    <div className="mt-8 flex flex-col gap-3 self-stretch md:mt-0 md:flex-row-reverse md:justify-center md:self-start">
+                    <div className="mt-8 flex flex-col gap-3 self-stretch md:mt-0 md:flex-row-reverse md:justify-center md:self-end">
                         <Button color="secondary" size="xl" iconLeading={Dataflow01}>
                             Suttapiṭaka Outline
                         </Button>
