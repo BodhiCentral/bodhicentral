@@ -43,7 +43,7 @@ const PaliSectionCard = ({ section }: { section: PaliSection }) => {
     return (
         <Carousel.Item
             key={section.id || section.english_title}
-            className="group relative flex aspect-[.5625] w-full max-w-60 flex-col justify-end md:aspect-[.5625] md:max-w-72 drop-shadow-lg border-2 border-orange-300 dark:border-red-950 rounded-xl overflow-hidden hover:scale-[1.03] transition-all duration-300 cursor-pointer"
+            className="group relative flex aspect-[.5625] w-full max-w-64 flex-col justify-end md:aspect-[.5625] md:max-w-76 drop-shadow-lg border-2 border-orange-300 dark:border-red-950 rounded-xl overflow-hidden hover:scale-[1.03] transition-all duration-300 cursor-pointer"
             onClick={() => setIsFlipped(!isFlipped)}
         >
             <img
