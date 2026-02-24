@@ -32,16 +32,16 @@ const PaliSectionCard = ({ section }: { section: PaliSection }) => {
     return (
         <Carousel.Item
             key={section.id || section.english_title}
-            className="group relative flex aspect-[.5625] w-full max-w-56 flex-col justify-end md:aspect-[.5625] md:max-w-68 drop-shadow-lg border-2 border-orange-300 dark:border-red-950 rounded-xl overflow-hidden hover:scale-[1.03] transition-all duration-300 cursor-pointer"
+            className="group relative flex aspect-[.5625] w-full max-w-60 flex-col justify-end md:aspect-[.5625] md:max-w-72 drop-shadow-lg border-2 border-orange-300 dark:border-red-950 rounded-xl overflow-hidden hover:scale-[1.03] transition-all duration-300 cursor-pointer"
             onClick={() => setIsFlipped(!isFlipped)}
         >
             <img
                 alt={section.pali_title}
                 src={section.thumbnail_cover}
-                className={`absolute inset-0 z-0 size-full top-[-1] cursor-grab object-cover rounded-sm transition-all duration-300 ${isFlipped ? "opacity-0 invisible" : "group-hover:opacity-0 group-hover:invisible"}`}
+                className={`absolute inset-0 z-0 size-full top-[-1] cursor-grab object-cover rounded-sm ${isFlipped ? "opacity-0 invisible" : "group-hover:opacity-0 group-hover:invisible"}`}
             />
 
-            <div className={`z-10 bg-linear-to-t from-black/30 to-black/0 pt-16 md:pt-20 lg:pt-24 rounded-b-sm transition-all duration-300 ${isFlipped ? "opacity-0 invisible" : "group-hover:opacity-0 group-hover:invisible"}`}>
+            <div className={`z-10 bg-linear-to-t from-black/30 to-black/0 pt-16 md:pt-20 lg:pt-24 rounded-b-sm ${isFlipped ? "opacity-0 invisible" : "group-hover:opacity-0 group-hover:invisible"}`}>
                 <div className={`relative ${section.color} ${section.dark_color} px-5 pt-5 pb-4 text-white backdrop-blur-[10px] before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-alpha-white/30 md:px-5 rounded-b-sm`}>
                     <h3 className="text-lg font-medium text-brand-200">{section.english_title}</h3>
                     <p className="mt-1 text-lg">{section.pali_title}</p>
@@ -69,7 +69,7 @@ const PaliSectionCard = ({ section }: { section: PaliSection }) => {
                         <p className="text-sm font-normal pb-2">{section.canon}</p>
                         <h3 className="text-lg font-medium text-brand-200">{section.english_title}</h3>
                     </div>
-                    <p className="mt-2 text-sm md:text-regular pb-4">{section.short_description}</p>
+                    <p className="mt-2 text-sm md:text-regular text-pretty pb-4">{section.short_description}</p>
                 </div>
 
                 <Button
