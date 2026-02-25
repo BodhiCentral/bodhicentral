@@ -27,12 +27,14 @@ interface CollectionPaliSectionGalleryProps {
 }
 
 const TAILWIND_COLOR_SAFELIST = [
-    "bg-cyan-950/70", "dark:bg-cyan-900/70",
-    "bg-fuchsia-950/70", "dark:bg-fuchsia-900/70",
-    "bg-red-900/70", "dark:bg-red-900/70",
-    "bg-orange-950/65", "dark:bg-orange-900/70",
-    "bg-yellow-800/70", "dark:bg-yellow-800/70",
-    "bg-emerald-900/70", "dark:bg-emerald-900/70",
+    "bg-cyan-950/70", "dark:bg-cyan-950/70",
+    "bg-blue-950/70", "dark:bg-blue-950/70",
+    "bg-violet-950/70", "dark:bg-violet-950/80",
+    "bg-red-900/80", "dark:bg-red-900/80",
+    "bg-orange-900/80", "dark:bg-orange-900/80",
+    "bg-yellow-900/80", "dark:bg-yellow-900/80",
+    "bg-lime-900/80", "dark:bg-lime-900/80",
+    "bg-emerald-900/80", "dark:bg-emerald-900/80",
     "bg-gray-900/70", "dark:bg-gray-900/70",
     "bg-gray-900/65", "dark:bg-gray-900/75"
 ];
