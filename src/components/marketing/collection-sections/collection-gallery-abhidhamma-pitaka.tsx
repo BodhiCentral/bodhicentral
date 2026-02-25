@@ -17,7 +17,7 @@ export const CollectionGalleryAbhidhammaPitaka = () => {
                             The Abhidhamma Piṭaka, the "basket of systematic treatises," are summaries and analyses of the teachings drawn from the earlier discourses. The Abhidhamma is intended for advanced students who have mastered the teachings of the discourses.
                         </p>
                     </div>
-                    <div className="mt-8 flex flex-col gap-3 self-stretch md:mt-0 md:flex-row-reverse md:justify-center md:self-end">
+                    <div className="mt-8 flex flex-col gap-3 self-stretch md:mt-0 md:flex-row-reverse md:justify-center md:self-center">
                         <Button color="secondary" size="xl" iconLeading={Dataflow01}>
                             Abhidhammapiṭaka Outline
                         </Button>
