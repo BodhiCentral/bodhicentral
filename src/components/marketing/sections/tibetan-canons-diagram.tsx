@@ -10,9 +10,9 @@ export const TibetanCanonsDiagram = () => {
     const [isRowsLayout, setIsRowsLayout] = useState(true);
 
     return (
-        <section className="py-10 md:py-16 bg-linear-to-b from-red-50 to-orange-100 dark:bg-linear-to-b dark:from-gray-900 dark:to-red-950">
+        <section className="py-10 md:py-14 bg-linear-to-b from-red-50 to-orange-100 dark:bg-linear-to-b dark:from-gray-900 dark:to-red-950">
             {/* Section Header */}
-            <div className="mx-auto max-w-container px-4 md:px-8 pb-6">
+            <div className="mx-auto max-w-container px-4 md:px-8 pb-4">
                 <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
                     <span className="text-sm font-semibold text-brand-secondary md:text-md">Tibetan Canons</span>
                     <h2 className="mt-1 text-display-md font-semibold text-primary md:text-display-lg">The Tibetan Canons at a glance</h2>
@@ -20,7 +20,7 @@ export const TibetanCanonsDiagram = () => {
             </div>
 
             {/* Toggle Switch */}
-            <div className="mx-auto max-w-container px-4 md:px-6 pb-4 border-b border-secondary">
+            <div className="mx-auto max-w-container px-4 md:px-6 pb-4">
                 <div className="flex justify-end items-center gap-3">
                     <button
                         onClick={() => setIsRowsLayout(false)}
@@ -46,7 +46,7 @@ export const TibetanCanonsDiagram = () => {
                 </div>
             </div>
 
-            <div className="mt-8 transition-all duration-300">
+            <div className="mt-6 transition-all duration-300">
                 {!isRowsLayout ? (
                     /* Tibetan Canons COLUMNS LAYOUT */
                     <div className="mx-auto max-w-container px-4 md:px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-start animate-in fade-in duration-500">
