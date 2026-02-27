@@ -46,7 +46,7 @@ export const ThreePitakasDiagram = () => {
                 </div>
             </div>
 
-            <div className="mt-6 transition-all duration-300">
+            <div className="mt-4 transition-all duration-300">
                 {!isRowsLayout ? (
                     /* Tipiṭaka Baskets COLUMNS LAYOUT */
                     <div className="mx-auto max-w-container px-4 md:px-6 grid grid-cols-1 md:grid-cols-3 gap-8 items-start animate-in fade-in duration-500">
