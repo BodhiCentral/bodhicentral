@@ -1,7 +1,7 @@
 "use client";
 
 import type { ReactNode } from "react";
-import { useRef, useState } from "react";
+import React, { useRef, useState, isValidElement } from "react";
 import { ChevronDown } from "@untitledui/icons";
 import { Button as AriaButton, Dialog as AriaDialog, DialogTrigger as AriaDialogTrigger, Popover as AriaPopover } from "react-aria-components";
 import { Button } from "@/components/base/buttons/button";
@@ -61,7 +61,7 @@ const MobileNavItem = (props: { className?: string; label: string; href?: string
                     className={cx("size-4 stroke-[2.625px] text-fg-quaternary transition duration-100 ease-linear", isOpen ? "-rotate-180" : "rotate-0")}
                 />
             </button>
-            {isOpen && <div>{props.children}</div>}
+            {isOpen && <div onClick={() => setIsOpen(false)}>{props.children}</div>}
         </li>
     );
 };
@@ -163,7 +163,11 @@ export const Header = ({ items = headerNavItems, isFullWidth, isFloating, classN
                                                             isExiting && !isFullWidth && "duration-150 ease-in animate-out zoom-out-95",
                                                         )}
                                                     >
-                                                        {navItem.menu}
+                                                        {({ close }) =>
+                                                            isValidElement(navItem.menu)
+                                                                ? React.cloneElement(navItem.menu as React.ReactElement<any>, { onClose: close })
+                                                                : navItem.menu
+                                                        }
                                                     </AriaDialog>
                                                 )}
                                             </AriaPopover>

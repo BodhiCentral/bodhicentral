@@ -2,7 +2,7 @@
 
 import type { AnchorHTMLAttributes, ButtonHTMLAttributes, DetailedHTMLProps, FC, ReactNode } from "react";
 import React, { isValidElement } from "react";
-import type { ButtonProps as AriaButtonProps } from "react-aria-components";
+import type { ButtonProps as AriaButtonProps, PressEvent } from "react-aria-components";
 import { Button as AriaButton, Link as AriaLink } from "react-aria-components";
 import { cx, sortCx } from "@/utils/cx";
 import { isReactComponent } from "@/utils/is-react-component";
@@ -152,6 +152,8 @@ export interface CommonProps {
     noTextPadding?: boolean;
     /** When true, keeps the text visible during loading state */
     showTextWhileLoading?: boolean;
+    /** Handler for press event */
+    onPress?: (e: PressEvent) => void;
 }
 
 /**
@@ -181,6 +183,7 @@ export const Button = ({
     isDisabled: disabled,
     isLoading: loading,
     showTextWhileLoading,
+    onPress,
     ...otherProps
 }: Props) => {
     const href = "href" in otherProps ? otherProps.href : undefined;
@@ -198,6 +201,7 @@ export const Button = ({
             ...otherProps,
 
             href: disabled ? undefined : href,
+            onPress,
         };
     } else {
         props = {
@@ -205,6 +209,7 @@ export const Button = ({
 
             type: otherProps.type || "button",
             isPending: loading,
+            onPress,
         };
     }
 

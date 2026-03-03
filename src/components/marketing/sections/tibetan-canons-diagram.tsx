@@ -210,27 +210,27 @@ export const TibetanCanonsDiagram = () => {
                                     <p className="text-lg font-light text-primary/70 text-center tracking-tight">དཀོན་བརྩེགས།</p>
                                     <p className="text-md font-bold text-center text-secondary">Heap of Jewels</p>
                                 </div>
-                                <div className="mx-auto w-full col-span-2 flex flex-col items-center justify-center gap-0 bg-yellow-100/60 dark:bg-yellow-900/40 px-2 py-3 rounded-2xl border border-yellow-300 dark:border-yellow-800">
+                                <div className="mx-auto w-full h-full md:col-span-2 flex flex-col items-center justify-center gap-0 bg-yellow-100/60 dark:bg-yellow-900/40 px-2 py-3 rounded-2xl border border-yellow-300 dark:border-yellow-800">
                                     <p className="text-lg font-light text-primary/70 text-center tracking-tight">མདོ་སྡེ།</p>
                                     <p className="text-md font-bold text-center text-secondary">Sūtra Collection</p>
                                 </div>
-                                <div className="mx-auto w-full flex flex-col items-center justify-center gap-0 bg-red-100/60 dark:bg-red-900/40 px-2 py-3 rounded-2xl border border-red-200 dark:border-red-800">
+                                <div className="mx-auto w-full h-full flex flex-col items-center justify-center gap-0 bg-red-100/60 dark:bg-red-900/40 px-2 py-3 rounded-2xl border border-red-200 dark:border-red-800">
                                     <p className="text-lg font-light text-primary/70 text-center tracking-tight">རྒྱུད་འབུམ།</p>
                                     <p className="text-md font-bold text-center text-secondary">Tantra Collection</p>
                                 </div>
-                                <div className="mx-auto w-full flex flex-col items-center justify-center gap-0 bg-red-100/60 dark:bg-red-900/40 px-2 py-3 rounded-2xl border border-red-200 dark:border-red-800">
+                                <div className="mx-auto w-full h-full flex flex-col items-center justify-center gap-0 bg-red-100/60 dark:bg-red-900/40 px-2 py-3 rounded-2xl border border-red-200 dark:border-red-800">
                                     <p className="text-lg font-light text-primary/70 text-center tracking-tight">རྙིང་རྒྱུད།</p>
                                     <p className="text-md font-bold text-center text-secondary">Nyingma Tantra</p>
                                 </div>
-                                <div className="mx-auto w-full flex flex-col items-center justify-center gap-0 bg-red-100/60 dark:bg-red-900/40 px-2 py-3 rounded-2xl border border-red-200 dark:border-red-800">
+                                <div className="mx-auto w-full h-full flex flex-col items-center justify-center gap-0 bg-red-100/60 dark:bg-red-900/40 px-2 py-3 rounded-2xl border border-red-200 dark:border-red-800">
                                     <p className="text-lg font-light text-primary/70 text-center tracking-tight">དུས་འཁོར་འགྲེལ་བཤད།</p>
                                     <p className="text-md font-bold text-center text-secondary">Wheel of Time Commentary</p>
                                 </div>
-                                <div className="mx-auto w-full flex flex-col items-center justify-center gap-0 bg-green-100/60 dark:bg-green-900/40 px-2 py-3 rounded-2xl border border-green-200 dark:border-green-800">
+                                <div className="mx-auto w-full h-full flex flex-col items-center justify-center gap-0 bg-green-100/60 dark:bg-green-900/40 px-2 py-3 rounded-2xl border border-green-200 dark:border-green-800">
                                     <p className="text-lg font-light text-primary/70 text-center tracking-tight">གཟུངས་འབུམ།</p>
                                     <p className="text-md font-bold text-center text-secondary">Dhāraṇī Collection</p>
                                 </div>
-                                <div className="mx-auto w-full flex flex-col items-center justify-center gap-0 bg-gray-200/60 dark:bg-gray-700/60 px-2 py-3 rounded-2xl border border-gray-300 dark:border-gray-600">
+                                <div className="mx-auto w-full h-full flex flex-col items-center justify-center gap-0 bg-gray-200/60 dark:bg-gray-700/60 px-2 py-3 rounded-2xl border border-gray-300 dark:border-gray-600">
                                     <p className="text-lg font-light text-primary/70 text-center tracking-tight">བཀའ་འགྱུར་དཀར་ཆག</p>
                                     <p className="text-md font-bold text-center text-secondary">Kangyur Catalog</p>
                                 </div>
@@ -251,55 +251,55 @@ export const TibetanCanonsDiagram = () => {
                                 </div>
                             </div>
                             <div className="mx-auto w-full grid grid-cols-1 md:grid-cols-5 gap-2 items-start justify-center rounded-3xl mt-2">
-                                <div className="mx-auto w-full flex flex-col items-center justify-center gap-0 bg-mist-200/70 dark:bg-mist-800/60 px-2 py-3 rounded-2xl border border-mist-200 dark:border-mist-700">
+                                <div className="mx-auto w-full h-full flex flex-col items-center justify-start gap-0 bg-mist-200/70 dark:bg-mist-800/60 px-2 py-3 rounded-2xl border border-mist-200 dark:border-mist-700">
                                     <p className="text-lg font-light text-primary/70 text-center">བསྟོད་ཚོགས།</p>
                                     <p className="text-md font-bold text-center text-secondary">Praises to Buddhas & Deties</p>
                                 </div>
-                                <div className="mx-auto w-full flex flex-col items-center justify-center gap-0 bg-red-100/60 dark:bg-red-900/40 px-2 py-3 rounded-2xl border border-red-200 dark:border-red-800">
+                                <div className="mx-auto w-full h-full flex flex-col items-center justify-start gap-0 bg-red-100/60 dark:bg-red-900/40 px-2 py-3 rounded-2xl border border-red-200 dark:border-red-800">
                                     <p className="text-lg font-light text-primary/70 text-center">རྒྱུད།</p>
                                     <p className="text-md font-bold text-center text-secondary">Tantra Treatises</p>
                                 </div>
-                                <div className="mx-auto w-full flex flex-col items-center justify-center gap-0 bg-yellow-100/60 dark:bg-yellow-900/40 px-2 py-3 rounded-2xl border border-yellow-300 dark:border-yellow-800">
+                                <div className="mx-auto w-full h-full flex flex-col items-center justify-start gap-0 bg-yellow-100/60 dark:bg-yellow-900/40 px-2 py-3 rounded-2xl border border-yellow-300 dark:border-yellow-800">
                                     <p className="text-lg font-light text-primary/70 text-center">ཤེས་ཕྱིན།</p>
                                     <p className="text-md font-bold text-center text-secondary">Perfection of Wisdom</p>
                                 </div>
-                                <div className="mx-auto w-full flex flex-col items-center justify-center gap-0 bg-yellow-100/60 dark:bg-yellow-900/40 px-2 py-3 rounded-2xl border border-yellow-300 dark:border-yellow-800">
+                                <div className="mx-auto w-full h-full flex flex-col items-center justify-start gap-0 bg-yellow-100/60 dark:bg-yellow-900/40 px-2 py-3 rounded-2xl border border-yellow-300 dark:border-yellow-800">
                                     <p className="text-lg font-light text-primary/70 text-center">དབུ་མ།</p>
                                     <p className="text-md font-bold text-center text-secondary">Middle Way</p>
                                 </div>
-                                <div className="mx-auto w-full flex flex-col items-center justify-center gap-0 bg-yellow-100/60 dark:bg-yellow-900/40 px-2 py-3 rounded-2xl border border-yellow-300 dark:border-yellow-800">
+                                <div className="mx-auto w-full h-full flex flex-col items-center justify-start gap-0 bg-yellow-100/60 dark:bg-yellow-900/40 px-2 py-3 rounded-2xl border border-yellow-300 dark:border-yellow-800">
                                     <p className="text-lg font-light text-primary/70 text-center">མདོ་འགྲེལ།</p>
                                     <p className="text-md font-bold text-center text-secondary">Sūtra Commentaries</p>
                                 </div>
-                                <div className="mx-auto w-full flex flex-col items-center justify-center gap-0 bg-yellow-100/60 dark:bg-yellow-900/40 px-2 py-3 rounded-2xl border border-yellow-300 dark:border-yellow-800">
+                                <div className="mx-auto w-full h-full flex flex-col items-center justify-start gap-0 bg-yellow-100/60 dark:bg-yellow-900/40 px-2 py-3 rounded-2xl border border-yellow-300 dark:border-yellow-800">
                                     <p className="text-lg font-light text-primary/70 text-center">སེམས་ཙམ།</p>
                                     <p className="text-md font-bold text-center text-secondary">Mind Only</p>
                                 </div>
-                                <div className="mx-auto w-full flex flex-col items-center justify-center gap-0 bg-orange-100/60 dark:bg-orange-900/40 px-2 py-3 rounded-2xl border border-orange-200 dark:border-orange-800">
+                                <div className="mx-auto w-full h-full flex flex-col items-center justify-start gap-0 bg-orange-100/60 dark:bg-orange-900/40 px-2 py-3 rounded-2xl border border-orange-200 dark:border-orange-800">
                                     <p className="text-lg font-light text-primary/70 text-center">མངོན་པ།</p>
                                     <p className="text-md font-bold text-center text-secondary">Abhidharma</p>
                                 </div>
-                                <div className="mx-auto w-full flex flex-col items-center justify-center gap-0 bg-blue-100/60 dark:bg-blue-800/40 px-2 py-3 rounded-2xl border border-blue-200 dark:border-blue-700">
+                                <div className="mx-auto w-full h-full flex flex-col items-center justify-start gap-0 bg-blue-100/60 dark:bg-blue-800/40 px-2 py-3 rounded-2xl border border-blue-200 dark:border-blue-700">
                                     <p className="text-lg font-light text-primary/70 text-center">འདུལ་བ།</p>
                                     <p className="text-md font-bold text-center text-secondary">Discipline</p>
                                 </div>
-                                <div className="mx-auto w-full flex flex-col items-center justify-center gap-0 bg-olive-200/70 dark:bg-olive-800/40 px-2 py-3 rounded-2xl border border-olive-300 dark:border-olive-700">
+                                <div className="mx-auto w-full h-full flex flex-col items-center justify-start gap-0 bg-olive-200/70 dark:bg-olive-800/40 px-2 py-3 rounded-2xl border border-olive-300 dark:border-olive-700">
                                     <p className="text-lg font-light text-primary/70 text-center">སྐྱེས་རབས།</p>
                                     <p className="text-md font-bold text-center text-secondary">Buddha's previous lives</p>
                                 </div>
-                                <div className="mx-auto w-full flex flex-col items-center justify-center gap-0 bg-olive-200/70 dark:bg-olive-800/40 px-2 py-3 rounded-2xl border border-olive-300 dark:border-olive-700">
+                                <div className="mx-auto w-full h-full flex flex-col items-center justify-start gap-0 bg-olive-200/70 dark:bg-olive-800/40 px-2 py-3 rounded-2xl border border-olive-300 dark:border-olive-700">
                                     <p className="text-lg font-light text-primary/70 text-center">སྤྲིང་ཡིག</p>
                                     <p className="text-md font-bold text-center text-secondary">Epistles</p>
                                 </div>
-                                <div className="mx-auto w-full flex flex-col items-center justify-center gap-0 bg-olive-200/70 dark:bg-olive-800/40 px-2 py-3 rounded-2xl border border-olive-300 dark:border-olive-700">
+                                <div className="mx-auto w-full h-full flex flex-col items-center justify-start gap-0 bg-olive-200/70 dark:bg-olive-800/40 px-2 py-3 rounded-2xl border border-olive-300 dark:border-olive-700">
                                     <p className="text-lg font-light text-primary/70 text-center">ཚད་མ།</p>
                                     <p className="text-md font-bold text-center text-secondary">Valid Cognition</p>
                                 </div>
-                                <div className="mx-auto w-full col-span-3 flex flex-col items-center justify-center gap-0 bg-violet-200/60 dark:bg-violet-800/40 px-2 py-3 rounded-2xl border border-violet-200 dark:border-violet-700">
+                                <div className="mx-auto w-full h-full md:col-span-3 flex flex-col items-center justify-start gap-0 bg-violet-200/60 dark:bg-violet-800/40 px-2 py-3 rounded-2xl border border-violet-200 dark:border-violet-700">
                                     <p className="text-lg font-light text-primary/70 text-center">སྒྲ་མདོ། གསོ་བ་རིག་པ། བཟོ་རིག་པ། ཐུན་མོང་བ་ལུགས་ཀྱི་བསྟན་བཅོས། བསྟན་བཅོས་སྣ་ཚོགས།</p>
                                     <p className="text-md font-bold text-center text-secondary">Linguistics, Medicine, Arts, Secular Ethics, and various texts</p>
                                 </div>
-                                <div className="mx-auto w-full flex flex-col items-center justify-center gap-0 bg-gray-200/60 dark:bg-gray-700/60 px-2 py-3 rounded-2xl border border-gray-300 dark:border-gray-600">
+                                <div className="mx-auto w-full h-full flex flex-col items-center justify-start gap-0 bg-gray-200/60 dark:bg-gray-700/60 px-2 py-3 rounded-2xl border border-gray-300 dark:border-gray-600">
                                     <p className="text-lg font-light text-primary/70 text-center">བསྟན་འགྱུར་དཀར་ཆག</p>
                                     <p className="text-md font-bold text-center text-secondary">Tengyur Catalog</p>
                                 </div>

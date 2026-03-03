@@ -67,7 +67,7 @@ const columns: MenuColumn[] = [
     },
 ];
 
-export const DropdownMenuResources = () => {
+export const DropdownMenuResources = ({ onClose }: { onClose?: () => void }) => {
     return (
         <div className="px-3 pb-2 md:max-w-200 md:p-0">
             <nav className="overflow-hidden md:overflow-visible rounded-xl bg-brand-100 dark:bg-brand-900 drop-shadow-lg ring-1 ring-secondary_alt md:rounded-3xl md:drop-shadow-2xl dark:md:drop-shadow-gray-900">
@@ -87,7 +87,7 @@ export const DropdownMenuResources = () => {
                                     { title: "Explore Dashboard", href: "#" },
                                 ].map((item) => (
                                     <li key={item.title}>
-                                        <Button href={item.href} color="link-gray" size="lg">
+                                        <Button href={item.href} color="link-gray" size="lg" onPress={onClose}>
                                             {item.title}
                                         </Button>
                                     </li>
@@ -113,13 +113,13 @@ export const DropdownMenuResources = () => {
                 </div>
 
                 <div className="mx-auto flex max-w-container flex-col px-4 py-5 md:flex-row md:items-center md:justify-between md:px-6">
-                    <Button href="#" color="secondary" size="md" iconLeading={BookOpen01} className="hidden md:flex">
+                    <Button href="#" color="secondary" size="md" iconLeading={BookOpen01} className="hidden md:flex" onPress={onClose}>
                         Dashboard
                     </Button>
-                    <Button href="/my-desk" color="primary" size="md" className="hidden md:flex">
+                    <Button href="/my-desk" color="primary" size="md" className="hidden md:flex" onPress={onClose}>
                         My Desk
                     </Button>
-                    <Button href="/my-desk" color="primary" size="sm" className="md:hidden">
+                    <Button href="/my-desk" color="primary" size="sm" className="md:hidden" onPress={onClose}>
                         My Desk
                     </Button>
                 </div>
