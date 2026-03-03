@@ -172,42 +172,43 @@ interface LinkProps extends CommonProps, DetailedHTMLProps<Omit<AnchorHTMLAttrib
 /** Union type of button and link props */
 export type Props = ButtonProps | LinkProps;
 
-export const Button = ({
-    size = "sm",
-    color = "primary",
-    children,
-    className,
-    noTextPadding,
-    iconLeading: IconLeading,
-    iconTrailing: IconTrailing,
-    isDisabled: disabled,
-    isLoading: loading,
-    showTextWhileLoading,
-    onPress,
-    ...otherProps
-}: Props) => {
-    const href = "href" in otherProps ? otherProps.href : undefined;
+export const Button = (props: Props) => {
+    const {
+        size = "sm",
+        color = "primary",
+        children,
+        className,
+        noTextPadding,
+        iconLeading: IconLeading,
+        iconTrailing: IconTrailing,
+        isDisabled: disabled,
+        isLoading: loading,
+        showTextWhileLoading,
+        onPress,
+        ...otherProps
+    } = props;
+    const href = "href" in props ? props.href : undefined;
     const Component = href ? AriaLink : AriaButton;
 
     const isIcon = (IconLeading || IconTrailing) && !children;
-    const isLinkType = ["link-gray", "link-color", "link-destructive"].includes(color);
+    const isLinkType = (["link-gray", "link-color", "link-destructive"] as string[]).includes(color);
 
-    noTextPadding = isLinkType || noTextPadding;
+    const effectiveNoTextPadding = isLinkType || noTextPadding;
 
-    let props = {};
+    let componentProps = {};
 
     if (href) {
-        props = {
+        componentProps = {
             ...otherProps,
 
             href: disabled ? undefined : href,
             onPress,
         };
     } else {
-        props = {
+        componentProps = {
             ...otherProps,
 
-            type: otherProps.type || "button",
+            type: (otherProps as ButtonProps).type || "button",
             isPending: loading,
             onPress,
         };
@@ -217,7 +218,7 @@ export const Button = ({
         <Component
             data-loading={loading ? true : undefined}
             data-icon-only={isIcon ? true : undefined}
-            {...props}
+            {...componentProps}
             isDisabled={disabled}
             className={cx(
                 styles.common.root,
@@ -258,7 +259,7 @@ export const Button = ({
             )}
 
             {children && (
-                <span data-text className={cx("transition-inherit-all", !noTextPadding && "px-0.5")}>
+                <span data-text className={cx("transition-inherit-all", !effectiveNoTextPadding && "px-0.5")}>
                     {children}
                 </span>
             )}

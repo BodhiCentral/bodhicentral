@@ -29,7 +29,7 @@ export default function TheravadaTraditionPage() {
                                     <Image src="/thai-ornament-top-linear-logo.png" alt="thai ornament" width={100} height={100} className="hidden md:block mix-blend-multiply drop-shadow-xs drop-shadow-black/90 dark:drop-shadow-black/50 opacity-70" />
                                     <h2 className="text-display-sm text-primary text-center py-2">Vinaya Piṭaka</h2>
                                     <p className="text-md text-tertiary text-center pb-4">The first basket of the Pali Canon, containing the rules and regulations for monks and nuns.</p>
-                                    <Button color="secondary" size="sm">
+                                    <Button href="/canon-overviews/vinaya-overview" color="secondary" size="sm">
                                         Overview
                                     </Button>
                                 </div>
