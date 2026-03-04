@@ -109,7 +109,7 @@ export const DropdownMenuScripture = ({ onClose }: { onClose?: () => void }) => 
                 </div>
 
                 <div className="mx-auto flex max-w-container flex-col px-4 py-5 md:flex-row md:items-center md:justify-between md:px-6">
-                    <Button href="#" color="secondary" size="md" iconLeading={BookOpen01} className="hidden md:flex" onPress={onClose}>
+                    <Button href="/settings" color="secondary" size="md" iconLeading={BookOpen01} className="hidden md:flex" onPress={onClose}>
                         Dashboard
                     </Button>
                     <Button href="/my-desk" color="primary" size="md" className="hidden md:flex" onPress={onClose}>
