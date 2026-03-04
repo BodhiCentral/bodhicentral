@@ -73,7 +73,7 @@ const ContentSplitImage01 = () => {
                                     { title: "Structure", href: "#structure", indent: "ml-0" },
                                     { title: "Canonicity of the Suttas", href: "#canonicity-of-the-suttas", indent: "ml-0" },
                                     { title: "Suttas in the Buddhist Traditions", href: "#suttas-in-the-buddhist-traditions", indent: "ml-0" },
-                                    { title: "Modern Reform and Postmodern Criticism", href: "#structure", indent: "ml-0" },
+                                    { title: "Modern Reform and Postmodern Criticism", href: "#modern-reform-and-postmodern-criticism", indent: "ml-0" },
                                     { title: "Translations", href: "#translations", indent: "ml-0" },
                                 ].map((item) => (
                                     <li key={item.title} className={item.indent}>
@@ -203,16 +203,16 @@ const ContentSplitImage01 = () => {
 
                             <h2 id="structure">Structure</h2>
                             <p>
-                                In the Buddha’s forty-five years of teaching, he was mainly concerned to address the person or people he was with, to appease their suffering. Thus he was not concerned with creating a overarching canon of his teachings. However, he did give some indications of a broader system of classifying the teachings. Sometimes he mentioned certain doctrinal formulations as the central content of his teachings—the four noble truths, or the sets of teachings on practice that came to be known as the bodhipakkhiyā dhammā, the “things leading to awakening”. These sets of doctrines form the backbone of the Saṁyutta Nikāya. He also mentioned an organization by literary style, known as the aṅgas or “branches”. While the Pali texts mention nine aṅgas, the northern texts typically mention twelve, and there is some indication that originally there may have been only three or four.
+                                In the Buddha’s forty-five years of teaching, he was mainly concerned to address the person or people he was with, to appease their suffering. Thus he was not concerned with creating a overarching canon of his teachings. However, he did give some indications of a broader system of classifying the teachings. Sometimes he mentioned certain doctrinal formulations as the central content of his teachings—the four noble truths, or the sets of teachings on practice that came to be known as the <i>bodhipakkhiyā dhammā</i>, the “things leading to awakening”. These sets of doctrines form the backbone of the Saṁyutta Nikāya. He also mentioned an organization by literary style, known as the <i>aṅgas</i> or “branches”. While the Pali texts mention nine aṅgas, the northern texts typically mention twelve, and there is some indication that originally there may have been only three or four.
                             </p>
                             <p>
-                                Regardless of how the texts were organized in the Buddha’s life, early on the schools reorganized the texts in the system of nikāyas or āgamas as we have them today. (The term nikāya, a “collection” or “group”, is preferred in the Theravādin context, while the northern tradition usually used āgama, which has the sense of a “tradition” or “transmission”; however, these usages are not specific and may be used in any tradition.) This reorganization may well have started from the First Council, or at any rate, not much later. The primary motive was to arrange the collection into more manageable sections in order to facilitate memorization. The nikāyas were not absolute or fixed categories, but standards or templates which the different branches implemented in their own way.
+                                Regardless of how the texts were organized in the Buddha’s life, early on the schools reorganized the texts in the system of <i>nikāyas</i> or <i>āgamas</i> as we have them today. (The term <i>nikāya</i>, a “collection” or “group”, is preferred in the Theravādin context, while the northern tradition usually used <i>āgama</i>, which has the sense of a “tradition” or “transmission”; however, these usages are not specific and may be used in any tradition.) This reorganization may well have started from the First Council, or at any rate, not much later. The primary motive was to arrange the collection into more manageable sections in order to facilitate memorization. The <i>nikāyas</i> were not absolute or fixed categories, but standards or templates which the different branches implemented in their own way.
                             </p>
                             <p>
-                                Each of the schools seems to have had main four nikāyas. The sequence of these is not fixed. The form adopted on SuttaCentral is the well-known sequence as used in the Pali tradition. In other schools, as implied by the accounts of the First Council, the collections were in different orders, such as placing the Saṁyutta first. Note that in the Chinese canon, the editors of the Taishō edition rearranged their material under the influence of the Pali canon to adopt the same sequence.
+                                Each of the schools seems to have had main four <i>nikāyas</i>. The sequence of these is not fixed. The form adopted on SuttaCentral is the well-known sequence as used in the Pali tradition. In other schools, as implied by the accounts of the First Council, the collections were in different orders, such as placing the Saṁyutta first. Note that in the Chinese canon, the editors of the Taishō edition rearranged their material under the influence of the Pali canon to adopt the same sequence.
                             </p>
                             <p>
-                                Each of the nikāyas includes material that was edited and arranged, and sometimes added to, over a period of time. While each collection contains some unique texts, for the most part the differences in the number of discourses is simply due to the fact that a given discourse may be assigned a different place in different collections.
+                                Each of the <i>nikāyas</i> includes material that was edited and arranged, and sometimes added to, over a period of time. While each collection contains some unique texts, for the most part the differences in the number of discourses is simply due to the fact that a given discourse may be assigned a different place in different collections.
                             </p>
                             <ul>
                                 <li><strong>Long:</strong> A collection of the “long” discourses. The Dīgha has more elaborate literary ambitions than the remaining texts, and one of its aims seems to have been the conversion of brahmins, an educated class used to sophisticated literature. The Pali Dīgha Nikāya (DN) has 34 discourses, the Chinese (Dharmagupta) Dīrghāgama (DA) has 30. An old Sanskrit manuscript of the Sarvāstivādins, largely unpublished, indicates that their collection contained 47 discourses. In addition, there are a number of individual Dīrgha discourses preserved in Chinese translation.</li>
@@ -221,47 +221,49 @@ const ContentSplitImage01 = () => {
                                 <li><strong>Numbered:</strong> The “numbered” or “numerical” discourses are usually known as Aṅguttara Nikāya in Pali. However, the Pali tradition also knows the form Ekottara (“one-up” or “incremental”), and this is the form usually found in the northern collections. These collections organize texts in numbered sets, from one to eleven. Compared to the other nikāyas, they are more oriented to the lay community. The Ekottarikāgama (EA) in Chinese is a highly unusual text, which features a range of variations within itself when it comes even to basic doctrines. It shares considerably less in common with the Pali Aṅguttara than the other collections do with their counterparts. In addition, there is a partial Ekottarikāgama in Chinese, as well as a variety of individual discourses and fragments in Chinese and Sanskrit.</li>
                             </ul>
                             {/* Vinaya Piṭaka */}
-                            <div className="flex flex-col bg-secondary px-6 py-4 gap-2 rounded-4xl drop-shadow-sm">
-                                <div className="flex flex-row items-center justify-between gap-4">
-                                    <h4 className="text-display-xs text-brand-700 dark:text-brand-700/80">Vinaya Piṭaka</h4>
-                                    <div className="flex flex-col gap-3 md:justify-center pb-1">
-                                        <Button color="secondary" size="sm" iconLeading={Dataflow01}>
-                                            Outline
-                                        </Button>
+                            <figure>
+                                <div className="flex flex-col bg-secondary px-6 py-4 gap-2 rounded-4xl drop-shadow-sm">
+                                    <div className="flex flex-row items-center justify-between gap-4">
+                                        <h4 className="not-prose text-display-xs text-brand-700 dark:text-brand-700/80">Vinaya Piṭaka</h4>
+                                        <div className="flex flex-col gap-3 md:justify-center pb-1">
+                                            <Button color="secondary" size="sm" iconLeading={Dataflow01}>
+                                                Outline
+                                            </Button>
+                                        </div>
+                                    </div>
+                                    <div className="mx-auto w-full flex flex-row flex-wrap md:flex-nowrap items-center justify-center gap-2 rounded-3xl">
+                                        <div className="mx-auto w-full flex flex-col items-center justify-center gap-0 bg-red-100/60 dark:bg-red-950/80 px-2 py-4 rounded-2xl border border-red-200 dark:border-red-800">
+                                            <p className="not-prose text-md font-light text-primary/70 text-center">Suttavibhaṅga</p>
+                                            <p className="not-prose text-md font-bold text-center text-secondary">Rules and Their Analysis</p>
+                                        </div>
+                                        <div className="mx-auto w-full flex flex-col items-center justify-center gap-0 bg-orange-100/60 dark:bg-orange-950/80 px-2 py-4 rounded-2xl border border-orange-200 dark:border-orange-800">
+                                            <p className="not-prose text-md font-light text-primary/70 text-center">Khandhakas</p>
+                                            <p className="not-prose text-md font-bold text-center text-secondary">Chapters on Legal Topics</p>
+                                        </div>
+                                        <div className="mx-auto w-full flex flex-col items-center justify-center gap-0 bg-yellow-100/60 dark:bg-yellow-950/80 px-2 py-4 rounded-2xl border border-yellow-200 dark:border-yellow-800">
+                                            <p className="not-prose text-md font-light text-primary/70 text-center">Parivāra</p>
+                                            <p className="not-prose text-md font-bold text-center text-secondary">The Compendium</p>
+                                        </div>
                                     </div>
                                 </div>
-                                <div className="mx-auto w-full flex flex-row flex-wrap md:flex-nowrap items-center justify-center gap-2 rounded-3xl">
-                                    <div className="mx-auto w-full flex flex-col items-center justify-center gap-0 bg-red-100/60 dark:bg-red-950/80 px-2 py-4 rounded-2xl border border-red-200 dark:border-red-800">
-                                        <p className="not-prose text-md font-light text-primary/70 text-center">Suttavibhaṅga</p>
-                                        <p className="not-prose text-md font-bold text-center text-secondary">Rules and Their Analysis</p>
-                                    </div>
-                                    <div className="mx-auto w-full flex flex-col items-center justify-center gap-0 bg-orange-100/60 dark:bg-orange-950/80 px-2 py-4 rounded-2xl border border-orange-200 dark:border-orange-800">
-                                        <p className="not-prose text-md font-light text-primary/70 text-center">Khandhakas</p>
-                                        <p className="not-prose text-md font-bold text-center text-secondary">Chapters on Legal Topics</p>
-                                    </div>
-                                    <div className="mx-auto w-full flex flex-col items-center justify-center gap-0 bg-yellow-100/60 dark:bg-yellow-950/80 px-2 py-4 rounded-2xl border border-yellow-200 dark:border-yellow-800">
-                                        <p className="not-prose text-md font-light text-primary/70 text-center">Parivāra</p>
-                                        <p className="not-prose text-md font-bold text-center text-secondary">The Compendium</p>
-                                    </div>
-                                </div>
-                            </div>
+                            </figure>
                             <p>
-                                The four nikāyas in Pali are a highly integrated corpus of texts, and we continually find passages, teachings, and phrases that are shared throughout. It is possible to discern differences in emphasis and orientation between them, but this should not obscure the fact that the bulk of the main doctrines are shared. Lacking complete sets of āgamas from other schools, it is hard to know for sure that their collections were similarly integrated, but it seems likely that this was the case.
+                                The four <i>nikāyas</i> in Pali are a highly integrated corpus of texts, and we continually find passages, teachings, and phrases that are shared throughout. It is possible to discern differences in emphasis and orientation between them, but this should not obscure the fact that the bulk of the main doctrines are shared. Lacking complete sets of <i>āgamas</i> from other schools, it is hard to know for sure that their collections were similarly integrated, but it seems likely that this was the case.
                             </p>
                             <p>
-                                Early discourses that were not included in the nikāyas were gathered by the Pali tradition into their Khuddaka or “minor” collection. It’s not entirely clear why these weren’t simply included in the four nikāyas; originally it may have simply been a matter of organizational convenience. The Pali has six works in the Khuddaka that are considered to belong to the early period. These mostly consist of verse, with some narrative and doctrinal material in prose.
+                                Early discourses that were not included in the <i>nikāyas</i> were gathered by the Pali tradition into their Khuddaka or “minor” collection. It’s not entirely clear why these weren’t simply included in the four <i>nikāyas</i>; originally it may have simply been a matter of organizational convenience. The Pali has six works in the Khuddaka that are considered to belong to the early period. These mostly consist of verse, with some narrative and doctrinal material in prose.
                             </p>
                             <ul>
-                                <li><strong>Dhammapada</strong>: A collection of 423 verses on ethics and Buddhist doctrine.</li>
-                                <li><strong>Udāna</strong>: A collection of 399 verses on ethics and Buddhist doctrine.</li>
-                                <li><strong>Itivuttaka</strong>: A collection of 70 discourses in verse, including some of the earliest texts in the Pali Canon.</li>
-                                <li><strong>Sutta Nipāta</strong>: A collection of 264 verses by early monks.</li>
-                                <li><strong>Theragāthā</strong>: A collection of 305 verses by early nuns.</li>
-                                <li><strong>Therīgāthā</strong>: A collection of 305 verses by early nuns.</li>
+                                <li>Dhammapada</li>
+                                <li>Udāna</li>
+                                <li>Itivuttaka</li>
+                                <li>Sutta Nipāta</li>
+                                <li>Theragāthā</li>
+                                <li>Therīgāthā</li>
                             </ul>
 
                             <p>
-                                While these texts are considered early, they are on the whole probably a little later than the main nikāyas. Certain chapters of the Sutta Nipāta have often been regarded as an especially early and authentic portion of the canon, but this should not be over-interpreted. Other parts of the Sutta Nipāta are clearly late. And there is nothing in the early portions to indicate that they are earlier than the bulk of the prose discourses.
+                                While these texts are considered early, they are on the whole probably a little later than the main <i>nikāyas</i>. Certain chapters of the Sutta Nipāta have often been regarded as an especially early and authentic portion of the canon, but this should not be over-interpreted. Other parts of the Sutta Nipāta are clearly late. And there is nothing in the early portions to indicate that they are earlier than the bulk of the prose discourses.
                             </p>
                             <p>
                                 The collection seems to have been considered an open one until quite a late date. The Burmese recension of the Pali canon even includes the Milindapañha, a text that could not have been written less than three hundred years after the Buddha’s passing.
@@ -284,48 +286,74 @@ const ContentSplitImage01 = () => {
                             <p>
                                 So while we can say that the early Discourses are in principle considered canonical generally, for practical purposes each of the schools has a specific set of early Discourses found in their own canon.
                             </p>
-                            <h2 id="modern-perspectives">Modern Perspectives</h2>
+                            <h2 id="suttas-in-the-buddhist-traditions">Suttas in the Buddhist Traditions</h2>
                             <p>
-                                Most of the early schools of Buddhism have long since disappeared, but three Vinaya traditions are still alive: the Dharmaguptaka, practiced in East Asia, including China and Korea; the Mūlasarvāstivāda, practiced in Tibet and Mongolia; and the Theravāda, practiced in South and Southeast Asia.
+                                In traditional Buddhist education, the Discourses have usually not been directly taught. Rather, the teachings and principles found in the Discourses have been assimilated and organized in later texts, which became the medium of education. In the Theravāda, Discourses were until recently passed down in Pali, and so were only accessible to those, usually monks, who learned Pali. And not all those who learned Pali would study the Discourses. It seems that teaching was for practical purposes handed down in local monastic traditions, based on handbooks and sets of notes and commentaries. Before modern times, it would have been rare to find any but the largest monasteries that actually possessed a full set of the Tipiṭaka. Today, printed sets of the canon are widely available in both Pali and translation; but they are still often left in a locked cabinet on the shrine, unread.
                             </p>
                             <p>
-                                In practice, it is rare for monastics to follow all the stipulations of their chosen Vinaya lineage. For instance, although the use of money is prohibited by the <i>pātimokkha</i> rules of all schools, it is nevertheless used by the vast majority of monastics. The extent to which the rules are followed varies enormously, but most monastics do at least follow the most important rules, that is, the rules entailing expulsion and those entailing suspension. A similar situation holds for the procedures that govern the Orders. Sometimes they are practiced to the letter, such as most ordination ceremonies in the Theravāda tradition. At other times the procedures are misinterpreted or simply disregarded, such as the procedures for choosing the officials of the Order.
+                                For the most part, Buddhists might be familiar with a small set of popular discourses. These would include such texts as the Dhammacakkappavattana Sutta—the famous first sermon of the Buddha—and some short texts used for protection chanting and as the basis of sermons for the laity, such as the Maṅgala, Ratana, and Metta Suttas.
                             </p>
                             <p>
-                                Over the course of Buddhist history, there have been periodic reform movements and irregular attempts at purifying the Sangha. Typically the Order gradually degenerates until a charismatic leader starts a reform movement aimed at the proper practice of the Buddhist path, including the Vinaya. These reform movement sometimes manifest as “forest traditions,” whereby monastics establish forest monasteries in conformity with the ideals of early Buddhism. Over the last three decades, one controversial and ongoing reform has been the reestablishment of an Order of nuns, <i>bhikkhunīs</i>, in the Theravāda tradition.
-                            </p>
-                            <h2 id="commentaries">Commentaries</h2>
-                            <p>
-                                Another important component of the monastic Vinaya is the vast commentarial literature that has gradually evolved over the centuries and millennia, and continues to do so to the present day. All three of the living Vinaya traditions have such a commentarial literature.
+                                Apart from scholars, most Theravāda Buddhists do not clearly distinguish early Discourses from other sacred texts. The word sutta can mean simply “sacred scripture” and may even be used for such things as magic formulas and the like. While Buddhists are generally aware that there is such a thing as the Tipiṭaka that contains the words of the Buddha, only educated Buddhists have a clear idea of the contents. There is no tradition in Buddhism comparable to the Bible readings of the Christian Mass, and so no standard way of communicating the contents of the texts directly to the people.
                             </p>
                             <p>
-                                The commentarial literature begins with the Suttavibhaṅga, which, although it is now part of the Canon, is an early commentary on the <i>pātimokkha</i> rules. Next we have other Canonical commentaries or summaries, such as the Parivāra of the Theravādins. Beyond these, we come to the commentaries proper, the <i>aṭṭhakathās</i>, “The Discussion on Meaning.”
+                                In some Buddhist traditions, it is considered mandatory for ordained monks to memorize and study closely certain portions of the ancient texts. Sri Lankan monks, for example, memorize the Dhammapada. However, this is not the case in Thailand, for example, where there is no education requirement for monks. Even in the nine years of the formal Dhamma study curriculum in Thailand, the canonical Discourses are not studied, as they are considered too sacred.
                             </p>
                             <p>
-                                The most important non-canonical commentary on the Theravādin Vinaya Piṭaka is the Samantapāsādikā, composed in Sri Lanka by Buddhaghosa in the fifth century CE based on pre-existing commentaries that probably originated in India. There is also another important commentary from this period, the Kaṅkhāvitaraṇī, also composed by Buddhaghosa. The next layer of commentaries are the <i>ṭīkās</i>, the sub-commentaries, of which there are over a dozen, including highly specialized literature, such as handbooks on monastery boundaries (<i>sīmās</i>). <i>Ṭīkās</i> continue to be composed to the present day. The extent to which the Canonical Vinaya needs to be interpreted in line with this commentarial tradition is typically controversial, and practices vary widely.
+                                In East Asian Buddhism, traditional education focused on the Mahāyāna sutras and the texts of the Chinese masters, and there is little evidence that the early discourses were widely studied. It is sometimes said that the translation style of the āgamas compares poorly with the more elegant diction of the Mahāyāna translations by Xuanzang and other masters. And the early discourses are, of course, not organized for easy reading and study.
                             </p>
                             <p>
-                                To navigate this vast literature, many Theravāda monasteries rely on modern summaries for their practice of the Vinaya. Examples include the Vinayamukha in Thai and Ajahn Ṭhānissaro’s The Buddhist Monastic Code in English.
+                                Tibetan Buddhism includes study of early Buddhist schools as part of its regular curriculum. However, this refers to the Abhidhamma doctrines of the later schools. A reasonable grasp of the early Buddhist texts is, nevertheless, possible to achieve in Tibetan. Even though full āgama texts are lacking, substantial passages from the early texts are found in the Upāyika, which is a compilation of passages referred to in the Abhidharmakoṣa, and in other scattered texts.
+                            </p>
+                            <h2 id="modern-reform-and-postmodern-criticism">Modern Reform and Postmodern Criticism</h2>
+                            <p>
+                                From the middle of the 19th Century, European and Asian scholars began to study the Buddhist texts on historical grounds. Whereas traditional scholarship remained within each school, interpreting them within their local contexts, the new scholarship aimed to locate the texts in historical time and place. This approach was both critical—in the sense of being skeptical of traditional claims to authority, and requiring evidence to support claims—and constructive, in the sense that it aimed to build a coherent and meaningful historical picture in which to understand the texts.
                             </p>
                             <p>
-                                In addition to the above, most Theravāda monasteries follow a number of rules that are more informal in nature. These include rules used to distinguish individual sects (<i>nikāyas</i>), such as rules on the style of robes and on the manner of wearing them. Then there are rules that pertain to particular teacher traditions, such as those that often form around especially charismatic and famous teachers. The final set of rules are those laid down at individual monasteries. These regulate the daily schedule and other aspects of monastic life that are monastery specific. Although all these rules are sometimes called Vinaya and therefore assumed to stem from the Vinaya Piṭaka or at least the commentaries, in reality, few of them have any Canonical basis.
+                                Modernity brought a range of new techniques and achievements. These include:
                             </p>
-                            <div className="my-12 rounded-3xl bg-secondary px-5 py-2 text-lg text-tertiary md:pt-1 md:pb-4 md:px-8 [&>p+p]:mt-4.5">
-                                <h2 id="references-and-further-reading">References and Further Reading</h2>
-                                <ul>
-                                    <li>Clarke, Shayne; <i> Vinaya Mātṛikā – Mother of the Monastic Codes, or just Another Set of Lists?</i>; Indo-Iranian Journal 47: 77–120, 2004</li>
-                                    <li>Clarke, Shayne; <i>Vinayas</i>; in Brill’s Encyclopaedia of Buddhism; Leiden, 2015; vol. I, pp. 60-87.</li>
-                                    <li>Frauwallner, Erich; <i>The Earliest Vinaya and the Beginnings of Buddhist Literature</i>; Rome, 1956</li>
-                                    <li>Apart from a few fragments in Sanskrit and Gāndhārī, a full Dharmaguptaka Vinaya is only preserved in Chinese at T 1428, translated by Buddhayaśas and Zhu Fonian in 410-412 CE. Of all the extant Vinayas, this is the one normally regarded as closest to the Theravāda Vinaya (Clarke, 2015: 69).</li>
-                                    <li>v. Hinüber, Oskar; <i>A Handbook of Pāli Literature</i>; Walter de Gruyter, Berlin, 2000</li>
-                                    <li>Kabilsingh, Chatsumarn (trans.); <i>The Bhikkhunī Patimokkha of the Six Schools</i>; Bangkok, 1991</li>
-                                    <li>Norman, K.R.; <i>Pāli Literature</i>; Otto Harrassowitz, Wiesbaden, 1983</li>
-                                    <li>Ñāṇatusita, Bhikkhu; <i>A Translation and Analysis of the Pātimokkha</i>; Kandy, 2008</li>
-                                    <li>Pachow, W; <i>A Comparative Study of the Prātimokṣa</i>; Motilal Banarsidass, Delhi, 2000</li>
-                                    <li>Sujato, Bhikkhu; <i>Sects and Sectarianism</i>; Santipada, 2012</li>
-                                    <li>Sujato, Bhikkhu; <i>Bhikkhunī Vinaya Studies</i>; Santipada, 2009</li>
-                                </ul>
-                            </div>
+                            <ul>
+                                <li>Comparative study of the previously isolated scriptures in Chinese, Pali, Tibetan, and Sanskrit revealed both similarities and differences.</li>
+                                <li>Based on the accounts of Chinese pilgrims, archaeologists unearthed a series of ancient sites in India, proving that familiar sutta locations like Sāvatthī or Rājagaha were real places.</li>
+                                <li>Comparison of Buddhist scriptures with Hindu and Jaina texts allowed for a better understanding of the cultural forces active in the Buddha’s time.</li>
+                                <li>Application of text-critical methods established the historical and doctrinal evolution of the Buddhist texts and their relation to one another.</li>
+                                <li>The Aśokan pillars and inscriptions were discovered and deciphered, allowing for a proper historical understanding of this seminal Buddhist monarch.</li>
+                                <li>There was a new emphasis on the early Discourses as the historical source for the Buddha’s teachings.</li>
+
+                            </ul>
+                            <p>
+                                Modernist developments such as these are not confined to Western scholarship, but have been conducted in conjunction with textual and practical reforms throughout Asian Buddhism. Each of the traditions of Asian Buddhism has participated in and applied these developments in diverse ways. Some examples include:
+                            </p>
+                            <ul>
+                                <li>In Theravāda, the Fifth and Sixth Councils reasserted the centrality of the Pali canon.</li>
+                                <li>Translations of the Pali canon have been made into modern Asian languages and widely distributed across the Buddhist world, along with English translations.</li>
+                                <li>The reformist Buddhism of King Mongkut in 19th Century Thailand was largely inspired by modernist ideas of textual and disciplinary reform.</li>
+                                <li>Modern approaches to meditation were developed based on Pali texts. The Burmese vipassanā schools took the Satipaṭṭhāna Sutta as their core text, making this the single most influential text in the modern practice of meditation. In Thailand, reform movements such as the Forest Tradition, or Ajahn Buddhadāsa’s explicitly sutta-based approach, rejected traditional contemplative practices based on magical invocations, and advocated a return to the body-focused and grounded mindfulness practices of the early suttas.</li>
+                                <li>The hugely influential Taishō edition of the Chinese canon was developed by Japanese scholars who had studied text-critical techniques in Germany. They rearranged the canon to put the āgamas in pride of place at the start of the collection, in the sequence found in the Pali. They also included limited information on Pali parallels.</li>
+                                <li>The empirical and rational strands of the early texts were emphasized, arguing for an essential compatibility with modern science. This provided the basis for the later application of scientific method to mindfulness meditation, which has proved crucial to the global acceptance of meditation as an evidence-based approach to happiness, stress relief, and psychological wellness.</li>
+                            </ul>
+                            <p>
+                                It remains the case that direct study of the suttas is a minority practice. However, across Asia we find popular reform movements that emphasize the central importance of the suttas. Sutta study is most popular in Sri Lanka, where there is a proliferation of teachers and movements advocating a return to the suttas. The hugely popular monk Venerable Kiribathgoda Gnanananda Thero is controversial for his insistence on treating the suttas as the primary sources of Dhamma. In Thailand, the Buddhavacana movement of Ajahn Kukrit Sotthibalo is changing the face of contemporary Thailand, bringing many people to read the suttas for the first time. In Taiwan, similarly, the recently deceased master Yin Shun emphasized the historical primacy of the early texts, arguing that there was an essential continuity between them and early Mahāyāna. And in countries outside the regions of traditional Buddhism, teachers such as Ajahn Brahm, Bhikkhu Bodhi, and many others advocate the teachings of the suttas.
+                            </p>
+                            <p>
+                                Since the 1980s, such modernist reforms have come under postmodern criticism, mostly from American scholars who specialize in later forms of Buddhism. These criticisms aim to dislodge the modernist consensus, arguing that we have no real way of knowing what the Buddha taught, or the provenance of the Pali and other texts. A variety of specific arguments attempt to refute key claims of the modernists, such as the idea that the Buddha’s teaching was essentially rational. These arguments have been repeatedly criticized by experts in the field. The postmodern approach has yet to produce constructive results comparable to those of modernism.
+                            </p>
+                            <h2 id="translations">Translations</h2>
+                            <p>
+                                One of the most concrete outcomes of the modernist reforms has been the availability of translations of the early texts. Until now, almost all such translations have been from the Pali canon. But a few translations from the Chinese, Tibetan, and Sanskrit texts are now starting to appear.
+                            </p>
+                            <p>
+                                Work began in Europe with isolated translations such as Viggo Fausböll’s translation of the Dhammapada in 1855 and the Sutta Nipāta in 1881. Under the leadership of T.W. Rhys Davids, the Pali Text Society, founded in 1881, undertook the task of translating the entire canon into English. These translations were groundbreaking, but have for the most part been replaced by a more modern and accurate generation of translations by scholars such as Bhikkhu Bodhi. We include some of the older translations on SuttaCentral, but for the most part they are primarily of historical interest, since not only is the language archaic, but they contain many errors.
+                            </p>
+                            <p>
+                                Major translations from the Pali have also been made into Thai, Sinhala, Burmese, Cambodian, Vietnamese, Japanese, Hindi, and most recently Bangla. Most of these have been digitized and are available on SuttaCentral. However, we are still looking forward to including the Bangla and Cambodian translations, and the Japanese translation, though in the public domain, is unavailable due to the actions of the publisher.
+                            </p>
+                            <p>
+                                It’s not always possible to easily find out the translation methods and approaches of these different editions. However, my understanding is that the above translations were all made directly from the Pali. In addition to this, there have been many secondary translations made from the English translations. Most of the remaining translations in SuttaCentral fall into this category, though not all. Some translations, for instance, in German or Norwegian, have been made directly from the Pali.
+                            </p>
+                            <p>
+                                The new set of translations made from the Pali for SuttaCentral by myself and Bhante Brahmali build on this tradition. They aim to provide accurate, clear, and idiomatic translations of the early texts in Pali.
+                            </p>
                         </div>
 
                         <div className="mt-6 flex flex-col items-start justify-between gap-y-6 border-t border-secondary pt-6 md:flex-row">
