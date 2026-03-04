@@ -1,12 +1,11 @@
 "use client";
 
 import type { ComponentPropsWithRef, FC } from "react";
-import { ArrowLeft, ArrowRight, ArrowUpRight, Check, Copy01, Link01 } from "@untitledui/icons";
+import { ArrowLeft, ArrowRight, ArrowUpRight, Check, Copy01, Link01, Dataflow01 } from "@untitledui/icons";
 import { Carousel } from "@/components/application/carousel/carousel-base";
 import { BadgeGroup } from "@/components/base/badges/badge-groups";
 import { Badge, type BadgeColor } from "@/components/base/badges/badges";
 import { Button } from "@/components/base/buttons/button";
-import { ThreePitakasDiagram } from "@/components/marketing/sections/three-pitakas-diagram";
 import { Facebook, LinkedIn, X } from "@/components/foundations/social-icons";
 import { SectionDivider } from "@/components/shared-assets/section-divider";
 import { useClipboard } from "@/hooks/use-clipboard";
@@ -201,7 +200,7 @@ const ContentSplitImage01 = () => {
                             alt="Natali Craig"
                         />
                         <div>
-                            <p className="text-md font-semibold text-primary">Bikkhu Sujato</p>
+                            <p className="text-md font-semibold text-primary">Bhikkhu Sujato</p>
                             <p className="text-md text-tertiary">Published by Sutta Central</p>
                         </div>
                     </div>
@@ -223,14 +222,17 @@ const ContentSplitImage01 = () => {
                             <p className="text-md font-semibold text-brand-secondary">Table of contents</p>
                             <ul className="flex flex-col gap-3">
                                 {[
-                                    { title: "Origin", href: "#origin" },
-                                    { title: "Textual Transmission and the Schools", href: "#textual-transmission-and-the-schools" },
-                                    { title: "Content", href: "#content" },
-                                    { title: "Modern Perspectives", href: "#modern-perspectives" },
-                                    { title: "Commentaries", href: "#commentaries" },
-                                    { title: "References and Further Reading", href: "#references-and-further-reading" },
+                                    { title: "Origin", href: "#origin", indent: "ml-0" },
+                                    { title: "Textual Transmission and the Schools", href: "#textual-transmission-and-the-schools", indent: "ml-0" },
+                                    { title: "Content", href: "#content", indent: "ml-0" },
+                                    { title: "Suttavibhaṅga", href: "#suttavibhaṅga", indent: "ml-6" },
+                                    { title: "Khandhakas", href: "#khandhakas", indent: "ml-6" },
+                                    { title: "Other Texts", href: "#other-texts", indent: "ml-6" },
+                                    { title: "Modern Perspectives", href: "#modern-perspectives", indent: "ml-0" },
+                                    { title: "Commentaries", href: "#commentaries", indent: "ml-0" },
+                                    { title: "References and Further Reading", href: "#references-and-further-reading", indent: "ml-0" },
                                 ].map((item) => (
-                                    <li key={item.title}>
+                                    <li key={item.title} className={item.indent}>
                                         <Button href={item.href} size="lg" color="link-gray">
                                             {item.title}
                                         </Button>
@@ -321,16 +323,59 @@ const ContentSplitImage01 = () => {
                             <p>
                                 The Vinaya Piṭaka is divided into two main parts: the Suttavibhaṅga, “The Analysis of the Rules,” and The Khandhakas, “the Chapters.” The individual schools sometimes have additional texts, such as the Parivāra, “The Compendium,” belonging to the Theravāda tradition, and the Uttaragrantha belonging to the Mūlasarvāstivādins.
                             </p>
-                            <ThreePitakasDiagram />
-                            <h3>Suttavibhaṅga</h3>
+                            {/* Vinaya Piṭaka */}
+                            <div className="flex flex-col bg-secondary px-6 py-4 gap-2 rounded-4xl drop-shadow-sm">
+                                <div className="flex flex-row items-center justify-between gap-4">
+                                    <h4 className="text-display-xs text-brand-700 dark:text-brand-700/80">Vinaya Piṭaka</h4>
+                                    <div className="flex flex-col gap-3 md:justify-center pb-1">
+                                        <Button color="secondary" size="sm" iconLeading={Dataflow01}>
+                                            Outline
+                                        </Button>
+                                    </div>
+                                </div>
+                                <div className="mx-auto w-full flex flex-row flex-wrap md:flex-nowrap items-center justify-center gap-2 rounded-3xl">
+                                    <div className="mx-auto w-full flex flex-col items-center justify-center gap-0 bg-red-100/60 dark:bg-red-950/80 px-2 py-4 rounded-2xl border border-red-200 dark:border-red-800">
+                                        <p className="not-prose text-md font-light text-primary/70 text-center">Suttavibhaṅga</p>
+                                        <p className="not-prose text-md font-bold text-center text-secondary">Rules and Their Analysis</p>
+                                    </div>
+                                    <div className="mx-auto w-full flex flex-col items-center justify-center gap-0 bg-orange-100/60 dark:bg-orange-950/80 px-2 py-4 rounded-2xl border border-orange-200 dark:border-orange-800">
+                                        <p className="not-prose text-md font-light text-primary/70 text-center">Khandhakas</p>
+                                        <p className="not-prose text-md font-bold text-center text-secondary">Chapters on Legal Topics</p>
+                                    </div>
+                                    <div className="mx-auto w-full flex flex-col items-center justify-center gap-0 bg-yellow-100/60 dark:bg-yellow-950/80 px-2 py-4 rounded-2xl border border-yellow-200 dark:border-yellow-800">
+                                        <p className="not-prose text-md font-light text-primary/70 text-center">Parivāra</p>
+                                        <p className="not-prose text-md font-bold text-center text-secondary">The Compendium</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 id="suttavibhaṅga">Suttavibhaṅga</h3>
                             <p>
                                 Suttavibhaṅga means “Analysis of the sutta.” Sutta here does not refer to the discourses, but rather to the pātimokkha rules as a complete set.
                             </p>
                             <p>
                                 The Suttavibhaṅga consists of the pātimokkha rules embedded in a commentary that analyses each rule in detail. The Suttavibhaṅga is divided into two parts, the 227 rules for the monks and the 311 rules for the nuns. The majority of rules are the same for the two Orders, but 130 rules are specific to the nuns and 46 specific to the monks. The greater number of rules for the nuns is in large part due to the subdivision of individual monks’ rules into multiple rules for the nuns and to the fact that the nuns have rules in their pātimokkha that the monks have in the Khandhakas.
                             </p>
+                            <Button href="#" color="link-gray" iconTrailing={<ArrowRight />} size="sm">
+                                <span>Read more</span>
+                            </Button>
+                            <h3 id="khandhakas">Khandhakas</h3>
                             <p>
-                                The rules are categorized according to the penalty incurred for breaching them. The heaviest penalty, expulsion from the Sangha, is incurred only for conduct that is fundamentally opposed to monastic life, such as sexual intercourse or murder. There are 4 such rules for the monks and 8 for the nuns. The second heaviest penalty consists of a period of suspension and probation during which time one is not a full member of the Sangha. There are 13 such rules for the monks and 17 for the nuns. The vast majority of offenses, however, are cleared simply by confession. These rules are subdivided into a number of categories dependent on factors such as the severity of the breach, the sort of confession that is required, and additional requirements such as relinquishment of wrongly acquired requisites. The last seven rules of the Suttavibhaṅga are principles for resolving “legal” issues. Most of the material connected with these principles is now found in the Khandhakas.
+                                The other main part of the Vinaya, the Khandhakas, is a group of sections that each discuss a major area of monastic law, such as a section on ordination, several sections on allowable requisites, and a number of sections that deal with technical matters. The Theravāda Khandhakas are a set of 22 sections, all of which are matched by equivalent sections in the other existing Vinaya recensions, with the partial exception of the Mahāsāṅghikas. The Khandhakas of the Mahāsāṅghikas, although containing much of the same material as the other Vinaya recensions, are structured differently. There is as yet no scholarly consensus as to why this is the case and what might be the implications for the historical evolution of the Khandhakas.
+                            </p>
+                            <p>
+                                The Khandhakas lack the close unifying principle found in the Suttavibhaṅga, which, as we have seen, is organized as a commentary and analysis of the pātimokkha rules. This makes the Khandhakas less integrated and more diverse than the Suttavibhaṅga.
+
+                            </p>
+                            <Button href="#" color="link-gray" iconTrailing={<ArrowRight />} size="sm">
+                                <span>Read more</span>
+                            </Button>
+                            <h3 id="other-texts">Other Texts</h3>
+                            <p>
+                                The Theravāda tradition includes the Parivāra in its Vinaya Piṭaka. Oskar von Hinüber (2000: 22) suggests it was completed no later than the first century AD. The Parivāra is an analytical summary of the first two parts of the Vinaya. In style and method it is sometimes compared to the Abhidhamma.
+                            </p>
+                            <p>
+                                Other schools, too, have Vinaya summaries and addenda that may or may not share material with the Parivāra. Because of a lack of research, not much is known about these texts. It seems clear, however, that none of them is part of the Early Buddhist Texts.
+
                             </p>
                             <h2 id="modern-perspectives">Modern Perspectives</h2>
                             <p>
