@@ -186,7 +186,7 @@ const ContentSplitImage01 = () => {
         <div className="bg-primary">
             <div className="relative mx-auto flex max-w-container flex-col items-center px-4 py-16 md:flex-row md:px-8 md:pt-16 md:pb-24">
                 <div className="flex max-w-180 flex-col items-start md:absolute">
-                    <BadgeGroup size="md" addonText="Vinaya" color="brand" theme="light" className="pr-3" iconTrailing={null}>
+                    <BadgeGroup size="md" addonText="Pali Canon Overviews" color="brand" theme="light" className="pr-3" iconTrailing={null}>
                         10 min read
                     </BadgeGroup>
                     <h1 className="mt-4 text-display-md font-semibold text-primary md:text-display-xl">The Monastic Law: how monastic communities should live</h1>
@@ -213,10 +213,11 @@ const ContentSplitImage01 = () => {
                     alt="How collaboration makes us better designers - two people collaborating"
                 />
             </div>
-
+            {/* Main content */}
             <div className="mx-auto max-w-container px-4 pb-16 md:px-8 md:pb-24">
                 <div className="mx-auto flex justify-center gap-16">
-                    <div className="hidden w-80 flex-col gap-8 md:flex">
+                    {/* Table of contents */}
+                    <div className="sticky top-[120px] hidden h-fit w-80 self-start flex-col gap-8 md:flex">
                         <div className="w-full border-t border-secondary" />
                         <div className="flex flex-col gap-4">
                             <p className="text-md font-semibold text-brand-secondary">Table of contents</p>
@@ -245,6 +246,7 @@ const ContentSplitImage01 = () => {
                             <Button color="secondary" size="md" className="text-fg-quaternary" iconLeading={LinkedIn} />
                         </div>
                     </div>
+                    {/* Article content */}
                     <div className="max-w-prose md:max-w-full">
                         <div className="mx-auto prose md:prose-lg">
                             <p className="lead">
@@ -330,8 +332,31 @@ const ContentSplitImage01 = () => {
                             <p>
                                 The rules are categorized according to the penalty incurred for breaching them. The heaviest penalty, expulsion from the Sangha, is incurred only for conduct that is fundamentally opposed to monastic life, such as sexual intercourse or murder. There are 4 such rules for the monks and 8 for the nuns. The second heaviest penalty consists of a period of suspension and probation during which time one is not a full member of the Sangha. There are 13 such rules for the monks and 17 for the nuns. The vast majority of offenses, however, are cleared simply by confession. These rules are subdivided into a number of categories dependent on factors such as the severity of the breach, the sort of confession that is required, and additional requirements such as relinquishment of wrongly acquired requisites. The last seven rules of the Suttavibhaṅga are principles for resolving “legal” issues. Most of the material connected with these principles is now found in the Khandhakas.
                             </p>
+                            <h2 id="modern-perspectives">Modern Perspectives</h2>
                             <p>
-                                Within the Suttavibhaṅga, each rule is largely self-contained and forms its own subsection. These sections begin with one or more origin stories that relate the incident that led the Buddha to lay down a particular rule. Many of these are no more than brief accounts of a stereotypical monk or nun who is simply stated to have done something inappropriate. A few are elaborate narratives that may include sub-rules or important procedures for the Sangha, and occasionally even sutta-type material or Jātaka-type stories. The majority of origin stories fall somewhere in between these two extremes.
+                                Most of the early schools of Buddhism have long since disappeared, but three Vinaya traditions are still alive: the Dharmaguptaka, practiced in East Asia, including China and Korea; the Mūlasarvāstivāda, practiced in Tibet and Mongolia; and the Theravāda, practiced in South and Southeast Asia.
+                            </p>
+                            <p>
+                                In practice, it is rare for monastics to follow all the stipulations of their chosen Vinaya lineage. For instance, although the use of money is prohibited by the <i>pātimokkha</i> rules of all schools, it is nevertheless used by the vast majority of monastics. The extent to which the rules are followed varies enormously, but most monastics do at least follow the most important rules, that is, the rules entailing expulsion and those entailing suspension. A similar situation holds for the procedures that govern the Orders. Sometimes they are practiced to the letter, such as most ordination ceremonies in the Theravāda tradition. At other times the procedures are misinterpreted or simply disregarded, such as the procedures for choosing the officials of the Order.
+                            </p>
+                            <p>
+                                Over the course of Buddhist history, there have been periodic reform movements and irregular attempts at purifying the Sangha. Typically the Order gradually degenerates until a charismatic leader starts a reform movement aimed at the proper practice of the Buddhist path, including the Vinaya. These reform movement sometimes manifest as “forest traditions,” whereby monastics establish forest monasteries in conformity with the ideals of early Buddhism. Over the last three decades, one controversial and ongoing reform has been the reestablishment of an Order of nuns, <i>bhikkhunīs</i>, in the Theravāda tradition.
+                            </p>
+                            <h2 id="commentaries">Commentaries</h2>
+                            <p>
+                                Another important component of the monastic Vinaya is the vast commentarial literature that has gradually evolved over the centuries and millennia, and continues to do so to the present day. All three of the living Vinaya traditions have such a commentarial literature.
+                            </p>
+                            <p>
+                                The commentarial literature begins with the Suttavibhaṅga, which, although it is now part of the Canon, is an early commentary on the <i>pātimokkha</i> rules. Next we have other Canonical commentaries or summaries, such as the Parivāra of the Theravādins. Beyond these, we come to the commentaries proper, the <i>aṭṭhakathās</i>, “The Discussion on Meaning.”
+                            </p>
+                            <p>
+                                The most important non-canonical commentary on the Theravādin Vinaya Piṭaka is the Samantapāsādikā, composed in Sri Lanka by Buddhaghosa in the fifth century CE based on pre-existing commentaries that probably originated in India. There is also another important commentary from this period, the Kaṅkhāvitaraṇī, also composed by Buddhaghosa. The next layer of commentaries are the <i>ṭīkās</i>, the sub-commentaries, of which there are over a dozen, including highly specialized literature, such as handbooks on monastery boundaries (<i>sīmās</i>). <i>Ṭīkās</i> continue to be composed to the present day. The extent to which the Canonical Vinaya needs to be interpreted in line with this commentarial tradition is typically controversial, and practices vary widely.
+                            </p>
+                            <p>
+                                To navigate this vast literature, many Theravāda monasteries rely on modern summaries for their practice of the Vinaya. Examples include the Vinayamukha in Thai and Ajahn Ṭhānissaro’s The Buddhist Monastic Code in English.
+                            </p>
+                            <p>
+                                In addition to the above, most Theravāda monasteries follow a number of rules that are more informal in nature. These include rules used to distinguish individual sects (<i>nikāyas</i>), such as rules on the style of robes and on the manner of wearing them. Then there are rules that pertain to particular teacher traditions, such as those that often form around especially charismatic and famous teachers. The final set of rules are those laid down at individual monasteries. These regulate the daily schedule and other aspects of monastic life that are monastery specific. Although all these rules are sometimes called Vinaya and therefore assumed to stem from the Vinaya Piṭaka or at least the commentaries, in reality, few of them have any Canonical basis.
                             </p>
                             <div className="my-8 rounded-2xl bg-secondary px-5 py-6 text-lg text-tertiary md:my-12 md:p-8 [&>p+p]:mt-4.5">
                                 <h2 id="references-and-further-reading" className="mb-4 text-display-xs font-semibold text-primary">References and Further Reading</h2>
