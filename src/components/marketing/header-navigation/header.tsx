@@ -14,6 +14,8 @@ import { DropdownMenuScripture } from "@/components/marketing/header-navigation/
 import Link from "next/link";
 import { ThemeToggle } from "@/components/application/theme-toggle";
 import { cx } from "@/utils/cx";
+import { signOut } from "@/app/(login)/actions";
+import { User } from "@supabase/supabase-js";
 
 type HeaderNavItem = {
     label: string;
@@ -66,7 +68,7 @@ const MobileNavItem = (props: { className?: string; label: string; href?: string
     );
 };
 
-const MobileFooter = () => {
+const MobileFooter = ({ user }: { user?: User | null }) => {
     return (
         <div className="flex flex-col gap-8 border-t border-secondary px-4 py-6">
             <div>
@@ -81,10 +83,26 @@ const MobileFooter = () => {
                 </ul>
             </div>
             <div className="flex flex-col gap-3">
-                <Button size="lg">Sign up</Button>
-                <Button color="secondary" size="lg">
-                    Log in
-                </Button>
+                {user ? (
+                    <>
+                        <div className="flex flex-col gap-1 px-4 py-2">
+                            <span className="text-sm font-semibold text-secondary">Logged in as:</span>
+                            <span className="text-md font-medium text-primary">{user.email}</span>
+                        </div>
+                        <Button color="secondary" size="lg" onClick={() => signOut()}>
+                            Sign out
+                        </Button>
+                    </>
+                ) : (
+                    <>
+                        <Button size="lg" href="/sign-up">
+                            Sign up
+                        </Button>
+                        <Button color="secondary" size="lg" href="/sign-in">
+                            Log in
+                        </Button>
+                    </>
+                )}
             </div>
         </div>
     );
@@ -95,9 +113,10 @@ interface HeaderProps {
     isFullWidth?: boolean;
     isFloating?: boolean;
     className?: string;
+    user?: User | null;
 }
 
-export const Header = ({ items = headerNavItems, isFullWidth, isFloating, className }: HeaderProps) => {
+export const Header = ({ items = headerNavItems, isFullWidth, isFloating, className, user }: HeaderProps) => {
     const headerRef = useRef<HTMLElement>(null);
 
     return (
@@ -187,12 +206,25 @@ export const Header = ({ items = headerNavItems, isFullWidth, isFloating, classN
                     {/* DESKTOP LOGIN/SIGNUP BUTTONS */}
                     <div className="hidden items-center gap-3 md:flex">
                         <ThemeToggle />
-                        <Button color="secondary" size={isFloating ? "sm" : "md"} href="/sign-in">
-                            Log in
-                        </Button>
-                        <Button color="primary" size={isFloating ? "sm" : "md"} href="/sign-up">
-                            Sign up
-                        </Button>
+                        {user ? (
+                            <div className="flex items-center gap-4">
+                                <span className="text-sm font-semibold text-secondary">
+                                    {user.email?.split("@")[0]}
+                                </span>
+                                <Button color="secondary" size={isFloating ? "sm" : "md"} onClick={() => signOut()}>
+                                    Sign out
+                                </Button>
+                            </div>
+                        ) : (
+                            <>
+                                <Button color="secondary" size={isFloating ? "sm" : "md"} href="/sign-in">
+                                    Log in
+                                </Button>
+                                <Button color="primary" size={isFloating ? "sm" : "md"} href="/sign-up">
+                                    Sign up
+                                </Button>
+                            </>
+                        )}
                     </div>
 
                     {/* Mobile menu and menu trigger */}
@@ -248,7 +280,7 @@ export const Header = ({ items = headerNavItems, isFullWidth, isFloating, classN
                                         )}
                                     </ul>
 
-                                    <MobileFooter />
+                                    <MobileFooter user={user} />
                                 </nav>
                             </AriaDialog>
                         </AriaPopover>

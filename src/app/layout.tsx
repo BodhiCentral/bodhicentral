@@ -43,17 +43,24 @@ export const viewport: Viewport = {
     colorScheme: "light dark",
 };
 
-export default function RootLayout({
+import { createClient } from "@/utils/supabase/server";
+
+export default async function RootLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;
 }>) {
+    const supabase = await createClient();
+    const {
+        data: { user },
+    } = await supabase.auth.getUser();
+
     return (
         <html lang="en" suppressHydrationWarning className={cx(nunito.variable, robotoSerif.variable, fraunces.variable, tibetan.variable)}>
             <body className="bg-primary antialiased">
                 <RouteProvider>
                     <Theme>
-                        <Header />
+                        <Header user={user} />
                         {children}
                         <FooterLarge10 />
                     </Theme>
