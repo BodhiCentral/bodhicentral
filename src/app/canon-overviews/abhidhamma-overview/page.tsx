@@ -128,7 +128,7 @@ const ContentSplitImage01 = () => {
                                 While the belief that the books were composed by immediate students of the Buddha is untenable, it does point to something in how they might have developed. The major disciples would have established teaching lineages, or styles of learning, that reflected the specialties of the different masters. Over time, the explanations of various teachers became systematized and codified. The actual books as they exist today, however, are the products of schools, composed under the guidance of leading monks.
                             </p>
                             <figure>
-                                <img className="h-60 md:h-120" src="/jetavanaramaya-scenery-01.jpg" alt="Woman working at computer" />
+                                <img className="h-60 md:h-120" src="/jetavanaramaya-scene-01.jpg" alt="Jetavanaramaya virtual scene" />
                                 <figcaption>
                                     Image courtesy of Rafael Ortet via{" "}
                                     <a

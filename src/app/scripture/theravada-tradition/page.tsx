@@ -7,11 +7,12 @@ import { CollectionGallerySuttaPitaka } from "@/components/marketing/collection-
 import { CollectionGalleryAbhidhammaPitaka } from "@/components/marketing/collection-sections/collection-gallery-abhidhamma-pitaka";
 import { Dataflow01 } from "@untitledui/icons";
 import { ThreePitakasDiagram } from "@/components/marketing/sections/three-pitakas-diagram";
+import { BlogSectionTipitakaOverviewsLeftAligned } from "@/components/marketing/blog/base-components/blog-tipitaka-overviews-left-aligned";
 
 export default function TheravadaTraditionPage() {
     return (
         <>
-            <div className="relative mx-auto bg-[url(/jetavanaramaya-scenery-01.jpg)] bg-cover bg-center bg-no-repeat pb-36">
+            <div className="relative mx-auto bg-[url(/jetavanaramaya-scene-01.jpg)] bg-cover bg-center bg-no-repeat pb-36">
                 {/* Overlay layer for easy customization of color/transparency */}
                 <div className="absolute inset-0 bg-white/55 dark:bg-black/56 z-0" aria-hidden="true" />
 
@@ -64,6 +65,7 @@ export default function TheravadaTraditionPage() {
                 <CollectionGalleryAbhidhammaPitaka />
             </section>
             <ThreePitakasDiagram />
+            <BlogSectionTipitakaOverviewsLeftAligned />
         </>
     );
 }

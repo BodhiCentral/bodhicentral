@@ -16,18 +16,14 @@ export const ThemeToggle = ({ className }: { className?: string }) => {
         setMounted(true);
     }, []);
 
-    if (!mounted) {
-        return (
-            <div className={cx("size-10", className)} />
-        );
-    }
-
-    const Icon = theme === "system" ? Monitor01 : resolvedTheme === "dark" ? Moon01 : Sun;
+    const Icon = !mounted || theme === "system" ? Monitor01 : resolvedTheme === "dark" ? Moon01 : Sun;
+    const isReady = mounted;
 
     return (
         <Dropdown.Root>
             <AriaButton
                 aria-label="Toggle theme"
+                isDisabled={!isReady}
                 className={({ isHovered, isFocusVisible, isPressed }) =>
                     cx(
                         "group flex size-10 cursor-pointer items-center justify-center rounded-lg text-fg-quaternary transition duration-100 ease-linear focus:outline-hidden",
