@@ -23,7 +23,7 @@ const columns: MenuColumn[] = [
         title: "Collections",
         items: [
             {
-                title: "Theravada Tradition",
+                title: "Theravāda Tradition",
                 subtitle: "The Pali Canon, the earliest Buddhist scriptures.",
                 href: "/scripture/theravada-tradition",
                 Icon: BookOpen01,

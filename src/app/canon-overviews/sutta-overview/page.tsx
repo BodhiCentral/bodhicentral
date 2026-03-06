@@ -409,7 +409,7 @@ const BlogPost05 = () => {
 
             <ContentSplitImage01 />
 
-            <SectionDivider className="pt-16 md:pt-24" />
+            <SectionDivider className="hidden pt-16 md:pt-24" />
 
             <CollectionGallerySuttaPitaka />
 

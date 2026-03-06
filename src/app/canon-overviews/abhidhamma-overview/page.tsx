@@ -22,7 +22,7 @@ const ContentSplitImage01 = () => {
         <div className="bg-primary">
             <div className="relative mx-auto flex max-w-container flex-col items-center px-4 py-16 md:flex-row md:px-8 md:pt-16 md:pb-24">
                 <div className="flex max-w-160 flex-col items-start md:absolute">
-                    <BadgeGroup size="md" addonText="Pali Canon Overviews" color="brand" theme="light" className="pr-3" iconTrailing={null}>
+                    <BadgeGroup size="md" addonText="Abhidhamma Piṭaka" color="brand" theme="light" className="pr-3" iconTrailing={null}>
                         18 min read
                     </BadgeGroup>
                     <h1 className="mt-4 text-display-md font-semibold text-primary md:text-display-xl text-balance">Abhidhamma: a systematic analysis of the doctrine</h1>
@@ -357,7 +357,7 @@ const BlogPost05 = () => {
 
             <ContentSplitImage01 />
 
-            <SectionDivider className="pt-16 md:pt-24" />
+            <SectionDivider className="hidden pt-16 md:pt-24" />
 
             <CollectionGalleryAbhidhammaPitaka />
 

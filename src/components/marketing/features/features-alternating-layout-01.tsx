@@ -121,13 +121,13 @@ export const FeaturesAlternatingLayout01 = () => {
                         <FeaturedIcon icon={ChartBreakoutSquare} size="lg" color="gray" theme="modern-neue" />
                         <h3 className="mt-5 text-display-xs text-primary dark:text-brand-200 md:text-display-md">Resources for Individuals and Communities</h3>
                         <p className="mt-2 text-md text-tertiary md:mt-4 md:text-lg">
-                            Whether you are a solo practitioner or an active community member, discover tools to enhance your activities and contributions.
+                            Whether you are a solo student-practitioner or an active community member, discover tools to enhance your activities and contributions.
                         </p>
                         <ul className="mt-8 flex flex-col gap-4 pl-2 md:gap-5 md:pl-4">
                             {[
                                 "Participate in like-minded forums and connect with communities around the world",
-                                "Explore Buddhist academic centers and institutions offering study programs",
-                                "Read articles on relevant topics, presented from a Buddhist perspective",
+                                "Browse Buddhist academic centers and institutions offering study programs",
+                                "Read educational articles on relevant topics, presented from a Buddhist perspective.",
                                 "Build your personal library with your favorite materials and learning",
                             ].map((feat) => (
                                 <CheckItemText key={feat} size="md" iconStyle="outlined" color="primary" text={feat} />

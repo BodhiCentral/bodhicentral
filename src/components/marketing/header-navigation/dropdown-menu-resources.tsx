@@ -24,14 +24,14 @@ const columns: MenuColumn[] = [
         items: [
             {
                 title: "The Blog",
-                subtitle: "Read articles distiling kindlul wisdom and caring for the world",
+                subtitle: "Read educational articles distilling wisdom and kindness",
                 href: "/resources/blog",
                 Icon: Certificate02,
             },
             {
                 title: "Join our Forum",
                 subtitle: "Engage in conversations and share knowledge with others.",
-                href: "/",
+                href: "https://bodhicentral.discourse.group",
                 Icon: UsersPlus,
             },
             {
@@ -82,9 +82,9 @@ export const DropdownMenuResources = ({ onClose }: { onClose?: () => void }) => 
                             <h3 className="text-sm font-semibold text-brand-700 dark:text-brand-300">Quick Help Links</h3>
                             <ul className="flex flex-col gap-3">
                                 {[
-                                    { title: "Using the Desk", href: "#" },
-                                    { title: "Manage Galleries", href: "#" },
-                                    { title: "Explore Dashboard", href: "#" },
+                                    { title: "Using your Desk", href: "#" },
+                                    { title: "Manage galleries", href: "#" },
+                                    { title: "Managa storage", href: "#" },
                                 ].map((item) => (
                                     <li key={item.title}>
                                         <Button href={item.href} color="link-gray" size="lg" onPress={onClose}>

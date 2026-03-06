@@ -6,7 +6,7 @@ import { CollectionPaliSectionGallery } from "./collection-pali-section-gallery"
 
 export const CollectionGalleryVinayaPitaka = () => {
     return (
-        <section className="relative overflow-hidden -mt-28 z-100 bg-linear-to-b from-orange-25/0 from-0% via-orange-50 via-10% to-orange-100 to-100% dark:bg-linear-to-b dark:from-gray-950/0 dark:from-0% dark:via-gray-950 dark:via-10% dark:to-orange-950 py-6 md:py-10">
+        <section className="relative overflow-hidden z-100 bg-linear-to-b from-orange-25 from-0% via-orange-50 via-10% to-orange-100 to-100% dark:bg-linear-to-b dark:from-gray-950/0 dark:from-0% dark:via-gray-950 dark:via-10% dark:to-orange-950 py-6 md:py-10">
             <div className="mx-auto px-4 md:px-8">
                 {/* <!-- Collection Gallery Header --> */}
                 <div className="flex w-full flex-col justify-between md:flex-row">
