@@ -32,9 +32,9 @@ const ContentSplitImage01 = () => {
 
                     <div className="mt-8 flex items-center gap-3 md:mt-12">
                         <img
-                            src="/collections_thumbnails_sakya.jpg"
+                            src="/people/bhikku-sujato-close-up.jpg"
                             className="size-12 rounded-full object-cover"
-                            alt="Natali Craig"
+                            alt="Bhikkhu Sujato"
                         />
                         <div>
                             <p className="text-md font-semibold text-primary">Bhikkhu Sujato</p>

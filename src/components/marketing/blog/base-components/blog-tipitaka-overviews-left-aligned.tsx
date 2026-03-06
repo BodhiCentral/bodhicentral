@@ -17,7 +17,7 @@ const articles: Article[] = [
         author: {
             name: "Bhikkhu Sujato",
             href: "#",
-            avatarUrl: "/collections_thumbnails_gelug.jpg",
+            avatarUrl: "/people/bhikku-sujato-close-up.jpg",
         },
         tags: [
             {
@@ -53,7 +53,7 @@ const articles: Article[] = [
         author: {
             name: "Bhikkhu Sujato",
             href: "#",
-            avatarUrl: "/collections_thumbnails_gelug.jpg",
+            avatarUrl: "/people/bhikku-sujato-close-up.jpg",
         },
         tags: [
             {
@@ -88,7 +88,7 @@ const articles: Article[] = [
         author: {
             name: "Bhikkhu Sujato",
             href: "#",
-            avatarUrl: "/collections_thumbnails_gelug.jpg",
+            avatarUrl: "/people/bhikku-sujato-close-up.jpg",
         },
         tags: [
             {
@@ -107,17 +107,17 @@ const articles: Article[] = [
 
 export const BlogSectionTipitakaOverviewsLeftAligned = () => {
     return (
-        <section className="bg-primary py-16 md:py-24">
+        <section className="bg-primary py-12 md:py-20">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="flex flex-col items-start justify-between lg:flex-row">
                     <div className="max-w-3xl">
                         <p className="text-sm font-semibold text-brand-secondary md:text-md">Pali Canon</p>
-                        <h2 className="mt-3 text-display-sm font-semibold text-primary md:text-display-md">Tipitaka Overviews</h2>
-                        <p className="mt-4 text-lg text-tertiary md:mt-5 md:text-xl">The Tipitaka is the collection of texts that form the foundation of Theravada Buddhism. Learn about these three baskets of the Pali Canon: Vinaya Piṭaka, Sutta Piṭaka, and Abhidhamma Piṭaka over these curated overviews.</p>
+                        <h2 className="mt-3 text-display-sm font-semibold text-primary md:text-display-md">Tipiṭaka Overviews</h2>
+                        <p className="mt-4 text-lg text-tertiary md:mt-5 md:text-xl"> Learn about the three baskets of the Pali Canon: Vinaya Piṭaka, Sutta Piṭaka, and Abhidhamma Piṭaka.</p>
                     </div>
 
                     <div className="hidden gap-3 lg:flex">
-                        <Button size="xl">View all posts</Button>
+                        <Button size="xl">View all overviews</Button>
                     </div>
                 </div>
 

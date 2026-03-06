@@ -32,21 +32,21 @@ const ContentSplitImage01 = () => {
 
                     <div className="mt-8 flex items-center gap-3 md:mt-12">
                         <img
-                            src="/collections_thumbnails_sakya.jpg"
+                            src="/people/bhikku-sujato-close-up.jpg"
                             className="size-12 rounded-full object-cover"
-                            alt="Natali Craig"
+                            alt="Bhikkhu Sujato"
                         />
                         <div>
                             <p className="text-md font-semibold text-primary">Bhikkhu Sujato</p>
-                            <p className="text-md text-tertiary">Published by Sutta Central</p>
+                            <p className="text-md text-tertiary">Published by SuttaCentral</p>
                         </div>
                     </div>
                 </div>
 
                 <img
-                    className="mt-16 h-100 w-full object-cover object-top rounded-3xl md:mt-0 md:ml-auto md:h-180 md:w-140 md:max-w-[50vw]"
-                    src="/textCovers/buddha-sakyamuni-zoom-in-2xl-600.jpg"
-                    alt="Buddha Sakyamuni with two disciples"
+                    className="mt-16 h-100 w-full object-cover object-right rounded-3xl md:mt-0 md:ml-auto md:h-180 md:w-140 md:max-w-[50vw]"
+                    src="/golden-buddha-faces.jpg"
+                    alt="Golden Buddha faces"
                 />
                 {/* Background Image - Rainbow Light Accent */}
                 <img

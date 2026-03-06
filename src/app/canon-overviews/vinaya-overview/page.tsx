@@ -22,7 +22,7 @@ const ContentSplitImage01 = () => {
         <div className="bg-primary">
             <div className="relative mx-auto flex max-w-container flex-col items-center px-4 py-16 md:flex-row md:px-8 md:pt-16 md:pb-24">
                 <div className="flex max-w-160 flex-col items-start md:absolute">
-                    <BadgeGroup size="md" addonText="Pali Canon Overviews" color="brand" theme="light" className="pr-3" iconTrailing={null}>
+                    <BadgeGroup size="md" addonText="Vinaya Piṭaka" color="brand" theme="light" className="pr-3" iconTrailing={null}>
                         10 min read
                     </BadgeGroup>
                     <h1 className="mt-4 text-display-md font-semibold text-primary md:text-display-xl">The Monastic Law: how monastic communities should live</h1>
@@ -32,21 +32,21 @@ const ContentSplitImage01 = () => {
 
                     <div className="mt-8 flex items-center gap-3 md:mt-12">
                         <img
-                            src="/collections_thumbnails_sakya.jpg"
+                            src="/people/bhikku-sujato-close-up.jpg"
                             className="size-12 rounded-full object-cover"
-                            alt="Natali Craig"
+                            alt="Bhikkhu Sujato"
                         />
                         <div>
                             <p className="text-md font-semibold text-primary">Bhikkhu Sujato</p>
-                            <p className="text-md text-tertiary">Published by Sutta Central</p>
+                            <p className="text-md text-tertiary">Published by SuttaCentral</p>
                         </div>
                     </div>
                 </div>
 
                 <img
-                    className="mt-16 h-100 w-full object-cover object-top rounded-3xl md:mt-0 md:ml-auto md:h-180 md:w-140 md:max-w-[50vw]"
-                    src="/textCovers/buddha-sakyamuni-600.jpg"
-                    alt="Buddha Sakyamuni with two disciples"
+                    className="mt-16 h-100 w-full object-cover object-left rounded-3xl md:mt-0 md:ml-auto md:h-180 md:w-140 md:max-w-[50vw]"
+                    src="/blog-thumbnail-good-leadership.webp"
+                    alt="Good Leadership"
                 />
                 {/* Background Image - Rainbow Light Accent */}
                 <img
@@ -132,9 +132,9 @@ const ContentSplitImage01 = () => {
                                 </blockquote>
                                 <figcaption className="not-prose mt-6 flex gap-3 text-md md:mt-8">
                                     <img
-                                        src="/collections_thumbnails_sakya.jpg"
+                                        src="/people/bhikku-sujato-close-up.jpg"
                                         className="size-12 rounded-full object-cover"
-                                        alt="Olivia Rhye"
+                                        alt="Bhikkhu Sujato"
                                     />
                                     <div>
                                         <p className="text-md font-semibold text-primary">Bhikkhu Sujato</p>
