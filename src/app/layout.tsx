@@ -33,8 +33,8 @@ const tibetan = Noto_Serif_Tibetan({
 });
 
 export const metadata: Metadata = {
-    title: "Bodhi Central — Buddhist Scriptures",
-    description: "Gateways to accessible Buddhist wisdom and knowledge.",
+    title: "Bodhi Central — Buddhist Paths",
+    description: "Gateways to Buddhist study and practice.",
 };
 
 export const viewport: Viewport = {

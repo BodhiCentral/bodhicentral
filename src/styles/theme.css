@@ -1326,8 +1326,8 @@
         --color-bg-brand-primary_alt: var(--color-bg-secondary);
         --color-bg-brand-secondary: var(--color-brand-600);
         --color-bg-secondary_alt: var(--color-bg-primary);
-        --color-bg-brand-solid: var(--color-brand-600);
-        --color-bg-brand-solid_hover: var(--color-brand-500);
+        --color-bg-brand-solid: var(--color-brand-700);
+        --color-bg-brand-solid_hover: var(--color-brand-600);
         --color-bg-overlay: var(--color-gray-800);
         --color-bg-brand-section: var(--color-bg-secondary);
         --color-bg-brand-section_subtle: var(--color-bg-primary);
