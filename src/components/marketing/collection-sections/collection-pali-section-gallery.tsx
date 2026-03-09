@@ -17,7 +17,7 @@ interface PaliSection {
     short_description: string;
     thumbnail_cover: string;
     pitaka_section: string;
-    section_id: string;
+    section_abbreviation: string;
     section_numbers: string;
     color: string;
     dark_color: string;
@@ -55,7 +55,7 @@ const PaliSectionCard = ({ section }: { section: PaliSection }) => {
                 className={`absolute inset-0 z-0 size-full top-0 cursor-grab object-cover rounded-sm ${isFlipped ? "opacity-0 invisible" : "group-hover:opacity-0 group-hover:invisible"}`}
             />
             <div className="absolute flex items-end justify-center z-200 w-16 h-14 top-[-24px] right-[8px] pb-1.5 bg-red-950/90 rounded-full">
-                <h6 className=" text-brand-200">{section.section_id}</h6>
+                <h6 className=" text-brand-200">{section.section_abbreviation}</h6>
             </div>
 
             <div className={`z-10 bg-linear-to-t from-black/30 to-black/0 pt-16 md:pt-20 lg:pt-24 rounded-b-sm ${isFlipped ? "opacity-0 invisible" : "group-hover:opacity-0 group-hover:invisible"}`}>
