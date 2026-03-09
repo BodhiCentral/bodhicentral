@@ -42,12 +42,12 @@ export const FeaturesAlternatingLayout01 = () => {
                         <FeaturedIcon icon={BookOpen01} size="lg" color="gray" theme="modern-neue" />
                         <h3 className="mt-5 text-display-xs text-primary dark:text-brand-200 md:text-display-md">Kindful Wisdom</h3>
                         <p className="mt-2 text-md text-tertiary md:mt-4 md:text-lg">
-                            Whether you are already studying and practicing a Buddhist path, or exploring what Buddha's teachings mean to you, we have gathered teachings from active streams of Buddhism with a pragmatic approach:
+                            Whether you are already studying and practicing a Buddhist path, or exploring what Buddha's teachings mean to you, we have gathered teachings from genuine streams of Buddhism with a pragmatic approach:
                         </p>
                         <ul className="mt-8 flex flex-col gap-4 pl-2 md:gap-5 md:pl-4">
                             {[
-                                "Access to collections of texts that are currently used by modern transmissions of Buddhism",
-                                "Presenting texts contextualized within vehicles, doctrines, genres, and specialized tracks of study and research",
+                                "Open and non-exclusive access to collections of texts that are currently transmitted and practiced in modern Buddhist traditions",
+                                "Contextualized texts within vehicles, doctrines, genres, and tracks of study, practice and research",
                                 "State-of-the-art readers and personal workspaces to make your experience smooth and memorable",
                             ].map((feat) => (
                                 <CheckItemText key={feat} size="md" iconStyle="outlined" color="primary" text={feat} />

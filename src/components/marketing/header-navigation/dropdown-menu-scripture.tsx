@@ -76,7 +76,7 @@ export const DropdownMenuScripture = ({ onClose }: { onClose?: () => void }) => 
                             <h3 className="text-sm font-semibold text-brand-700 dark:text-brand-300">Quick Links</h3>
                             <ul className="flex flex-col gap-3">
                                 {[
-                                    { title: "Last Reading", href: "#" },
+                                    { title: "Last Reading", href: "/reader" },
                                     { title: "All Collections", href: "/scripture/collections" },
                                     { title: "Genres", href: "/scripture/genres" },
                                     { title: "Authors", href: "/scripture/authors" },
