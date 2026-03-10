@@ -23,14 +23,14 @@ const columns: MenuColumn[] = [
         title: "Pathways for everyone",
         items: [
             {
-                title: "Foundational Paths",
-                subtitle: "Immerse yourself in the fundamental theories and principles of the journey.",
+                title: "Foundational Studies",
+                subtitle: "Immerse yourself in the fundamental concepts and principles of the journey.",
                 href: "/learning-paths/foundational-paths",
                 Icon: MagicWand02,
             },
             {
-                title: "Academic Paths",
-                subtitle: "Systematic studies of the awakening of the Buddha.",
+                title: "Academic Studies",
+                subtitle: "Go deeper with systematic studies of the awakening of the Buddha.",
                 href: "/learning-paths/academic-paths",
                 Icon: Telescope,
             },

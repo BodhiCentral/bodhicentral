@@ -29,8 +29,8 @@ const columns: MenuColumn[] = [
                 Icon: BookOpen01,
             },
             {
-                title: "Tibetan Studies",
-                subtitle: "The curricula of the four main lineages of Tibetan Buddhism.",
+                title: "Tibetan Traditions",
+                subtitle: "The curricula of the four main schools of Tibetan Buddhism.",
                 href: "/scripture/tibetan-schools",
                 Icon: BookOpen01,
             },
