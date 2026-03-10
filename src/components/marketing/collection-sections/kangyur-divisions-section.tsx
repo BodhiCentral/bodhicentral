@@ -13,7 +13,7 @@ export const KangyurDivisionsSection = () => {
                     <div className="flex flex-1 flex-col max-w-280 pr-4 md:pr-24">
                         <h2 className="text-display-md text-primary md:text-display-lg">Kangyur Divisions</h2>
                         <p className="mt-1 text-base text-tertiary md:mt-2 md:text-lg text-balance">
-                            The Kangyur is the principal collection of the Buddhist scriptures in Tibetan. It contains some 900 works in over 100 volumes, all translations into Tibetan of the Indian texts considered to record the words of the Buddha. These eleven divisions follow the Degé Kangyur digital edition by Adarshah.org.
+                            The Kangyur is the principal collection of the Buddhist scriptures in Tibetan. It contains some 900 works in over 100 volumes, all translations into Tibetan of the Indian texts considered to record the words of the Buddha. These eleven divisions follow Adarshah's digital edition of the Degé Kangyur.
                         </p>
                     </div>
                     <div className="mt-8 flex flex-col gap-3 self-stretch md:mt-0 md:flex-row-reverse md:justify-center md:self-center">

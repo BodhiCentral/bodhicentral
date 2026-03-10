@@ -44,7 +44,7 @@ const ContentSplitImage01 = () => {
                 </div>
 
                 <img
-                    className="mt-16 h-100 w-full object-cover object-right rounded-3xl md:mt-0 md:ml-auto md:h-180 md:w-140 md:max-w-[50vw]"
+                    className="mt-16 h-100 w-full object-cover object-right rounded-3xl md:mt-0 md:ml-auto md:h-180 md:w-140 md:max-w-[50vw] drop-shadow-2xl"
                     src="/golden-buddha-faces.jpg"
                     alt="Golden Buddha faces"
                 />
