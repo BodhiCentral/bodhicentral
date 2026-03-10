@@ -47,7 +47,7 @@ const TibetanCanonDivisionsCard = ({ section }: { section: TibetanCanonDivision 
     return (
         <Carousel.Item
             key={section.toh_numbers || section.english_title}
-            className="group relative flex aspect-[.5625] w-full max-w-68 flex-col justify-end md:aspect-[.5625] md:max-w-76 bg-radial-[at_50%_35%] from-yellow-100 via-yellow-200 via-27% to-yellow-700 to-75% dark:from-yellow-dark-100 dark:via-yellow-dark-300 dark:via-26% dark:to-yellow-700 dark:to-75% drop-shadow-lg border-2 border-yellow-300 dark:border-yellow-900 drop-shadow-lg border-2 border-orange-300 dark:border-red-950 rounded-xl overflow-hidden hover:scale-[1.03] transition-all duration-300 cursor-pointer"
+            className="group relative flex aspect-[.5625] w-full max-w-68 flex-col justify-end md:aspect-[.5625] md:max-w-76 bg-radial-[at_50%_35%] from-yellow-100 via-yellow-200 via-27% to-yellow-700 to-75% dark:from-yellow-dark-100 dark:via-yellow-dark-300 dark:via-26% dark:to-yellow-700 dark:to-75% drop-shadow-lg border-2 border-orange-300 dark:border-red-950 rounded-xl overflow-hidden hover:scale-[1.03] transition-all duration-300 cursor-pointer"
             onClick={() => setIsFlipped(!isFlipped)}
         >
             <img
