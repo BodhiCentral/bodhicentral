@@ -16,7 +16,7 @@ export const ThreePitakasDiagram = () => {
             <div className="relative z-10 mx-auto max-w-container px-4 md:px-8 pb-4">
                 <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
                     <span className="text-sm font-semibold text-brand-secondary md:text-md">Pali Canon</span>
-                    <h2 className="mt-1 text-display-md font-semibold text-primary md:text-display-lg">The Three Piṭaka Divisions</h2>
+                    <h2 className="mt-1 text-display-md font-semibold text-primary md:text-display-lg">The Tipiṭaka Divisions</h2>
                 </div>
             </div>
 

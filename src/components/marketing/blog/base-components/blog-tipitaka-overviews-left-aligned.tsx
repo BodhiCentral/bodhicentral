@@ -112,8 +112,8 @@ export const BlogSectionTipitakaOverviewsLeftAligned = () => {
                 <div className="flex flex-col items-start justify-between lg:flex-row">
                     <div className="max-w-3xl">
                         <p className="text-sm font-semibold text-brand-secondary md:text-md">Pali Canon</p>
-                        <h2 className="mt-3 text-display-sm font-semibold text-primary md:text-display-md">Tipiṭaka Overviews</h2>
-                        <p className="mt-4 text-lg text-tertiary md:mt-5 md:text-xl"> Learn about the three baskets of the Pali Canon: Vinaya Piṭaka, Sutta Piṭaka, and Abhidhamma Piṭaka.</p>
+                        <h2 className="mt-3 text-display-sm font-semibold text-primary md:text-display-md">The Tipiṭaka Overviews</h2>
+                        <p className="mt-4 text-lg text-tertiary md:mt-5 md:text-xl">Go deeper into the three baskets of the Pali Canon: Vinaya Piṭaka, Sutta Piṭaka, and Abhidhamma Piṭaka.</p>
                     </div>
 
                     <div className="hidden gap-3 lg:flex">
