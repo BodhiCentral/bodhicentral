@@ -2,6 +2,7 @@
 
 import type { FC, HTMLAttributes } from "react";
 import { BookOpen01, ChartBreakoutSquare, TrendUp01 } from "@untitledui/icons";
+import { Button } from "@/components/base/buttons/button";
 import { FeaturedIcon } from "@/components/foundations/featured-icon/featured-icon";
 import { CheckItemText } from "@/components/marketing/pricing-sections/base-components/pricing-tier-card";
 import { cx } from "@/utils/cx";
@@ -46,13 +47,16 @@ export const FeaturesAlternatingLayout01 = () => {
                         </p>
                         <ul className="mt-8 flex flex-col gap-4 pl-2 md:gap-5 md:pl-4">
                             {[
-                                "Open and inclusive access to collections of texts that are currently transmitted and practiced in modern Buddhist traditions",
+                                "Inclusive access to collections of texts that are currently transmitted and practiced in modern Buddhist traditions",
                                 "Contextualized texts within vehicles, doctrines, genres, and tracks of study, practice and research",
                                 "State-of-the-art readers and personal workspaces to make your experience smooth and memorable",
                             ].map((feat) => (
                                 <CheckItemText key={feat} size="md" iconStyle="outlined" color="primary" text={feat} />
                             ))}
                         </ul>
+                        <Button href="/scripture/collections" color="secondary" size="sm" className="mt-8">
+                            Explore Collections
+                        </Button>
                     </div>
 
                     <div className="relative w-full flex-1 lg:h-128">
@@ -96,6 +100,9 @@ export const FeaturesAlternatingLayout01 = () => {
                                 <CheckItemText key={feat} size="md" iconStyle="outlined" color="primary" text={feat} />
                             ))}
                         </ul>
+                        <Button href="/learning-paths" color="secondary" size="sm" className="mt-8">
+                            Explore all pathways
+                        </Button>
                     </div>
 
                     <div className="relative w-full flex-1 lg:h-128">
@@ -127,15 +134,18 @@ export const FeaturesAlternatingLayout01 = () => {
                         </p>
                         <ul className="mt-8 flex flex-col gap-4 pl-2 md:gap-5 md:pl-4">
                             {[
-                                "DIRECTORY: Find institutions offering study and practice programs",
+                                "DIRECTORY: Find institutions with study and practice programs",
                                 "BLOG: Read articles on relevant topics, presented from a Buddhist perspective.",
                                 "YOUR DESK: Build your personal library with favorite content",
-                                "FORUM & COMMUNITY: Join forums to connect with groups and communities",
-                                "DOCUMENTATION: Guidelines and information about the project.",
+                                "FORUM: Join groups and discussions related to our activities",
+                                "DOCUMENTATION: Guidelines and information about the project",
                             ].map((feat) => (
                                 <CheckItemText key={feat} size="md" iconStyle="outlined" color="primary" text={feat} />
                             ))}
                         </ul>
+                        <Button href="/resources" color="secondary" size="sm" className="mt-8">
+                            Explore all resources
+                        </Button>
                     </div>
 
                     <div className="relative col-span-2 w-full flex-1 self-center lg:pt-20">

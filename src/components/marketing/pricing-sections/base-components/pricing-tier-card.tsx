@@ -1,7 +1,7 @@
 "use client";
 
 import type { FC, ReactNode } from "react";
-import { CheckCircle, BookOpen01, CornerDownRight, Star01, Star02 } from "@untitledui/icons";
+import { CornerDownRight } from "@untitledui/icons";
 import { BadgeGroup } from "@/components/base/badges/badge-groups";
 import { Badge } from "@/components/base/badges/badges";
 import { Button } from "@/components/base/buttons/button";
@@ -61,7 +61,7 @@ export const CheckItemText = (props: {
                 />
             )}
 
-            <span
+            <p
                 className={cx(
                     "text-tertiary",
                     size === "lg" ? "pt-0.5 text-lg md:pt-0" : size === "md" ? "pt-0.5 text-md md:pt-0 md:text-lg" : "text-md",
@@ -70,7 +70,7 @@ export const CheckItemText = (props: {
                 )}
             >
                 {text}
-            </span>
+            </p>
         </li>
     );
 };

@@ -10,7 +10,7 @@ const footerNavList = [
         items: [
             {
                 label: "Overview",
-                href: "/scripture",
+                href: "/scripture/collections",
             },
             {
                 label: "Theravada Canons",
