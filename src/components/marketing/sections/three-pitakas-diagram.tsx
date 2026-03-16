@@ -11,12 +11,12 @@ export const ThreePitakasDiagram = () => {
     return (
         <section className="relative py-10 md:pt-24 md:pb-36 bg-[url(/floral-background-golden-outlines-01.webp)] bg-cover bg-bottom bg-no-repeat">
             {/* Overlay layer for easy customization of color/transparency */}
-            <div className="absolute inset-0 bg-brand-50/97 dark:bg-black/88 z-0" aria-hidden="true" />
+            <div className="absolute inset-0 bg-olive-50/97 dark:bg-olive-900/97 z-0" aria-hidden="true" />
             {/* Section Header */}
             <div className="relative z-10 mx-auto max-w-container px-4 md:px-8 pb-4">
                 <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
                     <span className="text-sm font-semibold text-brand-secondary md:text-md">Pali Canon</span>
-                    <h2 className="mt-1 text-display-md font-semibold text-primary md:text-display-lg">The Three Piṭakas at a glance</h2>
+                    <h2 className="mt-1 text-display-md font-semibold text-primary md:text-display-lg">The Three Piṭaka Divisions</h2>
                 </div>
             </div>
 
@@ -54,7 +54,7 @@ export const ThreePitakasDiagram = () => {
                     <div className="mx-auto max-w-container px-4 md:px-6 grid grid-cols-1 md:grid-cols-3 gap-8 items-start animate-in fade-in duration-500">
                         {/* Vinaya Piṭaka */}
                         <div className="flex flex-col items-center justify-center bg-secondary p-2 rounded-4xl drop-shadow-sm h-full">
-                            <h4 className="text-display-xs text-brand-700 dark:text-brand-700/80 text-center py-2">Vinaya Piṭaka</h4>
+                            <h4 className="text-display-xs text-brand-700 dark:text-brand-600/80 text-center py-2">Vinaya Piṭaka Divisions</h4>
                             <div className="mx-auto w-full flex flex-col items-center justify-center gap-2 rounded-3xl p-2 grow">
                                 <div className="mx-auto w-full h-full flex flex-col items-center justify-center gap-0 bg-red-100/60 dark:bg-red-950/80 px-2 py-4 rounded-2xl border border-red-200 dark:border-red-800">
                                     <p className="text-md font-light text-primary/70 text-center">Suttavibhaṅga</p>
@@ -78,7 +78,7 @@ export const ThreePitakasDiagram = () => {
 
                         {/* Sutta Piṭaka */}
                         <div className="flex flex-col items-center justify-center bg-secondary p-2 rounded-4xl drop-shadow-md h-full">
-                            <h4 className="text-display-xs text-brand-700 dark:text-brand-700/80 text-center py-2">Sutta Piṭaka</h4>
+                            <h4 className="text-display-xs text-brand-700 dark:text-brand-600/80 text-center py-2">Sutta Piṭaka Divisions</h4>
                             <div className="mx-auto w-full flex flex-col items-center justify-center gap-2 rounded-3xl p-2 grow">
                                 <div className="mx-auto w-full h-full flex flex-col items-center justify-center gap-0 bg-emerald-100/60 dark:bg-emerald-950/80 px-2 py-4 rounded-2xl border border-emerald-200 dark:border-emerald-800">
                                     <p className="text-md font-light text-primary/70 text-center">Dīghanikāya</p>
@@ -110,7 +110,7 @@ export const ThreePitakasDiagram = () => {
 
                         {/* Abhidhamma Piṭaka */}
                         <div className="flex flex-col items-center justify-center bg-secondary p-2 rounded-4xl drop-shadow-md h-full">
-                            <h4 className="text-display-xs text-brand-700 dark:text-brand-700/80 text-center py-2">Abhidhamma Piṭaka</h4>
+                            <h4 className="text-display-xs text-brand-700 dark:text-brand-600/80 text-center py-2">Abhidhamma Piṭaka Books</h4>
                             <div className="mx-auto w-full flex flex-col items-center justify-center gap-2 rounded-3xl p-2 grow">
                                 <div className="mx-auto w-full h-full flex flex-col items-center justify-center gap-0 bg-olive-200/80 dark:bg-olive-800/80 px-2 py-3 rounded-2xl border border-olive-300 dark:border-olive-700">
                                     <p className="text-md font-light text-primary/70 text-center">Dhammasaṅgaṇi</p>
@@ -154,7 +154,7 @@ export const ThreePitakasDiagram = () => {
                         {/* Vinaya Piṭaka */}
                         <div className="flex flex-col bg-secondary px-6 py-4 gap-2 rounded-4xl drop-shadow-sm">
                             <div className="flex flex-row items-center justify-between gap-4">
-                                <h4 className="text-display-xs text-brand-700 dark:text-brand-700/80">Vinaya Piṭaka</h4>
+                                <h4 className="text-display-xs text-brand-700 dark:text-brand-600/80">Vinaya Piṭaka Divisions</h4>
                                 <div className="flex flex-col gap-3 md:justify-center pb-1">
                                     <Button color="secondary" size="sm" iconLeading={Dataflow01}>
                                         Outline
@@ -180,7 +180,7 @@ export const ThreePitakasDiagram = () => {
                         {/* Sutta Piṭaka */}
                         <div className="flex flex-col bg-secondary px-6 py-4 gap-2 rounded-4xl drop-shadow-sm">
                             <div className="flex flex-row items-center justify-between gap-4">
-                                <h4 className="text-display-xs text-brand-700 dark:text-brand-700/80">Sutta Piṭaka</h4>
+                                <h4 className="text-display-xs text-brand-700 dark:text-brand-600/80">Sutta Piṭaka Divisions</h4>
                                 <div className="flex flex-col gap-3 md:justify-center pb-1">
                                     <Button color="secondary" size="sm" iconLeading={Dataflow01}>
                                         Outline
@@ -214,7 +214,7 @@ export const ThreePitakasDiagram = () => {
                         {/* Abhidhamma Piṭaka */}
                         <div className="flex flex-col bg-secondary px-6 py-4 gap-2 rounded-4xl drop-shadow-sm">
                             <div className="flex flex-row items-center justify-between gap-4">
-                                <h4 className="text-display-xs text-brand-700 dark:text-brand-700/80">Abhidhamma Piṭaka</h4>
+                                <h4 className="text-display-xs text-brand-700 dark:text-brand-600/80">Abhidhamma Piṭaka (Seven Books)</h4>
                                 <div className="flex flex-col gap-3 md:justify-center pb-1">
                                     <Button color="secondary" size="sm" iconLeading={Dataflow01}>
                                         Outline
