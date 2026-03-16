@@ -29,7 +29,7 @@ export const HomeScreen = () => {
 
             <section className="relative py-10 md:pb-10 bg-[url(/monk-seated-in-meditation-under-forest-tree-1920.webp)] bg-cover bg-center">
                 {/* Overlay layer for easy customization of color/transparency */}
-                <div className="absolute inset-0 bg-white/5 dark:bg-black/40 z-0" aria-hidden="true" />
+                <div className="absolute inset-0 bg-white/5 dark:bg-black/30 z-0" aria-hidden="true" />
 
 
                 <img
@@ -52,7 +52,7 @@ export const HomeScreen = () => {
                             <Button color="secondary" size="xl" iconLeading={PlayCircle}>
                                 Intro
                             </Button>
-                            <Button size="xl">Sign up</Button>
+                            <Button size="xl" href="/sign-up">Sign up</Button>
                         </div>
                     </div>
 

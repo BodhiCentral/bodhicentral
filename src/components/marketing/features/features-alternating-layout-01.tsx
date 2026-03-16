@@ -118,34 +118,34 @@ export const FeaturesAlternatingLayout01 = () => {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 gap-10 md:gap-16 lg:grid-cols-2 lg:gap-16 lg:items-center">
+                <div className="grid grid-cols-1 gap-10 md:gap-16 lg:grid-cols-3 lg:gap-16 lg:items-center lg:justify-center">
                     <div className="max-w-lg flex-1 self-center">
                         <FeaturedIcon icon={ChartBreakoutSquare} size="lg" color="gray" theme="modern-neue" />
                         <h3 className="mt-5 text-display-xs text-primary dark:text-brand-200 md:text-display-md">Resources for Individuals and Communities</h3>
                         <p className="mt-2 text-md text-tertiary md:mt-4 md:text-lg">
-                            Whether you are a student-practitioner on your own or an active community member, discover tools to enhance your activities and contributions.
+                            Discover tools to enhance your personal activities and contributions to the Buddhist community.
                         </p>
                         <ul className="mt-8 flex flex-col gap-4 pl-2 md:gap-5 md:pl-4">
                             {[
-                                "DIRECTORY: Discover Buddhist academic centers and institutions offering study programs",
-                                "BLOG: Read educational articles on relevant topics, presented from a Buddhist perspective.",
-                                "YOUR DESK: Build your personal library with your favorite readership and learning",
-                                "FORUM & COMMUNITY: Participate in like-minded forums and connect with communities around the world",
-                                "DOCUMENTATION: Access guidelines, documentation, and technical information about the Bodhi Central project.",
+                                "DIRECTORY: Find institutions offering study and practice programs",
+                                "BLOG: Read articles on relevant topics, presented from a Buddhist perspective.",
+                                "YOUR DESK: Build your personal library with favorite content",
+                                "FORUM & COMMUNITY: Join forums to connect with groups and communities",
+                                "DOCUMENTATION: Guidelines and information about the project.",
                             ].map((feat) => (
                                 <CheckItemText key={feat} size="md" iconStyle="outlined" color="primary" text={feat} />
                             ))}
                         </ul>
                     </div>
 
-                    <div className="relative w-full flex-1 lg:h-100">
+                    <div className="relative col-span-2 w-full flex-1 self-center lg:pt-20">
                         <img
                             alt="Light Accent"
                             aria-hidden="true"
                             src="/patterns/light-accent.webp"
                             className="absolute z-0 -right-4 -bottom-24 max-w-160 opacity-90 mix-blend-multiple md:-right-50 md:-bottom-56 md:max-w-7xl mask-b-from-90% mask-b-to-100% mask-t-from-10% mask-t-to-100% scale-x-[-1.5]"
                         />
-                        <div className="grid h-100 w-[150%] grid-cols-[repeat(12,1fr)] grid-rows-[repeat(12,1fr)] gap-2 sm:h-124 sm:w-[150%] md:w-auto md:gap-4 drop-shadow-lg">
+                        <div className="grid w-full grid-cols-[repeat(12,1fr)] grid-rows-[repeat(12,1fr)] gap-2 md:w-auto md:gap-4 drop-shadow-lg ">
 
                             <img
                                 src="/monk-seated-in-meditation-under-forest-tree-1920.webp"
@@ -189,20 +189,6 @@ export const FeaturesAlternatingLayout01 = () => {
                                 }}
                             />
                         </div>
-                        <AlternateImageMockup className="hidden lg:left-0">
-                            {/* Light mode image (hidden in dark mode) */}
-                            <img
-                                alt="Mockup showing Resources interface"
-                                src="/resources-mockup-01.webp"
-                                className="size-full object-contain lg:w-auto lg:max-w-none dark:hidden"
-                            />
-                            {/* Dark mode image (hidden in light mode) */}
-                            <img
-                                alt="Mockup showing Resources interface"
-                                src="/resources-mockup-01.webp"
-                                className="size-full object-contain not-dark:hidden lg:w-auto lg:max-w-none"
-                            />
-                        </AlternateImageMockup>
                     </div>
                 </div>
             </div>

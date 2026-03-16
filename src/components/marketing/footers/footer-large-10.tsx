@@ -62,7 +62,7 @@ const footerNavList = [
                 href: "/learning-paths/practice-paths",
             },
             {
-                label: "Curricula by Tradition",
+                label: "Buddhist Curricula",
                 href: "/learning-paths/curricula-by-tradition",
             },
             {
