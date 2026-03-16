@@ -54,8 +54,8 @@ export const FeaturesAlternatingLayout01 = () => {
                                 <CheckItemText key={feat} size="md" iconStyle="outlined" color="primary" text={feat} />
                             ))}
                         </ul>
-                        <Button href="/scripture/collections" color="secondary" size="sm" className="mt-8">
-                            Explore Collections
+                        <Button href="/scripture/collections" color="secondary" size="md" className="relative z-100 mt-8 cursor-pointer">
+                            Explore all texts
                         </Button>
                     </div>
 
@@ -100,7 +100,7 @@ export const FeaturesAlternatingLayout01 = () => {
                                 <CheckItemText key={feat} size="md" iconStyle="outlined" color="primary" text={feat} />
                             ))}
                         </ul>
-                        <Button href="/learning-paths" color="secondary" size="sm" className="mt-8">
+                        <Button href="/learning-paths" color="secondary" size="md" className="mt-8 cursor-pointer">
                             Explore all pathways
                         </Button>
                     </div>
@@ -143,7 +143,7 @@ export const FeaturesAlternatingLayout01 = () => {
                                 <CheckItemText key={feat} size="md" iconStyle="outlined" color="primary" text={feat} />
                             ))}
                         </ul>
-                        <Button href="/resources" color="secondary" size="sm" className="mt-8">
+                        <Button href="/resources" color="secondary" size="md" className="relative z-100 mt-8 cursor-pointer">
                             Explore all resources
                         </Button>
                     </div>
