@@ -10,7 +10,7 @@ const footerNavList = [
         items: [
             {
                 label: "Overview",
-                href: "/scripture",
+                href: "/scripture/collections",
             },
             {
                 label: "Theravada Canons",
@@ -62,7 +62,7 @@ const footerNavList = [
                 href: "/learning-paths/practice-paths",
             },
             {
-                label: "Curricula by Tradition",
+                label: "Buddhist Curricula",
                 href: "/learning-paths/curricula-by-tradition",
             },
             {
@@ -79,24 +79,44 @@ const footerNavList = [
                 href: "/resources/blog",
                 badge: (
                     <Badge color="gray" type="modern" size="sm" className="ml-1">
-                        New
+                        In dev
                     </Badge>
                 ),
             },
-            {
-                label: "Visit the Forum",
-                href: "/resources/forum",
-            },
+
             {
                 label: "Digital Portals",
                 href: "/resources/digital-portals",
+                badge: (
+                    <Badge color="gray" type="modern" size="sm" className="ml-1">
+                        In dev
+                    </Badge>
+                ),
             },
             {
                 label: "Groups Around",
                 href: "/resources/community",
                 badge: (
                     <Badge color="gray" type="modern" size="sm" className="ml-1">
+                        In dev
+                    </Badge>
+                ),
+            },
+            {
+                label: "Visit the Forum",
+                href: "https://bodhicentral.discourse.group/",
+                badge: (
+                    <Badge color="gray" type="modern" size="sm" className="ml-1">
                         New
+                    </Badge>
+                ),
+            },
+            {
+                label: "Documentation",
+                href: "https://bodhi-central-docs.vercel.app/research/pali-canon/sutta-numbering-system",
+                badge: (
+                    <Badge color="gray" type="modern" size="sm" className="ml-1">
+                        Testing
                     </Badge>
                 ),
             },
@@ -191,10 +211,10 @@ export const FooterLarge10 = () => {
                     </div>
 
                     <div className="mt-8 flex flex-col-reverse gap-3 self-stretch sm:flex-row sm:self-start lg:mt-0">
-                        <Button color="secondary" size="xl" href="/about/project-information">
+                        <Button color="secondary" size="md" href="/about/project-information">
                             Project Information
                         </Button>
-                        <Button size="xl" href="/my-desk">My Desk</Button>
+                        <Button size="md" href="/my-desk">My Desk</Button>
                     </div>
                 </div>
 
@@ -209,7 +229,7 @@ export const FooterLarge10 = () => {
                         <ul className="grid flex-1 grid-cols-2 gap-8 md:grid-cols-5">
                             {footerNavList.slice(0, 5).map((category) => (
                                 <li key={category.label}>
-                                    <h4 className="text-sm font-semibold text-fg-brand-secondary">{category.label}</h4>
+                                    <h4 className="text-lg font-medium text-fg-brand-primary">{category.label}</h4>
                                     <ul className="mt-4 flex flex-col gap-3">
                                         {category.items.map((item) => (
                                             <li key={item.label}>

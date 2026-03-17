@@ -30,7 +30,7 @@ export const SignupCardCombined = () => {
                     <BodhicentralLogoMinimal className="size-12 max-md:hidden" />
                     <BodhicentralLogoMinimal className="size-10 md:hidden" />
                     <div className="flex flex-col gap-2">
-                        <h1 className="text-display-xs font-semibold text-primary">Create an account</h1>
+                        <h1 className="text-display-md text-primary">Create an account</h1>
                         <p className="text-md text-tertiary">Sign up to get started at Bodhi Central.</p>
                     </div>
                 </div>

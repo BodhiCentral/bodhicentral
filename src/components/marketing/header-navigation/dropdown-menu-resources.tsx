@@ -36,8 +36,8 @@ const columns: MenuColumn[] = [
             },
             {
                 title: "Documentation",
-                subtitle: "In-depth articles on our tools and technologies to empower users.",
-                href: "/",
+                subtitle: "In-depth articles about our platfrom, technologies, and research.",
+                href: "https://bodhi-central-docs.vercel.app/",
                 Icon: FileQuestion01,
             },
         ],

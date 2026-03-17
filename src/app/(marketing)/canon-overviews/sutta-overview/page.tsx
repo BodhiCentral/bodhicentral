@@ -44,7 +44,7 @@ const ContentSplitImage01 = () => {
                 </div>
 
                 <img
-                    className="mt-16 h-100 w-full object-cover object-right rounded-3xl md:mt-0 md:ml-auto md:h-180 md:w-140 md:max-w-[50vw]"
+                    className="mt-16 h-100 w-full object-cover object-right rounded-3xl md:mt-0 md:ml-auto md:h-180 md:w-140 md:max-w-[50vw] drop-shadow-2xl"
                     src="/golden-buddha-faces.jpg"
                     alt="Golden Buddha faces"
                 />
@@ -117,7 +117,7 @@ const ContentSplitImage01 = () => {
                                 The texts would have originally been in a Prākrit, that is, a dialect of Middle Indo-Aryan closely related to Sanskrit. The exact form of Prākrit is unknown, and indeed it may not have been entirely standardized, since monastics from the earliest times were using different dialects. Indications in the Pali texts suggest that they were derived from an earlier version in Māgadhī, that is, the language of the kingdom of Magadha. It appears that they were standardized in later centuries to a dialect similar to that used widely across central India for inscriptions, with a partial Sanskritization. Nevertheless, these languages differ mostly in phonology, and apart from a few edge cases, changes from one form to another do not affect the meaning.
                             </p>
                             <figure>
-                                <img className="h-60 md:h-120" src="/jetavanaramaya-scenery-01.jpg" alt="Woman working at computer" />
+                                <img className="h-60 md:h-120" src="/jetavanaramaya-scene-01.jpg" alt="Jetavanaramaya Scene." />
                                 <figcaption>
                                     Image courtesy of Rafael Ortet via{" "}
                                     <a

@@ -2,6 +2,7 @@
 
 import type { FC, HTMLAttributes } from "react";
 import { BookOpen01, ChartBreakoutSquare, TrendUp01 } from "@untitledui/icons";
+import { Button } from "@/components/base/buttons/button";
 import { FeaturedIcon } from "@/components/foundations/featured-icon/featured-icon";
 import { CheckItemText } from "@/components/marketing/pricing-sections/base-components/pricing-tier-card";
 import { cx } from "@/utils/cx";
@@ -29,7 +30,7 @@ export const FeaturesAlternatingLayout01 = () => {
             <div className="mx-auto w-full max-w-container px-4 md:px-8">
                 <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
                     <span className="text-sm font-semibold text-brand-600 dark:text-brand-700 md:text-md">The Three Pillars</span>
-                    <h2 className="mt-3 text-display-sm text-primary md:text-display-md">Beautiful presentations of Buddha's teachings</h2>
+                    <h2 className="mt-3 text-display-sm text-primary md:text-display-md">Meaningful presentations of Buddha's teachings</h2>
                     <p className="mt-4 text-lg text-tertiary md:mt-5 md:text-xl">
                         Gateways for spiritual seekers to connect with Buddhist traditions, teachings, and communities around the world.
                     </p>
@@ -46,20 +47,23 @@ export const FeaturesAlternatingLayout01 = () => {
                         </p>
                         <ul className="mt-8 flex flex-col gap-4 pl-2 md:gap-5 md:pl-4">
                             {[
-                                "Open and non-exclusive access to collections of texts that are currently transmitted and practiced in modern Buddhist traditions",
+                                "Inclusive access to collections of texts that are currently transmitted and practiced in modern Buddhist traditions",
                                 "Contextualized texts within vehicles, doctrines, genres, and tracks of study, practice and research",
                                 "State-of-the-art readers and personal workspaces to make your experience smooth and memorable",
                             ].map((feat) => (
                                 <CheckItemText key={feat} size="md" iconStyle="outlined" color="primary" text={feat} />
                             ))}
                         </ul>
+                        <Button href="/scripture/collections" color="secondary" size="md" className="relative z-100 mt-8 cursor-pointer">
+                            Explore all texts
+                        </Button>
                     </div>
 
                     <div className="relative w-full flex-1 lg:h-128">
                         <img
                             alt="Light Accent"
                             aria-hidden="true"
-                            src="https://www.untitledui.com/marketing/light-accent.webp"
+                            src="/patterns/light-accent.webp"
                             className="absolute z-0 right-0 -bottom-14 max-w-160 opacity-60 mix-blend-multiple md:right-10 md:-bottom-1/3 md:max-w-7xl mask-b-from-90% mask-b-to-100%"
                         />
                         <AlternateImageMockup className="lg:left-0">
@@ -89,18 +93,23 @@ export const FeaturesAlternatingLayout01 = () => {
                         </p>
                         <ul className="mt-8 flex flex-col gap-4 pl-2 md:gap-5 md:pl-4">
                             {[
-                                "Study the foundational pathways providing a solid understanding of the Buddhist core theories and principles",
+                                "Study the foundational pathways providing a solid understanding of the Buddhist core concepts and principles",
                                 "Go deeper into academic and scholarly paths (shedra studies), your truthworthy companions for in-depth study and research",
-                                "Engage in practice paths (samatha, vipassana, etc.) brought to you by the living Buddhist traditions to support your spiritual journey",
+                                "Engage in contemplative practice paths (samatha, vipassana, etc.) brought to you by the living Buddhist traditions to support your spiritual journey",
                             ].map((feat) => (
                                 <CheckItemText key={feat} size="md" iconStyle="outlined" color="primary" text={feat} />
                             ))}
                         </ul>
+                        <Button href="/learning-paths" color="secondary" size="md" className="mt-8 cursor-pointer">
+                            Explore all pathways
+                        </Button>
                     </div>
 
                     <div className="relative w-full flex-1 lg:h-128">
+
                         <AlternateImageMockup className="lg:right-0">
                             {/* Light mode image (hidden in dark mode) */}
+
                             <img
                                 alt="Mockup showing Learning Paths interface"
                                 src="/learning-paths-mockup-01.webp"
@@ -116,46 +125,80 @@ export const FeaturesAlternatingLayout01 = () => {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 gap-10 md:gap-20 lg:grid-cols-2 lg:gap-24">
-                    <div className="max-w-xl flex-1 self-center">
+                <div className="grid grid-cols-1 gap-10 md:gap-16 lg:grid-cols-3 lg:gap-16 lg:items-center lg:justify-center">
+                    <div className="max-w-lg flex-1 self-center">
                         <FeaturedIcon icon={ChartBreakoutSquare} size="lg" color="gray" theme="modern-neue" />
                         <h3 className="mt-5 text-display-xs text-primary dark:text-brand-200 md:text-display-md">Resources for Individuals and Communities</h3>
                         <p className="mt-2 text-md text-tertiary md:mt-4 md:text-lg">
-                            Whether you are a solo student-practitioner or an active community member, discover tools to enhance your activities and contributions.
+                            Discover tools to enhance your personal activities and contributions to the Buddhist community.
                         </p>
                         <ul className="mt-8 flex flex-col gap-4 pl-2 md:gap-5 md:pl-4">
                             {[
-                                "Participate in like-minded forums and connect with communities around the world",
-                                "Discover Buddhist academic centers and institutions offering study programs",
-                                "Read educational articles on relevant topics, presented from a Buddhist perspective.",
-                                "Build your personal library with your favorite materials and learning",
+                                "DIRECTORY: Find institutions with study and practice programs",
+                                "BLOG: Read articles on relevant topics, presented from a Buddhist perspective.",
+                                "YOUR DESK: Build your personal library with favorite content",
+                                "FORUM: Join groups and discussions related to our activities",
+                                "DOCUMENTATION: Guidelines and information about the project",
                             ].map((feat) => (
                                 <CheckItemText key={feat} size="md" iconStyle="outlined" color="primary" text={feat} />
                             ))}
                         </ul>
+                        <Button href="/resources" color="secondary" size="md" className="relative z-100 mt-8 cursor-pointer">
+                            Explore all resources
+                        </Button>
                     </div>
 
-                    <div className="relative w-full flex-1 lg:h-128">
+                    <div className="relative col-span-2 w-full flex-1 self-center lg:pt-20">
                         <img
                             alt="Light Accent"
                             aria-hidden="true"
-                            src="https://www.untitledui.com/marketing/light-accent.webp"
-                            className="absolute z-0 -right-4 -bottom-14 max-w-160 opacity-60 mix-blend-multiple md:-right-20 md:-bottom-1/3 md:max-w-7xl mask-b-from-90% mask-b-to-100% scale-x-[-1]"
+                            src="/patterns/light-accent.webp"
+                            className="absolute z-0 -right-4 -bottom-24 max-w-160 opacity-90 mix-blend-multiple md:-right-50 md:-bottom-56 md:max-w-7xl mask-b-from-90% mask-b-to-100% mask-t-from-10% mask-t-to-100% scale-x-[-1.5]"
                         />
-                        <AlternateImageMockup className="lg:left-0">
-                            {/* Light mode image (hidden in dark mode) */}
+                        <div className="grid w-full grid-cols-[repeat(12,1fr)] grid-rows-[repeat(12,1fr)] gap-2 md:w-auto md:gap-4 drop-shadow-lg ">
+
                             <img
-                                alt="Mockup showing Resources interface"
-                                src="/resources-mockup-01.webp"
-                                className="size-full object-contain lg:w-auto lg:max-w-none dark:hidden"
+                                src="/monk-seated-in-meditation-under-forest-tree-1920.webp"
+                                className="size-full object-cover border-double border-5 border-gray-300 dark:border-gray-700 rounded-xl"
+                                alt="Monk seated in meditation under forest tree"
+                                style={{
+                                    gridArea: "3 / 2 / 7 / 7",
+                                }}
                             />
-                            {/* Dark mode image (hidden in light mode) */}
+
                             <img
-                                alt="Mockup showing Resources interface"
-                                src="/resources-mockup-01.webp"
-                                className="size-full object-contain not-dark:hidden lg:w-auto lg:max-w-none"
+                                src="/bc-blog.webp"
+                                className="size-full object-cover border-double border-5 border-gray-300 dark:border-gray-700 rounded-xl"
+                                alt="BD Blog screenshot"
+                                style={{
+                                    gridArea: "1 / 7 / 7 / 12",
+                                }}
                             />
-                        </AlternateImageMockup>
+                            <img
+                                src="/bc-documentation.webp"
+                                className="size-full object-cover border-double border-5 border-gray-300 dark:border-gray-700 rounded-xl"
+                                alt="BD Documentation screenshot"
+                                style={{
+                                    gridArea: "7 / 5 / 12 / 8",
+                                }}
+                            />
+                            <img
+                                src="/himalayan-scenery-02.jpg"
+                                className="size-full object-cover border-double border-5 border-gray-300 dark:border-gray-700 rounded-xl"
+                                alt="Himalayan scenery"
+                                style={{
+                                    gridArea: "7 / 8 / 11 / 13",
+                                }}
+                            />
+                            <img
+                                src="/ancient-nalanda-university-idealization.jpg"
+                                className="size-full object-cover border-double border-5 border-gray-300 dark:border-gray-700 rounded-xl"
+                                alt="Monk seated in meditation under forest tree"
+                                style={{
+                                    gridArea: "7 / 1 / 10 / 5",
+                                }}
+                            />
+                        </div>
                     </div>
                 </div>
             </div>

@@ -16,32 +16,32 @@ export const HomeScreen = () => {
                 alt="Grid of dots"
                 aria-hidden="true"
                 loading="lazy"
-                src="https://www.untitledui.com/patterns/light/grid-sm-desktop.svg"
-                className="pointer-events-none absolute top-0 left-1/2 z-10 hidden max-w-none -translate-x-1/2 opacity-10 md:block dark:opacity-70 dark:brightness-[0.2]"
+                src="/patterns/grid-sm-desktop.svg"
+                className="pointer-events-none absolute top-0 left-1/2 z-10 hidden max-w-none -translate-x-1/2 opacity-10 md:block dark:opacity-40 dark:brightness-[0.2]"
             />
             <img
                 alt="Grid of dots"
                 aria-hidden="true"
                 loading="lazy"
-                src="https://www.untitledui.com/patterns/light/grid-sm-mobile.svg"
-                className="pointer-events-none absolute top-0 left-1/2 z-0 max-w-none -translate-x-1/2 opacity-10 md:hidden dark:opacity-70 dark:brightness-[0.2]"
+                src="/patterns/grid-sm-mobile.svg"
+                className="pointer-events-none absolute top-0 left-1/2 z-0 max-w-none -translate-x-1/2 opacity-10 md:hidden dark:opacity-40 dark:brightness-[0.2]"
             />
 
             <section className="relative py-10 md:pb-10 bg-[url(/monk-seated-in-meditation-under-forest-tree-1920.webp)] bg-cover bg-center">
                 {/* Overlay layer for easy customization of color/transparency */}
-                <div className="absolute inset-0 bg-white/5 dark:bg-black/62 z-0" aria-hidden="true" />
+                <div className="absolute inset-0 bg-white/5 dark:bg-black/30 z-0" aria-hidden="true" />
 
 
                 <img
                     alt="Light Accent"
                     aria-hidden="true"
-                    src="https://www.untitledui.com/marketing/light-accent.webp"
+                    src="/patterns/light-accent.webp"
                     className="absolute z-20 -right-10 -bottom-14 max-w-160 opacity-30 mix-blend-multiple md:right-10 md:-bottom-1/3 md:max-w-7xl mask-b-from-90% mask-b-to-100% scale-x-[-1]"
                 />
                 <div className="relative mx-auto grid max-w-container grid-cols-1 gap-16 px-4 md:px-8 lg:min-h-150 lg:items-center">
                     <div className="z-10 flex max-w-2xl flex-col items-start">
-                        <span className="text-sm font-bold text-brand-200 dark:text-brand-200 md:text-md">Open. Inclusive. Relevant.</span>
-                        <h1 className="text-display-md text-brand-25 dark:text-brand-300 md:text-display-lg lg:text-display-xl text-shadow-md text-shadow-gray-700 dark:text-shadow-gray-950">
+                        <span className="text-sm font-light text-brand-100 dark:text-brand-100 md:text-lg uppercase">Open. Inclusive. Relevant.</span>
+                        <h1 className="text-display-md text-brand-25 dark:text-brand-300 md:text-display-xl lg:text-display-2xl text-shadow-md text-shadow-gray-700 dark:text-shadow-gray-950">
                             Gateways to Buddhist paths of the Awakening
                         </h1>
                         <p className="mt-4 max-w-xl text-lg text-balance text-brand-100 dark:text-brand-100 md:mt-6 md:text-xl">
@@ -52,7 +52,7 @@ export const HomeScreen = () => {
                             <Button color="secondary" size="xl" iconLeading={PlayCircle}>
                                 Intro
                             </Button>
-                            <Button size="xl">Sign up</Button>
+                            <Button size="xl" href="/sign-up">Sign up</Button>
                         </div>
                     </div>
 

@@ -30,8 +30,8 @@ export const LoginCardCombined = () => {
                     <BodhicentralLogoMinimal className="size-12 max-md:hidden" />
                     <BodhicentralLogoMinimal className="size-10 md:hidden" />
                     <div className="flex flex-col gap-2">
-                        <h1 className="text-display-xs font-semibold text-primary">Welcome back to Bodhi Central</h1>
-                        <p className="text-md text-tertiary">Please enter your details.</p>
+                        <h1 className="text-display-md text-primary">Welcome back!</h1>
+                        <p className="text-md text-tertiary">Please enter your log in details.</p>
                     </div>
                 </div>
 
