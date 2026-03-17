@@ -5,6 +5,7 @@ import { MobileNavigationHeader } from "../base-components/mobile-header";
 import { NavAccountCard } from "../base-components/nav-account-card";
 import { NavItemBase } from "../base-components/nav-item";
 import type { NavItemType } from "../config";
+import { User } from "@supabase/supabase-js";
 import Link from "next/link";
 
 interface SidebarNavigationSectionsSubheadingsProps {
@@ -12,9 +13,10 @@ interface SidebarNavigationSectionsSubheadingsProps {
     activeUrl?: string;
     /** List of items to display. */
     items: Array<{ label: string; items: NavItemType[] }>;
+    user?: User | null;
 }
 
-export const SidebarNavigationSectionsSubheadings = ({ activeUrl = "/", items }: SidebarNavigationSectionsSubheadingsProps) => {
+export const SidebarNavigationSectionsSubheadings = ({ activeUrl = "/", items, user }: SidebarNavigationSectionsSubheadingsProps) => {
     const MAIN_SIDEBAR_WIDTH = 292;
 
     const content = (
@@ -52,7 +54,7 @@ export const SidebarNavigationSectionsSubheadings = ({ activeUrl = "/", items }:
             </ul>
 
             <div className="mt-auto flex flex-col gap-5 px-2 py-4 lg:gap-6 lg:px-4 lg:py-4">
-                <NavAccountCard />
+                <NavAccountCard user={user} />
             </div>
         </aside>
     );

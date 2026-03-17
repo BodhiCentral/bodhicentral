@@ -3,7 +3,8 @@
 import type { FC, HTMLAttributes } from "react";
 import { useCallback, useEffect, useRef } from "react";
 import type { Placement } from "@react-types/overlays";
-import { BookOpen01, ChevronSelectorVertical, LogOut01, Plus, Settings01, User01 } from "@untitledui/icons";
+import { BookOpen01, ChevronSelectorVertical, HelpCircle, LayersTwo01, LogOut01, Plus } from "@untitledui/icons";
+import { User } from "@supabase/supabase-js";
 import { useFocusManager } from "react-aria";
 import type { DialogProps as AriaDialogProps } from "react-aria-components";
 import { Button as AriaButton, Dialog as AriaDialog, DialogTrigger as AriaDialogTrigger, Popover as AriaPopover } from "react-aria-components";
@@ -12,6 +13,7 @@ import { Button } from "@/components/base/buttons/button";
 import { RadioButtonBase } from "@/components/base/radio-buttons/radio-buttons";
 import { useBreakpoint } from "@/hooks/use-breakpoint";
 import { cx } from "@/utils/cx";
+import { signOut } from "@/app/(marketing)/(login)/actions";
 
 type NavAccountType = {
     /** Unique identifier for the nav item. */
@@ -46,8 +48,9 @@ const placeholderAccounts: NavAccountType[] = [
 export const NavAccountMenu = ({
     className,
     selectedAccountId = "olivia",
+    user,
     ...dialogProps
-}: AriaDialogProps & { className?: string; accounts?: NavAccountType[]; selectedAccountId?: string }) => {
+}: AriaDialogProps & { className?: string; accounts?: NavAccountType[]; selectedAccountId?: string; user?: User | null }) => {
     const focusManager = useFocusManager();
     const dialogRef = useRef<HTMLDivElement>(null);
 
@@ -86,27 +89,39 @@ export const NavAccountMenu = ({
         >
             <div className="rounded-xl bg-primary ring-1 ring-secondary">
                 <div className="flex flex-col gap-0.5 py-1.5">
-                    <NavAccountCardMenuItem label="View profile" icon={User01} shortcut="⌘K->P" />
-                    <NavAccountCardMenuItem label="Account settings" icon={Settings01} shortcut="⌘S" />
-                    <NavAccountCardMenuItem label="Documentation" icon={BookOpen01} />
+                    <NavAccountCardMenuItem label="My Desk Preferences" icon={LayersTwo01} />
+                    <NavAccountCardMenuItem label="Help & FAQ" icon={HelpCircle} />
                 </div>
                 <div className="flex flex-col gap-0.5 border-t border-secondary py-1.5">
-                    <div className="px-3 pt-1.5 pb-1 text-xs font-semibold text-tertiary">Switch account</div>
+                    <div className="px-3 pt-1.5 pb-1 text-xs font-semibold text-tertiary">{user ? "Current account" : "Switch account"}</div>
 
                     <div className="flex flex-col gap-0.5 px-1.5">
-                        {placeholderAccounts.map((account) => (
-                            <button
-                                key={account.id}
-                                className={cx(
-                                    "relative w-full cursor-pointer rounded-md px-2 py-1.5 text-left outline-focus-ring hover:bg-primary_hover focus:z-10 focus-visible:outline-2 focus-visible:outline-offset-2",
-                                    account.id === selectedAccountId && "bg-primary_hover",
-                                )}
-                            >
-                                <AvatarLabelGroup status="online" size="md" src={account.avatar} title={account.name} subtitle={account.email} />
+                        {user ? (
+                            <div className="relative w-full rounded-md px-2 py-1.5 text-left bg-primary_hover">
+                                <AvatarLabelGroup 
+                                    status="online" 
+                                    size="md" 
+                                    src={user.user_metadata?.avatar_url || `https://ui-avatars.com/api/?name=${encodeURIComponent(user.user_metadata?.full_name || user.email?.split("@")[0] || "User")}&background=7F56D9&color=fff`} 
+                                    title={user.user_metadata?.full_name || user.email?.split("@")[0] || "User"} 
+                                    subtitle={user.email || ""} 
+                                />
+                                <RadioButtonBase isSelected={true} className="absolute top-2 right-2" />
+                            </div>
+                        ) : (
+                            placeholderAccounts.map((account) => (
+                                <button
+                                    key={account.id}
+                                    className={cx(
+                                        "relative w-full cursor-pointer rounded-md px-2 py-1.5 text-left outline-focus-ring hover:bg-primary_hover focus:z-10 focus-visible:outline-2 focus-visible:outline-offset-2",
+                                        account.id === selectedAccountId && "bg-primary_hover",
+                                    )}
+                                >
+                                    <AvatarLabelGroup status="online" size="md" src={account.avatar} title={account.name} subtitle={account.email} />
 
-                                <RadioButtonBase isSelected={account.id === selectedAccountId} className="absolute top-2 right-2" />
-                            </button>
-                        ))}
+                                    <RadioButtonBase isSelected={account.id === selectedAccountId} className="absolute top-2 right-2" />
+                                </button>
+                            ))
+                        )}
                     </div>
                 </div>
                 <div className="flex flex-col gap-2 px-2 pt-0.5 pb-2">
@@ -117,7 +132,7 @@ export const NavAccountMenu = ({
             </div>
 
             <div className="pt-1 pb-1.5">
-                <NavAccountCardMenuItem label="Sign out" icon={LogOut01} shortcut="⌥⇧Q" />
+                <NavAccountCardMenuItem label="Sign out" icon={LogOut01} shortcut="⌥⇧Q" onClick={() => signOut()} />
             </div>
         </AriaDialog>
     );
@@ -158,29 +173,37 @@ export const NavAccountCard = ({
     popoverPlacement,
     selectedAccountId = "olivia",
     items = placeholderAccounts,
+    user,
 }: {
     popoverPlacement?: Placement;
     selectedAccountId?: string;
     items?: NavAccountType[];
+    user?: User | null;
 }) => {
     const triggerRef = useRef<HTMLDivElement>(null);
     const isDesktop = useBreakpoint("lg");
 
     const selectedAccount = placeholderAccounts.find((account) => account.id === selectedAccountId);
 
-    if (!selectedAccount) {
-        console.warn(`Account with ID ${selectedAccountId} not found in <NavAccountCard />`);
-        return null;
+    const displayName = user ? (user.user_metadata?.full_name || user.email?.split("@")[0] || "User") : "Loading...";
+    const userEmail = user?.email || "";
+    // If we have a user, only use their avatar or a generic fallback. 
+    const avatarUrl = user 
+        ? (user.user_metadata?.avatar_url || `https://ui-avatars.com/api/?name=${encodeURIComponent(displayName)}&background=7F56D9&color=fff`) 
+        : "https://www.gravatar.com/avatar?d=mp";
+
+    if (!user) {
+        // You could return a skeleton here, but for now we'll just show the loading state
     }
 
     return (
         <div ref={triggerRef} className="relative flex items-center gap-3 rounded-xl p-3 ring-1 ring-secondary ring-inset">
             <AvatarLabelGroup
                 size="md"
-                src={selectedAccount.avatar}
-                title={selectedAccount.name}
-                subtitle={selectedAccount.email}
-                status={selectedAccount.status}
+                src={avatarUrl}
+                title={displayName}
+                subtitle={userEmail}
+                status={selectedAccount?.status || "online"}
             />
 
             <div className="absolute top-1.5 right-1.5">
@@ -202,7 +225,7 @@ export const NavAccountCard = ({
                             )
                         }
                     >
-                        <NavAccountMenu selectedAccountId={selectedAccountId} accounts={items} />
+                        <NavAccountMenu selectedAccountId={selectedAccountId} accounts={items} user={user} />
                     </AriaPopover>
                 </AriaDialogTrigger>
             </div>

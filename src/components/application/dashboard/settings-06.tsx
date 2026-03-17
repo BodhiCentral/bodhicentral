@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
     BarChartSquare02,
     Calendar,
@@ -21,6 +21,8 @@ import { Avatar } from "@/components/base/avatar/avatar";
 import { Badge } from "@/components/base/badges/badges";
 import { Input } from "@/components/base/input/input";
 import { NativeSelect } from "@/components/base/select/select-native";
+import { createClient } from "@/utils/supabase/client";
+import { User } from "@supabase/supabase-js";
 
 import { AppearanceTab } from "./settings-tabs/appearance-tab";
 import { DetailsTab } from "./settings-tabs/details-tab";
@@ -44,11 +46,31 @@ const tabs = [
 
 export const Settings06 = () => {
     const [selectedTab, setSelectedTab] = useState<string>("details");
+    const [user, setUser] = useState<User | null>(null);
+
+    useEffect(() => {
+        const supabase = createClient();
+        
+        // Initial fetch
+        supabase.auth.getUser().then(({ data: { user } }) => {
+            console.log("Settings06 - Initial user fetch:", user);
+            setUser(user);
+        });
+
+        // Listen for changes
+        const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
+            console.log("Settings06 - Auth state change:", event, session?.user);
+            setUser(session?.user ?? null);
+        });
+
+        return () => subscription.unsubscribe();
+    }, []);
 
     return (
         <div className="flex flex-col bg-primary lg:flex-row">
             <SidebarNavigationSectionsSubheadings
                 activeUrl="/settings"
+                user={user}
                 items={[
                     {
                         label: "General",
