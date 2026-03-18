@@ -184,7 +184,7 @@ export const Settings06 = () => {
             />
 
             {/* Settings Panel Main section */}
-            <main className="min-w-0 flex-1 bg-olive-50 pt-8 pb-12">
+            <main className="min-w-0 flex-1 bg-olive-50 dark:bg-olive-800 pt-8 pb-12">
                 <div className="flex flex-col gap-8">
                     <div className="flex flex-col gap-5 px-4 lg:px-8">
                         {/* Page header simple with search */}
