@@ -117,6 +117,10 @@ const footerNavList = [
                 label: "Help and FAQ",
                 href: "/support",
             },
+            {
+                label: "Plans",
+                href: "#",
+            },
         ],
     },
     {
