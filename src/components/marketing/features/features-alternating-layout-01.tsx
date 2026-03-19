@@ -71,13 +71,13 @@ export const FeaturesAlternatingLayout01 = () => {
                             {/* Light mode image (hidden in dark mode) */}
                             <img
                                 alt="Scripture mockup showing Collections interface"
-                                src="/scripture-mockup-01.webp"
+                                src="/placeholder-image-landscape.svg"
                                 className="size-full object-contain lg:w-auto lg:max-w-none dark:hidden"
                             />
                             {/* Dark mode image (hidden in light mode) */}
                             <img
                                 alt="Dashboard mockup showing application interface"
-                                src="/scripture-mockup-01.webp"
+                                src="/placeholder-image-landscape.svg"
                                 className="size-full object-contain not-dark:hidden lg:w-auto lg:max-w-none"
                             />
                         </AlternateImageMockup>
@@ -112,13 +112,13 @@ export const FeaturesAlternatingLayout01 = () => {
 
                             <img
                                 alt="Mockup showing Learning Paths interface"
-                                src="/learning-paths-mockup-01.webp"
+                                src="/placeholder-image-landscape.svg"
                                 className="size-full object-contain lg:w-auto lg:max-w-none dark:hidden"
                             />
                             {/* Dark mode image (hidden in light mode) */}
                             <img
                                 alt="Mockup showing Learning Paths interface"
-                                src="/learning-paths-mockup-01.webp"
+                                src="/placeholder-image-landscape.svg"
                                 className="size-full object-contain not-dark:hidden lg:w-auto lg:max-w-none"
                             />
                         </AlternateImageMockup>
