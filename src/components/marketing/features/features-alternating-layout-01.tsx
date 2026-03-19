@@ -158,7 +158,7 @@ export const FeaturesAlternatingLayout01 = () => {
                         <div className="grid w-full grid-cols-[repeat(12,1fr)] grid-rows-[repeat(12,1fr)] gap-2 md:w-auto md:gap-4 drop-shadow-lg ">
 
                             <img
-                                src="/monk-seated-in-meditation-under-forest-tree-1920.webp"
+                                src="/placeholder-image-landscape.svg"
                                 className="size-full object-cover border-double border-5 border-gray-300 dark:border-gray-700 rounded-xl"
                                 alt="Monk seated in meditation under forest tree"
                                 style={{
@@ -167,7 +167,7 @@ export const FeaturesAlternatingLayout01 = () => {
                             />
 
                             <img
-                                src="/bc-blog.webp"
+                                src="/placeholder-image-landscape.svg"
                                 className="size-full object-cover border-double border-5 border-gray-300 dark:border-gray-700 rounded-xl"
                                 alt="BD Blog screenshot"
                                 style={{
@@ -175,7 +175,7 @@ export const FeaturesAlternatingLayout01 = () => {
                                 }}
                             />
                             <img
-                                src="/bc-documentation.webp"
+                                src="/placeholder-image-landscape.svg"
                                 className="size-full object-cover border-double border-5 border-gray-300 dark:border-gray-700 rounded-xl"
                                 alt="BD Documentation screenshot"
                                 style={{
@@ -183,7 +183,7 @@ export const FeaturesAlternatingLayout01 = () => {
                                 }}
                             />
                             <img
-                                src="/himalayan-scenery-02.jpg"
+                                src="/placeholder-image-landscape.svg"
                                 className="size-full object-cover border-double border-5 border-gray-300 dark:border-gray-700 rounded-xl"
                                 alt="Himalayan scenery"
                                 style={{
@@ -191,7 +191,7 @@ export const FeaturesAlternatingLayout01 = () => {
                                 }}
                             />
                             <img
-                                src="/ancient-nalanda-university-idealization.jpg"
+                                src="/placeholder-image-landscape.svg"
                                 className="size-full object-cover border-double border-5 border-gray-300 dark:border-gray-700 rounded-xl"
                                 alt="Monk seated in meditation under forest tree"
                                 style={{
