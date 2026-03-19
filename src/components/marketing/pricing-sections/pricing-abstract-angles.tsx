@@ -23,7 +23,7 @@ export const PricingAbstractAngles = () => {
 
             ],
             icon: Zap,
-            buttonText: "Continue learning",
+            buttonText: "Continue reading",
         },
         {
             title: "Discovery Experience",
@@ -33,14 +33,14 @@ export const PricingAbstractAngles = () => {
             features: [
                 "Discover My Desk basic features",
                 "Basic storage capacity",
-                "Up to 3 personal Spaces",
+                "Up to 2 personal Spaces",
                 "Up to 5 stored texts",
                 "Up to 20 Saved Searches",
                 "Bookmarks",
                 "Chat and email support",
             ],
             icon: LayersTwo01,
-            buttonText: "Start free sign up",
+            buttonText: "Start free account",
         },
         {
             title: "Full Access Subscription",
@@ -75,10 +75,10 @@ export const PricingAbstractAngles = () => {
 
                         <h2 className="mt-4 text-display-md font-semibold text-brand-primary md:text-display-lg">Plans for all</h2>
                         <p className="mt-4 text-lg text-primary md:mt-6 md:text-xl">
-                            We believe that Buddhist texts and learning paths should be open and accessible for everyone. Please enjoy the <strong>Basic Reading</strong> and <strong>Discovery</strong> experiences!
+                            We believe that Buddhist texts and teachings should be open and accessible for everyone. Please enjoy the <strong>Basic Reading</strong> and <strong>Discovery</strong> experiences!
                         </p>
                         <p className="mt-4 text-lg text-primary md:mt-6 md:text-xl">
-                            Your <strong>Full Access</strong> subscription helps us keep the platform running and improving, and allows us to offer the Basic and Discovery experiences for free.
+                            Your <strong>Full Access</strong> subscription helps us keep the platform running and improving with new features, and allows us to offer the Basic Reading and Discovery experiences for free for everyone.
                         </p>
                         <div className="mt-8 flex md:mt-12">
                             <div className="relative z-10 inline-flex gap-3">

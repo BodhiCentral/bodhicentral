@@ -14,7 +14,7 @@ export default function TheravadaTraditionPage() {
         <>
             <div className="relative mx-auto bg-[url(/jetavanaramaya-scene-01.jpg)] bg-cover bg-center bg-no-repeat pt-12 pb-24">
                 {/* Overlay layer for easy customization of color/transparency */}
-                <div className="absolute inset-0 bg-white/40 dark:bg-black/40 z-0" aria-hidden="true" />
+                <div className="absolute inset-0 bg-linear-to-b from-white/80 via-white/50 via-30% to-white/10 dark:bg-linear-to-b dark:from-black/15 dark:via-black/50 dark:via-30% dark:to-black/10 z-0" aria-hidden="true" />
 
                 {/* Content layer */}
                 <div className="relative z-10">
@@ -58,7 +58,7 @@ export default function TheravadaTraditionPage() {
                         </div>
                     </section>
                 </div>
-                <div className="absolute h-6 top-0 left-0 right-0 mx-auto bg-[url(/patterns/detailed-endless-band-gold-140px.png)] bg-contain bg-repeat drop-shadow-xs drop-shadow-black/80 dark:drop-shadow-black/50 opacity-40 dark:opacity-30">
+                <div className="absolute h-3 top-0 left-0 right-0 mx-auto bg-[url(/patterns/detailed-endless-band-gold-140px.png)] bg-contain bg-repeat drop-shadow-xs drop-shadow-black/80 dark:drop-shadow-black/50 opacity-30 dark:opacity-30">
                 </div>
                 <div className="absolute h-6 bottom-0 left-0 right-0 mx-auto bg-[url(/patterns/detailed-endless-band-gold-140px.png)] bg-contain bg-repeat drop-shadow-xs drop-shadow-black/80 dark:drop-shadow-black/50 opacity-50 dark:opacity-40">
                 </div>
