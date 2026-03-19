@@ -31,7 +31,8 @@ export const PricingAbstractAngles = () => {
             description: "Sign up to your Desk",
             badge: "Popular",
             features: [
-                "Access to My Desk basic features",
+                "Discover My Desk basic features",
+                "Basic storage capacity",
                 "Up to 3 personal Spaces",
                 "Up to 5 stored texts",
                 "Up to 20 Saved Searches",
@@ -74,7 +75,7 @@ export const PricingAbstractAngles = () => {
 
                         <h2 className="mt-4 text-display-md font-semibold text-brand-primary md:text-display-lg">Plans for all</h2>
                         <p className="mt-4 text-lg text-primary md:mt-6 md:text-xl">
-                            We believe that access to Buddhist texts and learning paths should be open and accessible for everyone. Please enjoy the <strong>Basic</strong> and <strong>Discovery</strong> experiences!
+                            We believe that Buddhist texts and learning paths should be open and accessible for everyone. Please enjoy the <strong>Basic</strong> and <strong>Discovery</strong> experiences!
                         </p>
                         <p className="mt-4 text-lg text-primary md:mt-6 md:text-xl">
                             Your <strong>Full Access</strong> subscription helps us keep the platform running and improving, and allows us to offer the Basic and Discovery experiences for free.
