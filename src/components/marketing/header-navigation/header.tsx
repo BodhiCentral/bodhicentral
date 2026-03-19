@@ -132,7 +132,7 @@ export const Header = ({ items = headerNavItems, isFullWidth, isFloating, classN
                 >
                     <div className="flex items-center gap-8">
                         {/* LOGO */}
-                        <Link href="/" className="flex items-center outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2">
+                        <Link href="/" aria-label="Bodhicentral Home page" className="flex items-center outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2">
                             <BodhicentralLogo className="h-9 md:max-lg:hidden" />
                             <BodhicentralLogoMinimal className="hidden h-9 md:inline-block lg:hidden" />
                         </Link>

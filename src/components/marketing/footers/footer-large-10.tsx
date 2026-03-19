@@ -194,7 +194,7 @@ export const FooterLarge10 = () => {
 
                 <div className="mt-12 flex flex-col gap-12 md:mt-16 md:gap-16 xl:flex-row">
                     <div className="flex flex-col gap-6 md:w-64 md:gap-8">
-                        <Link href="/" className="flex w-min items-center outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2">
+                        <Link href="/" aria-label="Bodhicentral Home page" className="flex w-min items-center outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2">
                             <BodhicentralLogo className="h-14 w-min shrink-0" />
                         </Link>
                         <p className="text-md text-tertiary">A modern platform of universally revered Buddhist texts and accessible paths of study and practice.</p>
