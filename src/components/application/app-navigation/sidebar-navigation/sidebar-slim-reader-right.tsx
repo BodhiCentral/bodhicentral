@@ -15,7 +15,7 @@ interface SidebarNavigationSlimProps {
     footerItems?: (NavItemType & { icon: FC<{ className?: string }> })[];
 }
 
-export const SidebarNavigationSlim = ({ activeUrl, items, footerItems = [] }: SidebarNavigationSlimProps) => {
+export const SidebarNavigationSlimRight = ({ activeUrl, items, footerItems = [] }: SidebarNavigationSlimProps) => {
     const activeItem = [...items, ...footerItems].find((item) => item.href === activeUrl || item.items?.some((subItem) => subItem.href === activeUrl));
     const [currentItem, setCurrentItem] = useState(activeItem || items[1]);
     const [isHovering, setIsHovering] = useState(false);
@@ -77,7 +77,7 @@ export const SidebarNavigationSlim = ({ activeUrl, items, footerItems = [] }: Si
         <>
             {/* Desktop sidebar navigation */}
             <div
-                className="z-50 lg:fixed lg:inset-y-0 lg:top-8 lg:bottom-0 lg:left-0 lg:flex"
+                className="z-50 lg:fixed lg:inset-y-0 lg:top-8 lg:bottom-0 lg:right-0 lg:flex"
                 onPointerEnter={() => setIsHovering(true)}
             >
                 {mainSidebar}
@@ -86,9 +86,9 @@ export const SidebarNavigationSlim = ({ activeUrl, items, footerItems = [] }: Si
             {/* Placeholder to take up physical space because the real sidebar has `fixed` position. */}
             <div
                 style={{
-                    paddingLeft: MAIN_SIDEBAR_WIDTH,
+                    paddingRight: MAIN_SIDEBAR_WIDTH,
                 }}
-                className="sticky lg:top-16 lg:bottom-0 lg:left-0 lg:block"
+                className="sticky lg:top-16 lg:bottom-0 lg:right-0 lg:block"
             />
 
 
