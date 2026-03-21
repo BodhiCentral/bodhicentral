@@ -1,11 +1,12 @@
 "use client";
-import { Close01, Type02, Columns01, Menu02, Building08, HomeLine, Rows01, BookOpen01, Eye, EyeOff, Headphones01, Image01, VideoRecorder, InfoCircle, AlignLeft01, AlignRight01, Link01, Dataflow01, Check, Copy01, ArrowRight, Settings03 } from "@untitledui/icons";
+import { Close01, Type02, Columns01, Menu02, Building08, HomeLine, Rows01, BookOpen01, Eye, EyeOff, Headphones01, Image01, VideoRecorder, InfoCircle, AlignLeft01, AlignRight01, Link01, Dataflow01, Check, Copy01, ArrowRight, Settings03, SearchLg } from "@untitledui/icons";
 import { Breadcrumbs } from "@/components/application/breadcrumbs/breadcrumbs";
 import { SidebarNavigationSlim } from "@/components/application/app-navigation/sidebar-navigation/sidebar-slim-reader";
 import { SidebarNavigationSlimRight } from "@/components/application/app-navigation/sidebar-navigation/sidebar-slim-reader-right";
 import { Button } from "@/components/base/buttons/button";
 import { Facebook, LinkedIn, X } from "@/components/foundations/social-icons";
 import Image from "next/image";
+import { Input } from "@/components/base/input/input";
 
 
 export default function ReaderPage() {
@@ -14,7 +15,7 @@ export default function ReaderPage() {
 
 
             {/* TODO: Create a dynamic Modal for canonical navigation */}
-            <div className="hidden absolute top-22 left-4 bottom-4 w-96 z-50 bg-white dark:bg-olive-900 rounded-2xl p-8 drop-shadow-md">
+            <div className="hidden absolute top-22 left-4 bottom-4 w-96 z-50 bg-white dark:bg-gray-900 rounded-2xl p-8 drop-shadow-md">
                 <div className="prose flex flex-col w-full">
                     <h2 className="text-xl font-bold text-primary">Canonical Navigation Specs</h2>
                     <p className="text-sm text-tertiary">The Canonical Navigation is a hierarchical structure of the Buddhist Pali and Tibetan canons, organized by the respective divisions, sections, and sub-sections of each canon.</p>
@@ -27,20 +28,21 @@ export default function ReaderPage() {
             </div>
 
             {/* TODO: Create a dynamic Breadcrumbs component */}
-            <div className="fixed mx-auto w-full top-15 left-0 right-0 z-50 flex justify-between px-22 py-4 bg-olive-200 dark:bg-olive-800">
+            <div className="fixed mx-auto w-full top-16 left-0 right-0 z-50 flex items-center justify-between px-20 py-2 bg-olive-200 dark:bg-gray-800">
                 <Breadcrumbs>
-                    <Breadcrumbs.Item icon={Building08} href="/" />
+                    <Breadcrumbs.Item icon={HomeLine} href="/" />
                     <Breadcrumbs.Item href="/scripture">Canon</Breadcrumbs.Item>
                     <Breadcrumbs.Item href="/scripture/pali-canon">Division</Breadcrumbs.Item>
                     <Breadcrumbs.Item href="/learning-paths">Section</Breadcrumbs.Item>
                     <Breadcrumbs.Item href="/resources">Sutta</Breadcrumbs.Item>
                 </Breadcrumbs>
+                <Input className="lg:w-60 h-10" size="sm" shortcut aria-label="Search in text" placeholder="Search in text" icon={SearchLg} />
             </div>
 
-            <div className="mx-auto h-12"></div>
+            <div className="mx-auto h-14"></div>
 
             {/* The MAIN Reader wrapper */}
-            <main className="mx-auto w-full bg-olive-200 dark:bg-olive-800">
+            <main className="fixed top-30 left-0 right-0 bottom-0 pb-4 mx-auto w-full bg-olive-200 dark:bg-gray-800">
 
                 {/* LEFT - Sidebar Tools for the Text Navigation */}
                 <SidebarNavigationSlim
@@ -100,15 +102,15 @@ export default function ReaderPage() {
 
 
                 {/* Reader Canvas wrapper */}
-                <div className="mx-auto flex flex-col w-full px-16">
+                <div className="mx-auto flex flex-col w-full h-full px-16 overflow-y-auto">
 
 
                     {/* MAIN TEXT CANVAS */}
-                    <div className="mx-auto w-full px-4 md:px-6 bg-olive-100 dark:bg-olive-800 rounded-tl-3xl rounded-tr-3xl">
+                    <div className="mx-auto w-full pl-4 md:pl-6 bg-olive-50 dark:bg-gray-950/70 rounded-tl-3xl rounded-tr-3xl">
                         <div className="mx-auto w-full flex flex-nowrap justify-center gap-20 pl-2">
                             {/* Table of contents */}
-                            <div className="sticky top-[140px] hidden h-fit w-80 pt-4 self-start flex-col gap-8 md:flex">
-                                <div className="w-full border-t border-secondary" />
+                            <div className="sticky top-[60px] hidden h-fit w-80 pt-2 self-start flex-col gap-8 md:flex">
+                                <div className="hidden w-full border-t border-secondary" />
                                 <div className="flex flex-col gap-4">
                                     <p className="text-md font-semibold text-brand-secondary">Table of contents</p>
                                     <ul className="flex flex-col gap-2">
@@ -140,8 +142,8 @@ export default function ReaderPage() {
                                 </div>
                             </div>
                             {/* TEXT CONTENT */}
-                            <div className="mx-auto w-full prose pt-12">
-                                <div className="mx-auto w-full">
+                            <div className="mx-auto w-full prose h-full pt-12">
+                                <div className="mx-auto w-full h-full">
                                     <p className="lead first-letter:float-left first-letter:text-7xl first-letter:leading-12 first-letter:mr-2 first-letter:font-serif first-letter:font-extralight first-letter:text-brand-800 dark:first-letter:text-brand-200">
                                         The Monastic Law is available in more recensions than any other part of the Tipiṭaka. There is a full version in Pali, and four complete versions extant in Chinese translation, all belonging to different schools of early Buddhism: Mahāsāṅghika, Dharmaguptaka, Mahīśāsaka, and Sarvāstivāda. The Chinese Tipiṭaka also preserves other Vinaya related texts, such as an independent <i>bhikkhu pātimokkha</i> of the Kāśyapīya School and several more or less school-specific Vinaya texts. The Vinaya of the Mūlasarvāstivāda school exists in three versions: a complete text in Tibetan translation, a mostly complete version in Chinese, and substantial portions in Sanskrit. There are also several Vinaya texts, as well as a large number of fragments, in Sanskrit and other Indic languages, mostly of Mahāsāṅghika, Sarvāstivāda, and Mūlasarvāstivāda provenance.
                                     </p>
@@ -294,7 +296,7 @@ export default function ReaderPage() {
                                     <p>
                                         In addition to the above, most Theravāda monasteries follow a number of rules that are more informal in nature. These include rules used to distinguish individual sects (<i>nikāyas</i>), such as rules on the style of robes and on the manner of wearing them. Then there are rules that pertain to particular teacher traditions, such as those that often form around especially charismatic and famous teachers. The final set of rules are those laid down at individual monasteries. These regulate the daily schedule and other aspects of monastic life that are monastery specific. Although all these rules are sometimes called Vinaya and therefore assumed to stem from the Vinaya Piṭaka or at least the commentaries, in reality, few of them have any Canonical basis.
                                     </p>
-                                    <div className="my-8 rounded-3xl bg-secondary px-5 py-2 text-lg text-tertiary md:pt-1 md:pb-4 md:px-6 [&>p+p]:mt-4.5">
+                                    <div className="my-8 rounded-3xl bg-secondary px-5 py-2 text-lg text-tertiary md:pt-1 md:pb-2 md:px-6 [&>p+p]:mt-4.5">
                                         <h2 id="references-and-further-reading">References and Further Reading</h2>
                                         <ul>
                                             <li>Clarke, Shayne; <i> Vinaya Mātṛikā – Mother of the Monastic Codes, or just Another Set of Lists?</i>; Indo-Iranian Journal 47: 77–120, 2004</li>
@@ -324,19 +326,28 @@ export default function ReaderPage() {
                             </div>
 
                             {/* The Auxiliary Panel wrapper */}
-                            <div className="sticky top-[120px] pt-3 w-140 h-full">
-                                <div className="prose flex flex-col w-full h-full bg-olive-50 dark:bg-olive-900/70 p-6 rounded-2xl drop-shadow-md">
+                            <div className="sticky top-0 w-110 h-full flex flex-col justify-between">
+                                <div className="prose flex flex-col w-full bg-olive-100 dark:bg-gray-950 px-8 py-16 rounded-r-3xl">
                                     <h2 className="text-xl font-bold text-primary">Auxiliary Panel Specs</h2>
-                                    <p className="text-sm text-tertiary">The Auxiliary Panel is dedicated to displaying information related to the text being read. It is placed on the right side of the reader, where the user can expand on the various aspects of the text being read.</p>
-                                    <p className="text-sm text-tertiary">Among the features being considered for the Auxiliary Panel are the following:</p>
+                                    <p className="text-sm text-tertiary">The Auxiliary Panel displays information related to the text being read. Different contextual content can be selected using the tools in the sidebar on the right.</p>
+                                    <p className="text-sm text-tertiary">Features being considered for the Auxiliary Panel include:</p>
                                     <ul className="text-sm text-tertiary">
                                         <li>Listings of connections and parallels with related texts or sections on other parts of the canons.</li>
                                         <li>Commentaries and sub-commentaries on the text being read.</li>
                                         <li>Overviews of the text being read and recommended reading.</li>
                                         <li>Related study paths.</li>
                                     </ul>
-                                    <p className="text-sm text-tertiary pb-4">This panel and related features are a work in progress. Its development is ongoing and will be reported on our <a className="text-brand-700 dark:text-brand-300" href="https://bodhi-central-docs.vercel.app/tech/features-roadmap" target="_blank">Technical Documentation</a> as the project progresses.</p>
+                                    <p className="text-sm text-tertiary pb-4">This panel and related features are a work in progress and will be reported on our <a className="text-brand-700 dark:text-brand-300" href="https://bodhi-central-docs.vercel.app/tech/features-roadmap" target="_blank">Technical Documentation</a>. Stay tuned!</p>
+                                    <div className="w-full border-t border-secondary mt-auto">
+                                        <h2 className="text-xl font-bold text-primary">Auxiliary Features</h2>
+                                        <ul className="text-sm text-tertiary">
+                                            <li>Downloadable versions of the texts.</li>
+                                            <li>Technical documentation.</li>
+                                        </ul>
+                                        <p className="text-sm text-tertiary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>

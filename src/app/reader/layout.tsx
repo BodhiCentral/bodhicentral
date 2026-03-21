@@ -13,7 +13,7 @@ export default async function ReaderLayout({
 
     return (
         <>
-            <div className="reader-root h-screen overflow-y-auto bg-olive-200 dark:bg-olive-800">
+            <div className="reader-root  bg-olive-200 dark:bg-gray-800 pb-2">
                 <Header user={user} />
                 {children}
             </div>

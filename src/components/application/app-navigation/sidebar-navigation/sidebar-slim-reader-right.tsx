@@ -28,7 +28,7 @@ export const SidebarNavigationSlimRight = ({ activeUrl, items, footerItems = [] 
                 width: MAIN_SIDEBAR_WIDTH,
             }}
             className={cx(
-                "group flex h-full max-h-full max-w-full overflow-y-auto pt-22 pb-0 transition duration-100 ease-linear",
+                "group flex h-full max-h-full max-w-full overflow-y-auto pt-26 pb-4 transition duration-100 ease-linear",
             )}
         >
             <div
@@ -53,7 +53,7 @@ export const SidebarNavigationSlimRight = ({ activeUrl, items, footerItems = [] 
                 </ul>
                 <div className="mt-auto flex flex-col gap-4 px-3 py-5">
                     {footerItems.length > 0 && (
-                        <ul className="flex flex-col gap-0.5">
+                        <ul className="flex flex-col gap-3">
                             {footerItems.map((item) => (
                                 <li key={item.label}>
                                     <NavItemButton
@@ -88,7 +88,7 @@ export const SidebarNavigationSlimRight = ({ activeUrl, items, footerItems = [] 
                 style={{
                     paddingRight: MAIN_SIDEBAR_WIDTH,
                 }}
-                className="sticky lg:top-16 lg:bottom-0 lg:right-0 lg:block"
+                className="sticky lg:top-16 lg:bottom-0 lg:right-0 lg:flex"
             />
 
 
