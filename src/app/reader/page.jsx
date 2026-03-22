@@ -1,6 +1,6 @@
 "use client";
 
-import { Close01, Type02, Columns01, Menu02, Building08, HomeLine, Rows01, BookOpen01, Eye, EyeOff, Headphones01, Image01, VideoRecorder, InfoCircle, AlignLeft01, AlignRight01, Link01, Dataflow01, Check, Copy01, ArrowRight, Settings03, SearchLg, Download01 } from "@untitledui/icons";
+import { Close01, Type02, Columns01, Menu02, Building08, HomeLine, Rows01, BookOpen01, Eye, EyeOff, Headphones01, Image01, VideoRecorder, InfoCircle, AlignLeft01, AlignRight01, Link01, Dataflow01, Check, Copy01, ArrowRight, Settings03, SearchLg, Download01, GraduationHat02 } from "@untitledui/icons";
 import { Breadcrumbs } from "@/components/application/breadcrumbs/breadcrumbs";
 import { SidebarNavigationSlim } from "@/components/application/app-navigation/sidebar-navigation/sidebar-slim-reader";
 import { SidebarNavigationSlimRight } from "@/components/application/app-navigation/sidebar-navigation/sidebar-slim-reader-right";
@@ -10,6 +10,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { BodhicentralLogoMinimal } from "@/components/foundations/logo/bodhicentral-logo-minimal";
 import { ThemeToggle } from "@/components/application/theme-toggle";
+import { BadgeGroup } from "@/components/base/badges/badge-groups";
 
 
 export const TableOfContents = () => {
@@ -50,8 +51,43 @@ export const TableOfContents = () => {
 
 export const TextCanvasSingle = () => {
     return (
-        <div className="mx-auto prose pt-12">
-            <div className="mx-auto w-full py-8">
+        <div className="mx-auto prose pt-6">
+            <div className="mx-auto w-full py-4">
+                <section className="relative overflow-hidden py-2 md:pb-6">
+                    <div className="mx-auto grid max-w-container grid-cols-1 items-center justify-items-center gap-8 lg:grid-cols-[1.4fr_3fr] lg:justify-items-start">
+                        <div className="relative lg:h-full lg:min-h-80">
+                            {/* Light mode image (hidden in dark mode) */}
+                            <img
+                                alt="Text Cover"
+                                className="inset-0 h-auto w-full cols- object-cover dark:hidden md:h-70 md:w-auto lg:h-80 lg:object-cover"
+                                src="/textCovers/buddha-sakyamuni-600.jpg"
+                            />
+                            {/* Dark mode image (hidden in light mode) */}
+                            <img
+                                alt="Text Cover"
+                                className="inset-0 h-auto w-full max-w-none object-cover not-dark:hidden md:h-70 md:w-auto lg:h-80 lg:object-cover"
+                                src="/textCovers/buddha-sakyamuni-600.jpg"
+                            />
+                        </div>
+                        <div className="flex max-w-3xl flex-col items-center text-center lg:items-start lg:text-left">
+                            <a href="#" className="rounded-full outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2">
+                                <BadgeGroup className="hidden md:flex" size="lg" addonText="Categories" iconTrailing={ArrowRight} theme="light" color="brand">
+                                    Topics
+                                </BadgeGroup>
+                                <BadgeGroup className="md:hidden" size="md" addonText="Categories" iconTrailing={ArrowRight} theme="light" color="brand">
+                                    Topics
+                                </BadgeGroup>
+                            </a>
+
+                            <h1 className="mt-4 text-display-md font-semibold text-primary md:text-display-lg lg:text-display-xl">
+                                Beautiful Sutta to inspire and grow wisdom
+                            </h1>
+                            <p className="mt-4 max-w-lg text-lg text-balance text-tertiary md:mt-6 md:text-xl">
+                                The Vinaya is the code of conduct for Buddhist monks and nuns. It is a collection of rules and regulations that govern the lives of monastics, and it is an essential part of the Buddhist tradition.
+                            </p>
+                        </div>
+                    </div>
+                </section>
                 <p className="lead first-letter:float-left first-letter:text-7xl first-letter:leading-12 first-letter:mr-2 first-letter:font-serif first-letter:font-extralight first-letter:text-brand-800 dark:first-letter:text-brand-200">
                     The Monastic Law is available in more recensions than any other part of the Tipiṭaka. There is a full version in Pali, and four complete versions extant in Chinese translation, all belonging to different schools of early Buddhism: Mahāsāṅghika, Dharmaguptaka, Mahīśāsaka, and Sarvāstivāda. The Chinese Tipiṭaka also preserves other Vinaya related texts, such as an independent <i>bhikkhu pātimokkha</i> of the Kāśyapīya School and several more or less school-specific Vinaya texts. The Vinaya of the Mūlasarvāstivāda school exists in three versions: a complete text in Tibetan translation, a mostly complete version in Chinese, and substantial portions in Sanskrit. There are also several Vinaya texts, as well as a large number of fragments, in Sanskrit and other Indic languages, mostly of Mahāsāṅghika, Sarvāstivāda, and Mūlasarvāstivāda provenance.
                 </p>
@@ -228,7 +264,7 @@ export const TextCanvasSingle = () => {
 export const AuxiliaryPanel = () => {
     return (
         <div className="sticky top-12 mx-auto z-45 flex-1">
-            <div className="prose flex flex-col w-full bg-olive-100 dark:bg-gray-950 px-6 py-4 rounded-tr-3xl rounded-br-lg h-[calc(100dvh-48px)]">
+            <div className="prose flex flex-col w-full bg-olive-100 dark:bg-gray-800/30 px-6 py-4 rounded-tr-3xl rounded-br-lg h-[calc(100dvh-48px)]">
                 <h2 className="text-xl text-primary">Auxiliary Panel Specs</h2>
                 <p className="text-sm text-tertiary">The Auxiliary Panel displays information related to the text being read. Categories of peripheral content can be selected from the tools in the sidebar on the right.</p>
                 <p className="text-sm text-tertiary">Features being considered for the Auxiliary Panel include:</p>
@@ -275,9 +311,9 @@ export default function ReaderPage() {
 
 
             {/* The MAIN Reader wrapper */}
-            <main className="mx-auto w-full bg-olive-200 dark:bg-gray-800">
+            <main className="mx-auto w-full bg-olive-200 dark:bg-gray-950">
                 {/* TODO: Create a Header component for the reader */}
-                <div className="fixed mx-auto w-full h-12 flex items-center top-0 left-0 right-0 z-50 gap-10 px-4 bg-olive-200 dark:bg-gray-800">
+                <div className="fixed mx-auto w-full h-12 flex items-center top-0 left-0 right-0 z-50 gap-10 px-4 bg-olive-200 dark:bg-gray-950">
                     <Link href="/" aria-label="Bodhicentral Home page" className="flex items-center outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2">
                         <BodhicentralLogoMinimal className="w-8 md:inline-block" />
                     </Link>
@@ -339,42 +375,47 @@ export default function ReaderPage() {
                     ]}
                     footerItems={[
                         {
-                            label: "Video Library",
+                            label: "Learning Paths",
+                            href: "",
+                            icon: GraduationHat02,
+                        },
+                        {
+                            label: "Video Carousel",
                             href: "",
                             icon: VideoRecorder,
                         },
                         {
-                            label: "Illustrations",
+                            label: "Illustrations Carousel",
                             href: "",
                             icon: Image01,
                         },
                         {
-                            label: "Audio Library",
+                            label: "Audio Carousel",
                             href: "",
                             icon: Headphones01,
                         },
                     ]}
                 />
 
-                <div className="fixed z-45 top-12 left-16 right-16 h-6 rounded-t-3xl bg-linear-to-b bg-olive-50">
+                <div className="fixed z-45 top-12 left-16 right-16 h-6 rounded-t-3xl bg-linear-to-b bg-olive-50 dark:bg-gray-900">
                 </div>
-                <div className="fixed z-40 top-12 left-16 w-6 h-6 bg-olive-200">
+                <div className="fixed z-40 top-12 left-16 w-6 h-6 bg-olive-200 dark:bg-gray-950">
                 </div>
-                <div className="fixed z-40 top-12 right-16 w-6 h-6 bg-olive-200">
+                <div className="fixed z-40 top-12 right-16 w-6 h-6 bg-olive-200 dark:bg-gray-950">
                 </div>
 
                 {/* TEXT READER CANVAS */}
                 <div className="w-full px-16 pt-12">
-                    <div className="relative flex flex-nowrap w-full bg-olive-50 dark:bg-gray-800">
+                    <div className="relative flex flex-nowrap w-full bg-olive-50 dark:bg-gray-900">
 
-                        <div className="sticky top-0 w-1/4">
+                        <div className="sticky top-0 w-[20%]">
                             <TableOfContents />
                         </div>
                         {/* Reader Canvas wrapper */}
-                        <div className="w-1/2">
+                        <div className="w-[55%]">
                             <TextCanvasSingle />
                         </div>
-                        <div className="w-1/4">
+                        <div className="w-[30%]">
                             <AuxiliaryPanel />
                         </div>
                     </div></div>
