@@ -21,7 +21,7 @@ export const TableOfContents = () => {
                 <h2 className="text-display-xs text-brand-primary">Table of contents</h2>
                 <ul className="flex flex-col gap-2">
                     {[
-                        { title: "Origin", href: "#origin", indent: "ml-0" },
+                        { title: "Origin", href: "#origins", indent: "ml-0" },
                         { title: "Textual Transmission and the Schools", href: "#textual-transmission-and-the-schools", indent: "ml-0" },
                         { title: "Content", href: "#content", indent: "ml-0" },
                         { title: "Suttavibhaṅga", href: "#suttavibhaṅga", indent: "ml-6" },
@@ -89,11 +89,11 @@ export const TextCanvasSingle = () => {
                         </div>
                     </div>
                 </section>
-                <p className="lead first-letter:float-left first-letter:text-7xl first-letter:leading-12 first-letter:mr-2 first-letter:font-serif first-letter:font-extralight first-letter:text-brand-800 dark:first-letter:text-brand-200">
+                <p className="lead first-letter:float-left first-letter:text-6xl first-letter:leading-10 first-letter:mr-2 first-letter:font-serif first-letter:font-extralight first-letter:text-brand-800 dark:first-letter:text-brand-200">
                     The Monastic Law is available in more recensions than any other part of the Tipiṭaka. There is a full version in Pali, and four complete versions extant in Chinese translation, all belonging to different schools of early Buddhism: Mahāsāṅghika, Dharmaguptaka, Mahīśāsaka, and Sarvāstivāda. The Chinese Tipiṭaka also preserves other Vinaya related texts, such as an independent <i>bhikkhu pātimokkha</i> of the Kāśyapīya School and several more or less school-specific Vinaya texts. The Vinaya of the Mūlasarvāstivāda school exists in three versions: a complete text in Tibetan translation, a mostly complete version in Chinese, and substantial portions in Sanskrit. There are also several Vinaya texts, as well as a large number of fragments, in Sanskrit and other Indic languages, mostly of Mahāsāṅghika, Sarvāstivāda, and Mūlasarvāstivāda provenance.
                 </p>
                 <hr />
-                <h2 id="origin">Origin</h2>
+                <h2 id="origins">Origins</h2>
                 <p>
                     The word <i>vinaya</i>, here translated as “Monastic Law,” originally probably meant “training,” as can be seen from its usage in the Sutta Piṭaka, “the Basket of Discourses.” In this sense it complements the Dhamma, the doctrine or teaching, which provides the instructions on how the training is to be achieved. The compound <i>dhamma-vinaya</i> is a common one in the earliest literature and might be rendered as “theory and practice.” Gradually the meaning shifted to refer to the rules of conduct instead, thus referring to the training in a narrower sense. Although the former usage is more common in the suttas, it is this latter usage of vinaya which has become the dominant one and which has prevailed to the present day.
                 </p>
@@ -315,38 +315,6 @@ export default function ReaderPage() {
 
             {/* The MAIN Reader wrapper */}
             <main className="mx-auto w-full bg-olive-200 dark:bg-gray-950">
-                {/* TODO: Create a Header component for the reader */}
-                <div className="fixed mx-auto w-full h-12 flex items-center top-0 left-0 right-0 z-50 gap-10 px-4 bg-olive-200 dark:bg-gray-950">
-                    <Link href="/" aria-label="Bodhicentral Home page" className="flex items-center outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2">
-                        <BodhicentralLogoMinimal className="w-8 md:inline-block" />
-                    </Link>
-                    <Breadcrumbs className="flex-1">
-                        <Breadcrumbs.Item icon={HomeLine} href="/" />
-                        <Breadcrumbs.Item href="/scripture">Collections</Breadcrumbs.Item>
-                        <Breadcrumbs.Item href="/scripture">Canon</Breadcrumbs.Item>
-                        <Breadcrumbs.Item href="/scripture/pali-canon">Division</Breadcrumbs.Item>
-                        <Breadcrumbs.Item href="/learning-paths">Section</Breadcrumbs.Item>
-                        <Breadcrumbs.Item href="/resources">Sutta</Breadcrumbs.Item>
-                    </Breadcrumbs>
-                    {/* DESKTOP LOGIN/SIGNUP BUTTONS */}
-                    <div className="flex items-center gap-6 md:flex ml-10"> {/* 10px gap between nav menu items and buttons */}
-                        <NavItemButton
-                            size="md"
-                            label="Search in text"
-                            href=""
-                            icon={SearchLg}
-                            className="bg-olive-200 dark:bg-gray-950"
-                            tooltipPlacement="bottom"
-                        />
-                        <ThemeToggle />
-                        <Button color="link-color" href="/sign-in">
-                            Log in
-                        </Button>
-                        <Button color="link-color" href="/sign-up">
-                            Sign up
-                        </Button>
-                    </div>
-                </div>
 
                 {/* LEFT PLACEHOLDER - Sidebar Tools for the Text Navigation */}
                 <SidebarNavigationSlim
@@ -416,7 +384,7 @@ export default function ReaderPage() {
                 </div>
 
                 {/* TEXT READER CANVAS */}
-                <div className="w-full px-14 pt-12">
+                <div className="w-full px-14">
                     <div className="relative flex flex-nowrap w-full bg-olive-50 dark:bg-gray-900">
 
                         <div className="sticky top-0 w-[20%]">

@@ -1,4 +1,5 @@
 import { Header } from "@/components/marketing/header-navigation/header";
+import { HeaderReader } from "@/components/marketing/header-navigation/header-reader";
 import { createClient } from "@/utils/supabase/server";
 
 export default async function ReaderLayout({
@@ -14,9 +15,7 @@ export default async function ReaderLayout({
     return (
         <>
             <div className="reader-root bg-olive-200 dark:bg-gray-800">
-                <div className="hidden">
-                    <Header user={user} />
-                </div>
+                <HeaderReader user={user} />
                 {children}
             </div>
         </>
