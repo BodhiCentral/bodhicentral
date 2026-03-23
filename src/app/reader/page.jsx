@@ -263,9 +263,9 @@ export const AuxiliaryPanel = () => {
     return (
         <div className="sticky top-12 mx-auto z-45 flex-1 border-l border-secondary">
             <div className="prose-reader flex flex-col w-full bg-olive-100 dark:bg-gray-800/30 px-6 py-4 rounded-tr-2xl rounded-br-xl h-[calc(100dvh-48px)]">
-                <h2 className="text-xl text-primary">Auxiliary Panel Specs</h2>
-                <p className="text-sm text-tertiary">The Auxiliary Panel displays information related to the text being read. Types of peripheral content are selected from the tools in on the right side of this panel.</p>
-                <p className="text-sm text-tertiary">Features being considered for the Auxiliary Panel include:</p>
+                <h3 className=" text-primary">Auxiliary Panel Specs</h3>
+                <p className="text-md text-tertiary">The Auxiliary Panel displays information related to the text being read. The peripheral content displayed is selected from the tools in the sidebar on the right side of the reader canvas.</p>
+                <p className="text-md text-tertiary">Features being considered for the Auxiliary Panel include:</p>
                 <ul className="text-sm text-tertiary">
                     <li>Listings of connections and parallels with other texts and/or sections of the canons.</li>
                     <li>Commentaries and sub-commentaries associated with the active text.</li>
@@ -274,14 +274,15 @@ export const AuxiliaryPanel = () => {
                     <li>Bookmarks</li>
 
                 </ul>
-                <p className="text-sm text-tertiary pb-4">This panel and related features are a work in progress and will be reported on our <a className="text-brand-700 dark:text-brand-300" href="https://bodhi-central-docs.vercel.app/tech/features-roadmap" target="_blank">Technical Documentation</a>. Stay tuned!</p>
-                <div className="w-full border-t border-secondary mt-auto">
-                    <h2 className="text-xl font-bold text-primary">Other Features</h2>
+                <p className="text-md text-tertiary">This panel and related features are a work in progress and will be reported on our <a className="text-brand-700 dark:text-brand-300" href="https://bodhi-central-docs.vercel.app/tech/features-roadmap" target="_blank">Technical Documentation</a>. Stay tuned!</p>
+                <div className="w-full border-t border-primary mt-auto">
+                    <h3 className=" text-primary">Other Features</h3>
+                    <p className="text-md text-tertiary">The bottom of the auxiliary panel will display other features related to the reader, such as:</p>
                     <ul className="text-sm text-tertiary">
                         <li>Downloadable versions of the texts.</li>
                         <li>Guides and Tips.</li>
                     </ul>
-                    <p className="text-sm text-tertiary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p className="text-md text-tertiary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
             </div>
         </div>
