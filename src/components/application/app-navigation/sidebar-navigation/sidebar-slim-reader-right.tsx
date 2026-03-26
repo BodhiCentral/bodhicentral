@@ -3,7 +3,7 @@
 import type { FC } from "react";
 import { useState } from "react";
 import { cx } from "@/utils/cx";
-import { NavItemButton } from "../base-components/nav-item-button";
+import { NavItemButton } from "../base-components/nav-button";
 import type { NavItemType } from "../config";
 
 interface SidebarNavigationSlimProps {

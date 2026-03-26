@@ -11,7 +11,7 @@ import { cx } from "@/utils/cx";
 import { MobileNavigationHeader } from "./base-components/mobile-header";
 import { NavAccountCard, NavAccountMenu } from "./base-components/nav-account-card";
 import { NavItemBase } from "./base-components/nav-item";
-import { NavItemButton } from "./base-components/nav-item-button";
+import { NavItemButton } from "./base-components/nav-button";
 import { NavList } from "./base-components/nav-list";
 
 type NavItem = {

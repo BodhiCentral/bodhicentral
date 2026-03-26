@@ -13,7 +13,7 @@ import { ThemeToggle } from "@/components/application/theme-toggle";
 import { cx } from "@/utils/cx";
 import { User } from "@supabase/supabase-js";
 import { DropdownAvatar } from "@/components/base/avatar/dropdown-avatar";
-import { NavItemButton } from "@/components/application/app-navigation/base-components/nav-item-button";
+import { NavItemButton } from "@/components/application/app-navigation/base-components/nav-button";
 import { SearchLg, HomeLine } from "@untitledui/icons";
 
 type HeaderNavItem = {
