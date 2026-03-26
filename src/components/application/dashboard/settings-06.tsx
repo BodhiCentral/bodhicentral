@@ -223,8 +223,8 @@ export const Settings06 = () => {
                     {selectedTab === "appearance" && <AppearanceTab />}
                     {selectedTab === "plans" && <PlansTab />}
                     {selectedTab === "billing" && <BillingTab />}
-                    {selectedTab === "email" && <EmailTab />}
-                    {selectedTab === "notifications" && <NotificationsTab />}
+                    {selectedTab === "email" && <EmailTab user={user} />}
+                    {selectedTab === "notifications" && <NotificationsTab user={user} />}
                 </div>
             </main>
         </div>

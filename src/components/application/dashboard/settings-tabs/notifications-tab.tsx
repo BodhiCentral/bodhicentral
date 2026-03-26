@@ -4,108 +4,100 @@ import { SectionFooter } from "@/components/application/section-footers/section-
 import { Button } from "@/components/base/buttons/button";
 import { Form } from "@/components/base/form/form";
 import { Toggle } from "@/components/base/toggle/toggle";
+import { User } from "@supabase/supabase-js";
 
-export const NotificationsTab = () => {
+export const NotificationsTab = ({ user }: { user: User | null }) => {
     return (
         <Form
             className="flex flex-col gap-6 px-4 lg:px-8"
             onSubmit={(e) => {
                 e.preventDefault();
                 const data = Object.fromEntries(new FormData(e.currentTarget));
-                console.log("Notifications Form data:", data);
+                console.log("Saving customized notifications for user:", user?.id, data);
+                alert("Community notification preferences saved!");
             }}
         >
             <SectionHeader.Root>
                 <SectionHeader.Group>
                     <div className="flex flex-1 flex-col justify-center gap-0.5 self-stretch">
                         <SectionHeader.Heading>Notifications</SectionHeader.Heading>
-                        <SectionHeader.Subheading>Manage when and how you receive notifications.</SectionHeader.Subheading>
+                        <SectionHeader.Subheading>Stay updated with our community and your personal study.</SectionHeader.Subheading>
                     </div>
                 </SectionHeader.Group>
             </SectionHeader.Root>
 
             <div className="flex flex-col gap-5">
                 {/* Email Notifications */}
-                <div className="grid grid-cols-1 gap-5 lg:grid-cols-[minmax(200px,280px)_1fr] lg:gap-8">
-                    <SectionLabel.Root size="sm" title="Email notifications" description="Receive emails about your account activity and security." />
+                <div className="grid grid-cols-1 gap-5 lg:grid-cols-[minmax(200px,280px)_1fr] lg:gap-8 border-b border-secondary pb-8">
+                    <SectionLabel.Root size="sm" title="Email updates" description="Receive emails about your account and the community." />
 
                     <div className="flex w-full max-w-2xl flex-col gap-6">
                         <Toggle 
                             name="communication_emails" 
                             size="sm" 
-                            label="Communication emails" 
-                            hint="Receive emails about unusual activity, billing updates, and account changes." 
+                            label="Account activity" 
+                            hint="Stay informed about security alerts, billing notices, and significant account updates." 
                             defaultSelected 
+                        />
+                        <Toggle 
+                            name="discourse_updates" 
+                            size="sm" 
+                            label="Community community updates" 
+                            hint="Receive daily or weekly highlights and mentions from the Bodhi Central Discourse group." 
+                            defaultSelected
                         />
                         <Toggle 
                             name="marketing_emails" 
                             size="sm" 
-                            label="Marketing emails" 
-                            hint="Receive emails about new features, product updates, and promotional offers." 
-                        />
-                        <Toggle 
-                            name="social_emails" 
-                            size="sm" 
-                            label="Social emails" 
-                            hint="Receive emails when someone mentions you, comments on your post, or sends a message." 
-                            defaultSelected 
+                            label="New reading paths" 
+                            hint="Be the first to know when we publish new Buddhist study materials and reading paths." 
                         />
                     </div>
                 </div>
 
-                <hr className="h-px w-full border-none bg-border-secondary" />
-
-                {/* Push Notifications */}
-                <div className="grid grid-cols-1 gap-5 lg:grid-cols-[minmax(200px,280px)_1fr] lg:gap-8">
-                    <SectionLabel.Root size="sm" title="Push notifications" description="Receive push notifications in your browser or on your device." />
+                {/* Browser & Push Notifications */}
+                <div className="grid grid-cols-1 gap-5 lg:grid-cols-[minmax(200px,280px)_1fr] lg:gap-8 border-b border-secondary pb-8">
+                    <SectionLabel.Root size="sm" title="Real-time alerts" description="Get notified instantly via browser push notifications." />
 
                     <div className="flex w-full max-w-2xl flex-col gap-6">
-                        <Toggle 
-                            name="push_mentions" 
+                         <Toggle 
+                            name="study_reminders" 
                             size="sm" 
-                            label="Mentions and replies" 
-                            hint="Get notified when someone replies to your comment or mentions you." 
+                            label="Personal study reminders" 
+                            hint="Receive gentle daily nudges to help you stay consistent with your reading goals." 
                             defaultSelected 
                         />
                         <Toggle 
-                            name="push_messages" 
+                            name="discourse_mentions" 
                             size="sm" 
-                            label="Direct messages" 
-                            hint="Get notified when a team member sends you a direct message." 
+                            label="Community mentions & replies" 
+                            hint="Get an instant alert when someone replies to your question or mentions you in the community." 
                             defaultSelected 
-                        />
-                        <Toggle 
-                            name="push_tasks" 
-                            size="sm" 
-                            label="Task assignments" 
-                            hint="Get notified when you are assigned a new task." 
                         />
                     </div>
                 </div>
 
-                 <hr className="h-px w-full border-none bg-border-secondary" />
-
                 {/* Do Not Disturb */}
-                <div className="grid grid-cols-1 gap-5 lg:grid-cols-[minmax(200px,280px)_1fr] lg:gap-8">
-                    <SectionLabel.Root size="sm" title="Do not disturb" description="Pause all non-essential notifications during specified hours." />
+                <div className="grid grid-cols-1 gap-5 lg:grid-cols-[minmax(200px,280px)_1fr] lg:gap-8 border-b border-secondary pb-8">
+                    <SectionLabel.Root size="sm" title="Quiet hours" description="Pause all non-essential alerts during your concentration or rest time." />
 
                     <div className="flex w-full max-w-2xl flex-col gap-6">
                         <Toggle 
                             name="do_not_disturb" 
                             size="sm" 
-                            label="Enable do not disturb mode" 
-                            hint="Mute all marketing and social notifications. Critical security alerts will still be sent." 
+                            label="Enable quiet mode" 
+                            hint="Mute all community and marketing alerts. Critical security alerts will still be sent." 
                         />
                     </div>
                 </div>
             </div>
 
             <SectionFooter.Root>
-                <Button size="md" color="link-gray" type="button">
+                <Button size="md" color="link-gray" type="button" onClick={() => window.location.reload()}>
                     Reset
                 </Button>
                 <SectionFooter.Actions>
-                    <Button color="secondary" size="md" type="button">
+                    <Button color="secondary" size="md" type="button" onClick={() => window.location.reload()}>
                         Cancel
                     </Button>
                     <Button type="submit" color="primary" size="md">
