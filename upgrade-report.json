@@ -1,0 +1,481 @@
+{
+  "version": "8",
+  "status": "partial",
+  "filesScanned": 266,
+  "filesModified": 42,
+  "classChanges": 374,
+  "propChanges": 0,
+  "importChanges": 6,
+  "manualReview": [
+    {
+      "file": "src/components/application/date-picker/cell.tsx",
+      "line": 50,
+      "description": "bg-active → bg-primary_hover",
+      "before": "isInRange && isDisabled && \"bg-active\",",
+      "after": "isInRange && isDisabled && \"bg-primary_hover\","
+    },
+    {
+      "file": "src/components/application/date-picker/cell.tsx",
+      "line": 51,
+      "description": "bg-active → bg-primary_hover",
+      "before": "isSelected && isRangeCalendar && \"bg-active\",",
+      "after": "isSelected && isRangeCalendar && \"bg-primary_hover\","
+    },
+    {
+      "file": "src/components/application/date-picker/cell.tsx",
+      "line": 61,
+      "description": "bg-active → bg-primary_hover",
+      "before": "\"after:absolute after:inset-0 after:translate-x-full after:bg-gradient-to-l after:from-transparent after:to-bg-active in-[[role=gridcell]:last-child]:after:hidden\",",
+      "after": "\"after:absolute after:inset-0 after:translate-x-full after:bg-gradient-to-l after:from-transparent after:to-bg-primary_hover in-[[role=gridcell]:last-child]:after:hidden\","
+    },
+    {
+      "file": "src/components/application/date-picker/cell.tsx",
+      "line": 68,
+      "description": "bg-active → bg-primary_hover",
+      "before": "\"after:absolute after:inset-0 after:-translate-x-full after:bg-gradient-to-r after:from-transparent after:to-bg-active in-[[role=gridcell]:first-child]:after:hidden\",",
+      "after": "\"after:absolute after:inset-0 after:-translate-x-full after:bg-gradient-to-r after:from-transparent after:to-bg-primary_hover in-[[role=gridcell]:first-child]:after:hidden\","
+    },
+    {
+      "file": "src/components/application/date-picker/cell.tsx",
+      "line": 80,
+      "description": "text-disabled → removed",
+      "before": "isDisabled ? \"text-disabled\" : \"text-secondary hover:text-secondary_hover\",",
+      "after": "isDisabled ? \"\" : \"text-secondary hover:text-secondary_hover\","
+    },
+    {
+      "file": "src/components/application/date-picker/cell.tsx",
+      "line": 88,
+      "description": "bg-active → bg-primary_hover",
+      "before": "!isSelected && isTodayDate ? \"bg-active font-medium hover:bg-secondary_hover\" : \"\",",
+      "after": "!isSelected && isTodayDate ? \"bg-primary_hover font-medium hover:bg-secondary_hover\" : \"\","
+    },
+    {
+      "file": "src/components/application/date-picker/range-preset.tsx",
+      "line": 21,
+      "description": "bg-active → bg-primary_hover",
+      "before": "isSelected ? \"bg-active text-secondary_hover hover:bg-secondary_hover\" : \"text-secondary hover:bg-primary_hover hover:text-secondary_hover\",",
+      "after": "isSelected ? \"bg-primary_hover text-secondary_hover hover:bg-secondary_hover\" : \"text-secondary hover:bg-primary_hover hover:text-secondary_hover\","
+    },
+    {
+      "file": "src/components/application/file-upload/file-upload-base.tsx",
+      "line": 206,
+      "description": "bg-disabled_subtle → opacity-50; ring-disabled_subtle → removed",
+      "before": "isDisabled && \"cursor-not-allowed bg-disabled_subtle ring-disabled_subtle\",",
+      "after": "isDisabled && \"cursor-not-allowed opacity-50 \","
+    },
+    {
+      "file": "src/components/application/tabs/tabs.tsx",
+      "line": 29,
+      "description": "bg-active → bg-primary_hover",
+      "before": "isSelected && \"bg-active text-secondary\",",
+      "after": "isSelected && \"bg-primary_hover text-secondary\","
+    },
+    {
+      "file": "src/components/base/button-group/button-group.tsx",
+      "line": 20,
+      "description": "text-disabled → removed",
+      "before": "\"disabled:cursor-not-allowed disabled:bg-primary disabled:text-disabled\",",
+      "after": "\"disabled:cursor-not-allowed disabled:bg-primary disabled:\","
+    },
+    {
+      "file": "src/components/base/button-group/button-group.tsx",
+      "line": 22,
+      "description": "bg-disabled_subtle → opacity-50; bg-active → bg-primary_hover",
+      "before": "\"selected:bg-active selected:text-secondary_hover selected:disabled:bg-disabled_subtle\",",
+      "after": "\"selected:bg-primary_hover selected:text-secondary_hover selected:disabled:opacity-50\","
+    },
+    {
+      "file": "src/components/base/button-group/button-group.tsx",
+      "line": 24,
+      "description": "text-fg-disabled_subtle → removed",
+      "before": "icon: \"pointer-events-none text-fg-quaternary transition-[inherit] group-hover/button-group:text-fg-quaternary_hover group-disabled/button-group:text-fg-disabled_subtle\",",
+      "after": "icon: \"pointer-events-none text-fg-quaternary transition-[inherit] group-hover/button-group:text-fg-quaternary_hover group-disabled/button-group:\","
+    },
+    {
+      "file": "src/components/base/buttons/button-utility.tsx",
+      "line": 14,
+      "description": "shadow-xs-skeumorphic → shadow-xs-skeuomorphic (typo fix); ring-disabled_subtle → removed",
+      "before": "\"bg-primary text-fg-quaternary shadow-xs-skeumorphic ring-1 ring-primary ring-inset hover:bg-primary_hover hover:text-fg-quaternary_hover disabled:shadow-xs disabled:ring-disabled_subtle\",",
+      "after": "\"bg-primary text-fg-quaternary shadow-xs-skeuomorphic ring-1 ring-primary ring-inset hover:bg-primary_hover hover:text-fg-quaternary_hover disabled:shadow-xs disabled:\","
+    },
+    {
+      "file": "src/components/base/buttons/button-utility.tsx",
+      "line": 92,
+      "description": "text-fg-disabled_subtle → removed",
+      "before": "\"group relative inline-flex h-max cursor-pointer items-center justify-center rounded-md p-1.5 outline-focus-ring transition duration-100 ease-linear focus-visible:outline-2 focus-visible:outline-offset-2 disabled:cursor-not-allowed disabled:text-fg-disabled_subtle\",",
+      "after": "\"group relative inline-flex h-max cursor-pointer items-center justify-center rounded-md p-1.5 outline-focus-ring transition duration-100 ease-linear focus-visible:outline-2 focus-visible:outline-offset-2 disabled:cursor-not-allowed disabled:\","
+    },
+    {
+      "file": "src/components/base/buttons/button.tsx",
+      "line": 17,
+      "description": "text-fg-disabled → removed",
+      "before": "\"disabled:cursor-not-allowed disabled:text-fg-disabled\",",
+      "after": "\"disabled:cursor-not-allowed disabled:\","
+    },
+    {
+      "file": "src/components/base/buttons/button.tsx",
+      "line": 19,
+      "description": "text-fg-disabled_subtle → removed",
+      "before": "\"disabled:*:data-icon:text-fg-disabled_subtle\",",
+      "after": "\"disabled:*:data-icon:\","
+    },
+    {
+      "file": "src/components/base/buttons/button.tsx",
+      "line": 57,
+      "description": "bg-disabled → opacity-50; ring-disabled_subtle → removed",
+      "before": "\"disabled:bg-disabled disabled:shadow-xs disabled:ring-disabled_subtle\",",
+      "after": "\"disabled:opacity-50 disabled:shadow-xs disabled:\","
+    },
+    {
+      "file": "src/components/base/buttons/button.tsx",
+      "line": 66,
+      "description": "ring-disabled_subtle → removed",
+      "before": "\"disabled:shadow-xs disabled:ring-disabled_subtle\",",
+      "after": "\"disabled:shadow-xs disabled:\","
+    },
+    {
+      "file": "src/components/base/buttons/button.tsx",
+      "line": 102,
+      "description": "bg-disabled → opacity-50; ring-disabled_subtle → removed",
+      "before": "\"disabled:bg-disabled disabled:shadow-xs disabled:ring-disabled_subtle\",",
+      "after": "\"disabled:opacity-50 disabled:shadow-xs disabled:\","
+    },
+    {
+      "file": "src/components/base/buttons/button.tsx",
+      "line": 111,
+      "description": "ring-disabled_subtle → removed",
+      "before": "\"disabled:bg-primary disabled:shadow-xs disabled:ring-disabled_subtle\",",
+      "after": "\"disabled:bg-primary disabled:shadow-xs disabled:\","
+    },
+    {
+      "file": "src/components/base/buttons/social-button.tsx",
+      "line": 11,
+      "description": "text-fg-disabled → removed",
+      "before": "root: \"group relative inline-flex h-max cursor-pointer items-center justify-center font-semibold whitespace-nowrap outline-focus-ring transition duration-100 ease-linear before:absolute focus-visible:outline-2 focus-visible:outline-offset-2 disabled:cursor-not-allowed disabled:stroke-fg-disabled disabled:text-fg-disabled disabled:*:text-fg-disabled\",",
+      "after": "root: \"group relative inline-flex h-max cursor-pointer items-center justify-center font-semibold whitespace-nowrap outline-focus-ring transition duration-100 ease-linear before:absolute focus-visible:outline-2 focus-visible:outline-offset-2 disabled:cursor-not-allowed disabled:stroke-fg-disabled disabled: disabled:*:\","
+    },
+    {
+      "file": "src/components/base/checkbox/checkbox.tsx",
+      "line": 23,
+      "description": "bg-disabled_subtle → opacity-50; ring-disabled → removed",
+      "before": "isDisabled && \"cursor-not-allowed bg-disabled_subtle ring-disabled\",",
+      "after": "isDisabled && \"cursor-not-allowed opacity-50 \","
+    },
+    {
+      "file": "src/components/base/checkbox/checkbox.tsx",
+      "line": 36,
+      "description": "text-fg-disabled_subtle → removed",
+      "before": "isDisabled && \"text-fg-disabled_subtle\",",
+      "after": "isDisabled && \"\","
+    },
+    {
+      "file": "src/components/base/checkbox/checkbox.tsx",
+      "line": 50,
+      "description": "text-fg-disabled_subtle → removed",
+      "before": "isDisabled && \"text-fg-disabled_subtle\",",
+      "after": "isDisabled && \"\","
+    },
+    {
+      "file": "src/components/base/dropdown/dropdown.tsx",
+      "line": 63,
+      "description": "text-fg-disabled → removed",
+      "before": "className={cx(\"mr-2 size-4 shrink-0 stroke-[2.25px]\", state.isDisabled ? \"text-fg-disabled\" : \"text-fg-quaternary\")}",
+      "after": "className={cx(\"mr-2 size-4 shrink-0 stroke-[2.25px]\", state.isDisabled ? \"\" : \"text-fg-quaternary\")}"
+    },
+    {
+      "file": "src/components/base/dropdown/dropdown.tsx",
+      "line": 70,
+      "description": "text-disabled → removed",
+      "before": "state.isDisabled ? \"text-disabled\" : \"text-secondary\",",
+      "after": "state.isDisabled ? \"\" : \"text-secondary\","
+    },
+    {
+      "file": "src/components/base/dropdown/dropdown.tsx",
+      "line": 81,
+      "description": "text-disabled → removed",
+      "before": "state.isDisabled ? \"text-disabled\" : \"text-quaternary\",",
+      "after": "state.isDisabled ? \"\" : \"text-quaternary\","
+    },
+    {
+      "file": "src/components/base/input/input-group.tsx",
+      "line": 30,
+      "description": "bg-disabled_subtle → opacity-50; border-disabled → removed",
+      "before": "isDisabled && \"border-disabled bg-disabled_subtle text-tertiary\",",
+      "after": "isDisabled && \" opacity-50 text-tertiary\","
+    },
+    {
+      "file": "src/components/base/input/input-group.tsx",
+      "line": 31,
+      "description": "bg-disabled_subtle → opacity-50; text-disabled → removed; border-disabled → removed",
+      "before": "\"in-data-input-wrapper:group-disabled:bg-disabled_subtle in-data-input-wrapper:group-disabled:text-disabled in-data-input-wrapper:group-disabled:ring-border-disabled\",",
+      "after": "\"in-data-input-wrapper:group-disabled:opacity-50 in-data-input-wrapper:group-disabled: in-data-input-wrapper:group-disabled:ring-\","
+    },
+    {
+      "file": "src/components/base/input/input-group.tsx",
+      "line": 107,
+      "description": "bg-disabled_subtle → opacity-50; border-disabled → removed",
+      "before": "isDisabled && \"cursor-not-allowed has-[&>select]:bg-disabled_subtle has-[&>select]:ring-border-disabled\",",
+      "after": "isDisabled && \"cursor-not-allowed has-[&>select]:opacity-50 has-[&>select]:ring-\","
+    },
+    {
+      "file": "src/components/base/input/input-group.tsx",
+      "line": 115,
+      "description": "text-disabled → removed",
+      "before": "<p className={cx(\"text-md text-tertiary\", isDisabled && \"text-disabled\")}>{prefix}</p>",
+      "after": "<p className={cx(\"text-md text-tertiary\", isDisabled && \"\")}>{prefix}</p>"
+    },
+    {
+      "file": "src/components/base/input/input.tsx",
+      "line": 91,
+      "description": "bg-disabled_subtle → opacity-50; ring-disabled → removed",
+      "before": "isDisabled && \"cursor-not-allowed bg-disabled_subtle ring-disabled\",",
+      "after": "isDisabled && \"cursor-not-allowed opacity-50 \","
+    },
+    {
+      "file": "src/components/base/input/input.tsx",
+      "line": 92,
+      "description": "bg-disabled_subtle → opacity-50; ring-disabled → removed",
+      "before": "\"group-disabled:cursor-not-allowed group-disabled:bg-disabled_subtle group-disabled:ring-disabled\",",
+      "after": "\"group-disabled:cursor-not-allowed group-disabled:opacity-50 group-disabled:\","
+    },
+    {
+      "file": "src/components/base/input/input.tsx",
+      "line": 112,
+      "description": "text-fg-disabled → removed",
+      "before": "isDisabled && \"text-fg-disabled\",",
+      "after": "isDisabled && \"\","
+    },
+    {
+      "file": "src/components/base/input/input.tsx",
+      "line": 127,
+      "description": "text-disabled → removed",
+      "before": "isDisabled && \"cursor-not-allowed text-disabled\",",
+      "after": "isDisabled && \"cursor-not-allowed \","
+    },
+    {
+      "file": "src/components/base/input/input.tsx",
+      "line": 173,
+      "description": "text-disabled → removed",
+      "before": "isDisabled && \"bg-transparent text-disabled\",",
+      "after": "isDisabled && \"bg-transparent \","
+    },
+    {
+      "file": "src/components/base/pin-input/pin-input.tsx",
+      "line": 93,
+      "description": "text-placeholder_subtle → removed",
+      "before": "\"relative flex items-center justify-center rounded-xl bg-primary text-center text-placeholder_subtle shadow-xs ring-1 ring-primary transition-[box-shadow,background-color] duration-100 ease-linear ring-inset\",",
+      "after": "\"relative flex items-center justify-center rounded-xl bg-primary text-center  shadow-xs ring-1 ring-primary transition-[box-shadow,background-color] duration-100 ease-linear ring-inset\","
+    },
+    {
+      "file": "src/components/base/pin-input/pin-input.tsx",
+      "line": 97,
+      "description": "bg-disabled_subtle → opacity-50; ring-disabled → removed; text-fg-disabled_subtle → removed",
+      "before": "disabled && \"bg-disabled_subtle text-fg-disabled_subtle ring-disabled\",",
+      "after": "disabled && \"opacity-50  \","
+    },
+    {
+      "file": "src/components/base/pin-input/pin-input.tsx",
+      "line": 120,
+      "description": "text-placeholder_subtle → removed",
+      "before": "<div role=\"separator\" {...props} className={cx(\"text-center text-display-xl font-medium text-placeholder_subtle\", props.className)}>",
+      "after": "<div role=\"separator\" {...props} className={cx(\"text-center text-display-xl font-medium \", props.className)}>"
+    },
+    {
+      "file": "src/components/base/select/combobox.tsx",
+      "line": 48,
+      "description": "bg-disabled_subtle → opacity-50",
+      "before": "isDisabled && \"cursor-not-allowed bg-disabled_subtle\",",
+      "after": "isDisabled && \"cursor-not-allowed opacity-50\","
+    },
+    {
+      "file": "src/components/base/select/combobox.tsx",
+      "line": 61,
+      "description": "text-disabled → removed",
+      "before": "<p className={cx(\"text-md font-medium text-primary\", isDisabled && \"text-disabled\")}>{first}</p>",
+      "after": "<p className={cx(\"text-md font-medium text-primary\", isDisabled && \"\")}>{first}</p>"
+    },
+    {
+      "file": "src/components/base/select/combobox.tsx",
+      "line": 62,
+      "description": "text-disabled → removed",
+      "before": "{last && <p className={cx(\"-ml-0.75 text-md text-tertiary\", isDisabled && \"text-disabled\")}>{last}</p>}",
+      "after": "{last && <p className={cx(\"-ml-0.75 text-md text-tertiary\", isDisabled && \"\")}>{last}</p>}"
+    },
+    {
+      "file": "src/components/base/select/combobox.tsx",
+      "line": 68,
+      "description": "text-disabled → removed",
+      "before": "className=\"z-10 w-full appearance-none bg-transparent text-md text-transparent caret-alpha-black/90 placeholder:text-placeholder focus:outline-hidden disabled:cursor-not-allowed disabled:text-disabled disabled:placeholder:text-disabled\"",
+      "after": "className=\"z-10 w-full appearance-none bg-transparent text-md text-transparent caret-alpha-black/90 placeholder:text-placeholder focus:outline-hidden disabled:cursor-not-allowed disabled: disabled:placeholder:\""
+    },
+    {
+      "file": "src/components/base/select/combobox.tsx",
+      "line": 76,
+      "description": "bg-disabled_subtle → opacity-50",
+      "before": "isDisabled && \"to-bg-disabled_subtle\",",
+      "after": "isDisabled && \"to-opacity-50\","
+    },
+    {
+      "file": "src/components/base/select/combobox.tsx",
+      "line": 84,
+      "description": "text-disabled → removed",
+      "before": "isDisabled && \"bg-transparent text-disabled\",",
+      "after": "isDisabled && \"bg-transparent \","
+    },
+    {
+      "file": "src/components/base/select/select-item.tsx",
+      "line": 48,
+      "description": "bg-active → bg-primary_hover",
+      "before": "state.isSelected && \"bg-active\",",
+      "after": "state.isSelected && \"bg-primary_hover\","
+    },
+    {
+      "file": "src/components/base/select/select-item.tsx",
+      "line": 55,
+      "description": "text-fg-disabled → removed",
+      "before": "state.isDisabled && \"*:data-icon:text-fg-disabled\",",
+      "after": "state.isDisabled && \"*:data-icon:\","
+    },
+    {
+      "file": "src/components/base/select/select-item.tsx",
+      "line": 71,
+      "description": "text-disabled → removed",
+      "before": "className={cx(\"truncate text-md font-medium whitespace-nowrap text-primary\", state.isDisabled && \"text-disabled\")}",
+      "after": "className={cx(\"truncate text-md font-medium whitespace-nowrap text-primary\", state.isDisabled && \"\")}"
+    },
+    {
+      "file": "src/components/base/select/select-item.tsx",
+      "line": 77,
+      "description": "text-disabled → removed",
+      "before": "<AriaText slot=\"description\" className={cx(\"text-md whitespace-nowrap text-tertiary\", state.isDisabled && \"text-disabled\")}>",
+      "after": "<AriaText slot=\"description\" className={cx(\"text-md whitespace-nowrap text-tertiary\", state.isDisabled && \"\")}>"
+    },
+    {
+      "file": "src/components/base/select/select-item.tsx",
+      "line": 89,
+      "description": "text-fg-disabled → removed",
+      "before": "state.isDisabled && \"text-fg-disabled\",",
+      "after": "state.isDisabled && \"\","
+    },
+    {
+      "file": "src/components/base/select/select-native.tsx",
+      "line": 36,
+      "description": "bg-disabled_subtle → opacity-50; text-disabled → removed",
+      "before": "\"appearance-none rounded-lg bg-primary px-3.5 py-2.5 text-md font-medium text-primary shadow-xs ring-1 ring-primary outline-hidden transition duration-100 ease-linear ring-inset placeholder:text-fg-quaternary focus-visible:ring-2 focus-visible:ring-brand disabled:cursor-not-allowed disabled:bg-disabled_subtle disabled:text-disabled\",",
+      "after": "\"appearance-none rounded-lg bg-primary px-3.5 py-2.5 text-md font-medium text-primary shadow-xs ring-1 ring-primary outline-hidden transition duration-100 ease-linear ring-inset placeholder:text-fg-quaternary focus-visible:ring-2 focus-visible:ring-brand disabled:cursor-not-allowed disabled:opacity-50 disabled:\","
+    },
+    {
+      "file": "src/components/base/select/select-native.tsx",
+      "line": 40,
+      "description": "text-disabled → removed",
+      "before": "\"in-data-input-wrapper:group-disabled:pointer-events-none in-data-input-wrapper:group-disabled:cursor-not-allowed in-data-input-wrapper:group-disabled:bg-transparent in-data-input-wrapper:group-disabled:text-disabled\",",
+      "after": "\"in-data-input-wrapper:group-disabled:pointer-events-none in-data-input-wrapper:group-disabled:cursor-not-allowed in-data-input-wrapper:group-disabled:bg-transparent in-data-input-wrapper:group-disabled:\","
+    },
+    {
+      "file": "src/components/base/select/select.tsx",
+      "line": 63,
+      "description": "bg-disabled_subtle → opacity-50; text-disabled → removed",
+      "before": "isDisabled && \"cursor-not-allowed bg-disabled_subtle text-disabled\",",
+      "after": "isDisabled && \"cursor-not-allowed opacity-50 \","
+    },
+    {
+      "file": "src/components/base/select/select.tsx",
+      "line": 71,
+      "description": "text-fg-disabled → removed",
+      "before": "\"*:data-icon:size-5 *:data-icon:shrink-0 *:data-icon:text-fg-quaternary in-disabled:*:data-icon:text-fg-disabled\",",
+      "after": "\"*:data-icon:size-5 *:data-icon:shrink-0 *:data-icon:text-fg-quaternary in-disabled:*:data-icon:\","
+    },
+    {
+      "file": "src/components/base/select/select.tsx",
+      "line": 94,
+      "description": "text-disabled → removed",
+      "before": "<p className={cx(\"text-md text-placeholder\", isDisabled && \"text-disabled\")}>{placeholder}</p>",
+      "after": "<p className={cx(\"text-md text-placeholder\", isDisabled && \"\")}>{placeholder}</p>"
+    },
+    {
+      "file": "src/components/base/select/tag-select.tsx",
+      "line": 291,
+      "description": "outline-none → outline-hidden; text-disabled → removed",
+      "before": "className=\"w-full flex-[1_0_0] appearance-none bg-transparent text-md text-ellipsis text-primary caret-alpha-black/90 outline-none placeholder:text-placeholder focus:outline-hidden disabled:cursor-not-allowed disabled:text-disabled disabled:placeholder:text-disabled\"",
+      "after": "className=\"w-full flex-[1_0_0] appearance-none bg-transparent text-md text-ellipsis text-primary caret-alpha-black/90 outline-hidden placeholder:text-placeholder focus:outline-hidden disabled:cursor-not-allowed disabled: disabled:placeholder:\""
+    },
+    {
+      "file": "src/components/base/select/tag-select.tsx",
+      "line": 305,
+      "description": "text-disabled → removed",
+      "before": "isDisabled && \"bg-transparent text-disabled\",",
+      "after": "isDisabled && \"bg-transparent \","
+    },
+    {
+      "file": "src/components/base/select/tag-select.tsx",
+      "line": 333,
+      "description": "bg-disabled_subtle → opacity-50",
+      "before": "isDisabled && \"cursor-not-allowed bg-disabled_subtle\",",
+      "after": "isDisabled && \"cursor-not-allowed opacity-50\","
+    },
+    {
+      "file": "src/components/base/radio-buttons/radio-buttons.tsx",
+      "line": 33,
+      "description": "bg-disabled_subtle → opacity-50; border-disabled → removed",
+      "before": "isDisabled && \"cursor-not-allowed border-disabled bg-disabled_subtle\",",
+      "after": "isDisabled && \"cursor-not-allowed  opacity-50\","
+    },
+    {
+      "file": "src/components/base/textarea/textarea.tsx",
+      "line": 38,
+      "description": "bg-disabled_subtle → opacity-50; text-disabled → removed; ring-disabled → removed",
+      "before": "state.isDisabled && \"cursor-not-allowed bg-disabled_subtle text-disabled ring-disabled\",",
+      "after": "state.isDisabled && \"cursor-not-allowed opacity-50  \","
+    },
+    {
+      "file": "src/components/base/toggle/toggle.tsx",
+      "line": 50,
+      "description": "bg-disabled → opacity-50",
+      "before": "isDisabled && \"cursor-not-allowed bg-disabled\",",
+      "after": "isDisabled && \"cursor-not-allowed opacity-50\","
+    },
+    {
+      "file": "src/components/base/toggle/toggle.tsx",
+      "line": 65,
+      "description": "bg-toggle-button-fg_disabled → removed",
+      "before": "isDisabled && \"bg-toggle-button-fg_disabled\",",
+      "after": "isDisabled && \"\","
+    },
+    {
+      "file": "src/components/application/app-navigation/base-components/nav-button.tsx",
+      "line": 59,
+      "description": "bg-active → bg-primary_hover",
+      "before": "current && \"bg-active text-fg-quaternary_hover hover:bg-secondary_hover\",",
+      "after": "current && \"bg-primary_hover text-fg-quaternary_hover hover:bg-secondary_hover\","
+    },
+    {
+      "file": "src/components/application/app-navigation/base-components/nav-item.tsx",
+      "line": 11,
+      "description": "bg-active → bg-primary_hover",
+      "before": "rootSelected: \"bg-active hover:bg-secondary_hover\",",
+      "after": "rootSelected: \"bg-primary_hover hover:bg-secondary_hover\","
+    },
+    {
+      "file": "src/components/base/tags/base-components/tag-checkbox.tsx",
+      "line": 22,
+      "description": "bg-disabled_subtle → opacity-50; ring-disabled → removed",
+      "before": "isDisabled && \"cursor-not-allowed bg-disabled_subtle ring-disabled\",",
+      "after": "isDisabled && \"cursor-not-allowed opacity-50 \","
+    },
+    {
+      "file": "src/components/base/tags/base-components/tag-checkbox.tsx",
+      "line": 37,
+      "description": "text-fg-disabled_subtle → removed",
+      "before": "isDisabled && \"text-fg-disabled_subtle\",",
+      "after": "isDisabled && \"\","
+    }
+  ],
+  "orphanedTokens": [],
+  "typeErrors": [],
+  "structuralPatterns": [],
+  "notes": [
+    "Default size for Select, ComboBox, and Input changed from 'sm' to 'md'. Review component usage.",
+    "Avatar size 'xxs' removed. Use 'xs' instead.",
+    "Dropdown no longer defaults to selectionMode='single'. Set explicitly if needed."
+  ]
+}

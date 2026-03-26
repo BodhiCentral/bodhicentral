@@ -191,7 +191,7 @@ export const AppearanceTab = () => {
                                         <>
                                             <section
                                                 className={cx(
-                                                    "relative h-33 w-50 rounded-[10px] bg-utility-gray-100",
+                                                    "relative h-33 w-50 rounded-[10px] bg-utility-neutral-100",
                                                     isSelected && "outline-2 outline-offset-2 outline-focus-ring",
                                                 )}
                                             >
