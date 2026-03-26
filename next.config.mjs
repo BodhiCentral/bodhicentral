@@ -12,6 +12,14 @@ const nextConfig = {
                 protocol: 'https',
                 hostname: 'www.gravatar.com',
             },
+            {
+                protocol: 'https',
+                hostname: 'ui-avatars.com',
+            },
+            {
+                protocol: 'https',
+                hostname: 'hjsvosigtmtftronpkvv.supabase.co',
+            },
         ],
     },
     experimental: {

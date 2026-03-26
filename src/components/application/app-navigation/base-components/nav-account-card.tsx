@@ -1,10 +1,11 @@
 "use client";
 
 import type { FC, HTMLAttributes } from "react";
-import { useCallback, useEffect, useRef } from "react";
+import { useCallback, useEffect, useState, useRef } from "react";
 import type { Placement } from "@react-types/overlays";
 import { BookOpen01, ChevronSelectorVertical, HelpCircle, LayersTwo01, LogOut01, Plus } from "@untitledui/icons";
 import { User } from "@supabase/supabase-js";
+import { createClient } from "@/utils/supabase/client";
 import { useFocusManager } from "react-aria";
 import type { DialogProps as AriaDialogProps } from "react-aria-components";
 import { Button as AriaButton, Dialog as AriaDialog, DialogTrigger as AriaDialogTrigger, Popover as AriaPopover } from "react-aria-components";
@@ -49,8 +50,10 @@ export const NavAccountMenu = ({
     className,
     selectedAccountId = "olivia",
     user,
+    displayName,
+    avatarUrl,
     ...dialogProps
-}: AriaDialogProps & { className?: string; accounts?: NavAccountType[]; selectedAccountId?: string; user?: User | null }) => {
+}: AriaDialogProps & { className?: string; accounts?: NavAccountType[]; selectedAccountId?: string; user?: User | null; displayName?: string; avatarUrl?: string }) => {
     const focusManager = useFocusManager();
     const dialogRef = useRef<HTMLDivElement>(null);
 
@@ -101,8 +104,8 @@ export const NavAccountMenu = ({
                                 <AvatarLabelGroup 
                                     status="online" 
                                     size="md" 
-                                    src={user.user_metadata?.avatar_url || `https://ui-avatars.com/api/?name=${encodeURIComponent(user.user_metadata?.full_name || user.email?.split("@")[0] || "User")}&background=7F56D9&color=fff`} 
-                                    title={user.user_metadata?.full_name || user.email?.split("@")[0] || "User"} 
+                                    src={avatarUrl} 
+                                    title={displayName} 
                                     subtitle={user.email || ""} 
                                 />
                                 <RadioButtonBase isSelected={true} className="absolute top-2 right-2" />
@@ -182,15 +185,43 @@ export const NavAccountCard = ({
 }) => {
     const triggerRef = useRef<HTMLDivElement>(null);
     const isDesktop = useBreakpoint("lg");
+    
+    // Add local state to dynamically fetch the user's latest details and avatar right from the profiles table
+    const [profileData, setProfileData] = useState<{ full_name?: string, avatar_url?: string } | null>(null);
+
+    useEffect(() => {
+        if (!user) return;
+        const supabase = createClient();
+        
+        const fetchProfile = async () => {
+            const { data } = await supabase
+                .from('profiles')
+                .select('first_name, last_name, avatar_url')
+                .eq('id', user.id)
+                .single();
+                
+            if (data) {
+                const fullName = [data.first_name, data.last_name].filter(Boolean).join(" ");
+                setProfileData({
+                    full_name: fullName.length > 0 ? fullName : undefined,
+                    avatar_url: data.avatar_url,
+                });
+            }
+        };
+        
+        fetchProfile();
+    }, [user]);
 
     const selectedAccount = placeholderAccounts.find((account) => account.id === selectedAccountId);
 
-    const displayName = user ? (user.user_metadata?.full_name || user.email?.split("@")[0] || "User") : "Loading...";
+    // Prioritize the profile database data, then fall back to the generic Auth metadata
+    const displayName = profileData?.full_name || (user ? (user.user_metadata?.full_name || user.email?.split("@")[0] || "User") : "Loading...");
     const userEmail = user?.email || "";
-    // If we have a user, only use their avatar or a generic fallback. 
-    const avatarUrl = user 
-        ? (user.user_metadata?.avatar_url || `https://ui-avatars.com/api/?name=${encodeURIComponent(displayName)}&background=7F56D9&color=fff`) 
-        : "https://www.gravatar.com/avatar?d=mp";
+    
+    const fallbackAvatarParams = `?name=${encodeURIComponent(displayName)}&background=7F56D9&color=fff`;
+    const avatarUrl = profileData?.avatar_url || (user 
+        ? (user.user_metadata?.avatar_url || `https://ui-avatars.com/api/${fallbackAvatarParams}`) 
+        : "https://www.gravatar.com/avatar?d=mp");
 
     if (!user) {
         // You could return a skeleton here, but for now we'll just show the loading state
@@ -225,7 +256,7 @@ export const NavAccountCard = ({
                             )
                         }
                     >
-                        <NavAccountMenu selectedAccountId={selectedAccountId} accounts={items} user={user} />
+                        <NavAccountMenu selectedAccountId={selectedAccountId} accounts={items} user={user} displayName={displayName} avatarUrl={avatarUrl} />
                     </AriaPopover>
                 </AriaDialogTrigger>
             </div>

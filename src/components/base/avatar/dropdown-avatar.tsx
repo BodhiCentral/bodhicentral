@@ -1,4 +1,6 @@
 "use client";
+import { useState, useEffect } from "react";
+import { createClient } from "@/utils/supabase/client";
 
 import { HelpCircle, LayersTwo01, LogOut01, Settings01, User01 } from "@untitledui/icons";
 import { Button as AriaButton } from "react-aria-components";
@@ -14,10 +16,38 @@ interface DropdownAvatarProps {
 }
 
 export const DropdownAvatar = ({ user }: DropdownAvatarProps) => {
+    // Add local state to dynamically fetch the user's latest details and avatar right from the profiles table
+    const [profileData, setProfileData] = useState<{ full_name?: string, avatar_url?: string } | null>(null);
+
+    useEffect(() => {
+        if (!user) return;
+        const supabase = createClient();
+        
+        const fetchProfile = async () => {
+            const { data } = await supabase
+                .from('profiles')
+                .select('first_name, last_name, avatar_url')
+                .eq('id', user.id)
+                .single();
+                
+            if (data) {
+                const fullName = [data.first_name, data.last_name].filter(Boolean).join(" ");
+                setProfileData({
+                    full_name: fullName.length > 0 ? fullName : undefined,
+                    avatar_url: data.avatar_url,
+                });
+            }
+        };
+        
+        fetchProfile();
+    }, [user]);
+
     // Get the name from metadata or split the email
-    const displayName = user.user_metadata?.full_name || user.email?.split("@")[0] || "User";
+    const displayName = profileData?.full_name || (user.user_metadata?.full_name || user.email?.split("@")[0] || "User");
     const userEmail = user.email || "";
-    const avatarUrl = user.user_metadata?.avatar_url || "https://www.gravatar.com/avatar?d=mp";
+    
+    const fallbackAvatarParams = `?name=${encodeURIComponent(displayName)}&background=7F56D9&color=fff`;
+    const avatarUrl = profileData?.avatar_url || (user.user_metadata?.avatar_url || `https://ui-avatars.com/api/${fallbackAvatarParams}`);
 
     return (
         <Dropdown.Root>

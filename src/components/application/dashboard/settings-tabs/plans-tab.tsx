@@ -1,10 +1,112 @@
-import { CheckCircle, Zap } from "@untitledui/icons";
+"use client";
+
+import { useState } from "react";
+import { LayersThree01, LayersTwo01, Zap } from "@untitledui/icons";
 import { SectionHeader } from "@/components/application/section-headers/section-headers";
 import { Badge } from "@/components/base/badges/badges";
 import { Button } from "@/components/base/buttons/button";
 import { ProgressBar } from "@/components/base/progress-indicators/progress-indicators";
+import { Toggle } from "@/components/base/toggle/toggle";
+import { PricingTierCardIcon } from "@/components/marketing/pricing-sections/base-components/pricing-tier-card";
 
 export const PlansTab = () => {
+    const [selectedPlan, setSelectedPlan] = useState("monthly");
+    
+    // Simulate what plan the user currently has (we will hook this to Supabase later)
+    // Try changing this to 'basic' or 'full' to see the UI update instantly!
+    const [currentPlanId, setCurrentPlanId] = useState<'basic' | 'discovery' | 'full'>('discovery');
+
+    const getCurrentPlanDetails = () => {
+        switch (currentPlanId) {
+            case 'basic':
+                return {
+                    name: 'Basic Reading Experience',
+                    price: 'Free',
+                    period: '',
+                    description: 'Full access to the Buddhist texts.',
+                    storageText: 'Cloud storage is not included.',
+                    showProgress: false,
+                    renews: 'Never expires'
+                }
+            case 'discovery':
+                return {
+                    name: 'Discovery Experience',
+                    price: 'Free',
+                    period: '',
+                    description: 'Sign up to your Desk with basic features.',
+                    storageText: '82 MB / 100 MB',
+                    storagePercent: 82,
+                    showProgress: true,
+                    renews: 'Never expires'
+                }
+            case 'full':
+                return {
+                    name: 'Full Access Subscription',
+                    price: '$2',
+                    period: '/ month',
+                    description: 'Unlimited everything!',
+                    storageText: 'Unlimited personal Spaces and Texts',
+                    showProgress: false,
+                    renews: 'securely renews on Oct 12, 2026'
+                }
+        }
+    };
+
+    const currentDetails = getCurrentPlanDetails();
+
+    const plans = [
+        {
+            id: 'basic',
+            title: "Basic Reading Experience",
+            subtitle: selectedPlan === "monthly" ? "Free" : "Free",
+            description: "Full access to the Buddhist texts",
+            features: [
+                "Unlimited access to the Buddhist texts",
+                "Full browser experience",
+                "Reading and learning paths experiences",
+                "Basic bookmarks",
+            ],
+            icon: Zap,
+            buttonText: currentPlanId === 'basic' ? "Current Plan" : "Downgrade to Basic",
+        },
+        {
+            id: 'discovery',
+            title: "Discovery Experience",
+            subtitle: selectedPlan === "monthly" ? "Free" : "Free",
+            description: "Sign up to your Desk",
+            badge: "Popular",
+            features: [
+                "Discover My Desk basic features",
+                "Basic storage capacity",
+                "Up to 2 personal Spaces",
+                "Up to 5 stored texts",
+                "Up to 20 Saved Searches",
+                "Bookmarks",
+                "Chat and email support",
+            ],
+            icon: LayersTwo01,
+            buttonText: currentPlanId === 'discovery' ? "Current Plan" : currentPlanId === 'basic' ? "Start free account" : "Downgrade to Discovery",
+        },
+        {
+            id: 'full',
+            title: "Full Access Subscription",
+            subtitle: selectedPlan === "monthly" ? "$2/month" : "$20/year",
+            description: "Unlimited everything!",
+            badge: "Popular",
+            features: [
+                "Everything in Discovery",
+                "Unlimited personal Spaces",
+                "Unlimited stored texts",
+                "Unlimited Saved Searches",
+                "Unlimited bookmarks",
+                "Unlimited notes",
+                "Priority support",
+            ],
+            icon: LayersThree01,
+            buttonText: currentPlanId === 'full' ? "Current Subscription" : "Start Subscription",
+        },
+    ];
+
     return (
         <div className="flex flex-col gap-8 px-4 lg:px-8">
             <SectionHeader.Root>
@@ -17,24 +119,23 @@ export const PlansTab = () => {
             </SectionHeader.Root>
 
             <div className="flex flex-col gap-5">
-                {/* Current Plan Card */}
+                {/* Dynamic Current Plan Card */}
                 <div className="flex flex-col gap-6 rounded-xl bg-primary p-6 shadow-xs ring-1 ring-secondary ring-inset">
                     <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                         <div>
                             <div className="flex items-center gap-3">
-                                <h3 className="text-lg font-semibold text-primary">Pro Plan</h3>
+                                <h3 className="text-lg font-semibold text-primary">{currentDetails.name}</h3>
                                 <Badge size="sm" type="modern">
                                     Active
                                 </Badge>
                             </div>
-                            <p className="mt-1 text-sm text-secondary">Our most popular plan for professionals.</p>
+                            <p className="mt-1 text-sm text-secondary">{currentDetails.description}</p>
                         </div>
                         <div className="flex items-end gap-1 sm:flex-col sm:items-end sm:gap-0">
                             <div className="flex items-baseline gap-1">
-                                <span className="text-display-sm font-semibold text-primary">$2</span>
-                                <span className="text-sm text-secondary">/ month</span>
+                                <span className="text-display-sm font-semibold text-primary">{currentDetails.price}</span>
+                                {currentDetails.period && <span className="text-sm text-secondary">{currentDetails.period}</span>}
                             </div>
-
                         </div>
                     </div>
 
@@ -44,87 +145,58 @@ export const PlansTab = () => {
                     <div className="flex flex-col gap-3">
                         <div className="flex items-center justify-between">
                             <span className="text-sm font-medium text-secondary">Storage usage</span>
-                            <span className="text-sm font-medium text-secondary">8.2 GB / 10 GB</span>
+                            <span className="text-sm font-medium text-secondary">{currentDetails.storageText}</span>
                         </div>
-                        <ProgressBar value={82} max={100} min={0} />
-                        <p className="text-sm text-tertiary">You are approaching your storage limit. Consider upgrading for unlimited storage.</p>
+                        {currentDetails.showProgress && (
+                            <>
+                                <ProgressBar value={currentDetails.storagePercent!} max={100} min={0} />
+                                <p className="text-sm text-tertiary">You are approaching your storage limit. Consider upgrading for unlimited storage.</p>
+                            </>
+                        )}
+                        {!currentDetails.showProgress && currentPlanId === 'full' && (
+                            <p className="text-sm text-tertiary text-brand-primary">You have unlimited access! Feel free to store as many texts and spaces as you need.</p>
+                        )}
                     </div>
 
                     <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                        <p className="text-sm text-secondary">Your plan securely renews on <span className="font-semibold text-primary">Oct 12, 2026</span>.</p>
+                        <p className="text-sm text-secondary">Your plan <span className="font-semibold text-primary">{currentDetails.renews}</span>.</p>
                         <div className="flex items-center gap-3">
-                            <Button size="md" color="secondary">
-                                Cancel plan
-                            </Button>
-                            <Button size="md" color="primary">
-                                Upgrade plan
-                            </Button>
+                            {currentPlanId === 'full' && (
+                                <Button size="md" color="secondary">
+                                    Cancel plan
+                                </Button>
+                            )}
+                            {currentPlanId !== 'full' && (
+                                <Button size="md" color="primary" onClick={() => setCurrentPlanId('full')}>
+                                    Upgrade plan
+                                </Button>
+                            )}
                         </div>
                     </div>
                 </div>
 
                 {/* Upgrade Options */}
-                <div className="mt-4 flex flex-col gap-4">
-                    <h4 className="text-md font-semibold text-primary">Available plans</h4>
-
-                    <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-                        {/* Basic Plan */}
-                        <div className="flex flex-col justify-between gap-6 rounded-xl bg-primary p-6 shadow-xs ring-1 ring-secondary ring-inset">
-                            <div className="flex flex-col gap-4">
-                                <div>
-                                    <h5 className="text-md font-semibold text-primary">Basic</h5>
-                                    <p className="mt-1 text-sm text-secondary">For hobbyists and side projects.</p>
-                                </div>
-                                <div className="flex items-baseline gap-1">
-                                    <span className="text-display-xs font-semibold text-primary">Free</span>
-                                </div>
-                                <ul className="flex flex-col gap-3">
-                                    <li className="flex items-start gap-3 text-sm text-secondary">
-                                        <CheckCircle className="size-5 shrink-0 text-brand-secondary" /> 1 Project
-                                    </li>
-                                    <li className="flex items-start gap-3 text-sm text-secondary">
-                                        <CheckCircle className="size-5 shrink-0 text-brand-secondary" /> Basic Support
-                                    </li>
-                                    <li className="flex items-start gap-3 text-sm text-secondary">
-                                        <CheckCircle className="size-5 shrink-0 text-brand-secondary" /> 1 GB Storage
-                                    </li>
-                                </ul>
-                            </div>
-                            <Button size="md" color="secondary" className="w-full">
-                                Downgrade
-                            </Button>
+                <div className="mt-4 flex flex-col gap-4 w-full">
+                    <div className="flex justify-between items-center w-full">
+                        <h4 className="text-md font-semibold text-primary">Available plans</h4>
+                        
+                        <div className="flex items-center gap-3">
+                            <label htmlFor="dashboard-annual-pricing" className="text-sm font-medium text-secondary select-none">
+                                Annual billing (save 20%)
+                            </label>
+                            <Toggle
+                                id="dashboard-annual-pricing"
+                                size="sm"
+                                isSelected={selectedPlan === "annually"}
+                                onChange={(value) => setSelectedPlan(value ? "annually" : "monthly")}
+                            />
                         </div>
+                    </div>
 
-                        {/* Pro Plan (Current) */}
-                        <div className="flex flex-col justify-between gap-6 rounded-xl bg-primary p-6 shadow-xs ring-2 ring-brand ring-inset">
-                            <div className="flex flex-col gap-4">
-                                <div>
-                                    <div className="flex items-center justify-between">
-                                        <h5 className="text-md font-semibold text-brand-primary">Pro</h5>
-                                        <Badge size="sm" type="modern">Current</Badge>
-                                    </div>
-                                    <p className="mt-1 text-sm text-secondary">Everything you need as a pro.</p>
-                                </div>
-                                <div className="flex items-baseline gap-1">
-                                    <span className="text-display-xs font-semibold text-primary">$2</span>
-                                    <span className="text-sm text-secondary">/mo</span>
-                                </div>
-                                <ul className="flex flex-col gap-3">
-                                    <li className="flex items-start gap-3 text-sm text-secondary">
-                                        <CheckCircle className="size-5 shrink-0 text-brand-secondary" /> Unlimited Projects
-                                    </li>
-                                    <li className="flex items-start gap-3 text-sm text-secondary">
-                                        <CheckCircle className="size-5 shrink-0 text-brand-secondary" /> Priority Support
-                                    </li>
-                                    <li className="flex items-start gap-3 text-sm text-secondary">
-                                        <CheckCircle className="size-5 shrink-0 text-brand-secondary" /> 10 GB Storage
-                                    </li>
-                                </ul>
-                            </div>
-                            <Button size="md" color="secondary" isDisabled className="w-full">
-                                Current Plan
-                            </Button>
-                        </div>
+                    <div className="grid w-full grid-cols-1 gap-4 lg:grid-cols-3 xl:gap-8">
+                        {plans.map((plan) => (
+                            <PricingTierCardIcon key={plan.id} {...plan} iconTheme="modern" iconColor="gray" />
+                        ))}
                     </div>
                 </div>
             </div>

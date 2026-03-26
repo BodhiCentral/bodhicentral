@@ -217,8 +217,8 @@ export const Settings06 = () => {
                             </Tabs>
                         </div>
                     </div>
-                    {selectedTab === "details" && <DetailsTab />}
-                    {selectedTab === "profile" && <ProfileTab />}
+                    {selectedTab === "details" && <DetailsTab user={user} />}
+                    {selectedTab === "profile" && <ProfileTab user={user} />}
                     {selectedTab === "password" && <PasswordTab />}
                     {selectedTab === "appearance" && <AppearanceTab />}
                     {selectedTab === "plans" && <PlansTab />}
