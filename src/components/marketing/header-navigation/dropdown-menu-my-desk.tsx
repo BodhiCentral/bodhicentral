@@ -21,41 +21,35 @@ type MenuColumn = {
 
 const columns: MenuColumn[] = [
     {
-        title: "My Texts",
+        title: "Text Library",
         items: [
             {
                 title: "Last Reading",
                 subtitle: "Continue reading where you left off.",
-                href: "/scripture/theravada-tradition",
+                href: "#",
                 Icon: BookOpen01,
             },
             {
-                title: "Saved Texts",
-                subtitle: "Texts you have saved for later reading.",
-                href: "/scripture/tibetan-schools",
-                Icon: BookOpen01,
-            },
-            {
-                title: "Saved Searches",
-                subtitle: "Your saved search queries.",
-                href: "/scripture/tibetan-canons",
+                title: "My Texts",
+                subtitle: "Texts you have saved in your library for later reading.",
+                href: "#",
                 Icon: BookOpen01,
             },
         ],
     },
     {
-        title: "My Paths",
+        title: "Learning Library",
         items: [
             {
                 title: "Last Learning",
                 subtitle: "Continue learning where you left off.",
-                href: "/scripture/traditions",
+                href: "#",
                 Icon: Hurricane01,
             },
             {
-                title: "Saved Paths",
-                subtitle: "Manage your saved paths.",
-                href: "/scripture/connections",
+                title: "My Paths",
+                subtitle: "Learnings you have saved in your library.",
+                href: "#",
                 Icon: Link03,
             },
         ],
@@ -72,11 +66,11 @@ export const DropdownMenuMyDesk = ({ onClose }: { onClose?: () => void }) => {
                         alt="Background Clouds"
                         width={1024}
                         height={1024}
-                        className="absolute top-0 left-0 w-full h-auto opacity-15 mix-blend-luminosity"
+                        className="absolute top-0 left-0 w-full h-auto opacity-12 mix-blend-luminosity"
                     />
                     <div className="flex flex-col items-center gap-1 px-4 md:p-0">
-                        <h4 className="pt-10 text-4xl font-light uppercase">My Desk</h4>
-                        <p className="text-sm text-tertiary">Spaces, reading, and learning.</p>
+                        <h4 className="pt-10 text-4xl font-light uppercase">My Spaces</h4>
+                        <p className="text-sm text-tertiary">Focused reading and learning.</p>
                     </div>
 
                     <div className="flex flex-col gap-5 md:flex-row md:gap-8 md:py-0">
@@ -85,8 +79,9 @@ export const DropdownMenuMyDesk = ({ onClose }: { onClose?: () => void }) => {
                             <ul className="flex flex-col gap-3">
                                 {[
 
-                                    { title: "Manage Spaces", href: "/scripture/collections" },
-                                    { title: "Dashboard", href: "/dashboard" },
+                                    { title: "Spaces", href: "/scripture/collections" },
+                                    { title: "My Searches", href: "/dashboard" },
+                                    { title: "Reader Preferences", href: "/scripture/collections" },
                                 ].map((item) => (
                                     <li key={item.title}>
                                         <Button href={item.href} color="link-gray" size="lg" onPress={onClose}>
@@ -116,13 +111,13 @@ export const DropdownMenuMyDesk = ({ onClose }: { onClose?: () => void }) => {
 
                 <div className="mx-auto flex max-w-container flex-col px-4 py-5 md:flex-row md:items-center md:justify-between md:px-6">
                     <Button href="/reader" color="secondary" size="md" iconLeading={BookOpen01} className="hidden md:flex" onPress={onClose}>
-                        Readership Guides
+                        Documentation
                     </Button>
-                    <Button href="/my-desk" color="primary" size="md" className="hidden md:flex" onPress={onClose}>
-                        Sign up
+                    <Button href="/about/plans" color="primary" size="md" className="hidden md:flex" onPress={onClose}>
+                        My Plans
                     </Button>
-                    <Button href="/my-desk" color="primary" size="sm" className="md:hidden" onPress={onClose}>
-                        Sign up
+                    <Button href="/about/plans" color="primary" size="sm" className="md:hidden" onPress={onClose}>
+                        My Plans
                     </Button>
                 </div>
             </nav>

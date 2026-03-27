@@ -257,22 +257,22 @@ export const AuxiliaryPanel = () => {
     return (
         <div className="sticky top-12 mx-auto z-45 flex-1 border-l border-secondary">
             <div className="prose-reader flex flex-col w-full bg-olive-100/30 dark:bg-neutral-950/20 px-6 py-4 rounded-tr-2xl rounded-br-xl h-[calc(100dvh-48px)]">
-                <h3 className=" text-primary">Auxiliary Panel Features</h3>
-                <p className="text-md text-tertiary">The Auxiliary Panel displays information related to the active text. The peripheral content is selected by clicking on the tools in the right sidebar:</p>
-                <h4 className=" text-primary"><Link01 size={20} />Connections and Parallels</h4>
+                <h3 className=" text-primary">Auxiliary Panel</h3>
+                <p className="text-md text-tertiary">The Auxiliary Panel displays information related to the active text. Various types of content are accessible from the tools in the right sidebar:</p>
+                <h4 className=" text-primary"><Link01 size={18} />Connections and Parallels</h4>
                 <p className="text-md text-tertiary">Acting on the headings and paragraphs in the active text will display the connections and parallels with other texts and sections of the canons. For information on the types of parallels, see our <Link href="https://bodhi-central-docs.vercel.app/research/pali-canon/connections-and-parallels" target="_blank" rel="noopener noreferrer" className="text-primary underline">Documentation</Link>.</p>
-                <h4 className=" text-primary"><BookOpen01 size={20} />Overviews and Recommended Reading </h4>
+                <h4 className=" text-primary"><BookOpen01 size={18} />Overviews and Recommended Reading </h4>
                 <p className="text-md text-tertiary">Extend the utility of the reader by accessing overviews and recommended readings related to the active text.</p>
-                <h4 className=" text-primary"><Bookmark size={20} />Bookmarks</h4>
-                <p className="text-md text-tertiary">This is a feature for registered users. After singning up, users can bookmark sections of the text and save searches for future reference. </p>
+                <h4 className=" text-primary"><Bookmark size={18} />Bookmarks</h4>
+                <p className="text-md text-tertiary">This is a feature for registered users. After signing up, users can bookmark sections of the text and save searches for future reference. </p>
                 <div className="w-full border-t border-primary mt-auto">
-                    <h4 className="text-primary"><Download01 size={20} />Downloads </h4>
+                    <h4 className="text-primary"><Download01 size={18} />Downloads from sources</h4>
                     <div className="flex gap-1 dark:opacity-70">
                         <Button color="tertiary" size="sm" iconLeading={<FileIcon type="pdf" variant="gray" className="invert-90 dark:invert-0" aria-label="Download PDF" />} />
                         <Button color="tertiary" size="sm" iconLeading={<FileIcon type="txt" variant="gray" className="invert-90 dark:invert-0" aria-label="Download TXT" />} />
                         <Button color="tertiary" size="sm" iconLeading={<FileIcon type="html" variant="gray" className="invert-90 dark:invert-0" aria-label="Download HTML" />} />
                     </div>
-                    <h4 className="text-primary">Social Sharing</h4>
+                    <h4 className="text-primary">Social sharing</h4>
                     <div className="flex gap-3">
                         <Button color="secondary" size="md" className="text-fg-quaternary" iconLeading={Link01} />
                         <Button color="secondary" size="md" className="text-fg-quaternary" iconLeading={X} />
