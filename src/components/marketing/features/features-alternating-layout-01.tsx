@@ -30,9 +30,9 @@ export const FeaturesAlternatingLayout01 = () => {
             <div className="mx-auto w-full max-w-container px-4 md:px-8">
                 <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
                     <span className="text-sm font-semibold text-brand-600 dark:text-brand-700 md:text-md">The Three Pillars</span>
-                    <h2 className="mt-3 text-display-sm text-primary md:text-display-md">Meaningful presentations of Buddha's teachings</h2>
+                    <h2 className="mt-3 text-display-sm text-primary md:text-display-md">Practical presentations of Buddha's teachings</h2>
                     <p className="mt-4 text-lg text-tertiary md:mt-5 md:text-xl">
-                        Gateways for spiritual seekers to connect with Buddhist traditions, teachings, and communities around the world.
+                        Gateways for spiritual seekers to connect with Buddhist traditions, apply teachings, and meet worldwide communities.
                     </p>
                 </div>
             </div>

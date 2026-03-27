@@ -200,16 +200,18 @@ export const HeaderReader = ({ items = headerReaderNavItems, isFullWidth, isFloa
                         </ul>
                     </nav>
                     {/* DESKTOP LOGIN/SIGNUP BUTTONS */}
-                    <div className="hidden items-center gap-3 md:flex ml-8"> {/* 10px gap between nav menu items and buttons */}
-                        <NavItemButton
-                            size="md"
-                            label="Search in text"
-                            href=""
-                            icon={SearchLg}
-                            className="bg-olive-200 dark:bg-gray-950"
-                            tooltipPlacement="bottom"
-                        />
-                        <ThemeToggle />
+                    <div className="hidden items-center gap-6 md:flex ml-8"> {/* 10px gap between nav menu items and buttons */}
+                        <div className="flex items-center gap-1">
+                            <NavItemButton
+                                size="md"
+                                label="Search in text"
+                                href=""
+                                icon={SearchLg}
+                                className="bg-olive-200 dark:bg-gray-950"
+                                tooltipPlacement="bottom"
+                            />
+                            <ThemeToggle />
+                        </div>
                         {user ? (
                             <DropdownAvatar user={user} />
                         ) : (
