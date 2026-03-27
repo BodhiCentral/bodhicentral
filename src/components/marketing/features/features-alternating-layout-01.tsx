@@ -37,18 +37,18 @@ export const FeaturesAlternatingLayout01 = () => {
                 </div>
             </div>
 
-            <div className="mx-auto flex w-full max-w-container flex-col gap-12 px-4 sm:gap-16 md:gap-20 md:px-8 lg:gap-24">
+            <div className="mx-auto flex w-full max-w-container flex-col gap-12 px-4 sm:gap-16 md:gap-20 md:px-8 lg:gap-28">
                 <div className="grid grid-cols-1 gap-10 md:gap-20 lg:grid-cols-2 lg:gap-24">
                     <div className="max-w-xl flex-1 self-center">
                         <FeaturedIcon icon={BookOpen01} size="lg" color="gray" theme="modern-neue" />
-                        <h3 className="mt-5 text-display-xs text-primary dark:text-brand-200 md:text-display-md">Kindful Wisdom</h3>
+                        <h3 className="mt-5 text-display-xs text-primary dark:text-brand-200 md:text-display-md">Kindful Scriptures</h3>
                         <p className="mt-2 text-md text-tertiary md:mt-4 md:text-lg">
                             Whether you are already studying and practicing a Buddhist path, or exploring what Buddha's teachings mean to you, we have gathered teachings from genuine streams of Buddhism with a pragmatic approach:
                         </p>
                         <ul className="mt-8 flex flex-col gap-4 pl-2 md:gap-5 md:pl-4">
                             {[
-                                "Inclusive access to collections of texts that are currently transmitted and practiced in modern Buddhist traditions",
-                                "Contextualized texts within vehicles, doctrines, genres, and tracks of study, practice and research",
+                                "Clear access to collections of texts that are currently transmitted and practiced in modern Buddhist traditions",
+                                "Texts organized by vehicles, genres, and schools of study and practice, for everyone",
                                 "State-of-the-art readers and personal workspaces to make your experience smooth and memorable",
                             ].map((feat) => (
                                 <CheckItemText key={feat} size="md" iconStyle="outlined" color="primary" text={feat} />
@@ -87,15 +87,15 @@ export const FeaturesAlternatingLayout01 = () => {
                 <div className="grid grid-cols-1 gap-10 md:gap-20 lg:grid-cols-2 lg:gap-24">
                     <div className="max-w-xl flex-1 self-center lg:order-last">
                         <FeaturedIcon icon={TrendUp01} size="lg" color="gray" theme="modern-neue" />
-                        <h3 className="mt-5 text-display-xs text-primary dark:text-brand-200 md:text-display-md">Pathways of Study and Practice</h3>
+                        <h3 className="mt-5 text-display-xs text-primary dark:text-brand-200 md:text-display-md">Paths of Study and Practice</h3>
                         <p className="mt-2 text-md text-tertiary md:mt-4 md:text-lg">
                             Accessing Buddha's teachings has become easier than ever. Yet, navigating and making sense of the vast amount of literature and teachings available today can be overwhelming and complicated without the right guidance.
                         </p>
                         <ul className="mt-8 flex flex-col gap-4 pl-2 md:gap-5 md:pl-4">
                             {[
-                                "Study the foundational pathways providing a solid understanding of the Buddhist core concepts and principles",
+                                "Study the foundational paths providing a solid understanding of the Buddhist core concepts and principles",
                                 "Go deeper into academic and scholarly paths (shedra-style learning), your truthworthy companions for in-depth study and research",
-                                "Engage in contemplative practice paths (samatha, vipassana, mind-training, etc.) brought to you by the living Buddhist traditions to support your spiritual journey",
+                                "Engage in contemplative practice paths (samatha, vipassana, mind-training, etc.) brought to you by genuine living Buddhist teachings to support your progress",
                             ].map((feat) => (
                                 <CheckItemText key={feat} size="md" iconStyle="outlined" color="primary" text={feat} />
                             ))}
@@ -134,9 +134,8 @@ export const FeaturesAlternatingLayout01 = () => {
                         </p>
                         <ul className="mt-8 flex flex-col gap-4 pl-2 md:gap-5 md:pl-4">
                             {[
-                                "DIRECTORY: Find institutions with study and practice programs",
+                                "DIRECTORIES: Find institutions that offer study and practice programs",
                                 "BLOG: Read articles on relevant topics, presented from a Buddhist perspective.",
-                                "YOUR DESK: Build your personal library with favorite content",
                                 "FORUM: Join groups and discussions related to our activities",
                                 "DOCUMENTATION: Guidelines and information about the project",
                             ].map((feat) => (

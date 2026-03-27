@@ -200,7 +200,7 @@ export const HeaderReader = ({ items = headerReaderNavItems, isFullWidth, isFloa
                         </ul>
                     </nav>
                     {/* DESKTOP LOGIN/SIGNUP BUTTONS */}
-                    <div className="hidden items-center gap-6 md:flex ml-8"> {/* 10px gap between nav menu items and buttons */}
+                    <div className="hidden items-center gap-8 md:flex ml-8"> {/* 10px gap between nav menu items and buttons */}
                         <div className="flex items-center gap-1">
                             <NavItemButton
                                 size="md"
