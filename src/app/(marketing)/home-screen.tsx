@@ -6,9 +6,27 @@ import { Button } from "@/components/base/buttons/button";
 import { useClipboard } from "@/hooks/use-clipboard";
 import { FeaturesAlternatingLayout01 } from "@/components/marketing/features/features-alternating-layout-01";
 import Image from 'next/image';
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(useGSAP); //register the hook to avoid React version descrepancies
+gsap.registerPlugin(ScrollTrigger);
 
 export const HomeScreen = () => {
+    const container = useRef<HTMLDivElement>(null);
     const clipboard = useClipboard();
+
+    // Header tagline animation
+    useGSAP(() => {
+        gsap.from(".header-tag", {
+            x: -100,
+            opacity: 100,
+            ease: "power2.out",
+            duration: 3,
+        });
+    }, { scope: container });
 
     return (
         <main className="relative overflow-hidden bg-brand-50 dark:bg-brand-200">
@@ -43,8 +61,8 @@ export const HomeScreen = () => {
                     className="absolute z-20 -right-10 -bottom-14 max-w-160 opacity-30 mix-blend-multiple md:right-10 md:-bottom-1/3 md:max-w-7xl mask-b-from-90% mask-b-to-100% scale-x-[-1]"
                 />
                 <div className="relative mx-auto grid max-w-container grid-cols-1 gap-16 px-4 md:px-8 lg:min-h-150 lg:items-center">
-                    <div className="z-10 flex max-w-md md:max-w-2xl flex-col items-start">
-                        <span className="hidden md:block text-sm font-bold text-brand-100 dark:text-brand-50 md:text-lg uppercase tracking-wider text-shadow-md text-shadow-gray-700 dark:text-shadow-gray-950">Aware ⟐ Kind ⟐ Wise</span>
+                    <div ref={container} className="z-10 flex max-w-md md:max-w-2xl flex-col items-start">
+                        <span className="header-tag hidden md:block text-sm font-bold text-brand-100 dark:text-brand-50 md:text-lg uppercase tracking-wider text-shadow-md text-shadow-gray-700 dark:text-shadow-gray-950">Aware ⟐ Kind ⟐ Wise</span>
                         <h1 className="text-display-md text-brand-25 dark:text-brand-200 md:text-display-xl lg:text-display-2xl text-shadow-md text-shadow-gray-700 dark:text-shadow-gray-950">
                             Gateways to Buddhist paths of the <span className="text-yellow-600 dark:text-yellow-600">Awakening</span>
                         </h1>
