@@ -4,7 +4,7 @@ import { Badge } from "@/components/base/badges/badges";
 import { Button } from "@/components/base/buttons/button";
 import { BodhicentralLogo } from "@/components/foundations/logo/bodhicentral-logo";
 import Link from "next/link";
-import { AngelList, Dribbble, Facebook, GitHub, Layers, LinkedIn, X } from "@/components/foundations/social-icons";
+import { Dribbble, Facebook, GitHub, Layers, X } from "@/components/foundations/social-icons";
 
 const footerNavList = [
     {
@@ -52,8 +52,8 @@ const footerNavList = [
                 href: "/learning-paths",
             },
             {
-                label: "Fundamental Paths",
-                href: "/learning-paths/fundamental-paths",
+                label: "Foundational Paths",
+                href: "/learning-paths/foundational-paths",
             },
             {
                 label: "Academic Paths",
@@ -65,7 +65,7 @@ const footerNavList = [
             },
             {
                 label: "Buddhist Curricula",
-                href: "/learning-paths/curricula-by-tradition",
+                href: "/learning-paths/buddhist-curricula",
             },
             {
                 label: "Where to Study",
@@ -158,11 +158,6 @@ const footerSocials = [
         label: "GitHub",
         icon: GitHub,
         href: "https://github.com/",
-    },
-    {
-        label: "AngelList",
-        icon: AngelList,
-        href: "https://angel.co/",
     },
     {
         label: "Dribbble",

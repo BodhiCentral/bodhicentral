@@ -64,11 +64,11 @@ export const HomeScreen = () => {
                 />
                 <div className="relative mx-auto grid max-w-container grid-cols-1 gap-16 px-4 md:px-8 lg:min-h-150 lg:items-center">
                     <div ref={container} className="z-10 flex max-w-md md:max-w-2xl flex-col items-start">
-                        <span className="header-tag hidden md:block text-sm font-bold text-brand-100 dark:text-brand-50 md:text-lg uppercase tracking-wider text-shadow-md text-shadow-gray-700 dark:text-shadow-gray-950">Aware ⟐ Kind ⟐ Wise</span>
-                        <h1 className="text-display-md text-brand-25 dark:text-brand-200 md:text-display-xl lg:text-display-2xl text-shadow-md text-shadow-gray-700 dark:text-shadow-gray-950">
-                            Gateways to Buddhist paths of the <span className="text-yellow-600 dark:text-yellow-600">Awakening</span>
+                        <span className="header-tag hidden md:block text-sm font-bold text-orange-200 dark:text-brand-50 md:text-lg tracking-wider text-shadow-md text-shadow-gray-700 dark:text-shadow-gray-950">Kind. Clear. Calm.</span>
+                        <h1 className="text-display-md text-white dark:text-brand-200 md:text-display-xl lg:text-display-3xl text-shadow-md text-shadow-gray-700 dark:text-shadow-gray-950">
+                            Gateways to the<br /> <span className="lg:text-display-5xl text-yellow-600 dark:text-yellow-600">Awakening</span>
                         </h1>
-                        <p className="mt-4 max-w-xs sm:max-w-sm md:max-w-xl text-lg text-balance text-brand-100 dark:text-brand-100 md:mt-6 md:text-xl">
+                        <p className="mt-4 max-w-xs sm:max-w-sm md:max-w-xl text-lg text-balance text-brand-200 dark:text-brand-100 md:mt-6 md:text-xl">
                             A modern platform channeling universally revered Buddhist teachings and practical knowledge for everyone.{" "}
                         </p>
 
