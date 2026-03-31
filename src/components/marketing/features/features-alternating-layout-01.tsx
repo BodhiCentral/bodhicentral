@@ -71,13 +71,13 @@ export const FeaturesAlternatingLayout01 = () => {
                             {/* Light mode image (hidden in dark mode) */}
                             <img
                                 alt="Scripture mockup showing Collections interface"
-                                src="/placeholder-image-landscape.svg"
+                                src="/theravada-tradition-light-page-1920px.webp"
                                 className="size-full object-contain lg:w-auto lg:max-w-none dark:hidden"
                             />
                             {/* Dark mode image (hidden in light mode) */}
                             <img
                                 alt="Dashboard mockup showing application interface"
-                                src="/placeholder-image-landscape.svg"
+                                src="/theravada-tradition-dark-page-1920px.webp"
                                 className="size-full object-contain not-dark:hidden lg:w-auto lg:max-w-none"
                             />
                         </AlternateImageMockup>

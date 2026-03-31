@@ -138,7 +138,7 @@ const PricingTierCardBanner = (props: {
     secondActionHref?: string;
 }) => {
     return (
-        <div className={cx("flex flex-col overflow-hidden rounded-2xl bg-primary shadow-lg ring-1 ring-secondary_alt", props.className)}>
+        <div className={cx("flex flex-col overflow-hidden rounded-2xl bg-brand-25 dark:bg-neutral-800 shadow-lg ring-1 ring-secondary_alt", props.className)}>
             {props.banner && (
                 <div className="w-full bg-yellow-800 px-2 py-3 text-center">
                     <p className="text-sm font-semibold text-white">{props.banner}</p>
@@ -148,7 +148,7 @@ const PricingTierCardBanner = (props: {
             <div>
                 <div className="flex flex-col items-center px-6 pt-8 text-center md:px-8">
                     <p className="text-display-md font-semibold text-primary md:text-display-lg">{props.subtitle}</p>
-                    <h2 className="mt-4 text-xl font-semibold text-primary">{props.title}</h2>
+                    <h2 className="mt-4 text-2xl font-semibold text-brand-secondary">{props.title}</h2>
                     <p className="mt-1 text-md text-tertiary">{props.description}</p>
                 </div>
 
@@ -176,7 +176,7 @@ const PricingSimpleBanner = () => {
 
     const plans = [
         {
-            title: "STARTER plan",
+            title: "STARTER PLAN",
             subtitle: selectedPlan === "monthly" ? "Free" : "Free",
             description: "Free plan for everyone.",
             firstAction: "Start browsing texts",
@@ -193,10 +193,10 @@ const PricingSimpleBanner = () => {
             ],
         },
         {
-            title: "DISCOVERY plan",
+            title: "DISCOVERY PLAN",
             subtitle: selectedPlan === "monthly" ? "Free" : "Free",
             description: "2 workspaces storage with Sign up.",
-            firstAction: "Get started",
+            firstAction: "Create your FREE account",
             firstActionHref: "/sign-up",
             secondAction: "Have questions?",
             secondActionHref: "/plans#faq",
@@ -210,10 +210,10 @@ const PricingSimpleBanner = () => {
             ],
         },
         {
-            title: "FULL ACCESS plan",
+            title: "FULL ACCESS PLAN",
             subtitle: selectedPlan === "monthly" ? "$2/month" : "$20/year",
             description: "Advanced features + unlimited storage.",
-            firstAction: "Get started",
+            firstAction: "Get FULL access",
             firstActionHref: "/sign-up",
             secondAction: "Have questions?",
             secondActionHref: "/plans#faq",
@@ -231,10 +231,10 @@ const PricingSimpleBanner = () => {
     ];
 
     return (
-        <section className="bg-primary py-16 md:py-24">
+        <section className="bg-primary py-16 md:py-20">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
-                    <h2 className="text-display-md font-semibold text-primary md:text-display-lg"> Plans for everyone</h2>
+                    <h2 className="text-display-md font-semibold text-brand-primary md:text-display-lg"> Plans for everyone</h2>
                     <p className="mt-4 text-lg text-tertiary md:mt-6 md:text-xl">
                         We believe that Buddhist texts and teachings should be accessible to everyone. Please enjoy the <strong>Starter</strong> and <strong>Discovery</strong> free plans!
                     </p>
@@ -289,7 +289,7 @@ const FeatureTextFeaturedIconTopCentered = ({
         <FeaturedIcon icon={icon} size="md" color={color} theme={theme} className="inline-flex md:hidden" />
 
         <div>
-            <h3 className="text-lg font-semibold text-primary">{title}</h3>
+            <h3 className="text-xl font-semibold text-primary">{title}</h3>
             <p className="mt-1 text-md text-tertiary">{subtitle}</p>
         </div>
 
@@ -314,7 +314,7 @@ const FeaturesCenterMockup01 = () => {
                     </span>
                     <h2 className="mt-4 text-display-sm font-semibold text-primary md:text-display-md">Cutting-edge features for a balanced approach to Buddhist study and practice</h2>
                     <p className="mt-4 text-lg text-tertiary md:mt-5 md:text-xl">
-                        A platform that combines readership, learning, and practice, connecting with the living traditions of the awakening.
+                        Scripture, learning, and connecting with the living traditions of the awakening.
                     </p>
                 </div>
 
@@ -343,29 +343,29 @@ const FeaturesCenterMockup01 = () => {
                             </div>
                         </div>
                     </div>
-                    <ul className="flex flex-1 flex-wrap justify-center gap-x-8 gap-y-10 lg:flex-nowrap">
+                    <ul className="flex flex-1 flex-wrap justify-center gap-x-12 gap-y-10 lg:flex-nowrap">
                         {[
                             {
-                                title: "Share team inboxes",
-                                subtitle: "Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the loop.",
+                                title: "Kindful Scripture",
+                                subtitle: "With a practical approach to scriptures for genres, schools, and traditions.",
                                 icon: MessageChatCircle,
                                 cta: "Learn more",
-                                href: "#",
+                                href: "/scriptures/collections",
                             },
                             {
-                                title: "Deliver instant answers",
-                                subtitle: "An all-in-one customer service platform that helps you balance everything your customers need to be happy.",
+                                title: "Paths of Learning",
+                                subtitle: "Lorem ipsum noratrum belious terbarium altrimorem menforosa.",
                                 icon: Zap,
                                 cta: "Learn more",
-                                href: "#",
+                                href: "/learning-paths",
                             },
                             {
-                                title: "Manage your team with reports",
+                                title: "Resources that matter",
                                 subtitle:
-                                    "Measure what matters with Untitled's easy-to-use reports. You can filter, export, and drilldown on the data in a couple clicks.",
+                                    "Expand your experience with Directories, blogs, forums, and detailed documentation.",
                                 icon: ChartBreakoutSquare,
                                 cta: "Learn more",
-                                href: "#",
+                                href: "/resources",
                             },
                         ].map((item) => (
                             <li key={item.title}>
@@ -422,7 +422,7 @@ const FeaturesIconsAndImage03 = () => {
                         {[
                             {
                                 title: "Readership with kind wisdom",
-                                subtitle: "Access a curated library of books, articles, and resources on mindfulness, productivity, and personal growth.",
+                                subtitle: "Access a curated library of texts, overviews, and practical expositions of the foundamentals of buddhist concepts and principles.",
                                 icon: BookOpen01,
                                 cta: "Learn more",
                                 href: "#",
@@ -517,17 +517,17 @@ const CardHorizontalBrand = () => {
     return (
         <section className="bg-primary pb-16 md:pb-24">
             <div className="mx-auto max-w-container px-4 md:px-8">
-                <div className="flex flex-col gap-x-8 gap-y-8 rounded-2xl bg-brand-section px-6 py-10 lg:flex-row lg:p-16">
+                <div className="flex flex-col gap-x-8 gap-y-8 rounded-2xl bg-brand-section px-6 py-10 lg:flex-row  lg:p-16 drop-shadow-lg">
                     <div className="flex max-w-3xl flex-1 flex-col">
                         <h2 className="text-display-sm font-semibold text-primary_on-brand">
-                            <span className="hidden md:inline">Sign up for a free account on the Discovery plan</span>
-                            <span className="md:hidden">Sign up for a free account on the Discovery plan</span>
+                            <span className="hidden md:inline">Sign up for the free Discovery plan</span>
+                            <span className="md:hidden">Unlock great features and preferences, and our full-edge dashboard.</span>
                         </h2>
                         <p className="mt-4 text-lg text-tertiary_on-brand lg:text-xl">Join thousands of people already using Bodhi Central.</p>
                     </div>
                     <div className="flex flex-col-reverse items-stretch gap-3 sm:flex-row sm:items-start">
                         <Button href="/plans" color="secondary" size="md">View plans</Button>
-                        <Button href="/sign-up" size="md">Get started</Button>
+                        <Button href="/sign-up" size="md">Free Sign up</Button>
                     </div>
                 </div>
             </div>
