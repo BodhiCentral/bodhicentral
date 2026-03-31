@@ -510,10 +510,8 @@ const CardHorizontalBrand = () => {
                         <p className="mt-4 text-lg text-tertiary_on-brand lg:text-xl">Join thousands of people already using Bodhi Central.</p>
                     </div>
                     <div className="flex flex-col-reverse items-stretch gap-3 sm:flex-row sm:items-start">
-                        <Button color="secondary" size="md">
-                            Learn more
-                        </Button>
-                        <Button size="md">Get started</Button>
+                        <Button href="/plans" color="secondary" size="md">View plans</Button>
+                        <Button href="/sign-up" size="md">Get started</Button>
                     </div>
                 </div>
             </div>

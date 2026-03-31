@@ -14,6 +14,30 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(useGSAP); //register the hook to avoid React version descrepancies
 gsap.registerPlugin(ScrollTrigger);
 
+const CardHorizontalBrand = () => {
+    return (
+        <section className="bg-primary pb-16 md:pb-24">
+            <div className="mx-auto max-w-container px-4 md:px-8">
+                <div className="flex flex-col gap-x-8 gap-y-8 rounded-2xl bg-brand-section px-6 py-10 lg:flex-row lg:p-16">
+                    <div className="flex max-w-3xl flex-1 flex-col">
+                        <h2 className="text-display-sm font-semibold text-primary_on-brand">
+                            <span className="hidden md:inline">Sign up for a free account on the Discovery plan</span>
+                            <span className="md:hidden">Sign up for a free account on the Discovery plan</span>
+                        </h2>
+                        <p className="mt-4 text-lg text-tertiary_on-brand lg:text-xl">Join thousands of people already using Bodhi Central.</p>
+                    </div>
+                    <div className="flex flex-col-reverse items-stretch gap-3 sm:flex-row sm:items-start">
+                        <Button href="/plans" color="secondary" size="md">View plans</Button>
+                        <Button href="/sign-up" size="md">Get started</Button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+};
+
+
+
 export const HomeScreen = () => {
     const container = useRef<HTMLDivElement>(null);
     const clipboard = useClipboard();
@@ -92,6 +116,7 @@ export const HomeScreen = () => {
                 </div>
             </section>
             <FeaturesAlternatingLayout01 />
+            <CardHorizontalBrand />
         </main >
 
 

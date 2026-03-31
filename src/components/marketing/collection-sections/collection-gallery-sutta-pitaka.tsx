@@ -6,8 +6,8 @@ import { CollectionPaliSectionGallery } from "./collection-pali-section-gallery"
 
 export const CollectionGallerySuttaPitaka = () => {
     return (
-        <section className="relative overflow-hidden bg-linear-to-b from-olive-100 from-0% via-olive-200 via-20% to-olive-300 to-100% dark:bg-linear-to-b dark:from-olive-600/50 dark:from-0% dark:via-olive-600/30 dark:via-20% dark:to-olive-800/90 py-6 md:py-10">
-            <div className="mx-auto px-4 md:px-8">
+        <section className="gallery-in relative overflow-hidden bg-linear-to-b from-olive-100 from-0% via-olive-200 via-20% to-olive-300 to-100% dark:bg-linear-to-b dark:from-olive-600/50 dark:from-0% dark:via-olive-600/30 dark:via-20% dark:to-olive-800/90 py-6 md:py-10">
+            <div className="gallery-content mx-auto px-4 md:px-8">
                 {/* <!-- Collection Gallery Header --> */}
                 <div className="flex w-full flex-col justify-between md:flex-row">
                     <div className="flex flex-1 flex-col max-w-280 pr-4 md:pr-24">

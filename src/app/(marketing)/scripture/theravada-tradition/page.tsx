@@ -47,25 +47,52 @@ export default function TheravadaTraditionPage() {
             .from(".hero-subtitle", {
                 scale: 0.5,
                 autoAlpha: 0,
-                duration: 1.5,
-            }, "-=1")
+                duration: 1,
+            }, "-=0.5")
             .from(".sutta-card", {
                 autoAlpha: 0,
                 scale: 3.5,
-                duration: 1.5,
-            }, "+=1.5")
+                duration: 1.2,
+            }, "+=0.4")
             .from(".vinaya-card", {
                 x: 280,
                 autoAlpha: 0,
                 scale: 0.8,
-                duration: 1.5,
-            }, "+=0.3")
+                duration: 1.2,
+            }, "+=0.2")
             .from(".abhidhamma-card", {
                 x: -280,
                 autoAlpha: 0,
                 scale: 0.8,
-                duration: 1.5,
+                duration: 1.2,
             }, "+=0.2");
+
+        // Pitaka Gallery animations
+        const galleries = gsap.utils.toArray(".gallery-in") as HTMLElement[];
+        galleries.forEach((gallery) => {
+            const content = gallery.querySelector(".gallery-content");
+            if (!content) return;
+
+            // Using a scrubbed timeline natively accounts for elements already in the viewport on load
+            // and provides a smooth, perfectly synchronized fade-in and fade-out in both directions.
+            gsap.timeline({
+                scrollTrigger: {
+                    trigger: gallery,
+                    start: "top 85%",   // Start fading in when gallery top hits 85% of viewport
+                    end: "bottom 15%",  // Finish fading out when gallery bottom hits 15% of viewport
+                    scrub: 1,           // 1 second of smoothing for a premium feel
+                }
+            })
+                // 1. Fade-in on entrance (duration ratio corresponds to scroll distance)
+                .fromTo(content,
+                    { autoAlpha: 0 },
+                    { autoAlpha: 1, duration: 0.15, ease: "power2.inOut" }
+                )
+                // 2. Hold visibility in the middle of the viewport
+                .to(content, { autoAlpha: 1, duration: 0.7 })
+                // 3. Fade-out on exit
+                .to(content, { autoAlpha: 0, duration: 0.15, ease: "power2.inOut" });
+        });
 
     }, { scope: container });
 
@@ -73,16 +100,15 @@ export default function TheravadaTraditionPage() {
 
 
     return (
-        <>
-
-            <div ref={container} className="relative mx-auto bg-[url(/jetavanaramaya-scene-01.jpg)] bg-cover bg-center bg-no-repeat pt-12 pb-24">
+        <div ref={container}>
+            <div className="relative mx-auto bg-[url(/jetavanaramaya-scene-01.jpg)] bg-cover bg-center bg-no-repeat pt-12 pb-24">
                 {/* Overlay layer for easy customization of color/transparency */}
                 <div className="absolute inset-0 bg-linear-to-b from-white/80 via-white/50 via-30% to-white/10 dark:bg-linear-to-b dark:from-black/15 dark:via-black/50 dark:via-30% dark:to-black/10 z-0" aria-hidden="true" />
 
                 {/* Content layer */}
                 <div id="hero" className="opacity-0 relative z-10">
                     <section className="md:flex flex-col items-center justify-center pt-20 pb-12 px-4 md:px-6">
-                        <h1 className="hero-title text-display-sm text-center text-brand-800 dark:text-brand-200 md:text-display-lg lg:text-display-2xl">Theravāda Tradition</h1>
+                        <h1 className="hero-title text-display-sm text-center text-brand-800 dark:text-brand-200 md:text-display-lg lg:text-display-2xl text-shadow-sm">Theravāda Tradition</h1>
                         <p className="hero-subtitle text-center text-lg font-semibold text-tertiary">The Pali Canon, the earliest Buddhist scriptures.</p>
                     </section>
                     <section>
@@ -125,13 +151,17 @@ export default function TheravadaTraditionPage() {
                 </div>
 
             </div>
+            {/* Gallery Section */}
             <section>
+                {/* TODO: Implement a GSAP ScrollTrigger animation for each of the three Pitaka galleries inside the Gallery Section. */}
+                {/* The animation should be a fade-in for each gallery when the content of the gallery enters the bottom of the viewport. */}
+                {/* The animation should also include a fade-out for each gallery when the content of the gallery leaves the top of the viewport. */}
                 <CollectionGallerySuttaPitaka />
                 <CollectionGalleryVinayaPitaka />
                 <CollectionGalleryAbhidhammaPitaka />
             </section>
             <ThreePitakasDiagram />
             <BlogSectionTipitakaOverviewsLeftAligned />
-        </>
+        </div>
     );
 }
