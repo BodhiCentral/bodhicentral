@@ -53,7 +53,7 @@ const ListingListItem = (props: Listing) => {
     return (
         <div className="flex flex-col overflow-hidden rounded-xl bg-primary shadow-xs ring-1 ring-secondary ring-inset xl:flex-row xl:gap-5 xl:p-4">
             <div className="relative h-44 w-full overflow-hidden xl:h-36 xl:w-50 xl:rounded-lg">
-                <Image src={props.imageSrc} alt={props.title} className="h-full w-full object-cover"  width={800} height={800} />
+                <Image src={props.imageSrc} alt={props.title} className="h-full w-full object-cover" width={800} height={800} />
                 {props.rare && (
                     <BadgeWithIcon iconLeading={Award02} size="sm" color="brand" type="pill-color" className="absolute bottom-2 left-2">
                         Rare find
@@ -155,22 +155,22 @@ const cities = [
     {
         id: "melbourne",
         label: "Melbourne, AU",
-        icon: () => <Image src="https://www.untitledui.com/images/flags/AU.svg" alt="Australian flag" className="size-5"  width={20} height={20} />,
+        icon: () => <Image src="https://www.untitledui.com/images/flags/AU.svg" alt="Australian flag" className="size-5" width={20} height={20} />,
     },
     {
         id: "canberra",
         label: "Canberra, AU",
-        icon: () => <Image src="https://www.untitledui.com/images/flags/AU.svg" alt="Australian flag" className="size-5"  width={20} height={20} />,
+        icon: () => <Image src="https://www.untitledui.com/images/flags/AU.svg" alt="Australian flag" className="size-5" width={20} height={20} />,
     },
     {
         id: "brisbane",
         label: "Brisbane, AU",
-        icon: () => <Image src="https://www.untitledui.com/images/flags/AU.svg" alt="Australian flag" className="size-5"  width={20} height={20} />,
+        icon: () => <Image src="https://www.untitledui.com/images/flags/AU.svg" alt="Australian flag" className="size-5" width={20} height={20} />,
     },
     {
         id: "sydney",
         label: "Sydney, AU",
-        icon: () => <Image src="https://www.untitledui.com/images/flags/AU.svg" alt="Australian flag" className="size-5"  width={20} height={20} />,
+        icon: () => <Image src="https://www.untitledui.com/images/flags/AU.svg" alt="Australian flag" className="size-5" width={20} height={20} />,
     },
 ];
 
@@ -353,7 +353,7 @@ export const Informational16 = () => {
                                         size="md"
                                         items={prices}
                                         defaultSelectedKey={prices[0].id}
-                                        placeholderIcon={CurrencyDollar}
+                                        icon={CurrencyDollar}
                                         placeholder="Any price"
                                     >
                                         {(item) => (
