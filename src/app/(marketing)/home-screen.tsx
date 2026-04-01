@@ -65,7 +65,6 @@ export const HomeScreen = () => {
                 />
                 <div className="relative mx-auto grid max-w-container grid-cols-1 gap-16 px-4 md:px-8 lg:min-h-150 lg:items-center">
                     <div ref={container} className="z-10 flex max-w-md md:max-w-2xl flex-col items-start">
-                        <span className="header-tag hidden md:block text-sm font-bold text-orange-200 dark:text-brand-50 md:text-lg tracking-wider text-shadow-md text-shadow-gray-700 dark:text-shadow-gray-950">Kind and Clear.</span>
                         <h1 className="text-display-md text-white dark:text-brand-200 md:text-display-xl lg:text-display-3xl text-shadow-md text-shadow-gray-700 dark:text-shadow-gray-950">
                             Gateways to the<br /> <span className="lg:text-display-5xl text-yellow-600 dark:text-yellow-600">Awakening</span>
                         </h1>

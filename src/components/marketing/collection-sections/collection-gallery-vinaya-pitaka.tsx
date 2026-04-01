@@ -17,7 +17,10 @@ export const CollectionGalleryVinayaPitaka = () => {
                         </p>
                     </div>
                     <div className="mt-8 flex flex-col gap-3 self-stretch md:mt-0 md:flex-row-reverse md:justify-center md:self-center">
-                        <Button color="secondary" size="xl" iconLeading={Dataflow01}>
+                        <Button href="/canon-overviews/vinaya-overview" color="secondary" size="md">
+                            Overview
+                        </Button>
+                        <Button href="#" color="secondary" size="md" iconLeading={Dataflow01}>
                             Vinayapiṭaka Outline
                         </Button>
                     </div>
