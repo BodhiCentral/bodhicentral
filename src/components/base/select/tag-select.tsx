@@ -1,7 +1,7 @@
 "use client";
 
 import type { FocusEventHandler, KeyboardEvent, PointerEventHandler, RefAttributes, RefObject } from "react";
-import { createContext, useCallback, useContext, useRef, useState } from "react";
+import React, { createContext, useCallback, useContext, useRef, useState } from "react";
 import { SearchLg } from "@untitledui/icons";
 import { FocusScope, useFilter, useFocusManager } from "react-aria";
 import type { ComboBoxProps as AriaComboBoxProps, GroupProps as AriaGroupProps, ListBoxProps as AriaListBoxProps, Key } from "react-aria-components";
@@ -13,30 +13,31 @@ import type { IconComponentType } from "@/components/base/badges/badge-types";
 import { HintText } from "@/components/base/input/hint-text";
 import { Label } from "@/components/base/input/label";
 import { Popover } from "@/components/base/select/popover";
-import { type SelectItemType, sizes } from "@/components/base/select/select";
+import { type SelectItemType, sizes } from "@/components/base/select/select-shared";
 import { TagCloseX } from "@/components/base/tags/base-components/tag-close-x";
 import { useResizeObserver } from "@/hooks/use-resize-observer";
 import { cx } from "@/utils/cx";
 import { SelectItem } from "./select-item";
 
-interface ComboBoxValueProps extends AriaGroupProps {
-    size: "sm" | "md";
+interface TagSelectValueProps extends AriaGroupProps {
+    size: "sm" | "md" | "lg";
     shortcut?: boolean;
     isDisabled?: boolean;
     placeholder?: string;
     shortcutClassName?: string;
-    placeholderIcon?: IconComponentType | null;
+    icon?: IconComponentType | null;
     ref?: RefObject<HTMLDivElement | null>;
     onFocus?: FocusEventHandler;
     onPointerEnter?: PointerEventHandler;
 }
 
-const ComboboxContext = createContext<{
-    size: "sm" | "md";
+const TagSelectContext = createContext<{
+    size: "sm" | "md" | "lg";
     selectedKeys: Key[];
     selectedItems: ListData<SelectItemType>;
     onRemove: (keys: Set<Key>) => void;
     onInputChange: (value: string) => void;
+    valueFormatter?: (item: SelectItemType) => string;
 }>({
     size: "sm",
     selectedKeys: [],
@@ -45,37 +46,40 @@ const ComboboxContext = createContext<{
     onInputChange: () => {},
 });
 
-interface MultiSelectProps extends Omit<AriaComboBoxProps<SelectItemType>, "children" | "items">, RefAttributes<HTMLDivElement> {
+interface TagSelectProps extends Omit<AriaComboBoxProps<SelectItemType>, "children" | "items">, RefAttributes<HTMLDivElement> {
     hint?: string;
     label?: string;
     tooltip?: string;
-    size?: "sm" | "md";
+    size?: "sm" | "md" | "lg";
     placeholder?: string;
     shortcut?: boolean;
     items?: SelectItemType[];
     popoverClassName?: string;
     shortcutClassName?: string;
     selectedItems: ListData<SelectItemType>;
-    placeholderIcon?: IconComponentType | null;
+    icon?: IconComponentType | null;
     children: AriaListBoxProps<SelectItemType>["children"];
     onItemCleared?: (key: Key) => void;
     onItemInserted?: (key: Key) => void;
+    valueFormatter?: (item: SelectItemType) => string;
 }
 
-export const MultiSelectBase = ({
+export const TagSelectBase = ({
     items,
     children,
     size = "sm",
     selectedItems,
     onItemCleared,
     onItemInserted,
+    valueFormatter,
     shortcut,
     placeholder = "Search",
-    // Omit these props to avoid conflicts with the `Select` component
+    icon,
+    // Omit name to avoid conflicts with the `Select` component
     name: _name,
-    className: _className,
+    className,
     ...props
-}: MultiSelectProps) => {
+}: TagSelectProps) => {
     const { contains } = useFilter({ sensitivity: "base" });
     const selectedKeys = selectedItems.items.map((item) => item.id);
 
@@ -143,13 +147,14 @@ export const MultiSelectBase = ({
     });
 
     return (
-        <ComboboxContext.Provider
+        <TagSelectContext.Provider
             value={{
                 size,
                 selectedKeys,
                 selectedItems,
                 onInputChange,
                 onRemove,
+                valueFormatter,
             }}
         >
             <AriaComboBox
@@ -159,46 +164,52 @@ export const MultiSelectBase = ({
                 onInputChange={onInputChange}
                 inputValue={accessibleList.filterText}
                 // This keeps the combobox popover open and the input value unchanged when an item is selected.
-                selectedKey={null}
-                onSelectionChange={onSelectionChange}
+                value={null}
+                onChange={onSelectionChange}
+                className={(state) => cx("flex flex-col gap-1.5", typeof className === "function" ? className(state) : className)}
                 {...props}
             >
                 {(state) => (
-                    <div className="flex flex-col gap-1.5">
+                    <>
                         {props.label && (
                             <Label isRequired={state.isRequired} tooltip={props.tooltip}>
                                 {props.label}
                             </Label>
                         )}
 
-                        <MultiSelectTagsValue
+                        <TagSelectTagsValue
                             size={size}
                             shortcut={shortcut}
                             ref={placeholderRef}
                             placeholder={placeholder}
+                            icon={icon}
                             // This is a workaround to correctly calculating the trigger width
                             // while using ResizeObserver wasn't 100% reliable.
                             onFocus={onResize}
                             onPointerEnter={onResize}
                         />
 
-                        <Popover size={"md"} triggerRef={placeholderRef} style={{ width: popoverWidth }} className={props?.popoverClassName}>
+                        <Popover size={size} triggerRef={placeholderRef} style={{ width: popoverWidth }} className={props?.popoverClassName}>
                             <AriaListBox selectionMode="multiple" className="size-full outline-hidden">
                                 {children}
                             </AriaListBox>
                         </Popover>
 
-                        {props.hint && <HintText isInvalid={state.isInvalid}>{props.hint}</HintText>}
-                    </div>
+                        {props.hint && (
+                            <HintText isInvalid={state.isInvalid} className={cx(size === "sm" && "text-xs")}>
+                                {props.hint}
+                            </HintText>
+                        )}
+                    </>
                 )}
             </AriaComboBox>
-        </ComboboxContext.Provider>
+        </TagSelectContext.Provider>
     );
 };
 
-const InnerMultiSelect = ({ isDisabled, shortcut, shortcutClassName, placeholder }: Omit<MultiSelectProps, "selectedItems" | "children">) => {
+const InnerTagSelect = ({ isDisabled, shortcut, shortcutClassName, placeholder, size = "sm" }: Omit<TagSelectProps, "selectedItems" | "children">) => {
     const focusManager = useFocusManager();
-    const comboBoxContext = useContext(ComboboxContext);
+    const tagSelectContext = useContext(TagSelectContext);
     const comboBoxStateContext = useContext(ComboBoxStateContext);
 
     const handleInputKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
@@ -234,7 +245,7 @@ const InnerMultiSelect = ({ isDisabled, shortcut, shortcutClassName, placeholder
 
         event.preventDefault();
 
-        const isFirstTag = comboBoxContext?.selectedItems?.items?.[0]?.id === value;
+        const isFirstTag = tagSelectContext?.selectedItems?.items?.[0]?.id === value;
 
         switch (event.key) {
             case " ":
@@ -246,7 +257,7 @@ const InnerMultiSelect = ({ isDisabled, shortcut, shortcutClassName, placeholder
                     focusManager?.focusPrevious({ wrap: false, tabbable: false });
                 }
 
-                comboBoxContext.onRemove(new Set([value]));
+                tagSelectContext.onRemove(new Set([value]));
                 break;
 
             case "ArrowLeft":
@@ -261,48 +272,65 @@ const InnerMultiSelect = ({ isDisabled, shortcut, shortcutClassName, placeholder
         }
     };
 
-    const isSelectionEmpty = comboBoxContext?.selectedItems?.items?.length === 0;
+    const isSelectionEmpty = tagSelectContext?.selectedItems?.items?.length === 0;
 
     return (
-        <div className="relative flex w-full flex-1 flex-row flex-wrap items-center justify-start gap-1.5">
+        <div className="relative flex w-full min-w-0 flex-1 flex-row flex-wrap items-center justify-start gap-1.5">
             {!isSelectionEmpty &&
-                comboBoxContext?.selectedItems?.items?.map((value) => (
-                    <span key={value.id} className="flex items-center rounded-md bg-primary py-0.5 pr-1 pl-1.25 ring-1 ring-primary ring-inset">
-                        <Avatar size="xxs" alt={value?.label} src={value?.avatarUrl} />
+                tagSelectContext?.selectedItems?.items?.map((value) => (
+                    <span
+                        key={value.id}
+                        className={cx(
+                            "flex min-w-0 items-center rounded-md bg-primary ring-1 ring-primary ring-inset",
+                            size === "sm" ? "px-1 py-0.75" : "py-0.5 pr-1 pl-1.25",
+                        )}
+                    >
+                        <Avatar size="xs" alt={value?.label} src={value?.avatarUrl} className="size-4" />
 
-                        <p className="ml-1.25 truncate text-sm font-medium whitespace-nowrap text-secondary select-none">{value?.label}</p>
+                        <p
+                            className={cx(
+                                "truncate font-medium whitespace-nowrap text-secondary select-none",
+                                size === "sm" ? "ml-1 text-xs" : "ml-1.25 text-sm",
+                            )}
+                        >
+                            {tagSelectContext.valueFormatter ? tagSelectContext.valueFormatter(value) : value?.label}
+                        </p>
 
                         <TagCloseX
-                            size="md"
+                            size={size === "sm" ? "sm" : "md"}
                             isDisabled={isDisabled}
                             className="ml-0.75"
                             // For workaround, onKeyDown is added to the button
                             onKeyDown={(event) => handleTagKeyDown(event, value.id)}
-                            onPress={() => comboBoxContext.onRemove(new Set([value.id]))}
+                            onPress={() => tagSelectContext.onRemove(new Set([value.id]))}
                         />
                     </span>
                 ))}
 
-            <div className={cx("relative flex min-w-[20%] flex-1 flex-row items-center", !isSelectionEmpty && "ml-0.5", shortcut && "min-w-[30%]")}>
+            <div className={cx("relative flex min-w-12 flex-1 flex-row items-center", !isSelectionEmpty && "ml-0.5", shortcut && "min-w-[30%]")}>
                 <AriaInput
                     placeholder={placeholder}
                     onKeyDown={handleInputKeyDown}
                     onMouseDown={handleInputMouseDown}
-                    className="w-full flex-[1_0_0] appearance-none bg-transparent text-md text-ellipsis text-primary caret-alpha-black/90 outline-hidden placeholder:text-placeholder focus:outline-hidden disabled:cursor-not-allowed disabled: disabled:placeholder:"
+                    className={cx(
+                        "w-full flex-[1_0_0] appearance-none bg-transparent text-ellipsis text-primary caret-alpha-black/90 outline-hidden placeholder:text-placeholder focus:outline-hidden disabled:cursor-not-allowed",
+                        sizes[size].text,
+                    )}
                 />
 
                 {shortcut && (
                     <div
                         aria-hidden="true"
                         className={cx(
-                            "absolute inset-y-0.5 right-0.5 z-10 flex items-center rounded-r-[inherit] bg-linear-to-r from-transparent to-bg-primary to-40% pl-8",
+                            "absolute inset-y-0.5 right-0.5 z-10 hidden items-center rounded-r-[inherit] bg-linear-to-r from-transparent to-bg-primary to-40% pl-8 md:flex",
                             shortcutClassName,
+                            sizes[size].shortcut,
                         )}
                     >
                         <span
                             className={cx(
                                 "pointer-events-none rounded px-1 py-px text-xs font-medium text-quaternary ring-1 ring-secondary select-none ring-inset",
-                                isDisabled && "bg-transparent ",
+                                isDisabled && "bg-transparent",
                             )}
                         >
                             ⌘K
@@ -314,33 +342,45 @@ const InnerMultiSelect = ({ isDisabled, shortcut, shortcutClassName, placeholder
     );
 };
 
-export const MultiSelectTagsValue = ({
-    size,
+export const TagSelectTagsValue = ({
+    size = "sm",
     shortcut,
     placeholder,
     shortcutClassName,
-    placeholderIcon: Icon = SearchLg,
+    icon: Icon = SearchLg,
     // Omit this prop to avoid invalid HTML attribute warning
     isDisabled: _isDisabled,
     ...otherProps
-}: ComboBoxValueProps) => {
+}: TagSelectValueProps) => {
+    const tagSelectContext = useContext(TagSelectContext);
+
+    const selectedItemsCount = tagSelectContext.selectedKeys.length;
+
     return (
         <AriaGroup
             {...otherProps}
             className={({ isFocusWithin, isDisabled }) =>
                 cx(
-                    "relative flex w-full items-center gap-2 rounded-lg bg-primary shadow-xs ring-1 ring-primary outline-hidden transition duration-100 ease-linear ring-inset",
+                    "relative flex w-full items-center rounded-lg bg-primary shadow-xs ring-1 ring-primary outline-hidden transition duration-100 ease-linear ring-inset",
                     isDisabled && "cursor-not-allowed opacity-50",
                     isFocusWithin && "ring-2 ring-brand",
+
+                    // Icon styles
+                    "*:data-icon:shrink-0 *:data-icon:text-fg-quaternary",
+
                     sizes[size].root,
+
+                    // Overwrite vertical padding for small size when there are selected items
+                    // to prevent height jump because the tags are taller than the input text.
+                    size === "sm" && selectedItemsCount > 0 && "py-1.5",
                 )
             }
         >
             {({ isDisabled }) => (
                 <>
-                    {Icon && <Icon className="pointer-events-none size-5 text-fg-quaternary" />}
+                    {Icon && <Icon data-icon className="pointer-events-none" />}
                     <FocusScope contain={false} autoFocus={false} restoreFocus={false}>
-                        <InnerMultiSelect
+                        <InnerTagSelect
                             isDisabled={isDisabled}
                             size={size}
                             shortcut={shortcut}
@@ -354,10 +394,10 @@ export const MultiSelectTagsValue = ({
     );
 };
 
-const MultiSelect = MultiSelectBase as typeof MultiSelectBase & {
+const TagSelect = TagSelectBase as typeof TagSelectBase & {
     Item: typeof SelectItem;
 };
 
-MultiSelect.Item = SelectItem;
+TagSelect.Item = SelectItem;
 
-export { MultiSelect as MultiSelect };
+export { TagSelect };

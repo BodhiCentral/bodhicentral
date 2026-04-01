@@ -4,7 +4,7 @@ import { cx, sortCx } from "@/utils/cx";
 import { isReactComponent } from "@/utils/is-react-component";
 
 const iconsSizes = {
-    sm: "*:data-icon:size-4",
+    sm: "*:data-icon:size-4 *:data-icon:stroke-[2.25px]",
     md: "*:data-icon:size-5",
     lg: "*:data-icon:size-6",
     xl: "*:data-icon:size-7",
@@ -63,7 +63,7 @@ const styles = sortCx({
     },
 
     modern: {
-        base: "bg-primary shadow-xs-skeuomorphic ring-1 ring-inset",
+        base: "bg-primary shadow-xs-skeuomorphic ring-1 ring-primary ring-inset",
         sizes: {
             sm: "size-8 rounded-md",
             md: "size-10 rounded-lg",
@@ -71,11 +71,11 @@ const styles = sortCx({
             xl: "size-14 rounded-xl",
         },
         colors: {
-            brand: "",
-            gray: "text-fg-secondary ring-primary",
-            error: "",
-            warning: "",
-            success: "",
+            brand: "text-fg-brand-primary",
+            gray: "text-fg-secondary",
+            error: "text-fg-error-primary",
+            warning: "text-fg-warning-primary",
+            success: "text-fg-success-primary",
         },
     },
     "modern-neue": {

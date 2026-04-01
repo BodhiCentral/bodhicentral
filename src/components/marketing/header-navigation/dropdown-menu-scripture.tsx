@@ -20,7 +20,7 @@ type MenuColumn = {
 
 const columns: MenuColumn[] = [
     {
-        title: "Collections",
+        title: "Large Collections",
         items: [
             {
                 title: "Theravāda Tradition",

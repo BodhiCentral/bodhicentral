@@ -1,6 +1,7 @@
 import { Attachment01, File04, Folder, BookOpen01 } from "@untitledui/icons";
 import { Collection, useTreeData } from "react-aria-components";
 import { TreeView } from "@/components/application/tree-view/tree-view";
+import { CanonMultiSelectSm } from "@/components-custom/multi-select/canon-multi-select-sm";
 
 export interface TreeItemData {
     id: string;
@@ -13,63 +14,73 @@ const CanonTree = ({ size }: { size: "sm" | "md" }) => {
     const tree = useTreeData<TreeItemData>({ initialItems, getChildren: (item) => item.children ?? [] });
 
     return (
-        <TreeView
-            size={size}
-            selectionMode="multiple"
-            showConnectors
-            draggable
-            aria-label="Organization"
-            items={tree.items}
-            defaultExpandedKeys={["sutta-pitaka", "sn", "abhidhamma-pitaka"]}
-            defaultSelectedKeys={[]}
-            onReorder={(e) => {
-                if (e.target.dropPosition === "before") {
-                    tree.moveBefore(e.target.key as string, e.keys as Set<string>);
-                } else if (e.target.dropPosition === "after") {
-                    tree.moveAfter(e.target.key as string, e.keys as Set<string>);
-                }
-            }}
-            onMove={(e) => {
-                if (e.target.dropPosition === "on") {
-                    const targetNode = tree.getItem(e.target.key as string);
-                    if (targetNode) {
-                        const idx = targetNode.children ? targetNode.children.length : 0;
-                        for (const key of e.keys) {
-                            tree.move(key as string, e.target.key as string, idx);
+        <>
+            <div className="flex flex-col gap-8">
+                <div className="flex flex-col gap-2">
+                    <h2 className="text-display-xs font-medium text-brand-primary">Canon Navigation</h2>
+                    <CanonMultiSelectSm />
+                </div>
+                <TreeView
+                    size={size}
+                    selectionMode="multiple"
+                    showConnectors
+                    draggable
+                    aria-label="Organization"
+                    items={tree.items}
+                    defaultExpandedKeys={["sutta-pitaka", "sn", "abhidhamma-pitaka"]}
+                    defaultSelectedKeys={[]}
+                    onReorder={(e) => {
+                        if (e.target.dropPosition === "before") {
+                            tree.moveBefore(e.target.key as string, e.keys as Set<string>);
+                        } else if (e.target.dropPosition === "after") {
+                            tree.moveAfter(e.target.key as string, e.keys as Set<string>);
                         }
-                    }
-                }
-            }}
-        >
-            {(item: (typeof tree.items)[number]) => (
-                <TreeView.Item id={item.key} textValue={item.value.name}>
-                    <TreeView.ItemContent icon={item.value.icon}>{item.value.name}</TreeView.ItemContent>
-                    <Collection items={item.children ?? []}>
-                        {(child) => (
-                            <TreeView.Item id={child.key} textValue={child.value.name}>
-                                <TreeView.ItemContent icon={child.value.icon}>{child.value.name}</TreeView.ItemContent>
-                                <Collection items={child.children ?? []}>
-                                    {(grandchild) => (
-                                        <TreeView.Item id={grandchild.key} textValue={grandchild.value.name}>
-                                            <TreeView.ItemContent icon={grandchild.value.icon}>{grandchild.value.name}</TreeView.ItemContent>
-                                            <Collection items={grandchild.children ?? []}>
-                                                {(greatGrandchild) => (
-                                                    <TreeView.Item id={greatGrandchild.key} textValue={greatGrandchild.value.name}>
-                                                        <TreeView.ItemContent icon={greatGrandchild.value.icon}>
-                                                            {greatGrandchild.value.name}
-                                                        </TreeView.ItemContent>
-                                                    </TreeView.Item>
-                                                )}
-                                            </Collection>
-                                        </TreeView.Item>
-                                    )}
-                                </Collection>
-                            </TreeView.Item>
-                        )}
-                    </Collection>
-                </TreeView.Item>
-            )}
-        </TreeView>
+                    }}
+                    onMove={(e) => {
+                        if (e.target.dropPosition === "on") {
+                            const targetNode = tree.getItem(e.target.key as string);
+                            if (targetNode) {
+                                const idx = targetNode.children ? targetNode.children.length : 0;
+                                for (const key of e.keys) {
+                                    tree.move(key as string, e.target.key as string, idx);
+                                }
+                            }
+                        }
+                    }}
+                >
+                    {(item: (typeof tree.items)[number]) => (
+                        <TreeView.Item id={item.key} textValue={item.value.name}>
+                            <TreeView.ItemContent icon={item.value.icon}>{item.value.name}</TreeView.ItemContent>
+                            <Collection items={item.children ?? []}>
+                                {(child) => (
+                                    <TreeView.Item id={child.key} textValue={child.value.name}>
+                                        <TreeView.ItemContent icon={child.value.icon}>{child.value.name}</TreeView.ItemContent>
+                                        <Collection items={child.children ?? []}>
+                                            {(grandchild) => (
+                                                <TreeView.Item id={grandchild.key} textValue={grandchild.value.name}>
+                                                    <TreeView.ItemContent icon={grandchild.value.icon}>{grandchild.value.name}</TreeView.ItemContent>
+                                                    <Collection items={grandchild.children ?? []}>
+                                                        {(greatGrandchild) => (
+                                                            <TreeView.Item id={greatGrandchild.key} textValue={greatGrandchild.value.name}>
+                                                                <TreeView.ItemContent icon={greatGrandchild.value.icon}>
+                                                                    {greatGrandchild.value.name}
+                                                                </TreeView.ItemContent>
+                                                            </TreeView.Item>
+                                                        )}
+                                                    </Collection>
+                                                </TreeView.Item>
+                                            )}
+                                        </Collection>
+                                    </TreeView.Item>
+                                )}
+                            </Collection>
+                        </TreeView.Item>
+                    )}
+                </TreeView>
+            </div>
+
+        </>
+
     );
 };
 
