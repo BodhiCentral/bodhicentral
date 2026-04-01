@@ -69,7 +69,7 @@ export const LoginModal = () => {
                                     name="password"
                                     autoComplete="current-password"
                                     placeholder="••••••••"
-                                    size="lg"
+                                    size="md"
                                 />
                             </div>
                             <div className="flex justify-between">
