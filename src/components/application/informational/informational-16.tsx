@@ -369,7 +369,7 @@ export const Informational16 = () => {
                                 <span className="inline lg:hidden">2 filters applied</span>
                             </Button>
                         </div>
-                        <div className="order-first flex gap-3 lg:order-none">
+                        <div className="order-first flex gap-3 lg:order-0">
                             <Input icon={SearchLg} shortcut aria-label="Search" placeholder="Search" size="md" />
                             <Button size="lg" color="secondary" className="hidden lg:inline-flex">
                                 Clear
@@ -400,7 +400,7 @@ export const Informational16 = () => {
                     </div>
                 </div>
 
-                <div className="top-0 hidden w-full max-w-128 p-3 lg:sticky lg:order-none lg:block lg:h-svh">
+                <div className="top-0 hidden w-full max-w-lg p-3 lg:sticky lg:order-0 lg:block lg:h-svh">
                     <iframe
                         title="Our address"
                         src="https://snazzymaps.com/embed/451871"
