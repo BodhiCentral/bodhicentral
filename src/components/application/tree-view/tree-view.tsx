@@ -51,7 +51,7 @@ const Connector = ({ type, size }: { type: "line" | "end" | "none"; size: "sm" |
                 <div
                     className={cx(
                         "border-b border-l border-border-secondary",
-                        size === "sm" ? "h-[22px] w-[10px] rounded-bl-[5px]" : "h-[24px] w-[12px] rounded-bl-[6px]",
+                        size === "sm" ? "h-[32px] w-0 rounded-bl-[5px]" : "h-[24px] w-[12px] rounded-bl-[6px]",
                     )}
                 />
             </div>
@@ -102,8 +102,8 @@ const TreeViewRoot = <T extends object>({
         defaultSelectedKeys === "all"
             ? ("all" as Selection)
             : defaultSelectedKeys
-              ? (new Set<Key>(defaultSelectedKeys) as Selection)
-              : (new Set<Key>() as Selection),
+                ? (new Set<Key>(defaultSelectedKeys) as Selection)
+                : (new Set<Key>() as Selection),
     );
 
     /*
@@ -183,15 +183,15 @@ const TreeViewRoot = <T extends object>({
         renderDropIndicator: (target) => <TreeViewDropIndicator target={target} />,
         onReorder: onReorderProp
             ? (e) => {
-                  onReorderProp({ keys: e.keys, target: e.target as { key: Key; dropPosition: "before" | "after" | "on" } });
-                  syncPrevKeys();
-              }
+                onReorderProp({ keys: e.keys, target: e.target as { key: Key; dropPosition: "before" | "after" | "on" } });
+                syncPrevKeys();
+            }
             : undefined,
         onMove: onMoveProp
             ? (e) => {
-                  onMoveProp({ keys: e.keys, target: e.target as { key: Key; dropPosition: "before" | "after" | "on" } });
-                  syncPrevKeys();
-              }
+                onMoveProp({ keys: e.keys, target: e.target as { key: Key; dropPosition: "before" | "after" | "on" } });
+                syncPrevKeys();
+            }
             : undefined,
     });
 

@@ -12,9 +12,6 @@ const teamItems: SelectItemType[] = [
     { id: "kagyu", label: "Kagyu Studies", supportingText: "8 treatises" },
     { id: "sakya", label: "Sakya Studies", supportingText: "18 treatises" },
     { id: "gelug", label: "Gelug Studies", supportingText: "15 treatises" },
-    { id: "jonang", label: "Jonang Studies", supportingText: "15 treatises" },
-    { id: "shampa-kagyu", label: "Shampa Kagyu Studies", supportingText: "9 treatises" },
-    { id: "tok", label: "Treasury of Knowledge", supportingText: "10 volumes" },
 ];
 
 const getSelectedUserCount = (selectedKeys: Selection) => {
@@ -30,10 +27,10 @@ export const CanonMultiSelectSm = () => {
         <MultiSelect
             isRequired
             size="sm"
-            label="Select your Collections and/or Canons."
-            tooltip="Select the Collections and/or Canons you want to browse."
+            label="Select Collections to browse."
+            tooltip="Select the Collections you want to browse."
             hint=""
-            placeholder="Select Collections and Canons..."
+            placeholder="Select Collections..."
             items={teamItems}
             selectedKeys={selectedKeys}
             onSelectionChange={setSelectedKeys}

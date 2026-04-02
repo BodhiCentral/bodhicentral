@@ -10,6 +10,7 @@ import Image from "next/image";
 import { BadgeGroup } from "@/components/base/badges/badge-groups";
 import Link from "next/link";
 import { CanonTreeViewSM } from "@/components/application/tree-view/canon-tree-view-sm";
+import { CanonNavigationModal } from "@/components-custom/navigation/canon-navigation/canon-navigation-modal";
 
 
 export const TableOfContents = () => {
@@ -63,7 +64,7 @@ export const TextCanvasSingle = () => {
                             />
                         </div>
                         <div id="title-page" className="flex max-w-3xl flex-col items-center text-center lg:items-start lg:text-left">
-                            <a href="#" className="rounded-full outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2">
+                            <a href="#" className="hidden rounded-full outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2">
                                 <BadgeGroup className="hidden md:flex" size="lg" addonText="Categories" iconTrailing={ArrowRight} theme="light" color="brand">
                                     Topics
                                 </BadgeGroup>
@@ -73,10 +74,10 @@ export const TextCanvasSingle = () => {
                             </a>
 
                             <h1 className="mt-4 text-display-md font-semibold text-primary md:text-display-lg lg:text-display-xl">
-                                Welcome to Bodhi Central readership and learning for everyone
+                                Welcome to Bodhi Central: <br />Readership and learning for everyone
                             </h1>
                             <p className="description mt-4 max-w-lg text-lg text-balance text-tertiary md:mt-6 md:text-xl">
-                                An environment of clear intent and dedication, offering a curated collection of Buddhist texts and teachings to inspire study and practice.
+                                An environment of clear intent and dedication, offering a curated collection of Buddhist texts and teachings to inspire your study and practice.
                             </p>
                         </div>
                     </div>
@@ -293,10 +294,8 @@ export default function ReaderPage() {
         <>
             {/* TODO: Implement a dynamic Modal for canonical navigation using the imported CanonTreeViewSM component */}
             {/* The modal should be opened and closed by the user from the item "Canonical Navigation" in the SidebarNavigation component on the left */}
-            <div className="fixed top-12 left-13 bottom-4 w-120 z-50 bg-white/95 dark:bg-neutral-900/95 backdrop-blur-md rounded-2xl p-8 drop-shadow-lg">
-                <CanonTreeViewSM />
-            </div>
 
+            <CanonNavigationModal />
 
 
             {/* The MAIN Reader wrapper */}

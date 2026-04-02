@@ -1,4 +1,4 @@
-import { Attachment01, File04, Folder, BookOpen01 } from "@untitledui/icons";
+import { Attachment01, File04, Folder, BookOpen01, ArrowRight, CornerDownRight } from "@untitledui/icons";
 import { Collection, useTreeData } from "react-aria-components";
 import { TreeView } from "@/components/application/tree-view/tree-view";
 import { CanonMultiSelectSm } from "@/components-custom/multi-select/canon-multi-select-sm";
@@ -15,10 +15,10 @@ const CanonTree = ({ size }: { size: "sm" | "md" }) => {
 
     return (
         <>
-            <div className="flex flex-col gap-8">
-                <div className="flex flex-col gap-2">
-                    <h2 className="text-display-xs font-medium text-brand-primary">Canon Navigation</h2>
+            <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-6">
                     <CanonMultiSelectSm />
+                    <h2 className="text-display-xs font-medium text-brand-primary">Canon Navigation</h2>
                 </div>
                 <TreeView
                     size={size}
@@ -27,7 +27,7 @@ const CanonTree = ({ size }: { size: "sm" | "md" }) => {
                     draggable
                     aria-label="Organization"
                     items={tree.items}
-                    defaultExpandedKeys={["sutta-pitaka", "sn", "abhidhamma-pitaka"]}
+                    defaultExpandedKeys={["vinaya-pitaka", "sutta-pitaka", "abhidhamma-pitaka"]}
                     defaultSelectedKeys={[]}
                     onReorder={(e) => {
                         if (e.target.dropPosition === "before") {
@@ -94,12 +94,28 @@ const initialItems: TreeItemData[] = [
                 name: "Rules and Their Analysis",
                 children: [
                     {
-                        id: "bu-vb", name: "Analysis of Rules for Monks", children: [
-                            { id: "heavy-offenses", name: "Heavy Offenses", children: [] },
-                            { id: "light-offenses", name: "Light Offenses", children: [] },
+                        id: "bu-vb", name: "Monks' Rules and Their Analysis", children: [
+                            { id: "bu-pj-1-4", name: "Expulsion", icon: CornerDownRight, children: [] },
+                            { id: "bu-ss-1-13", name: "Suspension", icon: CornerDownRight, children: [] },
+                            { id: "bu-ay-1-2", name: "Undetermined", icon: CornerDownRight, children: [] },
+                            { id: "bu-np-1-30h", name: "Relinquisment with Confession", icon: CornerDownRight, children: [] },
+                            { id: "bu-pc-1-92", name: "Confession", icon: CornerDownRight, children: [] },
+                            { id: "bu-pd-1-4", name: "Acknowledgement", icon: CornerDownRight, children: [] },
+                            { id: "bu-sk-1-75", name: "Rules of Training", icon: CornerDownRight, children: [] },
+                            { id: "bu-as-1-7", name: "Setting Legal Issues", icon: CornerDownRight, children: [] },
                         ]
                     },
-                    { id: "bi-vb", name: "Analysis of Rules for Nuns", children: [] },
+                    {
+                        id: "bi-vb", name: "Nuns' Rules and Their Analysis", children: [
+                            { id: "bi-pj-1-4", name: "Expulsion", icon: CornerDownRight, children: [] },
+                            { id: "bi-ss-1-17", name: "Suspension", icon: CornerDownRight, children: [] },
+                            { id: "bi-np-1-30h", name: "Relinquisment with Confession", icon: CornerDownRight, children: [] },
+                            { id: "bi-pc-1-92", name: "Confession", icon: CornerDownRight, children: [] },
+                            { id: "bi-pd-1-4", name: "Acknowledgement", icon: CornerDownRight, children: [] },
+                            { id: "bi-sk-1-75", name: "Rules of Training", icon: CornerDownRight, children: [] },
+                            { id: "setting-legal-issues", name: "Setting Legal Issues", icon: CornerDownRight, children: [] },
+                        ]
+                    },
                 ],
             },
             {
@@ -107,33 +123,33 @@ const initialItems: TreeItemData[] = [
                 name: "Chapters on Legal Topics",
                 children: [
                     {
-                        id: "kd-1-10", name: "The Great Division", children: [
-                            { id: "kd-1", name: "Discourse 1", icon: BookOpen01, children: [] },
-                            { id: "kd-2", name: "Discourse 2", icon: BookOpen01, children: [] },
-                            { id: "kd-3", name: "Discourse 3", icon: BookOpen01, children: [] },
-                            { id: "kd-4", name: "Discourse 4", icon: BookOpen01, children: [] },
-                            { id: "kd-5", name: "Discourse 5", icon: BookOpen01, children: [] },
-                            { id: "kd-6", name: "Discourse 6", icon: BookOpen01, children: [] },
-                            { id: "kd-7", name: "Discourse 7", icon: BookOpen01, children: [] },
-                            { id: "kd-8", name: "Discourse 8", icon: BookOpen01, children: [] },
-                            { id: "kd-9", name: "Discourse 9", icon: BookOpen01, children: [] },
-                            { id: "kd-10", name: "Discourse 10", icon: BookOpen01, children: [] },
+                        id: "kd-1-10", name: "The Great Chapter", children: [
+                            { id: "kd-1", name: "Going Forth", icon: CornerDownRight, children: [] },
+                            { id: "kd-2", name: "Sabbath", icon: CornerDownRight, children: [] },
+                            { id: "kd-3", name: "Rain Season", icon: CornerDownRight, children: [] },
+                            { id: "kd-4", name: "Invitation", icon: CornerDownRight, children: [] },
+                            { id: "kd-5", name: "Leather", icon: CornerDownRight, children: [] },
+                            { id: "kd-6", name: "Medicine", icon: CornerDownRight, children: [] },
+                            { id: "kd-7", name: "Robe-Making Season", icon: CornerDownRight, children: [] },
+                            { id: "kd-8", name: "Robes", icon: CornerDownRight, children: [] },
+                            { id: "kd-9", name: "At Campa", icon: CornerDownRight, children: [] },
+                            { id: "kd-10", name: "At Kosambi", icon: CornerDownRight, children: [] },
                         ]
                     },
                     {
-                        id: "kd-11-22", name: "The Lesser Division", children: [
-                            { id: "kd-11", name: "Discourse 11", icon: BookOpen01, children: [] },
-                            { id: "kd-12", name: "Discourse 12", icon: BookOpen01, children: [] },
-                            { id: "kd-13", name: "Discourse 13", icon: BookOpen01, children: [] },
-                            { id: "kd-14", name: "Discourse 14", icon: BookOpen01, children: [] },
-                            { id: "kd-15", name: "Discourse 15", icon: BookOpen01, children: [] },
-                            { id: "kd-16", name: "Discourse 16", icon: BookOpen01, children: [] },
-                            { id: "kd-17", name: "Discourse 17", icon: BookOpen01, children: [] },
-                            { id: "kd-18", name: "Discourse 18", icon: BookOpen01, children: [] },
-                            { id: "kd-19", name: "Discourse 19", icon: BookOpen01, children: [] },
-                            { id: "kd-20", name: "Discourse 20", icon: BookOpen01, children: [] },
-                            { id: "kd-21", name: "Discourse 21", icon: BookOpen01, children: [] },
-                            { id: "kd-22", name: "Discourse 22", icon: BookOpen01, children: [] },
+                        id: "kd-11-22", name: "The Lesser Chapter", children: [
+                            { id: "kd-11", name: "Saṅgha Procedures", icon: CornerDownRight, children: [] },
+                            { id: "kd-12", name: "Probation", icon: CornerDownRight, children: [] },
+                            { id: "kd-13", name: "Collected Procedures", icon: CornerDownRight, children: [] },
+                            { id: "kd-14", name: "Settlement of Disputes", icon: CornerDownRight, children: [] },
+                            { id: "kd-15", name: "Minor Matters", icon: CornerDownRight, children: [] },
+                            { id: "kd-16", name: "Lodgings", icon: CornerDownRight, children: [] },
+                            { id: "kd-17", name: "Schism in the Saṅgha", icon: CornerDownRight, children: [] },
+                            { id: "kd-18", name: "Duties", icon: CornerDownRight, children: [] },
+                            { id: "kd-19", name: "Setting Aside the Sabbath", icon: CornerDownRight, children: [] },
+                            { id: "kd-20", name: "Nuns", icon: CornerDownRight, children: [] },
+                            { id: "kd-21", name: "Council of the Five Hundred", icon: CornerDownRight, children: [] },
+                            { id: "kd-22", name: "Council of the Seven Hundred", icon: CornerDownRight, children: [] },
                         ]
                     },
                 ],
@@ -142,27 +158,14 @@ const initialItems: TreeItemData[] = [
                 id: "pvr",
                 name: "The Compendium",
                 children: [
-                    { id: "pvr-1", name: "Discourse 1", icon: BookOpen01, children: [] },
-                    { id: "pvr-2", name: "Discourse 2", icon: BookOpen01, children: [] },
-                    { id: "pvr-3", name: "Discourse 3", icon: BookOpen01, children: [] },
-                    { id: "pvr-4", name: "Discourse 4", icon: BookOpen01, children: [] },
-                    { id: "pvr-5", name: "Discourse 5", icon: BookOpen01, children: [] },
-                    { id: "pvr-6", name: "Discourse 6", icon: BookOpen01, children: [] },
-                    { id: "pvr-7", name: "Discourse 7", icon: BookOpen01, children: [] },
-                    { id: "pvr-8", name: "Discourse 8", icon: BookOpen01, children: [] },
-                    { id: "pvr-9", name: "Discourse 9", icon: BookOpen01, children: [] },
-                    { id: "pvr-10", name: "Discourse 10", icon: BookOpen01, children: [] },
-                    { id: "pvr-11", name: "Discourse 11", icon: BookOpen01, children: [] },
-                    { id: "pvr-12", name: "Discourse 12", icon: BookOpen01, children: [] },
-                    { id: "pvr-13", name: "Discourse 13", icon: BookOpen01, children: [] },
-                    { id: "pvr-14", name: "Discourse 14", icon: BookOpen01, children: [] },
-                    { id: "pvr-15", name: "Discourse 15", icon: BookOpen01, children: [] },
-                    { id: "pvr-16", name: "Discourse 16", icon: BookOpen01, children: [] },
-                    { id: "pvr-17", name: "Discourse 17", icon: BookOpen01, children: [] },
-                    { id: "pvr-18", name: "Discourse 18", icon: BookOpen01, children: [] },
-                    { id: "pvr-19", name: "Discourse 19", icon: BookOpen01, children: [] },
-                    { id: "pvr-20", name: "Discourse 20", icon: BookOpen01, children: [] },
-                    { id: "pvr-21", name: "Discourse 21", icon: BookOpen01, children: [] },
+                    { id: "pvr-1", name: "Laying-Down-Where? (Part 1)", icon: CornerDownRight, children: [] },
+                    { id: "pvr-2", name: "Laying-Down-Where? (Part 2)", icon: CornerDownRight, children: [] },
+                    { id: "pvr-3", name: "Summary Of Origins", icon: CornerDownRight, children: [] },
+                    { id: "pvr-4", name: "Consecutive Repetitions", icon: CornerDownRight, children: [] },
+                    { id: "pvr-5", name: "Synopsis of Settlements", icon: CornerDownRight, children: [] },
+                    { id: "pvr-6", name: "Questions on the Khandhakas", icon: CornerDownRight, children: [] },
+                    { id: "pvr-7", name: "Numbered Sections", icon: CornerDownRight, children: [] },
+                    { id: "pvr-8", name: "Questions on the Beginning of Sabbath", icon: CornerDownRight, children: [] },
                 ],
             },
         ],
@@ -179,52 +182,18 @@ const initialItems: TreeItemData[] = [
                         id: "dn-1-13",
                         name: "The Chapter on the Entire Spectrum of Ethics",
                         children: [
-                            { id: "dn-1", name: "Discourse 1", icon: BookOpen01, children: [] },
-                            { id: "dn-2", name: "Discourse 2", icon: BookOpen01, children: [] },
-                            { id: "dn-3", name: "Discourse 3", icon: BookOpen01, children: [] },
-                            { id: "dn-4", name: "Discourse 4", icon: BookOpen01, children: [] },
-                            { id: "dn-5", name: "Discourse 5", icon: BookOpen01, children: [] },
-                            { id: "dn-6", name: "Discourse 6", icon: BookOpen01, children: [] },
-                            { id: "dn-7", name: "Discourse 7", icon: BookOpen01, children: [] },
-                            { id: "dn-8", name: "Discourse 8", icon: BookOpen01, children: [] },
-                            { id: "dn-9", name: "Discourse 9", icon: BookOpen01, children: [] },
-                            { id: "dn-10", name: "Discourse 10", icon: BookOpen01, children: [] },
-                            { id: "dn-11", name: "Discourse 11", icon: BookOpen01, children: [] },
-                            { id: "dn-12", name: "Discourse 12", icon: BookOpen01, children: [] },
-                            { id: "dn-13", name: "Discourse 13", icon: BookOpen01, children: [] },
                         ],
                     },
                     {
                         id: "dn-14-23",
                         name: "The Great Chapter",
                         children: [
-                            { id: "dn-14", name: "Discourse 14", icon: BookOpen01, children: [] },
-                            { id: "dn-15", name: "Discourse 15", icon: BookOpen01, children: [] },
-                            { id: "dn-16", name: "Discourse 16", icon: BookOpen01, children: [] },
-                            { id: "dn-17", name: "Discourse 17", icon: BookOpen01, children: [] },
-                            { id: "dn-18", name: "Discourse 18", icon: BookOpen01, children: [] },
-                            { id: "dn-19", name: "Discourse 19", icon: BookOpen01, children: [] },
-                            { id: "dn-20", name: "Discourse 20", icon: BookOpen01, children: [] },
-                            { id: "dn-21", name: "Discourse 21", icon: BookOpen01, children: [] },
-                            { id: "dn-22", name: "Discourse 22", icon: BookOpen01, children: [] },
-                            { id: "dn-23", name: "Discourse 23", icon: BookOpen01, children: [] },
                         ],
                     },
                     {
                         id: "dn-24-34",
                         name: "The Chapter with Pāṭikaputta",
                         children: [
-                            { id: "dn-24", name: "Discourse 24", icon: BookOpen01, children: [] },
-                            { id: "dn-25", name: "Discourse 25", icon: BookOpen01, children: [] },
-                            { id: "dn-26", name: "Discourse 26", icon: BookOpen01, children: [] },
-                            { id: "dn-27", name: "Discourse 27", icon: BookOpen01, children: [] },
-                            { id: "dn-28", name: "Discourse 28", icon: BookOpen01, children: [] },
-                            { id: "dn-29", name: "Discourse 29", icon: BookOpen01, children: [] },
-                            { id: "dn-30", name: "Discourse 30", icon: BookOpen01, children: [] },
-                            { id: "dn-31", name: "Discourse 31", icon: BookOpen01, children: [] },
-                            { id: "dn-32", name: "Discourse 32", icon: BookOpen01, children: [] },
-                            { id: "dn-33", name: "Discourse 33", icon: BookOpen01, children: [] },
-                            { id: "dn-34", name: "Discourse 34", icon: BookOpen01, children: [] },
                         ],
                     },
                 ],
@@ -260,20 +229,27 @@ const initialItems: TreeItemData[] = [
                     { id: "an-11", name: "The Books of the Elevens", children: [] },
                 ]
             },
-            { id: "kn", name: "Minor Collections", children: [] },
+            {
+                id: "kn", name: "Minor Collections", children: [
+                    { id: "kp-1", name: "Minor Readings", icon: CornerDownRight, children: [] },
+                    { id: "dhp-1-423", name: "Sayings of the Dhamma", icon: CornerDownRight, children: [] },
+                    { id: "ud-1-8", name: "Heartfelt Saying", icon: CornerDownRight, children: [] },
+                    { id: "iti-1-112", name: "So It Was Said", icon: CornerDownRight, children: [] },
+                ]
+            },
         ],
     },
     {
         id: "abhidhamma-pitaka",
         name: "ABHIDHAMMA PITAKA",
         children: [
-            { id: "dhammasangani", name: "Compendium of Phenomena", icon: BookOpen01, children: [] },
-            { id: "vibhanga", name: "Book of Analysis", icon: BookOpen01, children: [] },
-            { id: "dhatukatha", name: "Discussion of Elements", icon: BookOpen01, children: [] },
-            { id: "puggala-pannatti", name: "Description of Personality Types", icon: BookOpen01, children: [] },
-            { id: "kathavattu", name: "Points of Controversy", icon: BookOpen01, children: [] },
-            { id: "yamaka", name: "The Pairs", icon: BookOpen01, children: [] },
-            { id: "patthana", name: "Conditional Relations", icon: BookOpen01, children: [] },
+            { id: "dhammasangani", name: "Compendium of Phenomena", icon: CornerDownRight, children: [] },
+            { id: "vibhanga", name: "Book of Analysis", icon: CornerDownRight, children: [] },
+            { id: "dhatukatha", name: "Discussion of Elements", icon: CornerDownRight, children: [] },
+            { id: "puggala-pannatti", name: "Description of Personality Types", icon: CornerDownRight, children: [] },
+            { id: "kathavattu", name: "Points of Controversy", icon: CornerDownRight, children: [] },
+            { id: "yamaka", name: "The Pairs", icon: CornerDownRight, children: [] },
+            { id: "patthana", name: "Conditional Relations", icon: CornerDownRight, children: [] },
         ],
     },
 ];
