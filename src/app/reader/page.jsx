@@ -1,6 +1,6 @@
 "use client";
 
-import { Close01, Menu02, Building08, BookOpen01, Eye, EyeOff, Headphones01, Image01, VideoRecorder, InfoCircle, AlignLeft01, AlignRight01, Link01, Dataflow01, Copy01, ArrowRight, Settings03, Download01, GraduationHat02, Bookmark, HelpOctagon } from "@untitledui/icons";
+import { Menu02, Building08, BookOpen01, Eye, EyeOff, Headphones01, Image01, VideoRecorder, InfoCircle, AlignLeft01, AlignRight01, Link01, Dataflow01, Copy01, ArrowRight, Settings03, Download01, GraduationHat02, Bookmark, HelpOctagon } from "@untitledui/icons";
 import { FileIcon } from "@untitledui/file-icons"
 import { SidebarNavigationSlim } from "@/components/application/app-navigation/sidebar-navigation/sidebar-slim-reader";
 import { SidebarNavigationSlimRight } from "@/components/application/app-navigation/sidebar-navigation/sidebar-slim-reader-right";
@@ -9,8 +9,7 @@ import { Facebook, LinkedIn, X } from "@/components/foundations/social-icons";
 import Image from "next/image";
 import { BadgeGroup } from "@/components/base/badges/badge-groups";
 import Link from "next/link";
-import { CanonTreeViewSM } from "@/components/application/tree-view/canon-tree-view-sm";
-import { CanonNavigationModal } from "@/components-custom/navigation/canon-navigation/canon-navigation-modal";
+import { CanonNavigationModal, openCanonNavigator } from "@/components-custom/navigation/canon-navigation/canon-navigation-modal";
 
 
 export const TableOfContents = () => {
@@ -292,16 +291,21 @@ export const AuxiliaryPanel = () => {
 export default function ReaderPage() {
     return (
         <>
-            {/* TODO: Implement a dynamic Modal for canonical navigation using the imported CanonTreeViewSM component */}
-            {/* The modal should be opened and closed by the user from the item "Canonical Navigation" in the SidebarNavigation component on the left */}
 
-            <CanonNavigationModal />
 
 
             {/* The MAIN Reader wrapper */}
             <main className="mx-auto w-full bg-olive-200 dark:bg-black">
 
-                {/* LEFT PLACEHOLDER - Sidebar Tools for the Text Navigation */}
+
+                {/* TODO: Implement a dynamic Modal for canonical navigation using the imported CanonNavigationModal component */}
+                {/* The modal should be opened and closed by the user from the item "Canon Navigation" in the SidebarNavigationSlim component on the left */}
+                {/* Additionally, the modal should be closed by the close button inside the modal, and when the user clicks on the background overlay */}
+
+                {/* Canon Navigation Modal */}
+                <CanonNavigationModal />
+
+                {/* Sidebar Tools for the Canon and Text Navigation */}
                 <SidebarNavigationSlim
                     hideRightBorder
                     activeUrl=""
@@ -310,11 +314,7 @@ export default function ReaderPage() {
                             label: "Canon Navigation",
                             href: "",
                             icon: Building08,
-                        },
-                        {
-                            label: "Title Information",
-                            href: "",
-                            icon: InfoCircle,
+                            onClick: openCanonNavigator,
                         },
                         {
                             label: "Table of Contents",

@@ -15,10 +15,9 @@ const CanonTree = ({ size }: { size: "sm" | "md" }) => {
 
     return (
         <>
-            <div className="flex flex-col gap-2">
-                <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-0">
+                <div className="flex flex-col gap-4 pb-4">
                     <CanonMultiSelectSm />
-                    <h2 className="text-display-xs font-medium text-brand-primary">Canon Navigation</h2>
                 </div>
                 <TreeView
                     size={size}

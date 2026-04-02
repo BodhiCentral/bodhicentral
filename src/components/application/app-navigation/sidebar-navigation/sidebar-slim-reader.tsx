@@ -46,7 +46,16 @@ export const SidebarNavigationSlim = ({ activeUrl, items, footerItems = [] }: Si
                                 href={item.href}
                                 label={item.label || ""}
                                 icon={item.icon}
-                                onClick={() => setCurrentItem(item)}
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    if(item.onClick) {
+                                        e.preventDefault();
+                                        item.onClick();
+                                    } else if (!item.href || item.href === "") {
+                                        e.preventDefault();
+                                    }
+                                    setCurrentItem(item);
+                                }}
                                 className="bg-olive-200 dark:bg-neutral-950"
                             />
                         </li>
@@ -63,7 +72,16 @@ export const SidebarNavigationSlim = ({ activeUrl, items, footerItems = [] }: Si
                                         label={item.label || ""}
                                         href={item.href}
                                         icon={item.icon}
-                                        onClick={() => setCurrentItem(item)}
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            if(item.onClick) {
+                                                e.preventDefault();
+                                                item.onClick();
+                                            } else if (!item.href || item.href === "") {
+                                                e.preventDefault();
+                                            }
+                                            setCurrentItem(item);
+                                        }}
                                         className="bg-olive-200 dark:bg-neutral-950"
                                     />
                                 </li>
