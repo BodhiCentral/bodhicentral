@@ -9,7 +9,7 @@ import { Facebook, LinkedIn, X } from "@/components/foundations/social-icons";
 import Image from "next/image";
 import { BadgeGroup } from "@/components/base/badges/badge-groups";
 import Link from "next/link";
-import { CanonNavigationModal, openCanonNavigator } from "@/components-custom/navigation/canon-navigation/canon-navigation-modal";
+import { CanonNavigationModal, openCanonNavigator } from "@/components-custom/navigation/canon-navigation/canon-navigation-modal-wrapper";
 
 
 export const TableOfContents = () => {

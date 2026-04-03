@@ -15,7 +15,7 @@ const CanonTree = ({ size }: { size: "sm" | "md" }) => {
 
     return (
         <>
-            <div className="flex flex-col gap-0">
+            <div className="flex flex-col gap-0 overflow-y-auto scrollbar-hide">
                 <div className="flex flex-col gap-4 pb-4">
                     <CanonMultiSelectSm />
                 </div>

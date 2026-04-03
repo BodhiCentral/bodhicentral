@@ -15,7 +15,7 @@ import { User } from "@supabase/supabase-js";
 import { DropdownAvatar } from "@/components/base/avatar/dropdown-avatar";
 import { NavItemButton } from "@/components/application/app-navigation/base-components/nav-button";
 import { SearchLg, Building08 } from "@untitledui/icons";
-import { openCanonNavigator } from "@/components-custom/navigation/canon-navigation/canon-navigation-modal";
+import { openCanonNavigator } from "@/components-custom/navigation/canon-navigation/canon-navigation-modal-wrapper";
 
 type HeaderNavItem = {
     label: string;
