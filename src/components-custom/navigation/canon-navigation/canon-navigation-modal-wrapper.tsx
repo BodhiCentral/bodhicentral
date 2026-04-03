@@ -8,6 +8,7 @@ import { CloseButton } from "@/components/base/buttons/close-button";
 import { CanonTreeViewSM } from "@/components/application/tree-view/canon-tree-view-sm";
 import { Heading as AriaHeading } from "react-aria-components";
 import { TextTableFilter } from "@/components-custom/filters/text-table-filter";
+import { TextTableAlternatingFills } from "@/components-custom/tables/text-table";
 
 export const openCanonNavigator = () => {
     if (typeof window !== "undefined") {
@@ -79,6 +80,7 @@ export const CanonNavigationModal = () => {
                                 <TextTableFilter />
                             </div>
                             <div className="mx-auto w-full overflow-y-auto max-h-full scrollbar-hide flex flex-col flex-1 gap-0.5 px-4 py-6 sm:px-6 sm:py-6">
+                                <TextTableAlternatingFills />
                             </div>
                             <div className="z-10 flex flex-col gap-3 p-4 pt-4 sm:flex-row sm:items-center sm:justify-end sm:px-4 sm:pt-4 sm:pb-4 bg-tertiary dark:bg-brand-950 border-t border-secondary">
                                 <Button color="secondary" size="md">

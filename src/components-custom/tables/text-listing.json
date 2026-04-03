@@ -1,0 +1,267 @@
+{
+    "items": [
+        {
+            "textId": "Pvr-1",
+            "englishTitle": "English Title 1",
+            "paliTitle": "Pali Title 1",
+            "status": "published",
+            "division": "Vinaya Pitaka",
+            "section": "The Compendium",
+            "topics": [
+                {
+                    "name": "Topic 1",
+                    "color": "purple"
+                },
+                {
+                    "name": "Topic 2",
+                    "color": "sky"
+                },
+                {
+                    "name": "Topic 3",
+                    "color": "indigo"
+                }
+            ],
+            "avatarUrl": "/people/bhikku-sujato-close-up.jpg"
+        },
+        {
+            "textId": "Pvr-2",
+            "englishTitle": "English Title 2",
+            "paliTitle": "Pali Title 2",
+            "status": "published",
+            "division": "Vinaya Pitaka",
+            "section": "The Compendium",
+            "topics": [
+                {
+                    "name": "Topic 1",
+                    "color": "purple"
+                },
+                {
+                    "name": "Topic 2",
+                    "color": "sky"
+                },
+                {
+                    "name": "Topic 3",
+                    "color": "indigo"
+                },
+                {
+                    "name": "Topic 4",
+                    "color": "error"
+                }
+            ],
+            "avatarUrl": "/people/bhikku-sujato-close-up.jpg"
+        },
+        {
+            "textId": "Pvr-3",
+            "englishTitle": "English Title 3",
+            "paliTitle": "Pali Title 3",
+            "status": "draft",
+            "division": "Vinaya Pitaka",
+            "section": "The Compendium",
+            "topics": [
+                {
+                    "name": "Topic 1",
+                    "color": "purple"
+                },
+                {
+                    "name": "Topic 2",
+                    "color": "sky"
+                },
+                {
+                    "name": "Topic 3",
+                    "color": "indigo"
+                },
+                {
+                    "name": "Topic 4",
+                    "color": "error"
+                }
+            ],
+            "avatarUrl": "/people/bhikku-sujato-close-up.jpg"
+        },
+        {
+            "textId": "Pvr-4",
+            "englishTitle": "English Title 4",
+            "paliTitle": "Pali Title 4",
+            "status": "published",
+            "division": "Vinaya Pitaka",
+            "section": "The Compendium",
+            "topics": [
+                {
+                    "name": "Topic 1",
+                    "color": "purple"
+                },
+                {
+                    "name": "Topic 2",
+                    "color": "sky"
+                },
+                {
+                    "name": "Topic 3",
+                    "color": "indigo"
+                }
+            ],
+            "avatarUrl": "/people/bhikku-sujato-close-up.jpg"
+        },
+        {
+            "textId": "Pvr-5",
+            "englishTitle": "English Title 5",
+            "paliTitle": "Pali Title 5",
+            "status": "published",
+            "division": "Vinaya Pitaka",
+            "section": "The Compendium",
+            "topics": [
+                {
+                    "name": "Topic 1",
+                    "color": "purple"
+                },
+                {
+                    "name": "Topic 2",
+                    "color": "sky"
+                },
+                {
+                    "name": "Topic 3",
+                    "color": "indigo"
+                },
+                {
+                    "name": "Topic 4",
+                    "color": "error"
+                }
+            ],
+            "avatarUrl": "/people/bhikku-sujato-close-up.jpg"
+        },
+        {
+            "textId": "Pvr-6",
+            "englishTitle": "English Title 6",
+            "paliTitle": "Pali Title 6",
+            "status": "published",
+            "division": "Vinaya Pitaka",
+            "section": "The Compendium",
+            "topics": [
+                {
+                    "name": "Topic 1",
+                    "color": "purple"
+                },
+                {
+                    "name": "Topic 2",
+                    "color": "sky"
+                },
+                {
+                    "name": "Topic 3",
+                    "color": "indigo"
+                },
+                {
+                    "name": "Topic 4",
+                    "color": "error"
+                }
+            ],
+            "avatarUrl": "/people/bhikku-sujato-close-up.jpg"
+        },
+        {
+            "textId": "Pvr-7",
+            "englishTitle": "English Title 7",
+            "paliTitle": "Pali Title 7",
+            "status": "published",
+            "division": "Vinaya Pitaka",
+            "section": "The Compendium",
+            "topics": [
+                {
+                    "name": "Topic 1",
+                    "color": "purple"
+                },
+                {
+                    "name": "Topic 2",
+                    "color": "sky"
+                },
+                {
+                    "name": "Topic 3",
+                    "color": "indigo"
+                },
+                {
+                    "name": "Topic 4",
+                    "color": "error"
+                }
+            ],
+            "avatarUrl": "/people/bhikku-sujato-close-up.jpg"
+        },
+        {
+            "textId": "Pvr-8",
+            "englishTitle": "English Title 8",
+            "paliTitle": "Pali Title 8",
+            "status": "published",
+            "division": "Vinaya Pitaka",
+            "section": "The Compendium",
+            "topics": [
+                {
+                    "name": "Topic 1",
+                    "color": "purple"
+                },
+                {
+                    "name": "Topic 2",
+                    "color": "sky"
+                },
+                {
+                    "name": "Topic 3",
+                    "color": "indigo"
+                },
+                {
+                    "name": "Topic 4",
+                    "color": "error"
+                }
+            ],
+            "avatarUrl": "/people/bhikku-sujato-close-up.jpg"
+        },
+        {
+            "textId": "Pvr-9",
+            "englishTitle": "English Title 9",
+            "paliTitle": "Pali Title 9",
+            "status": "published",
+            "division": "Vinaya Pitaka",
+            "section": "The Compendium",
+            "topics": [
+                {
+                    "name": "Topic 1",
+                    "color": "purple"
+                },
+                {
+                    "name": "Topic 2",
+                    "color": "sky"
+                },
+                {
+                    "name": "Topic 3",
+                    "color": "indigo"
+                },
+                {
+                    "name": "Topic 4",
+                    "color": "error"
+                }
+            ],
+            "avatarUrl": "/people/bhikku-sujato-close-up.jpg"
+        },
+        {
+            "textId": "Pvr-10",
+            "englishTitle": "English Title 10",
+            "paliTitle": "Pali Title 10",
+            "status": "published",
+            "division": "Vinaya Pitaka",
+            "section": "The Compendium",
+            "topics": [
+                {
+                    "name": "Topic 1",
+                    "color": "purple"
+                },
+                {
+                    "name": "Topic 2",
+                    "color": "sky"
+                },
+                {
+                    "name": "Topic 3",
+                    "color": "indigo"
+                },
+                {
+                    "name": "Topic 4",
+                    "color": "error"
+                }
+            ],
+            "avatarUrl": "/people/bhikku-sujato-close-up.jpg"
+        }
+    ],
+    "total": 10
+}
