@@ -7,6 +7,7 @@ import { Button } from "@/components/base/buttons/button";
 import { CloseButton } from "@/components/base/buttons/close-button";
 import { CanonTreeViewSM } from "@/components/application/tree-view/canon-tree-view-sm";
 import { Heading as AriaHeading } from "react-aria-components";
+import { TextTableFilter } from "@/components-custom/filters/text-table-filter";
 
 export const openCanonNavigator = () => {
     if (typeof window !== "undefined") {
@@ -68,11 +69,14 @@ export const CanonNavigationModal = () => {
                         {/* Text Listing from Canon Navigator Selections */}
                         <div className="relative w-full flex flex-col  overflow-hidden rounded-r-4xl bg-secondary">
                             <CloseButton onClick={() => setIsOpen(false)} theme="light" size="sm" className="absolute top-3 right-3 sm:top-4 sm:right-4" />
-                            <div className="h-auto flex flex-col gap-0.5 px-4 pt-4 sm:px-6 sm:py-4 bg-secondary border-b border-secondary">
-                                <AriaHeading slot="title" className="text-display-xs font-semibold text-brand-primary">
-                                    Texts in your selection
-                                </AriaHeading>
-                                <p className="text-md text-tertiary">Filter and search your selection.</p>
+                            <div className="h-auto flex flex-row gap-6 items-center justify-between pl-4 pr-20 pt-4 sm:pl-6 sm:py-4 bg-secondary border-b border-secondary">
+                                <div className="flex flex-col gap-0.5">
+                                    <AriaHeading slot="title" className="text-display-xs font-semibold text-brand-primary">
+                                        Texts in your selection
+                                    </AriaHeading>
+                                    <p className="text-md text-tertiary">Filter and search your selection.</p>
+                                </div>
+                                <TextTableFilter />
                             </div>
                             <div className="mx-auto w-full overflow-y-auto max-h-full scrollbar-hide flex flex-col flex-1 gap-0.5 px-4 py-6 sm:px-6 sm:py-6">
                             </div>

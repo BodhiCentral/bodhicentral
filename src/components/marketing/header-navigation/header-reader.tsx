@@ -136,7 +136,7 @@ export const HeaderReader = ({ items = headerReaderNavItems, isFullWidth, isFloa
                             <Breadcrumbs.Item href="/scripture">Canon</Breadcrumbs.Item>
                             <Breadcrumbs.Item href="/scripture/pali-canon">Division</Breadcrumbs.Item>
                             <Breadcrumbs.Item href="/learning-paths">Section</Breadcrumbs.Item>
-                            <Breadcrumbs.Item href="/resources">Sutta</Breadcrumbs.Item>
+                            <Breadcrumbs.Item href="/resources">Welcome Tour</Breadcrumbs.Item>
                         </Breadcrumbs>
 
 
