@@ -1,12 +1,15 @@
 {
     "items": [
         {
-            "textId": "Pvr-1",
-            "englishTitle": "English Title 1",
-            "paliTitle": "Pali Title 1",
+            "textId": "DN 1",
+            "englishTitle": "The Divine Net",
+            "paliTitle": "Brahmajālasutta",
+            "shortDescription": "While others may praise or criticize the Buddha, they tend to focus on trivial details. The Buddha presents an analysis of 62 kinds of wrong view, seeing through which one becomes detached from meaningless speculations.",
             "status": "published",
-            "division": "Vinaya Pitaka",
-            "section": "The Compendium",
+            "translator": "Bhikkhu Sujato",
+            "translationGroup": "SuttaCentral",
+            "division": "Digha Nikaya",
+            "section": "Sīlakkhandhavagga",
             "topics": [
                 {
                     "name": "Topic 1",
@@ -24,12 +27,15 @@
             "avatarUrl": "/people/bhikku-sujato-close-up.jpg"
         },
         {
-            "textId": "Pvr-2",
-            "englishTitle": "English Title 2",
-            "paliTitle": "Pali Title 2",
+            "textId": "DN 2",
+            "englishTitle": "The Fruits of the Ascetic Life",
+            "paliTitle": "Sāmaññaphalasutta",
+            "shortDescription": "The newly crowned King Ajātasattu is disturbed by the violent means by which he achieved the crown. He visits the Buddha to find peace of mind, and asks him about the benefits of spiritual practice. This is one of the greatest literary and spiritual texts of early Buddhism.",
+            "translator": "Bhikkhu Sujato",
+            "translationGroup": "SuttaCentral",
             "status": "published",
-            "division": "Vinaya Pitaka",
-            "section": "The Compendium",
+            "division": "Digha Nikaya",
+            "section": "Sīlakkhandhavagga",
             "topics": [
                 {
                     "name": "Topic 1",
@@ -42,21 +48,20 @@
                 {
                     "name": "Topic 3",
                     "color": "indigo"
-                },
-                {
-                    "name": "Topic 4",
-                    "color": "error"
                 }
             ],
             "avatarUrl": "/people/bhikku-sujato-close-up.jpg"
         },
         {
-            "textId": "Pvr-3",
-            "englishTitle": "English Title 3",
-            "paliTitle": "Pali Title 3",
+            "textId": "DN 3",
+            "englishTitle": "With Ambaṭṭha",
+            "paliTitle": "Ambaṭṭhasutta",
+            "shortDescription": "A young brahmin student attacks the Buddha’s family, but is put in his place.",
+            "translator": "Bhikkhu Sujato",
+            "translationGroup": "SuttaCentral",
             "status": "draft",
-            "division": "Vinaya Pitaka",
-            "section": "The Compendium",
+            "division": "Digha Nikaya",
+            "section": "Sīlakkhandhavagga",
             "topics": [
                 {
                     "name": "Topic 1",
@@ -65,25 +70,20 @@
                 {
                     "name": "Topic 2",
                     "color": "sky"
-                },
-                {
-                    "name": "Topic 3",
-                    "color": "indigo"
-                },
-                {
-                    "name": "Topic 4",
-                    "color": "error"
                 }
             ],
             "avatarUrl": "/people/bhikku-sujato-close-up.jpg"
         },
         {
-            "textId": "Pvr-4",
-            "englishTitle": "English Title 4",
-            "paliTitle": "Pali Title 4",
+            "textId": "DN 4",
+            "englishTitle": "With Soṇadaṇḍa",
+            "paliTitle": "Soṇadaṇḍasutta",
+            "shortDescription": "A reputed brahmin visits the Buddha, despite the reservations of other brahmins. They discuss the true meaning of a brahmin, and the Buddha skillfully draws him around to his own point of view.",
+            "translator": "Bhikkhu Sujato",
+            "translationGroup": "SuttaCentral",
             "status": "published",
-            "division": "Vinaya Pitaka",
-            "section": "The Compendium",
+            "division": "Digha Nikaya",
+            "section": "Sīlakkhandhavagga",
             "topics": [
                 {
                     "name": "Topic 1",
@@ -101,12 +101,15 @@
             "avatarUrl": "/people/bhikku-sujato-close-up.jpg"
         },
         {
-            "textId": "Pvr-5",
-            "englishTitle": "English Title 5",
-            "paliTitle": "Pali Title 5",
+            "textId": "DN 5",
+            "englishTitle": "With Kūṭadanta",
+            "paliTitle": "Kūṭadantasutta",
+            "shortDescription": "A brahmin wishes to undertake a great sacrifice, and asks for the Buddha’s advice. The Buddha tells a legend of the past, in which a king is persuaded to give up violent sacrifice, and instead to devote his resources to supporting the needy citizens of his realm. However, even such a beneficial and non-violent sacrifice pales in comparison to the spiritual sacrifice of giving up attachments.",
+            "translator": "Bhikkhu Sujato",
+            "translationGroup": "SuttaCentral",
             "status": "published",
-            "division": "Vinaya Pitaka",
-            "section": "The Compendium",
+            "division": "Digha Nikaya",
+            "section": "Sīlakkhandhavagga",
             "topics": [
                 {
                     "name": "Topic 1",
@@ -115,25 +118,20 @@
                 {
                     "name": "Topic 2",
                     "color": "sky"
-                },
-                {
-                    "name": "Topic 3",
-                    "color": "indigo"
-                },
-                {
-                    "name": "Topic 4",
-                    "color": "error"
                 }
             ],
             "avatarUrl": "/people/bhikku-sujato-close-up.jpg"
         },
         {
-            "textId": "Pvr-6",
-            "englishTitle": "English Title 6",
-            "paliTitle": "Pali Title 6",
+            "textId": "DN 6",
+            "englishTitle": "With Mahāli",
+            "paliTitle": "Mahālisutta",
+            "shortDescription": "The Buddha explains to a diverse group of lay people how the results of meditation depend on the manner of development.",
+            "translator": "Bhikkhu Sujato",
+            "translationGroup": "SuttaCentral",
             "status": "published",
-            "division": "Vinaya Pitaka",
-            "section": "The Compendium",
+            "division": "Digha Nikaya",
+            "section": "Sīlakkhandhavagga",
             "topics": [
                 {
                     "name": "Topic 1",
@@ -146,21 +144,20 @@
                 {
                     "name": "Topic 3",
                     "color": "indigo"
-                },
-                {
-                    "name": "Topic 4",
-                    "color": "error"
                 }
             ],
             "avatarUrl": "/people/bhikku-sujato-close-up.jpg"
         },
         {
-            "textId": "Pvr-7",
-            "englishTitle": "English Title 7",
-            "paliTitle": "Pali Title 7",
+            "textId": "DN 7",
+            "englishTitle": "With Jāliya",
+            "paliTitle": "Jāliysutta",
+            "shortDescription": "This discourse is mostly quoted by the Buddha in the previous.",
+            "translator": "Bhikkhu Sujato",
+            "translationGroup": "SuttaCentral",
             "status": "published",
-            "division": "Vinaya Pitaka",
-            "section": "The Compendium",
+            "division": "Digha Nikaya",
+            "section": "Sīlakkhandhavagga",
             "topics": [
                 {
                     "name": "Topic 1",
@@ -169,25 +166,20 @@
                 {
                     "name": "Topic 2",
                     "color": "sky"
-                },
-                {
-                    "name": "Topic 3",
-                    "color": "indigo"
-                },
-                {
-                    "name": "Topic 4",
-                    "color": "error"
                 }
             ],
             "avatarUrl": "/people/bhikku-sujato-close-up.jpg"
         },
         {
-            "textId": "Pvr-8",
-            "englishTitle": "English Title 8",
-            "paliTitle": "Pali Title 8",
+            "textId": "DN 8",
+            "englishTitle": "The Longer Discourse on the Lion’s Roar",
+            "paliTitle": "Mahāsīhanādasutta",
+            "shortDescription": "The Buddha is challenged by a naked ascetic on the topic of spiritual austerities. He points out that it is quite possible to perform all kinds of austere practices without having any inner purity of mind.",
+            "translator": "Bhikkhu Sujato",
+            "translationGroup": "SuttaCentral",
             "status": "published",
-            "division": "Vinaya Pitaka",
-            "section": "The Compendium",
+            "division": "Digha Nikaya",
+            "section": "Sīlakkhandhavagga",
             "topics": [
                 {
                     "name": "Topic 1",
@@ -200,21 +192,20 @@
                 {
                     "name": "Topic 3",
                     "color": "indigo"
-                },
-                {
-                    "name": "Topic 4",
-                    "color": "error"
                 }
             ],
             "avatarUrl": "/people/bhikku-sujato-close-up.jpg"
         },
         {
-            "textId": "Pvr-9",
-            "englishTitle": "English Title 9",
-            "paliTitle": "Pali Title 9",
+            "textId": "DN 9",
+            "englishTitle": "With Poṭṭhapāda",
+            "paliTitle": "Poṭṭhapādasutta",
+            "shortDescription": "The Buddha discusses with a wanderer the nature of perception and how it evolves through deeper states of meditation. None of these, however, should be identified with a self or soul.",
+            "translator": "Bhikkhu Sujato",
+            "translationGroup": "SuttaCentral",
             "status": "published",
-            "division": "Vinaya Pitaka",
-            "section": "The Compendium",
+            "division": "Digha Nikaya",
+            "section": "Sīlakkhandhavagga",
             "topics": [
                 {
                     "name": "Topic 1",
@@ -227,21 +218,20 @@
                 {
                     "name": "Topic 3",
                     "color": "indigo"
-                },
-                {
-                    "name": "Topic 4",
-                    "color": "error"
                 }
             ],
             "avatarUrl": "/people/bhikku-sujato-close-up.jpg"
         },
         {
-            "textId": "Pvr-10",
-            "englishTitle": "English Title 10",
-            "paliTitle": "Pali Title 10",
+            "textId": "DN 10",
+            "englishTitle": "With Subha",
+            "paliTitle": "Subhasutta",
+            "shortDescription": "Shortly after the Buddha’s death, Venerable Ānanda is invited to explain the core teachings.",
+            "translator": "Bhikkhu Sujato",
+            "translationGroup": "SuttaCentral",
             "status": "published",
-            "division": "Vinaya Pitaka",
-            "section": "The Compendium",
+            "division": "Digha Nikaya",
+            "section": "Sīlakkhandhavagga",
             "topics": [
                 {
                     "name": "Topic 1",
@@ -254,14 +244,88 @@
                 {
                     "name": "Topic 3",
                     "color": "indigo"
+                }
+            ],
+            "avatarUrl": "/people/bhikku-sujato-close-up.jpg"
+        },
+        {
+            "textId": "DN 11",
+            "englishTitle": "With Kevaddha",
+            "paliTitle": "Kevaṭṭasutta",
+            "shortDescription": "The Buddha refuses to perform miracles, explaining that this is not the right way to inspire faith. He goes on to tell the story of a monk whose misguided quest for answers led him as far as Brahmā.",
+            "translator": "Bhikkhu Sujato",
+            "translationGroup": "SuttaCentral",
+            "status": "published",
+            "division": "Digha Nikaya",
+            "section": "Sīlakkhandhavagga",
+            "topics": [
+                {
+                    "name": "Topic 1",
+                    "color": "purple"
                 },
                 {
-                    "name": "Topic 4",
-                    "color": "error"
+                    "name": "Topic 2",
+                    "color": "sky"
+                },
+                {
+                    "name": "Topic 3",
+                    "color": "indigo"
+                }
+            ],
+            "avatarUrl": "/people/bhikku-sujato-close-up.jpg"
+        },
+        {
+            "textId": "DN 12",
+            "englishTitle": "With Lohicca",
+            "paliTitle": "Lohiccasutta",
+            "shortDescription": "A brahmin has fallen into the idea that there is no point in trying to offer spiritual help to others. The Buddha goes to see him, and persuades him of the genuine benefits of spiritual teaching.",
+            "translator": "Bhikkhu Sujato",
+            "translationGroup": "SuttaCentral",
+            "status": "published",
+            "division": "Digha Nikaya",
+            "section": "Sīlakkhandhavagga",
+            "topics": [
+                {
+                    "name": "Topic 1",
+                    "color": "purple"
+                },
+                {
+                    "name": "Topic 2",
+                    "color": "sky"
+                },
+                {
+                    "name": "Topic 3",
+                    "color": "indigo"
+                }
+            ],
+            "avatarUrl": "/people/bhikku-sujato-close-up.jpg"
+        },
+        {
+            "textId": "DN 13",
+            "englishTitle": "The Three Knowledges",
+            "paliTitle": "Tevijjasutta",
+            "shortDescription": "A number of brahmins are discussing the true path to Brahmā. Contesting the claims to authority based on the Vedas, the Buddha insists that only personal experience can lead to the truth.",
+            "translator": "Bhikkhu Sujato",
+            "translationGroup": "SuttaCentral",
+            "status": "published",
+            "division": "Digha Nikaya",
+            "section": "Sīlakkhandhavagga",
+            "topics": [
+                {
+                    "name": "Topic 1",
+                    "color": "purple"
+                },
+                {
+                    "name": "Topic 2",
+                    "color": "sky"
+                },
+                {
+                    "name": "Topic 3",
+                    "color": "indigo"
                 }
             ],
             "avatarUrl": "/people/bhikku-sujato-close-up.jpg"
         }
     ],
-    "total": 10
+    "total": 13
 }

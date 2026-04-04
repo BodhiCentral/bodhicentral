@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { Edit01, Trash01 } from "@untitledui/icons";
+import { Trash01, Eye } from "@untitledui/icons";
 import type { SortDescriptor } from "react-aria-components";
 import { PaginationPageMinimalCenter } from "@/components/application/pagination/pagination";
 import { Table, TableCard } from "@/components/application/table/table";
@@ -43,7 +43,7 @@ export const TextTableAlternatingFills = () => {
         <TableCard.Root>
             <TableCard.Header
                 title="Texts in your selection"
-                badge="10 texts found"
+                badge="13 texts"
                 contentTrailing={
                     <div className="absolute top-5 right-4 md:right-6">
                         <DropdownIconSimple />
@@ -52,53 +52,63 @@ export const TextTableAlternatingFills = () => {
             />
             <Table aria-label="Texts" selectionMode="multiple" sortDescriptor={sortDescriptor} onSortChange={setSortDescriptor}>
                 <Table.Header className="bg-primary">
-                    <Table.Head id="textId" label="Text ID" allowsSorting />
-                    <Table.Head id="englishTitle" label="Text Titles (English / Pali)" isRowHeader allowsSorting className="w-full max-w-1/4" />
-                    <Table.Head id="paliTitle" label="Status" allowsSorting />
-                    <Table.Head id="division" label="Division" allowsSorting tooltip="This is a tooltip" />
-                    <Table.Head id="section" label="Section" allowsSorting className="md:hidden xl:table-cell" />
-                    <Table.Head id="topics" label="Topics" />
-                    <Table.Head id="actions" />
+                    <Table.Head key="textId" id="textId" label="Text ID" className="min-w-16 max-w-20" allowsSorting />
+                    <Table.Head key="englishTitle" id="englishTitle" label="Text / Discourse" isRowHeader allowsSorting />
+                    <Table.Head key="shortDescription" id="shortDescription" label="Description" className="max-w-100" tooltip="This is a tooltip" />
+                    <Table.Head key="translator" id="translator" label="Translator" allowsSorting />
+                    <Table.Head key="section" id="section" label="In Section" className="md:hidden xl:table-cell" />
+                    <Table.Head key="topics" id="topics" label="Topics" className="hidden" />
+                    <Table.Head key="status" id="status" label="Status" className="max-w-24" allowsSorting />
+                    <Table.Head key="actions" id="actions" className="max-w-24" />
                 </Table.Header>
                 <Table.Body items={sortedItems}>
                     {(item) => (
                         <Table.Row id={item.textId} className="odd:bg-secondary">
                             <Table.Cell>{item.textId}</Table.Cell>
                             <Table.Cell>
-                                <div className="flex items-center gap-3">
-                                    <Avatar src={item.avatarUrl} alt={item.englishTitle} size="sm" />
-                                    <div className="whitespace-nowrap">
-                                        <p className="text-sm font-medium text-primary">{item.englishTitle}</p>
-                                        <p className="text-sm text-tertiary">{item.paliTitle}</p>
-                                    </div>
+                                <div className="whitespace-nowrap max-w-100">
+                                    <p className="text-sm font-medium text-primary">{item.englishTitle}</p>
+                                    <p className="text-sm text-tertiary">{item.paliTitle}</p>
                                 </div>
                             </Table.Cell>
                             <Table.Cell>
-                                <BadgeWithDot size="sm" color={item.status === "published" ? "success" : "gray"} type="modern">
-                                    {item.status === "published" ? "Published" : "Draft"}
-                                </BadgeWithDot>
+                                <div className="min-w-70 max-w-140">
+                                    <p className="text-xs text-primary">{item.shortDescription}</p>
+                                </div>
                             </Table.Cell>
-                            <Table.Cell className="whitespace-nowrap">{item.division}</Table.Cell>
-                            <Table.Cell className="whitespace-nowrap md:hidden xl:table-cell">{item.section}</Table.Cell>
                             <Table.Cell>
+                                <div className="flex items-center gap-3">
+                                    <Avatar src={item.avatarUrl} alt={item.englishTitle} size="sm" />
+                                    <div className="whitespace-nowrap">
+                                        <p className="text-sm font-medium text-primary">{item.translator}</p>
+                                        <p className="text-sm text-tertiary">{item.translationGroup}</p>
+                                    </div>
+                                </div>
+                            </Table.Cell>
+                            <Table.Cell className="whitespace-nowrap md:hidden xl:table-cell">{item.section}</Table.Cell>
+                            <Table.Cell className="hidden">
                                 <div className="flex gap-1">
-                                    {item.topics.slice(0, 3).map((topic) => (
+                                    {item.topics.slice(0, 2).map((topic) => (
                                         <Badge key={topic.name} color={topic.color as BadgeColor<BadgeTypes>} size="sm">
                                             {topic.name}
                                         </Badge>
                                     ))}
-
-                                    {item.topics.length > 3 && (
+                                    {item.topics.length > 2 && (
                                         <Badge color="gray" size="sm">
-                                            +{item.topics.length - 3}
+                                            +{item.topics.length - 2}
                                         </Badge>
                                     )}
                                 </div>
                             </Table.Cell>
+                            <Table.Cell>
+                                <BadgeWithDot size="sm" color={item.status === "published" ? "success" : "gray"} type="modern">
+                                    {item.status === "published" ? "Published" : "In Progress"}
+                                </BadgeWithDot>
+                            </Table.Cell>
                             <Table.Cell className="px-4">
                                 <div className="flex justify-end gap-0.5">
                                     <ButtonUtility size="xs" color="tertiary" tooltip="Delete" icon={Trash01} />
-                                    <ButtonUtility size="xs" color="tertiary" tooltip="Edit" icon={Edit01} />
+                                    <ButtonUtility size="xs" color="tertiary" tooltip="Edit" icon={Eye} />
                                 </div>
                             </Table.Cell>
                         </Table.Row>

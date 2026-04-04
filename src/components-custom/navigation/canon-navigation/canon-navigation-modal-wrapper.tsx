@@ -63,8 +63,16 @@ export const CanonNavigationModal = () => {
                                 </AriaHeading>
                                 <p className="text-md text-tertiary">Navigate texts in all collections.</p>
                             </div>
-                            <div className="mx-auto w-full overflow-y-auto max-h-full scrollbar-hide flex flex-col gap-0.5 px-4 py-6 sm:px-6 sm:py-6">
+                            <div className="mx-auto w-full overflow-y-auto max-h-full scrollbar-hide flex flex-col flex-1 gap-0.5 px-4 py-6 sm:px-6 sm:py-6">
                                 <CanonTreeViewSM />
+                            </div>
+                            <div className="z-10 flex flex-col gap-3 p-4 pt-4 sm:flex-row sm:items-center sm:justify-end sm:px-4 sm:pt-4 sm:pb-4 bg-tertiary dark:bg-brand-950 border-t border-secondary dark:border-secondary">
+                                <Button color="secondary" size="md">
+                                    Reset session
+                                </Button>
+                                <Button color="primary" size="md" onClick={() => setIsOpen(false)}>
+                                    Save this selection
+                                </Button>
                             </div>
                         </div>
                         {/* Text Listing from Canon Navigator Selections */}
@@ -76,14 +84,6 @@ export const CanonNavigationModal = () => {
                             </div>
                             <div className="mx-auto w-full overflow-y-auto max-h-full scrollbar-hide flex flex-col flex-1 gap-0.5 px-4 sm:px-6 sm:pt-6">
                                 <TextTableAlternatingFills />
-                            </div>
-                            <div className="z-10 flex flex-col gap-3 p-4 pt-4 sm:flex-row sm:items-center sm:justify-end sm:px-4 sm:pt-4 sm:pb-4 bg-tertiary dark:bg-brand-950 border-t border-secondary dark:border-secondary">
-                                <Button color="secondary" size="md">
-                                    Reset session
-                                </Button>
-                                <Button color="primary" size="md" onClick={() => setIsOpen(false)}>
-                                    Save this selection
-                                </Button>
                             </div>
                         </div>
                     </div>
