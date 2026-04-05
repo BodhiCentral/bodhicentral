@@ -71,15 +71,15 @@ export const DropdownMenuResources = ({ onClose }: { onClose?: () => void }) => 
     return (
         <div className="px-3 pb-2 md:max-w-200 md:p-0">
             <nav className="overflow-hidden md:overflow-visible rounded-xl bg-brand-100 dark:bg-brand-900 drop-shadow-lg ring-1 ring-secondary_alt md:rounded-3xl md:drop-shadow-2xl dark:md:drop-shadow-gray-900">
-                <div className="flex flex-col gap-5 rounded-xl bg-brand-25 dark:bg-brand-950 pt-4 pb-5 ring-1 ring-secondary md:gap-8 md:rounded-t-2xl md:p-6 md:pt-5">
+                <div className="flex flex-col gap-5 rounded-xl bg-brand-25 dark:bg-brand-950 pt-4 pb-5 ring-1 ring-secondary md:gap-10 md:rounded-t-2xl md:p-6 md:pt-5">
                     <div className="flex flex-col items-center gap-1 px-4 md:p-0">
-                        <h4 className="pt-4 text-4xl font-light">RESOURCES</h4>
-                        <p className="text-sm text-tertiary">Tools and resources to enhance your studies, research, and practices.</p>
+                        <h4 className="pt-4 text-display-md font-extralight tracking-wide uppercase text-brand-700 dark:text-brand-300">RESOURCES</h4>
+                        <p className="text-sm text-tertiary">Tools and solutions to support your activities and research.</p>
                     </div>
 
                     <div className="flex flex-col gap-5 md:flex-row md:gap-8 md:py-0">
                         <div className="-mb-px flex flex-col gap-4 border-b border-b-secondary px-4 pb-5 md:mb-0 md:gap-5 md:border-none md:p-0">
-                            <h3 className="text-sm font-semibold text-brand-700 dark:text-brand-300">Quick Help Links</h3>
+                            <h3 className="text-md font-semibold text-brand-600 dark:text-brand-400">Quick Help Links</h3>
                             <ul className="flex flex-col gap-3">
                                 {[
                                     { title: "Using your Desk", href: "#" },
@@ -87,7 +87,7 @@ export const DropdownMenuResources = ({ onClose }: { onClose?: () => void }) => 
                                     { title: "Managa storage", href: "#" },
                                 ].map((item) => (
                                     <li key={item.title}>
-                                        <Button href={item.href} color="link-gray" size="lg" onPress={onClose}>
+                                        <Button href={item.href} color="link-gray" size="md" onPress={onClose}>
                                             {item.title}
                                         </Button>
                                     </li>
@@ -98,7 +98,7 @@ export const DropdownMenuResources = ({ onClose }: { onClose?: () => void }) => 
                         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-2">
                             {columns.map((column) => (
                                 <div key={column.title}>
-                                    <h3 className="mb-2 px-4 text-sm font-semibold text-brand-700 dark:text-brand-300 md:px-0">{column.title}</h3>
+                                    <h3 className="mb-2 px-4 text-md font-semibold text-brand-600 dark:text-brand-400">{column.title}</h3>
                                     <ul className="flex flex-col gap-0.5">
                                         {column.items.map(({ title, subtitle, href, Icon }) => (
                                             <li key={title}>
@@ -113,7 +113,7 @@ export const DropdownMenuResources = ({ onClose }: { onClose?: () => void }) => 
                 </div>
 
                 <div className="mx-auto flex max-w-container flex-col px-4 py-5 md:flex-row md:items-center md:justify-between md:px-6">
-                    <Button href="#" color="secondary" size="md" iconLeading={BookOpen01} className="hidden md:flex" onPress={onClose}>
+                    <Button href="/dashboard" color="secondary" size="md" iconLeading={BookOpen01} className="hidden md:flex" onPress={onClose}>
                         Dashboard
                     </Button>
                     <Button href="/my-desk" color="primary" size="md" className="hidden md:flex" onPress={onClose}>

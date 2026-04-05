@@ -180,19 +180,94 @@
     --color-alpha-white: rgb(255 255 255);
     --color-alpha-black: rgb(0 0 0);
 
-    /* BRAND COLORS */
-    --color-brand-25: var(--color-orange-dark-25);
-    --color-brand-50: var(--color-orange-dark-50);
-    --color-brand-100: var(--color-orange-dark-100);
-    --color-brand-200: var(--color-orange-dark-200);
-    --color-brand-300: var(--color-orange-dark-300);
-    --color-brand-400: var(--color-orange-dark-400);
-    --color-brand-500: var(--color-orange-dark-500);
-    --color-brand-600: var(--color-orange-dark-600);
-    --color-brand-700: var(--color-orange-dark-700);
-    --color-brand-800: var(--color-orange-dark-800);
-    --color-brand-900: var(--color-orange-dark-900);
-    --color-brand-950: var(--color-orange-dark-950);
+    /* BRAND PALETTE EXPERIMENTATIONS */
+
+    /* Brand Cream Colors */
+
+    --color-cream-50: #ffffff;
+    --color-cream-100: oklch(0.992 0.002 67.9);
+    --color-cream-200: oklch(0.983 0.005 78.25);
+    --color-cream-300: oklch(0.974 0.007 80.68);
+    --color-cream-400: oklch(0.974 0.007 80.68);
+    --color-cream-500: oklch(0.966 0.009 78.25);
+    --color-cream-600: oklch(0.957 0.012 79.76); /* Base cream color */
+    --color-cream-700: oklch(0.75 0.041 82.27);
+    --color-cream-800: oklch(0.542 0.03 82.27);
+    --color-cream-900: oklch(0.344 0.019 80.52);
+    --color-cream-950: oklch(0.242 0.013 78.01);
+
+    /* Brand Warm Off Colors */
+
+    --color-warm-off-50: oklch(0.992 0.002 67.9);
+    --color-warm-off-100: oklch(0.992 0.002 67.9);
+    --color-warm-off-200: oklch(0.974 0.006 84.48);
+    --color-warm-off-300: oklch(0.965 0.007 80.68);
+    --color-warm-off-400: oklch(0.956 0.01 87.41);
+    --color-warm-off-500: oklch(0.94 0.015 90.19);
+    --color-warm-off-600: oklch(0.932 0.017 87.97); /* Base warm off color */
+    --color-warm-off-700: oklch(0.733 0.025 88.25);
+    --color-warm-off-800: oklch(0.535 0.019 91.65);
+    --color-warm-off-900: oklch(0.336 0.012 93.78);
+    --color-warm-off-950: oklch(0.24 0.008 84.57);
+
+    /* Brand Ink Colors */
+
+    --color-ink-50: oklch(0.931 0.009 62.61);
+    --color-ink-100: oklch(0.873 0.019 67.57);
+    --color-ink-200: oklch(0.734 0.026 65.45);
+    --color-ink-300: oklch(0.604 0.022 64.93);
+    --color-ink-400: oklch(0.476 0.018 70.65);
+    --color-ink-500: oklch(0.337 0.013 67.35);
+    --color-ink-600: oklch(0.207 0.008 67.39); /* Base ink color */
+    --color-ink-700: oklch(0.189 0.008 67.33);
+    --color-ink-800: oklch(0.165 0.007 78.09);
+    --color-ink-900: oklch(0.131 0.005 51.39);
+    --color-ink-950: oklch(0.106 0.004 107.07);
+
+    /* Brand Gold Colors */
+
+  --color-gold-25: oklch(0.966 0.008 73.73);
+    --color-gold-50: oklch(0.973 0.007 88.55);
+  --color-gold-100: oklch(0.945 0.014 78.24);
+  --color-gold-200: oklch(0.89 0.028 78.17);
+  --color-gold-300: oklch(0.837 0.041 79.42);
+  --color-gold-400: oklch(0.781 0.055 78.86);
+  --color-gold-500: oklch(0.724 0.07 78.26);
+  --color-gold-600: oklch(0.664 0.083 77.4);
+  --color-gold-700: oklch(0.545 0.069 77.21);
+  --color-gold-800: oklch(0.411 0.051 77.18);
+  --color-gold-900: oklch(0.266 0.029 79.78);
+  --color-gold-950: oklch(0.177 0.014 71.76);
+
+
+    /* Brand Muted Colors */ 
+
+    --color-muted-50: oklch(0.965 0.003 67.83);
+    --color-muted-100: oklch(0.922 0.009 62.61);
+    --color-muted-200: oklch(0.854 0.019 67.57);
+    --color-muted-300: oklch(0.777 0.025 69.52);
+    --color-muted-400: oklch(0.7 0.022 67.45);
+    --color-muted-500: oklch(0.63 0.02 64.77);
+    --color-muted-600: oklch(0.554 0.018 67.45);
+    --color-muted-700: oklch(0.45 0.014 67.45);
+    --color-muted-800: oklch(0.344 0.011 67.45);
+    --color-muted-900: oklch(0.242 0.007 67.47);
+    --color-muted-950: oklch(0.188 0.005 67.51);
+
+
+    /* BRAND COLORS - Experimental swap Orange Dark with Gold */ 
+    --color-brand-25: var(--color-gold-25);
+    --color-brand-50: var(--color-gold-50);
+    --color-brand-100: var(--color-gold-100);
+    --color-brand-200: var(--color-gold-200);
+    --color-brand-300: var(--color-gold-300);
+    --color-brand-400: var(--color-gold-400);
+    --color-brand-500: var(--color-gold-500);
+    --color-brand-600: var(--color-gold-600);
+    --color-brand-700: var(--color-gold-700);
+    --color-brand-800: var(--color-gold-800);
+    --color-brand-900: var(--color-gold-900);
+    --color-brand-950: var(--color-gold-950);
 
     /* ORANGE DARK COLORS (Untitled UI) Base for the Brand */
     --color-orange-dark-25: rgb(255 249 245);

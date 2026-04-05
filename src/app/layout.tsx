@@ -25,11 +25,11 @@ const tibetan = Noto_Serif_Tibetan({
 
 export const metadata: Metadata = {
     title: "Bodhi Central — Buddhist Paths",
-    description: "Gateways to Buddhist study and practice.",
+    description: "Gateways to the Awakening.",
 };
 
 export const viewport: Viewport = {
-    themeColor: "#7f56d9",
+    themeColor: "--color-brand-primary",
     colorScheme: "light dark",
 };
 

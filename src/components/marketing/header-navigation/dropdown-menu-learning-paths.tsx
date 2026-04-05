@@ -65,15 +65,15 @@ export const DropdownMenuLearningPaths = ({ onClose }: { onClose?: () => void })
     return (
         <div className="px-3 pb-2 md:max-w-200 md:p-0">
             <nav className="overflow-hidden md:overflow-visible rounded-xl bg-brand-100 dark:bg-brand-900 drop-shadow-lg ring-1 ring-secondary_alt md:rounded-3xl md:drop-shadow-2xl dark:md:drop-shadow-gray-900">
-                <div className="flex flex-col gap-5 rounded-xl bg-brand-25 dark:bg-brand-950 pt-4 ring-1 ring-secondary md:gap-8 md:rounded-t-2xl md:p-6 md:pt-5">
+                <div className="flex flex-col gap-5 rounded-xl bg-brand-25 dark:bg-brand-950 pt-4 ring-1 ring-secondary md:gap-10 md:rounded-t-2xl md:p-6 md:pt-5">
                     <div className="flex flex-col items-center gap-1 px-4 md:p-0">
-                        <h4 className="pt-4 text-4xl font-light">STUDY and PRACTICE</h4>
-                        <p className="text-sm text-tertiary">Pathways of Buddhist study and practice to transform our modern societies.</p>
+                        <h4 className="pt-4 text-display-md font-extralight tracking-wide uppercase text-brand-700 dark:text-brand-300">STUDY & PRACTICE</h4>
+                        <p className="text-sm text-tertiary">Learning paths of Buddhist study and practice to transform our modern societies.</p>
                     </div>
 
                     <div className="flex flex-col gap-5 md:flex-row md:gap-8 md:py-0">
                         <div className="-mb-px flex flex-col gap-4 border-b border-b-secondary px-4 pb-5 md:mb-0 md:gap-5 md:border-none md:p-0">
-                            <h3 className="text-sm font-semibold text-brand-700 dark:text-brand-300">Quick Links</h3>
+                            <h3 className="text-md font-semibold text-brand-600 dark:text-brand-400">Quick Links</h3>
                             <ul className="flex flex-col gap-3">
                                 {[
                                     { title: "New Additions", href: "#" },
@@ -81,7 +81,7 @@ export const DropdownMenuLearningPaths = ({ onClose }: { onClose?: () => void })
                                     { title: "Desk Preferences", href: "/my-desk-preferences" },
                                 ].map((item) => (
                                     <li key={item.title}>
-                                        <Button href={item.href} color="link-gray" size="lg" onPress={onClose}>
+                                        <Button href={item.href} color="link-gray" size="md" onPress={onClose}>
                                             {item.title}
                                         </Button>
                                     </li>
@@ -92,7 +92,7 @@ export const DropdownMenuLearningPaths = ({ onClose }: { onClose?: () => void })
                         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-2">
                             {columns.map((column) => (
                                 <div key={column.title}>
-                                    <h3 className="mb-2 px-4 text-sm font-semibold text-brand-700 dark:text-brand-300 md:px-0">{column.title}</h3>
+                                    <h3 className="mb-2 px-4 text-md font-semibold text-brand-600 dark:text-brand-400">{column.title}</h3>
                                     <ul className="flex flex-col gap-0.5">
                                         {column.items.map(({ title, subtitle, href, Icon }) => (
                                             <li key={title}>

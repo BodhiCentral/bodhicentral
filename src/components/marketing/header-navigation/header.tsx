@@ -117,13 +117,13 @@ export const Header = ({ items = headerNavItems, isFullWidth, isFloating, classN
         <header
             ref={headerRef}
             className={cx(
-                "sticky top-0 z-500 flex h-16 w-full items-center justify-center border-secondary border-b bg-bg-secondary/96 dark:bg-bg-secondary/90 backdrop-blur-lg md:h-16 shadow-lg shadow-black-400/50 dark:shadow-black/40",
-                isFloating && "h-16 md:h-16 md:pt-2",
+                "fixed top-0 z-500 flex h-15 w-full items-center justify-center border-ink-500/50 border-b bg-ink-600/90 dark:bg-ink-600/80 backdrop-blur-lg md:h-15 shadow-md shadow-ink-800/20 dark:shadow-ink-800/20",
+                isFloating && "h-15 md:h-15 md:pt-2",
                 isFullWidth && !isFloating ? "has-aria-expanded:bg-primary" : "max-md:has-aria-expanded:bg-primary",
                 className,
             )}
         >
-            <div className="flex size-full w-full flex-1 items-center pr-3 pl-4 md:px-5">
+            <div className="flex size-full w-full flex-1 items-center pr-3 pl-4 md:px-8">
                 <div
                     className={cx(
                         "flex w-full justify-between gap-4",
@@ -132,9 +132,11 @@ export const Header = ({ items = headerNavItems, isFullWidth, isFloating, classN
                 >
                     <div className="flex items-center gap-8">
                         {/* LOGO */}
-                        <Link href="/" aria-label="Bodhicentral Home page" className="flex items-center outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2">
-                            <BodhicentralLogo className="h-9 md:max-lg:hidden" />
-                            <BodhicentralLogoMinimal className="hidden h-9 md:inline-block lg:hidden" />
+                        <Link href="/" aria-label="Bodhicentral Home page" className="flex items-center outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2 gap-2">
+                            <span className="text-2xl font-serif font-light uppercase tracking-wide text-white">Bodhi</span>
+                            <span className="text-2xl font-serif font-light uppercase tracking-wide text-brand-600">Central</span>
+                            <BodhicentralLogo className="hidden h-8 md:max-lg:hidden" />
+                            <BodhicentralLogoMinimal className="hidden h-8 md:inline-block lg:hidden" />
                         </Link>
 
 
@@ -146,7 +148,7 @@ export const Header = ({ items = headerNavItems, isFullWidth, isFloating, classN
                                 <li key={navItem.label}>
                                     {navItem.menu ? (
                                         <AriaDialogTrigger>
-                                            <AriaButton className="flex cursor-pointer items-center gap-0.5 rounded-lg px-1.5 py-1 text-md font-semibold text-secondary outline-focus-ring transition duration-100 ease-linear hover:text-brand-secondary_hover aria-expanded:text-brand-secondary focus-visible:outline-2 focus-visible:outline-offset-2">
+                                            <AriaButton className="flex cursor-pointer items-center gap-0.5 rounded-lg px-1.5 py-1 text-xs font-normal uppercase tracking-wide text-brand-200 outline-focus-ring transition duration-100 ease-linear hover:text-brand-secondary_hover aria-expanded:text-brand-secondary focus-visible:outline-2 focus-visible:outline-offset-2">
                                                 <span className="px-0.5">{navItem.label}</span>
 
                                                 <ChevronDown className="size-4 rotate-0 stroke-[2.625px] text-fg-quaternary transition duration-100 ease-linear in-aria-expanded:-rotate-180 in-aria-expanded:text-brand-secondary" />

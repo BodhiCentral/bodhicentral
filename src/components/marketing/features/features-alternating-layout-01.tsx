@@ -26,7 +26,9 @@ const AlternateImageMockup: FC<HTMLAttributes<HTMLDivElement>> = (props) => {
 
 export const FeaturesAlternatingLayout01 = () => {
     return (
-        <section className="flex flex-col gap-12 overflow-hidden bg-primary py-16 sm:gap-16 md:gap-20 md:py-24 lg:gap-24">
+        <section className="relative flex flex-col gap-12 overflow-hidden bg-primary py-16 sm:gap-16 md:gap-20 md:py-24 lg:gap-24">
+            <div className="absolute h-6 top-0 left-0 right-0 mx-auto bg-[url(/patterns/detailed-endless-band-gold-140px.png)] bg-contain bg-repeat opacity-50 dark:opacity-40">
+            </div>
             <div className="mx-auto w-full max-w-container px-4 md:px-8">
                 <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
                     <span className="text-sm font-semibold text-brand-600 dark:text-brand-700 md:text-md">The Three Pillars</span>
