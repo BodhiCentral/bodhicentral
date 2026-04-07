@@ -175,7 +175,7 @@ const footerSocials = [
 export const FooterLarge10 = () => {
     return (
         <footer className="relative bg-bg-secondary py-12 md:pt-16">
-            <Image className="absolute bottom-28 right-0 opacity-7 mask-l-from-10%" src="/ornaments/tibetan-artline-clouds-and-hills.png" alt="Tibetan artline clouds and hills" width={850} height={850} />
+            <Image className="absolute bottom-24 right-0 opacity-7 mask-l-from-15%" src="/ornaments/tibetan-artline-clouds-and-hills.png" alt="Tibetan artline clouds and hills" width={750} height={750} />
             <div className="mx-auto max-w-container px-4 md:px-8">
 
 
@@ -196,9 +196,11 @@ export const FooterLarge10 = () => {
 
                 {/* Footer Nav */}
                 <div className="mt-12 flex flex-col gap-12 md:mt-16 md:gap-16 xl:flex-row">
-                    <div className="flex flex-col gap-6 md:w-64 md:gap-8">
-                        <Link href="/" aria-label="Bodhicentral Home page" className="flex w-min items-center outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2">
-                            <BodhicentralLogo className="h-14 w-min shrink-0" />
+                    <div className="flex flex-col gap-3 md:w-64 md:gap-4">
+                        <Link href="/" aria-label="Bodhicentral Home page" className="flex w-min items-center outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2 gap-2">
+                            <span className="text-3xl font-serif font-extralight uppercase tracking-wide  text-primary">Bodhi</span>
+                            <span className="text-3xl font-serif font-extralight uppercase tracking-wide text-brand-600">Central</span>
+                            <BodhicentralLogo className="hidden h-14 w-min shrink-0" />
                         </Link>
                         <p className="text-md text-tertiary">A modern platform of universally revered Buddhist texts and accessible paths of study and practice.</p>
                     </div>
