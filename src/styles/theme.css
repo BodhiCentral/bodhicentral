@@ -1,7 +1,7 @@
 @theme {
     /* FONT FAMILY */
     /* FONT FAMILY */
-    --font-body: var(--font-nunito, "Nunito"), -apple-system, "Segoe UI", Verdana, sans-serif;
+    --font-sans: var(--font-nunito, "Nunito"), -apple-system, "Segoe UI", Verdana, sans-serif;
     --font-display: var(--font-roboto-serif, "RobotoSerif"), -apple-system, "Segoe UI", Times, Georgia, serif;
     --font-serif: var(--font-crimson-pro, "CrimsonPro"), -apple-system, "Segoe UI", Times, Georgia, serif;
     --font-mono: ui-monospace, "Roboto Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -69,7 +69,7 @@
     --text-display-md--letter-spacing: -0.72px;
 
     --text-display-lg: calc(var(--spacing) * 12);
-    --text-display-lg--line-height: calc(var(--spacing) * 15);
+    --text-display-lg--line-height: calc(var(--spacing) * 14);
     --text-display-lg--letter-spacing: -0.96px;
 
     --text-display-xl: calc(var(--spacing) * 15);

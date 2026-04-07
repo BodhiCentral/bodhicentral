@@ -3,7 +3,7 @@
 import type { FC, ReactNode } from "react";
 import { BookOpen01, LifeBuoy01, PlayCircle, FileQuestion01, UsersPlus, Building08, Certificate02 } from "@untitledui/icons";
 import { Button } from "@/components/base/buttons/button";
-import { NavMenuItemLink } from "./base-components/nav-menu-item";
+import { NavMenuItemLink } from "@/components/marketing/header-navigation/base-components/nav-menu-item";
 
 type MenuItem = {
     title: string;

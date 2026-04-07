@@ -12,54 +12,33 @@ import { cx } from "@/utils/cx";
 import { isReactComponent } from "@/utils/is-react-component";
 import { CollectionGalleryVinayaPitaka } from "@/components/marketing/collection-sections/collection-gallery-vinaya-pitaka";
 import Image from 'next/image';
+import { ArticleHeaderSection } from "@/components-custom/blog/article-header-section"
 
 
-
-
-const ContentSplitImage01 = () => {
+const ArticleOverview = () => {
     const { copied, copy } = useClipboard();
 
     return (
         <div className="bg-primary">
             {/* Article Header */}
-            <div className="relative mx-auto flex max-w-container flex-col items-center px-4 py-16 md:flex-row md:px-8 md:pt-16 md:pb-24">
-                <div className="flex max-w-160 flex-col items-start md:absolute">
-                    <BadgeGroup size="md" addonText="Vinaya Piṭaka" color="brand" theme="light" className="pr-3" iconTrailing={null}>
-                        10 min read
-                    </BadgeGroup>
-                    <h1 className="mt-4 text-display-md font-semibold text-primary md:text-display-xl">The Monastic Law: how monastic communities should live</h1>
-                    <p className="mt-4 max-w-140 text-lg text-tertiary md:mt-6 md:text-xl">
-                        The Vinaya Piṭaka, the “Basket of Monastic Law”, contains the rules that are binding on monastics and the regulations that apply to monastic communities.
-                    </p>
+            <ArticleHeaderSection
+                badge_addon_text="Vinaya Piṭaka"
+                badge_text="20 min read"
+                article_headline="The Monastic Law:"
+                article_headline_span="How Monastic Communities Should Live"
+                article_subheadline="The Vinaya Piṭaka, the “Basket of Monastic Law”, contains the rules that are binding on monastics and the regulations that apply to monastic communities."
+                author_name="Bhikkhu Sujato"
+                author_caption="Article courtesy of SuttaCentral"
+                author_image="/people/bhikku-sujato-close-up.jpg"
+                author_image_alt="Bhikkhu Sujato"
+                article_image="/monk-seated-in-meditation-under-forest-tree-1920.webp"
+                article_image_alt="Monk meditating under a tree"
+                article_ornament_image="/ornaments/golden-wheel.png"
+                article_ornament_image_alt="Article Ornament"
+            />
 
-                    <div className="mt-8 flex items-center gap-3 md:mt-12">
-                        <Image
-                            src="/people/bhikku-sujato-close-up.jpg"
-                            className="size-12 rounded-full object-cover"
-                            alt="Bhikkhu Sujato"
-                         width={800} height={800} />
-                        <div>
-                            <p className="text-md font-semibold text-primary">Bhikkhu Sujato</p>
-                            <p className="text-md text-tertiary">Published by SuttaCentral</p>
-                        </div>
-                    </div>
-                </div>
-
-                <Image
-                    className="mt-16 h-100 w-full object-cover object-center rounded-3xl md:mt-0 md:ml-auto md:h-180 md:w-140 md:max-w-[50vw] drop-shadow-2xl"
-                    src="/monk-seated-in-meditation-under-forest-tree-1920.webp"
-                    alt="Good Leadership"
-                 width={800} height={800} />
-                {/* Background Image - Rainbow Light Accent */}
-                <Image
-                    alt="Light Accent"
-                    aria-hidden="true"
-                    src="https://www.untitledui.com/marketing/light-accent.webp"
-                    className="absolute z-20 -right-1/3 bottom-1/2 max-w-160 opacity-50 dark:opacity-40 mix-blend-multiple md:right-8 md:-bottom-1/6 md:max-w-7xl mask-b-from-90% mask-b-to-100% scale-x-[-1]"
-                 width={400} height={400} />
-            </div>
             {/* Main content */}
-            <div className="mx-auto max-w-container px-4 pb-16 md:px-8 md:pb-24">
+            <section className="mx-auto max-w-container px-4 pb-16 md:px-8 md:pb-24">
                 <div className="mx-auto flex justify-center gap-16">
                     {/* Table of contents */}
                     <div className="sticky top-[120px] hidden h-fit w-80 self-start flex-col gap-8 md:flex">
@@ -97,7 +76,7 @@ const ContentSplitImage01 = () => {
                     {/* Article content */}
                     <div className="max-w-prose md:max-w-full">
                         <div className="mx-auto prose md:prose-lg">
-                            <p className="lead first-letter:float-left first-letter:text-7xl first-letter:leading-12 first-letter:mr-2 first-letter:font-serif first-letter:font-extralight first-letter:text-brand-800 dark:first-letter:text-brand-200">
+                            <p className="lead first-letter:float-left first-letter:text-7xl first-letter:leading-12 first-letter:mr-2 first-letter:font-serif first-letter:font-extralight first-letter:text-brand-600 dark:first-letter:text-brand-300">
                                 The Monastic Law is available in more recensions than any other part of the Tipiṭaka. There is a full version in Pali, and four complete versions extant in Chinese translation, all belonging to different schools of early Buddhism: Mahāsāṅghika, Dharmaguptaka, Mahīśāsaka, and Sarvāstivāda. The Chinese Tipiṭaka also preserves other Vinaya related texts, such as an independent <i>bhikkhu pātimokkha</i> of the Kāśyapīya School and several more or less school-specific Vinaya texts. The Vinaya of the Mūlasarvāstivāda school exists in three versions: a complete text in Tibetan translation, a mostly complete version in Chinese, and substantial portions in Sanskrit. There are also several Vinaya texts, as well as a large number of fragments, in Sanskrit and other Indic languages, mostly of Mahāsāṅghika, Sarvāstivāda, and Mūlasarvāstivāda provenance.
                             </p>
                             <hr />
@@ -115,7 +94,7 @@ const ContentSplitImage01 = () => {
                                 The exact cut-off point after which no new material was added to the Canonical Vinaya is impossible to pin down and it would have varied from school to school. On linguistic grounds, it seems likely that the majority of additions to the Pali Vinaya, with the exception of the Parivāra, were done prior to its arrival in Sri Lanka in the third century BCE. After this point new material was added to the commentarial literature, which, despite its likely origin in the mainland, was greatly expanded and developed in Sri Lanka.
                             </p>
                             <figure>
-                                <Image className="h-60 md:h-120" src="/content/jambudipa-c-500-bce-1600px.jpg" alt="Jambudipa Map c. 500 BCE"  width={400} height={400} />
+                                <Image className="h-60 md:h-120" src="/content/jambudipa-c-500-bce-1600px.jpg" alt="Jambudipa Map c. 500 BCE" width={400} height={400} />
                                 <figcaption>
                                     Map of Jambudīpa is courtesy of Jonas David Mitja Lang via {" "}
                                     <a
@@ -137,7 +116,7 @@ const ContentSplitImage01 = () => {
                                         src="/people/bhikku-sujato-close-up.jpg"
                                         className="size-12 rounded-full object-cover"
                                         alt="Bhikkhu Sujato"
-                                     width={800} height={800} />
+                                        width={800} height={800} />
                                     <div>
                                         <p className="text-md font-semibold text-primary">Bhikkhu Sujato</p>
                                         <cite className="text-md text-tertiary not-italic">Co-founder of SuttaCentral</cite>
@@ -278,7 +257,7 @@ const ContentSplitImage01 = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
     );
 };
@@ -309,7 +288,7 @@ const BlogPost05 = () => {
     return (
         <div className="bg-primary">
 
-            <ContentSplitImage01 />
+            <ArticleOverview />
 
             <SectionDivider className="hidden pt-16 md:pt-24" />
 

@@ -77,8 +77,8 @@ export const HomeScreen = () => {
                             <div className="eyebrow-line"></div>
                             <div className="eyebrow-text">Buddhist Paths & Scriptures</div>
                         </div>
-                        <h1 className="hero-headline text-display-md font-extralight text-white md:text-display-xl lg:text-display-3xl text-shadow-md text-shadow-gray-700 dark:text-shadow-gray-950">
-                            Gateways to <br /> the <span className="lg:text-display-4xl italic text-brand-400 dark:text-brand-500"><em>Awakening</em></span>
+                        <h1 className="hero-headline text-display-lg md:text-display-xl lg:text-display-4xl font-extralight text-white text-shadow-md text-shadow-gray-700 dark:text-shadow-gray-950">
+                            Gateways to <br /> the <span className="text-brand-500">Awakening</span>
                         </h1>
                         <p className="hero-sub mt-4 max-w-xs sm:max-w-sm md:max-w-xl text-lg text-balance text-brand-200 dark:text-brand-100 md:mt-6 md:text-xl">
                             A modern platform channeling universally revered Buddhist teachings and practical knowledge — for every sincere seeker on the path.{" "}

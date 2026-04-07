@@ -12,51 +12,33 @@ import { cx } from "@/utils/cx";
 import { isReactComponent } from "@/utils/is-react-component";
 import { CollectionGallerySuttaPitaka } from "@/components/marketing/collection-sections/collection-gallery-sutta-pitaka";
 import Image from 'next/image';
+import { ArticleHeaderSection } from "@/components-custom/blog/article-header-section"
 
 
 
 
-const ContentSplitImage01 = () => {
+const ArticleOverview = () => {
     const { copied, copy } = useClipboard();
 
     return (
         <div className="bg-primary">
-            <div className="relative mx-auto flex max-w-container flex-col items-center px-4 py-16 md:flex-row md:px-8 md:pt-16 md:pb-24">
-                <div className="flex max-w-160 flex-col items-start md:absolute">
-                    <BadgeGroup size="md" addonText="Sutta Piṭaka" color="brand" theme="light" className="pr-3" iconTrailing={null}>
-                        18 min read
-                    </BadgeGroup>
-                    <h1 className="mt-4 text-display-md font-semibold text-primary md:text-display-xl text-balance">Discourses: conversations with the Buddha</h1>
-                    <p className="mt-4 max-w-140 text-lg text-tertiary md:mt-6 md:text-xl">
-                        The Sutta Piṭaka, the “Basket of Discourses”, contains the teachings of the Buddha, as they were preserved and transmitted by early Buddhist communities.
-                    </p>
+            {/* Article Header */}
+            <ArticleHeaderSection
+                badge_addon_text="Sutta Piṭaka"
+                badge_text="18 min read"
+                article_headline="Discourses:"
+                article_headline_span="Conversations with the Buddha"
+                article_subheadline="The Sutta Piṭaka, the “Basket of Discourses”, contains the teachings of the Buddha, as they were preserved and transmitted by early Buddhist communities."
+                author_name="Bhikkhu Sujato"
+                author_caption="Article courtesy of SuttaCentral"
+                author_image="/people/bhikku-sujato-close-up.jpg"
+                author_image_alt="Bhikkhu Sujato"
+                article_image="/golden-buddha-faces.jpg"
+                article_image_alt="Golden Buddha faces"
+                article_ornament_image="/ornaments/golden-wheel.png"
+                article_ornament_image_alt="Article Ornament"
+            />
 
-                    <div className="mt-8 flex items-center gap-3 md:mt-12">
-                        <Image
-                            src="/people/bhikku-sujato-close-up.jpg"
-                            className="size-12 rounded-full object-cover"
-                            alt="Bhikkhu Sujato"
-                         width={800} height={800} />
-                        <div>
-                            <p className="text-md font-semibold text-primary">Bhikkhu Sujato</p>
-                            <p className="text-md text-tertiary">Published by SuttaCentral</p>
-                        </div>
-                    </div>
-                </div>
-
-                <Image
-                    className="mt-16 h-100 w-full object-cover object-right rounded-3xl md:mt-0 md:ml-auto md:h-180 md:w-140 md:max-w-[50vw] drop-shadow-2xl"
-                    src="/golden-buddha-faces.jpg"
-                    alt="Golden Buddha faces"
-                 width={800} height={800} />
-                {/* Background Image - Rainbow Light Accent */}
-                <Image
-                    alt="Light Accent"
-                    aria-hidden="true"
-                    src="https://www.untitledui.com/marketing/light-accent.webp"
-                    className="absolute z-20 -right-1/3 bottom-1/2 max-w-160 opacity-50 dark:opacity-40 mix-blend-multiple md:right-8 md:-bottom-1/6 md:max-w-7xl mask-b-from-90% mask-b-to-100% scale-x-[-1]"
-                 width={400} height={400} />
-            </div>
             {/* Main content */}
             <div className="mx-auto max-w-container px-4 pb-16 md:px-8 md:pb-24">
                 <div className="mx-auto flex justify-center gap-16">
@@ -118,7 +100,7 @@ const ContentSplitImage01 = () => {
                                 The texts would have originally been in a Prākrit, that is, a dialect of Middle Indo-Aryan closely related to Sanskrit. The exact form of Prākrit is unknown, and indeed it may not have been entirely standardized, since monastics from the earliest times were using different dialects. Indications in the Pali texts suggest that they were derived from an earlier version in Māgadhī, that is, the language of the kingdom of Magadha. It appears that they were standardized in later centuries to a dialect similar to that used widely across central India for inscriptions, with a partial Sanskritization. Nevertheless, these languages differ mostly in phonology, and apart from a few edge cases, changes from one form to another do not affect the meaning.
                             </p>
                             <figure>
-                                <Image className="h-60 md:h-120" src="/jetavanaramaya-scene-01.jpg" alt="Jetavanaramaya Scene."  width={400} height={400} />
+                                <Image className="h-60 md:h-120" src="/jetavanaramaya-scene-01.jpg" alt="Jetavanaramaya Scene." width={400} height={400} />
                                 <figcaption>
                                     Image courtesy of Rafael Ortet via{" "}
                                     <a
@@ -194,7 +176,7 @@ const ContentSplitImage01 = () => {
                                         src="/collections_thumbnails_sakya.jpg"
                                         className="size-12 rounded-full object-cover"
                                         alt="Olivia Rhye"
-                                     width={800} height={800} />
+                                        width={800} height={800} />
                                     <div>
                                         <p className="text-md font-semibold text-primary">Bhikkhu Sujato</p>
                                         <cite className="text-md text-tertiary not-italic">Co-founder of SuttaCentral</cite>
@@ -408,7 +390,7 @@ const BlogPost05 = () => {
     return (
         <div className="bg-primary">
 
-            <ContentSplitImage01 />
+            <ArticleOverview />
 
             <SectionDivider className="hidden pt-16 md:pt-24" />
 

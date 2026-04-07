@@ -7,7 +7,7 @@ import { Button as AriaButton, Dialog as AriaDialog, DialogTrigger as AriaDialog
 import { Button } from "@/components/base/buttons/button";
 import { BodhicentralLogoMinimal } from "@/components/foundations/logo/bodhicentral-logo-minimal";
 import { Breadcrumbs } from "@/components/application/breadcrumbs/breadcrumbs";
-import { DropdownMenuMyDesk } from "@/components/marketing/header-navigation/dropdown-menu-my-desk";
+import { DropdownMenuMyDesk } from "@/components-custom/navigation/navigation-menu/dropdown-menu-my-desk";
 import Link from "next/link";
 import { ThemeToggle } from "@/components/application/theme-toggle";
 import { cx } from "@/utils/cx";

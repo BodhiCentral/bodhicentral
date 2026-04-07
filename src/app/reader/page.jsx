@@ -300,7 +300,7 @@ export default function ReaderPage() {
 
 
             {/* The MAIN Reader wrapper */}
-            <main className="mx-auto w-full bg-olive-200 dark:bg-black">
+            <main className="mx-auto w-full bg-olive-200 dark:bg-black -mt-3">
 
 
                 {/* TODO: Implement a dynamic Modal for canonical navigation using the imported CanonNavigationModal component */}

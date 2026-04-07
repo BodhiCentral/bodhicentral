@@ -43,7 +43,7 @@ export const FeaturesAlternatingLayout01 = () => {
                 <div className="grid grid-cols-1 gap-10 md:gap-20 lg:grid-cols-2 lg:gap-24">
                     <div className="max-w-xl flex-1 self-center">
                         <FeaturedIcon icon={BookOpen01} size="lg" color="gray" theme="modern-neue" />
-                        <h3 className="mt-5 text-display-xs text-primary dark:text-brand-200 md:text-display-md">Kindful Scriptures</h3>
+                        <h3 className="mt-5 text-display-xs text-brand-800 dark:text-brand-400 md:text-display-lg">Kindful Scriptures</h3>
                         <p className="mt-2 text-md text-tertiary md:mt-4 md:text-lg">
                             Whether you are already studying and practicing a Buddhist path, or exploring what Buddha's teachings mean to you, we have gathered teachings from genuine streams of Buddhism with a pragmatic approach:
                         </p>
@@ -53,11 +53,11 @@ export const FeaturesAlternatingLayout01 = () => {
                                 "Texts organized by vehicles, genres, and schools of study and practice, for everyone",
                                 "State-of-the-art readers and personal workspaces to make your experience smooth and memorable",
                             ].map((feat) => (
-                                <CheckItemText key={feat} size="md" iconStyle="outlined" color="primary" text={feat} />
+                                <CheckItemText key={feat} size="sm" iconStyle="outlined" color="primary" text={feat} />
                             ))}
                         </ul>
                         <Button href="/scripture/collections" color="secondary" size="md" className="relative z-100 mt-8 cursor-pointer">
-                            Explore all texts
+                            Explore collections
                         </Button>
                     </div>
 
@@ -89,7 +89,7 @@ export const FeaturesAlternatingLayout01 = () => {
                 <div className="grid grid-cols-1 gap-10 md:gap-20 lg:grid-cols-2 lg:gap-24">
                     <div className="max-w-xl flex-1 self-center lg:order-last">
                         <FeaturedIcon icon={TrendUp01} size="lg" color="gray" theme="modern-neue" />
-                        <h3 className="mt-5 text-display-xs text-primary dark:text-brand-200 md:text-display-md">Paths of Study and Practice</h3>
+                        <h3 className="mt-5 text-display-xs text-brand-800 dark:text-brand-400 md:text-display-lg">Paths of Study and Practice</h3>
                         <p className="mt-2 text-md text-tertiary md:mt-4 md:text-lg">
                             Finding digital Buddha's teachings has never been easier. Yet, navigating and making sense of the vast amount of literature and teachings available today can be overwhelming and complicated without good guidance:
                         </p>
@@ -99,11 +99,11 @@ export const FeaturesAlternatingLayout01 = () => {
                                 "Go deeper with academic paths (systematic learning), with trustworthy companions for in-depth study of the Dharma",
                                 "Engage in contemplative practice paths (samatha, vipassana, mind-training, paramitas, etc.) brought to you by genuine living Buddhist teachings to support your progress",
                             ].map((feat) => (
-                                <CheckItemText key={feat} size="md" iconStyle="outlined" color="primary" text={feat} />
+                                <CheckItemText key={feat} size="sm" iconStyle="outlined" color="primary" text={feat} />
                             ))}
                         </ul>
                         <Button href="/learning-paths" color="secondary" size="md" className="mt-8 cursor-pointer">
-                            Explore all pathways
+                            Explore paths
                         </Button>
                     </div>
 
@@ -130,7 +130,7 @@ export const FeaturesAlternatingLayout01 = () => {
                 <div className="grid grid-cols-1 gap-10 md:gap-16 lg:grid-cols-3 lg:gap-16 lg:items-center lg:justify-center">
                     <div className="max-w-lg flex-1 self-center">
                         <FeaturedIcon icon={ChartBreakoutSquare} size="lg" color="gray" theme="modern-neue" />
-                        <h3 className="mt-5 text-display-xs text-primary dark:text-brand-200 md:text-display-md">Resources for Individuals and Communities</h3>
+                        <h3 className="mt-5 text-display-xs text-brand-800 dark:text-brand-400 md:text-display-lg">Resources for Individuals and Communities</h3>
                         <p className="mt-2 text-md text-tertiary md:mt-4 md:text-lg">
                             Discover tools to enhance your personal activities and contributions to the Buddhist community.
                         </p>
@@ -141,11 +141,11 @@ export const FeaturesAlternatingLayout01 = () => {
                                 "FORUM: Join groups and discussions related to our activities",
                                 "DOCUMENTATION: Guidelines and information about the project",
                             ].map((feat) => (
-                                <CheckItemText key={feat} size="md" iconStyle="outlined" color="primary" text={feat} />
+                                <CheckItemText key={feat} size="sm" iconStyle="outlined" color="primary" text={feat} />
                             ))}
                         </ul>
                         <Button href="/resources" color="secondary" size="md" className="relative z-100 mt-8 cursor-pointer">
-                            Explore all resources
+                            Explore resources
                         </Button>
                     </div>
 

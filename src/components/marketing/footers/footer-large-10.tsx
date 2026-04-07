@@ -5,6 +5,7 @@ import { Button } from "@/components/base/buttons/button";
 import { BodhicentralLogo } from "@/components/foundations/logo/bodhicentral-logo";
 import Link from "next/link";
 import { Dribbble, Facebook, GitHub, Layers, X } from "@/components/foundations/social-icons";
+import Image from "next/image";
 
 const footerNavList = [
     {
@@ -81,7 +82,7 @@ const footerNavList = [
                 href: "/resources/blog",
                 badge: (
                     <Badge color="gray" type="modern" size="sm" className="ml-1">
-                        In progress
+                        In dev
                     </Badge>
                 ),
             },
@@ -173,22 +174,27 @@ const footerSocials = [
 
 export const FooterLarge10 = () => {
     return (
-        <footer className="bg-bg-secondary py-12 md:pt-16">
+        <footer className="relative bg-bg-secondary py-12 md:pt-16">
+            <Image className="absolute bottom-28 right-0 opacity-7 mask-l-from-10%" src="/ornaments/tibetan-artline-clouds-and-hills.png" alt="Tibetan artline clouds and hills" width={850} height={850} />
             <div className="mx-auto max-w-container px-4 md:px-8">
+
+
+                {/* CTA Section */}
                 <div className="flex flex-col justify-between border-b border-secondary pb-8 md:pb-16 lg:flex-row">
                     <div className="max-w-3xl">
-                        <h2 className="text-display-xs font-semibold text-primary md:text-display-sm">Gateways to Buddhist study and practice</h2>
-                        <p className="mt-2 text-md text-tertiary md:mt-4 md:text-xl">Explore paths of kindful wisdom and connect with teachers and practitioners to make your journey count for yourself and others.</p>
+                        <h2 className="text-display-sm font-light text-primary md:text-display-md">Gateways to Buddhist study and practice</h2>
+                        <p className="mt-2 text-md text-tertiary md:mt-4 md:text-lg">Explore paths of kindful wisdom and connect with teachers and practitioners to make your journey count for yourself and others.</p>
                     </div>
 
                     <div className="mt-8 flex flex-col-reverse gap-3 self-stretch sm:flex-row sm:self-start lg:mt-0">
                         <Button color="secondary" size="md" href="/about/project-information">
-                            Project Information
+                            About the Project
                         </Button>
-                        <Button size="md" href="/reader">Last Read</Button>
+                        <Button size="md" href="/plans">Plans</Button>
                     </div>
                 </div>
 
+                {/* Footer Nav */}
                 <div className="mt-12 flex flex-col gap-12 md:mt-16 md:gap-16 xl:flex-row">
                     <div className="flex flex-col gap-6 md:w-64 md:gap-8">
                         <Link href="/" aria-label="Bodhicentral Home page" className="flex w-min items-center outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2">
@@ -216,6 +222,7 @@ export const FooterLarge10 = () => {
                     </nav>
                 </div>
 
+                {/* Footer Bottom */}
                 <div className="mt-12 flex flex-col-reverse justify-between gap-6 border-t border-secondary pt-8 md:mt-16 md:flex-row">
                     <p className="text-md text-secondary">© 2026 Bodhi Central. All rights reserved.</p>
                     <ul className="flex gap-6">

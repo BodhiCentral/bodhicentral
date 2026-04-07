@@ -107,21 +107,21 @@ const articles: Article[] = [
 
 export const BlogSectionTipitakaOverviewsLeftAligned = () => {
     return (
-        <section className="bg-primary py-12 md:py-20">
+        <section className="bg-linear-to-b from-brand-100 via-brand-50 via-15% to-brand-100 to-80% dark:bg-linear-to-b dark:from-brand-950 dark:via-brand-950 dark:via-50% dark:to-brand-950 py-12 md:py-20">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="flex flex-col items-start justify-between lg:flex-row">
                     <div className="max-w-3xl">
                         <p className="text-sm font-semibold text-brand-secondary md:text-md">Pali Canon</p>
-                        <h2 className="mt-3 text-display-sm font-semibold text-primary md:text-display-md">The Tipiṭaka Overviews</h2>
-                        <p className="mt-4 text-lg text-tertiary md:mt-5 md:text-xl">Go deeper into the three baskets of the Pali Canon: Vinaya Piṭaka, Sutta Piṭaka, and Abhidhamma Piṭaka.</p>
+                        <h2 className="mt-3 text-display-sm font-extralight text-fg-brand-primary md:text-display-lg">The Tipiṭaka Overviews</h2>
+                        <p className="mt-4 text-lg text-tertiary md:mt-4 md:text-xl">Go deeper into the three baskets of the Pali Canon: Vinaya Piṭaka, Sutta Piṭaka, and Abhidhamma Piṭaka.</p>
                     </div>
 
                     <div className="hidden gap-3 lg:flex">
-                        <Button size="md">View all overviews</Button>
+                        <Button size="md">View more</Button>
                     </div>
                 </div>
 
-                <ul className="mt-12 grid grid-cols-1 gap-x-8 gap-y-12 md:mt-16 md:grid-cols-2 md:gap-y-16 lg:grid-cols-3">
+                <ul className="mt-10 grid grid-cols-1 gap-x-8 gap-y-10 md:mt-14 md:grid-cols-2 md:gap-y-14 lg:grid-cols-3">
                     {articles.slice(0, 3).map((article) => (
                         <li key={article.id}>
                             <Simple01Vertical article={article} />
@@ -129,7 +129,7 @@ export const BlogSectionTipitakaOverviewsLeftAligned = () => {
                     ))}
                 </ul>
                 <div className="mt-12 flex flex-col gap-3 lg:hidden">
-                    <Button size="md">View all overviews</Button>
+                    <Button size="md">View more</Button>
                 </div>
             </div>
         </section>
