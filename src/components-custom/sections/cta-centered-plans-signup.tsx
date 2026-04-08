@@ -60,7 +60,7 @@ export const CTACenteredPlansSignup = () => {
                     <h2 className="text-display-md font-extralight text-primary_on-brand md:text-display-lg">Sign up for a <span className="text-brand-secondary">Discovery</span> free account</h2>
                     <p className="mt-4 text-lg font-light text-tertiary_on-brand md:mt-5 md:text-xl">Join thousands of people using Bodhi Central.</p>
                     <div className="mt-8 flex flex-col-reverse gap-3 self-stretch md:mt-8 md:flex-row md:self-center">
-                        <Button href="/plans" color="secondary" size="lg" className="shadow-xs! ring-0">
+                        <Button href="/plans" color="secondary" size="lg" className="shadow-xs ring-0">
                             PLANS
                         </Button>
                         <Button href="/sign-up" size="lg">SIGN UP</Button>

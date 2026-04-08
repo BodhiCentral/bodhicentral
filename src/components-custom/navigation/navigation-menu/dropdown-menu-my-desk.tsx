@@ -20,7 +20,7 @@ type MenuColumn = {
 
 const columns: MenuColumn[] = [
     {
-        title: "Text Library",
+        title: "Scriptures",
         items: [
             {
                 title: "Last Reading",
@@ -37,7 +37,7 @@ const columns: MenuColumn[] = [
         ],
     },
     {
-        title: "Learning Library",
+        title: "Learning Paths",
         items: [
             {
                 title: "Last Learning",
@@ -58,22 +58,21 @@ const columns: MenuColumn[] = [
 export const DropdownMenuMyDesk = ({ onClose }: { onClose?: () => void }) => {
     return (
         <div className="px-3 pb-2 md:max-w-180 md:p-0 ">
-            <nav className="overflow-hidden md:overflow-visible rounded-xl  bg-brand-100 dark:bg-brand-800  drop-shadow-lg ring-1 ring-secondary_alt md:rounded-2xl md:drop-shadow-2xl dark:md:drop-shadow-gray-900">
-                <div className="flex flex-col gap-4 rounded-xl bg-brand-25 dark:bg-brand-900  pt-4 ring-1 ring-secondary md:gap-10 md:rounded-t-2xl md:p-6 md:pt-5">
-                    <div className="flex flex-col items-center gap-1 px-4 md:p-0">
-                        <h4 className="pt-3 text-display-md font-extralight tracking-wide uppercase text-brand-700 dark:text-brand-300">MY DESK SPACES</h4>
-                        <p className="text-sm text-tertiary">Focused sanctuary for your reading and learning.</p>
+            <nav className="overflow-hidden md:overflow-visible rounded-xl  bg-warm-off-300 dark:bg-brand-800  drop-shadow-lg ring-1 ring-secondary_alt md:rounded-2xl md:drop-shadow-2xl dark:md:drop-shadow-gray-900">
+                <div className="flex flex-col gap-2 rounded-xl bg-white dark:bg-brand-900  pt-4 ring-1 ring-secondary md:gap-8 md:rounded-t-2xl md:p-6 md:pt-5">
+                    <div className="flex flex-col gap-1 px-4 md:p-0 border-b border-b-secondary">
+                        <h4 className="py-2 text-display-md font-extralight tracking-wide uppercase text-brand-700 dark:text-brand-300">MY DESK</h4>
                     </div>
 
-                    <div className="flex flex-col gap-5 md:flex-row md:gap-8 md:py-0">
+                    <div className="flex flex-col gap-5 md:flex-row md:gap-10 md:py-0">
                         <div className="-mb-px flex flex-col gap-4 border-b border-b-secondary px-4 pb-5 md:mb-0 md:gap-5 md:border-none md:p-0">
                             <h3 className="text-md font-semibold text-brand-600 dark:text-brand-400">Quick Links</h3>
                             <ul className="flex flex-col gap-3">
                                 {[
 
-                                    { title: "Spaces Config", href: "/scripture/collections" },
-                                    { title: "My Searches", href: "/dashboard" },
-                                    { title: "Reader Preferences", href: "/scripture/collections" },
+                                    { title: "Collections", href: "/scripture/collections" },
+                                    { title: "Spaces", href: "/dashboard" },
+                                    { title: "Reader Preferences", href: "/settings" },
                                 ].map((item) => (
                                     <li key={item.title}>
                                         <Button href={item.href} color="link-gray" size="md" onPress={onClose}>
@@ -84,7 +83,7 @@ export const DropdownMenuMyDesk = ({ onClose }: { onClose?: () => void }) => {
                             </ul>
                         </div>
 
-                        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-2">
+                        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-5">
                             {columns.map((column) => (
                                 <div key={column.title}>
                                     <h3 className="mb-2 px-4 text-md font-semibold text-brand-600 dark:text-brand-400 md:px-0">{column.title}</h3>

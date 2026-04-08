@@ -20,7 +20,7 @@ type MenuColumn = {
 
 const columns: MenuColumn[] = [
     {
-        title: "Pathways for everyone",
+        title: "Learning Paths",
         items: [
             {
                 title: "Foundational Studies",
@@ -64,21 +64,20 @@ const columns: MenuColumn[] = [
 export const DropdownMenuLearningPaths = ({ onClose }: { onClose?: () => void }) => {
     return (
         <div className="px-3 pb-2 md:max-w-200 md:p-0">
-            <nav className="overflow-hidden md:overflow-visible rounded-xl bg-brand-100 dark:bg-brand-800 drop-shadow-lg ring-1 ring-secondary_alt md:rounded-2xl md:drop-shadow-2xl dark:md:drop-shadow-gray-900">
-                <div className="flex flex-col gap-5 rounded-xl bg-brand-25 dark:bg-brand-900 pt-4 ring-1 ring-secondary md:gap-10 md:rounded-t-2xl md:p-6 md:pt-5">
-                    <div className="flex flex-col items-center gap-1 px-4 md:p-0">
-                        <h4 className="pt-4 text-display-md font-extralight tracking-wide uppercase text-brand-700 dark:text-brand-300">STUDY & PRACTICE</h4>
-                        <p className="text-sm text-tertiary">Learning paths of Buddhist study and practice to transform our modern societies.</p>
+            <nav className="overflow-hidden md:overflow-visible rounded-xl bg-warm-off-300 dark:bg-brand-800 drop-shadow-lg ring-1 ring-secondary_alt md:rounded-2xl md:drop-shadow-2xl dark:md:drop-shadow-gray-900">
+                <div className="flex flex-col gap-2 rounded-xl bg-white dark:bg-brand-900 pt-4 ring-1 ring-secondary md:gap-8 md:rounded-t-2xl md:p-6 md:pt-5">
+                    <div className="flex flex-col gap-1 px-4 md:p-0 border-b border-b-secondary">
+                        <h4 className="py-2 text-display-md font-extralight tracking-wide uppercase text-brand-700 dark:text-brand-300">STUDY & PRACTICE</h4>
                     </div>
 
-                    <div className="flex flex-col gap-5 md:flex-row md:gap-8 md:py-0">
+                    <div className="flex flex-col gap-5 md:flex-row md:gap-10 md:py-0">
                         <div className="-mb-px flex flex-col gap-4 border-b border-b-secondary px-4 pb-5 md:mb-0 md:gap-5 md:border-none md:p-0">
                             <h3 className="text-md font-semibold text-brand-600 dark:text-brand-400">Quick Links</h3>
                             <ul className="flex flex-col gap-3">
                                 {[
                                     { title: "New Additions", href: "#" },
-                                    { title: "All Pathways", href: "#" },
-                                    { title: "Desk Preferences", href: "/my-desk-preferences" },
+                                    { title: "All Paths", href: "#" },
+                                    { title: "Preferences", href: "/my-desk-preferences" },
                                 ].map((item) => (
                                     <li key={item.title}>
                                         <Button href={item.href} color="link-gray" size="md" onPress={onClose}>
@@ -89,7 +88,7 @@ export const DropdownMenuLearningPaths = ({ onClose }: { onClose?: () => void })
                             </ul>
                         </div>
 
-                        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-2">
+                        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-5">
                             {columns.map((column) => (
                                 <div key={column.title}>
                                     <h3 className="mb-2 px-4 text-md font-semibold text-brand-600 dark:text-brand-400">{column.title}</h3>
@@ -107,14 +106,14 @@ export const DropdownMenuLearningPaths = ({ onClose }: { onClose?: () => void })
                 </div>
 
                 <div className="mx-auto flex max-w-container flex-col px-4 py-5 md:flex-row md:items-center md:justify-between md:px-6">
-                    <Button href="#" color="secondary" size="md" iconLeading={GraduationHat01} className="hidden md:flex" onPress={onClose}>
+                    <Button href="/plans" color="secondary" size="md" className="hidden md:flex" onPress={onClose}>
+                        Plans | My Desk
+                    </Button>
+                    <Button href="/learning-paths" color="primary" size="md" iconLeading={GraduationHat01} className="hidden md:flex" onPress={onClose}>
+                        Last learning
+                    </Button>
+                    <Button href="/learning-paths" color="primary" size="sm" iconLeading={GraduationHat01} className="md:hidden" onPress={onClose}>
                         Last Learning
-                    </Button>
-                    <Button href="/my-desk" color="primary" size="md" className="hidden md:flex" onPress={onClose}>
-                        My Desk
-                    </Button>
-                    <Button href="/my-desk" color="primary" size="sm" className="md:hidden" onPress={onClose}>
-                        My Desk
                     </Button>
                 </div>
             </nav>

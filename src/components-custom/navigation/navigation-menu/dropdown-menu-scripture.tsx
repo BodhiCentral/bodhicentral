@@ -64,24 +64,23 @@ const columns: MenuColumn[] = [
 export const DropdownMenuScripture = ({ onClose }: { onClose?: () => void }) => {
     return (
         <div className="px-3 pb-2 md:max-w-200 md:p-0">
-            <nav className="overflow-hidden md:overflow-visible rounded-xl bg-brand-100 dark:bg-brand-800 drop-shadow-lg ring-1 ring-secondary_alt md:rounded-2xl md:drop-shadow-2xl dark:md:drop-shadow-gray-900">
-                <div className="flex flex-col gap-4 rounded-xl bg-brand-25 dark:bg-brand-900 pt-4 ring-1 ring-secondary md:gap-10 md:rounded-t-2xl md:p-6 md:pt-5">
-                    <div className="flex flex-col items-center gap-1 px-4 md:p-0">
-                        <h4 className="pt-4 text-display-md font-extralight tracking-wide uppercase text-brand-700 dark:text-brand-300">Kindful Wisdom</h4>
-                        <p className="text-sm text-tertiary">Unlocking gems of wisdom and practical knowledge at your fingertips.</p>
+            <nav className="overflow-hidden md:overflow-visible rounded-xl bg-warm-off-300 dark:bg-brand-800 drop-shadow-lg ring-1 ring-secondary_alt md:rounded-2xl md:drop-shadow-2xl dark:md:drop-shadow-gray-900">
+                <div className="flex flex-col gap-2 rounded-xl bg-white dark:bg-brand-900 pt-4 ring-1 ring-secondary md:gap-8 md:rounded-t-2xl md:p-6 md:pt-5">
+                    <div className="flex flex-col gap-1 px-4 md:p-0 border-b border-b-secondary">
+                        <h4 className="py-2 text-display-md font-extralight tracking-wide uppercase text-brand-700 dark:text-brand-300">Gems of Wisdom</h4>
                     </div>
 
-                    <div className="flex flex-col gap-5 md:flex-row md:gap-8 md:py-0">
+                    <div className="flex flex-col gap-5 md:flex-row md:gap-10 md:py-0">
                         <div className="-mb-px flex flex-col gap-4 border-b border-b-secondary px-4 pb-5 md:mb-0 md:gap-5 md:border-none md:p-0">
                             <h3 className="text-md font-semibold text-brand-600 dark:text-brand-400">Quick Links</h3>
                             <ul className="flex flex-col gap-3">
                                 {[
 
-                                    { title: "All Collections", href: "/scripture/collections" },
+                                    { title: "Collections", href: "/scripture/collections" },
                                     { title: "Genres", href: "/scripture/genres" },
                                     { title: "Authors", href: "/scripture/authors" },
                                     { title: "Saved Searches", href: "#" },
-                                    { title: "Bookmarked Texts", href: "#" },
+                                    { title: "Bookmarks", href: "#" },
                                 ].map((item) => (
                                     <li key={item.title}>
                                         <Button href={item.href} color="link-gray" size="md" onPress={onClose}>
@@ -92,7 +91,7 @@ export const DropdownMenuScripture = ({ onClose }: { onClose?: () => void }) => 
                             </ul>
                         </div>
 
-                        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-2">
+                        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-5">
                             {columns.map((column) => (
                                 <div key={column.title}>
                                     <h3 className="mb-2 px-4 text-md font-semibold text-brand-600 dark:text-brand-400 md:px-0">{column.title}</h3>
@@ -110,14 +109,14 @@ export const DropdownMenuScripture = ({ onClose }: { onClose?: () => void }) => 
                 </div>
 
                 <div className="mx-auto flex max-w-container flex-col px-4 py-5 md:flex-row md:items-center md:justify-between md:px-6">
-                    <Button href="/reader" color="secondary" size="md" iconLeading={BookOpen01} className="hidden md:flex" onPress={onClose}>
-                        Last Reading
+                    <Button href="/plans" color="secondary" size="md" className="hidden md:flex" onPress={onClose}>
+                        Plans | My Desk
                     </Button>
-                    <Button href="/my-desk" color="primary" size="md" className="hidden md:flex" onPress={onClose}>
-                        My Desk
+                    <Button href="/reader" color="primary" iconLeading={BookOpen01} size="md" className="hidden md:flex" onPress={onClose}>
+                        Last read
                     </Button>
-                    <Button href="/my-desk" color="primary" size="sm" className="md:hidden" onPress={onClose}>
-                        My Desk
+                    <Button href="/reader" color="primary" iconLeading={BookOpen01} size="sm" className="md:hidden" onPress={onClose}>
+                        Last read
                     </Button>
                 </div>
             </nav>
