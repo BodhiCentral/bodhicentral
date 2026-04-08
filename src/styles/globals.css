@@ -31,7 +31,17 @@
     transition-timing-function: inherit;
 }
 
+    /* Mandala SVG ring – decorative ornament */
+
+    .hero-mandala-left {
+    transform: translateY(-50%);
+    animation: slowSpin 90s linear infinite;
+  }
+
   /* Animations */
+
+  @keyframes slowSpin { to { transform: translateY(-50%) rotate(360deg); } }
+
   @keyframes fadeUp {
     from { opacity:0; transform: translateY(22px); }
     to   { opacity:1; transform: translateY(0); }

@@ -24,6 +24,8 @@ import { VideoPlayer } from "@/components/base/video-player/video-player";
 import { FeaturedIcon } from "@/components/foundations/featured-icon/featured-icon";
 import { SectionDivider } from "@/components/shared-assets/section-divider";
 import { cx } from "@/utils/cx";
+import { CTACenteredPlansSignup } from "@/components-custom/sections/cta-centered-plans-signup";
+import Image from "next/image";
 
 const faqs = [
     {
@@ -139,17 +141,17 @@ const PricingTierCardBanner = (props: {
     secondActionHref?: string;
 }) => {
     return (
-        <div className={cx("flex flex-col overflow-hidden rounded-2xl bg-brand-25 dark:bg-neutral-800 shadow-lg ring-1 ring-secondary_alt", props.className)}>
+        <div className={cx("flex flex-col overflow-hidden rounded-2xl bg-cream-300 dark:bg-muted-900 shadow-lg ring-1 ring-secondary_alt", props.className)}>
             {props.banner && (
-                <div className="w-full bg-yellow-800 px-2 py-3 text-center">
-                    <p className="text-sm font-semibold text-white">{props.banner}</p>
+                <div className="w-full bg-brand-300 px-2 py-3 text-center">
+                    <p className="text-sm font-semibold text-black">{props.banner}</p>
                 </div>
             )}
 
             <div>
                 <div className="flex flex-col items-center px-6 pt-8 text-center md:px-8">
-                    <p className="text-display-md font-semibold text-primary md:text-display-lg">{props.subtitle}</p>
-                    <h2 className="mt-4 text-2xl font-semibold text-brand-secondary">{props.title}</h2>
+                    <p className="text-display-md font-medium tracking-wide text-primary md:text-display-lg">{props.subtitle}</p>
+                    <h2 className="mt-4 text-3xl font-light text-brand-secondary">{props.title}</h2>
                     <p className="mt-1 text-md text-tertiary">{props.description}</p>
                 </div>
 
@@ -177,10 +179,10 @@ const PricingSimpleBanner = () => {
 
     const plans = [
         {
-            title: "STARTER PLAN",
+            title: "COMMUNITY",
             subtitle: selectedPlan === "monthly" ? "Free" : "Free",
-            description: "Free plan for everyone.",
-            firstAction: "Start browsing texts",
+            description: "Free for everyone. No sign up required.",
+            firstAction: "Continue browsing",
             firstActionHref: "/scripture/collections",
             secondAction: "Have questions?",
             secondActionHref: "/plans#faq",
@@ -232,19 +234,21 @@ const PricingSimpleBanner = () => {
     ];
 
     return (
-        <section className="bg-primary py-16 md:py-20">
+        <section className="relative bg-primary py-16 md:py-20">
+            <Image src="/ornaments/endless-knot-corner-gold.png" width={260} height={260} alt="Plans background" className="absolute top-4 right-4 opacity-16 dark:opacity-25" />
+            <Image src="/ornaments/endless-knot-corner-gold.png" width={260} height={260} alt="Plans background" className="absolute top-4 left-4 scale-x-[-1] opacity-16 dark:opacity-25" />
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
-                    <h2 className="text-display-md font-semibold text-brand-primary md:text-display-lg"> Plans for everyone</h2>
-                    <p className="mt-4 text-lg text-tertiary md:mt-6 md:text-xl">
-                        We believe that Buddhist texts and teachings should be accessible to everyone. Please enjoy the <strong>Starter</strong> and <strong>Discovery</strong> free plans!
+                    <h2 className="text-display-md font-extralight text-brand-700 dark:text-brand-400 md:text-display-xl"> Plans for everyone</h2>
+                    <p className="mt-4 text-md text-tertiary md:mt-6 md:text-lg">
+                        We believe that Buddhist texts and teachings should be accessible to everyone. Enjoy the <strong>Community</strong> and <strong>Discovery</strong> free plans.
                     </p>
-                    <p className="mt-4 text-lg text-tertiary md:mt-6 md:text-xl">The <strong>Full Access</strong> subscription helps us keep the platform running and improving with new features, and allows us to maintain the free plans for everyone.
+                    <p className="mt-4 text-md text-tertiary md:mt-6 md:text-lg">Your <strong>Full Access</strong> subscription helps us keep the platform running and improving with new features. It also allows us to maintain the free plans for everyone.
                     </p>
                     <Tabs selectedKey={selectedPlan} onSelectionChange={(item) => setSelectedPlan(item as string)} className="w-full md:w-auto">
                         <TabList
                             type="button-border"
-                            size="md"
+                            size="sm"
                             items={[
                                 { id: "monthly", label: "Monthly billing" },
                                 { id: "annually", label: "Annual billing" },
@@ -254,7 +258,7 @@ const PricingSimpleBanner = () => {
                     </Tabs>
                 </div>
 
-                <div className="mt-16 grid w-full grid-cols-1 items-end gap-4 md:mt-24 md:grid-cols-2 md:gap-8 xl:grid-cols-3">
+                <div className="mt-12 grid w-full grid-cols-1 items-end gap-4 md:mt-16 md:grid-cols-2 md:gap-8 xl:grid-cols-3">
                     {plans.map((plan) => (
                         <PricingTierCardBanner key={plan.title} {...plan} />
                     ))}
@@ -313,8 +317,8 @@ const FeaturesCenterMockup01 = () => {
                             Features
                         </BadgeWithDot>
                     </span>
-                    <h2 className="mt-4 text-display-sm font-semibold text-primary md:text-display-md">Cutting-edge features for a balanced approach to Buddhist study and practice</h2>
-                    <p className="mt-4 text-lg text-tertiary md:mt-5 md:text-xl">
+                    <h2 className="mt-4 text-display-sm font-light text-brand-700 dark:text-brand-400 md:text-display-md">Cutting-edge features for a balanced approach to Buddhist study and practice</h2>
+                    <p className="mt-4 text-md text-tertiary md:mt-5 md:text-lg">
                         Scripture, learning, and connecting with the living traditions of the awakening.
                     </p>
                 </div>
@@ -413,17 +417,17 @@ const FeaturesIconsAndImage03 = () => {
                     <div className="flex w-full flex-col">
                         <span className="text-sm font-semibold text-brand-secondary md:text-md">Our Approach</span>
 
-                        <h2 className="mt-3 text-display-sm font-semibold text-primary md:text-display-md">Introducing the combined intersection of study and practice</h2>
-                        <p className="mt-4 text-lg text-tertiary md:mt-5 md:text-xl">
-                            A platform that leverages kind design and wise technologies to combine the best of readership, learning, and practice.
+                        <h2 className="mt-3 text-display-md font-light text-brand-700 dark:text-brand-400 md:text-display-lg">Introducing the intersection of study and practice</h2>
+                        <p className="mt-4 text-lg font-light text-tertiary md:mt-5 md:text-xl">
+                            Envisioning a platform that leverages kind design and wise technologies, combining the best of readership, learning, and practice.
                         </p>
                     </div>
 
                     <ul className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-12 lg:grid-cols-1">
                         {[
                             {
-                                title: "Readership with kind wisdom",
-                                subtitle: "Access a curated library of texts, overviews, and practical expositions of the foundamentals of buddhist concepts and principles.",
+                                title: "Readership of Buddhist gems of wisdom",
+                                subtitle: "Immerse yourself in a curated library of texts, overviews, and practical expositions of buddhist views.",
                                 icon: BookOpen01,
                                 cta: "Learn more",
                                 href: "#",
@@ -462,7 +466,7 @@ const FAQSimple01 = () => {
         <section id="faq" className="bg-primary py-16 md:py-24">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
-                    <h2 className="text-display-sm font-semibold text-primary md:text-display-md">Frequently asked questions</h2>
+                    <h2 className="text-display-md font-light text-brand-700 dark:text-brand-400 md:text-display-lg">Frequently asked questions</h2>
                     <p className="mt-4 text-lg text-tertiary md:mt-5 md:text-xl">Everything you need to know about Bodhi Central plans and services. </p>
                 </div>
 
@@ -485,20 +489,20 @@ const FAQSimple01 = () => {
                 <div className="mt-12 flex flex-col items-center gap-6 rounded-2xl bg-secondary px-6 py-8 text-center md:mt-16 md:gap-8 md:px-8 md:py-8 md:pb-10">
                     <div className="flex items-end -space-x-4">
                         <Avatar
-                            src="https://www.untitledui.com/images/avatars/marco-kelly?fm=webp&q=80"
-                            alt="Marco Kelly"
+                            src="/placeholder-image-landscape.svg"
+                            alt="placeholder"
                             size="lg"
                             className="ring-[1.5px] ring-fg-white"
                         />
                         <Avatar
-                            src="https://www.untitledui.com/images/avatars/amelie-laurent?fm=webp&q=80"
-                            alt="Amelie Laurent"
+                            src="/placeholder-image-landscape.svg"
+                            alt="placeholder"
                             size="xl"
                             className="z-10 ring-[1.5px] ring-fg-white"
                         />
                         <Avatar
-                            src="https://www.untitledui.com/images/avatars/jaya-willis?fm=webp&q=80"
-                            alt="Jaya Willis"
+                            src="/placeholder-image-landscape.svg"
+                            alt="placeholder"
                             size="lg"
                             className="ring-[1.5px] ring-fg-white"
                         />
@@ -508,28 +512,6 @@ const FAQSimple01 = () => {
                         <p className="mt-2 text-md text-tertiary md:text-lg">Can't find the answer you're looking for? Please chat to our friendly team.</p>
                     </div>
                     <Button size="md">Get in touch</Button>
-                </div>
-            </div>
-        </section>
-    );
-};
-
-const CardHorizontalBrand = () => {
-    return (
-        <section className="bg-primary pb-16 md:pb-24">
-            <div className="mx-auto max-w-container px-4 md:px-8">
-                <div className="flex flex-col gap-x-8 gap-y-8 rounded-2xl bg-brand-section px-6 py-10 lg:flex-row  lg:p-16 drop-shadow-lg">
-                    <div className="flex max-w-3xl flex-1 flex-col">
-                        <h2 className="text-display-sm font-semibold text-primary_on-brand">
-                            <span className="hidden md:inline">Sign up for the free Discovery plan</span>
-                            <span className="md:hidden">Unlock great features and preferences, and our full-edge dashboard.</span>
-                        </h2>
-                        <p className="mt-4 text-lg text-tertiary_on-brand lg:text-xl">Join thousands of people already using Bodhi Central.</p>
-                    </div>
-                    <div className="flex flex-col-reverse items-stretch gap-3 sm:flex-row sm:items-start">
-                        <Button href="/plans" color="secondary" size="md">View plans</Button>
-                        <Button href="/sign-up" size="md">Free Sign up</Button>
-                    </div>
                 </div>
             </div>
         </section>
@@ -551,7 +533,7 @@ const PricingPage08 = () => {
 
             <FAQSimple01 />
 
-            <CardHorizontalBrand />
+            <CTACenteredPlansSignup />
         </div>
     );
 };

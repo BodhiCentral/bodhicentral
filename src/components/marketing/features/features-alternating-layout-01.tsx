@@ -50,7 +50,7 @@ export const FeaturesAlternatingLayout01 = () => {
                         <ul className="mt-8 flex flex-col gap-4 pl-2 md:gap-5 md:pl-4">
                             {[
                                 "Clear access to collections of texts that are currently transmitted and practiced in modern Buddhist traditions",
-                                "Texts organized by vehicles, genres, and schools of study and practice, for everyone",
+                                "Texts and teachings organized by vehicles, genres, and schools of study and practice, for everyone",
                                 "State-of-the-art readers and personal workspaces to make your experience smooth and memorable",
                             ].map((feat) => (
                                 <CheckItemText key={feat} size="sm" iconStyle="outlined" color="primary" text={feat} />

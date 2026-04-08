@@ -5,7 +5,7 @@ import { PlayCircle, ArrowRight } from "@untitledui/icons";
 import { Button } from "@/components/base/buttons/button";
 import { useClipboard } from "@/hooks/use-clipboard";
 import { FeaturesAlternatingLayout01 } from "@/components/marketing/features/features-alternating-layout-01";
-import { CTACenteredPlansSignup } from "@/components/marketing/cta/cta-centered-plans-signup";
+import { CTACenteredPlansSignup } from "@/components-custom/sections/cta-centered-plans-signup";
 import Image from 'next/image';
 import "@/styles/home-hero.css";
 
@@ -70,7 +70,7 @@ export const HomeScreen = () => {
                     </g>
                 </svg>
 
-                <div className="hero-inner">
+                <div className="hero-inner relative grid grid-cols-[1fr_1fr] items-center gap-12 z-10 px-14 pt-15 mx-auto max-w-container">
                     {/* Hero Left */}
                     <div className="hero-left">
                         <div className="eyebrow">
