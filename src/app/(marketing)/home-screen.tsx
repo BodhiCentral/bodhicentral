@@ -1,10 +1,10 @@
 "use client";
 
 
-import { PlayCircle, ArrowRight } from "@untitledui/icons";
+import { ArrowRight } from "@untitledui/icons";
 import { Button } from "@/components/base/buttons/button";
 import { useClipboard } from "@/hooks/use-clipboard";
-import { FeaturesAlternatingLayout01 } from "@/components/marketing/features/features-alternating-layout-01";
+import { FeaturesAlternatingLayout01 } from "@/components-custom/sections/features-alternating-layout-01";
 import { CTACenteredPlansSignup } from "@/components-custom/sections/cta-centered-plans-signup";
 import Image from 'next/image';
 import "@/styles/home-hero.css";

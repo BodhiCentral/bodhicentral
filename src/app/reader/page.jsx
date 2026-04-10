@@ -74,10 +74,10 @@ export const TextCanvasSingle = () => {
                             </a>
 
                             <h1 className="mt-4 text-display-md font-semibold text-primary md:text-display-lg lg:text-display-xl">
-                                Welcome to the Bodhi Central <br />Readership and Learning Experience
+                                Welcome to the Bodhi Central <br />Readership and Learning
                             </h1>
-                            <p className="description mt-4 max-w-lg text-lg text-balance text-tertiary md:mt-6 md:text-xl">
-                                We are delighted to invite you to explore this space of clear intent and dedication, offering a curated collection of Buddhist texts and genuine teachings to inspire your study and practice.
+                            <p className="description mt-4 max-w-lg text-lg text-tertiary md:mt-6 md:text-xl">
+                                We are delighted to invite you to explore this space of clear intent, offering you an illuminating collection of texts and genuine teachings to inspire your study and practice.
                             </p>
                             <Button color="primary" size="md" className="mt-4" onClick={() => openCanonNavigator()}>
                                 Find a text to read!
@@ -86,8 +86,8 @@ export const TextCanvasSingle = () => {
                     </div>
                 </section>
                 <h2 id="introduction-to-the-reader">Introduction to the Reader</h2>
-                <p className="lead first-letter:float-left first-letter:text-7xl first-letter:leading-12 first-letter:mr-1 first-letter:font-serif first-letter:font-extralight first-letter:text-brand-800 dark:first-letter:text-brand-200">
-                    Welcome to Bodhi Central, a digital sanctuary for Buddhist study and practice. This platform is dedicated to providing accessible, clear, and authentic teachings from the Buddhist traditions, supporting practitioners on their path of learning and awakening. Whether you are beginning your journey or deepening your understanding, Bodhi Central offers a curated collection of texts, commentaries, and resources to inspire and guide you.
+                <p className="lead first-letter:float-left first-letter:text-7xl first-letter:leading-12 first-letter:mr-1 first-letter:font-serif first-letter:font-extralight first-letter:text-brand-600 dark:first-letter:text-brand-200">
+                    The Bodhi Central experience is a digital sanctuary of scriptures and education. This platform's mission is dedicated to providing everyone with clear access to authentic sources and teachings from the Living Transmissions of the awakening. Whether you are beginning your journey or deepening your understanding, may this platform inspire you and support your journey.
                 </p>
                 <hr />
                 <h2 id="origins">Origins</h2>

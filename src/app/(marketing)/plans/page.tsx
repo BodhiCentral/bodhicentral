@@ -11,10 +11,8 @@ import {
     File05,
     Heart,
     Mail01,
-    MessageChatCircle,
     SlashCircle01,
     SwitchHorizontal01,
-    Zap,
 } from "@untitledui/icons";
 import { TabList, Tabs } from "@/components/application/tabs/tabs";
 import { Avatar } from "@/components/base/avatar/avatar";
@@ -30,23 +28,23 @@ import Image from "next/image";
 const faqs = [
     {
         question: "What is included in the Discovery plan?",
-        answer: "The Discovery plan is our free plan, and it includes access to all of our features, including the scripture reader, learning paths, and resources. The free Discovery plan is a great way to get started with Bodhi Central and to explore all that it has to offer with basic storage.",
+        answer: "The Discovery plan is our free plan, and it includes access to many of our features, including the scripture reader, learning paths, and resources. The free Discovery plan is a great way to get started with Bodhi Central and to explore all that it has to offer with basic storage.",
         icon: Heart,
     },
     {
         question: "Why you offer a paid subscription?",
-        answer: "Bodhi Central is a non-profit organization, and your Full Access subscription helps us to continue our work. It also allows us to offer a free plan to those who cannot afford it.",
+        answer: "In consonance with the Dana tradition, we believe that Buddhist texts and teachings should always be accessible to everyone. Our modest Housekeeper subscription helps us to continue our work. It also allows us to provide free teachings to those who cannot afford expensive programs.",
         icon: SlashCircle01,
     },
     {
-        question: "Can I change my Full Access plan later?",
-        answer: "Of course! Our affordable Full Access plan scales with your needs. You can cancel or downgrade your plan at any time from your account settings in the dashboard.",
+        question: "Can I change my plan later?",
+        answer: "Of course! Our modest Housekeeper plan scales with your needs. You can cancel or downgrade your plan at any time from your account settings. You can also upgrade to a higher tier at our Patreon portal.",
         icon: SwitchHorizontal01,
     },
 
     {
         question: "Can other info be added to an invoice?",
-        answer: "At the moment, the only way to add additional information to invoices is to add the information to the workspace's name.",
+        answer: "At the moment, the only way to add additional information to invoices is to add the information to the payment method in the Account Settings, under the 'Billing' setion .",
         icon: File05,
     },
     {
@@ -55,8 +53,8 @@ const faqs = [
         icon: CreditCardRefresh,
     },
     {
-        question: "What is your cancellation policy?",
-        answer: "You can change the email address associated with your account by going to untitledui.com/account from a laptop or desktop.",
+        question: "Can I chang my email address?",
+        answer: "You can change the email address associated with your account by going to your account settings, under the 'Email' section.",
         icon: Mail01,
     },
 ];
@@ -214,7 +212,7 @@ const PricingSimpleBanner = () => {
             ],
         },
         {
-            title: "PRO",
+            title: "HOUSEKEEPER",
             subtitle: selectedPlan === "monthly" ? "$2/month" : "$20/year",
             description: "Get the most out of Bodhi Central.",
             firstAction: "Get FULL access",
@@ -242,7 +240,7 @@ const PricingSimpleBanner = () => {
                 <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
                     <h2 className="text-display-md font-extralight text-brand-700 dark:text-brand-400 md:text-display-xl"> Plans for everyone</h2>
                     <p className="mt-4 max-w-xl text-md text-tertiary md:mt-6 md:text-lg">
-                        Enjoy the <strong>Community</strong> and <strong>Discovery</strong> free plans. Buddhist texts and teachings should be accessible to everyone. Your <strong>Pro</strong> subscription keeps the platform running and improving with new features.
+                        Enjoy the <strong>Community</strong> and <strong>Discovery</strong> free plans. Buddhist texts and teachings should be accessible to everyone. Your <strong>Housekeeper</strong> subscription keeps the platform running and improving with new features.
                     </p>
                     <Tabs selectedKey={selectedPlan} onSelectionChange={(item) => setSelectedPlan(item as string)} className="w-full md:w-auto">
                         <TabList
@@ -316,9 +314,9 @@ const FeaturesCenterMockup01 = () => {
                             Features
                         </BadgeWithDot>
                     </span>
-                    <h2 className="mt-4 text-display-sm font-light text-brand-700 dark:text-brand-400 md:text-display-md">Cutting-edge features for a balanced approach to Buddhist study and practice</h2>
-                    <p className="mt-4 text-md text-tertiary md:mt-5 md:text-lg">
-                        Scripture, learning, and connecting with the living traditions of the awakening.
+                    <h2 className="mt-4 text-display-sm font-light text-brand-800 dark:text-brand-500 md:text-display-md">Cutting-edge features for a balanced approach to Buddhist study and practice</h2>
+                    <p className="mt-4 text-md text-tertiary md:mt-5 md:text-lg max-w-140">
+                        Connecting scriptures, modern education, and communities with the living transmissions of the awakening.
                     </p>
                 </div>
 
@@ -334,13 +332,13 @@ const FeaturesCenterMockup01 = () => {
                                     {/* Light mode image (hidden in dark mode) */}
                                     <img
                                         alt="Dashboard mockup showing application interface"
-                                        src="/theravada-tradition-dark-page-1920px.webp"
+                                        src="/theravada-tradition-dark-mode-1600.webp"
                                         className="size-full object-cover dark:hidden"
                                     />
                                     {/* Dark mode image (hidden in light mode) */}
                                     <img
                                         alt="Dashboard mockup showing application interface"
-                                        src="theravada-tradition-light-page-1920px.webp"
+                                        src="theravada-tradition-dark-mode-1600.webp"
                                         className="size-full object-cover not-dark:hidden"
                                     />
                                 </div>
@@ -350,24 +348,24 @@ const FeaturesCenterMockup01 = () => {
                     <ul className="flex flex-1 flex-wrap justify-center gap-x-12 gap-y-10 lg:flex-nowrap">
                         {[
                             {
-                                title: "Kindful Scripture",
-                                subtitle: "Gathering curated texts and teachings from genuine streams of Buddhist traditions.",
-                                icon: MessageChatCircle,
+                                title: "Gems of Wisdom",
+                                subtitle: "Presentations of illuminating texts, scriptures, and teachings from genuine streams of Buddhist traditions.",
+                                icon: BookOpen01,
                                 cta: "Learn more",
                                 href: "/scriptures/collections",
                             },
                             {
                                 title: "Paths of Learning",
-                                subtitle: "Clear learning paths for every stage of your journey, from the fundamentals to advanced topics, accompanied by guided practices.",
-                                icon: Zap,
+                                subtitle: "Clear paths for every stage of your journey, from the fundamentals to advanced topics, accompanied by guided practices.",
+                                icon: GraduationHat02,
                                 cta: "Learn more",
                                 href: "/learning-paths",
                             },
                             {
                                 title: "Resources that matter",
                                 subtitle:
-                                    "Tools and resources to support your practice and learning, including directories, blogs, forums, and detailed documentation.",
-                                icon: ChartBreakoutSquare,
+                                    "Tools and solutions to expand your learnings: directories, blogs, forums, and detailed documentation.",
+                                icon: File05,
                                 cta: "Learn more",
                                 href: "/resources",
                             },
@@ -414,26 +412,26 @@ const FeaturesIconsAndImage03 = () => {
             <div className="bg-secondary pt-16 pb-[112px] md:pt-24 md:pb-40">
                 <div className="mx-auto grid w-full max-w-container grid-cols-1 gap-12 px-4 md:gap-16 md:px-8 lg:grid-cols-2 lg:gap-24">
                     <div className="flex w-full flex-col">
-                        <span className="text-sm font-semibold text-brand-secondary md:text-md">Our Approach</span>
+                        <span className="text-sm font-light text-brand-600 dark:text-brand-700 md:text-md">Our Approach</span>
 
-                        <h2 className="mt-3 text-display-md font-light text-brand-700 dark:text-brand-400 md:text-display-lg">Introducing the intersection of study and practice</h2>
+                        <h2 className="mt-3 text-display-md font-light text-brand-800 dark:text-brand-500 md:text-display-lg">The intersection of readership, education, and community</h2>
                         <p className="mt-4 text-lg font-light text-tertiary md:mt-5 md:text-xl">
-                            Envisioning a platform that leverages kind design and wise technologies, combining the best of readership, learning, and practice.
+                            Envisioning a platform that leverages modern and useful digital experiences with the best of readership and education, at the service of communities and the living transmissions of the awakening.
                         </p>
                     </div>
 
                     <ul className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-12 lg:grid-cols-1">
                         {[
                             {
-                                title: "Readership of Buddhist gems of wisdom",
-                                subtitle: "Immerse yourself in a curated library of texts, overviews, and practical expositions of buddhist views.",
+                                title: "The Best of Readership and Education",
+                                subtitle: "Enter a sanctuary of wisdom, with a revealing library of texts, overviews, and practical expositions of the awakening.",
                                 icon: BookOpen01,
                                 cta: "Learn more",
                                 href: "#",
                             },
                             {
-                                title: "Practical learning and contemplation",
-                                subtitle: "Engage in hands-on studies and practices that help you apply what you learn to your daily life.",
+                                title: "Connecting Communities and Living Transmissions",
+                                subtitle: "Get truthfull and relevant guidance and support from genuine teachers and fellow practitioners.",
                                 icon: GraduationHat02,
                                 cta: "Learn more",
                                 href: "#",
@@ -465,7 +463,7 @@ const FAQSimple01 = () => {
         <section id="faq" className="bg-primary py-16 md:py-24">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
-                    <h2 className="text-display-md font-light text-brand-700 dark:text-brand-400 md:text-display-lg">Frequently asked questions</h2>
+                    <h2 className="text-display-md font-light text-brand-800 dark:text-brand-500 md:text-display-lg">Frequently asked questions</h2>
                     <p className="mt-4 text-lg text-tertiary md:mt-5 md:text-xl">Everything you need to know about Bodhi Central plans and services. </p>
                 </div>
 
@@ -474,8 +472,8 @@ const FAQSimple01 = () => {
                         {faqs.map((item) => (
                             <div key={item.question}>
                                 <div className="flex max-w-sm flex-col items-center text-center">
-                                    <FeaturedIcon color="gray" theme="modern" className="md:hidden" size="md" icon={item.icon} />
-                                    <FeaturedIcon color="gray" theme="modern" className="hidden md:flex" size="lg" icon={item.icon} />
+                                    <FeaturedIcon color="brand" theme="light" className="md:hidden" size="md" icon={item.icon} />
+                                    <FeaturedIcon color="brand" theme="light" className="hidden md:flex" size="xl" icon={item.icon} />
 
                                     <dt className="mt-4 text-lg font-semibold text-primary md:mt-5 md:text-xl">{item.question}</dt>
                                     <dd className="mt-1 text-md text-tertiary md:mt-2">{item.answer}</dd>

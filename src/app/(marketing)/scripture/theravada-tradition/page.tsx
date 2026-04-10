@@ -6,7 +6,7 @@ import { CollectionGalleryVinayaPitaka } from "@/components/marketing/collection
 import { CollectionGallerySuttaPitaka } from "@/components/marketing/collection-sections/collection-gallery-sutta-pitaka";
 import { CollectionGalleryAbhidhammaPitaka } from "@/components/marketing/collection-sections/collection-gallery-abhidhamma-pitaka";
 import { ArrowDown } from "@untitledui/icons";
-import { ThreePitakasDiagram } from "@/components/marketing/sections/three-pitakas-diagram";
+import { ThreePitakasDiagram } from "@/components-custom/sections/three-pitakas-diagram";
 import { BlogSectionTipitakaOverviewsLeftAligned } from "@/components/marketing/blog/base-components/blog-tipitaka-overviews-left-aligned";
 
 export default function TheravadaTraditionPage() {
@@ -22,24 +22,28 @@ export default function TheravadaTraditionPage() {
                 <div className="relative flex flex-col items-center justify-center gap-12 z-10">
                     {/* Hero Title & Subtitle */}
                     <div className="md:flex flex-col items-center justify-center gap-1 px-4 md:px-6 animate-[fadeUp_1s_ease_both] delay-300 ">
-                        <h1 className="text-display-sm font-extralight text-center text-brand-200 dark:text-brand-200 md:text-display-lg lg:text-display-3xl text-shadow-brand-950 text-shadow-sm">Theravāda Tradition</h1>
+                        <h1 className="text-display-sm font-extralight text-center text-brand-300 dark:text-brand-300 md:text-display-lg lg:text-display-3xl text-shadow-brand-950 text-shadow-sm">Theravāda Tradition</h1>
                         <p className="hero-subtitle text-center text-lg font-light text-white">The Pali Canon, the earliest Buddhist scriptures.</p>
                     </div>
                     {/* Pitaka Cards */}
-                    <div className="mx-auto max-w-container px-4 pb-20 md:px-6 grid grid-cols-1 md:grid-cols-3 gap-8 items-start animate-[fadeUp_1s_ease_both] delay-450">
-                        <div className="flex flex-col h-full items-center justify-start bg-linear-to-b from-white/20 via-white/85 via-55% to-white/15 dark:bg-linear-to-b dark:from-black/15 dark:via-black/85 dark:via-55% dark:to-black/15 p-8 rounded-full">
-                            <Image src="/thai-ornament-top-linear-logo.png" alt="thai ornament" width={100} height={100} style={{ width: "auto", height: "auto" }} className="hidden md:block mix-blend-multiply drop-shadow-xs drop-shadow-black/90 dark:drop-shadow-black/50 opacity-60" />
+                    <div className="mx-auto max-w-container px-4 pb-20 md:px-6 grid grid-cols-1 md:grid-cols-3 gap-10 items-start animate-[fadeUp_1s_ease_both] delay-450">
+                        {/* Vinaya Card */}
+                        <div className="flex flex-col h-full items-center justify-start bg-radial-[at_50%_46%] from-brand-50/90 via-brand-200/95 via-32% to-brand-600/2 dark:bg-linear-to-b dark:bg-radial-[at_50%_46%] dark:from-brand-950/95 dark:via-brand-900/90 dark:via-30% dark:to-black/15 p-8 rounded-full">
+                            <Image src="/thai-ornament-top-linear-logo.png" alt="thai ornament" width={100} height={100} style={{ width: "auto", height: "auto" }} className="hidden md:block drop-shadow-xs drop-shadow-black/90 dark:drop-shadow-black/50 opacity-60" />
                             <h2 className="text-display-md text-brand-800 dark:text-brand-200 text-center py-2">Vinaya Piṭaka</h2>
                             <p className="text-md text-tertiary font-semibold text-center pb-6">The first basket of the Pali Canon, containing the rules and regulations for monks and nuns.</p>
                             <Button href="#vinaya-pitaka-gallery" className="mt-auto" color="primary" size="sm" iconLeading={<ArrowDown data-icon />} aria-label="Go to Vinaya gallery" />
                         </div>
-                        <div className="flex flex-col h-full items-center justify-start bg-linear-to-b from-white/20 via-white/85 via-55% to-white/15 dark:bg-linear-to-b dark:from-black/15 dark:via-black/85 dark:via-55% dark:to-black/15 p-8 rounded-full">
-                            <Image src="/thai-ornament-top-linear-logo.png" alt="thai ornament" width={100} height={100} style={{ width: "auto", height: "auto" }} className="hidden md:block mix-blend-multiply drop-shadow-xs drop-shadow-black/90 dark:drop-shadow-black/50 opacity-60" />
+                        {/* Sutta Card */}
+                        <div className="flex flex-col h-full items-center justify-start bg-radial-[at_50%_46%] from-brand-50/90 via-brand-200/95 via-32% to-brand-600/2 dark:bg-linear-to-b dark:bg-radial-[at_50%_46%] dark:from-brand-950/95 dark:via-brand-900/90 dark:via-30% dark:to-black/15 p-8 rounded-full">
+                            <Image src="/thai-ornament-top-linear-logo.png" alt="thai ornament" width={100} height={100} style={{ width: "auto", height: "auto" }} className="hidden md:block drop-shadow-xs drop-shadow-black/90 dark:drop-shadow-black/50 opacity-60" />
                             <h2 className="text-display-md text-brand-800 dark:text-brand-200 text-center py-2">Sutta Piṭaka</h2>
                             <p className="pb-6 text-md text-tertiary font-semibold text-center">The second basket of the Pali Canon, containing the discourses of the Buddha.</p>
                             <Button href="#sutta-pitaka-gallery" className="mt-auto" color="primary" size="sm" iconLeading={<ArrowDown data-icon />} aria-label="Go to Sutta gallery" />
-                        </div><div className="flex flex-col h-full items-center justify-start bg-linear-to-b from-white/20 via-white/85 via-55% to-white/15 dark:bg-linear-to-b dark:from-black/15 dark:via-black/85 dark:via-55% dark:to-black/15 p-8 rounded-full">
-                            <Image src="/thai-ornament-top-linear-logo.png" alt="thai ornament" width={100} height={100} style={{ width: "auto", height: "auto" }} className="hidden md:block mix-blend-multiply drop-shadow-xs drop-shadow-black/90 dark:drop-shadow-black/50 opacity-60" />
+                        </div>
+                        {/* Abhidhamma Card */}
+                        <div className="flex flex-col h-full items-center justify-start bg-radial-[at_50%_46%] from-brand-50/90 via-brand-200/95 via-32% to-brand-600/2 dark:bg-linear-to-b dark:bg-radial-[at_50%_46%] dark:from-brand-950/95 dark:via-brand-900/90 dark:via-30% dark:to-black/15 p-8 rounded-full">
+                            <Image src="/thai-ornament-top-linear-logo.png" alt="thai ornament" width={100} height={100} style={{ width: "auto", height: "auto" }} className="hidden md:block drop-shadow-xs drop-shadow-black/90 dark:drop-shadow-black/50 opacity-60" />
                             <h2 className="text-display-md text-brand-800 dark:text-brand-200 text-center py-2">Abhidhamma Piṭaka</h2>
                             <p className="pb-6 text-md text-tertiary font-semibold text-center">The third basket of the Pali Canon, containing the higher teachings and philosophical analysis.</p>
                             <Button href="#abhidhamma-pitaka-gallery" className="mt-auto" color="primary" size="sm" iconLeading={<ArrowDown data-icon />} aria-label="Go to Abhidhamma gallery" />
