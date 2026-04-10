@@ -113,7 +113,7 @@ export const BlogSectionTipitakaOverviewsLeftAligned = () => {
                     <div className="max-w-3xl">
                         <span className="text-sm font-light text-brand-600 dark:text-brand-700 md:text-md">Pali Canon</span>
                         <h2 className="mt-3 text-display-sm font-extralight text-brand-800 dark:text-brand-400 md:text-display-lg">The Tipiṭaka Overviews</h2>
-                        <p className="mt-4 text-lg text-tertiary md:mt-4 md:text-xl">Expert expositions of the context and history of the three baskets of the Pali Canon in the Theravāda tradition.</p>
+                        <p className="mt-4 text-lg text-tertiary md:mt-4 md:text-xl">Expert introductions to the divisions of the Pali Canon in the Theravāda tradition.</p>
                     </div>
 
                     <div className="hidden gap-3 lg:flex">

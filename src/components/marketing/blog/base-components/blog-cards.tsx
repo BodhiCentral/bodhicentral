@@ -42,7 +42,7 @@ export const Simple01Vertical = ({ article, imageClassName }: { article: Article
 
         <div className="flex flex-col gap-5">
             <div className="flex flex-col gap-2">
-                <span className="text-sm font-semibold text-brand-secondary">{article.category.name}</span>
+                <span className="text-sm font-light text-brand-600 dark:text-brand-700 md:text-md">{article.category.name}</span>
                 <div className="flex flex-col gap-1">
                     <a
                         href={article.href}

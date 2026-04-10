@@ -52,8 +52,8 @@ export const FeaturesAlternatingLayout01 = () => {
                         </p>
                         <ul className="mt-8 flex flex-col gap-4 pl-2 md:gap-5 md:pl-4">
                             {[
-                                "Clear access to collections of texts that are currently transmitted and practiced in modern Buddhist traditions",
-                                "Texts and teachings organized by vehicles, genres, and schools of study and practice, for everyone",
+                                "Clear access to a treasure trove of texts that are currently transmitted and practiced in modern Buddhist transmissions",
+                                "Texts and teachings organized by genres, traditions, and schools of study and practice, for everyone",
                                 "State-of-the-art readers and personal workspaces to make your experience smooth and memorable",
                             ].map((feat) => (
                                 <CheckItemText key={feat} size="sm" iconStyle="outlined" color="primary" text={feat} />
@@ -76,13 +76,13 @@ export const FeaturesAlternatingLayout01 = () => {
                             {/* Light mode image (hidden in dark mode) */}
                             <img
                                 alt="Scripture mockup showing Collections interface"
-                                src="/theravada-tradition-dark-mode-1600.webp"
+                                src="/theravada-tradition-light-mode-1600px.webp"
                                 className="size-full object-contain lg:w-auto lg:max-w-none dark:hidden"
                             />
                             {/* Dark mode image (hidden in light mode) */}
                             <img
                                 alt="Dashboard mockup showing application interface"
-                                src="/theravada-tradition-dark-mode-1600.webp"
+                                src="/theravada-tradition-light-mode-1600px.webp"
                                 className="size-full object-contain not-dark:hidden lg:w-auto lg:max-w-none"
                             />
                         </AlternateImageMockup>
@@ -100,8 +100,8 @@ export const FeaturesAlternatingLayout01 = () => {
                         <ul className="mt-8 flex flex-col gap-4 pl-2 md:gap-5 md:pl-4">
                             {[
                                 "Study the foundational paths for a solid understanding of the Buddhist core concepts and principles",
-                                "Go deeper with academic paths (systematic learning), with trustworthy companions for in-depth study of the Dharma",
-                                "Engage in contemplative practice paths (samatha, vipassana, mind-training, paramitas, etc.) brought to you by genuine living Buddhist teachings to support your progress",
+                                "Go deeper with academic paths (systematic education), with trustworthy companions for in-depth study of the Dharma",
+                                "Engage in contemplative paths and practices (samatha, vipassana, mind-training, paramitas, etc.) brought to you by genuine Buddhist transmissions to support your progress",
                             ].map((feat) => (
                                 <CheckItemText key={feat} size="sm" iconStyle="outlined" color="primary" text={feat} />
                             ))}

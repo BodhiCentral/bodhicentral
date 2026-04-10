@@ -49,7 +49,7 @@ const faqs = [
     },
     {
         question: "How does billing work?",
-        answer: "Plans are per workspace, not per account. You can upgrade one workspace, and still have any number of free workspaces.",
+        answer: "You can manage the monthly and annual billing options of the Housekeeper subscription at your account settings, under the 'Billing' section.",
         icon: CreditCardRefresh,
     },
     {
@@ -239,7 +239,7 @@ const PricingSimpleBanner = () => {
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
                     <h2 className="text-display-md font-extralight text-brand-700 dark:text-brand-400 md:text-display-xl"> Plans for everyone</h2>
-                    <p className="mt-4 max-w-xl text-md text-tertiary md:mt-6 md:text-lg">
+                    <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
                         Enjoy the <strong>Community</strong> and <strong>Discovery</strong> free plans. Buddhist texts and teachings should be accessible to everyone. Your <strong>Housekeeper</strong> subscription keeps the platform running and improving with new features.
                     </p>
                     <Tabs selectedKey={selectedPlan} onSelectionChange={(item) => setSelectedPlan(item as string)} className="w-full md:w-auto">
@@ -332,7 +332,7 @@ const FeaturesCenterMockup01 = () => {
                                     {/* Light mode image (hidden in dark mode) */}
                                     <img
                                         alt="Dashboard mockup showing application interface"
-                                        src="/theravada-tradition-dark-mode-1600.webp"
+                                        src="/theravada-tradition-light-mode-1600px.webp"
                                         className="size-full object-cover dark:hidden"
                                     />
                                     {/* Dark mode image (hidden in light mode) */}
@@ -349,7 +349,7 @@ const FeaturesCenterMockup01 = () => {
                         {[
                             {
                                 title: "Gems of Wisdom",
-                                subtitle: "Presentations of illuminating texts, scriptures, and teachings from genuine streams of Buddhist traditions.",
+                                subtitle: "Presentations of illuminating texts, scriptures, and teachings from genuine streams of Buddhist transmissions.",
                                 icon: BookOpen01,
                                 cta: "Learn more",
                                 href: "/scriptures/collections",
@@ -424,7 +424,7 @@ const FeaturesIconsAndImage03 = () => {
                         {[
                             {
                                 title: "The Best of Readership and Education",
-                                subtitle: "Enter a sanctuary of wisdom, with a revealing library of texts, overviews, and practical expositions of the awakening.",
+                                subtitle: "Enter a sanctuary of wisdom, with a treasure trove of texts, overviews, and practical expositions of the awakening.",
                                 icon: BookOpen01,
                                 cta: "Learn more",
                                 href: "#",
@@ -449,7 +449,7 @@ const FeaturesIconsAndImage03 = () => {
                 <VideoPlayer
                     size="lg"
                     showThumbnailOverlay
-                    thumbnailUrl="https://www.untitledui.com/marketing/smiling-girl-7.webp"
+                    thumbnailUrl="/people/cnr-vietnam-seminar.webp"
                     src="https://www.untitledui.com/videos/untitled-ui-demo.mp4"
                     className="aspect-video w-full overflow-hidden rounded-lg shadow-3xl md:max-w-200"
                 />
