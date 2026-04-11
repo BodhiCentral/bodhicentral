@@ -6,6 +6,7 @@ import { Button } from "@/components/base/buttons/button";
 import { useClipboard } from "@/hooks/use-clipboard";
 import { FeaturesAlternatingLayout01 } from "@/components-custom/sections/features-alternating-layout-01";
 import { CTACenteredPlansSignup } from "@/components-custom/sections/cta-centered-plans-signup";
+import { AttributionsAffiliationsBanner } from "@/components-custom/sections/attributions-affiliations-banner";
 import Image from 'next/image';
 import "@/styles/home-hero.css";
 
@@ -171,6 +172,7 @@ export const HomeScreen = () => {
             </section>
             <FeaturesAlternatingLayout01 />
             <CTACenteredPlansSignup />
+            <AttributionsAffiliationsBanner />
         </main >
 
 

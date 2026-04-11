@@ -123,19 +123,28 @@ const footerNavList = [
                 href: "/support",
             },
             {
-                label: "Plans",
-                href: "/plans",
+                label: "Acknowledgements",
+                href: "/about",
             },
             {
                 label: "Visit our Patreon",
                 href: "https://www.patreon.com/cw/BodhiCentral/membership",
                 target: "_blank",
             },
+            {
+                label: "Plans",
+                href: "/plans",
+            },
+
         ],
     },
     {
         label: "Legal",
         items: [
+            {
+                label: "Attributions",
+                href: "/affiliations-and-attributions",
+            },
             {
                 label: "Terms",
                 href: "#",
