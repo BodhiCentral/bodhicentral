@@ -40,15 +40,22 @@ export default async function PaliCanonSectionPage({ params }: { params: { slug:
     // 4. Fetch all texts belonging to any of these Vaggas
     const vaggaIds = vaggaList.map((v) => v.id);
 
-    const { data: texts } = vaggaIds.length > 0
+    // --- DEBUG: remove after resolving ---
+    console.log("[DEBUG] vaggaIds:", vaggaIds);
+
+    const textsResult = vaggaIds.length > 0
         ? await supabase
               .from("pali_texts")
               .select("*")
               .in("vagga_id", vaggaIds)
               .order("sort_order", { ascending: true })
-        : { data: [] };
+        : { data: [], error: null };
 
-    const textList = texts ?? [];
+    // --- DEBUG: remove after resolving ---
+    console.log("[DEBUG] texts data:", textsResult.data);
+    console.log("[DEBUG] texts error:", textsResult.error);
+
+    const textList = textsResult.data ?? [];
 
     return (
         <main className="bg-primary-100 dark:bg-primary-900">
