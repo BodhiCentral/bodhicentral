@@ -22,6 +22,7 @@ interface PaliSection {
     color: string;
     dark_color: string;
     pali_section_slug: string;
+    sort_order: number;
 }
 
 interface CollectionPaliSectionGalleryProps {
@@ -115,7 +116,7 @@ export const CollectionPaliSectionGallery = ({ pitakaType }: CollectionPaliSecti
             try {
                 setLoading(true);
                 const { data, error } = await supabase
-                    .from("pali-sections")
+                    .from("pali_sections")
                     .select("*")
                     .eq("pitaka_type", pitakaType)
                     .order("id_volumen", { ascending: true });

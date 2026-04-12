@@ -1,20 +1,59 @@
-"use client";
+import { notFound } from "next/navigation";
+import { createClient } from "@/utils/supabase/server";
+import { PaliSectionHeader } from "@/components/reader/pali-section/pali-section-header";
+import { PaliSectionChapterTabs } from "@/components/reader/pali-section/pali-section-chapter-tabs";
 
-export default function PaliCanonSectionPage() {
+export default async function PaliCanonSectionPage({ params }: { params: { slug: string } }) {
+    const { slug } = await params;
+    const supabase = await createClient();
+
+    // 1. Fetch the main section by its slug
+    const { data: section, error: sectionError } = await supabase
+        .from("pali_sections")
+        .select("*")
+        .eq("pali_section_slug", slug)
+        .single();
+
+    if (sectionError || !section) {
+        notFound();
+    }
+
+    // 2. Fetch parent section (e.g., the Nikāya this Paṇṇāsa belongs to)
+    const { data: parentSection } = section.parent_id
+        ? await supabase
+              .from("pali_sections")
+              .select("*")
+              .eq("id", section.parent_id)
+              .single()
+        : { data: null };
+
+    // 3. Fetch child Vaggas (chapters) of this section
+    const { data: vaggas } = await supabase
+        .from("pali_sections")
+        .select("*")
+        .eq("parent_id", section.id)
+        .eq("section_type", "vagga")
+        .order("sort_order", { ascending: true });
+
+    const vaggaList = vaggas ?? [];
+
+    // 4. Fetch all texts belonging to any of these Vaggas
+    const vaggaIds = vaggaList.map((v) => v.id);
+
+    const { data: texts } = vaggaIds.length > 0
+        ? await supabase
+              .from("pali_texts")
+              .select("*")
+              .in("vagga_id", vaggaIds)
+              .order("sort_order", { ascending: true })
+        : { data: [] };
+
+    const textList = texts ?? [];
+
     return (
-        <>
-            <div className="relative mx-auto">
-                {/* Overlay layer for easy customization of color/transparency */}
-                <div className="absolute inset-0 bg-white/55 dark:bg-black/55 z-0" aria-hidden="true" />
-
-                {/* Content layer */}
-                <div className="relative z-10">
-                    <section className="flex flex-col mx-auto max-w-2xl items-center justify-center py16 px-4 md:px-6">
-                        <h1 className="text-display-md text-center text-brand-800 dark:text-brand-200 md:text-display-lg lg:text-display-xl pb-6">Dynamic Pali Canon Section</h1>
-                        <p className="text-center text-lg font-semibold text-tertiary">A single section of the Pali Canon.</p>
-                    </section>
-                </div>
-            </div>
-        </>
+        <main className="bg-primary-100 dark:bg-primary-900">
+            <PaliSectionHeader section={section} parentSection={parentSection} />
+            <PaliSectionChapterTabs vaggas={vaggaList} texts={textList} />
+        </main>
     );
 }

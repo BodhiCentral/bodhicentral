@@ -1,6 +1,6 @@
 "use client";
 
-import { Menu02, Building08, BookOpen01, Eye, EyeOff, Headphones01, Image01, VideoRecorder, InfoCircle, AlignLeft01, AlignRight01, Link01, Dataflow01, Copy01, ArrowRight, Settings03, Download01, GraduationHat02, Bookmark, HelpOctagon } from "@untitledui/icons";
+import { Menu02, Building08, BookOpen01, Headphones01, Image01, VideoRecorder, AlignLeft01, AlignRight01, Link01, Dataflow01, ArrowRight, Settings03, Download01, GraduationHat02, Bookmark, HelpOctagon } from "@untitledui/icons";
 import { FileIcon } from "@untitledui/file-icons"
 import { SidebarNavigationSlim } from "@/components/application/app-navigation/sidebar-navigation/sidebar-slim-reader";
 import { SidebarNavigationSlimRight } from "@/components/application/app-navigation/sidebar-navigation/sidebar-slim-reader-right";
@@ -312,7 +312,6 @@ export default function ReaderPage() {
 
                 {/* Sidebar Tools for the Canon and Text Navigation */}
                 <SidebarNavigationSlim
-                    hideRightBorder
                     activeUrl=""
                     items={[
                         {
@@ -397,7 +396,6 @@ export default function ReaderPage() {
 
                 {/* RIGHT - Sidebar Tools for the Text Navigation */}
                 <SidebarNavigationSlimRight
-                    hideRightBorder
                     activeUrl=""
                     items={[
                         {

@@ -5,7 +5,6 @@ import {
     BookOpen01,
     GraduationHat02,
     ArrowRight,
-    ChartBreakoutSquare,
     CheckCircle,
     CreditCardRefresh,
     File05,
