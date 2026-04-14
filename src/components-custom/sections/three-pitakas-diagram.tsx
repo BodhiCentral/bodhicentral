@@ -16,8 +16,8 @@ export const ThreePitakasDiagram = () => {
             {/* Section Header */}
             <div className="relative z-10 mx-auto max-w-container px-4 md:px-8 pb-2">
                 <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
-                    <span className="text-sm font-semibold text-brand-secondary md:text-md">Pali Canon</span>
-                    <h2 className="mt-1 text-display-md font-extralight text-brand-700 dark:text-brand-300 md:text-display-xl">The Tipiṭaka Divisions</h2>
+                    <span className="text-sm font-light text-brand-secondary md:text-md">Pali Canon</span>
+                    <h2 className="text-display-md font-extralight text-brand-800 dark:text-brand-300 md:text-display-xl">The Tipiṭaka Divisions</h2>
                 </div>
             </div>
 

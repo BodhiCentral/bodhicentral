@@ -107,17 +107,17 @@ const articles: Article[] = [
 
 export const BlogSectionTipitakaOverviewsLeftAligned = () => {
     return (
-        <section className="bg-linear-to-b from-brand-100 via-brand-50 via-15% to-brand-100 to-80% dark:bg-linear-to-b dark:from-brand-950 dark:via-brand-950 dark:via-50% dark:to-brand-950 py-12 md:py-20">
+        <section className="bg-linear-to-b from-brand-100 via-brand-50 via-15% to-brand-100 to-80% dark:bg-linear-to-b dark:from-brand-900/90 dark:via-brand-800/50 dark:via-50% dark:to-brand-900/90 py-12 md:py-20">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="flex flex-col items-start justify-between lg:flex-row">
                     <div className="max-w-3xl">
                         <span className="text-sm font-light text-brand-600 dark:text-brand-700 md:text-md">Pali Canon</span>
-                        <h2 className="mt-3 text-display-sm font-extralight text-brand-800 dark:text-brand-400 md:text-display-lg">The Tipiṭaka Overviews</h2>
+                        <h2 className="mt-3 text-display-sm font-extralight text-brand-800 dark:text-brand-300 md:text-display-lg">The Tipiṭaka Overviews</h2>
                         <p className="mt-4 text-lg text-tertiary md:mt-4 md:text-xl">Expert introductions to the divisions of the Pali Canon in the Theravāda tradition.</p>
                     </div>
 
                     <div className="hidden gap-3 lg:flex">
-                        <Button size="md">View more</Button>
+                        <Button size="sm">View more</Button>
                     </div>
                 </div>
 
