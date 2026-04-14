@@ -26,14 +26,14 @@ export default function TibetanCanonsPage() {
                         {/* Kangyur Card */}
                         <div className="flex flex-col h-full items-center justify-start bg-radial-[at_50%_46%] from-brand-50/90 via-brand-200/95 via-32% to-brand-600/2 dark:bg-linear-to-b dark:bg-radial-[at_50%_46%] dark:from-brand-950/95 dark:via-brand-900/90 dark:via-30% dark:to-black/15 p-8 rounded-full">
                             <Image src="/thai-ornament-top-linear-logo.png" alt="thai ornament" width={100} height={100} style={{ width: "auto", height: "auto" }} className="hidden md:block drop-shadow-xs drop-shadow-black/90 dark:drop-shadow-black/50 opacity-60" />
-                            <h2 className="text-display-md text-brand-800 dark:text-brand-200 text-center py-2">Kangyur</h2>
+                            <h2 className="text-display-md text-brand-800 dark:text-brand-200 text-center py-2">The Kangyur Collection</h2>
                             <p className="text-md text-tertiary font-semibold text-center pb-6">The Kangyur is the collection of the translated words of the Buddha in Tibetan.</p>
                             <Button href="#kangyur-divisions-gallery" className="mt-auto" color="primary" size="sm" iconLeading={<ArrowDown data-icon />} aria-label="Go to Kangyur gallery" />
                         </div>
                         {/* Tengyur Card */}
                         <div className="flex flex-col h-full items-center justify-start bg-radial-[at_50%_46%] from-brand-50/90 via-brand-200/95 via-32% to-brand-600/2 dark:bg-linear-to-b dark:bg-radial-[at_50%_46%] dark:from-brand-950/95 dark:via-brand-900/90 dark:via-30% dark:to-black/15 p-8 rounded-full">
                             <Image src="/thai-ornament-top-linear-logo.png" alt="thai ornament" width={100} height={100} style={{ width: "auto", height: "auto" }} className="hidden md:block drop-shadow-xs drop-shadow-black/90 dark:drop-shadow-black/50 opacity-60" />
-                            <h2 className="text-display-md text-brand-800 dark:text-brand-200 text-center py-2">Tengyur</h2>
+                            <h2 className="text-display-md text-brand-800 dark:text-brand-200 text-center py-2">The Tengyur Collection</h2>
                             <p className="pb-6 text-md text-tertiary font-semibold text-center">The Tengyur is the collection of the translated Buddhist treatises in Tibetan.</p>
                             <Button href="#tengyur-divisions-gallery" className="mt-auto" color="primary" size="sm" iconLeading={<ArrowDown data-icon />} aria-label="Go to Tengyur gallery" />
                         </div>

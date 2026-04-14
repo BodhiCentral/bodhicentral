@@ -112,8 +112,8 @@ export const BlogSectionTibetanCanonOverviews = () => {
                 <div className="flex flex-col items-start justify-between lg:flex-row">
                     <div className="max-w-3xl">
                         <span className="text-sm font-light text-brand-600 dark:text-brand-700 md:text-md">Tibetan Canon</span>
-                        <h2 className="mt-3 text-display-sm font-extralight text-brand-800 dark:text-brand-300 md:text-display-lg">The Tibetan Canon Overviews</h2>
-                        <p className="mt-4 text-lg text-tertiary md:mt-4 md:text-xl">Expert introductions to the divisions of the Kangyur and Tengyur.</p>
+                        <h2 className="mt-2 text-display-sm font-extralight text-brand-800 dark:text-brand-300 md:text-display-lg">The Tibetan Canon Overviews</h2>
+                        <p className="mt-4 text-lg text-tertiary md:mt-2 md:text-xl">Expert introductions to the divisions of the Kangyur and Tengyur.</p>
                     </div>
 
                     <div className="hidden gap-3 lg:flex">
@@ -121,7 +121,7 @@ export const BlogSectionTibetanCanonOverviews = () => {
                     </div>
                 </div>
 
-                <ul className="mt-10 grid grid-cols-1 gap-x-8 gap-y-10 md:mt-14 md:grid-cols-2 md:gap-y-14 lg:grid-cols-3">
+                <ul className="mt-10 grid grid-cols-1 gap-x-8 gap-y-10 md:mt-12 md:grid-cols-2 md:gap-y-14 lg:grid-cols-3">
                     {articles.slice(0, 3).map((article) => (
                         <li key={article.id}>
                             <Simple01Vertical article={article} />
