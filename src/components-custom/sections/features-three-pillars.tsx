@@ -124,13 +124,13 @@ export const FeaturesThreePillars = () => {
 
                             <img
                                 alt="Mockup showing Learning Paths interface"
-                                src="/placeholder-image-landscape.svg"
+                                src="/tibetan-schools-hero-header-light-mode-1600px.webp"
                                 className="size-full object-contain lg:w-auto lg:max-w-none dark:hidden"
                             />
                             {/* Dark mode image (hidden in light mode) */}
                             <img
                                 alt="Mockup showing Learning Paths interface"
-                                src="/placeholder-image-landscape.svg"
+                                src="/tibetan-schools-hero-header-light-mode-1600px.webp"
                                 className="size-full object-contain not-dark:hidden lg:w-auto lg:max-w-none"
                             />
                         </AlternateImageMockup>
