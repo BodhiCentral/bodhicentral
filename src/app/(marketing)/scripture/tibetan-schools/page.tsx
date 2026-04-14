@@ -9,7 +9,7 @@ export default function TibetanSchoolsPage() {
         <>
             <main>
                 {/* Hero Section */}
-                <section className="relative flex flex-col items-center justify-center gap-4 mx-auto h-[calc(100dvh-3.5rem)] bg-[url(/himalayan-scenery-02.jpg)] bg-cover bg-center bg-no-repeat">
+                <section className="relative flex flex-col items-center justify-center gap-4 mx-auto h-[calc(100vh-3.5rem)] bg-[url(/himalayan-scenery-02.jpg)] bg-cover bg-center bg-no-repeat">
                     {/* Overlay layer for easy customization of color/transparency */}
                     <div className="absolute inset-0 bg-linear-to-b from-black/20 via-black/50 via-30% to-black/20 z-0" aria-hidden="true" />
 

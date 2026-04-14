@@ -6,6 +6,7 @@ import { Carousel } from "@/components/application/carousel/carousel-base";
 import { Button } from "@/components/base/buttons/button";
 import { RoundButton } from "@/components/marketing/testimonials/round-button";
 import { createClient } from "@/utils/supabase/client";
+import Image from "next/image";
 
 interface TibetanCanonDivision {
     id_sorting: string;
@@ -47,13 +48,16 @@ const TibetanCanonDivisionsCard = ({ section }: { section: TibetanCanonDivision 
     return (
         <Carousel.Item
             key={section.toh_numbers || section.english_title}
-            className="group relative flex aspect-[.5625] w-full max-w-68 flex-col justify-end md:aspect-[.5625] md:max-w-76 bg-radial-[at_50%_35%] from-yellow-100 via-yellow-200 via-27% to-yellow-700 to-75% dark:from-yellow-dark-100 dark:via-yellow-dark-300 dark:via-26% dark:to-yellow-700 dark:to-75% drop-shadow-lg border-2 border-orange-300 dark:border-red-950 rounded-xl overflow-hidden hover:scale-[1.03] transition-all duration-300 cursor-pointer"
+            className="group relative flex aspect-[.5625] w-full max-w-68 flex-col justify-end md:aspect-[.5625] md:max-w-76 bg-radial-[at_50%_40%] from-brand-50 via-brand-100 via-20% to-brand-700 to-90% dark:from-brand-dark-200 dark:via-brand-dark-300 dark:via-15% dark:to-brand-700 dark:to-75% drop-shadow-lg border-2 border-brand-300 dark:border-brand-950 rounded-xl overflow-hidden hover:scale-[1.05] transition-all duration-300 cursor-pointer"
             onClick={() => setIsFlipped(!isFlipped)}
         >
-            <img
+            <Image
                 alt={section.english_title}
                 src={section.thumbnail_cover}
-                className={`absolute inset-0 z-0 size-full top-0 cursor-grab object-cover rounded-sm ${isFlipped ? "opacity-0 invisible" : "group-hover:opacity-0 group-hover:invisible"}`}
+                width={100}
+                height={100}
+                style={{ width: "100%", height: "100%" }}
+                className={`absolute inset-0 z-0 size-full top-0 cursor-grab object-cover mix-blend-multiply rounded-sm ${isFlipped ? "opacity-0 invisible" : "group-hover:opacity-0 group-hover:invisible"}`}
             />
             <div className={`absolute flex items-end justify-center z-200 w-30 h-16 top-[-34px] right-[12px] pb-1 ${section.color} rounded-3xl`}>
                 <h6 className=" text-brand-200">{section.toh_numbers}</h6>
@@ -61,13 +65,13 @@ const TibetanCanonDivisionsCard = ({ section }: { section: TibetanCanonDivision 
 
             <div className={`z-10 bg-linear-to-t from-black/30 to-black/0 pt-16 md:pt-20 lg:pt-24 rounded-b-sm ${isFlipped ? "opacity-0 invisible" : "group-hover:opacity-0 group-hover:invisible"}`}>
                 <div className={`relative ${section.color} ${section.dark_color} px-5 pt-5 pb-4 text-white backdrop-blur-[10px] before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-alpha-white/30 md:px-5 rounded-b-sm`}>
-                    <h3 className="text-2xl text-brand-200">{section.english_title}</h3>
+                    <h3 className="text-2xl text-brand-300">{section.english_title}</h3>
                     <p className="mt-1 text-2xl font-regular">{section.tibetan_title}</p>
-                    <p className="mt-2 text-sm font-regular">{section.sanskrit_title}</p>
+                    <p className="mt-2 text-md font-regular">{section.sanskrit_title}</p>
                     <div className="flex gap-2 mt-6 justify-between items-top">
                         <div className="flex flex-col gap-0">
-                            <p className="text-sm font-normal text-brand-200 uppercase">{section.canon_division}</p>
-                            <p className="text-xs font-normal text-brand-200">{section.volumes}</p>
+                            <p className="text-sm font-normal text-brand-300 uppercase">{section.canon_division}</p>
+                            <p className="text-sm font-normal text-brand-200">{section.volumes}</p>
                         </div>
                     </div>
                 </div>
@@ -84,17 +88,17 @@ const TibetanCanonDivisionsCard = ({ section }: { section: TibetanCanonDivision 
                 {/* Card Reversed Side */}
                 <div className="flex flex-col gap-2 mt-1 items-top">
                     <div className="flex flex-col gap-0">
-                        <p className="text-sm font-normal pb-2">{section.canon_division}</p>
-                        <h3 className="text-lg font-medium text-brand-200">{section.english_title}</h3>
+                        <p className="text-lg font-normal pb-2">{section.tibetan_title}</p>
+                        <h3 className="text-lg font-medium text-brand-300">{section.english_title}</h3>
                     </div>
                     <p className="mt-2 text-sm md:text-regular text-balance pb-4">{section.short_description}</p>
                 </div>
 
                 <Button
                     size="sm"
-                    className="bg-black/20 hover:bg-black/30 border-0.5 border-white/50 hover:border-white/50 text-white/50 hover:text-white/60 dark:bg-gray-900/50 dark:border-gray-900/50 dark:text-gray-400"
+                    className="bg-black/20 hover:bg-black/30 border-0.5 border-white/50 hover:border-white/50 text-white hover:text-white/60 dark:bg-gray-900/50 dark:border-gray-900/50 dark:text-gray-400"
                 >
-                    Explore division
+                    Open division
                 </Button>
             </div>
         </Carousel.Item>

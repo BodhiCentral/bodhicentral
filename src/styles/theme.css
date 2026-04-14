@@ -224,10 +224,10 @@
     --color-ink-900: oklch(0.131 0.005 51.39);
     --color-ink-950: oklch(0.106 0.004 107.07);
 
-    /* Brand Gold Colors */
+    /* Gold Colors */
 
   --color-gold-25: oklch(0.966 0.008 73.73);
-    --color-gold-50: oklch(0.973 0.007 88.55);
+  --color-gold-50: oklch(0.973 0.007 88.55);
   --color-gold-100: oklch(0.945 0.014 78.24);
   --color-gold-200: oklch(0.89 0.028 78.17);
   --color-gold-300: oklch(0.837 0.041 79.42);
@@ -255,7 +255,7 @@
     --color-muted-950: oklch(0.188 0.005 67.51);
 
 
-    /* BRAND COLORS - Experimental swap Orange Dark with Gold */ 
+    /* VARIABLE BRAND COLORS - From Gold */ 
     --color-brand-25: var(--color-gold-25);
     --color-brand-50: var(--color-gold-50);
     --color-brand-100: var(--color-gold-100);
