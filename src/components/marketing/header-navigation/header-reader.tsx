@@ -119,17 +119,18 @@ export const HeaderReader = ({ items = headerReaderNavItems, isFullWidth, isFloa
                 className,
             )}
         >
-            <div className="flex size-full w-full flex-1 items-center pr-3 pl-3 md:px-3">
+            <div className="flex size-full w-full flex-1 items-center pr-3 pl-3 md:pl-4 md:pr-6">
                 <div
                     className={cx(
-                        "flex w-full justify-between gap-4",
+                        "flex w-full items-center justify-between gap-12",
                         isFloating && "ring-secondary_alt md:rounded-2xl md:bg-primary md:py-3 md:pr-3 md:pl-4 md:shadow-xs md:ring-1",
                     )}
                 >
-                    <div className="flex items-center gap-9">
+                    <div className="flex items-center gap-10">
                         {/* LOGO */}
                         <Link href="/" aria-label="Bodhicentral Home page" className="flex items-center outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2">
-                            <BodhicentralLogoMinimal className="w-8" />
+                            <span className="text-2xl font-serif font-light uppercase tracking-wide text-brand-600">B</span>
+                            <span className="text-2xl font-serif font-light uppercase tracking-wide text-brand-600">C</span>
                         </Link>
                         <Breadcrumbs className="flex-1">
                             <Breadcrumbs.Item icon={Building08} onClick={openCanonNavigator}>Navigator</Breadcrumbs.Item>
@@ -138,8 +139,6 @@ export const HeaderReader = ({ items = headerReaderNavItems, isFullWidth, isFloa
                             <Breadcrumbs.Item href="/learning-paths">Section</Breadcrumbs.Item>
                             <Breadcrumbs.Item href="/resources">Word of Welcome</Breadcrumbs.Item>
                         </Breadcrumbs>
-
-
                     </div>
                     {/* Desktop navigation */}
                     <nav className="flex items-center max-md:hidden">
@@ -148,7 +147,7 @@ export const HeaderReader = ({ items = headerReaderNavItems, isFullWidth, isFloa
                                 <li key={navItem.label}>
                                     {navItem.menu ? (
                                         <AriaDialogTrigger>
-                                            <AriaButton className="flex cursor-pointer items-center gap-0.5 rounded-lg px-1.5 py-1 text-xs font-light tracking-[0.075em] uppercase text-secondary outline-focus-ring transition duration-100 ease-linear hover:text-brand-secondary_hover aria-expanded:text-brand-secondary focus-visible:outline-2 focus-visible:outline-offset-2">
+                                            <AriaButton className="flex cursor-pointer items-center gap-0.5 rounded-lg px-1.5 py-1 text-xs font-light tracking-[0.075em] uppercase text-primary outline-focus-ring transition duration-100 ease-linear hover:text-brand-secondary_hover aria-expanded:text-brand-secondary focus-visible:outline-2 focus-visible:outline-offset-2">
                                                 <span className="px-0.5">{navItem.label}</span>
 
                                                 <ChevronDown className="size-4 rotate-0 stroke-[2.625px] text-fg-quaternary transition duration-100 ease-linear in-aria-expanded:-rotate-180 in-aria-expanded:text-brand-secondary" />
@@ -199,6 +198,7 @@ export const HeaderReader = ({ items = headerReaderNavItems, isFullWidth, isFloa
                             ))}
                         </ul>
                     </nav>
+
                     {/* DESKTOP LOGIN/SIGNUP BUTTONS */}
                     <div className="hidden items-center gap-8 md:flex ml-8"> {/* 10px gap between nav menu items and buttons */}
                         <div className="flex items-center gap-1">

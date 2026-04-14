@@ -37,7 +37,7 @@ export const SidebarReaderRight = ({ activeUrl, items, footerItems = [] }: Sideb
                 )}
             >
 
-                <ul className="mt-2 flex flex-col gap-2.5 px-1.5">
+                <ul className="mt-2 flex flex-col gap-2 px-1.5">
                     {items.map((item) => (
                         <li key={item.label}>
                             <NavItemButton
@@ -54,7 +54,7 @@ export const SidebarReaderRight = ({ activeUrl, items, footerItems = [] }: Sideb
                 </ul>
                 <div className="mt-auto flex flex-col gap-4 px-1.5 py-5">
                     {footerItems.length > 0 && (
-                        <ul className="flex flex-col gap-2.5">
+                        <ul className="flex flex-col gap-2">
                             {footerItems.map((item) => (
                                 <li key={item.label}>
                                     <NavItemButton

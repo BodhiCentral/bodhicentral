@@ -54,23 +54,25 @@ export const CanonNavigationModal = () => {
         <ModalOverlay isOpen={isOpen} onOpenChange={setIsOpen} isDismissable={true}>
             <Modal>
                 <Dialog>
-                    <div className="flex flex-row gap-0 w-full h-full shadow-2xl rounded-2xl">
+                    <div className="flex flex-row gap-0 w-full h-full shadow-2xl rounded-xl">
                         {/* Canon Navigator */}
-                        <div className="relative w-140 sm:min-w-110 flex flex-col overflow-hidden rounded-l-3xl bg-primary border-r border-secondary">
-                            <div className="h-auto flex flex-col gap-0.5 px-4 pt-4 sm:px-6 sm:py-4 bg-tertiary dark:bg-brand-950 border-b border-secondary">
-                                <AriaHeading slot="title" className="text-display-xs font-semibold text-brand-primary">
+                        <div className="relative w-140 sm:min-w-110 flex flex-col overflow-hidden rounded-l-2xl bg-secondary border-r border-secondary">
+                            {/* Header */}
+                            <div className="h-auto flex flex-col gap-0.5 px-4 pt-4 sm:px-6 sm:py-4 bg-tertiary dark:bg-neutral-900 border-b border-secondary">
+                                <AriaHeading slot="title" className="text-display-xs font-light text-brand-primary">
                                     Canon Navigation
                                 </AriaHeading>
-                                <p className="text-md text-tertiary">Navigate texts in all collections.</p>
                             </div>
+                            {/* Body */}
                             <div className="mx-auto w-full overflow-y-auto max-h-full scrollbar-hide flex flex-col flex-1 gap-0.5 px-4 py-6 sm:px-6 sm:py-6">
                                 <CanonTreeViewSM />
                             </div>
-                            <div className="z-10 flex flex-col gap-3 p-4 pt-4 sm:flex-row sm:items-center sm:justify-end sm:px-4 sm:pt-4 sm:pb-4 bg-tertiary dark:bg-brand-950 border-t border-secondary dark:border-secondary">
-                                <Button color="secondary" size="md">
+                            {/* Footer */}
+                            <div className="z-10 flex flex-col gap-3 p-4 sm:flex-row sm:items-center sm:justify-between sm:px-6 sm:pt-4 sm:pb-4 bg-tertiary dark:bg-neutral-900 border-t border-secondary">
+                                <Button color="secondary" size="sm">
                                     Reset session
                                 </Button>
-                                <Button color="primary" size="md" onClick={() => setIsOpen(false)}>
+                                <Button color="primary" size="sm" onClick={() => setIsOpen(false)}>
                                     Save this selection
                                 </Button>
                             </div>

@@ -507,7 +507,7 @@
     --color-fg-brand-secondary_hover: var(--color-brand-600);
 
     /* BACKGROUND COLORS */
-    --color-bg-primary: var(--color-warm-off-100);
+    --color-bg-primary: var(--color-warm-off-50);
     --color-bg-tertiary: var(--color-neutral-100);
     --color-bg-brand-primary: var(--color-brand-50);
     --color-bg-error-secondary: var(--color-red-100);
@@ -881,7 +881,7 @@
         --color-fg-brand-secondary_alt: var(--color-neutral-600);
         --color-fg-brand-secondary_hover: var(--color-neutral-500);
 
-        --color-bg-primary: var(--color-ink-700);
+        --color-bg-primary: var(--color-ink-800);
         --color-bg-tertiary: var(--color-neutral-800);
         --color-bg-brand-primary: var(--color-brand-500);
         --color-bg-error-secondary: var(--color-red-600);

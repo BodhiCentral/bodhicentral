@@ -263,40 +263,36 @@ export const TextCanvasSingle = () => {
 export const AncillaryPanel = () => {
     return (
         <div className="sticky prose-reader flex flex-col top-12 px-6 py-4 mx-auto z-45 border border-secondary rounded-r-2xl max-h-full">
-            <div className="py-2 border-b border-secondary">
-                <h5 className="text-display-xs text-brand-primary">Ancillary Heading</h5>
+            <div className="py-2">
+                <h5 className="text-display-xs text-brand-primary">Ancillary Right Panels</h5>
             </div>
-            <div className="flex flex-col w-full py-4 overflow-y-auto scrollbar-hide h-[calc(100vh-4rem)]">
+            <div className="flex flex-col w-full overflow-y-auto scrollbar-hide h-[calc(100vh-4rem)]">
                 <h4 className=" text-primary"><Link01 size={18} />Connections and Parallels</h4>
-                <p className="text-md text-tertiary">Acting on the headings and paragraphs in the active text will display the connections and parallels with other texts and sections of the canons. For more information on the types of parallels, see our <Link href="https://bodhi-central-docs.vercel.app/research/pali-canon/connections-and-parallels" target="_blank" rel="noopener noreferrer" className="text-primary underline">Documentation</Link>.</p>
+                <p className="text-md text-tertiary">Connections and parallels with other texts and canon sections. For more information on the types of parallels, see our <Link href="https://bodhi-central-docs.vercel.app/research/pali-canon/connections-and-parallels" target="_blank" rel="noopener noreferrer" className="text-primary underline">Documentation</Link>.</p>
                 <h4 className=" text-primary"><BookOpen01 size={18} />Recommended Reading</h4>
-                <p className="text-md text-tertiary">Extend the utility of the reader by accessing overviews and recommended readings related to the active text.</p>
+                <p className="text-md text-tertiary">Extend your reading by accessing overviews, commentaries, and recommended readings related to the active text.</p>
                 <h4 className=" text-primary"><Bookmark size={18} />Bookmarks</h4>
-                <p className="text-md text-tertiary">This is a feature for registered users. After signing up to the free Discovery plan, users can bookmark sections of the text and save searches for future reference. </p>
-                <div className="w-full border-t border-primary mt-auto">
-                    <h4 className="text-primary"><Download01 size={18} />Downloads</h4>
-                    <div className="flex gap-1 dark:opacity-90">
-                        <Button color="tertiary" size="sm" iconLeading={<FileIcon type="pdf" variant="gray" className="drop-shadow-md dark:invert-25" aria-label="Download PDF" />} />
-                        <Button color="tertiary" size="sm" iconLeading={<FileIcon type="txt" variant="gray" className="drop-shadow-md dark:invert-25" aria-label="Download TXT" />} />
-                        <Button color="tertiary" size="sm" iconLeading={<FileIcon type="html" variant="gray" className="drop-shadow-md dark:invert-25" aria-label="Download HTML" />} />
+                <p className="text-md text-tertiary">This is a feature for registered users. After signing up to the free Discovery plan, users can bookmark a limited amount of texts as well as save searches. </p>
+                <div className="w-full border-t pb-4 border-secondary mt-auto">
+                    <h4 className="text-primary">Downloads</h4>
+                    <div className="flex gap-3 dark:opacity-90">
+                        <Button color="secondary" size="sm" iconLeading={<FileIcon type="pdf" variant="gray" aria-label="Download PDF" />} />
+                        <Button color="secondary" size="sm" iconLeading={<FileIcon type="txt" variant="gray" aria-label="Download TXT" />} />
+                        <Button color="secondary" size="sm" iconLeading={<FileIcon type="html" variant="gray" aria-label="Download HTML" />} />
                     </div>
-                    <h4 className="text-primary">Social sharing</h4>
-                    <div className="flex gap-3">
-                        <Button color="secondary" size="md" className="text-fg-quaternary" iconLeading={Link01} />
-                        <Button color="secondary" size="md" className="text-fg-quaternary" iconLeading={X} />
-                        <Button color="secondary" size="md" className="text-fg-quaternary" iconLeading={Facebook} />
-                        <Button color="secondary" size="md" className="text-fg-quaternary" iconLeading={LinkedIn} />
-                    </div>
-
                 </div>
             </div>
-            <div className="hidden px-6 py-2 border-t border-secondary">
-                <h6 className=" text-tertiary text-center">[Ancillary utilities]</h6>
+            <div className="pt-4 border-t border-secondary">
+                <div className="flex justify-end gap-3">
+                    <Button color="secondary" size="md" className="text-fg-quaternary" iconLeading={Link01} />
+                    <Button color="secondary" size="md" className="text-fg-quaternary" iconLeading={X} />
+                    <Button color="secondary" size="md" className="text-fg-quaternary" iconLeading={Facebook} />
+                    <Button color="secondary" size="md" className="text-fg-quaternary" iconLeading={LinkedIn} />
+                </div>
             </div>
         </div>
     );
 };
-
 
 export default function ReaderPage() {
     return (
