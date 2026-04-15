@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import { CollectionGalleryNyingma } from '@/components/marketing/collection-sections/gallery-nyingma-studies';
-import { CollectionGalleryKagyu } from '@/components/marketing/collection-sections/gallery-kagyu-studies';
+import { GalleryNyingmaStudies } from '@/components-custom/galleries/gallery-nyingma-studies';
+import { GalleryKagyuStudies } from '@/components-custom/galleries/gallery-kagyu-studies';
 
 export default function IndianMahayanaPage() {
     return (
@@ -57,8 +57,8 @@ export default function IndianMahayanaPage() {
                     </section>
                 </div>
             </div>
-            <CollectionGalleryNyingma />
-            <CollectionGalleryKagyu />
+            <GalleryNyingmaStudies />
+            <GalleryKagyuStudies />
         </>
     );
 }
