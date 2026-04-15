@@ -10,7 +10,7 @@ import { SectionDivider } from "@/components/shared-assets/section-divider";
 import { useClipboard } from "@/hooks/use-clipboard";
 import { cx } from "@/utils/cx";
 import { isReactComponent } from "@/utils/is-react-component";
-import { CollectionGalleryAbhidhammaPitaka } from "@/components/marketing/collection-sections/collection-gallery-abhidhamma-pitaka";
+import { GalleryAbhidhammaPitakaDivisions } from "@/components-custom/galleries/gallery-abhidhamma-pitaka-divisions";
 import Image from 'next/image';
 import { ArticleHeaderSection } from "@/components-custom/blog/article-header-section"
 
@@ -342,7 +342,7 @@ const BlogPost05 = () => {
 
             <SectionDivider className="hidden pt-16 md:pt-24" />
 
-            <CollectionGalleryAbhidhammaPitaka />
+            <GalleryAbhidhammaPitakaDivisions />
 
         </div>
     );

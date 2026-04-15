@@ -7,7 +7,7 @@ import { Facebook, LinkedIn, X } from "@/components/foundations/social-icons";
 import { useClipboard } from "@/hooks/use-clipboard";
 import { cx } from "@/utils/cx";
 import { isReactComponent } from "@/utils/is-react-component";
-import { CollectionGallerySuttaPitaka } from "@/components/marketing/collection-sections/collection-gallery-sutta-pitaka";
+import { GallerySuttaPitakaDivisions } from "@/components-custom/galleries/gallery-sutta-pitaka-divisions";
 import Image from 'next/image';
 import { ArticleHeaderSection } from "@/components-custom/blog/article-header-section"
 
@@ -394,7 +394,7 @@ const BlogPost05 = () => {
 
             <ArticleOverview />
 
-            <CollectionGallerySuttaPitaka />
+            <GallerySuttaPitakaDivisions />
 
         </div>
     );
