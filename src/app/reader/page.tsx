@@ -61,7 +61,7 @@ export const TextCanvasSingle = () => {
                             <img
                                 alt="Text Cover"
                                 className="inset-0 h-auto w-full cols- object-top dark:hidden md:h-70 md:w-auto lg:h-75 lg:object-cover"
-                                src="/textCovers/buddha-sakyamuni-600.jpg"
+                                src="/textCovers/buddha-sakyamuni-600px.jpg"
                             />
                             {/* Dark mode image (hidden in light mode) */}
                             <img
