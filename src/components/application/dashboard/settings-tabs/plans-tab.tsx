@@ -36,7 +36,7 @@ export const PlansTab = () => {
                     period: '/ month',
                     description: 'Daily Buddhist study tools for personal engagement.',
                     storageText: '50 MB / 100 MB',
-                    storagePercent: 50,
+                    storagePercent: 10,
                     showProgress: true,
                     renews: 'Never expires'
                 }
@@ -149,7 +149,7 @@ export const PlansTab = () => {
                         {currentDetails.showProgress && (
                             <>
                                 <ProgressBar value={currentDetails.storagePercent!} max={100} min={0} />
-                                <p className="text-sm text-tertiary">You are approaching your storage limit. Consider upgrading for unlimited storage.</p>
+                                <p className="text-sm text-tertiary">Consider upgrading for more storage.</p>
                             </>
                         )}
                         {!currentDetails.showProgress && currentPlanId === 'standard' && (
@@ -166,8 +166,8 @@ export const PlansTab = () => {
                                 </Button>
                             )}
                             {currentPlanId !== 'patron' && (
-                                <Button size="md" color="primary" onClick={() => setCurrentPlanId('patron')}>
-                                    Upgrade plan
+                                <Button size="md" color="primary" onClick={() => setCurrentPlanId('standard')}>
+                                    Upgrade
                                 </Button>
                             )}
                         </div>
