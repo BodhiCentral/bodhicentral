@@ -153,7 +153,7 @@ export const PlansTab = () => {
                             </>
                         )}
                         {!currentDetails.showProgress && currentPlanId === 'standard' && (
-                            <p className="text-sm text-tertiary text-brand-primary">You have unlimited access! Feel free to store as many texts and spaces as you need.</p>
+                            <p className="text-sm text-tertiary">You have unlimited access! Feel free to store as many texts and spaces as you need.</p>
                         )}
                     </div>
 

@@ -475,6 +475,9 @@
     --color-text-error-primary_hover: var(--color-red-700);
     --color-text-brand-secondary_hover: var(--color-brand-800);
 
+    --color-text-link-primary: var(--color-brand-600);
+    --color-text-link-primary_hover: var(--color-brand-700);
+
     /* BORDER COLORS */
     --color-border-primary: var(--color-neutral-300);
     --color-border-secondary: var(--color-neutral-200);

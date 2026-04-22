@@ -1,18 +1,15 @@
 "use client";
-
-import { Badge } from "@/components/base/badges/badges";
 import { Button } from "@/components/base/buttons/button";
 import { BodhicentralLogo } from "@/components/foundations/logo/bodhicentral-logo";
 import Link from "next/link";
 import { Dribbble, Facebook, GitHub, Layers, X } from "@/components/foundations/social-icons";
-import Image from "next/image";
 
 const footerNavList = [
     {
         label: "Scriptures",
         items: [
             {
-                label: "Overview",
+                label: "Collections",
                 href: "/scripture/collections",
             },
             {
@@ -28,21 +25,14 @@ const footerNavList = [
                 href: "/scripture/tibetan-canons",
             },
             {
-                label: "Authors",
-                href: "/scripture/authors",
-            },
-            {
                 label: "Genres",
                 href: "/scripture/genres",
             },
             {
-                label: "Traditions",
-                href: "/scripture/traditions",
+                label: "Authors",
+                href: "/scripture/authors",
             },
-            {
-                label: "Connections",
-                href: "/scripture/connections",
-            },
+
         ],
     },
     {
@@ -80,23 +70,18 @@ const footerNavList = [
             {
                 label: "The Blog",
                 href: "/resources/blog",
-                badge: (
-                    <Badge color="gray" type="modern" size="sm" className="ml-1">
-                        In dev
-                    </Badge>
-                ),
             },
 
             {
-                label: "Digital Portals",
+                label: "Digital Archives",
                 href: "/resources/digital-portals",
             },
             {
-                label: "Groups Around",
+                label: "Groups Around You",
                 href: "/resources/community",
             },
             {
-                label: "Visit the Forum",
+                label: "The Forum",
                 href: "https://bodhicentral.discourse.group/",
                 target: "_blank",
             },
@@ -111,12 +96,8 @@ const footerNavList = [
         label: "About",
         items: [
             {
-                label: "About the Project",
-                href: "/about/project-information",
-            },
-            {
-                label: "Get Involved",
-                href: "#",
+                label: "About Us",
+                href: "/about",
             },
             {
                 label: "Help and FAQ",
@@ -127,24 +108,14 @@ const footerNavList = [
                 href: "/about",
             },
             {
-                label: "Visit our Patreon",
-                href: "https://www.patreon.com/cw/BodhiCentral/membership",
-                target: "_blank",
-            },
-            {
                 label: "Plans",
                 href: "/plans",
             },
-
         ],
     },
     {
         label: "Legal",
         items: [
-            {
-                label: "Attributions",
-                href: "/affiliations-and-attributions",
-            },
             {
                 label: "Terms",
                 href: "#",
@@ -156,6 +127,10 @@ const footerNavList = [
             {
                 label: "Cookies",
                 href: "#",
+            },
+            {
+                label: "Affiliations",
+                href: "/affiliations-and-attributions",
             },
         ],
     },
@@ -207,10 +182,10 @@ export const FooterLarge10 = () => {
                     </div>
 
                     <div className="mt-8 flex flex-col-reverse gap-3 self-stretch sm:flex-row sm:self-start lg:mt-0">
-                        <Button color="secondary" size="md" href="https://www.patreon.com/cw/BodhiCentral/membership" target="_blank">
-                            Visit our Patreon
+                        <Button color="secondary" size="md" href="/plans">
+                            Plans
                         </Button>
-                        <Button size="md" href="/plans">See plans</Button>
+                        <Button size="md" href="/plans">Support us</Button>
                     </div>
                 </div>
 
@@ -232,7 +207,7 @@ export const FooterLarge10 = () => {
                                     <ul className="mt-4 flex flex-col gap-3">
                                         {category.items.map((item) => (
                                             <li key={item.label}>
-                                                <Button color="link-gray" size="lg" href={item.href} target={item.target} iconTrailing={item.badge} className="gap-1">
+                                                <Button color="link-gray" size="lg" href={item.href} target={item.target} className="gap-1">
                                                     {item.label}
                                                 </Button>
                                             </li>

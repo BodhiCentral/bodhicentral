@@ -21,7 +21,7 @@ import { VideoPlayer } from "@/components/base/video-player/video-player";
 import { FeaturedIcon } from "@/components/foundations/featured-icon/featured-icon";
 import { SectionDivider } from "@/components/shared-assets/section-divider";
 import { cx } from "@/utils/cx";
-import { CTACenteredPlansSignup } from "@/components-custom/sections/cta-centered-plans-signup";
+import { CTACenteredPlansSignupFeaturedBgImage } from "@/components-custom/sections/cta-centered-plans-signup-featured-bg-image";
 import Image from "next/image";
 
 const faqs = [
@@ -204,6 +204,8 @@ const PricingSimpleBanner = () => {
             shadow: "shadow-2xl shadow-ink-100 dark:shadow-ink-500",
             features: [
                 "All COMMUNITY-tier features",
+                "Scripture & Media Synchronization",
+                "Personal library and workspaces",
                 "Advanced search with filtering",
                 "Marginal notes",
                 "Categorized bookmarks",
@@ -211,7 +213,6 @@ const PricingSimpleBanner = () => {
                 "Footnotes",
                 "Cross references",
                 "Search personal notes, bookmarks, and highlights",
-                "Saved texts, spaces, bookmarks, and notes",
             ],
         },
         {
@@ -243,7 +244,7 @@ const PricingSimpleBanner = () => {
                 <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
                     <h2 className="text-display-md font-extralight text-brand-800 dark:text-brand-400 md:text-display-xl">Start free. Upgrade to unlock advanced study tools.</h2>
                     <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
-                        Bodhicentral provides free access to Scripture worldwide. No account required. Optional subscriptions unlock advanced study tools.
+                        Bodhi Central provides free access to Scripture worldwide. No account required. Optional subscriptions unlock advanced study tools.
                     </p>
                     <Tabs selectedKey={selectedPlan} onSelectionChange={(item) => setSelectedPlan(item as string)} className="w-full md:w-auto">
                         <TabList
@@ -253,7 +254,7 @@ const PricingSimpleBanner = () => {
                                 { id: "monthly", label: "Monthly billing" },
                                 { id: "annually", label: "Annual billing" },
                             ]}
-                            className="mt-6 w-full md:mt-10 md:w-auto [&_[role=tab]]:flex-1"
+                            className="mt-6 w-full md:mt-10 md:w-auto **:[[role=tab]]:flex-1"
                         />
                     </Tabs>
                 </div>
@@ -327,11 +328,11 @@ const FeaturesCenterMockup01 = () => {
                     <div className="flex h-full w-full items-center justify-center md:max-h-204 md:w-full">
                         <div
                             className={cx(
-                                "size-full rounded-[9.03px] bg-primary p-[0.9px] shadow-modern-mockup-outer-md ring-[0.56px] ring-utility-neutral-300 ring-inset md:rounded-[32px] md:p-1 md:shadow-modern-mockup-outer-lg md:ring-[2px]",
+                                "size-full rounded-[9.03px] bg-primary p-[0.9px] shadow-modern-mockup-outer-md ring-[0.56px] ring-utility-neutral-300 ring-inset md:rounded-[32px] md:p-1 md:shadow-modern-mockup-outer-lg md:ring-2",
                             )}
                         >
                             <div className="size-full rounded-[7.9px] bg-primary p-0.5 shadow-modern-mockup-inner-md md:rounded-[28px] md:p-[5.4px] md:shadow-modern-mockup-inner-lg">
-                                <div className="relative size-full overflow-hidden rounded-[6.77px] ring-[0.56px] ring-utility-neutral-200 md:rounded-[24px] md:ring-[2px]">
+                                <div className="relative size-full overflow-hidden rounded-[6.77px] ring-[0.56px] ring-utility-neutral-200 md:rounded-[24px] md:ring-2">
                                     {/* Light mode image (hidden in dark mode) */}
                                     <img
                                         alt="Dashboard mockup showing application interface"
@@ -452,7 +453,7 @@ const FeaturesIconsAndImage03 = () => {
                 <VideoPlayer
                     size="lg"
                     showThumbnailOverlay
-                    thumbnailUrl="/people/cnr-vietnam-seminar.webp"
+                    thumbnailUrl="/monk-seated-in-meditation-under-forest-tree-1920.webp"
                     src="https://www.untitledui.com/videos/untitled-ui-demo.mp4"
                     className="aspect-video w-full overflow-hidden rounded-lg shadow-3xl md:max-w-200"
                 />
@@ -533,7 +534,7 @@ const PricingPage08 = () => {
 
             <FAQSimple01 />
 
-            <CTACenteredPlansSignup />
+            <CTACenteredPlansSignupFeaturedBgImage />
         </div>
     );
 };
