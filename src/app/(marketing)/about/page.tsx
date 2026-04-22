@@ -25,7 +25,7 @@ export default function AboutPage() {
                 <div className="mx-auto flex w-full flex-col">
                     <h2 className="text-display-md font-extralight text-brand-800 dark:text-brand-400 md:text-display-lg">Our Offering</h2>
                     <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
-                        Bodhi Central is developing a variety of custom study tools in a format that is intuitive and accessible for users at all skill levels. Our reading and learning tools are designed to break down language barriers, unlocking deeper meaning in the Dharma through the study of modern translations and educational materials that are relevant and authoritative. We are building tools to empower users to explore the rich and beneficial heritage of the Dharma and its teachings with a practical approach, including clear expositions of the profound Pali Canon and the elaborated Tibetan commentarial tradition.
+                        Bodhi Central is developing a variety of custom study tools in a format that is intuitive and accessible for users at all skill levels. Our reading and learning tools are designed to break down language barriers, unlocking deeper meaning in the Dharma through the study of modern translations and educational materials that are relevant and authoritative. We are building tools to empower users to explore and apply these paths of awakening with a practical approach, including clear expositions of the profound Pali Canon and the elaborated Tibetan commentarial tradition.
                     </p>
                 </div>
             </section>
