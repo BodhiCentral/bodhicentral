@@ -1,10 +1,11 @@
 import Image from "next/image";
+import { CTACenteredPlansSignupFeaturedBgImage } from "@/components-custom/sections/cta-centered-plans-signup-featured-bg-image";
 
 export default function AboutPage() {
     return (
-        <main className="relative flex flex-col max-w-full mx-auto gap-8 pb-32">
+        <main className="relative flex flex-col max-w-full mx-auto gap-8">
             {/* Decorative pattern at the bottom of the article */}
-            <div className="absolute h-6 bottom-0 left-0 right-0 mx-auto bg-[url(/patterns/detailed-endless-band-gold-140px.png)] bg-contain bg-repeat dark:drop-shadow-black/50 opacity-30 dark:opacity-40">
+            <div className="absolute z-100 h-6 bottom-0 left-0 right-0 mx-auto bg-[url(/patterns/detailed-endless-band-gold-140px.png)] bg-contain bg-repeat dark:drop-shadow-black/50 opacity-30 dark:opacity-40">
             </div>
             <section className="relative mx-auto w-full bg-primary py-12 md:py-16">
                 <Image src="/ornaments/endless-knot-corner-gold.png" width={260} height={260} alt="Plans background" className="hidden  lg:block absolute top-4 right-4 opacity-16 dark:opacity-25" />
@@ -13,65 +14,65 @@ export default function AboutPage() {
                     <h1 className="text-display-md font-extralight text-brand-800 dark:text-brand-400 md:text-display-xl text-center">About Us</h1>
                 </div>
             </section>
-            <section className="mx-auto max-w-container px-4 md:px-8">
+            <section className="mx-auto w-3xl px-4 md:px-8">
                 <div className="mx-auto flex flex-col">
                     <h2 className="text-display-md font-extralight text-brand-800 dark:text-brand-400 md:text-display-lg">Our Beliefs</h2>
                     <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
-                        Bodhi Central's mission is to foster a deeper connection with the authentic Buddhist teachings by providing interactive, web-based Buddhist software that offers user-friendly experiences for beginners and advanced students. We believe the teachings of the Dharma (dhamma in Pali) are a genuine remedy to human suffering, standing on their own authority and self-validating. Our software serves as a supplement to the study and practice of these teachings, and it is designed to enhance direct engagement with the words of the Buddha across the world, supporting the living transmissions of Buddhism today.
+                        We believe the teachings of the Dharma are a complete and self-validating response to human suffering — not because we say so, but because sincere practitioners across 2,500 years have found them to be so.
                     </p>
-                </div>
-            </section>
-            <section className="mx-auto max-w-container px-4 md:px-8">
-                <div className="mx-auto flex w-full flex-col">
-                    <h2 className="text-display-md font-extralight text-brand-800 dark:text-brand-400 md:text-display-lg">Our Offering</h2>
                     <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
-                        Bodhi Central is developing a variety of custom study tools in a format that is intuitive and accessible for users at all skill levels. Our reading and learning tools are designed to break down language barriers, unlocking deeper meaning in the Dharma through the study of modern translations and educational materials that are relevant and authoritative. We are building tools to empower users to explore and apply these paths of awakening with a practical approach, including clear expositions of the profound Pali Canon and the elaborated Tibetan commentarial tradition.
+                        Bodhi Central exists to remove the distance between a serious seeker and the most important words ever spoken about the nature of mind. Our tools don't replace practice or transmission — they clear the path toward them.
                     </p>
                 </div>
             </section>
-            <section className="mx-auto max-w-container px-4 md:px-8">
+            <section className="mx-auto w-3xl px-4 md:px-8">
                 <div className="mx-auto flex w-full flex-col">
-                    <h2 className="text-display-md font-extralight text-brand-800 dark:text-brand-400 md:text-display-lg">Buddhist Canon Versions</h2>
+                    <h2 className="text-display-md font-extralight text-brand-800 dark:text-brand-400 md:text-display-lg">What We Are Building</h2>
                     <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
-                        In addition to Buddhist texts in multiple international translations, Bodhi Central will provide scholarly editions of the Buddhist texts in its original languages: the Pali Canon, the Tibetan Buddhist canon, and the Chinese Buddhist canon. Our historically significant Buddhist texts offer deep insights into the textual tradition of early Buddhism and its evolution through the centuries. As a non-denominational platform, Bodhi Central will allow users to customize their Buddhist study experience in accordance with their own beliefs and traditions, favoring their preferred Buddhist texts. Our platform does not favor or prioritize any particular Buddhist texts by default.
+                        A unified reading and study environment spanning the Pali Canon, the Tibetan Buddhist canon, and the Chinese Buddhist canon — in both original languages and modern translations. Our tools are built for everyone: from first encounters with the Dhammapada to deep study of the Tibetan commentarial tradition.
+                    </p>
+                    <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
+                        Bodhi Central is non-denominational by design. We don't privilege one tradition over another. We trust the seeker to find their own resonance — and we build the infrastructure to make that possible.
                     </p>
                 </div>
-
             </section>
-            <section className="mx-auto max-w-container px-4 md:px-8">
+            <section className="mx-auto w-3xl px-4 md:px-8">
                 <div className="mx-auto flex w-full flex-col">
                     <h2 className="text-display-md font-extralight text-brand-800 dark:text-brand-400 md:text-display-lg">Our Mission</h2>
                     <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
-                        We believe that the teachings of the Buddha speak for themselves when users are able to connect the dots between the intent of the suttas, how they relate to each other, and the context in which they are transmitted. This is a key design principle behind our software. We believe that when the modern Buddhist offerings are viewed through the lens of the original intent of the words of the Buddha, the natural, beneficial results are revealed. Our mission is to offer free access to this world of wisdom in multiple languages, in accordance with the Dana (generosity) tradition and the Bodhisattva ideal.
+                        The suttas speak for themselves — when a reader can see how they connect to each other, where they sit in the tradition, and how they are lived today. That connective tissue is what we build.
+                    </p>
+                    <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
+                        Our mission is to offer free access to this world of wisdom in multiple languages — in the spirit of the dana tradition and the Bodhisattva ideal of benefit for all beings.
                     </p>
                 </div>
 
             </section>
-            <section className="mx-auto max-w-container px-4 md:px-8">
-                <div className="mx-auto flex w-full flex-col">
-                    <h2 className="text-display-md font-extralight text-brand-800 dark:text-brand-400 md:text-display-lg">Our Business Model</h2>
+            <section className="mx-auto w-3xl px-4 md:px-8">
+                <div className="mx-auto flex flex-col">
+                    <h2 className="text-display-md font-extralight text-brand-800 dark:text-brand-400 md:text-display-lg">Our Business Model — Leading with the Right Foot</h2>
                     <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
-                        Unlike many other Buddhist platforms, Bodhi Central is a for-profit business supported by users who find value in our tools. Access to the Buddhist texts will always remain free on our platform—and so will several of our core study features, like side-by-side version comparison and our interactive timelines.
+                        Access to the Buddhist texts will always be free on Bodhi Central. So will core study features like side-by-side version comparison and interactive timelines. That commitment is unconditional.
                     </p>
                     <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
-                        For users who want to take their study further, we offer additional premium tools through a low-cost subscription. Features like note taking and personalized workspaces are designed to enrich the Buddhist study experience.
+                        For practitioners who want to go deeper, a low-cost subscription unlocks note-taking, personalised workspaces, and advanced tools built to support long-term study. Your subscription is what allows us to keep building — and to keep the platform free for everyone else.
                     </p>
                     <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
-                        Your subscription not only unlocks these advanced tools—it helps us continue building a platform that empowers people around the world to study genuine Buddhist teachings with clarity and confidence.
+                        We are a for-profit company, run by people who believe that financial sustainability and genuine service to the Dharma are not in conflict.
                     </p>
                 </div>
 
             </section>
-            <section className="mx-auto max-w-container px-4 md:px-8">
+            <section className="mx-auto w-3xl px-4 md:px-8">
                 <div className="mx-auto flex w-full flex-col">
                     <h2 className="text-display-md font-extralight text-brand-800 dark:text-brand-400 md:text-display-lg">Legal Compliance</h2>
                     <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
-                        Our current library includes a broad selection of [0000]+ significant Buddhist texts that are not subject to copyright restrictions. As we continue to expand our library, we will only feature copyrighted works with express permission, ensuring full compliance with licensing and attribution requirements. We are committed to upholding the intellectual property rights of publishers.
+                        Our current library includes a broad selection of significant Buddhist texts that are in the public domain or made available under open licensing. As we expand, copyrighted works will only be featured with express permission and full attribution.
                     </p>
                 </div>
 
             </section>
-            <section className="mx-auto max-w-container px-4 md:px-8">
+            <section className="mx-auto w-3xl px-4 md:px-8 pb-20">
                 <div className="mx-auto flex w-full flex-col">
                     <h2 className="text-display-md font-extralight text-brand-800 dark:text-brand-400 md:text-display-lg">Data Privacy</h2>
                     <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
@@ -82,6 +83,9 @@ export default function AboutPage() {
                     </p>
                 </div>
 
+            </section>
+            <section>
+                <CTACenteredPlansSignupFeaturedBgImage />
             </section>
         </main>
     );
