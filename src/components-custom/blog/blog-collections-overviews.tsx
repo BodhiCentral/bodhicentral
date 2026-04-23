@@ -4,11 +4,11 @@ import { type Article, Simple01Vertical } from "@/components/marketing/blog/base
 const articles: Article[] = [
     {
         id: "article-1",
-        title: "The Kangyur: the Buddha’s words",
-        summary: "The Kangyur, the “translated words,” is the collection of the Buddha’s teachings as they were translated into Tibetan.",
+        title: "Buddhist Traditions: Buddha’s words adopted by the world",
+        summary: "The three great propagations of Buddha's words span over 2,5000 years across cultures and continents",
         href: "#",
         category: {
-            name: "Kangyur Canon",
+            name: "Traditions",
             href: "#",
         },
         thumbnailUrl: "/placeholder-image-landscape.svg",
@@ -40,11 +40,11 @@ const articles: Article[] = [
     },
     {
         id: "article-2",
-        title: "The Tengyur: the treatises",
-        summary: "The Tengyur, the “translated treatises,” is the collection of commentaries and treatises that expound upon the Buddha’s teachings.",
+        title: "Buddhist Genres: The Doctrinal Classifcations",
+        summary: "The ",
         href: "#",
         category: {
-            name: "Tengyur Canon",
+            name: "Genres",
             href: "#",
         },
         thumbnailUrl: "/placeholder-image-landscape.svg",
@@ -75,11 +75,11 @@ const articles: Article[] = [
     },
     {
         id: "article-3",
-        title: "Historical Origins of the Kangyur and Tengyur",
+        title: "The Role of Authorship and its Commentarial Proliferation",
         summary: "How did the Tibetan canon come to be?",
         href: "#",
         category: {
-            name: "Tibetan History",
+            name: "Authors",
             href: "#",
         },
         thumbnailUrl: "/placeholder-image-landscape.svg",
@@ -105,15 +105,15 @@ const articles: Article[] = [
     },
 ];
 
-export const BlogSectionTibetanCanonOverviews = () => {
+export const BlogSectionCollectionsOverviews = () => {
     return (
         <section className="bg-linear-to-b from-brand-100 via-brand-50 via-15% to-brand-100 to-80% dark:bg-linear-to-b dark:from-brand-900/90 dark:via-brand-800/50 dark:via-50% dark:to-brand-900/90 py-12 md:py-20">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="flex flex-col items-start justify-between lg:flex-row">
                     <div className="max-w-3xl">
-                        <span className="text-sm font-light text-brand-600 dark:text-brand-700 md:text-md">Tibetan Canon</span>
-                        <h2 className="mt-2 text-display-sm font-extralight text-brand-800 dark:text-brand-300 md:text-display-lg">The Tibetan Canon Overviews</h2>
-                        <p className="mt-4 text-lg text-tertiary md:mt-2 md:text-xl">Expert introductions to the divisions of the Kangyur and Tengyur.</p>
+                        <span className="text-sm font-light text-brand-600 dark:text-brand-700 md:text-md">Canonical Organization</span>
+                        <h2 className="mt-2 text-display-sm font-extralight text-brand-800 dark:text-brand-300 md:text-display-lg">The Collections of Scripture</h2>
+                        <p className="mt-4 text-lg text-tertiary md:mt-2 md:text-xl">Introductions to the collections of scriptures and relationships among them.</p>
                     </div>
 
                     <div className="hidden gap-3 lg:flex">
