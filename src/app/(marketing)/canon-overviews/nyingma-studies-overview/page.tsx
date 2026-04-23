@@ -47,7 +47,7 @@ const ArticleOverview = () => {
                         <div className="w-full border-t border-secondary" />
                         <div className="flex flex-col gap-4">
                             <p className="text-md font-semibold text-brand-secondary">Table of contents</p>
-                            <ul className="flex flex-col gap-3">
+                            <ul className="flex flex-col gap-3.5">
                                 {[
                                     { title: "Title", href: "#overview-title", indent: "ml-0" },
                                     { title: "Introduction", href: "#introduction", indent: "ml-0" },
@@ -57,9 +57,9 @@ const ArticleOverview = () => {
                                     { title: "Further Reading", href: "#further-reading", indent: "ml-0" },
                                 ].map((item) => (
                                     <li key={item.title} className={item.indent}>
-                                        <Button href={item.href} size="lg" color="link-gray">
+                                        <a href={item.href}>
                                             {item.title}
-                                        </Button>
+                                        </a>
                                     </li>
                                 ))}
                             </ul>

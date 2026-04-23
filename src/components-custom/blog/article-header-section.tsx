@@ -88,7 +88,7 @@ export const ArticleHeaderSection = (props: ArticleHeaderProps) => {
                 alt={article_ornament_image_alt}
                 aria-hidden="true"
                 src={article_ornament_image}
-                className="absolute z-0 -right-1/3 bottom-1/2 max-w-160 opacity-8 dark:opacity-12 mix-blend-multiple md:right-1/4 md:-bottom-1/5 md:max-w-7xl mask-b-from-90% mask-b-to-100%"
+                className="absolute z-0 -right-1/3 bottom-1/2 max-w-160 opacity-10 dark:opacity-12 mix-blend-multiple md:right-1/4 md:-bottom-1/5 md:max-w-7xl mask-b-from-90% mask-b-to-100%"
                 width={700} height={700} />
         </section>
     );
