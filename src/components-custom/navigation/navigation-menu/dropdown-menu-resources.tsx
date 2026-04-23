@@ -1,7 +1,7 @@
 "use client";
 
 import type { FC, ReactNode } from "react";
-import { BookOpen01, LifeBuoy01, PlayCircle, FileQuestion01, UsersPlus, Building08, Certificate02 } from "@untitledui/icons";
+import { BookOpen01, LifeBuoy01, FileQuestion01, UsersPlus, Building08, Certificate02 } from "@untitledui/icons";
 import { Button } from "@/components/base/buttons/button";
 import { NavMenuItemLink } from "@/components/marketing/header-navigation/base-components/nav-menu-item";
 
@@ -46,13 +46,13 @@ const columns: MenuColumn[] = [
         title: "Community and Support",
         items: [
             {
-                title: "Digital Portals",
+                title: "Digital Portals and Tools",
                 subtitle: "Portals of Buddhist scriptures accessible to all.",
                 href: "/resources/digital-portals",
                 Icon: BookOpen01,
             },
             {
-                title: "Groups Around You",
+                title: "Communities Around You",
                 subtitle: "A global directory of Buddhist groups and communities.",
                 href: "/resources/community",
                 Icon: Building08,

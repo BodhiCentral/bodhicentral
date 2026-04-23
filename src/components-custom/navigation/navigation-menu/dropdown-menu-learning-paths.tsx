@@ -37,7 +37,7 @@ const columns: MenuColumn[] = [
             {
                 title: "Practice Paths",
                 subtitle: "Practices and methods to transform your reality and the world.",
-                href: "/",
+                href: "/learning-paths/practice-paths",
                 Icon: Target04,
             },
         ],
@@ -76,8 +76,8 @@ export const DropdownMenuLearningPaths = ({ onClose }: { onClose?: () => void })
                             <ul className="flex flex-col gap-3">
                                 {[
                                     { title: "New Additions", href: "#" },
-                                    { title: "All Paths", href: "#" },
-                                    { title: "Preferences", href: "/my-desk-preferences" },
+                                    { title: "Learning Paths Overview", href: "/learning-paths" },
+                                    { title: "My Desk Preferences", href: "/my-desk-preferences" },
                                 ].map((item) => (
                                     <li key={item.title}>
                                         <Button href={item.href} color="link-gray" size="md" onPress={onClose}>
