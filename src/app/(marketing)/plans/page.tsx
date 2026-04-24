@@ -37,7 +37,7 @@ const faqs = [
     },
     {
         question: "Can I change my plan later?",
-        answer: "Of course! Our modest Housekeeper plan scales with your needs. You can cancel or downgrade your plan at any time from your account settings. You can also upgrade to a higher tier at our Patreon portal.",
+        answer: "Of course! Our modest Housekeeper plan scales with your needs. You can cancel or downgrade your plan at any time from your account settings. You can also upgrade to a higher tier at the Plans & Pricing page.",
         icon: SwitchHorizontal01,
     },
 
