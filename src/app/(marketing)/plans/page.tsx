@@ -26,21 +26,20 @@ import Image from "next/image";
 
 const faqs = [
     {
-        question: "What is included in the Discovery plan?",
-        answer: "The Discovery plan is our free plan, and it includes access to many of our features, including the scripture reader, learning paths, and resources. The free Discovery plan is a great way to get started with Bodhi Central and to explore all that it has to offer with basic storage.",
+        question: "What is included in the Standard plan?",
+        answer: "The Standard plan gives you access to all features we offer, including the advanced tools in our state-of-the-art readers and learning experiences, the ability to save your work, build your library of sūtras and commentaries, and create your personalized workspaces.",
         icon: Heart,
     },
     {
         question: "Why you offer a paid subscription?",
-        answer: "In consonance with the Dana tradition, we believe that Buddhist texts and teachings should always be accessible to everyone. Our modest Housekeeper subscription helps us to continue our work. It also allows us to provide free teachings to those who cannot afford expensive programs.",
+        answer: "In consonance with the Dana tradition, we believe that Buddhist texts and teachings should always be freely accessible to everyone. That is our unconditional commitment. The affordable Standard subscription helps us to continue our work building great tools for students and practitioners. It also allows us to financially maintain the platform and provide free access to teachings and resources for those who cannot afford expensive programs or lack access to the Dhamma.",
         icon: SlashCircle01,
     },
     {
         question: "Can I change my plan later?",
-        answer: "Of course! Our modest Housekeeper plan scales with your needs. You can cancel or downgrade your plan at any time from your account settings. You can also upgrade to a higher tier at the Plans & Pricing page.",
+        answer: "Of course! Our affordable Standard and Patron plans scale with your financial needs. You can cancel your plan at any time from your account settings. You can also upgrade or downgrade to a different tier at the Settings Plans in your dashboard.",
         icon: SwitchHorizontal01,
     },
-
     {
         question: "Can other info be added to an invoice?",
         answer: "At the moment, the only way to add additional information to invoices is to add the information to the payment method in the Account Settings, under the 'Billing' setion .",
@@ -413,7 +412,7 @@ const FeatureTextFeaturedIconLeft = ({ icon, title, subtitle, footer }: FeatureT
 const FeaturesIconsAndImage03 = () => {
     return (
         <section className="bg-primary">
-            <div className="bg-tertiary pt-16 pb-[112px] md:pt-24 md:pb-40">
+            <div className="bg-warm-off-400 dark:bg-warm-off-950 pt-16 pb-[112px] md:pt-24 md:pb-40">
                 <div className="mx-auto grid w-full max-w-container grid-cols-1 gap-12 px-4 md:gap-16 md:px-8 lg:grid-cols-2 lg:gap-24">
                     <div className="flex w-full flex-col">
                         <span className="text-sm font-light text-brand-600 dark:text-brand-700 md:text-md">Our Approach</span>

@@ -24,40 +24,40 @@ export default function TibetanSchoolsPage() {
                         {/* School Cards */}
                         <div className="relative mx-auto max-w-auto lg:max-w-360 px-6 md:pb-20 md:px-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-8 lg:gap-8 items-center justify-center animate-[fadeUp_1s_ease_both] delay-450">
                             {/* Nyingma Card */}
-                            <a href="#nyingma-studies-gallery" className="cursor-pointer hover:scale-[1.05] transition-all duration-300 " aria-label="Go to Nyingma Studies gallery">
+                            <a href="#nyingma-studies-gallery" className="cursor-pointer hover:scale-[1.05] transition-transform duration-400 " aria-label="Go to Nyingma Studies gallery">
 
-                                <div className="relative top-0 md:top-0 lg:top-[-96px] flex flex-col h-full items-center justify-start bg-radial-[at_50%_46%] from-brand-50/90 via-brand-200/95 via-32% to-brand-600/2 dark:bg-linear-to-b dark:bg-radial-[at_50%_46%] dark:from-brand-950/95 dark:via-brand-900/90 dark:via-30% dark:to-black/15 p-2 md:p-6 rounded-full">
-                                    <Image src="/collections_thumbnails_nyingma.jpg" alt="thai ornament" width={100} height={100} style={{ width: "100px", height: "100px" }} className="hidden md:block drop-shadow-xs drop-shadow-black/90 dark:drop-shadow-black/50 opacity-90 rounded-full" />
+                                <div className="relative top-0 md:top-0 lg:top-[-96px] flex flex-col h-full items-center justify-start bg-radial-[at_50%_38%] from-brand-50/90 via-brand-200/95 via-20% to-brand-600/2 dark:bg-linear-to-b dark:bg-radial-[at_50%_38%] dark:from-brand-950/95 dark:via-brand-900/90 dark:via-20% dark:to-black/15 p-2 md:p-6 rounded-full">
+                                    <Image src="/collections_thumbnails_nyingma.jpg" alt="Nyingma Studies Master" width={110} height={110} style={{ width: "110px", height: "110px" }} className="hidden md:block drop-shadow-xs drop-shadow-black/90 dark:drop-shadow-black/50 opacity-90 rounded-full" />
                                     <h2 className="text-display-md text-brand-800 dark:text-brand-200 text-center py-2">Nyingma</h2>
-                                    <p className="text-sm text-tertiary font-semibold text-center pb-4 px-4">The Thirteen Great Indian Treatises of the Nyingma school.</p>
+                                    <p className="text-sm text-secondary font-semibold text-center pb-4 px-4">The Thirteen Indian Treatises of the Nyingma school.</p>
                                 </div>
                             </a>
 
                             {/* Sakya Card */}
-                            <a href="#sakya-studies-gallery" className="cursor-pointer hover:scale-[1.05] transition-all duration-300" aria-label="Go to Sakya Studies gallery">
+                            <a href="#sakya-studies-gallery" className="cursor-pointer hover:scale-[1.06] transition-transform duration-400" aria-label="Go to Sakya Studies gallery">
 
-                                <div className="flex flex-col h-full items-center justify-start bg-radial-[at_50%_46%] from-brand-50/90 via-brand-200/95 via-32% to-brand-600/2 dark:bg-linear-to-b dark:bg-radial-[at_50%_46%] dark:from-brand-950/95 dark:via-brand-900/90 dark:via-30% dark:to-black/15 p-2 md:p-6 rounded-full">
+                                <div className="flex flex-col h-full items-center justify-start bg-radial-[at_50%_38%] from-brand-50 via-brand-200/90 via-20% to-brand-600/2 dark:bg-linear-to-b dark:bg-radial-[at_50%_38%] dark:from-brand-950/95 dark:via-brand-900/90 dark:via-20% dark:to-black/15 p-2 md:p-6 rounded-full">
                                     <Image src="/collections_thumbnails_sakya.jpg" alt="thai ornament" width={100} height={100} style={{ width: "100px", height: "100px" }} className="hidden md:block drop-shadow-xs drop-shadow-black/90 dark:drop-shadow-black/50 opacity-90 rounded-full" />
                                     <h2 className="text-display-md text-brand-800 dark:text-brand-200 text-center py-2">Sakya</h2>
-                                    <p className="pb-4 px-4 text-sm text-tertiary font-semibold text-center">The Eighteen Treatises of the Sakya school.</p>
+                                    <p className="pb-4 px-4 text-sm text-secondary font-semibold text-center">The Eighteen Treatises of the Sakya school.</p>
                                 </div>
                             </a>
                             {/* Gelug Card */}
-                            <a href="#gelug-studies-gallery" className="cursor-pointer hover:scale-[1.05] transition-all duration-300" aria-label="Go to Gelug Studies gallery">
+                            <a href="#gelug-studies-gallery" className="cursor-pointer hover:scale-[1.06] transition-transform duration-400" aria-label="Go to Gelug Studies gallery">
 
-                                <div className="flex flex-col h-full items-center justify-start bg-radial-[at_50%_46%] from-brand-50/90 via-brand-200/95 via-32% to-brand-600/2 dark:bg-linear-to-b dark:bg-radial-[at_50%_46%] dark:from-brand-950/95 dark:via-brand-900/90 dark:via-30% dark:to-black/15 p-2 md:p-6 rounded-full">
+                                <div className="flex flex-col h-full items-center justify-start bg-radial-[at_50%_38%] from-brand-50/90 via-brand-200/95 via-20% to-brand-600/2 dark:bg-linear-to-b dark:bg-radial-[at_50%_38%] dark:from-brand-950/95 dark:via-brand-900/90 dark:via-20% dark:to-black/15 p-2 md:p-6 rounded-full">
                                     <Image src="/collections_thumbnails_gelug.jpg" alt="thai ornament" width={100} height={100} style={{ width: "100px", height: "100px" }} className="hidden md:block drop-shadow-xs drop-shadow-black/90 dark:drop-shadow-black/50 opacity-90 rounded-full" />
                                     <h2 className="text-display-md text-brand-800 dark:text-brand-200 text-center py-2">Gelug</h2>
-                                    <p className="pb-4 px-4 text-sm text-tertiary font-semibold text-center">Standard curriculum of the Gelug monastic colleges.</p>
+                                    <p className="pb-4 px-4 text-sm text-secondary font-semibold text-center">Standard curriculum of the Gelug monastic colleges.</p>
                                 </div>
                             </a>
                             {/* Kagyu Card */}
-                            <a href="#kagyu-studies-gallery" className="cursor-pointer hover:scale-[1.05] transition-all duration-300" aria-label="Go to Kagyu Studies gallery">
+                            <a href="#kagyu-studies-gallery" className="cursor-pointer hover:scale-[1.06] transition-transform duration-400" aria-label="Go to Kagyu Studies gallery">
 
-                                <div className="relative top-0 md:top-0 lg:top-[-96px] flex flex-col h-full items-center justify-start bg-radial-[at_50%_46%] from-brand-50/90 via-brand-200/95 via-32% to-brand-600/2 dark:bg-linear-to-b dark:bg-radial-[at_50%_46%] dark:from-brand-950/95 dark:via-brand-900/90 dark:via-30% dark:to-black/15 p-2 md:p-6 rounded-full">
+                                <div className="relative top-0 md:top-0 lg:top-[-96px] flex flex-col h-full items-center justify-start bg-radial-[at_50%_38%] from-brand-50/90 via-brand-200/95 via-20% to-brand-600/2 dark:bg-linear-to-b dark:bg-radial-[at_50%_38%] dark:from-brand-950/95 dark:via-brand-900/90 dark:via-20% dark:to-black/15 p-2 md:p-6 rounded-full">
                                     <Image src="/collections_thumbnails_kagyu.jpg" alt="thai ornament" width={100} height={100} style={{ width: "100px", height: "100px" }} className="hidden md:block drop-shadow-xs drop-shadow-black/90 dark:drop-shadow-black/50 opacity-90 rounded-full" />
                                     <h2 className="text-display-md text-brand-800 dark:text-brand-200 text-center py-2">Kagyu</h2>
-                                    <p className="pb-4 px-4 text-sm text-tertiary font-semibold text-center">The Eight Great Treatises of the Kagyu school.</p>
+                                    <p className="pb-4 px-4 text-sm text-secondary font-semibold text-center">The Eight Great Treatises of the Kagyu school.</p>
                                 </div>
                             </a>
                         </div>
