@@ -6,7 +6,7 @@ import { Dribbble, Facebook, GitHub, Layers, X } from "@/components/foundations/
 
 const footerNavList = [
     {
-        label: "Scriptures",
+        label: "Sources",
         items: [
             {
                 label: "Collections",
@@ -65,7 +65,7 @@ const footerNavList = [
         ],
     },
     {
-        label: "Resources",
+        label: "Community",
         items: [
             {
                 label: "The Blog",
@@ -87,7 +87,7 @@ const footerNavList = [
             },
             {
                 label: "Documentation",
-                href: "https://bodhi-central-docs.vercel.app/research/pali-canon/sutta-numbering-system",
+                href: "https://bodhicentral-docs.vercel.app/research/pali-canon/sutta-numbering-system",
                 target: "_blank",
             },
         ],
