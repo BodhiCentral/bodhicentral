@@ -75,7 +75,7 @@ export const TextCanvasSingle = () => {
                             <h1 className="mt-4 text-display-md font-semibold text-primary md:text-display-lg lg:text-display-xl">
                                 Welcome to Bodhi Central <br />Readership and Learning
                             </h1>
-                            <p className="description mt-4 max-w-lg text-lg text-tertiary md:mt-6 md:text-xl">
+                            <p className="description mt-4 max-w-3xl text-lg text-tertiary md:mt-6 md:text-xl">
                                 We are delighted to invite you to explore this space of clear intent, offering you a treasure trove of texts and teachings to inspire your study and practice.
                             </p>
                             <Button color="primary" size="md" className="mt-4" onClick={() => openCanonNavigator()}>
@@ -309,15 +309,15 @@ export default function ReaderPage() {
 
                 <div className="relative top-0 bottom-0 mx-auto flex flex-nowrap w-full h-full rounded-2xl overflow-hidden">
                     {/* Left Sidebar Panels: Table of Contents, Textual Outline, Front & Back matters when needed. */}
-                    <div className="hidden md:block w-[22%] min-w-70 max-w-110 max-h-auto bg-secondary">
+                    <div className="hidden md:block w-[21%] min-w-70 max-w-110 max-h-auto bg-secondary">
                         <TableOfContents />
                     </div>
                     {/* Central Reader Canvas wrapper */}
-                    <div className="relative top-0 bottom-0 mx-auto w-[55%] px-2 md:px-4 lg:px-6 xl:px-10 min-w-96 max-w-container bg-primary max-h-auto border-t border-secondary">
+                    <div className="relative top-0 bottom-0 mx-auto w-[55%] px-2 md:px-4 lg:px-6 xl:px-10 min-w-96 max-w-full bg-primary max-h-auto border-t border-secondary">
                         <TextCanvasSingle />
                     </div>
                     {/* Right Sidebar Panels: Ancillary content when needed. */}
-                    <div className="hidden w-[28%] lg:block max-w-110 max-h-auto bg-secondary">
+                    <div className="hidden w-[29%] lg:block max-h-auto bg-secondary">
                         <AncillaryPanel />
                     </div>
                 </div>
