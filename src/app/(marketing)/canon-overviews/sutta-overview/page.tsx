@@ -10,6 +10,7 @@ import { isReactComponent } from "@/utils/is-react-component";
 import { GallerySuttaPitakaDivisions } from "@/components-custom/galleries/gallery-sutta-pitaka-divisions";
 import Image from 'next/image';
 import { ArticleHeaderSection } from "@/components-custom/blog/article-header-section"
+import { openCanonNavigator } from "@/components-custom/navigation/canon-navigation/canon-navigation-modal-wrapper";
 
 
 
@@ -173,9 +174,9 @@ const ArticleOverview = () => {
                                 </blockquote>
                                 <figcaption className="not-prose mt-6 flex gap-3 text-md md:mt-8">
                                     <Image
-                                        src="/collections_thumbnails_sakya.jpg"
+                                        src="/people/bhikku-sujato-close-up.jpg"
                                         className="size-12 rounded-full object-cover"
-                                        alt="Olivia Rhye"
+                                        alt="Bhikkhu Sujato"
                                         width={800} height={800} />
                                     <div>
                                         <p className="text-md font-semibold text-primary">Bhikkhu Sujato</p>
@@ -213,7 +214,7 @@ const ArticleOverview = () => {
                                     <div className="flex flex-row items-center justify-between gap-4">
                                         <h4 className="not-prose text-display-xs text-brand-700 dark:text-brand-700/80">Sutta Piṭaka Nikāyas</h4>
                                         <div className="flex flex-col gap-3 md:justify-center pb-1">
-                                            <Button color="secondary" size="sm" iconLeading={Dataflow01}>
+                                            <Button color="secondary" size="sm" iconTrailing={Dataflow01} onClick={() => openCanonNavigator()}>
                                                 Outline
                                             </Button>
                                         </div>

@@ -26,6 +26,7 @@ interface TibetanStudiesText {
     toh_numbers: string;
     color: string;
     dark_color: string;
+    url: string;
 }
 
 interface GalleryTibetanStudiesTextsProps {
@@ -100,6 +101,7 @@ const TibetanStudiesTextCard = ({ text }: { text: TibetanStudiesText }) => {
 
                 <Button
                     size="sm"
+                    href="/reader"
                     className="bg-black/20 hover:bg-black/30 border-0.5 border-white/50 hover:border-white/50 text-white hover:text-white/60 dark:bg-gray-900/50 dark:border-gray-900/50 dark:text-gray-400"
                 >
                     Open text

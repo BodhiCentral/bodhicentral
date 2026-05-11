@@ -13,13 +13,17 @@ import { isReactComponent } from "@/utils/is-react-component";
 import { GalleryVinayaPitakaDivisions } from "@/components-custom/galleries/gallery-vinaya-pitaka-divisions";
 import Image from 'next/image';
 import { ArticleHeaderSection } from "@/components-custom/blog/article-header-section"
+import { openCanonNavigator } from "@/components-custom/navigation/canon-navigation/canon-navigation-modal-wrapper";
 
 
 const ArticleOverview = () => {
     const { copied, copy } = useClipboard();
 
     return (
-        <div className="bg-primary">
+        <div className="relative bg-primary">
+            {/* Decorative pattern at the bottom of the article */}
+            <div className="absolute h-6 bottom-0 left-0 right-0 mx-auto bg-[url(/patterns/detailed-endless-band-gold-140px.png)] bg-contain bg-repeat dark:drop-shadow-black/50 opacity-30 dark:opacity-40">
+            </div>
             {/* Article Header */}
             <ArticleHeaderSection
                 badge_addon_text="Vinaya Piṭaka"
@@ -153,7 +157,7 @@ const ArticleOverview = () => {
                                 <div className="flex flex-row items-center justify-between gap-4">
                                     <h4 className="text-display-xs text-brand-700 dark:text-brand-700/80">Vinaya Piṭaka</h4>
                                     <div className="flex flex-col gap-3 md:justify-center pb-1">
-                                        <Button color="secondary" size="sm" iconLeading={Dataflow01}>
+                                        <Button color="secondary" size="sm" iconTrailing={Dataflow01} onClick={() => openCanonNavigator()}>
                                             Outline
                                         </Button>
                                     </div>

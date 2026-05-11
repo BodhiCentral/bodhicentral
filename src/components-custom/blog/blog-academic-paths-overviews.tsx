@@ -11,7 +11,7 @@ const articles: Article[] = [
             name: "Theravāda academic",
             href: "#",
         },
-        thumbnailUrl: "/theravada-tradition-light-mode-1600px.webp",
+        thumbnailUrl: "/jetavanaramaya-scene-01.jpg",
         publishedAt: "20 Feb 2026",
         readingTime: "8 min read",
         author: {
@@ -42,7 +42,7 @@ const articles: Article[] = [
             name: "Mahāyāna academic",
             href: "#",
         },
-        thumbnailUrl: "/placeholder-image-landscape.svg",
+        thumbnailUrl: "/ancient-nalanda-university-idealization.jpg",
         publishedAt: "19 Feb 2026",
         readingTime: "8 min read",
         author: {
@@ -70,14 +70,14 @@ const articles: Article[] = [
     },
     {
         id: "article-3",
-        title: "Abhidharma Studies",
+        title: "Tibetan Monastic Studies",
         summary: "Lorem ipsum...",
         href: "#",
         category: {
-            name: "Abhidharma academic",
+            name: "Tibetan Monastic academic",
             href: "#",
         },
-        thumbnailUrl: "/tibetan-schools-hero-header-light-mode-1600px.webp",
+        thumbnailUrl: "/tibetan-buddhist-library-01.jpg",
         publishedAt: "18 Jan 2026",
         readingTime: "8 min read",
         author: {
