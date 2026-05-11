@@ -9,38 +9,33 @@ import { cx } from "@/utils/cx";
 
 const faqsExtended = [
     {
-        question: "Is the Bodhi Central content free of charge?",
-        answer: "Yes, the entire collection of content is free of charge.",
+        question: "What is included in the Standard plan?",
+        answer: "The Standard plan gives you access to all features we offer, including the advanced tools in our state-of-the-art readers and learning experiences, the ability to save your work, build your library of sūtras and commentaries, and create your personalized workspaces.",
         icon: Heart,
     },
     {
-        question: "Is the Bodhi Central project open source?",
-        answer: "Yes, the project is open source.",
-        icon: SwitchHorizontal01,
-    },
-    {
-        question: "What is the difference between the free plan and the basic pay plan?",
-        answer: "The free plan is limited to 2 workspace, while the basic pay plan is unlimited.",
-        icon: SwitchHorizontal01,
-    },
-    {
-        question: "What is your cancellation policy?",
-        answer: "We understand that things change. You can cancel your plan at any time and we'll refund you the difference already paid.",
+        question: "Why you offer a paid subscription?",
+        answer: "In consonance with the Dana tradition, we believe that Buddhist texts and teachings should always be freely accessible to everyone. That is our unconditional commitment. The affordable Standard subscription helps us to continue our work building great tools for students and practitioners. It also allows us to financially maintain the platform and provide free access to teachings and resources for those who cannot afford expensive programs or lack access to the Dhamma.",
         icon: SlashCircle01,
     },
     {
+        question: "Can I change my plan later?",
+        answer: "Of course! Our affordable Standard and Patron plans scale with your financial needs. You can cancel your plan at any time from your account settings. You can also upgrade or downgrade to a different tier at the Settings Plans in your dashboard.",
+        icon: SwitchHorizontal01,
+    },
+    {
         question: "Can other info be added to an invoice?",
-        answer: "Yes, you can try us for free for 30 days. If you want, we'll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.",
+        answer: "At the moment, the only way to add additional information to invoices is to add the information to the payment method in the Account Settings, under the 'Billing' setion .",
         icon: File05,
     },
     {
         question: "How does billing work?",
-        answer: "Plans are per workspace, not per account. You can upgrade one workspace, and still have any number of free workspaces.",
+        answer: "You can manage the monthly and annual billing options of the Standard and Patron subscription at your account settings, under the 'Billing' section.",
         icon: CreditCardRefresh,
     },
     {
-        question: "How do I change my account email?",
-        answer: "You can change the email address associated with your account by going to untitled.com/account from a laptop or desktop.",
+        question: "Can I chang my email address?",
+        answer: "You can change the email address associated with your account by going to your account settings, under the 'Email' section.",
         icon: Mail01,
     },
 ];

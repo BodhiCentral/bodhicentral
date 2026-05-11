@@ -17,10 +17,10 @@ export const ContactFormAndImage01 = () => {
     return (
         <section className="bg-primary py-16 md:pt-16 md:pb-24">
             <div className="mx-auto max-w-container px-4 md:px-8">
-                <div className="grid gap-16 lg:grid-cols-2">
-                    <div className="flex w-full flex-col gap-12 md:w-120 md:justify-self-center lg:py-11">
+                <div className="grid gap-24 lg:grid-cols-2">
+                    <div className="flex w-full flex-col gap-12 md:justify-self-center lg:py-6">
                         <div className="flex flex-col">
-                            <h2 className="text-display-md font-semibold text-primary">Contact us</h2>
+                            <h2 className="text-display-lg font-extralight text-brand-primary">Contact us</h2>
                             <p className="mt-4 text-lg text-tertiary md:mt-5 md:text-xl">Our friendly team would love to hear from you.</p>
                         </div>
                         <Form
@@ -82,8 +82,8 @@ export const ContactFormAndImage01 = () => {
                         </Form>
                     </div>
 
-                    <div className="max-lg:hidden lg:h-200">
-                        <Image src="/golden-buddha-faces.jpg" className="size-full object-cover" alt="Golden Buddha Faces" width={800} height={800} />
+                    <div className="max-lg:hidden lg:h-190">
+                        <Image src="/monk-seated-in-meditation-under-forest-tree-1920.webp" className="h-full w-full rounded-3xl object-cover shadow-xl" alt="Monk Meditating under Tree" width={800} height={800} />
                     </div>
                 </div>
             </div>

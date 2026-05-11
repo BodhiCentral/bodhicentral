@@ -351,25 +351,25 @@ const FeaturesCenterMockup01 = () => {
                     <ul className="flex flex-1 flex-wrap justify-center gap-x-12 gap-y-10 lg:flex-nowrap">
                         {[
                             {
-                                title: "Gems of Wisdom",
-                                subtitle: "Presentations of illuminating texts, scriptures, and teachings from genuine streams of Buddhist transmissions.",
+                                title: "Sources of Wisdom",
+                                subtitle: "A comprehensive collection of illuminating sources, sutras and commentaries from genuine streams of Buddhist transmissions.",
                                 icon: BookOpen01,
-                                cta: "Learn more",
+                                cta: "Explore now",
                                 href: "/scriptures/collections",
                             },
                             {
                                 title: "Paths of Learning",
                                 subtitle: "Clear paths for every stage of your journey, from the fundamentals to advanced topics, accompanied by guided practices.",
                                 icon: GraduationHat02,
-                                cta: "Learn more",
+                                cta: "Explore now",
                                 href: "/learning-paths",
                             },
                             {
-                                title: "Resources that matter",
+                                title: "Community & resources",
                                 subtitle:
                                     "Tools and solutions to expand your learnings: directories, blogs, forums, and detailed documentation.",
                                 icon: File05,
-                                cta: "Learn more",
+                                cta: "Explore now",
                                 href: "/resources",
                             },
                         ].map((item) => (
@@ -380,7 +380,7 @@ const FeaturesCenterMockup01 = () => {
                                     subtitle={item.subtitle}
                                     footer={
                                         <Button color="link-color" size="lg" href={item.href} iconTrailing={ArrowRight}>
-                                            Learn more
+                                            {item.cta}
                                         </Button>
                                     }
                                 />
@@ -400,8 +400,8 @@ const FeatureTextFeaturedIconLeft = ({ icon, title, subtitle, footer }: FeatureT
 
         <div className="flex flex-col items-start gap-4">
             <div>
-                <h3 className="mt-1.5 text-lg font-semibold text-primary md:mt-2.5">{title}</h3>
-                <p className="mt-1 text-md text-tertiary">{subtitle}</p>
+                <h3 className="mt-1 text-xl font-medium text-primary md:mt-1">{title}</h3>
+                <p className="mt-2 text-md text-tertiary">{subtitle}</p>
             </div>
 
             {footer}
@@ -419,21 +419,21 @@ const FeaturesIconsAndImage03 = () => {
 
                         <h2 className="mt-3 text-display-md font-light text-brand-800 dark:text-brand-500 md:text-display-lg">The intersection of readership, education, and community</h2>
                         <p className="mt-4 text-lg font-light text-tertiary md:mt-5 md:text-xl">
-                            Envisioning a platform that leverages modern and useful digital experiences with the best of readership and education, at the service of communities and the living transmissions of the awakening.
+                            Envisioning a platform that leverages modern and practical experiences with the best of readership and education, at the service of communities and the living transmissions of the awakening.
                         </p>
                     </div>
 
                     <ul className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-12 lg:grid-cols-1">
                         {[
                             {
-                                title: "The Best of Readership and Education",
+                                title: "The best of readership and education",
                                 subtitle: "Enter a sanctuary of wisdom, with a treasure trove of texts, overviews, and practical expositions of the awakening.",
                                 icon: BookOpen01,
                                 cta: "Learn more",
                                 href: "#",
                             },
                             {
-                                title: "Connecting Communities and Living Transmissions",
+                                title: "Connecting communities and living transmissions",
                                 subtitle: "Get truthfull and relevant guidance and support from genuine teachers and fellow practitioners.",
                                 icon: GraduationHat02,
                                 cta: "Learn more",
