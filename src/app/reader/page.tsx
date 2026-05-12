@@ -269,17 +269,17 @@ export const AncillaryPanel = () => {
     return (
         <div className="sticky prose-reader flex flex-col top-12 px-6 py-4 mx-auto z-45 border border-secondary rounded-r-2xl max-h-full">
             <div className="py-2">
-                <h5 className="text-display-xs text-brand-primary">Ancillary Panels</h5>
+                <h3 className="text-display-md text-brand-primary">Ancillary Panels</h3>
             </div>
             <div className="flex flex-col w-full overflow-y-auto scrollbar-hide h-[calc(100vh-4rem)]">
-                <h4 className=" text-primary"><Link01 size={18} />Connections and Parallels</h4>
-                <p className="text-md text-tertiary">Connections and parallels with other texts and canon sections. For more information on the types of parallels, see our <Link href="https://bodhi-central-docs.vercel.app/research/pali-canon/connections-and-parallels" target="_blank" rel="noopener noreferrer" className="text-primary underline">Documentation</Link>.</p>
-                <h4 className=" text-primary"><BookOpen01 size={18} />Recommended Reading</h4>
-                <p className="text-md text-tertiary">Extend your reading by accessing overviews, commentaries, and recommended readings related to the active text.</p>
-                <h4 className=" text-primary"><Bookmark size={18} />Bookmarks</h4>
-                <p className="text-md text-tertiary">This is a feature for registered users. After signing up to the free Discovery plan, users can bookmark a limited amount of texts as well as save searches. </p>
-                <div className="w-full border-t pb-4 border-secondary mt-auto">
-                    <h4 className="text-primary">Downloads</h4>
+                <h4 className="text-lg text-primary"><Link01 size={18} />Connections and Parallels</h4>
+                <p className="text-md text-secondary">Connections and parallels with other texts and canon sections. For more information on the types of parallels, see our <Link href="https://bodhi-central-docs.vercel.app/research/pali-canon/connections-and-parallels" target="_blank" rel="noopener noreferrer" className="text-text-link-primary underline">Documentation</Link>.</p>
+                <h4 className="text-lg text-primary"><BookOpen01 size={18} />Recommended Reading</h4>
+                <p className="text-md text-secondary">Extend your reading by accessing overviews, commentaries, and recommended readings related to the active text.</p>
+                <h4 className="text-lg text-primary"><Bookmark size={18} />Bookmarks</h4>
+                <p className="text-md text-secondary">This is a feature for registered users. After signing up to the free Discovery plan, users can bookmark a limited amount of texts as well as save searches. </p>
+                <div className="w-full border-t py-4 border-secondary mt-auto">
+                    <h5 className="text-primary pb-2">Downloads</h5>
                     <div className="flex gap-3 dark:opacity-90">
                         <Button color="secondary" size="sm" iconLeading={<FileIcon type="pdf" variant="gray" aria-label="Download PDF" />} />
                         <Button color="secondary" size="sm" iconLeading={<FileIcon type="txt" variant="gray" aria-label="Download TXT" />} />

@@ -5,7 +5,7 @@ import React, { useRef, useState, isValidElement } from "react";
 import { ChevronDown } from "@untitledui/icons";
 import { Button as AriaButton, Dialog as AriaDialog, DialogTrigger as AriaDialogTrigger, Popover as AriaPopover } from "react-aria-components";
 import { Button } from "@/components/base/buttons/button";
-import { BodhicentralLogoMinimal } from "@/components/foundations/logo/bodhicentral-logo-minimal";
+
 import { Breadcrumbs } from "@/components/application/breadcrumbs/breadcrumbs";
 import { DropdownMenuMyDesk } from "@/components-custom/navigation/navigation-menu/dropdown-menu-my-desk";
 import Link from "next/link";
