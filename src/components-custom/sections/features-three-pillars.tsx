@@ -191,7 +191,7 @@ export const FeaturesThreePillars = () => {
                                 }}
                             >Research & Documentation</span>
                             <Image
-                                src="/bc-documentation-dark-mode-800px.webp"
+                                src="/bc-documentation-dark-mode-600px.webp"
                                 className="size-full max-h-full object-fill border-double border-5 border-gray-300 dark:border-gray-700 rounded-xl -rotate-y-2 rotate-x-1 rotate-z-15 translate-y-25 -translate-x-3"
                                 alt="BD Blog article with menu screenshot"
                                 style={{
@@ -208,7 +208,7 @@ export const FeaturesThreePillars = () => {
                                 }}
                             >Expert Articles</span>
                             <img
-                                src="/blog-article-with-menu-dark-mode-800px.webp"
+                                src="/blog-article-with-menu-dark-mode-600px.webp"
                                 className="size-full object-fill border-double border-5 border-gray-300 dark:border-gray-700 rounded-xl -rotate-y-2 rotate-x-2 rotate-z-15 translate-y-11"
                                 alt="BD documentation and research screenshot"
                                 style={{
