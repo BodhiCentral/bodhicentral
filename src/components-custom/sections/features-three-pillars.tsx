@@ -164,8 +164,14 @@ export const FeaturesThreePillars = () => {
 
                         <div className="grid w-full grid-cols-[repeat(12,1fr)] grid-rows-[repeat(12,1fr)] gap-2 md:w-auto md:gap-4 drop-shadow-lg perspective-dramatic ">
 
+                            <span
+                                className="relative size-full text-text-tertiary text-sm uppercase rotate-x-4 rotate-z-12 -translate-y-0.5 translate-x-6"
+                                style={{
+                                    gridArea: "2 / 1 / 6 / 6",
+                                }}
+                            >Worldwide Directories</span>
                             <img
-                                src="/placeholder-image-landscape.svg"
+                                src="/buddhist-study-centers-planetary-upscaled-1600px-80.webp"
                                 className="size-full object-cover border-double border-5 border-gray-300 dark:border-gray-700 rounded-xl rotate-x-4 rotate-z-12 -translate-y-7.5 translate-x-1"
                                 alt="Monk seated in meditation under forest tree"
                                 style={{
@@ -173,14 +179,27 @@ export const FeaturesThreePillars = () => {
                                 }}
                             />
 
+                            <span
+                                className="relative size-full text-text-tertiary text-sm uppercase rotate-x-4 rotate-z-12 translate-y-5.5 translate-x-3"
+                                style={{
+                                    gridArea: "1 / 6 / 7 / 12",
+                                }}
+                            >Expert Articles</span>
                             <img
                                 src="/placeholder-image-landscape.svg"
-                                className="size-full object-cover border-double border-5 border-gray-300 dark:border-gray-700 rounded-xl rotate-x-4 rotate-z-12 translate-x-0 translate-y-12 "
+                                className="size-full object-cover border-double border-5 border-gray-300 dark:border-gray-700 rounded-xl rotate-x-4 rotate-z-12 translate-x-0 translate-y-11.5 "
                                 alt="BD Blog screenshot"
                                 style={{
                                     gridArea: "1 / 6/ 7 / 12",
                                 }}
                             />
+
+                            <span
+                                className="relative size-full text-text-tertiary text-sm uppercase rotate-x-4 rotate-z-12 translate-y-5 translate-x-3"
+                                style={{
+                                    gridArea: "12 / 2 / 12 / 8",
+                                }}
+                            >Documentation & Research</span>
                             <img
                                 src="/placeholder-image-landscape.svg"
                                 className="size-full object-cover border-double border-5 border-gray-300 dark:border-gray-700 rounded-xl rotate-x-4 rotate-z-12"
@@ -189,6 +208,12 @@ export const FeaturesThreePillars = () => {
                                     gridArea: "7 / 3 / 12 / 8",
                                 }}
                             />
+                            <span
+                                className="relative size-full text-text-tertiary text-sm uppercase dark:text-gray-700 rotate-x-4 rotate-z-12 translate-y-5.5 -translate-x-3"
+                                style={{
+                                    gridArea: "12 / 8 / 12 / 12",
+                                }}
+                            >Open Forum</span>
                             <img
                                 src="/placeholder-image-landscape.svg"
                                 className="size-full object-cover border-double border-5 border-gray-300 dark:border-gray-700 rounded-xl  rotate-x-4 rotate-z-12 translate-y-18"
