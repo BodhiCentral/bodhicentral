@@ -162,10 +162,10 @@ export const FeaturesThreePillars = () => {
 
                     <div className="relative col-span-2 w-full flex-1 self-center lg:pt-20">
 
-                        <div className="grid w-full grid-cols-[repeat(12,1fr)] grid-rows-[repeat(12,1fr)] gap-2 md:w-auto md:gap-4 drop-shadow-lg perspective-dramatic ">
+                        <div className="grid w-full grid-cols-[repeat(12,1fr)] grid-rows-[repeat(12,1fr)] gap-2 items-start md:w-full md:gap-4 drop-shadow-lg perspective-dramatic ">
 
                             <span
-                                className="relative size-full text-text-tertiary text-sm uppercase rotate-x-4 rotate-z-12 -translate-y-0.5 translate-x-6"
+                                className="relative size-full text-text-tertiary text-sm uppercase rotate-x-4 rotate-z-12 translate-y-0.5 translate-x-6"
                                 style={{
                                     gridArea: "2 / 1 / 6 / 6",
                                 }}
@@ -186,24 +186,24 @@ export const FeaturesThreePillars = () => {
                                 }}
                             >Expert Articles</span>
                             <img
-                                src="/placeholder-image-landscape.svg"
+                                src="/blog-article-with-menu-dark-mode-800px.webp"
                                 className="size-full object-cover border-double border-5 border-gray-300 dark:border-gray-700 rounded-xl rotate-x-4 rotate-z-12 translate-x-0 translate-y-11.5 "
-                                alt="BD Blog screenshot"
+                                alt="BD Blog article with menu screenshot"
                                 style={{
                                     gridArea: "1 / 6/ 7 / 12",
                                 }}
                             />
 
                             <span
-                                className="relative size-full text-text-tertiary text-sm uppercase rotate-x-4 rotate-z-12 translate-y-5 translate-x-3"
+                                className="relative size-full text-text-tertiary text-sm uppercase rotate-x-4 rotate-z-12 translate-y-7 translate-x-3"
                                 style={{
                                     gridArea: "12 / 2 / 12 / 8",
                                 }}
                             >Documentation & Research</span>
                             <img
-                                src="/placeholder-image-landscape.svg"
+                                src="/bc-documentation-dark-mode-800px.webp"
                                 className="size-full object-cover border-double border-5 border-gray-300 dark:border-gray-700 rounded-xl rotate-x-4 rotate-z-12"
-                                alt="BD Documentation screenshot"
+                                alt="BD documentation and research screenshot"
                                 style={{
                                     gridArea: "7 / 3 / 12 / 8",
                                 }}
@@ -217,7 +217,7 @@ export const FeaturesThreePillars = () => {
                             <img
                                 src="/placeholder-image-landscape.svg"
                                 className="size-full object-cover border-double border-5 border-gray-300 dark:border-gray-700 rounded-xl  rotate-x-4 rotate-z-12 translate-y-18"
-                                alt="Himalayan scenery"
+                                alt="BD open forum screenshot"
                                 style={{
                                     gridArea: "7 / 8 / 11 / 13",
                                 }}
