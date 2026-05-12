@@ -120,7 +120,7 @@ export const FeaturesThreePillars = () => {
                             alt="Light Accent"
                             aria-hidden="true"
                             src="/patterns/light-accent.webp"
-                            className="absolute z-0 -left-4 -bottom-24 max-w-160 opacity-70 mix-blend-multiple md:left-80 md:-bottom-90 md:max-w-7xl mask-b-from-90% mask-b-to-100% mask-t-from-10% mask-t-to-100% scale-x-[-1.5]"
+                            className="absolute z-0 -left-4 -bottom-24 max-w-160 opacity-80 mix-blend-multiple md:left-80 md:-bottom-90 md:max-w-7xl mask-b-from-90% mask-b-to-100% mask-t-from-10% mask-t-to-100% scale-x-[-1.8]"
                         />
 
                         <AlternateImageMockup className="lg:right-0">
@@ -148,7 +148,7 @@ export const FeaturesThreePillars = () => {
                 </div>
 
                 {/* Feature 3: Resources for Individuals and Communities */}
-                <div className="grid grid-cols-1 gap-10 md:gap-16 lg:grid-cols-3 lg:gap-16 lg:items-center lg:justify-center pb-12">
+                <div className="grid grid-cols-1 gap-10 md:gap-16 lg:grid-cols-3 lg:gap-22 lg:items-center lg:justify-center pb-30">
                     <div className="max-w-lg flex-1 self-center">
                         <FeaturedIcon icon={ChartBreakoutSquare} size="lg" color="gray" theme="modern-neue" />
                         <h3 className="mt-5 text-display-xs text-brand-800 dark:text-brand-400 md:text-display-lg">Resources for Communities</h3>
@@ -160,21 +160,21 @@ export const FeaturesThreePillars = () => {
                         </Button>
                     </div>
 
-                    <div className="relative col-span-2 w-full flex-1 self-center lg:pt-20">
+                    <div className="relative col-span-2 w-full flex-1 self-center lg:pt-10">
 
                         <div className="grid w-full grid-cols-[repeat(12,1fr)] grid-rows-[repeat(12,1fr)] gap-2 items-start md:w-full md:gap-4 drop-shadow-lg perspective-dramatic ">
 
+                            {/* Feature 3.4: DIRECTORIES */}
                             <span
-                                className="relative size-full text-text-tertiary text-sm uppercase rotate-x-4 rotate-z-12 translate-y-0.5 translate-x-6"
+                                className="relative size-full text-text-tertiary text-sm uppercase -rotate-y-2 rotate-x-1 rotate-z-15 translate-y-10 translate-x-4"
                                 style={{
                                     gridArea: "2 / 1 / 6 / 6",
                                 }}
                             >Worldwide Directories</span>
-                            <div></div>
                             <Image
                                 src="/buddhist-study-centers-planetary-upscaled-1600px-80.webp"
 
-                                className="size-full max-h-full object-cover border-double border-5 border-gray-300 dark:border-gray-700 rounded-xl rotate-x-4 rotate-z-12 -translate-y-7.5 translate-x-1"
+                                className="size-full max-h-full object-fill border-double border-5 border-gray-300 dark:border-gray-700 rounded-xl -rotate-y-2 rotate-x-1 rotate-z-15"
                                 alt="Monk seated in meditation under forest tree"
                                 style={{
                                     gridArea: "3 / 1 / 7 / 6", width: "auto", height: "100%"
@@ -183,15 +183,16 @@ export const FeaturesThreePillars = () => {
                                 height={666}
                             />
 
+                            {/* Feature 3.4: DOCUMENTATION */}
                             <span
-                                className="relative size-full text-text-tertiary text-sm uppercase rotate-x-4 rotate-z-12 translate-y-5.5 translate-x-3"
+                                className="relative size-full text-text-tertiary text-sm uppercase -rotate-y-2 rotate-x-1 rotate-z-15 translate-y-18 translate-x-1 "
                                 style={{
                                     gridArea: "1 / 6 / 7 / 12",
                                 }}
-                            >Expert Articles</span>
+                            >Research & Documentation</span>
                             <Image
-                                src="/blog-article-with-menu-dark-mode-800px.webp"
-                                className="size-full max-h-full object-cover border-double border-5 border-gray-300 dark:border-gray-700 rounded-xl rotate-x-4 rotate-z-12 translate-x-0 translate-y-11.5 "
+                                src="/bc-documentation-dark-mode-800px.webp"
+                                className="size-full max-h-full object-fill border-double border-5 border-gray-300 dark:border-gray-700 rounded-xl -rotate-y-2 rotate-x-1 rotate-z-15 translate-y-25 -translate-x-3"
                                 alt="BD Blog article with menu screenshot"
                                 style={{
                                     gridArea: "1 / 6/ 7 / 12", width: "auto", height: "100%"
@@ -199,30 +200,31 @@ export const FeaturesThreePillars = () => {
                                 width={800}
                                 height={666}
                             />
-
+                            {/* Feature 3.4: EXPERT ARTICLES */}
                             <span
-                                className="relative size-full text-text-tertiary text-sm uppercase rotate-x-4 rotate-z-12 translate-y-7 translate-x-3"
+                                className="relative size-full text-text-tertiary text-sm uppercase -rotate-y-2 rotate-x-2 rotate-z-15 translate-y-10 -translate-x-14 "
                                 style={{
-                                    gridArea: "12 / 2 / 12 / 8",
+                                    gridArea: "12 / 2 / 13 / 7",
                                 }}
-                            >Documentation & Research</span>
+                            >Expert Articles</span>
                             <img
-                                src="/bc-documentation-dark-mode-800px.webp"
-                                className="size-full object-cover border-double border-5 border-gray-300 dark:border-gray-700 rounded-xl rotate-x-4 rotate-z-12"
+                                src="/blog-article-with-menu-dark-mode-800px.webp"
+                                className="size-full object-fill border-double border-5 border-gray-300 dark:border-gray-700 rounded-xl -rotate-y-2 rotate-x-2 rotate-z-15 translate-y-11"
                                 alt="BD documentation and research screenshot"
                                 style={{
-                                    gridArea: "7 / 3 / 12 / 8",
+                                    gridArea: "7 / 2 / 12 / 8",
                                 }}
                             />
+                            {/* Feature 3.4: FORUM */}
                             <span
-                                className="relative size-full text-text-tertiary text-sm uppercase dark:text-gray-700 rotate-x-4 rotate-z-12 translate-y-5.5 -translate-x-3"
+                                className="relative size-full text-text-tertiary text-sm uppercase -rotate-y-2 rotate-x-2 rotate-z-15 translate-y-22 -translate-x-6"
                                 style={{
                                     gridArea: "12 / 8 / 12 / 12",
                                 }}
                             >Open Forum</span>
                             <img
                                 src="/placeholder-image-landscape.svg"
-                                className="size-full object-cover border-double border-5 border-gray-300 dark:border-gray-700 rounded-xl  rotate-x-4 rotate-z-12 translate-y-18"
+                                className="size-full object-cover border-double border-5 border-gray-300 dark:border-gray-700 rounded-xl  -rotate-y-2 rotate-x-2 rotate-z-15 translate-y-39.5 translate-x-2.5"
                                 alt="BD open forum screenshot"
                                 style={{
                                     gridArea: "7 / 8 / 11 / 13",
