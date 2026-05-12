@@ -76,8 +76,8 @@ export const FeaturesThreePillars = () => {
                                 alt="Scripture mockup showing Collections interface"
                                 src="/theravada-tradition-light-mode-912px.webp"
                                 className="size-full object-cover lg:w-auto lg:max-w-none dark:hidden"
-                                width={1600}
-                                height={931}
+                                width={912}
+                                height={501}
                                 style={{ width: "auto", height: "100%" }}
                             />
                             {/* Dark mode image (hidden in light mode) */}
@@ -85,8 +85,8 @@ export const FeaturesThreePillars = () => {
                                 alt="Dashboard mockup showing application interface"
                                 src="/theravada-tradition-light-mode-912px.webp"
                                 className="size-full object-contain not-dark:hidden lg:w-auto lg:max-w-none"
-                                width={1600}
-                                height={931}
+                                width={912}
+                                height={501}
                                 style={{ width: "auto", height: "100%" }}
                             />
                         </AlternateImageMockup>
@@ -130,8 +130,8 @@ export const FeaturesThreePillars = () => {
                                 alt="Mockup showing Learning Paths interface"
                                 src="/tibetan-schools-light-mode-912px.webp"
                                 className="size-full object-contain lg:w-auto lg:max-w-none dark:hidden"
-                                width={1600}
-                                height={931}
+                                width={912}
+                                height={501}
                                 style={{ width: "auto", height: "100%" }}
                             />
                             {/* Dark mode image (hidden in light mode) */}
@@ -139,8 +139,8 @@ export const FeaturesThreePillars = () => {
                                 alt="Mockup showing Learning Paths interface"
                                 src="/tibetan-schools-light-mode-912px.webp"
                                 className="size-full object-contain not-dark:hidden lg:w-auto lg:max-w-none"
-                                width={1600}
-                                height={931}
+                                width={912}
+                                height={501}
                                 style={{ width: "auto", height: "100%" }}
                             />
                         </AlternateImageMockup>
@@ -197,8 +197,8 @@ export const FeaturesThreePillars = () => {
                                 style={{
                                     gridArea: "1 / 6/ 7 / 12", width: "auto", height: "100%"
                                 }}
-                                width={800}
-                                height={666}
+                                width={373}
+                                height={311}
                             />
                             {/* Feature 3.4: EXPERT ARTICLES */}
                             <span
