@@ -164,9 +164,9 @@ export const TextCanvasSingle = () => {
                     The Vinaya Piṭaka is divided into two main parts: the Suttavibhaṅga, “The Analysis of the Rules,” and The Khandhakas, “the Chapters.” The individual schools sometimes have additional texts, such as the Parivāra, “The Compendium,” belonging to the Theravāda tradition, and the Uttaragrantha belonging to the Mūlasarvāstivādins.
                 </p>
                 {/* Vinaya Piṭaka */}
-                <div className="flex flex-col bg-secondary px-4 pt-2 pb-4 gap-2 rounded-xl border border-secondary drop-shadow-sm">
+                <div className="flex flex-col bg-secondary px-4 pb-4 gap-2 rounded-xl border border-secondary drop-shadow-sm">
                     <div className="flex flex-row items-center justify-between gap-4">
-                        <h4 className="text-display-xs text-brand-700 dark:text-brand-700/80">Vinaya Piṭaka</h4>
+                        <h3 className="text-display-xs text-brand-700 dark:text-brand-700/80">Vinaya Piṭaka</h3>
                         <div className="flex flex-col gap-3 md:justify-center pb-1">
                             <Button color="secondary" size="sm" iconLeading={Dataflow01} onClick={() => openCanonNavigator()}>
                                 Outline
@@ -289,10 +289,10 @@ export const AncillaryPanel = () => {
             </div>
             <div className="pt-4 border-t border-secondary">
                 <div className="flex justify-end gap-3">
-                    <Button color="secondary" size="md" className="text-fg-quaternary" iconLeading={Link01} />
-                    <Button color="secondary" size="md" className="text-fg-quaternary" iconLeading={X} />
-                    <Button color="secondary" size="md" className="text-fg-quaternary" iconLeading={Facebook} />
-                    <Button color="secondary" size="md" className="text-fg-quaternary" iconLeading={LinkedIn} />
+                    <Button color="secondary" size="md" className="text-fg-quaternary" iconLeading={Link01} aria-label="Copy link to clipboard" />
+                    <Button color="secondary" size="md" className="text-fg-quaternary" iconLeading={X} aria-label="Share on Twitter" />
+                    <Button color="secondary" size="md" className="text-fg-quaternary" iconLeading={Facebook} aria-label="Share on Facebook" />
+                    <Button color="secondary" size="md" className="text-fg-quaternary" iconLeading={LinkedIn} aria-label="Share on LinkedIn" />
                 </div>
             </div>
         </div>
