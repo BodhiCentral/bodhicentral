@@ -148,7 +148,7 @@ export const FeaturesThreePillars = () => {
                 </div>
 
                 {/* Feature 3: Resources for Individuals and Communities */}
-                <div className="grid grid-cols-1 gap-10 md:gap-16 lg:grid-cols-3 lg:gap-16 lg:items-center lg:justify-center">
+                <div className="grid grid-cols-1 gap-10 md:gap-16 lg:grid-cols-3 lg:gap-16 lg:items-center lg:justify-center pb-12">
                     <div className="max-w-lg flex-1 self-center">
                         <FeaturedIcon icon={ChartBreakoutSquare} size="lg" color="gray" theme="modern-neue" />
                         <h3 className="mt-5 text-display-xs text-brand-800 dark:text-brand-400 md:text-display-lg">Resources for Communities</h3>
@@ -162,11 +162,11 @@ export const FeaturesThreePillars = () => {
 
                     <div className="relative col-span-2 w-full flex-1 self-center lg:pt-20">
 
-                        <div className="grid w-full grid-cols-[repeat(12,1fr)] grid-rows-[repeat(12,1fr)] gap-2 md:w-auto md:gap-4 drop-shadow-lg ">
+                        <div className="grid w-full grid-cols-[repeat(12,1fr)] grid-rows-[repeat(12,1fr)] gap-2 md:w-auto md:gap-4 drop-shadow-lg perspective-dramatic ">
 
                             <img
                                 src="/placeholder-image-landscape.svg"
-                                className="size-full object-cover border-double border-5 border-gray-300 dark:border-gray-700 rounded-xl"
+                                className="size-full object-cover border-double border-5 border-gray-300 dark:border-gray-700 rounded-xl rotate-x-4 rotate-z-12 -translate-y-7.5 translate-x-1"
                                 alt="Monk seated in meditation under forest tree"
                                 style={{
                                     gridArea: "3 / 1 / 7 / 6",
@@ -175,7 +175,7 @@ export const FeaturesThreePillars = () => {
 
                             <img
                                 src="/placeholder-image-landscape.svg"
-                                className="size-full object-cover border-double border-5 border-gray-300 dark:border-gray-700 rounded-xl"
+                                className="size-full object-cover border-double border-5 border-gray-300 dark:border-gray-700 rounded-xl rotate-x-4 rotate-z-12 translate-x-0 translate-y-12 "
                                 alt="BD Blog screenshot"
                                 style={{
                                     gridArea: "1 / 6/ 7 / 12",
@@ -183,7 +183,7 @@ export const FeaturesThreePillars = () => {
                             />
                             <img
                                 src="/placeholder-image-landscape.svg"
-                                className="size-full object-cover border-double border-5 border-gray-300 dark:border-gray-700 rounded-xl"
+                                className="size-full object-cover border-double border-5 border-gray-300 dark:border-gray-700 rounded-xl rotate-x-4 rotate-z-12"
                                 alt="BD Documentation screenshot"
                                 style={{
                                     gridArea: "7 / 3 / 12 / 8",
@@ -191,7 +191,7 @@ export const FeaturesThreePillars = () => {
                             />
                             <img
                                 src="/placeholder-image-landscape.svg"
-                                className="size-full object-cover border-double border-5 border-gray-300 dark:border-gray-700 rounded-xl"
+                                className="size-full object-cover border-double border-5 border-gray-300 dark:border-gray-700 rounded-xl  rotate-x-4 rotate-z-12 translate-y-18"
                                 alt="Himalayan scenery"
                                 style={{
                                     gridArea: "7 / 8 / 11 / 13",

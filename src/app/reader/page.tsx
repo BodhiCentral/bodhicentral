@@ -313,7 +313,7 @@ export default function ReaderPage() {
                         <TableOfContents />
                     </div>
                     {/* Central Reader Canvas wrapper */}
-                    <div className="relative top-0 bottom-0 mx-auto w-[55%] px-2 md:px-4 lg:px-6 xl:px-10 min-w-96 max-w-full bg-primary max-h-auto border-t border-secondary">
+                    <div className="relative top-0 bottom-0 mx-auto w-full sm:w-[79%] lg:w-[55%] px-2 md:px-4 lg:px-6 xl:px-10 min-w-96 max-w-full bg-primary max-h-auto border-t border-secondary">
                         <TextCanvasSingle />
                     </div>
                     {/* Right Sidebar Panels: Ancillary content when needed. */}
