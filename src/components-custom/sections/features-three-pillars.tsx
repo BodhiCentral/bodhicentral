@@ -170,13 +170,17 @@ export const FeaturesThreePillars = () => {
                                     gridArea: "2 / 1 / 6 / 6",
                                 }}
                             >Worldwide Directories</span>
-                            <img
+                            <div></div>
+                            <Image
                                 src="/buddhist-study-centers-planetary-upscaled-1600px-80.webp"
-                                className="size-full object-cover border-double border-5 border-gray-300 dark:border-gray-700 rounded-xl rotate-x-4 rotate-z-12 -translate-y-7.5 translate-x-1"
+
+                                className="size-full max-h-full object-cover border-double border-5 border-gray-300 dark:border-gray-700 rounded-xl rotate-x-4 rotate-z-12 -translate-y-7.5 translate-x-1"
                                 alt="Monk seated in meditation under forest tree"
                                 style={{
-                                    gridArea: "3 / 1 / 7 / 6",
+                                    gridArea: "3 / 1 / 7 / 6", width: "auto", height: "100%"
                                 }}
+                                width={800}
+                                height={666}
                             />
 
                             <span
@@ -185,13 +189,15 @@ export const FeaturesThreePillars = () => {
                                     gridArea: "1 / 6 / 7 / 12",
                                 }}
                             >Expert Articles</span>
-                            <img
+                            <Image
                                 src="/blog-article-with-menu-dark-mode-800px.webp"
-                                className="size-full object-cover border-double border-5 border-gray-300 dark:border-gray-700 rounded-xl rotate-x-4 rotate-z-12 translate-x-0 translate-y-11.5 "
+                                className="size-full max-h-full object-cover border-double border-5 border-gray-300 dark:border-gray-700 rounded-xl rotate-x-4 rotate-z-12 translate-x-0 translate-y-11.5 "
                                 alt="BD Blog article with menu screenshot"
                                 style={{
-                                    gridArea: "1 / 6/ 7 / 12",
+                                    gridArea: "1 / 6/ 7 / 12", width: "auto", height: "100%"
                                 }}
+                                width={800}
+                                height={666}
                             />
 
                             <span
