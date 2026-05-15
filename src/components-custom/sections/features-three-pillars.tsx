@@ -160,13 +160,13 @@ export const FeaturesThreePillars = () => {
                         </Button>
                     </div>
 
-                    <div className="relative col-span-2 w-full flex-1 self-center lg:pt-10">
+                    <div className="relative col-span-2 w-full flex-1 self-center lg:pt-2">
 
                         <div className="grid w-full grid-cols-[repeat(12,1fr)] grid-rows-[repeat(12,1fr)] gap-2 items-start md:w-full md:gap-4 drop-shadow-lg perspective-dramatic ">
 
                             {/* Feature 3.4: DIRECTORIES */}
                             <span
-                                className="relative size-full text-text-tertiary text-sm uppercase -rotate-y-2 rotate-x-1 rotate-z-15 translate-y-10 translate-x-4"
+                                className="relative size-full text-text-tertiary text-md uppercase -rotate-y-2 rotate-x-1 rotate-z-15 translate-y-10 translate-x-4"
                                 style={{
                                     gridArea: "2 / 1 / 6 / 6",
                                 }}
@@ -185,7 +185,7 @@ export const FeaturesThreePillars = () => {
 
                             {/* Feature 3.4: DOCUMENTATION */}
                             <span
-                                className="relative size-full text-text-tertiary text-sm uppercase -rotate-y-2 rotate-x-1 rotate-z-15 translate-y-18 translate-x-1 "
+                                className="relative size-full text-text-tertiary text-md uppercase -rotate-y-2 rotate-x-1 rotate-z-15 translate-y-18 translate-x-1 "
                                 style={{
                                     gridArea: "1 / 6 / 7 / 12",
                                 }}
@@ -202,7 +202,7 @@ export const FeaturesThreePillars = () => {
                             />
                             {/* Feature 3.4: EXPERT ARTICLES */}
                             <span
-                                className="relative size-full text-text-tertiary text-sm uppercase -rotate-y-2 rotate-x-2 rotate-z-15 translate-y-10 -translate-x-14 "
+                                className="relative size-full text-text-tertiary text-md uppercase -rotate-y-2 rotate-x-2 rotate-z-15 translate-y-10 -translate-x-14 "
                                 style={{
                                     gridArea: "12 / 2 / 13 / 7",
                                 }}
@@ -217,7 +217,7 @@ export const FeaturesThreePillars = () => {
                             />
                             {/* Feature 3.4: FORUM */}
                             <span
-                                className="relative size-full text-text-tertiary text-sm uppercase -rotate-y-2 rotate-x-2 rotate-z-15 translate-y-22 -translate-x-6"
+                                className="relative size-full text-text-tertiary text-md uppercase -rotate-y-2 rotate-x-2 rotate-z-15 translate-y-22 -translate-x-6"
                                 style={{
                                     gridArea: "12 / 8 / 12 / 12",
                                 }}

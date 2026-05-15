@@ -10,6 +10,7 @@ import { BodhicentralLogoMinimal } from "@/components/foundations/logo/bodhicent
 import { DropdownMenuResources } from "@/components-custom/navigation/navigation-menu/dropdown-menu-resources";
 import { DropdownMenuLearningPaths } from "@/components-custom/navigation/navigation-menu/dropdown-menu-learning-paths";
 import { DropdownMenuScripture } from "@/components-custom/navigation/navigation-menu/dropdown-menu-scripture";
+import { DropdownMenuReader } from "@/components-custom/navigation/navigation-menu/dropdown-menu-reader";
 import Link from "next/link";
 import { ThemeToggle } from "@/components/application/theme-toggle";
 import { cx } from "@/utils/cx";
@@ -23,6 +24,7 @@ type HeaderNavItem = {
 };
 
 const headerNavItems: HeaderNavItem[] = [
+    { label: "Reader", href: "/reader", menu: <DropdownMenuReader /> },
     { label: "Sources", href: "/scripture", menu: <DropdownMenuScripture /> },
     { label: "Paths", href: "/learning-paths", menu: <DropdownMenuLearningPaths /> },
     { label: "Community", href: "/resources", menu: <DropdownMenuResources /> },

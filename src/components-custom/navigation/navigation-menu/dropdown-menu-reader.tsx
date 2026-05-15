@@ -25,7 +25,7 @@ const columns: MenuColumn[] = [
             {
                 title: "Continue Reading",
                 subtitle: "Continue reading where you left off.",
-                href: "#",
+                href: "/reader",
                 Icon: BookOpen01,
             },
             {
@@ -55,7 +55,7 @@ const columns: MenuColumn[] = [
     },
 ];
 
-export const DropdownMenuMyDesk = ({ onClose }: { onClose?: () => void }) => {
+export const DropdownMenuReader = ({ onClose }: { onClose?: () => void }) => {
     return (
         <div className="px-3 pb-2 md:max-w-180 md:p-0 ">
             <nav className="overflow-hidden md:overflow-visible rounded-xl  bg-warm-off-300 dark:bg-brand-800  drop-shadow-lg ring-1 ring-secondary_alt md:rounded-2xl md:drop-shadow-2xl dark:md:drop-shadow-gray-900">
@@ -70,11 +70,9 @@ export const DropdownMenuMyDesk = ({ onClose }: { onClose?: () => void }) => {
                             <ul className="flex flex-col gap-3">
                                 {[
 
-                                    { title: "Edit Workspaces", href: "/dashboard" },
-                                    { title: "Pali Canon", href: "/scripture/theravada-tradition" },
-                                    { title: "Tibetan Canon", href: "/scripture/tibetan-canons" },
-                                    { title: "Tibetan Schools", href: "/scripture/tibetan-schools" },
-                                    { title: "Collections Overview", href: "/scripture/collections" },
+                                    { title: "Workspaces", href: "/dashboard" },
+                                    { title: "Lexicon", href: "#" },
+                                    { title: "Advanced Tools", href: "#" },
                                 ].map((item) => (
                                     <li key={item.title}>
                                         <Button href={item.href} color="link-gray" size="md" onPress={onClose}>

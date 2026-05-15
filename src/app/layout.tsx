@@ -4,6 +4,8 @@ import { RouteProvider } from "@/providers/router-provider";
 import { Theme } from "@/providers/theme";
 import "@/styles/globals.css";
 import { cx } from "@/utils/cx";
+import { Header } from "@/components/marketing/header-navigation/header";
+import { createClient } from "@/utils/supabase/server";
 import { CanonNavigationModal } from "@/components-custom/navigation/canon-navigation/canon-navigation-modal-wrapper";
 
 const nunito = Nunito({
@@ -40,11 +42,18 @@ export default async function RootLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
+
+    const supabase = await createClient();
+    const {
+        data: { user },
+    } = await supabase.auth.getUser();
+
     return (
         <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth" className={cx(nunito.variable, crimsonPro.variable, tibetan.variable)}>
             <body className="bg-primary antialiased pt-14">
                 <RouteProvider>
                     <Theme>
+                        <Header user={user} />
                         {/* Canon Navigation Modal */}
                         <CanonNavigationModal />
                         {children}
