@@ -273,7 +273,7 @@ export const AncillaryPanel = () => {
             </div>
             <div className="flex flex-col w-full overflow-y-auto scrollbar-hide h-[calc(100vh-4rem)]">
                 <h4 className="text-lg text-primary"><Link01 size={18} />Connections and Parallels</h4>
-                <p className="text-md text-secondary">Connections and parallels with other texts and canon sections. For more information on the types of parallels, see our <Link href="https://bodhi-central-docs.vercel.app/research/pali-canon/connections-and-parallels" target="_blank" rel="noopener noreferrer" className="text-text-link-primary underline">Documentation</Link>.</p>
+                <p className="text-md text-secondary">Connections and parallels with other texts and canon sections. For more information on the types of parallels, see our <Link href="https://bodhicentral-docs.vercel.app/research/pali-canon/sutta-numbering-system" target="_blank" rel="noopener noreferrer" className="text-text-link-primary underline">Documentation</Link>.</p>
                 <h4 className="text-lg text-primary"><BookOpen01 size={18} />Recommended Reading</h4>
                 <p className="text-md text-secondary">Extend your reading by accessing overviews, commentaries, and recommended readings related to the active text.</p>
                 <h4 className="text-lg text-primary"><Bookmark size={18} />Bookmarks</h4>
