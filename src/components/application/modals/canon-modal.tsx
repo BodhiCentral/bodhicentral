@@ -12,7 +12,7 @@ export const ModalOverlay = (props: AriaModalOverlayProps) => {
             {...props}
             className={(state) =>
                 cx(
-                    "fixed inset-0 z-100 flex w-full h-full bg-overlay/0 px-13 pt-14 outline-hidden rounded-2xl overflow-hidden",
+                    "fixed inset-0 z-100 flex w-full h-full bg-overlay/0 px-13 pt-14 outline-hidden overflow-hidden",
                     state.isEntering && "duration-300 ease-out animate-in fade-in",
                     state.isExiting && "duration-200 ease-in animate-out fade-out",
                     typeof props.className === "function" ? props.className(state) : props.className,
@@ -27,7 +27,7 @@ export const Modal = (props: AriaModalOverlayProps) => (
         {...props}
         className={(state) =>
             cx(
-                "flex max-h-full w-full outline-hidden rounded-2xl max-sm:rounded-xl border border-secondary",
+                "flex max-h-full w-full outline-hidden border border-secondary",
                 state.isEntering && "duration-300 ease-out animate-in slide-in-from-bottom",
                 state.isExiting && "duration-200 ease-in animate-out slide-out-to-bottom",
                 typeof props.className === "function" ? props.className(state) : props.className,

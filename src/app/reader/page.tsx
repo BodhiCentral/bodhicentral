@@ -18,8 +18,8 @@ export const TableOfContents = () => {
             <div className="flex flex-col w-full py-4 overflow-y-auto scrollbar-hide h-[calc(100vh-4rem)]">
                 <ul className="flex flex-col gap-2">
                     {[
-                        { title: "Title", href: "#title-page", indent: "ml-0" },
-                        { title: "Introduction to the Reader", href: "#introduction-to-the-reader", indent: "ml-0" },
+                        { title: "Text Title", href: "#title-page", indent: "ml-0" },
+                        { title: "A Word of Welcome", href: "#introduction-to-the-reader", indent: "ml-0" },
                         { title: "Auspicious Sample Text", href: "#auspicious-sample-text", indent: "ml-0" },
                         { title: "Textual Transmission and the Schools", href: "#textual-transmission-and-the-schools", indent: "ml-0" },
                         { title: "Content of the Vinaya Pitaka", href: "#content", indent: "ml-0" },
@@ -277,7 +277,7 @@ export const AncillaryPanel = () => {
                 <h4 className="text-lg text-primary"><BookOpen01 size={18} />Recommended Reading</h4>
                 <p className="text-md text-secondary">Extend your reading by accessing overviews, commentaries, and recommended readings related to the active text.</p>
                 <h4 className="text-lg text-primary"><Bookmark size={18} />Bookmarks</h4>
-                <p className="text-md text-secondary">This is a feature for registered users. After signing up to the free Discovery plan, users can bookmark a limited amount of texts as well as save searches. </p>
+                <p className="text-md text-secondary">This is a feature for registered users. After signing up to the Standard plan, users can bookmark a limited amount of texts as well as save searches. </p>
                 <div className="w-full border-t py-4 border-secondary mt-auto">
                     <h5 className="text-primary pb-2">Downloads</h5>
                     <div className="flex gap-3 dark:opacity-90">
