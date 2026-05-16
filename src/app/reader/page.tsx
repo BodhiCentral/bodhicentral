@@ -1,7 +1,11 @@
 "use client";
 
-import { BookOpen01, Link01, Dataflow01, ArrowRight, ArrowLeft, Download01, Bookmark } from "@untitledui/icons";
-import { FileIcon } from "@untitledui/file-icons"
+import { useState } from "react";
+import {
+    BookOpen01, Link01, Dataflow01, ArrowRight, ArrowLeft, Download01, Bookmark,
+    Edit01, Mark, CursorBox, FileSearch01, Settings01, Type01, X as XIcon
+} from "@untitledui/icons";
+import { FileIcon } from "@untitledui/file-icons";
 import { Button } from "@/components/base/buttons/button";
 import { Facebook, LinkedIn, X } from "@/components/foundations/social-icons";
 import Image from "next/image";
@@ -265,63 +269,362 @@ export const TextCanvasSingle = () => {
     );
 };
 
-export const AncillaryPanel = () => {
+// ─── Subscription plan tiers ───────────────────────────────────────────────
+type SubscriptionPlan = "free" | "standard" | "premium";
+
+// ─── Tab definitions ────────────────────────────────────────────────────────
+type TabId =
+    | "segment"
+    | "notes"
+    | "bookmarks"
+    | "highlights"
+    | "cross-references"
+    | "apparatus"
+    | "lexicon"
+    | "downloads"
+    | "settings";
+
+interface AncillaryTab {
+    id: TabId;
+    label: string;
+    icon: React.ComponentType<{ size?: number; className?: string }>;
+    /** Minimum plan required to access this tab */
+    requiredPlan: SubscriptionPlan;
+    tooltip: string;
+}
+
+const ANCILLARY_TABS: AncillaryTab[] = [
+    {
+        id: "segment",
+        label: "Selected Segment",
+        icon: CursorBox,
+        requiredPlan: "free",
+        tooltip: "Selected Segment — details for the currently selected passage",
+    },
+    {
+        id: "notes",
+        label: "Marginal Notes",
+        icon: Edit01,
+        requiredPlan: "free",
+        tooltip: "Notes — personal study notes for this text (Standard+)",
+    },
+    {
+        id: "bookmarks",
+        label: "Bookmarks",
+        icon: Bookmark,
+        requiredPlan: "free",
+        tooltip: "Bookmarks — save and revisit passages (Standard+)",
+    },
+    {
+        id: "highlights",
+        label: "Highlights",
+        icon: Mark,
+        requiredPlan: "free",
+        tooltip: "Highlights — colour-code and annotate passages (Standard+)",
+    },
+    {
+        id: "cross-references",
+        label: "Cross-References",
+        icon: Dataflow01,
+        requiredPlan: "free",
+        tooltip: "Cross-References — parallels and connections across the canon",
+    },
+    {
+        id: "apparatus",
+        label: "Textual Apparatus",
+        icon: FileSearch01,
+        requiredPlan: "free",
+        tooltip: "Textual Apparatus — variant readings and manuscript notes (Premium)",
+    },
+    {
+        id: "lexicon",
+        label: "Lexicon",
+        icon: BookOpen01,
+        requiredPlan: "free",
+        tooltip: "Lexicon — look up terms in the canonical dictionary",
+    },
+    {
+        id: "downloads",
+        label: "Downloads",
+        icon: Download01,
+        requiredPlan: "free",
+        tooltip: "Downloads — export this text as PDF, TXT, or HTML",
+    },
+    {
+        id: "settings",
+        label: "Settings",
+        icon: Settings01,
+        requiredPlan: "free",
+        tooltip: "Settings — reader display preferences",
+    },
+];
+
+/** Map plan → numeric rank so comparisons are simple */
+const PLAN_RANK: Record<SubscriptionPlan, number> = { free: 0, standard: 1, premium: 2 };
+
+function canAccess(userPlan: SubscriptionPlan, requiredPlan: SubscriptionPlan) {
+    return PLAN_RANK[userPlan] >= PLAN_RANK[requiredPlan];
+}
+
+// ─── Tab content panels (stubs — replace with real components) ────────────
+const TabContent: Record<TabId, React.FC> = {
+    segment: () => (
+        <div className="flex flex-col gap-3">
+            <p className="text-sm text-secondary">
+                Select a passage in the reader to inspect its metadata, segment ID, and parallel references.
+            </p>
+        </div>
+    ),
+    notes: () => (
+        <div className="flex flex-col gap-3">
+            <p className="text-sm text-secondary">Your personal study notes for this text will appear here.</p>
+            <textarea
+                rows={6}
+                placeholder="Write your notes…"
+                className="w-full resize-none rounded-lg border border-secondary bg-primary px-3 py-2 text-sm text-primary placeholder:text-tertiary focus:outline-none focus:ring-2 focus:ring-brand-300"
+            />
+        </div>
+    ),
+    bookmarks: () => (
+        <div className="flex flex-col gap-3">
+            <p className="text-sm text-secondary">Passages you have bookmarked in this text will appear here.</p>
+        </div>
+    ),
+    highlights: () => (
+        <div className="flex flex-col gap-3">
+            <p className="text-sm text-secondary">Your highlighted passages and annotations will appear here.</p>
+        </div>
+    ),
+    "cross-references": () => (
+        <div className="flex flex-col gap-3">
+            <h4 className="text-sm font-semibold text-primary flex items-center gap-2">
+                <Dataflow01 size={14} /> Connections and Parallels
+            </h4>
+            <p className="text-sm text-secondary">
+                Parallels and connections with other texts and canon sections. See our{" "}
+                <Link
+                    href="https://bodhicentral-docs.vercel.app/research/pali-canon/sutta-numbering-system"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-text-link-primary underline"
+                >
+                    Documentation
+                </Link>{" "}
+                for details on parallel types.
+            </p>
+        </div>
+    ),
+    apparatus: () => (
+        <div className="flex flex-col gap-3">
+            <p className="text-sm text-secondary">Variant readings and manuscript notes for the selected segment.</p>
+        </div>
+    ),
+    lexicon: () => (
+        <div className="flex flex-col gap-3">
+            <h4 className="text-sm font-semibold text-primary flex items-center gap-2">
+                <BookOpen01 size={14} /> Lexicon
+            </h4>
+            <p className="text-sm text-secondary">Select a word in the text to look it up in the canonical dictionary.</p>
+        </div>
+    ),
+    downloads: () => (
+        <div className="flex flex-col gap-4">
+            <h4 className="text-sm font-semibold text-primary">Export this text</h4>
+            <div className="flex gap-3 dark:opacity-90">
+                <Button color="secondary" size="sm" iconLeading={<FileIcon type="pdf" variant="gray" aria-label="Download PDF" />} />
+                <Button color="secondary" size="sm" iconLeading={<FileIcon type="txt" variant="gray" aria-label="Download TXT" />} />
+                <Button color="secondary" size="sm" iconLeading={<FileIcon type="html" variant="gray" aria-label="Download HTML" />} />
+            </div>
+            <div className="border-t border-secondary pt-4">
+                <h5 className="text-xs font-semibold text-tertiary pb-2">Share</h5>
+                <div className="flex gap-3">
+                    <Button color="secondary" size="sm" className="text-fg-quaternary" iconLeading={Link01} aria-label="Copy link" />
+                    <Button color="secondary" size="sm" className="text-fg-quaternary" iconLeading={X} aria-label="Share on X" />
+                    <Button color="secondary" size="sm" className="text-fg-quaternary" iconLeading={Facebook} aria-label="Share on Facebook" />
+                    <Button color="secondary" size="sm" className="text-fg-quaternary" iconLeading={LinkedIn} aria-label="Share on LinkedIn" />
+                </div>
+            </div>
+        </div>
+    ),
+    settings: () => (
+        <div className="flex flex-col gap-3">
+            <h4 className="text-sm font-semibold text-primary flex items-center gap-2">
+                <Settings01 size={14} /> Reader Settings
+            </h4>
+            <p className="text-sm text-secondary">Display preferences for the reader will appear here.</p>
+        </div>
+    ),
+};
+
+// ─── AncillaryPanel ──────────────────────────────────────────────────────────
+interface AncillaryPanelProps {
+    /** Called when the user clicks the close button */
+    onClose: () => void;
+    /**
+     * The active subscription plan of the current user.
+     * Tabs requiring a higher plan will be rendered as disabled with a tooltip.
+     * Swap this for a real auth/subscription hook when available.
+     */
+    userPlan?: SubscriptionPlan;
+}
+
+export const AncillaryPanel = ({
+    onClose,
+    userPlan = "free",
+}: AncillaryPanelProps) => {
+    const [activeTab, setActiveTab] = useState<TabId>("segment");
+
+    const ActiveContent = TabContent[activeTab];
+
     return (
-        <div className="sticky prose-reader flex flex-col top-12 px-6 py-4 mx-auto z-45 border border-secondary max-h-full">
-            <div className="py-2">
-                <h3 className="text-display-md text-brand-primary">Ancillary Panels</h3>
+        <div className="flex flex-col h-full max-h-full bg-secondary border-l border-secondary overflow-hidden">
+
+            {/* ── Tab rail ────────────────────────────────────────── */}
+            <div className="flex flex-row items-center justify-between border-b border-secondary px-1 py-1">
+                <div
+                    role="tablist"
+                    aria-label="Ancillary panel tabs"
+                    className="flex flex-row items-center gap-0.5"
+                >
+                    {ANCILLARY_TABS.map((tab) => {
+                        const accessible = canAccess(userPlan, tab.requiredPlan);
+                        const isActive = activeTab === tab.id;
+                        const Icon = tab.icon;
+
+                        return (
+                            <button
+                                key={tab.id}
+                                id={`ancillary-tab-${tab.id}`}
+                                role="tab"
+                                aria-selected={isActive}
+                                aria-controls={`ancillary-panel-${tab.id}`}
+                                aria-label={tab.label}
+                                title={tab.tooltip}
+                                disabled={!accessible}
+                                onClick={() => accessible && setActiveTab(tab.id)}
+                                className={[
+                                    "relative flex items-center justify-center rounded-md p-2 transition-all duration-150 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-400",
+                                    isActive
+                                        ? "bg-brand-50 text-brand-600 dark:bg-brand-900/40 dark:text-brand-300"
+                                        : accessible
+                                            ? "text-fg-quaternary hover:bg-tertiary hover:text-secondary"
+                                            : "cursor-not-allowed text-disabled opacity-40",
+                                ].join(" ")}
+                            >
+                                <Icon size={16} />
+                                {/* Active indicator */}
+                                {isActive && (
+                                    <span className="absolute bottom-0 left-1/2 h-0.5 w-4 -translate-x-1/2 rounded-full bg-brand-500" />
+                                )}
+                                {/* Lock badge for gated tabs */}
+                                {!accessible && (
+                                    <span className="absolute -top-0.5 -right-0.5 flex h-3 w-3 items-center justify-center rounded-full bg-warning-400 text-[7px] font-bold text-white">$</span>
+                                )}
+                            </button>
+                        );
+                    })}
+                </div>
+
+                {/* Close button */}
+                <button
+                    id="ancillary-panel-close"
+                    onClick={onClose}
+                    aria-label="Close ancillary panel"
+                    title="Close panel"
+                    className="flex items-center justify-center rounded-md p-2 text-fg-quaternary transition-colors hover:bg-tertiary hover:text-secondary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-400"
+                >
+                    <XIcon size={14} />
+                </button>
             </div>
-            <div className="flex flex-col w-full overflow-y-auto scrollbar-hide h-[calc(100vh-4rem)]">
-                <h4 className="text-lg text-primary"><Link01 size={18} />Connections and Parallels</h4>
-                <p className="text-md text-secondary">Connections and parallels with other texts and canon sections. For more information on the types of parallels, see our <Link href="https://bodhicentral-docs.vercel.app/research/pali-canon/sutta-numbering-system" target="_blank" rel="noopener noreferrer" className="text-text-link-primary underline">Documentation</Link>.</p>
-                <h4 className="text-lg text-primary"><BookOpen01 size={18} />Recommended Reading</h4>
-                <p className="text-md text-secondary">Extend your reading by accessing overviews, commentaries, and recommended readings related to the active text.</p>
-                <h4 className="text-lg text-primary"><Bookmark size={18} />Bookmarks</h4>
-                <p className="text-md text-secondary">This is a feature for registered users. After signing up to the Standard plan, users can bookmark a limited amount of texts as well as save searches. </p>
-                <div className="w-full border-t py-4 border-secondary mt-auto">
-                    <h5 className="text-primary pb-2">Downloads</h5>
-                    <div className="flex gap-3 dark:opacity-90">
-                        <Button color="secondary" size="sm" iconLeading={<FileIcon type="pdf" variant="gray" aria-label="Download PDF" />} />
-                        <Button color="secondary" size="sm" iconLeading={<FileIcon type="txt" variant="gray" aria-label="Download TXT" />} />
-                        <Button color="secondary" size="sm" iconLeading={<FileIcon type="html" variant="gray" aria-label="Download HTML" />} />
+
+            {/* ── Tab label ───────────────────────────────────────── */}
+            <div className="border-b border-secondary px-4 py-2">
+                <p className="text-xs font-semibold uppercase tracking-wider text-tertiary">
+                    {ANCILLARY_TABS.find((t) => t.id === activeTab)?.label}
+                </p>
+            </div>
+
+            {/* ── Active panel content ─────────────────────────────── */}
+            <div
+                id={`ancillary-panel-${activeTab}`}
+                role="tabpanel"
+                aria-labelledby={`ancillary-tab-${activeTab}`}
+                className="flex-1 overflow-y-auto scrollbar-hide px-4 py-4"
+            >
+                {canAccess(userPlan, ANCILLARY_TABS.find((t) => t.id === activeTab)!.requiredPlan) ? (
+                    <ActiveContent />
+                ) : (
+                    <div className="flex flex-col items-center justify-center gap-3 py-10 text-center">
+                        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-warning-100 dark:bg-warning-900/30">
+                            <Settings01 size={18} className="text-warning-600 dark:text-warning-400" />
+                        </div>
+                        <p className="text-sm font-medium text-primary">Upgrade required</p>
+                        <p className="max-w-[18ch] text-xs text-tertiary">
+                            This feature requires a higher subscription plan.
+                        </p>
+                        <Button color="primary" size="sm">Upgrade plan</Button>
                     </div>
-                </div>
-            </div>
-            <div className="pt-4 border-t border-secondary">
-                <div className="flex justify-end gap-3">
-                    <Button color="secondary" size="md" className="text-fg-quaternary" iconLeading={Link01} aria-label="Copy link to clipboard" />
-                    <Button color="secondary" size="md" className="text-fg-quaternary" iconLeading={X} aria-label="Share on Twitter" />
-                    <Button color="secondary" size="md" className="text-fg-quaternary" iconLeading={Facebook} aria-label="Share on Facebook" />
-                    <Button color="secondary" size="md" className="text-fg-quaternary" iconLeading={LinkedIn} aria-label="Share on LinkedIn" />
-                </div>
+                )}
             </div>
         </div>
     );
 };
 
 export default function ReaderPage() {
+    const [ancillaryOpen, setAncillaryOpen] = useState(true);
+
     return (
         <>
             {/* The MAIN Reader wrapper */}
-            <main className="fixed top-14 bottom-0 w-full px-13 bg-tertiary">
+            <main className="fixed top-14 bottom-0 w-full pl-13 bg-tertiary">
 
                 {/* TEXT READER CANVAS */}
-
-                <div className="relative top-0 bottom-0 mx-auto flex flex-nowrap w-full h-full overflow-hidden">
-                    {/* Left Sidebar Panels: Table of Contents, Textual Outline, Front & Back matters when needed. */}
-                    <div className="hidden md:block w-[21%] min-w-70 max-w-110 max-h-auto bg-secondary">
+                <div
+                    className={[
+                        "relative top-0 bottom-0 mx-auto grid grid-rows-1 w-full h-full overflow-hidden transition-[grid-template-columns] duration-300",
+                        ancillaryOpen
+                            ? "grid-cols-[20%_1fr_25%]"
+                            : "grid-cols-[20%_1fr_0px]",
+                    ].join(" ")}
+                >
+                    {/* Left Sidebar: Table of Contents */}
+                    <div className="hidden md:block min-w-70 max-w-110 max-h-auto bg-secondary">
                         <TableOfContents />
                     </div>
-                    {/* Central Reader Canvas wrapper */}
-                    <div className="relative top-0 bottom-0 mx-auto w-full sm:w-[79%] lg:w-[55%] px-2 md:px-4 lg:px-6 xl:px-10 min-w-96 max-w-full bg-primary max-h-auto border-t border-secondary">
+
+                    {/* Central Reader Canvas */}
+                    <div className="relative top-0 bottom-0 mx-auto w-full px-2 md:px-4 lg:px-6 xl:px-16 min-w-96 max-w-full bg-primary max-h-auto border-t border-secondary">
                         <TextCanvasSingle />
                     </div>
-                    {/* Right Sidebar Panels: Ancillary content when needed. */}
-                    <div className="hidden w-[29%] lg:block max-h-auto bg-secondary">
-                        <AncillaryPanel />
+
+                    {/* Right Ancillary Panel */}
+                    <div
+                        className={[
+                            "hidden lg:block max-h-auto bg-secondary overflow-hidden transition-all duration-300",
+                            ancillaryOpen ? "opacity-100" : "opacity-0 pointer-events-none",
+                        ].join(" ")}
+                    >
+                        {ancillaryOpen && (
+                            <AncillaryPanel
+                                onClose={() => setAncillaryOpen(false)}
+                                userPlan="free"
+                            />
+                        )}
                     </div>
                 </div>
 
+                {/* Re-open button shown when panel is closed */}
+                {!ancillaryOpen && (
+                    <button
+                        id="ancillary-panel-reopen"
+                        onClick={() => setAncillaryOpen(true)}
+                        aria-label="Open ancillary panel"
+                        title="Open ancillary panel"
+                        className="fixed bottom-6 right-4 z-50 flex items-center justify-center rounded-full bg-brand-600 p-2.5 text-white shadow-lg transition-all hover:bg-brand-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-400"
+                    >
+                        <BookOpen01 size={16} />
+                    </button>
+                )}
             </main>
         </>
     );
