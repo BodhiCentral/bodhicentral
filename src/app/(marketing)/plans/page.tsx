@@ -22,6 +22,7 @@ import { FeaturedIcon } from "@/components/foundations/featured-icon/featured-ic
 import { SectionDivider } from "@/components/shared-assets/section-divider";
 import { cx } from "@/utils/cx";
 import { CTACenteredPlansSignupFeaturedBgImage } from "@/components-custom/sections/cta-centered-plans-signup-featured-bg-image";
+import PlanFeaturesTable from "@/components-custom/sections/plan-features-table";
 import Image from "next/image";
 
 const faqs = [
@@ -241,7 +242,7 @@ const PricingSimpleBanner = () => {
             <Image src="/ornaments/endless-knot-corner-gold.png" width={260} height={260} alt="Plans background" className="hidden lg:block absolute top-4 left-4 scale-x-[-1] opacity-16 dark:opacity-25" />
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
-                    <h2 className="text-display-md font-extralight text-brand-800 dark:text-brand-400 md:text-display-xl">Start free. Upgrade to unlock advanced study tools.</h2>
+                    <h1 className="text-display-md font-extralight text-brand-800 dark:text-brand-400 md:text-display-xl">Start free. Upgrade to unlock advanced study tools.</h1>
                     <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
                         Bodhi Central provides free access to Scripture worldwide. No account required. Optional subscriptions unlock advanced study tools.
                     </p>
@@ -522,6 +523,7 @@ const PricingPage08 = () => {
     return (
         <div className="bg-primary">
             <PricingSimpleBanner />
+            <PlanFeaturesTable />
 
             <SectionDivider />
 
