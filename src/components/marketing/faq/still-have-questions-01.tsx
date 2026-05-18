@@ -4,10 +4,10 @@ import { Button } from "@/components/base/buttons/button";
 export const StillHaveQuestions = () => {
 
     return (
-        <section className="bg-secondary py-16 md:py-20">
+        <section className="py-16 md:py-20">
             <div className="mx-auto max-w-container px-4 md:px-8">
 
-                <div className="mt-12 flex flex-col items-center gap-6 rounded-2xl bg-tertiary border border-secondary px-6 py-8 text-center md:mt-16 md:gap-8 md:px-8 md:py-8 md:pb-10">
+                <div className="mt-12 flex flex-col items-center gap-6 rounded-2xl bg-primary border border-secondary px-6 py-8 text-center md:mt-16 md:gap-8 md:px-8 md:py-8 md:pb-10">
                     <div className="flex items-end -space-x-4">
                         <Avatar
                             src="/placeholder-image-landscape.svg"

@@ -10,20 +10,20 @@ import { cx } from "@/utils/cx";
 type Tier = { name: string; canChatToSales?: boolean; highlighted?: boolean; badge?: string; href?: string; priceMonthly: number; description: string };
 
 const tiers: Tier[] = [
-    { name: "Community", href: "#", priceMonthly: 0, description: "Great for individual practitioners and students of the Dharma." },
+    { name: "Community", href: "#", priceMonthly: 0, description: "Free account for individual practitioners and students of the Dharma." },
     {
         name: "Standard",
         highlighted: true,
         badge: "Popular",
         href: "#",
         priceMonthly: 2,
-        description: "For long-term practitioners and dedicated students of the Dharma.",
+        description: "Low-cost plan for long-term practitioners and dedicated students of the Dharma.",
     },
     {
         name: "Patron",
         href: "#",
         priceMonthly: 10,
-        description: "For supporters and patrons of the Dharma.",
+        description: "For generous supporters of our mission and patrons of the Dharma.",
     },
 ];
 
@@ -248,13 +248,13 @@ const PricingLargeTable01 = () => {
     return (
         <section className="bg-primary">
             <div className="mx-auto max-w-container px-4 py-10 md:px-8 md:py-12">
-                <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
+                <div className="mx-auto flex w-full flex-col items-center text-center">
 
-                    <h2 className="text-display-md font-extralight text-brand-700 dark:text-brand-400 md:text-display-xl">Subscriptions & features overview</h2>
+                    <h2 className="text-display-md font-extralight text-brand-800 dark:text-brand-400 md:text-display-lg self-start">Subscriptions and features overview</h2>
                 </div>
             </div>
 
-            <div className="w-full pb-16 md:px-8 md:pb-20 lg:mx-auto lg:max-w-container">
+            <div className="w-full pb-16 md:px-8 md:pb-16 lg:mx-auto lg:max-w-container">
                 {/* xs to lg */}
                 <div className="space-y-16 lg:hidden">
                     {tiers.map((tier) => (
@@ -288,7 +288,7 @@ const PricingLargeTable01 = () => {
                                     <tbody>
                                         {section.features.map((feature, index) => (
                                             <tr key={feature.name} className={cx(index % 2 === 0 && "bg-secondary_alt")}>
-                                                <th className="flex py-3 pl-4 text-left text-sm font-medium text-primary" scope="row">
+                                                <th className="flex py-3 pl-4 text-left text-sm font-medium text-brand-primary" scope="row">
                                                     {feature.name}
                                                 </th>
                                                 <td className="py-4.5 pr-4">
@@ -331,12 +331,12 @@ const PricingLargeTable01 = () => {
                     <table className="h-px w-full table-fixed">
                         <caption className="sr-only">Pricing plan comparison</caption>
                         <thead>
-                            <tr className="border-b border-secondary">
+                            <tr>
                                 <th scope="col">
                                     <span className="sr-only">Feature by plans</span>
                                 </th>
                                 {tiers.map((tier) => (
-                                    <th key={tier.name} className="w-1/4 px-6 pt-0 pb-3 text-center text-display-xs uppercase font-semibold text-brand-primary" scope="col">
+                                    <th key={tier.name} className="w-1/4 px-6 pt-2 pb-3 text-center text-display-xs uppercase font-light text-brand-700 border-b border-secondary" scope="col">
                                         <h3 className="inline-flex items-center gap-2">
                                             {tier.name}
                                         </h3>
@@ -414,9 +414,9 @@ const PricingLargeTable01 = () => {
                                     Choose your plan
                                 </th>
                                 {tiers.map((tier) => (
-                                    <td key={tier.name} className="px-6 pt-10 pb-4">
+                                    <td key={tier.name} className="px-6 pt-12 pb-4">
                                         <div className="flex flex-col gap-3">
-                                            <Button size="xl">Get started</Button>
+                                            <Button size="sm">Get started</Button>
                                         </div>
                                     </td>
                                 ))}

@@ -9,7 +9,6 @@ import {
     File05,
 } from "@untitledui/icons";
 import { TabList, Tabs } from "@/components/application/tabs/tabs";
-import { Badge, BadgeWithDot } from "@/components/base/badges/badges";
 import { Button } from "@/components/base/buttons/button";
 import { VideoPlayer } from "@/components/base/video-player/video-player";
 import { FeaturedIcon } from "@/components/foundations/featured-icon/featured-icon";
@@ -199,8 +198,8 @@ const PricingSimpleBanner = () => {
 
     return (
         <section className="relative bg-primary py-16 md:py-20">
-            <Image src="/ornaments/endless-knot-corner-gold.png" width={260} height={260} alt="Plans background" className="hidden  lg:block absolute top-4 right-4 opacity-16 dark:opacity-25" />
-            <Image src="/ornaments/endless-knot-corner-gold.png" width={260} height={260} alt="Plans background" className="hidden lg:block absolute top-4 left-4 scale-x-[-1] opacity-16 dark:opacity-25" />
+            <Image src="/ornaments/endless-knot-corner-gold.png" width={260} height={264.3} alt="Plans background" className="hidden lg:block absolute top-4 right-4 opacity-16 dark:opacity-25" />
+            <Image src="/ornaments/endless-knot-corner-gold.png" width={260} height={264.3} alt="Plans background" className="hidden lg:block absolute top-4 left-4 scale-x-[-1] opacity-16 dark:opacity-25" />
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
                     <h2 className="text-display-md font-extralight text-brand-800 dark:text-brand-400 md:text-display-xl">Start free. Upgrade to unlock advanced study tools.</h2>
@@ -266,16 +265,13 @@ const FeatureTextFeaturedIconTopCentered = ({
 
 const FeaturesCenterMockup01 = () => {
     return (
-        <section id="features" className="bg-primary py-16 md:py-24">
+        <section id="features" className="bg-primary py-16 md:pb-24">
             <div className="mx-auto w-full max-w-container px-4 md:px-8">
-                <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
-                    <h2 className="mt-4 text-display-sm font-light text-brand-800 dark:text-brand-500 md:text-display-md">Cutting-edge features for a balanced approach to Buddhist study and practice</h2>
-                    <p className="mt-4 text-md text-tertiary md:mt-5 md:text-lg max-w-140">
-                        Connecting scriptures, modern education, and communities with the living transmissions of the awakening.
-                    </p>
+                <div className="mx-auto flex w-full max-w-4xl flex-col items-center text-center">
+                    <h2 className="mt-4 text-display-md font-extralight text-brand-800 dark:text-brand-500 md:text-display-lg">Connecting scriptures, education, and transmissions of the awakening.</h2>
                 </div>
 
-                <div className="mt-12 flex flex-col gap-12 md:mt-16 md:gap-24 lg:items-center">
+                <div className="mt-12 flex flex-col gap-12 md:mt-14 md:gap-20 lg:items-center">
                     <div className="flex h-full w-full items-center justify-center md:max-h-204 md:w-full">
                         <div
                             className={cx(
@@ -418,13 +414,9 @@ const PricingPage08 = () => {
         <div className="bg-primary">
             <PricingSimpleBanner />
             <PlanFeaturesTable />
-
             <FeaturesCenterMockup01 />
-
             <FeaturesIconsAndImage03 />
-
             <FAQAccordion01 />
-
             <CTACenteredPlansSignupFeaturedBgImage />
         </div>
     );
