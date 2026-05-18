@@ -43,6 +43,7 @@
     "tailwindcss-react-aria-components": "^2.0.1"
   },
   "devDependencies": {
+    "@react-types/overlays": "^3.10.0",
     "@storybook/test-runner": "^0.24.3",
     "@trivago/prettier-plugin-sort-imports": "^5.2.2",
     "@types/node": "^24.10.4",
