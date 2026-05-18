@@ -4,7 +4,6 @@ import { useState } from "react";
 import { CreditCardRefresh, File05, Heart, Mail01, SlashCircle01, SwitchHorizontal01 } from "@untitledui/icons";
 import { motion } from "motion/react";
 import { cx } from "@/utils/cx";
-import { StillHaveQuestions } from "./still-have-questions-01";
 
 const faqsExtended = [
     {
@@ -54,7 +53,7 @@ const faqsExtended = [
     },
 ];
 
-export const FAQAccordion01 = () => {
+export const FAQAccordionSimple = () => {
     const [openQuestions, setOpenQuestions] = useState(new Set([0]));
 
     const handleToggle = (index: number) => {
@@ -123,7 +122,6 @@ export const FAQAccordion01 = () => {
                     </div>
                 </div>
             </div>
-            <StillHaveQuestions />
         </section>
     );
 };
