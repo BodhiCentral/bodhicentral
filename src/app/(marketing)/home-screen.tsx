@@ -14,9 +14,9 @@ export const HomeScreen = () => {
     const clipboard = useClipboard();
 
     return (
-        <main className="relative overflow-hidden bg-brand-50 dark:bg-brand-200">
+        <main className="relative overflow-hidden">
 
-            <section className="hero relative flex flex-col items-center justify-center w-full pb-28 h-[calc(100vh-3.5rem)] bg-ink-700">
+            <section className="hero relative flex flex-col items-center justify-center w-full pb-28 h-[calc(100vh-3.5rem)] bg-ink-700/65 bg-radial-[at_68%_50%] from-ink-800/30 via-brand-900/50 via-20% to-brand-950 dark:bg-linear-to-b dark:bg-radial-[at_68%_50%] dark:from-brand-950/95 dark:via-brand-900/90 dark:via-20% dark:to-black/15">
                 <div className="hero-bg-grad"></div>
                 <div className="hero-grain"></div>
                 <div className="hero-rule"></div>
@@ -92,7 +92,7 @@ export const HomeScreen = () => {
 
                         </div>
                     </div>
-                    <div className="hero-right pt-16">
+                    <div className="hero-right pt-10 lg:pt-0">
                         <div className="medallion-wrap">
                             <svg className="medallion-svg" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 {/* Rings */}
@@ -143,7 +143,7 @@ export const HomeScreen = () => {
                             </svg>
                             {/* Center symbol */}
                             <div className="medallion-inner">
-                                <Image src="/ornaments/golden-wheel-280px.webp" style={{ width: "280px", height: "270px" }} alt="Medallion Inner" width={280} height={270} />
+                                <Image src="/ornaments/golden-wheel-280px.webp" style={{ width: "290px", height: "290px" }} alt="Medallion Inner" width={290} height={290} />
                             </div>
                         </div>
                     </div>

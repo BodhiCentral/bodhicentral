@@ -34,7 +34,8 @@ export const FeaturesThreePillars = () => {
             {/* Header Title and Subtitle */}
             <div className="mx-auto w-full max-w-container px-4 md:px-8">
                 <div className="mx-auto flex w-full max-w-4xl flex-col items-center text-center">
-                    <h2 className="mt-3 text-display-lg font-extralight tracking-tight text-brand-600 dark:text-brand-400 lg:text-display-xl">Not a library. Not an app.<br /> A living doorway into the Dharma</h2>
+                    <h2 className="mt-3 text-display-md font-extralight tracking-tight text-brand-600 dark:text-brand-400 lg:text-display-lg">Not a library. Not an app.</h2>
+                    <h2 className="text-display-lg font-extralight tracking-tight text-brand-600 dark:text-brand-400 lg:text-display-xl">A living doorway into the <span className="text-brand-800 dark:text-brand-800 font-extralight italic tracking-wide">dharma</span></h2>
                 </div>
             </div>
             {/* Features Group: Scriptures, Paths, and Resources */}
