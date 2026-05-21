@@ -1,8 +1,6 @@
 import Image from 'next/image';
 import { KangyurDivisionsSection } from '@/components/marketing/collection-sections/kangyur-divisions-section';
 import { TengyurDivisionsSection } from '@/components/marketing/collection-sections/tengyur-divisions-section';
-import { Button } from '@/components/base/buttons/button';
-import { ArrowDown } from "@untitledui/icons";
 import { TibetanCanonsDiagram } from "@/components/marketing/sections/tibetan-canons-diagram";
 import { BlogSectionTibetanCanonOverviews } from '@/components-custom/blog/blog-tibetan-canon-overviews';
 

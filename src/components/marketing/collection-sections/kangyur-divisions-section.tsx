@@ -18,7 +18,7 @@ export const KangyurDivisionsSection = () => {
                         </p>
                     </div>
                     <div className="mt-8 flex flex-col gap-3 self-stretch md:mt-0 md:flex-row-reverse md:justify-center md:self-center">
-                        <Button href="/canon-overviews/sutta-overview" color="secondary" size="md">
+                        <Button href="/canon-overviews/kangyur-overview" color="secondary" size="md">
                             Overview
                         </Button>
                         <Button color="secondary" size="md" iconTrailing={Dataflow01} onClick={() => openCanonNavigator()} >

@@ -232,7 +232,7 @@ const ArticleOverview = () => {
                             <p>
                                 In addition to the above, most Theravāda monasteries follow a number of rules that are more informal in nature. These include rules used to distinguish individual sects (<i>nikāyas</i>), such as rules on the style of robes and on the manner of wearing them. Then there are rules that pertain to particular teacher traditions, such as those that often form around especially charismatic and famous teachers. The final set of rules are those laid down at individual monasteries. These regulate the daily schedule and other aspects of monastic life that are monastery specific. Although all these rules are sometimes called Vinaya and therefore assumed to stem from the Vinaya Piṭaka or at least the commentaries, in reality, few of them have any Canonical basis.
                             </p>
-                            <div className="my-12 rounded-3xl bg-secondary px-5 py-2 text-lg text-tertiary md:pt-1 md:pb-4 md:px-8 [&>p+p]:mt-4.5">
+                            <div className="my-12 rounded-3xl bg-tertiary px-5 py-2 text-lg text-tertiary md:pt-1 md:pb-4 md:px-8 [&>p+p]:mt-4.5">
                                 <h2 id="references-and-further-reading">References and Further Reading</h2>
                                 <ul>
                                     <li>Clarke, Shayne; <i> Vinaya Mātṛikā – Mother of the Monastic Codes, or just Another Set of Lists?</i>; Indo-Iranian Journal 47: 77–120, 2004</li>
