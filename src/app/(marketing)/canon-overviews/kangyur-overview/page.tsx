@@ -106,11 +106,11 @@ const ArticleOverview = () => {
                                 Following a brief hiatus after the collapse of the Tibetan Empire, the "Later Propagation" (phyi dar) began in the 10th century. This second wave saw the arrival of new tantric materials from India. Notably, while the Kangyur contains many of these "New" translations, many tantras from the early period were eventually preserved in a separate collection known as the Nyingma Gyubum (rnying ma'i rgyud 'bum), influencing the eventual taxonomy of the Kangyur's Tantra section.
                             </p>
                             <figure>
-                                <Image className="h-60 md:h-100" src="/content/kangyur-timeline-evolution.webp" alt="Timeline showing the evolution of the Kangyur canon." width={400} height={400} />
+                                <Image className="h-60 md:h-100" src="/content/kangyur-timeline-evolution-1280px.webp" alt="Timeline showing the evolution of the Kangyur canon." width={400} height={400} />
                                 <figcaption>
                                     Infographic courtesy of Bodhi Central, generated with NotebookLM. Report mistakes at{" "}
                                     <a
-                                        href="support#contact-us"
+                                        href="/support#contact-us"
                                         className="rounded-xs outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2"
                                     >
                                         Contact us
