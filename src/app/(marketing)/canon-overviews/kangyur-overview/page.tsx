@@ -10,6 +10,7 @@ import { isReactComponent } from "@/utils/is-react-component";
 import { KangyurDivisionsSection } from '@/components/marketing/collection-sections/kangyur-divisions-section';
 import Image from 'next/image';
 import { ArticleHeaderSection } from "@/components-custom/blog/article-header-section"
+import { TimelineBaseTemplate01 } from '@/content/timelines/timeline-base-template-01';
 import { openCanonNavigator } from "@/components-custom/navigation/canon-navigation/canon-navigation-modal-wrapper";
 
 
@@ -275,6 +276,10 @@ const BlogPost05 = () => {
             <ArticleOverview />
 
             <KangyurDivisionsSection />
+
+            <div className="mx-auto w-full px-6 pt-8 pb-12 md:pt-12 md:pb-16 bg-secondary">
+                <TimelineBaseTemplate01 />
+            </div>
 
         </div>
     );
