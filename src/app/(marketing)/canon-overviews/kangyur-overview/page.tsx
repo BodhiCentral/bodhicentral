@@ -168,13 +168,13 @@ const ArticleOverview = () => {
                             <figure>
                                 <Image className="h-60 md:h-100" src="/content/kangyur-timeline-evolution-1280px.webp" alt="Timeline showing the evolution of the Kangyur canon." width={400} height={400} />
                                 <figcaption>
-                                    Infographic courtesy of Bodhi Central, generated with NotebookLM. Report mistakes at{" "}
+                                    Infographic courtesy of Bodhi Central, generated with NotebookLM. Report mistakes at our
                                     <a
                                         href="/support#contact-us"
                                         className="rounded-xs outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2"
                                     >
-                                        Contact us
-                                    </a>
+                                        Contact Us
+                                    </a> page.
                                 </figcaption>
                             </figure>
 
@@ -202,7 +202,7 @@ const ArticleOverview = () => {
                             <figure>
                                 <blockquote>
                                     <p>
-                                        The Kangyur and Tengyur are not merely historical archives; they are active components of a living spiritual tradition. The intertextual relationship between the scriptures (Kangyur) and the commentaries (Tengyur) allows practitioners to engage with the philosophy and practice side-by-side. Both corpora combined are the cornestone of our educational foundation, transformative nature, and the luminous path to awakening.
+                                        The Kangyur and Tengyur are not merely historical archives; they are active components of a living spiritual tradition. The intertextual relationship between the scriptures (Kangyur) and the commentaries (Tengyur) allows practitioners to engage with the philosophy and practice side-by-side. Both corpora combined are the basis of our educational foundation, transformative practice, and the luminous path to awakening.
                                     </p>
                                 </blockquote>
                                 <figcaption className="not-prose mt-6 flex gap-3 text-md md:mt-8">
