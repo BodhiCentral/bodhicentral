@@ -45,7 +45,7 @@ const buildStyleOptions = (isDark: boolean): TimelineOptions["style"] => ({
 // ─────────────────────────────────────────────────────────
 const buildArticleDefaultStyle = (isDark: boolean) => ({
     width: 190,
-    height: 80,
+    height: 100,
     backgroundColor: isDark ? "#1e293b" : "#ffffff",
     borderRadius: 8,
     border: {
@@ -86,7 +86,7 @@ const buildArticleDefaultStyle = (isDark: boolean) => ({
 const buildLanes = (isDark: boolean): LaneData[] => [
     {
         id: "recensions",
-        title: "Lineage Recensions",
+        title: "Historical Periods",
         layout: { heightWeight: 2 },
         style: {
             header: {
@@ -100,11 +100,11 @@ const buildLanes = (isDark: boolean): LaneData[] => [
                     : "rgba(138, 37, 37, 0.02)",
                 borderColor: isDark ? "rgba(138,37,37,0.30)" : "rgba(138,37,37,0.12)",
                 borderWidth: 1,
-                borderRadius: 4,
+                borderRadius: 6,
             },
             title: {
                 color: isDark ? "#f8fafc" : BURGUNDY,
-                font: `600 13px ${FONT_BASE}`,
+                font: `600 14px ${FONT_BASE}`,
             },
         },
         article: {
@@ -118,8 +118,8 @@ const buildLanes = (isDark: boolean): LaneData[] => [
     },
     {
         id: "editions",
-        title: "Canonical Editions",
-        layout: { heightWeight: 2 },
+        title: "Kangyur Editions",
+        layout: { heightWeight: 3 },
         style: {
             header: {
                 backgroundColor: isDark
@@ -136,7 +136,7 @@ const buildLanes = (isDark: boolean): LaneData[] => [
             },
             title: {
                 color: isDark ? "#f8fafc" : "#92730d",
-                font: `600 13px ${FONT_BASE}`,
+                font: `600 14px ${FONT_BASE}`,
             },
         },
         article: {
@@ -151,18 +151,18 @@ const buildLanes = (isDark: boolean): LaneData[] => [
 ];
 
 // ─────────────────────────────────────────────────────────
-// Article data — Major Kangyur Editions and Recensions
+// Article data — Major Kangyur Editions and Historical Periods
 // Sources: Kangyur Overview, Bodhi Central
 // ─────────────────────────────────────────────────────────
 const KANGYUR_ARTICLES: ArticleData[] = [
-    // ── Lineage Recensions ──────────────────────────────
+    // ── Historical Periods ──────────────────────────────
     {
         id: "tshalpa",
-        title: "Tshal Gungthang",
-        subtitle: "Tshalpa recension (manuscript)",
+        title: "Tshalpa Kangyur Tradition",
+        subtitle: "Based on the Tshal Gungthang manuscript and the works of the masters of Tshal Gungthang.",
         lane: "recensions",
         from: { year: 1347 },
-        to: { year: 1351 },
+        to: { year: 1600 },
         rank: 100,
         style: { color: BURGUNDY },
     },
@@ -172,6 +172,7 @@ const KANGYUR_ARTICLES: ArticleData[] = [
         subtitle: "Gyantsé recension (manuscript)",
         lane: "recensions",
         from: { year: 1431 },
+        to: { year: 1500 },
         rank: 90,
         style: { color: BURGUNDY },
     },
@@ -240,7 +241,7 @@ const KANGYUR_ARTICLES: ArticleData[] = [
         lane: "editions",
         from: { year: 1730 },
         rank: 90,
-        starred: true,
+        starred: false,
         style: { color: GOLD },
     },
     {
@@ -287,9 +288,9 @@ export function TimelineBaseTemplate01() {
 
             const tl = new Timeline(containerRef.current, {
                 width: containerRef.current.offsetWidth || 900,
-                height: containerRef.current.offsetHeight || 500,
-                initialDate: { year: 1550 },
-                zoom: { initial: 18, minimum: 10, maximum: 45 },
+                height: containerRef.current.offsetHeight || 600,
+                initialDate: { year: 800 },
+                zoom: { initial: 18, minimum: 14, maximum: 40 },
                 style: buildStyleOptions(isDark),
                 article: {
                     defaultCardLayout: "landscape",
@@ -316,7 +317,7 @@ export function TimelineBaseTemplate01() {
 
             // Fit to show the full span of Kangyur history
             tl.fitDateRange(
-                { year: 1300 },
+                { year: 800 },
                 { year: 1960 },
             );
 
@@ -378,8 +379,8 @@ export function TimelineBaseTemplate01() {
             aria-label="Interactive timeline of major Kangyur editions and recensions"
             style={{
                 width: "100%",
-                height: "520px",
-                borderRadius: "12px",
+                height: "600px",
+                borderRadius: "6px",
                 overflow: "hidden",
             }}
         />

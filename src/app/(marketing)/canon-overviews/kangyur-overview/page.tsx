@@ -1,7 +1,7 @@
 "use client";
 
 import type { ComponentPropsWithRef, FC } from "react";
-import { ArrowLeft, ArrowRight, ArrowUpRight, Check, Copy01, Link01, Dataflow01 } from "@untitledui/icons";
+import { Check, Copy01, Link01, Dataflow01, Film02 } from "@untitledui/icons";
 import { Button } from "@/components/base/buttons/button";
 import { Facebook, LinkedIn, X } from "@/components/foundations/social-icons";
 import { useClipboard } from "@/hooks/use-clipboard";
@@ -59,6 +59,7 @@ const ArticleOverview = () => {
                                     { title: "The Living Tradition: Usage and Significance", href: "#living-traditions", indent: "ml-0" },
                                     { title: "Sources, References and Further Reading", href: "#sources-references-and-further-reading", indent: "ml-0" },
                                     { title: "Navigate the Kangyur Divisions", href: "#kangyur-divisions", indent: "ml-0" },
+                                    { title: "An Interactive Kangyur Timeline", href: "#kangyur-timeline", indent: "ml-0" },
                                 ].map((item) => (
                                     <li key={item.title} className={item.indent}>
                                         <a href={item.href} >
@@ -277,7 +278,21 @@ const BlogPost05 = () => {
 
             <KangyurDivisionsSection />
 
-            <div className="mx-auto w-full px-6 pt-8 pb-12 md:pt-12 md:pb-16 bg-secondary">
+            <div className="mx-auto w-full flex flex-col gap-10 px-8 pt-8 pb-12 md:pt-12 md:pb-16 bg-linear-to-b from-brand-50 from-0% via-brand-100 via-30% to-brand-200 to-100% dark:bg-linear-to-b dark:from-brand-800/50 dark:from-0% dark:via-brand-800/30 dark:via-30% dark:to-brand-900/90">
+                {/* <!-- Kangyur Timeline Header --> */}
+                <div className="flex w-full flex-col justify-between md:flex-row">
+                    <div className="flex flex-1 flex-col max-w-280 pr-4 md:pr-24">
+                        <h2 className="text-display-md font-extralight text-brand-800 dark:text-brand-300 md:text-display-lg">Kangyur Timeline</h2>
+                        <p className="mt-1 text-base text-tertiary md:mt-2 md:text-lg text-balance">
+                            Explore the historical evolution of the Kangyur. This interactive timeline traces the development of the Kangyur across different eras and cultural contexts, the major editions and transmission periods of the Tibetan Buddhist canon.
+                        </p>
+                    </div>
+                    <div className="mt-8 flex flex-col gap-3 self-stretch md:mt-0 md:flex-row-reverse md:justify-center md:self-center">
+                        <Button color="secondary" size="md" iconTrailing={Film02} onClick={() => openCanonNavigator()} >
+                            Explore more timelines
+                        </Button>
+                    </div>
+                </div>
                 <TimelineBaseTemplate01 />
             </div>
 
