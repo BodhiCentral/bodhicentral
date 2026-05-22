@@ -91,7 +91,7 @@ const ArticleOverview = () => {
                             </p>
                             <h2 id="origins">2. The Origins and Translation Process</h2>
                             <p>
-                                The formation of the Tibetan canon was a rigorous, state-sponsored philological program that unfolded across centuries. During the "Early Propagation" (snga dar) of the 8th and 9th centuries, the Tibetan emperors Trisong Detsen, Senalek, and Ralpachen provided the patronage for an unprecedented translation effort. This era was defined by a highly standardized methodology characterized by a collaborative lexicographical program involving:
+                                The formation of the Tibetan canon was a rigorous, state-sponsored philological program that unfolded across centuries. During the "Early Propagation" (snga dar) of the 8th and 9th centuries, the Tibetan kings, Trisong Detsen, Senalek, and Ralpachen provided the patronage for an unprecedented translation effort. This era was defined by a highly standardized methodology characterized by a collaborative lexicographical program involving:
 
                             </p>
                             <ul>
@@ -109,19 +109,19 @@ const ArticleOverview = () => {
 
                             <h2 id="scope-and-structural-classification">3. Scope and Structural Classification</h2>
                             <p>
-                                The Kangyur is a vast repository encompassing approximately 900 individual works, typically spanning over 100 volumes. While the internal arrangement can vary between different versions, the collection is traditionally organized into four primary divisions:
+                                The Kangyur is a vast repository encompassing approximately 900 individual works, typically spanning over 100 volumes. While the internal arrangement can vary between different versions, the Degè Kangyur is traditionally organized into four primary divisions, and a concluding catalog:
                             </p>
                             <ul>
-                                <li><strong>Discipline (Vinaya)</strong>: Canonical texts concerning monastic ethics and the regulation of the sangha.</li>
-                                <li><strong>Discourses (Sūtra)</strong>: The public sermons and teachings attributed to the Buddha. This section is often further organized into several sub-divisions that are grouped together for modern cataloging clarity.</li>
-                                <li><strong>Tantra</strong>: Specialized esoteric teachings and ritual methodologies.</li>
+                                <li><strong>Vinaya (Discipline)</strong>: Canonical texts concerning monastic ethics and the regulation of the sangha.</li>
+                                <li><strong>Sūtra (Discourses)</strong>: The public sermons and teachings attributed to the Buddha. This section is often further organized into several sub-divisions that are grouped together for modern cataloging clarity.</li>
+                                <li><strong>Tantra</strong>: Specialized esoteric teachings and ritual methodologies. In the Degè Kangyur, the Tantra section is also organized into several subdivisions. See below for a detailed outline.</li>
                                 <li><strong>Dhāraṇī</strong>: A specific collection of incantations and ritualistic protective texts.</li>
                             </ul>
                             {/* Kangyur Divisions */}
                             <figure>
                                 <div className="flex flex-col bg-secondary px-6 py-4 gap-2 rounded-2xl drop-shadow-sm">
                                     <div className="flex flex-row items-center justify-between gap-4">
-                                        <h4 className="not-prose text-display-xs text-brand-700 dark:text-brand-700/80">Kangyur Divisions</h4>
+                                        <h4 className="not-prose text-display-xs text-brand-700 dark:text-brand-700/80">Degé Kangyur Divisions</h4>
                                         <div className="flex flex-col gap-3 md:justify-center pb-1">
                                             <Button color="secondary" size="sm" iconTrailing={Dataflow01} onClick={() => openCanonNavigator()}>
                                                 Outline
@@ -143,7 +143,7 @@ const ArticleOverview = () => {
                                         </div>
                                         <div className="mx-auto w-full h-full flex flex-col items-center justify-center gap-0 bg-violet-100/60 dark:bg-violet-950/80 px-2 py-4 rounded-2xl border border-violet-200 dark:border-violet-800">
                                             <p className="not-prose text-md font-light text-primary/70 text-center">གཟུངས་འབུམ།</p>
-                                            <p className="not-prose text-md font-bold text-center text-secondary">Dhāraṇī Collection</p>
+                                            <p className="not-prose text-md font-bold text-center text-secondary">Dhāraṇī</p>
                                         </div>
                                         <div className="mx-auto w-full h-auto flex flex-col items-center justify-center gap-0 bg-fuchsia-100/60 dark:bg-fuchsia-950/80 px-2 py-4 rounded-2xl border border-fuchsia-200 dark:border-fuchsia-800">
                                             <p className="not-prose text-md font-light text-primary/70 text-center">བཀའ་འགྱུར་དཀར་ཆག
@@ -220,7 +220,9 @@ const ArticleOverview = () => {
                             <div className="my-12 rounded-3xl bg-tertiary px-5 py-2 text-lg text-tertiary md:pt-1 md:pb-4 md:px-8 [&>p+p]:mt-4.5">
                                 <h2 id="sources-references-and-further-reading">Sources, References and Further Reading</h2>
                                 <ul>
-                                    <li>Canti, John; <i>The Kangyur: An introduction to the Kangyur</i>, 84000 project. Canti's work is available in the 84000 Reading Room, and can be found at: <a href="https://brand.84000.co/post/an-overview-of-the-kangyur">84000.co</a></li>
+                                    <li>Canti, John; <i>The Kangyur: An introduction to the Kangyur</i>, 84000 project. Canti's work is available in the 84000 Reading Room, and can be found <a href="https://brand.84000.co/post/an-overview-of-the-kangyur">here</a></li>
+                                    <li><i>A Complete Catalogue of the Tibetan Buddhist Canons</i>. 1934: Sendai, Japan. Tōhoku Imperial University.</li>
+
                                 </ul>
                             </div>
 
