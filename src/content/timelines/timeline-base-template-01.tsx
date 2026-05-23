@@ -34,7 +34,7 @@ const FONT_BASE = "var(--font-sans)";
 const buildStyleOptions = (isDark: boolean): TimelineOptions["style"] => ({
     mainLine: {
         visible: true,
-        size: 12,
+        size: 16,
     },
     marker: {
         minor: { height: 20, color: isDark ? MARKER_DARK : MARKER_LIGHT, futureColor: "#4b5563" },
@@ -73,8 +73,8 @@ const buildArticleDefaultStyle = (isDark: boolean) => ({
         width: 1,
     },
     shadow: {
-        x: 0, y: 3, amount: 8,
-        color: isDark ? "rgba(0,0,0,0.3)" : "rgba(0,0,0,0.05)",
+        x: 0, y: 2, amount: 8,
+        color: isDark ? "rgba(0,0,0,0.3)" : "rgba(0,0,0,0.04)",
     },
     connectorLine: {
         visible: true,
@@ -87,12 +87,12 @@ const buildArticleDefaultStyle = (isDark: boolean) => ({
             align: "left" as const,
             numberOfLines: 2,
             lineHeight: 20,
-            margin: 14,
+            margin: 10,
         },
     },
     subheader: {
         color: isDark ? "#0f172a" : "#f1f5f9",
-        height: 120,
+        height: 140,
         numberOfLines: 6,
         text: {
             font: '400 12px Nunito',
@@ -174,8 +174,7 @@ const buildLanes = (isDark: boolean): LaneData[] => [
 ];
 
 // ─────────────────────────────────────────────────────────
-// Article data — Major Kangyur Editions and Historical Periods
-// Sources: Kangyur Overview, Bodhi Central
+// Article data — Major Kangyur Editions
 // ─────────────────────────────────────────────────────────
 const KANGYUR_ARTICLES: ArticleData[] = [
 
@@ -252,6 +251,15 @@ const KANGYUR_ARTICLES: ArticleData[] = [
     },
 
     // ── Canonical Editions ───────────────────────────────
+    {
+        id: "mahavyupatti",
+        title: "Mahāvyupatti (circa 780)",
+        subtitle: "First Sanskrit-Tibetan-Chinese Lexicon started by King TRisong Detsen.",
+        lane: "editions",
+        from: { year: 780 },
+        rank: 50,
+        style: { color: EDITIONS_DARK },
+    },
     {
         id: "yongle",
         title: "Yongle Edition (1410)",
@@ -451,25 +459,25 @@ export function TimelineBaseTemplate01() {
             const tl = new Timeline(containerRef.current, {
                 width: containerRef.current.offsetWidth || 1280,
                 height: containerRef.current.offsetHeight || 640,
-                initialDate: { year: 700 },
+                initialDate: { year: 600 },
                 zoom: { initial: 30, minimum: 20, maximum: 50 },
                 style: buildStyleOptions(isDark),
                 article: {
                     defaultCardLayout: "landscape",
                     defaultStyle: buildArticleDefaultStyle(isDark),
                     defaultHoverStyle: {
-                        border: { color: isDark ? EDITIONS_DARK : EDITIONS_LIGHT, width: 2 },
-                        shadow: { x: 0, y: 6, amount: 18, color: "rgba(0,0,0,0.2)" },
+                        border: { color: isDark ? EDITIONS_DARK : EDITIONS_LIGHT, width: 1 },
+                        shadow: { x: 0, y: 4, amount: 12, color: "rgba(0,0,0,0.1)" },
                     },
                     defaultActiveStyle: {
                         border: { color: isDark ? "#999999" : "#ededed", width: 1 },
                     },
-                    autoStacking: { active: true, rowSpacing: 28 },
+                    autoStacking: { active: true, rowSpacing: 32 },
                     collectOngoing: true,
                 },
                 lane: {
                     visible: true,
-                    gap: 8,
+                    gap: 0,
                     axisGap: 20,
                     data: buildLanes(isDark),
                 },
@@ -492,7 +500,7 @@ export function TimelineBaseTemplate01() {
 
             // Fit to show the full span of Kangyur history
             tl.fitDateRange(
-                { year: 700 },
+                { year: 600 },
                 { year: 1800 },
             );
 
@@ -554,8 +562,8 @@ export function TimelineBaseTemplate01() {
             aria-label="Interactive timeline of major Kangyur editions and recensions"
             style={{
                 width: "100%",
-                height: "700px",
-                borderRadius: "6px",
+                height: "720px",
+                borderRadius: "0px",
                 overflow: "hidden",
             }}
         />
