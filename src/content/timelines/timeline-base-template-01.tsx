@@ -490,7 +490,6 @@ export function TimelineBaseTemplate01() {
                         up: 0,
                         down: "edge",
                     },
-                    defaultStyle: buildTimeBandDefaultStyle(isDark),
                     data: buildTimeBands(isDark),
                 },
 
@@ -556,7 +555,7 @@ export function TimelineBaseTemplate01() {
     }, []);
 
     return (
-        <div className="px-8"
+        <div className="pl-8 pr-12"
             ref={containerRef}
             id="kangyur-timeline"
             aria-label="Interactive timeline of major Kangyur editions and recensions"
