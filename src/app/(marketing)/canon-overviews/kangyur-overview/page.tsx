@@ -284,7 +284,7 @@ const BlogPost05 = () => {
                     <div className="flex flex-1 flex-col max-w-280 pr-4 md:pr-24">
                         <h2 className="text-display-md font-extralight text-brand-800 dark:text-brand-300 md:text-display-lg">Kangyur Timeline</h2>
                         <p className="mt-1 text-base text-tertiary md:mt-2 md:text-lg text-balance">
-                            Explore the historical evolution of the Kangyur. This interactive timeline traces the development of the Kangyur across different eras and cultural contexts, the major editions and transmission periods of the Tibetan Buddhist canon.
+                            Explore the historical evolution of the Kangyur. This interactive timeline traces the development of the scriptural Kangyur fundations across different eras and the people influenced them.
                         </p>
                     </div>
                     <div className="mt-8 flex flex-col gap-3 self-stretch md:mt-0 md:flex-row-reverse md:justify-center md:self-center">
