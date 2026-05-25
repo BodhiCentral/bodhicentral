@@ -16,6 +16,13 @@ export type SelectItemType = {
     supportingText?: string;
     /** Leading icon component or element. */
     icon?: FC | ReactNode;
+    ////////////
+    /** The primary title text in timelines. */
+    title?: string;
+    /** The subtitle text in timelines. */
+    subtitle?: string;
+    /** The Lane Label in timelines. */
+    lane?: string;
 };
 
 export interface CommonProps {

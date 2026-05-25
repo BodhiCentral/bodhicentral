@@ -1,84 +1,73 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { useTheme } from "next-themes";
-import type { Timeline, LaneData, ArticleData, TimelineOptions, TimeBandData } from "histropediajs";
+import type { Timeline, LaneData, ArticleData, TimelineOptions, TimeBandData, TimeBandStyle } from "histropediajs";
 import { PRECISION_YEAR } from "histropediajs";
 import { Select, type SelectItemType } from "@/components/base/select/select";
 
 // ─────────────────────────────────────────────────────────
 // Palette constants (matches Bodhi Central brand)
 // ─────────────────────────────────────────────────────────
-const PERIODS_LIGHT = "oklch(0.545 0.069 77.21)"; // color-brand-700
-const PERIODS_DARK = "oklch(0.545 0.069 77.21)"; // color-brand-700
-const LANE_HEADER_BG_LIGHT = "#ffffff"; // color-white
-const LANE_HEADER_BG_DARK = "oklch(0.545 0.069 77.21)"; // color-brand-700
+const PERIODS_COLOR = "oklch(0.545 0.069 77.21)"; // color-brand-700
+const LANE_HEADER_BG = "#ffffff"; // color-white
 const LANE_HEADER_LIGHT_TITLE = "oklch(0.966 0.008 73.73)"; //color-brand-50
-const LANE_HEADER_DARK_TITLE = "oklch(0.973 0.007 88.55)"; // color-brand-50
-const PEOPLE_LIGHT = "oklch(0.545 0.069 77.21)"; // color-brand-700
-const PEOPLE_DARK = "oklch(0.545 0.069 77.21)"; // color-brand-700
-const PEOPLE_LIGHT_BG = "oklch(0.966 0.008 73.73)"; // color-brand-25
-const PEOPLE_DARK_BG = "oklch(0.973 0.007 88.55)"; //color-brand-25
-const PEOPLE_DARK_BG_TITLE = "oklch(0.966 0.008 73.73)"; //color-brand-50
+const PEOPLE_COLOR = "oklch(0.545 0.069 77.21)"; // color-brand-700
+const PEOPLE_BG = "oklch(0.966 0.008 73.73)"; // color-brand-25
 const PEOPLE_LIGHT_BG_TITLE = "oklch(0.973 0.007 88.55)"; // color-brand-50
-const EDITIONS_LIGHT = "oklch(0.545 0.069 77.21)"; // color-brand-700
-const EDITIONS_DARK = "oklch(0.545 0.069 77.21)"; // color-brand-700
-const MARKER_LIGHT = "oklch(0.724 0.07 78.26)"; // color-brand-500
-const MARKER_DARK = "oklch(0.545 0.069 77.21)"; // color-brand-700
+const EDITIONS_COLOR = "oklch(0.545 0.069 77.21)"; // color-brand-700
+const MARKER_COLOR = "oklch(0.724 0.07 78.26)"; // color-brand-500
 const ARTICLE_BORDER_LIGHT = "oklch(92.2% 0 0)"; // color-neutral-200
-const ARTICLE_BORDER_DARK = "oklch(37.1% 0 0)"; // color-neutral-700
 const ARTICLE_HEADER_LIGHT = "#333333";
-const ARTICLE_HEADER_DARK = "#fff";
 const FONT_BASE = "var(--font-sans)";
 
 // ─────────────────────────────────────────────────────────
-// Theme-specific timeline style configurations
+// Timeline style configurations (Light theme only)
 // ─────────────────────────────────────────────────────────
-const buildStyleOptions = (isDark: boolean): TimelineOptions["style"] => ({
+const buildStyleOptions = (): TimelineOptions["style"] => ({
     mainLine: {
         visible: true,
         size: 16,
     },
     marker: {
-        minor: { height: 18, color: isDark ? MARKER_DARK : MARKER_LIGHT, futureColor: "#4b5563" },
-        major: { height: 32, color: isDark ? MARKER_DARK : MARKER_LIGHT, futureColor: "#9ca3af" },
+        minor: { height: 18, color: MARKER_COLOR, futureColor: "#4b5563" },
+        major: { height: 32, color: MARKER_COLOR, futureColor: "#9ca3af" },
     },
     dateLabel: {
         minor: {
             font: `normal 10px ${FONT_BASE}`,
-            color: isDark ? MARKER_DARK : MARKER_LIGHT,
+            color: MARKER_COLOR,
             futureColor: "#6b7280",
         },
         major: {
             font: `600 16px ${FONT_BASE}`,
-            color: isDark ? MARKER_DARK : MARKER_LIGHT,
+            color: MARKER_COLOR,
             futureColor: "#9ca3af",
         },
     },
     draggingHighlight: {
-        color: isDark ? "rgba(30, 41, 59, 0.4)" : "rgba(241, 245, 249, 0.5)",
+        color: "rgba(241, 245, 249, 0.5)",
     },
 });
 
 // ─────────────────────────────────────────────────────────
-// Shared article default style (overridden per-theme below)
+// Shared article style
 // ─────────────────────────────────────────────────────────
-const buildArticleDefaultStyle = (isDark: boolean) => ({
+const buildArticleDefaultStyle = () => ({
     width: 220,
     height: 200,
     topRadius: 16,
     bottomRadius: 8,
-    backgroundColor: isDark ? "#1e293b" : "#ffffff",
+    backgroundColor: "#ffffff",
     distanceToBaseline: {
         value: 40,
     },
     border: {
-        color: isDark ? ARTICLE_BORDER_DARK : ARTICLE_BORDER_LIGHT,
+        color: ARTICLE_BORDER_LIGHT,
         width: 1,
     },
     shadow: {
         x: 0, y: 2, amount: 8,
-        color: isDark ? "rgba(0,0,0,0.3)" : "rgba(0,0,0,0.04)",
+        color: "rgba(0,0,0,0.04)",
     },
     connectorLine: {
         visible: true,
@@ -93,7 +82,7 @@ const buildArticleDefaultStyle = (isDark: boolean) => ({
         height: 60,
         text: {
             font: '700 14px Nunito',
-            color: isDark ? ARTICLE_HEADER_DARK : ARTICLE_HEADER_LIGHT,
+            color: ARTICLE_HEADER_LIGHT,
             align: "left" as const,
             numberOfLines: 2,
             lineHeight: 20,
@@ -101,12 +90,12 @@ const buildArticleDefaultStyle = (isDark: boolean) => ({
         },
     },
     subheader: {
-        color: isDark ? "#0f172a" : "#f1f5f9",
+        color: "#f1f5f9",
         height: 60,
         numberOfLines: 6,
         text: {
             font: '400 12px Nunito',
-            color: isDark ? "#64748b" : "#475569",
+            color: "#475569",
             align: "left" as const,
         },
     },
@@ -115,34 +104,30 @@ const buildArticleDefaultStyle = (isDark: boolean) => ({
 // ─────────────────────────────────────────────────────────
 // Lane definitions (PEOPLE + KANGYUR EDITIONS)
 // ─────────────────────────────────────────────────────────
-const buildLanes = (isDark: boolean): LaneData[] => [
+const buildLanes = (): LaneData[] => [
     {
         id: "people",
         title: "PEOPLE",
         layout: { heightWeight: 1 },
         style: {
             header: {
-                backgroundColor: isDark
-                    ? LANE_HEADER_BG_DARK
-                    : LANE_HEADER_BG_LIGHT,
+                backgroundColor: LANE_HEADER_BG,
             },
             body: {
-                backgroundColor: isDark
-                    ? PEOPLE_DARK_BG
-                    : PEOPLE_LIGHT_BG,
-                borderColor: isDark ? "rgba(37,37,37,0.30)" : "rgba(37,37,37,0.12)",
+                backgroundColor: PEOPLE_BG,
+                borderColor: "rgba(37,37,37,0.12)",
                 borderWidth: 0,
                 borderRadius: 0,
             },
             title: {
-                color: isDark ? PEOPLE_DARK : PEOPLE_LIGHT,
+                color: PEOPLE_COLOR,
                 font: `600 14px ${FONT_BASE}`,
             },
         },
         article: {
             defaultCardLayout: "portrait",
             defaultStyle: {
-                color: PEOPLE_DARK,
+                color: PEOPLE_COLOR,
                 connectorLine: { thickness: 1 },
             },
             autoStacking: { active: true, rowSpacing: 24 },
@@ -155,27 +140,23 @@ const buildLanes = (isDark: boolean): LaneData[] => [
         layout: { heightWeight: 1 },
         style: {
             header: {
-                backgroundColor: isDark
-                    ? LANE_HEADER_BG_DARK
-                    : LANE_HEADER_BG_LIGHT,
+                backgroundColor: LANE_HEADER_BG,
             },
             body: {
-                backgroundColor: isDark
-                    ? PEOPLE_DARK_BG
-                    : PEOPLE_LIGHT_BG,
-                borderColor: isDark ? "rgba(204,164,59,0.30)" : "rgba(204,164,59,0.15)",
+                backgroundColor: PEOPLE_BG,
+                borderColor: "rgba(204,164,59,0.15)",
                 borderWidth: 0,
                 borderRadius: 0,
             },
             title: {
-                color: isDark ? EDITIONS_DARK : EDITIONS_LIGHT,
+                color: EDITIONS_COLOR,
                 font: `600 14px ${FONT_BASE}`,
             },
         },
         article: {
             defaultCardLayout: "portrait",
             defaultStyle: {
-                color: EDITIONS_DARK,
+                color: EDITIONS_COLOR,
                 connectorLine: { thickness: 1.5 },
             },
             autoStacking: { active: true, rowSpacing: 24 },
@@ -198,7 +179,7 @@ const LANE_ARTICLES: ArticleData[] = [
         to: { year: 650 },
         rank: 100,
         imageUrl: "/placeholder-image-landscape.svg",
-        style: { color: PEOPLE_DARK },
+        style: { color: PEOPLE_COLOR },
     },
     {
         id: "trisong-detsen",
@@ -209,7 +190,7 @@ const LANE_ARTICLES: ArticleData[] = [
         to: { year: 797 },
         rank: 90,
         imageUrl: "/placeholder-image-landscape.svg",
-        style: { color: PEOPLE_DARK },
+        style: { color: PEOPLE_COLOR },
     },
     {
         id: "yeshe-od",
@@ -220,7 +201,7 @@ const LANE_ARTICLES: ArticleData[] = [
         to: { year: 940 },
         rank: 90,
         imageUrl: "/placeholder-image-landscape.svg",
-        style: { color: PEOPLE_DARK },
+        style: { color: PEOPLE_COLOR },
     },
     {
         id: "rinchen-zangpo",
@@ -231,7 +212,7 @@ const LANE_ARTICLES: ArticleData[] = [
         to: { year: 1055 },
         rank: 90,
         imageUrl: "/placeholder-image-landscape.svg",
-        style: { color: PEOPLE_DARK },
+        style: { color: PEOPLE_COLOR },
     },
     {
         id: "atisha",
@@ -242,7 +223,7 @@ const LANE_ARTICLES: ArticleData[] = [
         to: { year: 1054 },
         rank: 90,
         imageUrl: "/placeholder-image-landscape.svg",
-        style: { color: PEOPLE_DARK },
+        style: { color: PEOPLE_COLOR },
     },
     {
         id: "gampopa",
@@ -253,7 +234,7 @@ const LANE_ARTICLES: ArticleData[] = [
         to: { year: 1153 },
         rank: 90,
         imageUrl: "/placeholder-image-landscape.svg",
-        style: { color: PEOPLE_DARK },
+        style: { color: PEOPLE_COLOR },
     },
     {
         id: "ratna-lingpa",
@@ -264,7 +245,7 @@ const LANE_ARTICLES: ArticleData[] = [
         to: { year: 1478 },
         rank: 90,
         imageUrl: "/placeholder-image-landscape.svg",
-        style: { color: PEOPLE_DARK },
+        style: { color: PEOPLE_COLOR },
     },
 
     // ── Canonical Editions ───────────────────────────────
@@ -276,7 +257,7 @@ const LANE_ARTICLES: ArticleData[] = [
         from: { year: 780 },
         rank: 50,
         imageUrl: "/placeholder-image-landscape.svg",
-        style: { color: EDITIONS_DARK },
+        style: { color: EDITIONS_COLOR },
     },
     {
         id: "yongle",
@@ -286,7 +267,7 @@ const LANE_ARTICLES: ArticleData[] = [
         from: { year: 1410 },
         rank: 100,
         imageUrl: "/placeholder-image-landscape.svg",
-        style: { color: EDITIONS_DARK },
+        style: { color: EDITIONS_COLOR },
     },
     {
         id: "lithang",
@@ -297,7 +278,7 @@ const LANE_ARTICLES: ArticleData[] = [
         to: { year: 1614 },
         rank: 85,
         imageUrl: "/placeholder-image-landscape.svg",
-        style: { color: EDITIONS_DARK },
+        style: { color: EDITIONS_COLOR },
     },
     {
         id: "ulaanbaatar",
@@ -307,7 +288,7 @@ const LANE_ARTICLES: ArticleData[] = [
         from: { year: 1671 },
         rank: 75,
         imageUrl: "/placeholder-image-landscape.svg",
-        style: { color: EDITIONS_DARK },
+        style: { color: EDITIONS_COLOR },
     },
     {
         id: "berlin",
@@ -317,7 +298,7 @@ const LANE_ARTICLES: ArticleData[] = [
         from: { year: 1680 },
         rank: 70,
         imageUrl: "/placeholder-image-landscape.svg",
-        style: { color: EDITIONS_DARK },
+        style: { color: EDITIONS_COLOR },
     },
     {
         id: "london-shelkar",
@@ -327,7 +308,7 @@ const LANE_ARTICLES: ArticleData[] = [
         from: { year: 1712 },
         rank: 70,
         imageUrl: "/placeholder-image-landscape.svg",
-        style: { color: EDITIONS_DARK },
+        style: { color: EDITIONS_COLOR },
     },
     {
         id: "stok-palace",
@@ -337,7 +318,7 @@ const LANE_ARTICLES: ArticleData[] = [
         from: { year: 1729 },
         rank: 70,
         imageUrl: "/placeholder-image-landscape.svg",
-        style: { color: EDITIONS_DARK },
+        style: { color: EDITIONS_COLOR },
     },
     {
         id: "narthang",
@@ -347,7 +328,7 @@ const LANE_ARTICLES: ArticleData[] = [
         from: { year: 1730 },
         rank: 90,
         imageUrl: "/placeholder-image-landscape.svg",
-        style: { color: EDITIONS_DARK },
+        style: { color: EDITIONS_COLOR },
     },
     {
         id: "dege",
@@ -357,7 +338,7 @@ const LANE_ARTICLES: ArticleData[] = [
         from: { year: 1733 },
         rank: 100,
         imageUrl: "/placeholder-image-landscape.svg",
-        style: { color: EDITIONS_DARK },
+        style: { color: EDITIONS_COLOR },
     },
     {
         id: "lhasa",
@@ -367,14 +348,14 @@ const LANE_ARTICLES: ArticleData[] = [
         from: { year: 1934 },
         rank: 80,
         imageUrl: "/placeholder-image-landscape.svg",
-        style: { color: EDITIONS_DARK },
+        style: { color: EDITIONS_COLOR },
     },
 ];
 
 // ─────────────────────────────────────────────────────────
 // TimeBand definitions (HISTORICAL PERIODS)
 // ─────────────────────────────────────────────────────────
-const buildTimeBands = (isDark: boolean): TimeBandData[] => [
+const buildTimeBands = (): TimeBandData[] => [
     {
         id: "first-propagation",
         title: "First Propagation",
@@ -440,25 +421,23 @@ const buildTimeBands = (isDark: boolean): TimeBandData[] => [
 ];
 
 // ─────────────────────────────────────────────────────────
-// Shared TimeBand default style (overridden per-theme below)
+// Shared TimeBand default style
 // ─────────────────────────────────────────────────────────
-const buildTimeBandDefaultStyle = (isDark: boolean) => ({
-    backgroundColor: isDark
-        ? LANE_HEADER_BG_DARK
-        : LANE_HEADER_BG_LIGHT,
-    border: {
-        width: 1,
-    },
-    text: {
-        font: "normal 18px Crimson Pro",
-        align: "left",
-        margin: 8,
-        offsetY: 2,
-        verticalAlign: "bottom",
-        baseline: "bottom"
-
-    },
-});
+const buildTimeBandDefaultStyle = (): TimeBandStyle => (
+    {
+        backgroundColor: LANE_HEADER_BG,
+        border: {
+            width: 1,
+        },
+        text: {
+            font: "normal 18px Crimson Pro",
+            align: "left",
+            margin: 8,
+            offsetY: 2,
+            verticalAlign: "bottom",
+            baseline: "bottom"
+        },
+    });
 
 // ─────────────────────────────────────────────────────────
 // Component
@@ -466,7 +445,6 @@ const buildTimeBandDefaultStyle = (isDark: boolean) => ({
 export function TimelineBaseTemplate01() {
     const containerRef = useRef<HTMLDivElement>(null);
     const timelineRef = useRef<Timeline | null>(null);
-    const { resolvedTheme } = useTheme();
 
     // ── Initialize the timeline once on mount ──────────
     useEffect(() => {
@@ -474,8 +452,6 @@ export function TimelineBaseTemplate01() {
 
         // Prevent duplicate canvases on HMR / StrictMode double-invocation
         containerRef.current.innerHTML = "";
-
-        const isDark = resolvedTheme === "dark-mode";
 
         // Lazy-import to ensure we never run on the server
         import("histropediajs").then(({ Timeline }) => {
@@ -486,16 +462,16 @@ export function TimelineBaseTemplate01() {
                 height: containerRef.current.offsetHeight || 640,
                 initialDate: { year: 600 },
                 zoom: { initial: 30, minimum: 20, maximum: 50 },
-                style: buildStyleOptions(isDark),
+                style: buildStyleOptions(),
                 article: {
                     defaultCardLayout: "portrait",
-                    defaultStyle: buildArticleDefaultStyle(isDark),
+                    defaultStyle: buildArticleDefaultStyle(),
                     defaultHoverStyle: {
-                        border: { color: isDark ? EDITIONS_DARK : EDITIONS_LIGHT, width: 1 },
+                        border: { color: EDITIONS_COLOR, width: 1 },
                         shadow: { x: 0, y: 4, amount: 12, color: "rgba(0,0,0,0.1)" },
                     },
                     defaultActiveStyle: {
-                        border: { color: isDark ? "#999999" : "#ededed", width: 1 },
+                        border: { color: "#ededed", width: 1 },
                     },
                     autoStacking: { active: true, rowSpacing: 32 },
                     collectOngoing: true,
@@ -504,7 +480,7 @@ export function TimelineBaseTemplate01() {
                     visible: true,
                     gap: 0,
                     axisGap: 0,
-                    data: buildLanes(isDark),
+                    data: buildLanes(),
                 },
                 // Time Band defaultStyle
                 timeBand: {
@@ -515,9 +491,9 @@ export function TimelineBaseTemplate01() {
                         up: 0,
                         down: "edge",
                     },
-                    data: buildTimeBands(isDark),
+                    data: buildTimeBands(),
+                    defaultStyle: buildTimeBandDefaultStyle(),
                 },
-
             });
 
             tl.load(LANE_ARTICLES);
@@ -541,24 +517,6 @@ export function TimelineBaseTemplate01() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    // ── Sync canvas styles with theme changes ──────────
-    useEffect(() => {
-        const tl = timelineRef.current;
-        if (!tl || !resolvedTheme) return;
-
-        const isDark = resolvedTheme === "dark-mode";
-
-        tl.setOption("style", buildStyleOptions(isDark));
-        tl.setOption("article.defaultStyle", buildArticleDefaultStyle(isDark));
-        tl.setOption("article.defaultHoverStyle", {
-            border: { color: isDark ? "#555555" : "#333333", width: 2 },
-        });
-
-        // Rebuild lanes with new colors
-        tl.loadLanes(buildLanes(isDark));
-        tl.requestRedraw();
-    }, [resolvedTheme]);
-
     // ── Responsive canvas resize ───────────────────────
     useEffect(() => {
         const tl = timelineRef.current;
@@ -579,6 +537,16 @@ export function TimelineBaseTemplate01() {
         return () => ro.disconnect();
     }, []);
 
+    const item_articles: SelectItemType[] = LANE_ARTICLES.map((article) => ({
+        id: String(article.id),
+        label: article.title,
+        supportingText: article.subtitle,
+        title: article.title,
+        subtitle: article.subtitle,
+        lane: article.lane !== undefined ? String(article.lane) : undefined,
+    }));
+
+
 
     const items: SelectItemType[] = [
         {
@@ -596,18 +564,13 @@ export function TimelineBaseTemplate01() {
             label: "Block prints",
             supportingText: "",
         },
-        {
-            id: "incunabula",
-            label: "Incunabula",
-            supportingText: "",
-        },
     ];
 
     return (
         <div>
             <div className="mx-auto w-full flex flex-col justify-between gap-6 py-4">
                 <div className="w-full flex flex-row justify-items-start gap-12">
-                    <Select.ComboBox className="w-[280px]" label="Search" tooltip="Search scriptures and people of the timeline" placeholder="Search the timeline..." items={LANE_ARTICLES}>
+                    <Select.ComboBox className="w-[350px]" size="sm" label="Search the timeline" tooltip="Search scriptures and people of the timeline" placeholder="Search scripture and people..." items={item_articles}>
                         {(item) => (
                             <Select.Item id={item.id} supportingText={item.supportingText}>
                                 {item.label}
@@ -615,7 +578,8 @@ export function TimelineBaseTemplate01() {
                         )}
                     </Select.ComboBox>
                     <Select className="max-w-[180px]"
-                        label="Editions"
+                        size="sm"
+                        label="Edition Types"
                         tooltip="Filter by edition type (manuscripts, block-prints, incunabula)"
                         placeholder="Select edition type"
                         items={items}
