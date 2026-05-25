@@ -4,16 +4,17 @@ import { useEffect, useRef } from "react";
 import { useTheme } from "next-themes";
 import type { Timeline, LaneData, ArticleData, TimelineOptions, TimeBandData } from "histropediajs";
 import { PRECISION_YEAR } from "histropediajs";
+import { Select, type SelectItemType } from "@/components/base/select/select";
 
 // ─────────────────────────────────────────────────────────
 // Palette constants (matches Bodhi Central brand)
 // ─────────────────────────────────────────────────────────
 const PERIODS_LIGHT = "oklch(0.545 0.069 77.21)"; // color-brand-700
 const PERIODS_DARK = "oklch(0.545 0.069 77.21)"; // color-brand-700
-const PERIOD_LIGHT_BG = "oklch(0.966 0.008 73.73)"; // color-brand-25
-const PERIOD_DARK_BG = "oklch(0.973 0.007 88.55)"; //color-brand-25
-const PERIOD_DARK_BG_TITLE = "oklch(0.966 0.008 73.73)"; //color-brand-50
-const PERIOD_LIGHT_BG_TITLE = "oklch(0.973 0.007 88.55)"; // color-brand-50
+const LANE_HEADER_BG_LIGHT = "#ffffff"; // color-white
+const LANE_HEADER_BG_DARK = "oklch(0.545 0.069 77.21)"; // color-brand-700
+const LANE_HEADER_LIGHT_TITLE = "oklch(0.966 0.008 73.73)"; //color-brand-50
+const LANE_HEADER_DARK_TITLE = "oklch(0.973 0.007 88.55)"; // color-brand-50
 const PEOPLE_LIGHT = "oklch(0.545 0.069 77.21)"; // color-brand-700
 const PEOPLE_DARK = "oklch(0.545 0.069 77.21)"; // color-brand-700
 const PEOPLE_LIGHT_BG = "oklch(0.966 0.008 73.73)"; // color-brand-25
@@ -24,7 +25,9 @@ const EDITIONS_LIGHT = "oklch(0.545 0.069 77.21)"; // color-brand-700
 const EDITIONS_DARK = "oklch(0.545 0.069 77.21)"; // color-brand-700
 const MARKER_LIGHT = "oklch(0.724 0.07 78.26)"; // color-brand-500
 const MARKER_DARK = "oklch(0.545 0.069 77.21)"; // color-brand-700
-const ARTICLE_HEADER_LIGHT = "#323512";
+const ARTICLE_BORDER_LIGHT = "oklch(92.2% 0 0)"; // color-neutral-200
+const ARTICLE_BORDER_DARK = "oklch(37.1% 0 0)"; // color-neutral-700
+const ARTICLE_HEADER_LIGHT = "#333333";
 const ARTICLE_HEADER_DARK = "#fff";
 const FONT_BASE = "var(--font-sans)";
 
@@ -37,7 +40,7 @@ const buildStyleOptions = (isDark: boolean): TimelineOptions["style"] => ({
         size: 16,
     },
     marker: {
-        minor: { height: 20, color: isDark ? MARKER_DARK : MARKER_LIGHT, futureColor: "#4b5563" },
+        minor: { height: 18, color: isDark ? MARKER_DARK : MARKER_LIGHT, futureColor: "#4b5563" },
         major: { height: 32, color: isDark ? MARKER_DARK : MARKER_LIGHT, futureColor: "#9ca3af" },
     },
     dateLabel: {
@@ -63,13 +66,14 @@ const buildStyleOptions = (isDark: boolean): TimelineOptions["style"] => ({
 const buildArticleDefaultStyle = (isDark: boolean) => ({
     width: 220,
     height: 200,
+    topRadius: 16,
+    bottomRadius: 8,
     backgroundColor: isDark ? "#1e293b" : "#ffffff",
-    borderRadius: 8,
     distanceToBaseline: {
         value: 40,
     },
     border: {
-        color: isDark ? "#444" : "#eee",
+        color: isDark ? ARTICLE_BORDER_DARK : ARTICLE_BORDER_LIGHT,
         width: 1,
     },
     shadow: {
@@ -79,8 +83,14 @@ const buildArticleDefaultStyle = (isDark: boolean) => ({
     connectorLine: {
         visible: true,
         thickness: 1,
+        offsetY: 1,
+        arrow: {
+            width: 8,
+            height: 10,
+        }
     },
     header: {
+        height: 60,
         text: {
             font: '700 14px Nunito',
             color: isDark ? ARTICLE_HEADER_DARK : ARTICLE_HEADER_LIGHT,
@@ -92,7 +102,7 @@ const buildArticleDefaultStyle = (isDark: boolean) => ({
     },
     subheader: {
         color: isDark ? "#0f172a" : "#f1f5f9",
-        height: 140,
+        height: 60,
         numberOfLines: 6,
         text: {
             font: '400 12px Nunito',
@@ -113,15 +123,15 @@ const buildLanes = (isDark: boolean): LaneData[] => [
         style: {
             header: {
                 backgroundColor: isDark
-                    ? PEOPLE_DARK_BG_TITLE
-                    : PEOPLE_LIGHT_BG_TITLE,
+                    ? LANE_HEADER_BG_DARK
+                    : LANE_HEADER_BG_LIGHT,
             },
             body: {
                 backgroundColor: isDark
                     ? PEOPLE_DARK_BG
                     : PEOPLE_LIGHT_BG,
                 borderColor: isDark ? "rgba(37,37,37,0.30)" : "rgba(37,37,37,0.12)",
-                borderWidth: 1,
+                borderWidth: 0,
                 borderRadius: 0,
             },
             title: {
@@ -130,7 +140,7 @@ const buildLanes = (isDark: boolean): LaneData[] => [
             },
         },
         article: {
-            defaultCardLayout: "landscape",
+            defaultCardLayout: "portrait",
             defaultStyle: {
                 color: PEOPLE_DARK,
                 connectorLine: { thickness: 1 },
@@ -146,15 +156,15 @@ const buildLanes = (isDark: boolean): LaneData[] => [
         style: {
             header: {
                 backgroundColor: isDark
-                    ? PEOPLE_DARK_BG_TITLE
-                    : PEOPLE_LIGHT_BG_TITLE,
+                    ? LANE_HEADER_BG_DARK
+                    : LANE_HEADER_BG_LIGHT,
             },
             body: {
                 backgroundColor: isDark
                     ? PEOPLE_DARK_BG
                     : PEOPLE_LIGHT_BG,
                 borderColor: isDark ? "rgba(204,164,59,0.30)" : "rgba(204,164,59,0.15)",
-                borderWidth: 1,
+                borderWidth: 0,
                 borderRadius: 0,
             },
             title: {
@@ -163,7 +173,7 @@ const buildLanes = (isDark: boolean): LaneData[] => [
             },
         },
         article: {
-            defaultCardLayout: "landscape",
+            defaultCardLayout: "portrait",
             defaultStyle: {
                 color: EDITIONS_DARK,
                 connectorLine: { thickness: 1.5 },
@@ -176,173 +186,187 @@ const buildLanes = (isDark: boolean): LaneData[] => [
 // ─────────────────────────────────────────────────────────
 // Article data — Major Kangyur Editions
 // ─────────────────────────────────────────────────────────
-const KANGYUR_ARTICLES: ArticleData[] = [
+const LANE_ARTICLES: ArticleData[] = [
 
     // ── People ──────────────────────────────
     {
         id: "songtsen-gampo",
-        title: "King Songtsen Gampo (d. c. 650)",
-        subtitle: "First king traditionally credited with bringing Buddhism to Tibet in the 7th century CE",
+        title: "King Songtsen Gampo",
+        subtitle: "r. c. 618–650 CE",
         lane: "people",
         from: { year: 650 },
         to: { year: 650 },
         rank: 100,
+        imageUrl: "/placeholder-image-landscape.svg",
         style: { color: PEOPLE_DARK },
     },
     {
         id: "trisong-detsen",
-        title: "King Trisong Detsen (r. 755-circa 797)",
-        subtitle: "During Trisong Detsen's reign, Tibet imperial power reached its peak, and Buddhism was established as the state religion.",
+        title: "King Trisong Detsen",
+        subtitle: "r. 755-circa 797",
         lane: "people",
         from: { year: 755 },
         to: { year: 797 },
         rank: 90,
+        imageUrl: "/placeholder-image-landscape.svg",
         style: { color: PEOPLE_DARK },
     },
     {
         id: "yeshe-od",
         title: "King of Purang, Yeshe-od",
-        subtitle: "Yeshe-os's major act was to send a group of followers to Kashmir to collect Buddhist texts.",
+        subtitle: "c. 940 CE",
         lane: "people",
         from: { year: 940 },
         to: { year: 940 },
         rank: 90,
+        imageUrl: "/placeholder-image-landscape.svg",
         style: { color: PEOPLE_DARK },
     },
     {
         id: "rinchen-zangpo",
-        title: "Rinchen Zangpo (958–1055)",
-        subtitle: "He is credited with the translation of more than 600 Buddhist texts into Tibetan, including the Prajnaparamita.",
+        title: "Rinchen Zangpo",
+        subtitle: "958-1055",
         lane: "people",
         from: { year: 958 },
         to: { year: 1055 },
         rank: 90,
+        imageUrl: "/placeholder-image-landscape.svg",
         style: { color: PEOPLE_DARK },
     },
     {
         id: "atisha",
-        title: "Atiśa Dīpaṁkara Śrījñāna (982–1054 CE)",
-        subtitle: "Atiśa’s arrival in Tibet marked a turning point in the development of Tibetan Buddhism, initiating a period of cultural and intellectual renaissance.",
+        title: "Atiśa Dīpaṁkara Śrījñāna",
+        subtitle: "982–1054",
         lane: "people",
         from: { year: 982 },
         to: { year: 1054 },
         rank: 90,
+        imageUrl: "/placeholder-image-landscape.svg",
         style: { color: PEOPLE_DARK },
     },
     {
         id: "gampopa",
-        title: "Gampopa Sönam Rinchen (1079–1153)",
-        subtitle: "Gampopa was a student of Milarepa. Gampopa's combination of Kadam monastic discipline and Mahāmudrā meditation formed the basis for a new school, the Kagyü (the Followers of the Trasnmitted Command)",
+        title: "Gampopa Sönam Rinchen",
+        subtitle: "1079–1153",
         lane: "people",
         from: { year: 1079 },
         to: { year: 1153 },
         rank: 90,
+        imageUrl: "/placeholder-image-landscape.svg",
         style: { color: PEOPLE_DARK },
     },
     {
         id: "ratna-lingpa",
-        title: "Ratna Lingpa (1403-1478)",
-        subtitle: "Ratna Lingpa collected the Nyingma texts when available in a work called the Nyingma Gyundbum, or 100,000 Nyingma Tantras.",
+        title: "Ratna Lingpa",
+        subtitle: "1403-1478",
         lane: "people",
         from: { year: 1403 },
         to: { year: 1478 },
         rank: 90,
+        imageUrl: "/placeholder-image-landscape.svg",
         style: { color: PEOPLE_DARK },
     },
 
     // ── Canonical Editions ───────────────────────────────
     {
         id: "mahavyupatti",
-        title: "Mahāvyupatti (circa 780)",
-        subtitle: "First Sanskrit-Tibetan-Chinese Lexicon started by King TRisong Detsen.",
+        title: "Mahāvyupatti",
+        subtitle: "Circa 780 CE",
         lane: "editions",
         from: { year: 780 },
         rank: 50,
+        imageUrl: "/placeholder-image-landscape.svg",
         style: { color: EDITIONS_DARK },
     },
     {
         id: "yongle",
-        title: "Yongle Edition (1410)",
-        subtitle: "First printed Kangyur · Beijing",
+        title: "Yongle Edition",
+        subtitle: "1410 CE",
         lane: "editions",
         from: { year: 1410 },
         rank: 100,
-        starred: true,
+        imageUrl: "/placeholder-image-landscape.svg",
         style: { color: EDITIONS_DARK },
     },
     {
         id: "lithang",
-        title: "Lithang Edition (1614)",
-        subtitle: "Xylograph blockprint",
+        title: "Lithang Edition",
+        subtitle: "1614 CE",
         lane: "editions",
         from: { year: 1609 },
         to: { year: 1614 },
         rank: 85,
+        imageUrl: "/placeholder-image-landscape.svg",
         style: { color: EDITIONS_DARK },
     },
     {
         id: "ulaanbaatar",
         title: "Ulaanbaatar",
-        subtitle: "Thempangma manuscript tradition",
+        subtitle: "1671 CE",
         lane: "editions",
         from: { year: 1671 },
         rank: 75,
+        imageUrl: "/placeholder-image-landscape.svg",
         style: { color: EDITIONS_DARK },
     },
     {
         id: "berlin",
         title: "Berlin Manuscript",
-        subtitle: "Tshalpa tradition · manuscript",
+        subtitle: "1680 CE",
         lane: "editions",
         from: { year: 1680 },
         rank: 70,
+        imageUrl: "/placeholder-image-landscape.svg",
         style: { color: EDITIONS_DARK },
     },
     {
         id: "london-shelkar",
         title: "London (Shelkar)",
-        subtitle: "Thempangma manuscript",
+        subtitle: "1712 CE",
         lane: "editions",
         from: { year: 1712 },
         rank: 70,
+        imageUrl: "/placeholder-image-landscape.svg",
         style: { color: EDITIONS_DARK },
     },
     {
         id: "stok-palace",
         title: "Stok Palace",
-        subtitle: "Thempangma manuscript",
+        subtitle: "1729 CE",
         lane: "editions",
         from: { year: 1729 },
         rank: 70,
+        imageUrl: "/placeholder-image-landscape.svg",
         style: { color: EDITIONS_DARK },
     },
     {
         id: "narthang",
         title: "Narthang Edition",
-        subtitle: "Conflated recension · xylograph",
+        subtitle: "1730 CE",
         lane: "editions",
         from: { year: 1730 },
         rank: 90,
-        starred: false,
+        imageUrl: "/placeholder-image-landscape.svg",
         style: { color: EDITIONS_DARK },
     },
     {
         id: "dege",
         title: "Degé Edition",
-        subtitle: "Definitive reference · xylograph",
+        subtitle: "1733 CE",
         lane: "editions",
         from: { year: 1733 },
         rank: 100,
-        starred: true,
+        imageUrl: "/placeholder-image-landscape.svg",
         style: { color: EDITIONS_DARK },
     },
     {
         id: "lhasa",
         title: "Lhasa (Zhol)",
-        subtitle: "Zhol blockprint edition",
+        subtitle: "1934 CE",
         lane: "editions",
         from: { year: 1934 },
         rank: 80,
+        imageUrl: "/placeholder-image-landscape.svg",
         style: { color: EDITIONS_DARK },
     },
 ];
@@ -406,9 +430,9 @@ const buildTimeBands = (isDark: boolean): TimeBandData[] => [
         from: { year: 1200, precision: PRECISION_YEAR },
         to: { year: 1600, precision: PRECISION_YEAR },
         style: {
-            backgroundColor: "rgba(222, 247, 236, 0.8)",
+            backgroundColor: "rgba(219, 234, 254, 0.8)",
             text: {
-                color: "#065f46"
+                color: "#1d4ed8"
 
             },
         },
@@ -419,16 +443,17 @@ const buildTimeBands = (isDark: boolean): TimeBandData[] => [
 // Shared TimeBand default style (overridden per-theme below)
 // ─────────────────────────────────────────────────────────
 const buildTimeBandDefaultStyle = (isDark: boolean) => ({
+    backgroundColor: isDark
+        ? LANE_HEADER_BG_DARK
+        : LANE_HEADER_BG_LIGHT,
     border: {
-        color: isDark ? PERIODS_DARK : PERIODS_LIGHT,
         width: 1,
     },
     text: {
-        font: "bold 14px Crimson Pro",
-        color: isDark ? PERIODS_DARK : PERIODS_LIGHT,
+        font: "normal 18px Crimson Pro",
         align: "left",
-        margin: 10,
-        offsetY: 4,
+        margin: 8,
+        offsetY: 2,
         verticalAlign: "bottom",
         baseline: "bottom"
 
@@ -463,7 +488,7 @@ export function TimelineBaseTemplate01() {
                 zoom: { initial: 30, minimum: 20, maximum: 50 },
                 style: buildStyleOptions(isDark),
                 article: {
-                    defaultCardLayout: "landscape",
+                    defaultCardLayout: "portrait",
                     defaultStyle: buildArticleDefaultStyle(isDark),
                     defaultHoverStyle: {
                         border: { color: isDark ? EDITIONS_DARK : EDITIONS_LIGHT, width: 1 },
@@ -478,7 +503,7 @@ export function TimelineBaseTemplate01() {
                 lane: {
                     visible: true,
                     gap: 0,
-                    axisGap: 20,
+                    axisGap: 0,
                     data: buildLanes(isDark),
                 },
                 // Time Band defaultStyle
@@ -491,11 +516,12 @@ export function TimelineBaseTemplate01() {
                         down: "edge",
                     },
                     data: buildTimeBands(isDark),
+                    defaultStyle: buildTimeBandDefaultStyle(isDark),
                 },
 
             });
 
-            tl.load(KANGYUR_ARTICLES);
+            tl.load(LANE_ARTICLES);
 
             // Fit to show the full span of Kangyur history
             tl.fitDateRange(
@@ -554,17 +580,67 @@ export function TimelineBaseTemplate01() {
         return () => ro.disconnect();
     }, []);
 
+
+    const items: SelectItemType[] = [
+        {
+            id: "all",
+            label: "All",
+            supportingText: "",
+        },
+        {
+            id: "manuscripts",
+            label: "Manuscripts",
+            supportingText: "",
+        },
+        {
+            id: "block-prints",
+            label: "Block prints",
+            supportingText: "",
+        },
+        {
+            id: "incunabula",
+            label: "Incunabula",
+            supportingText: "",
+        },
+    ];
+
     return (
-        <div className="pl-8 pr-12"
-            ref={containerRef}
-            id="kangyur-timeline"
-            aria-label="Interactive timeline of major Kangyur editions and recensions"
-            style={{
-                width: "100%",
-                height: "720px",
-                borderRadius: "0px",
-                overflow: "hidden",
-            }}
-        />
+        <div>
+            <div className="mx-auto w-full flex flex-col justify-between gap-6 py-4">
+                <div className="w-full flex flex-row justify-items-start gap-12">
+                    <Select.ComboBox className="w-[280px]" label="Search" tooltip="Search scriptures and people of the timeline" placeholder="Search the timeline..." items={LANE_ARTICLES}>
+                        {(item) => (
+                            <Select.Item id={item.id} supportingText={item.supportingText}>
+                                {item.label}
+                            </Select.Item>
+                        )}
+                    </Select.ComboBox>
+                    <Select className="max-w-[180px]"
+                        label="Editions"
+                        tooltip="Filter by edition type (manuscripts, block-prints, incunabula)"
+                        placeholder="Select edition type"
+                        items={items}
+                    >
+                        {(item) => (
+                            <Select.Item id={item.id} supportingText={item.supportingText}>
+                                {item.label}
+                            </Select.Item>
+                        )}
+                    </Select>
+
+                </div>
+                <div className="border-2 border-brand-200 dark:border-brand-900 drop-shadow-lg"
+                    ref={containerRef}
+                    id="kangyur-timeline"
+                    aria-label="Interactive timeline of major Kangyur editions and recensions"
+                    style={{
+                        width: "100%",
+                        height: "720px",
+                        borderRadius: "8px",
+                        overflow: "hidden",
+                    }}
+                />
+            </div>
+        </div>
     );
 }
