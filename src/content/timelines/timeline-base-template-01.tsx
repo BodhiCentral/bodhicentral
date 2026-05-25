@@ -1,19 +1,19 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import type { Timeline, LaneData, ArticleData, TimelineOptions, TimeBandData, TimeBandStyle } from "histropediajs";
+import type { Timeline, LaneData, LaneLayout, ArticleData, TimelineOptions, TimeBandData, TimeBandStyle } from "histropediajs";
 import { PRECISION_YEAR } from "histropediajs";
 import { Select, type SelectItemType } from "@/components/base/select/select";
+import "@/styles/timelines.css";
 
 // ─────────────────────────────────────────────────────────
 // Palette constants (matches Bodhi Central brand)
 // ─────────────────────────────────────────────────────────
-const PERIODS_COLOR = "oklch(0.545 0.069 77.21)"; // color-brand-700
-const LANE_HEADER_BG = "#ffffff"; // color-white
-const LANE_HEADER_LIGHT_TITLE = "oklch(0.966 0.008 73.73)"; //color-brand-50
+const LANE_HEADER_BG = "rgba(255, 255, 255, 0.75)"; // color-white
+const LANE_BODY_BG = "rgba(255, 255, 255, 0.70)"; // color-white
+const LANE_HEADER_TITLE = "oklch(0.411 0.051 77.18)"; // color-brand-800
 const PEOPLE_COLOR = "oklch(0.545 0.069 77.21)"; // color-brand-700
 const PEOPLE_BG = "oklch(0.966 0.008 73.73)"; // color-brand-25
-const PEOPLE_LIGHT_BG_TITLE = "oklch(0.973 0.007 88.55)"; // color-brand-50
 const EDITIONS_COLOR = "oklch(0.545 0.069 77.21)"; // color-brand-700
 const MARKER_COLOR = "oklch(0.724 0.07 78.26)"; // color-brand-500
 const ARTICLE_BORDER_LIGHT = "oklch(92.2% 0 0)"; // color-neutral-200
@@ -108,20 +108,23 @@ const buildLanes = (): LaneData[] => [
     {
         id: "people",
         title: "PEOPLE",
-        layout: { heightWeight: 1 },
+        layout: {
+            heightWeight: 1,
+            header: {
+                height: 36,
+            }
+        },
         style: {
             header: {
                 backgroundColor: LANE_HEADER_BG,
             },
             body: {
-                backgroundColor: PEOPLE_BG,
+                backgroundColor: LANE_BODY_BG,
                 borderColor: "rgba(37,37,37,0.12)",
-                borderWidth: 0,
-                borderRadius: 0,
             },
             title: {
-                color: PEOPLE_COLOR,
-                font: `600 14px ${FONT_BASE}`,
+                color: LANE_HEADER_TITLE,
+                font: `700 18px Crimson Pro`,
             },
         },
         article: {
@@ -137,20 +140,24 @@ const buildLanes = (): LaneData[] => [
     {
         id: "editions",
         title: "SCRIPTURE EDITIONS",
-        layout: { heightWeight: 1 },
+        layout: {
+            heightWeight: 1,
+            header: {
+                height: 36,
+            }
+        },
         style: {
             header: {
                 backgroundColor: LANE_HEADER_BG,
             },
             body: {
-                backgroundColor: PEOPLE_BG,
-                borderColor: "rgba(204,164,59,0.15)",
+                backgroundColor: LANE_BODY_BG,
                 borderWidth: 0,
                 borderRadius: 0,
             },
             title: {
-                color: EDITIONS_COLOR,
-                font: `600 14px ${FONT_BASE}`,
+                color: LANE_HEADER_TITLE,
+                font: `700 18px Crimson Pro`,
             },
         },
         article: {
@@ -350,6 +357,28 @@ const LANE_ARTICLES: ArticleData[] = [
         imageUrl: "/placeholder-image-landscape.svg",
         style: { color: EDITIONS_COLOR },
     },
+    {
+        id: "adarshah",
+        title: "Adarshah Library",
+        subtitle: "2005-present",
+        lane: "editions",
+        from: { year: 2005 },
+        to: { year: 2026 },
+        rank: 80,
+        imageUrl: "/placeholder-image-landscape.svg",
+        style: { color: EDITIONS_COLOR },
+    },
+    {
+        id: "84000",
+        title: "84000 Project",
+        subtitle: "2009-present",
+        lane: "editions",
+        from: { year: 2009 },
+        to: { year: 2026 },
+        rank: 80,
+        imageUrl: "/placeholder-image-landscape.svg",
+        style: { color: EDITIONS_COLOR },
+    },
 ];
 
 // ─────────────────────────────────────────────────────────
@@ -407,9 +436,35 @@ const buildTimeBands = (): TimeBandData[] => [
     },
     {
         id: "period-of-consolidation",
-        title: "Period of Consolidation",
+        title: "Period of Divergence & Consolidation",
         from: { year: 1200, precision: PRECISION_YEAR },
-        to: { year: 1600, precision: PRECISION_YEAR },
+        to: { year: 1650, precision: PRECISION_YEAR },
+        style: {
+            backgroundColor: "rgba(219, 234, 254, 0.8)",
+            text: {
+                color: "#1d4ed8"
+
+            },
+        },
+    },
+    {
+        id: "period-of-conflations",
+        title: "Period of Conflations",
+        from: { year: 1650, precision: PRECISION_YEAR },
+        to: { year: 1900, precision: PRECISION_YEAR },
+        style: {
+            backgroundColor: "rgba(219, 234, 254, 0.8)",
+            text: {
+                color: "#1d4ed8"
+
+            },
+        },
+    },
+    {
+        id: "digital-era",
+        title: "Digital Era",
+        from: { year: 1980, precision: PRECISION_YEAR },
+        to: { year: 2026, precision: PRECISION_YEAR },
         style: {
             backgroundColor: "rgba(219, 234, 254, 0.8)",
             text: {
@@ -564,11 +619,21 @@ export function TimelineBaseTemplate01() {
             label: "Block prints",
             supportingText: "",
         },
+        {
+            id: "digital-sources",
+            label: "Digital",
+            supportingText: "Tibetan",
+        },
+        {
+            id: "digital-translations",
+            label: "Digital",
+            supportingText: "Translations",
+        },
     ];
 
     return (
         <div>
-            <div className="mx-auto w-full flex flex-col justify-between gap-6 py-4">
+            <div className="mx-auto w-full flex flex-col justify-between gap-6">
                 <div className="w-full flex flex-row justify-items-start gap-12">
                     <Select.ComboBox className="w-[350px]" size="sm" label="Search the timeline" tooltip="Search scriptures and people of the timeline" placeholder="Search scripture and people..." items={item_articles}>
                         {(item) => (
@@ -577,7 +642,7 @@ export function TimelineBaseTemplate01() {
                             </Select.Item>
                         )}
                     </Select.ComboBox>
-                    <Select className="max-w-[180px]"
+                    <Select className="w-[200px]"
                         size="sm"
                         label="Edition Types"
                         tooltip="Filter by edition type (manuscripts, block-prints, incunabula)"
@@ -592,7 +657,7 @@ export function TimelineBaseTemplate01() {
                     </Select>
 
                 </div>
-                <div className="border-2 border-brand-200 dark:border-brand-900 drop-shadow-lg"
+                <div className="bg-tertiary border border-secondary drop-shadow-xl"
                     ref={containerRef}
                     id="kangyur-timeline"
                     aria-label="Interactive timeline of major Kangyur editions and recensions"
