@@ -516,7 +516,6 @@ export function TimelineBaseTemplate01() {
                         down: "edge",
                     },
                     data: buildTimeBands(isDark),
-                    defaultStyle: buildTimeBandDefaultStyle(isDark),
                 },
 
             });
