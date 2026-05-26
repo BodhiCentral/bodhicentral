@@ -284,7 +284,7 @@ const BlogPost05 = () => {
                     <div className="flex flex-1 flex-col max-w-280 pr-4 md:pr-24">
                         <h2 className="text-display-md font-extralight text-brand-800 dark:text-brand-300 md:text-display-lg">Kangyur Timeline</h2>
                         <p className="mt-1 text-base text-tertiary md:mt-2 md:text-lg text-balance">
-                            This timeline traces the development of the scriptural collections that form the Kangyur across different periods and the people that preserved, transmitted and translated them.
+                            This ephemeral space-and-time capsule traces the development of the scriptural collections that form the Kangyur across different periods and the people who preserved, transmitted, and translated them for us.
                         </p>
                     </div>
                     <div className="mt-8 flex flex-col gap-3 self-stretch md:mt-0 md:flex-row-reverse md:justify-center md:self-center">
