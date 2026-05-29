@@ -71,6 +71,14 @@ const sections: Section[] = [
                 tiers: { Community: true, Standard: true, Patron: true },
             },
             {
+                name: "Historical Timelines",
+                tooltip: {
+                    title: "Historical Timelines",
+                    description: "Visual access to historical timelines for all traditions",
+                },
+                tiers: { Community: true, Standard: true, Patron: true },
+            },
+            {
                 name: "Learning Paths in the public domain",
                 tooltip: {
                     title: "Full access to all learning materials",
@@ -95,9 +103,9 @@ const sections: Section[] = [
                 tiers: { Community: false, Standard: true, Patron: true },
             },
             {
-                name: "Quizzes, infographics, and educational timelines",
+                name: "Quizzes, infographics, and educational materials",
                 tooltip: {
-                    title: "Quizzes, infographics, and timelines",
+                    title: "Quizzes, infographics, and educational materials",
                     description: "Curated educational materials produced by expert educators and qualified Buddhist teachers and instructors.",
                 },
                 tiers: { Community: false, Standard: true, Patron: true },
@@ -359,7 +367,7 @@ const PricingLargeTable01 = () => {
                                 <Fragment key={section.name}>
                                     <tr>
                                         <th
-                                            className={cx(index > 0 ? "pt-8" : "pt-8 border-t border-secondary", "px-6 pb-4 text-left text-md font-extrabold text-brand-600 tracking-wide bg-brand-50")}
+                                            className={cx(index > 0 ? "pt-8" : "pt-8 border-t border-secondary", "px-6 pb-4 text-left text-md font-extrabold text-brand-600 tracking-wide bg-brand-50 dark:bg-muted-900 rounded-b-xl")}
                                             colSpan={4}
                                             scope="colgroup"
                                         >
@@ -414,7 +422,7 @@ const PricingLargeTable01 = () => {
                                     Choose your plan
                                 </th>
                                 {tiers.map((tier) => (
-                                    <td key={tier.name} className="px-6 pt-12 pb-4">
+                                    <td key={tier.name} className="px-6 pt-10 pb-4">
                                         <div className="flex flex-col gap-3">
                                             <Button size="sm">Get started</Button>
                                         </div>

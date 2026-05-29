@@ -107,9 +107,10 @@ const PricingTierCardBanner = (props: {
             )}
 
             <div>
-                <div className="flex flex-col items-center px-6 pt-8 text-center md:px-8">
-                    <p className="text-display-md font-medium tracking-wide text-primary md:text-display-lg">{props.subtitle}</p>
-                    <h2 className="mt-4 text-3xl font-light text-brand-secondary">{props.title}</h2>
+                <div className="flex flex-col items-center px-6 pt-6 text-center">
+                    <h2 className="text-3xl font-light text-brand-secondary">{props.title}</h2>
+                    <p className="text-display-md font-medium tracking-wide text-primary md:text-display-lg pt-2">{props.subtitle}</p>
+
                     <p className="mt-1 text-md text-tertiary">{props.description}</p>
                 </div>
                 <div className="flex flex-col gap-3 px-6 py-6 md:px-8">
@@ -149,6 +150,7 @@ const PricingSimpleBanner = () => {
             features: [
                 "Canon preferences",
                 "Reading & display settings",
+                "Timelines & visualizations",
                 "Canon navigation and collections",
                 "Directories of communities and centers",
             ],

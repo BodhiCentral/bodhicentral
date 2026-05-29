@@ -62,7 +62,7 @@ export default function AboutPage() {
                         For practitioners who want to go deeper, a low-cost subscription unlocks note-taking, personalised workspaces, and advanced tools built to support long-term study. Your subscription is what allows us to keep building — and to keep the platform free for everyone else.
                     </p>
                     <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
-                        We are a for-profit company, run by people who believe that financial sustainability and genuine service to the Dharma are not in conflict.
+                        We are a mission-driven, for-profit entity, run by people who believe that financial sustainability and genuine service to the Dharma are not in conflict.
                     </p>
                 </div>
 
