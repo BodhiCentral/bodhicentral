@@ -3,7 +3,7 @@
 import { Dataflow01 } from "@untitledui/icons";
 import { Button } from "@/components/base/buttons/button";
 import { TibetanCanonDivisionsGallery } from "./tibetan-canon-divisions-gallery";
-import { openCanonNavigator } from "@/components-custom/navigation/canon-navigation/canon-navigation-modal-wrapper";
+import { openKangyurNavigator } from "@/components-custom/navigation/canon-navigation/kangyur-navigation-modal-wrapper";
 
 export const KangyurDivisionsSection = () => {
     return (
@@ -21,7 +21,7 @@ export const KangyurDivisionsSection = () => {
                         <Button href="/canon-overviews/kangyur-overview" color="secondary" size="md">
                             Overview
                         </Button>
-                        <Button color="secondary" size="md" iconTrailing={Dataflow01} onClick={() => openCanonNavigator()} >
+                        <Button color="secondary" size="md" iconTrailing={Dataflow01} onClick={() => openKangyurNavigator()} >
                             Kangyur Outline
                         </Button>
                     </div>

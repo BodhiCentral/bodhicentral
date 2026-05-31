@@ -356,7 +356,7 @@ const PricingLargeTable01 = () => {
                             <tr>
                                 <th scope="row"></th>
                                 {tiers.map((tier) => (
-                                    <td key={tier.name} className="h-full px-6 py-4 align-top md:pb-12">
+                                    <td key={tier.name} className="h-full px-6 py-4 align-top md:pb-8">
                                         <div className="flex h-full flex-col justify-between">
                                             <p className="mt-0.5 text-sm text-tertiary text-center">{tier.description}</p>
                                         </div>

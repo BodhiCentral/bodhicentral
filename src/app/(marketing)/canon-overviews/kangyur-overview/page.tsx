@@ -11,10 +11,7 @@ import { KangyurDivisionsSection } from '@/components/marketing/collection-secti
 import Image from 'next/image';
 import { ArticleHeaderSection } from "@/components-custom/blog/article-header-section"
 import { TimelineBaseTemplate01 } from '@/content/timelines/timeline-base-template-01';
-import { openCanonNavigator } from "@/components-custom/navigation/canon-navigation/canon-navigation-modal-wrapper";
-
-
-
+import { openKangyurNavigator } from "@/components-custom/navigation/canon-navigation/kangyur-navigation-modal-wrapper";
 
 const ArticleOverview = () => {
     const { copied, copy } = useClipboard();
@@ -125,7 +122,7 @@ const ArticleOverview = () => {
                                     <div className="flex flex-row items-center justify-between gap-4">
                                         <h4 className="not-prose text-display-xs text-brand-700 dark:text-brand-700/80">Degé Kangyur Divisions</h4>
                                         <div className="flex flex-col gap-3 md:justify-center pb-1">
-                                            <Button color="secondary" size="sm" iconTrailing={Dataflow01} onClick={() => openCanonNavigator()}>
+                                            <Button color="secondary" size="sm" iconTrailing={Dataflow01} onClick={() => openKangyurNavigator()}>
                                                 Outline
                                             </Button>
                                         </div>
@@ -288,7 +285,7 @@ const BlogPost05 = () => {
                         </p>
                     </div>
                     <div className="mt-8 flex flex-col gap-3 self-stretch md:mt-0 md:flex-row-reverse md:justify-center md:self-center">
-                        <Button color="secondary" size="md" iconTrailing={Film02} onClick={() => openCanonNavigator()} >
+                        <Button color="secondary" size="md" iconTrailing={Film02} onClick={() => openKangyurNavigator()} >
                             Explore more timelines
                         </Button>
                     </div>
