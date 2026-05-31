@@ -26,7 +26,7 @@ const KangyurTree = ({ size }: { size: "sm" | "md" }) => {
                     draggable
                     aria-label="Organization"
                     items={tree.items}
-                    defaultExpandedKeys={["vinaya", "sutras", "tantras"]}
+                    defaultExpandedKeys={["sutras", "perfection-of-wisdom", "general-sutra-section", "tantra", "tantra-collection"]}
                     defaultSelectedKeys={[]}
                     onReorder={(e) => {
                         if (e.target.dropPosition === "before") {
@@ -158,7 +158,7 @@ const initialItems: TreeItemData[] = [
                 ]
             },
             {
-                id: "general-sutras-section", name: "General Sūtras Section", children: [
+                id: "general-sutra-section", name: "General Sūtra Section", children: [
                     { id: "mahayana-sutras", name: "Mahāyāna Sūtras", icon: CornerDownRight, children: [] },
                     { id: "sravakayana-sutras", name: "Sravakayana Sūtras", icon: CornerDownRight, children: [] },
                 ]
