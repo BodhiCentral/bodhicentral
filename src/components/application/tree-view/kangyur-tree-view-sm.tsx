@@ -1,4 +1,4 @@
-import { CornerDownRight } from "@untitledui/icons";
+import { CornerDownRight, Minus } from "@untitledui/icons";
 import { Collection, useTreeData } from "react-aria-components";
 import { TreeView } from "@/components/application/tree-view/tree-view";
 import { CanonMultiSelectSm } from "@/components-custom/multi-select/canon-multi-select-sm";
@@ -90,25 +90,25 @@ const initialItems: TreeItemData[] = [
         children: [
             {
                 id: "vinayavastu",
-                name: "Vinayavastu (Toh 1)",
+                name: "Vinayavastu (Toh 1)", icon: Minus,
                 children: [
                 ],
             },
             {
                 id: "vinayavibhanga",
-                name: "Vinayavibhanga (Toh 2-5)",
+                name: "Vinayavibhanga (Toh 2-5)", icon: Minus,
                 children: [
                 ],
             },
             {
                 id: "vinayaksudrakavastu",
-                name: "Vinayaksudrakavastu (Toh 6)",
+                name: "Vinayaksudrakavastu (Toh 6)", icon: Minus,
                 children: [
                 ],
             },
             {
                 id: "vinayottaragrantha",
-                name: "Vinayottaragrantha (Toh 7)",
+                name: "Vinayottaragrantha (Toh 7)", icon: Minus,
                 children: [
                 ],
             },
@@ -124,43 +124,43 @@ const initialItems: TreeItemData[] = [
                 children: [
                     {
                         id: "the-six-mothers",
-                        name: "The Six Mothers",
+                        name: "The Six Mothers", icon: Minus,
                         children: [
                         ],
                     },
                     {
                         id: "the-eleven-children",
-                        name: "The Eleven Children",
+                        name: "The Eleven Children", icon: Minus,
                         children: [
                         ],
                     },
                     {
                         id: "six-short-perfection-of-wisdom-texts",
-                        name: "The Six Short Perfection of Wisdom Texts",
+                        name: "The Six Short Perfection of Wisdom Texts", icon: Minus,
                         children: [
                         ],
                     },
                 ],
             },
             {
-                id: "the-thirteen-late-translated-sutras", name: "The Thirteen Late-Translated Sūtras", icon: CornerDownRight, children: [
+                id: "the-thirteen-late-translated-sutras", name: "The Thirteen Late-Translated Sūtras", icon: Minus, children: [
 
                 ]
             },
             {
-                id: "a-multitude-of-buddhas", name: "A Multitude of Buddhas", icon: CornerDownRight, children: [
+                id: "a-multitude-of-buddhas", name: "A Multitude of Buddhas", icon: Minus, children: [
 
                 ]
             },
             {
-                id: "heap-of-jewels", name: "Heap of Jewels", icon: CornerDownRight, children: [
+                id: "heap-of-jewels", name: "Heap of Jewels", icon: Minus, children: [
 
                 ]
             },
             {
                 id: "general-sutra-section", name: "General Sūtra Section", children: [
-                    { id: "mahayana-sutras", name: "Mahāyāna Sūtras", icon: CornerDownRight, children: [] },
-                    { id: "sravakayana-sutras", name: "Sravakayana Sūtras", icon: CornerDownRight, children: [] },
+                    { id: "mahayana-sutras", name: "Mahāyāna Sūtras", icon: Minus, children: [] },
+                    { id: "sravakayana-sutras", name: "Sravakayana Sūtras", icon: Minus, children: [] },
                 ]
             },
         ],
@@ -173,31 +173,60 @@ const initialItems: TreeItemData[] = [
                 id: "tantra-collection", name: "Tantra Collection", children: [
                     {
                         id: "anuttarayoga-tantras", name: "Anuttarayoga Tantras", children: [
-                            { id: "non-dual-tantras", name: "Non-dual Tantras", icon: CornerDownRight, children: [] },
-                            { id: "mother-tantras", name: "76 Mother Tantras", icon: CornerDownRight, children: [] },
-                            { id: "father-tantras", name: "37 Father Tantras", icon: CornerDownRight, children: [] },
+                            { id: "non-dual-tantras", name: "Non-dual Tantras", icon: Minus, children: [] },
+                            { id: "mother-tantras", name: "76 Mother Tantras", icon: Minus, children: [] },
+                            { id: "father-tantras", name: "37 Father Tantras", icon: Minus, children: [] },
                         ]
                     },
                     {
                         id: "yoga-tantras", name: "Yoga Tantras", children: [
-                            { id: "skilful-means-tantras", name: "8 Tantras of Skilful Means", icon: CornerDownRight, children: [] },
-                            { id: "wisdom-tantras", name: "7 Tantras of Wisdom", icon: CornerDownRight, children: [] },
-                            { id: "others", name: "Others", icon: CornerDownRight, children: [] },
+                            { id: "skilful-means-tantras", name: "8 Tantras of Skilful Means", icon: Minus, children: [] },
+                            { id: "wisdom-tantras", name: "7 Tantras of Wisdom", icon: Minus, children: [] },
+                            { id: "others", name: "Others", icon: Minus, children: [] },
                         ]
                     },
                     {
                         id: "carya-tantras", name: "Carya Tantras", children: [
-                            { id: "tathagata-family", name: "Tathāgata Family", icon: CornerDownRight, children: [] },
-                            { id: "vajra-family", name: "Vajra Family", icon: CornerDownRight, children: [] },
+                            { id: "tathagata-family", name: "Tathāgata Family", icon: Minus, children: [] },
+                            { id: "vajra-family", name: "Vajra Family", icon: Minus, children: [] },
                         ]
                     },
-                    { id: "action-tantras", name: "Action Tantras", icon: CornerDownRight, children: [] },
-                    { id: "dedications", name: "Dedications", icon: CornerDownRight, children: [] },
+                    { id: "action-tantras", name: "Action Tantras", icon: Minus, children: [] },
+                    { id: "dedications", name: "Dedications", icon: Minus, children: [] },
                 ]
             },
-            { id: "old-tantras", name: "Old Tantras", children: [] },
-            { id: "dhatukatha", name: "Discussion of Elements", children: [] },
+            {
+                id: "old-tantras", name: "Old Tantras", children: [
+                    { id: "atiyoga", name: "Atiyoga", icon: Minus, children: [] },
+                    { id: "anuyoga", name: "Anuyoga", icon: Minus, children: [] },
+                    { id: "mahayoga", name: "Mahayoga", icon: Minus, children: [] },
+                ]
+            },
+            { id: "wheel-of-time-commentary", name: "Wheel of Time Commentary", children: [] },
         ],
+    },
+    {
+        id: "dharini",
+        name: "DHARANI",
+        children: [
+            {
+                id: "dharani-collection",
+                name: "Dharani Collection", icon: Minus,
+                children: [
+                ],
+            },
+            {
+                id: "aspirations-and-dedications",
+                name: "Aspirations and Dedications", icon: Minus,
+                children: [
+                ],
+            },
+        ],
+    },
+    {
+        id: "kangyur-catalogs",
+        name: "KANGYUR CATALOG", icon: Minus,
+        children: [],
     },
 ];
 
