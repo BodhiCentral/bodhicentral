@@ -22,8 +22,12 @@ import { CalendarCell } from "./cell";
 import { DateInput } from "./date-input";
 
 export const CalendarContextProvider = ({ children }: PropsWithChildren) => {
-    const [value, onChange] = useState<DateValue | null>(null);
+    const [value, setValue] = useState<DateValue | null>(null);
     const [focusedValue, onFocusChange] = useState<DateValue | undefined>();
+
+    const onChange = (val: DateValue | readonly DateValue[] | null) => {
+        setValue(Array.isArray(val) ? (val[0] ?? null) : val);
+    };
 
     return <AriaCalendarContext.Provider value={{ value, onChange, focusedValue, onFocusChange }}>{children}</AriaCalendarContext.Provider>;
 };
