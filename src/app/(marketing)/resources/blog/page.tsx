@@ -1,3 +1,5 @@
-import { BlogFeaturedPostWithCards } from "./blog-featured-post-with-cards";
+import dynamic from "next/dynamic";
 
-export default BlogFeaturedPostWithCards;
+const BlogPage04 = dynamic(() => import("./blog-page-04"));
+
+export default BlogPage04;

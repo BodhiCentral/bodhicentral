@@ -82,7 +82,7 @@ const articles: Article[] = [
             name: "Abhidhamma Piṭaka",
             href: "#",
         },
-        thumbnailUrl: "/tibetan-buddhist-library-01.jpg",
+        thumbnailUrl: "/ancient-nalanda-university-idealization.jpg",
         publishedAt: "18 Jan 2026",
         readingTime: "8 min read",
         author: {

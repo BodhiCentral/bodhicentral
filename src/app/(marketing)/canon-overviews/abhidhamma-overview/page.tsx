@@ -37,8 +37,8 @@ const ContentSplitImage01 = () => {
                 author_caption="Article courtesy of SuttaCentral"
                 author_image="/people/bhikku-sujato-close-up.jpg"
                 author_image_alt="Bhikkhu Sujato"
-                article_image="/tibetan-buddhist-library-01.jpg"
-                article_image_alt="Tibetan Buddhist Library"
+                article_image="/ancient-nalanda-university-idealization.jpg"
+                article_image_alt="Nalanda University"
                 article_ornament_image="/ornaments/golden-wheel.png"
                 article_ornament_image_alt="Article Ornament"
             />
