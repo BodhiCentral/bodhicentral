@@ -6,7 +6,7 @@ import { Button } from "@/components/base/buttons/button";
 import { Facebook, LinkedIn, X } from "@/components/foundations/social-icons";
 import Image from "next/image";
 import Link from "next/link";
-import { openCanonNavigator } from "@/components-custom/navigation/canon-navigation/canon-navigation-modal-wrapper";
+import { openCanonNavigator } from "@/components-custom/navigation/canon-navigation/kangyur-navigation-modal-wrapper";
 
 
 export const TableOfContents = () => {

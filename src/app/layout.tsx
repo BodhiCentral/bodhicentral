@@ -7,6 +7,7 @@ import { cx } from "@/utils/cx";
 import { Header } from "@/components/marketing/header-navigation/header";
 import { createClient } from "@/utils/supabase/server";
 import { CanonNavigationModal } from "@/components-custom/navigation/canon-navigation/canon-navigation-modal-wrapper";
+import { KangyurNavigatorModal } from "@/components-custom/navigation/canon-navigation/kangyur-navigation-modal-wrapper";
 
 const nunito = Nunito({
     subsets: ["latin"],
@@ -55,6 +56,7 @@ export default async function RootLayout({
                     <Theme>
                         <Header user={user} />
                         <CanonNavigationModal />
+                        <KangyurNavigatorModal />
                         {children}
                     </Theme>
                 </RouteProvider>

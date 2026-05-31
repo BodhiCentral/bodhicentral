@@ -12,19 +12,19 @@ import { TextTableAlternatingFills } from "@/components-custom/tables/text-table
 export const openKangyurNavigator = () => {
     if (typeof window !== "undefined") {
         setTimeout(() => {
-            window.dispatchEvent(new CustomEvent("open-canon-navigation"));
+            window.dispatchEvent(new CustomEvent("open-kangyur-navigator"));
         }, 10);
     }
 };
 
-export const closeCanonNavigator = () => {
+export const closeKangyurNavigator = () => {
     if (typeof window !== "undefined") {
-        window.dispatchEvent(new CustomEvent("close-canon-navigation"));
+        window.dispatchEvent(new CustomEvent("close-kangyur-navigator"));
     }
 };
 
 /**
- * This is a utility hook that handles the open/close state of the calendar modal.
+ * This is a utility hook that handles the open/close state of the navigation modal.
  * It listens to window events to open/close from anywhere.
  */
 export const useModalState = (defaultValue: boolean = false) => {
@@ -34,12 +34,12 @@ export const useModalState = (defaultValue: boolean = false) => {
         const handleOpen = () => setIsOpen(true);
         const handleClose = () => setIsOpen(false);
 
-        window.addEventListener("open-canon-navigation", handleOpen);
-        window.addEventListener("close-canon-navigation", handleClose);
+        window.addEventListener("open-kangyur-navigator", handleOpen);
+        window.addEventListener("close-kangyur-navigator", handleClose);
 
         return () => {
-            window.removeEventListener("open-canon-navigation", handleOpen);
-            window.removeEventListener("close-canon-navigation", handleClose);
+            window.removeEventListener("open-kangyur-navigator", handleOpen);
+            window.removeEventListener("close-kangyur-navigator", handleClose);
         };
     }, []);
 
@@ -54,12 +54,12 @@ export const KangyurNavigatorModal = () => {
             <Modal>
                 <Dialog>
                     <div className="flex flex-row gap-0 w-full h-full shadow-lg">
-                        {/* Canon Navigator */}
+                        {/* Kangyur Navigator */}
                         <div className="relative w-140 sm:min-w-110 flex flex-col overflow-hidden bg-secondary border-r border-secondary">
                             {/* Header */}
                             <div className="h-auto flex flex-col gap-0.5 px-4 pt-3 sm:px-6 sm:py-3 bg-secondary dark:bg-neutral-900 border-b border-secondary">
                                 <AriaHeading slot="title" className="text-display-xs font-light text-brand-primary">
-                                    Kangyur Navigation
+                                    Kangyur Outline
                                 </AriaHeading>
                             </div>
                             {/* Body */}

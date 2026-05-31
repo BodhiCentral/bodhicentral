@@ -9,7 +9,7 @@ import { cx } from "@/utils/cx";
 import { isReactComponent } from "@/utils/is-react-component";
 import { GalleryNyingmaStudies } from "@/components-custom/galleries/gallery-nyingma-studies";
 import { ArticleHeaderSection } from "@/components-custom/blog/article-header-section"
-import { openCanonNavigator } from "@/components-custom/navigation/canon-navigation/kangyur-navigation-modal-wrapper";
+import { openCanonNavigator } from "@/components-custom/navigation/canon-navigation/canon-navigation-modal-wrapper";
 
 
 

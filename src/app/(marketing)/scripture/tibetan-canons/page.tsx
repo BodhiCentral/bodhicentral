@@ -50,8 +50,12 @@ export default function TibetanCanonsPage() {
 
             </section>
             <section>
-                <div id="kangyur-divisions-gallery" className=""><KangyurDivisionsSection /></div>
-                <div id="tengyur-divisions-gallery" className=""><TengyurDivisionsSection /></div>
+                <div id="kangyur-divisions-gallery" className="">
+                    <KangyurDivisionsSection />
+                </div>
+                <div id="tengyur-divisions-gallery" className="">
+                    <TengyurDivisionsSection />
+                </div>
             </section>
             <TibetanCanonsDiagram />
             <BlogSectionTibetanCanonOverviews />

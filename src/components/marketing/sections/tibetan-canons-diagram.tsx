@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Dataflow01, Columns03, Rows03 } from "@untitledui/icons";
 import { Button } from "@/components/base/buttons/button";
 import { cx } from "@/utils/cx";
-import { openCanonNavigator } from "@/components-custom/navigation/canon-navigation/canon-navigation-modal-wrapper";
+import { openKangyurNavigator } from "@/components-custom/navigation/canon-navigation/kangyur-navigation-modal-wrapper";
 
 export const TibetanCanonsDiagram = () => {
     const [isRowsLayout, setIsRowsLayout] = useState(true);
@@ -104,7 +104,7 @@ export const TibetanCanonsDiagram = () => {
                                 </div>
                             </div>
                             <div className="my-4 flex flex-col gap-3 md:my-6 md:justify-center">
-                                <Button color="secondary" size="sm" iconTrailing={Dataflow01} onClick={() => openCanonNavigator()}>
+                                <Button color="secondary" size="sm" iconTrailing={Dataflow01} onClick={() => openKangyurNavigator()}>
                                     Kangyur Outline
                                 </Button>
                             </div>
@@ -169,7 +169,7 @@ export const TibetanCanonsDiagram = () => {
                                 </div>
                             </div>
                             <div className="my-4 flex flex-col gap-3 md:my-6 md:justify-center">
-                                <Button color="secondary" size="sm" iconTrailing={Dataflow01} onClick={() => openCanonNavigator()}>
+                                <Button color="secondary" size="sm" iconTrailing={Dataflow01} onClick={() => openKangyurNavigator()}>
                                     Tengyur Outline
                                 </Button>
                             </div>
@@ -186,7 +186,7 @@ export const TibetanCanonsDiagram = () => {
                                     <p className="text-xs text-tertiary">Translations of Indian scriptures into Tibetan (102 vols.)</p>
                                 </div>
                                 <div className="flex flex-col gap-3 md:justify-center pb-1">
-                                    <Button color="secondary" size="sm" iconTrailing={Dataflow01} onClick={() => openCanonNavigator()}>
+                                    <Button color="secondary" size="sm" iconTrailing={Dataflow01} onClick={() => openKangyurNavigator()}>
                                         Kangyur Outline
                                     </Button>
                                 </div>
@@ -247,7 +247,7 @@ export const TibetanCanonsDiagram = () => {
                                     <p className="text-xs text-tertiary">Translations of Indian Commentaries in Tibetan (213 vols.)</p>
                                 </div>
                                 <div className="flex flex-col gap-3 md:justify-center pb-1">
-                                    <Button color="secondary" size="sm" iconTrailing={Dataflow01} onClick={() => openCanonNavigator()}>
+                                    <Button color="secondary" size="sm" iconTrailing={Dataflow01} onClick={() => openKangyurNavigator()}>
                                         Tengyur Outline
                                     </Button>
                                 </div>

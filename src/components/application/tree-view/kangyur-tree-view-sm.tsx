@@ -26,7 +26,7 @@ const KangyurTree = ({ size }: { size: "sm" | "md" }) => {
                     draggable
                     aria-label="Organization"
                     items={tree.items}
-                    defaultExpandedKeys={["vinaya-pitaka", "sutta-pitaka", "abhidhamma-pitaka"]}
+                    defaultExpandedKeys={["vinaya", "sutras", "tantras"]}
                     defaultSelectedKeys={[]}
                     onReorder={(e) => {
                         if (e.target.dropPosition === "before") {
@@ -143,55 +143,60 @@ const initialItems: TreeItemData[] = [
                 ],
             },
             {
-                id: "mn", name: "The Thirteen Late-Translated Sūtras", children: [
+                id: "the-thirteen-late-translated-sutras", name: "The Thirteen Late-Translated Sūtras", icon: CornerDownRight, children: [
 
                 ]
             },
             {
-                id: "sn", name: "Linked Discourses", children: [
-                    { id: "sn-1-11", name: "Discourses with Verses", children: [] },
-                    { id: "sn-12-21", name: "Discourses Beginning with Causation", children: [] },
-                    { id: "sn-22-34", name: "Discourses Beginning with the Aggregates", children: [] },
-                    { id: "sn-35-44", name: "Discourses Beginning with the Six Senses Fields", children: [] },
-                    { id: "sn-45-56", name: "Discourses Beginning with the Path", children: [] },
+                id: "a-multitude-of-buddhas", name: "A Multitude of Buddhas", icon: CornerDownRight, children: [
+
                 ]
             },
             {
-                id: "an", name: "Numbered Discourses", children: [
-                    { id: "an-1", name: "The Books of the Ones", children: [] },
-                    { id: "an-2", name: "The Books of the Twos", children: [] },
-                    { id: "an-3", name: "The Books of the Threes", children: [] },
-                    { id: "an-4", name: "The Books of the Fours", children: [] },
-                    { id: "an-5", name: "The Books of the Fives", children: [] },
-                    { id: "an-6", name: "The Books of the Sixes", children: [] },
-                    { id: "an-7", name: "The Books of the Sevens", children: [] },
-                    { id: "an-8", name: "The Books of the Eights", children: [] },
-                    { id: "an-9", name: "The Books of the Nines", children: [] },
-                    { id: "an-10", name: "The Books of the Tens", children: [] },
-                    { id: "an-11", name: "The Books of the Elevens", children: [] },
+                id: "heap-of-jewels", name: "Heap of Jewels", icon: CornerDownRight, children: [
+
                 ]
             },
             {
-                id: "kn", name: "Minor Collections", children: [
-                    { id: "kp-1", name: "Minor Readings", icon: CornerDownRight, children: [] },
-                    { id: "dhp-1-423", name: "Sayings of the Dhamma", icon: CornerDownRight, children: [] },
-                    { id: "ud-1-8", name: "Heartfelt Saying", icon: CornerDownRight, children: [] },
-                    { id: "iti-1-112", name: "So It Was Said", icon: CornerDownRight, children: [] },
+                id: "general-sutras-section", name: "General Sūtras Section", children: [
+                    { id: "mahayana-sutras", name: "Mahāyāna Sūtras", icon: CornerDownRight, children: [] },
+                    { id: "sravakayana-sutras", name: "Sravakayana Sūtras", icon: CornerDownRight, children: [] },
                 ]
             },
         ],
     },
     {
-        id: "abhidhamma-pitaka",
-        name: "ABHIDHAMMA PITAKA",
+        id: "tantra",
+        name: "TANTRA",
         children: [
-            { id: "dhammasangani", name: "Compendium of Phenomena", icon: CornerDownRight, children: [] },
-            { id: "vibhanga", name: "Book of Analysis", icon: CornerDownRight, children: [] },
-            { id: "dhatukatha", name: "Discussion of Elements", icon: CornerDownRight, children: [] },
-            { id: "puggala-pannatti", name: "Description of Personality Types", icon: CornerDownRight, children: [] },
-            { id: "kathavattu", name: "Points of Controversy", icon: CornerDownRight, children: [] },
-            { id: "yamaka", name: "The Pairs", icon: CornerDownRight, children: [] },
-            { id: "patthana", name: "Conditional Relations", icon: CornerDownRight, children: [] },
+            {
+                id: "tantra-collection", name: "Tantra Collection", children: [
+                    {
+                        id: "anuttarayoga-tantras", name: "Anuttarayoga Tantras", children: [
+                            { id: "non-dual-tantras", name: "Non-dual Tantras", icon: CornerDownRight, children: [] },
+                            { id: "mother-tantras", name: "76 Mother Tantras", icon: CornerDownRight, children: [] },
+                            { id: "father-tantras", name: "37 Father Tantras", icon: CornerDownRight, children: [] },
+                        ]
+                    },
+                    {
+                        id: "yoga-tantras", name: "Yoga Tantras", children: [
+                            { id: "skilful-means-tantras", name: "8 Tantras of Skilful Means", icon: CornerDownRight, children: [] },
+                            { id: "wisdom-tantras", name: "7 Tantras of Wisdom", icon: CornerDownRight, children: [] },
+                            { id: "others", name: "Others", icon: CornerDownRight, children: [] },
+                        ]
+                    },
+                    {
+                        id: "carya-tantras", name: "Carya Tantras", children: [
+                            { id: "tathagata-family", name: "Tathāgata Family", icon: CornerDownRight, children: [] },
+                            { id: "vajra-family", name: "Vajra Family", icon: CornerDownRight, children: [] },
+                        ]
+                    },
+                    { id: "action-tantras", name: "Action Tantras", icon: CornerDownRight, children: [] },
+                    { id: "dedications", name: "Dedications", icon: CornerDownRight, children: [] },
+                ]
+            },
+            { id: "old-tantras", name: "Old Tantras", children: [] },
+            { id: "dhatukatha", name: "Discussion of Elements", children: [] },
         ],
     },
 ];
