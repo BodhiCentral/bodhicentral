@@ -1,6 +1,8 @@
 "use client";
 
 import { BadgeGroup } from "@/components/base/badges/badge-groups";
+import { Button } from "@/components/base/buttons/button";
+import { ArrowLeft } from "@untitledui/icons";
 import Image from 'next/image';
 
 const ArticleHeader = {
@@ -55,6 +57,15 @@ export const ArticleHeaderSection = (props: ArticleHeaderProps) => {
     return (
         <section className="relative z-10 mx-auto flex max-w-container flex-col gap-16 items-center px-4 py-16 md:flex-row md:px-8 md:pt-16 md:pb-24">
             <div className="flex flex-col items-start gap-2">
+                <Button
+                    color="link-color"
+                    href="/resources/blog"
+                    iconLeading={ArrowLeft}
+                    size="sm"
+                    className="font-semibold hover:font-bold mb-4"
+                >
+                    Our Blog
+                </Button>
                 <BadgeGroup size="md" addonText={badge_addon_text} color="brand" theme="light" className="pr-3" iconTrailing={null}>
                     {badge_text}
                 </BadgeGroup>

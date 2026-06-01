@@ -13,6 +13,7 @@ import { Input } from "@/components/base/input/input";
 import { NativeSelect } from "@/components/base/select/select-native";
 import { useBreakpoint } from "@/hooks/use-breakpoint";
 import { cx } from "@/utils/cx";
+import Image from "next/image";
 
 const categories = [
     { id: "all", name: "View all", href: "#" },
@@ -49,10 +50,10 @@ const articles: Article[] = [
         title: "Understanding the Kangyur: The Canonical Heart of the Tibetan Tradition",
         summary: "The Kangyur is the principal collection of the Buddhist scriptures in Tibetan, all translations into Tibetan of the Indian texts considered to record the Buddha’s own words.",
         href: "/canon-overviews/kangyur-overview",
-        category: { name: "Tibetan Canon", href: "/resources/blog?tag=tibetan-canon" },
+        category: { name: "Tibetan Canon", href: "#" },
         thumbnailUrl: "/tibetan-buddhist-library-01.jpg",
         publishedAt: "20 Jan 2026",
-        readingTime: "12 min read",
+        readingTime: "15 min read",
         author: { name: "Bodhi Central Team", href: "#", avatarUrl: "/placeholder-image-landscape.svg" },
         tags: [
             { name: "Buddhism", color: "brand", href: "#" },
@@ -94,7 +95,7 @@ const articles: Article[] = [
         id: "article-3.5",
         title: "The Monastic Law: how monastic communities should live",
         summary: "The Vinaya Piṭaka, “the Basket of Monastic Law”, contains the rules that are binding on monastics and how to put them into practice.",
-        href: "#",
+        href: "/canon-overviews/vinaya-overview",
         category: { name: "Pali Canon", href: "#" },
         thumbnailUrl: "/monk-seated-in-meditation-under-forest-tree-1920.webp",
         publishedAt: "17 Jan 2026",
@@ -125,10 +126,10 @@ const articles: Article[] = [
         title: "Artificial Intelligence and Consciousness",
         summary: "Exploring the intersection of AI with mind, and the role of Buddhist teachings in human evolution.",
         href: "#",
-        category: { name: "Consciousness", href: "#" },
+        category: { name: "Mind & Body", href: "#" },
         thumbnailUrl: "/blog-ai-mind-buddhist-teachings.webp",
         publishedAt: "15 Jan 2026",
-        readingTime: "8 min read",
+        readingTime: "11 min read",
         author: { name: "Bodhi Central Team", href: "#", avatarUrl: "/placeholder-image-landscape.svg" },
         tags: [
             { name: "Consciousness", color: "brand", href: "#" },
@@ -140,10 +141,10 @@ const articles: Article[] = [
         title: "Are you a good Buddhist leader?",
         summary: "A practical guide to the qualities of a good Buddhist leader and how to cultivate them.",
         href: "#",
-        category: { name: "Buddhism", href: "#" },
+        category: { name: "Ethics", href: "#" },
         thumbnailUrl: "/blog-thumbnail-good-leadership.webp",
         publishedAt: "14 Jan 2026",
-        readingTime: "8 min read",
+        readingTime: "9 min read",
         author: { name: "Bodhi Central Team", href: "#", avatarUrl: "/placeholder-image-landscape.svg" },
         tags: [
             { name: "Secular Ethics", color: "sky", href: "#" },
@@ -173,7 +174,7 @@ const Simple02Vertical = ({
                 </BadgeGroup>
                 <div className="flex flex-col gap-1">
                     <a
-                        href={article.category.href}
+                        href={article.href}
                         className="flex justify-between gap-x-4 rounded-md text-lg font-semibold text-primary outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2"
                     >
                         {article.title}
@@ -207,9 +208,9 @@ const tabs = [
     { id: "tibetan-canon", label: "Tibetan Canon", href: "#" },
     { id: "product", label: "Pali Canon", href: "#" },
     { id: "study-programs", label: "Study Programs", href: "#" },
-    { id: "buddhist-studies", label: "Buddhist Studies", href: "#" },
+    { id: "tibetan-studies", label: "Tibetan Studies", href: "#" },
     { id: "practice", label: "Practice", href: "#" },
-    { id: "dharma-centers", label: "Dharma Centers", href: "#" },
+    { id: "mind-body", label: "Mind & Body", href: "#" },
 ];
 
 const BlogHeaderSidebar02 = () => {
@@ -275,7 +276,7 @@ const BlogHeaderSidebar02 = () => {
                                                 </BadgeGroup>
                                                 <div className="flex flex-col gap-2 xl:gap-3">
                                                     <a
-                                                        href={article.category.href}
+                                                        href={article.href}
                                                         className="flex justify-between gap-x-4 rounded-md text-xl font-semibold text-primary outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2 md:text-display-sm"
                                                     >
                                                         {article.title}
@@ -317,8 +318,13 @@ const BlogHeaderSidebar02 = () => {
 
 const BlogPage04 = () => {
     return (
-        <div className="bg-primary">
+        <div className=" relative bg-primary">
+            <Image src="/ornaments/endless-knot-corner-gold.png" width={260} height={264.3} alt="Ornament Endless knot golden." className="hidden lg:block absolute top-4 right-4 opacity-16 dark:opacity-25" />
+
             <BlogHeaderSidebar02 />
+            {/* Bottom decorative band */}
+            <div className="absolute h-6 bottom-0 left-0 right-0 mx-auto bg-[url(/patterns/detailed-endless-band-gold-140px.webp)] bg-contain bg-repeat opacity-16 dark:opacity-12">
+            </div>
         </div>
     );
 };
