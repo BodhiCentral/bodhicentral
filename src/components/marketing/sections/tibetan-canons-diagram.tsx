@@ -60,7 +60,7 @@ export const TibetanCanonsDiagram = () => {
                             <div className="mx-auto w-full grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-2 rounded-3xl p-2">
                                 <div className="mx-auto w-full col-span-2 flex flex-col items-center justify-center gap-0 bg-blue-100/60 dark:bg-blue-800/40 px-10 py-2 rounded-2xl border border-blue-200 dark:border-blue-700">
                                     <p className="text-lg font-light text-primary/70 text-center tracking-tight">འདུལ་བ།</p>
-                                    <p className="text-md font-bold text-center text-secondary">Discipline</p>
+                                    <p className="text-md font-bold text-center text-secondary">Vinaya</p>
                                 </div>
                                 <div className="mx-auto w-full flex flex-col items-center justify-center gap-0 bg-yellow-100/60 dark:bg-yellow-800/40 px-10 py-2 rounded-2xl border border-yellow-300 dark:border-yellow-700">
                                     <p className="text-lg font-light text-primary/70 text-center tracking-tight">ཤེར་ཕྱིན།</p>
@@ -88,7 +88,7 @@ export const TibetanCanonsDiagram = () => {
                                 </div>
                                 <div className="mx-auto w-full flex flex-col items-center justify-center gap-0 bg-red-100/60 dark:bg-red-800/40 px-2 py-2 rounded-2xl border border-red-200 dark:border-red-700">
                                     <p className="text-lg font-light text-primary/70 text-center tracking-tight">རྙིང་རྒྱུད།</p>
-                                    <p className="text-md font-bold text-center text-secondary">Nyingma Tantra</p>
+                                    <p className="text-md font-bold text-center text-secondary">Old Tantra</p>
                                 </div>
                                 <div className="mx-auto w-full col-span-2 flex flex-col items-center justify-center gap-0 bg-red-100/60 dark:bg-red-800/40 px-2 py-2 rounded-2xl border border-red-200 dark:border-red-700">
                                     <p className="text-lg font-light text-primary/70 text-center tracking-tight">དུས་འཁོར་འགྲེལ་བཤད།</p>
@@ -117,7 +117,7 @@ export const TibetanCanonsDiagram = () => {
                             <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-2 rounded-3xl p-2">
                                 <div className="w-full flex flex-col items-center justify-center gap-0 bg-gray-200/60 dark:bg-gray-700/40 px-2 py-2 rounded-2xl border border-gray-300 dark:border-gray-600">
                                     <p className="text-lg font-light text-primary/70 text-center">བསྟོད་ཚོགས།</p>
-                                    <p className="text-md font-bold text-center text-secondary">Eulogy</p>
+                                    <p className="text-md font-bold text-center text-secondary">Praise</p>
                                 </div>
                                 <div className="w-full flex flex-col items-center justify-center gap-0 bg-red-100/60 dark:bg-red-800/40 px-2 py-2 rounded-2xl border border-red-200 dark:border-red-700">
                                     <p className="text-lg font-light text-primary/70 text-center">རྒྱུད།</p>
@@ -145,7 +145,7 @@ export const TibetanCanonsDiagram = () => {
                                 </div>
                                 <div className="mx-auto w-full h-full flex flex-col items-center justify-center gap-0 bg-blue-100/60 dark:bg-blue-800/40 px-2 py-2 rounded-2xl border border-blue-200 dark:border-blue-700">
                                     <p className="text-lg font-light text-primary/70 text-center">འདུལ་བ།</p>
-                                    <p className="text-md font-bold text-center text-secondary">Discipline</p>
+                                    <p className="text-md font-bold text-center text-secondary">Vinaya</p>
                                 </div>
                                 <div className="mx-auto w-full h-full flex flex-col items-center justify-center gap-0 bg-mauve-300/40 dark:bg-mauve-600/50 px-2 py-2 rounded-2xl border border-mauve-300 dark:border-mauve-500">
                                     <p className="text-lg font-light text-primary/70 text-center">སྐྱེས་རབས།</p>
@@ -194,7 +194,7 @@ export const TibetanCanonsDiagram = () => {
                             <div className="mx-auto w-full grid grid-cols-1 md:grid-cols-4 gap-2 items-start justify-center rounded-3xl mt-2">
                                 <div className="mx-auto w-full h-full flex flex-col items-center justify-center gap-0 bg-blue-100/60 dark:bg-blue-900/40 px-10 py-3 rounded-2xl border border-blue-200 dark:border-blue-700">
                                     <p className="text-lg font-light text-primary/70 text-center tracking-tight">འདུལ་བ།</p>
-                                    <p className="text-md font-bold text-center text-secondary">Discipline</p>
+                                    <p className="text-md font-bold text-center text-secondary">Vinaya</p>
                                 </div>
                                 <div className="mx-auto w-full h-full flex flex-col items-center justify-center gap-0 bg-yellow-100/60 dark:bg-yellow-900/40 px-10 py-3 rounded-2xl border border-yellow-300 dark:border-yellow-800">
                                     <p className="text-lg font-light text-primary/70 text-center tracking-tight">ཤེར་ཕྱིན།</p>
@@ -222,7 +222,7 @@ export const TibetanCanonsDiagram = () => {
                                 </div>
                                 <div className="mx-auto w-full h-full flex flex-col items-center justify-start gap-0 bg-red-100/60 dark:bg-red-900/40 px-2 py-3 rounded-2xl border border-red-200 dark:border-red-800">
                                     <p className="text-lg font-light text-primary/70 text-center tracking-tight">རྙིང་རྒྱུད།</p>
-                                    <p className="text-md font-bold text-center text-secondary">Nyingma Tantra</p>
+                                    <p className="text-md font-bold text-center text-secondary">Old Tantra</p>
                                 </div>
                                 <div className="mx-auto w-full h-full flex flex-col items-center justify-start gap-0 bg-red-100/60 dark:bg-red-900/40 px-2 py-3 rounded-2xl border border-red-200 dark:border-red-800">
                                     <p className="text-lg font-light text-primary/70 text-center tracking-tight">དུས་འཁོར་འགྲེལ་བཤད།</p>
@@ -255,7 +255,7 @@ export const TibetanCanonsDiagram = () => {
                             <div className="mx-auto w-full grid grid-cols-1 md:grid-cols-5 gap-2 items-start justify-center rounded-3xl mt-2">
                                 <div className="mx-auto w-full h-full flex flex-col items-center justify-start gap-0 bg-mist-200/70 dark:bg-mist-800/60 px-2 py-3 rounded-2xl border border-mist-200 dark:border-mist-700">
                                     <p className="text-lg font-light text-primary/70 text-center">བསྟོད་ཚོགས།</p>
-                                    <p className="text-md font-bold text-center text-secondary">Praises to Buddhas & Deties</p>
+                                    <p className="text-md font-bold text-center text-secondary">Praise</p>
                                 </div>
                                 <div className="mx-auto w-full h-full flex flex-col items-center justify-start gap-0 bg-red-100/60 dark:bg-red-900/40 px-2 py-3 rounded-2xl border border-red-200 dark:border-red-800">
                                     <p className="text-lg font-light text-primary/70 text-center">རྒྱུད།</p>
@@ -283,7 +283,7 @@ export const TibetanCanonsDiagram = () => {
                                 </div>
                                 <div className="mx-auto w-full h-full flex flex-col items-center justify-start gap-0 bg-blue-100/60 dark:bg-blue-800/40 px-2 py-3 rounded-2xl border border-blue-200 dark:border-blue-700">
                                     <p className="text-lg font-light text-primary/70 text-center">འདུལ་བ།</p>
-                                    <p className="text-md font-bold text-center text-secondary">Discipline Treatises</p>
+                                    <p className="text-md font-bold text-center text-secondary">Vinaya</p>
                                 </div>
                                 <div className="mx-auto w-full h-full flex flex-col items-center justify-start gap-0 bg-olive-200/70 dark:bg-olive-800/40 px-2 py-3 rounded-2xl border border-olive-300 dark:border-olive-700">
                                     <p className="text-lg font-light text-primary/70 text-center">སྐྱེས་རབས།</p>
