@@ -218,8 +218,9 @@ const BlogHeaderSidebar02 = () => {
     const [selectedTabIndex, setSelectedTabIndex] = useState(1);
 
     return (
-        <div className="bg-primary">
-            <section className="bg-primary py-16 md:py-24">
+        <div className="relative bg-primary">
+
+            <section className="bg-primary py-16 md:py-20">
                 <div className="mx-auto max-w-container px-4 md:px-8">
                     <div className="flex w-full max-w-3xl flex-col">
                         <span className="text-sm font-semibold text-brand-secondary md:text-md">Our blog</span>
@@ -229,7 +230,7 @@ const BlogHeaderSidebar02 = () => {
                 </div>
             </section>
 
-            <main className="mx-auto flex w-full max-w-container flex-col gap-12 px-4 pb-16 md:gap-16 md:px-8 md:pb-24">
+            <main className="relative mx-auto flex w-full max-w-container flex-col gap-12 px-4 pb-16 md:gap-16 md:px-8 md:pb-24">
                 <div className="flex flex-col gap-12 md:flex-row md:gap-16">
                     <div className="flex w-full flex-col items-stretch md:max-w-70 md:gap-8">
                         <Input aria-label="Search" placeholder="Search" size="md" icon={SearchLg} wrapperClassName="hidden md:flex" />
@@ -260,7 +261,7 @@ const BlogHeaderSidebar02 = () => {
                                 )}
                             >
                                 {article.isFeatured ? (
-                                    <div className="flex flex-col gap-5 lg:flex-row lg:items-start xl:gap-8">
+                                    <div className="z-10 flex flex-col gap-5 lg:flex-row lg:items-start xl:gap-8">
                                         <a href={article.href} className="shrink-0 overflow-hidden rounded-2xl" tabIndex={-1}>
                                             <img
                                                 src={article.thumbnailUrl}
@@ -319,7 +320,8 @@ const BlogHeaderSidebar02 = () => {
 const BlogPage04 = () => {
     return (
         <div className=" relative bg-primary">
-            <Image src="/ornaments/endless-knot-corner-gold.png" width={260} height={264.3} alt="Ornament Endless knot golden." className="hidden lg:block absolute top-4 right-4 opacity-16 dark:opacity-25" />
+            <Image src="/ornaments/endless-knot-corner-gold.png" width={260} height={264.3} alt="Ornament Endless knot golden." className="hidden z-10 lg:block absolute top-4 right-4 opacity-16 dark:opacity-25" />
+
 
             <BlogHeaderSidebar02 />
             {/* Bottom decorative band */}
