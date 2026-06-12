@@ -49,7 +49,7 @@ const PaliSectionCard = ({ section }: { section: PaliSection }) => {
     return (
         <Carousel.Item
             key={section.id_volumen || section.english_title}
-            className="group relative flex aspect-[.5625] w-full max-w-68 flex-col justify-end md:aspect-[.5625] md:max-w-76 drop-shadow-lg border border-olive-500 dark:border-olive-950 rounded-xl overflow-hidden hover:scale-[1.05] transition-all duration-300 cursor-pointer"
+            className={`group relative flex aspect-[.5625] w-full max-w-68 flex-col justify-end md:aspect-[.5625] md:max-w-76 drop-shadow-xl drop-shadow-brand-600/30 dark:drop-shadow-brand-700/20 border border-olive-500 dark:border-olive-950 rounded-3xl overflow-hidden hover:scale-[1.05] transition-all duration-500 cursor-pointer`}
             onClick={() => setIsFlipped(!isFlipped)}
         >
             <Image
@@ -66,7 +66,7 @@ const PaliSectionCard = ({ section }: { section: PaliSection }) => {
 
             <div className={`z-10 bg-linear-to-t from-black/30 to-black/0 pt-16 md:pt-20 lg:pt-24 rounded-b-sm ${isFlipped ? "opacity-0 invisible" : "group-hover:opacity-0 group-hover:invisible"}`}>
                 <div className={`relative ${section.color} ${section.dark_color} px-5 pt-5 pb-4 text-white backdrop-blur-[10px] before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-alpha-white/30 md:px-5 rounded-b-sm`}>
-                    <h3 className="text-2xl font-medium text-brand-300 pb-1">{section.english_title}</h3>
+                    <h3 className="text-3xl font-medium text-brand-300 pb-1">{section.english_title}</h3>
                     <p className="mt-1 text-lg">{section.pali_title}</p>
 
                     <div className="flex mt-2 justify-between items-top">
@@ -165,7 +165,7 @@ export const PaliDivisionsGallery = ({ pitakaType }: PaliDivisionsGalleryProps) 
                 align: "start",
             }}
         >
-            <Carousel.Content overflowHidden={false} className="gap-4 pr-4 md:gap-4 md:pr-4">
+            <Carousel.Content overflowHidden={false} className="gap-4 pr-4 md:gap-5 md:pr-4">
                 {sections.map((section) => (
                     <PaliSectionCard key={section.id_volumen || section.english_title} section={section} />
                 ))}

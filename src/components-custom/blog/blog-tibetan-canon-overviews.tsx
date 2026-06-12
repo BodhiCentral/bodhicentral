@@ -117,7 +117,7 @@ export const BlogSectionTibetanCanonOverviews = () => {
                     </div>
 
                     <div className="hidden gap-3 lg:flex">
-                        <Button size="sm">View more</Button>
+                        <Button href="/resources/blog" size="sm">View more</Button>
                     </div>
                 </div>
 
@@ -129,7 +129,7 @@ export const BlogSectionTibetanCanonOverviews = () => {
                     ))}
                 </ul>
                 <div className="mt-12 flex flex-col gap-3 lg:hidden">
-                    <Button size="md">View more</Button>
+                    <Button href="/resources/blog" size="md">View more</Button>
                 </div>
             </div>
         </section>

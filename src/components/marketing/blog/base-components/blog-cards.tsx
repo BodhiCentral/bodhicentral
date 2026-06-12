@@ -32,11 +32,11 @@ export type Article = {
 
 export const Simple01Vertical = ({ article, imageClassName }: { article: Article; imageClassName?: string }) => (
     <article className="flex flex-col gap-4">
-        <a href={article.href} className="overflow-hidden rounded-2xl" tabIndex={-1}>
+        <a href={article.href} className="overflow-hidden rounded-3xl border border-brand-300 dark:border-olive-900 drop-shadow-xl drop-shadow-brand-400/30 dark:drop-shadow-brand-700/20" tabIndex={-1}>
             <Image
                 src={article.thumbnailUrl}
                 alt={article.title}
-                className={cx("aspect-[1.5] w-full object-cover transition duration-100 ease-linear hover:scale-105", imageClassName)}
+                className={cx("aspect-[1.5] w-full object-cover transition duration-200 ease-linear hover:scale-105", imageClassName)}
                 width={800} height={800} />
         </a>
 

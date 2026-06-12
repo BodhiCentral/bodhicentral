@@ -255,14 +255,14 @@ const sections: Section[] = [
 const PricingLargeTable01 = () => {
     return (
         <section className="bg-primary">
-            <div className="mx-auto max-w-container px-4 py-10 md:px-8 md:py-12">
+            <div className="mx-auto max-w-container px-4 py-6 md:px-8 md:py-8">
                 <div className="mx-auto flex w-full flex-col items-center text-center">
 
                     <h2 className="text-display-md font-extralight text-brand-800 dark:text-brand-400 md:text-display-lg self-start">Subscriptions and features overview</h2>
                 </div>
             </div>
 
-            <div className="w-full pb-16 md:px-8 md:pb-16 lg:mx-auto lg:max-w-container">
+            <div className="w-full pb-12 md:px-8 md:pb-14 lg:mx-auto lg:max-w-container">
                 {/* xs to lg */}
                 <div className="space-y-16 lg:hidden">
                     {tiers.map((tier) => (
@@ -356,7 +356,7 @@ const PricingLargeTable01 = () => {
                             <tr>
                                 <th scope="row"></th>
                                 {tiers.map((tier) => (
-                                    <td key={tier.name} className="h-full px-6 py-4 align-top md:pb-8">
+                                    <td key={tier.name} className="h-full px-6 py-4 align-top md:pb-4">
                                         <div className="flex h-full flex-col justify-between">
                                             <p className="mt-0.5 text-sm text-tertiary text-center">{tier.description}</p>
                                         </div>

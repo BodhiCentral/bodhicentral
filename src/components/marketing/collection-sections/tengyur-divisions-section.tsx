@@ -14,7 +14,7 @@ export const TengyurDivisionsSection = () => {
                     <div className="flex flex-1 flex-col max-w-280 pr-4 md:pr-24">
                         <h2 className="text-display-md font-extralight text-brand-800 dark:text-brand-300 md:text-display-lg">Tengyur Divisions</h2>
                         <p className="mt-1 text-base text-tertiary md:mt-2 md:text-lg text-balance">
-                            The Tengyur is the collection of the Buddhist commentaries in Tibetan. It contains some 3,300 works in 213 volumes, all translations into Tibetan of the Indian commentaries on the words of the Buddha. These seventeen divisions follow Adarshah's digital edition of the Degé Tengyur.
+                            The Tengyur is the collection of the Buddhist commentaries in Tibetan. It contains some 3,300 works in 213 volumes, all translations into Tibetan of the Indian commentaries on the words of the Buddha.
                         </p>
                     </div>
                     <div className="mt-8 flex flex-col gap-3 self-stretch md:mt-0 md:flex-row-reverse md:justify-center md:self-center">

@@ -67,7 +67,7 @@ const TibetanCanonDivisionsCard = ({ section }: { section: TibetanCanonDivision 
     return (
         <Carousel.Item
             key={section.toh_numbers || section.english_title}
-            className={`group relative flex aspect-[.5625] w-full max-w-68 flex-col justify-end md:aspect-[.5625] md:max-w-76 bg-${section.color} dark:bg-${section.dark_color} drop-shadow-lg border-2 border-brand-300 dark:border-brand-950 rounded-xl overflow-hidden hover:scale-[1.05] transition-all duration-300 cursor-pointer`}
+            className={`group relative flex aspect-[.5625] w-full max-w-68 flex-col justify-end md:aspect-[.5625] md:max-w-76 bg-${section.color} dark:bg-${section.dark_color} drop-shadow-xl drop-shadow-brand-600/30 dark:drop-shadow-brand-700/20 border-2 border-olive-500 dark:border-olive-950 rounded-3xl overflow-hidden hover:scale-[1.05] transition-all duration-500 cursor-pointer`}
             onClick={() => setIsFlipped(!isFlipped)}
         >
             <Image
@@ -84,13 +84,13 @@ const TibetanCanonDivisionsCard = ({ section }: { section: TibetanCanonDivision 
 
             <div className={`z-10 bg-linear-to-t from-black/30 to-black/0 pt-16 md:pt-20 lg:pt-24 rounded-b-sm ${isFlipped ? "opacity-0 invisible" : "group-hover:opacity-0 group-hover:invisible"}`}>
                 <div className={`relative bg-${section.color} dark:bg-${section.dark_color} px-5 pt-5 pb-4 text-white backdrop-blur-[10px] before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-alpha-white/30 md:px-5 rounded-b-sm`}>
-                    <h3 className="text-2xl text-brand-300">{section.english_title}</h3>
-                    <p className="mt-1 text-2xl font-regular">{section.tibetan_title}</p>
-                    <p className="mt-2 text-md font-regular">{section.sanskrit_title}</p>
-                    <div className="flex gap-2 mt-6 justify-between items-top">
+                    <h3 className="text-3xl text-brand-300">{section.english_title}</h3>
+                    <p className="mt-2 text-xl">{section.tibetan_title}</p>
+                    <p className="mt-1 text-md">{section.sanskrit_title}</p>
+                    <div className="flex gap-2 mt-8 justify-between items-top">
                         <div className="flex flex-col gap-0">
-                            <p className="text-sm font-normal text-brand-300 uppercase">{section.canon_division}</p>
-                            <p className="text-sm font-normal text-brand-200">{section.toh_numbers}</p>
+                            <p className="text-sm text-brand-300 uppercase">{section.canon_division}</p>
+                            <p className="text-sm text-brand-200">{section.toh_numbers}</p>
                         </div>
                     </div>
                 </div>
@@ -107,8 +107,8 @@ const TibetanCanonDivisionsCard = ({ section }: { section: TibetanCanonDivision 
                 {/* Card Reversed Side */}
                 <div className="flex flex-col gap-2 mt-1 items-top">
                     <div className="flex flex-col gap-0">
-                        <p className="text-lg font-normal pb-2">{section.tibetan_title}</p>
-                        <h3 className="text-lg font-medium text-brand-300">{section.english_title}</h3>
+                        <p className="text-md font-normal pb-2">{section.tibetan_title}</p>
+                        <h3 className="text-xl font-medium text-brand-300">{section.english_title}</h3>
                     </div>
                     <p className="mt-2 text-sm md:text-regular text-balance pb-4">{section.short_description}</p>
                 </div>
@@ -181,7 +181,7 @@ export const TibetanCanonDivisionsGallery = ({ canonType }: TibetanCanonDivision
                 align: "start",
             }}
         >
-            <Carousel.Content overflowHidden={false} className="gap-4 pr-4 md:gap-4 md:pr-4">
+            <Carousel.Content overflowHidden={false} className="gap-4 pr-4 md:gap-5 md:pr-4">
                 {sections.map((section) => (
                     <TibetanCanonDivisionsCard key={section.toh_numbers || section.english_title} section={section} />
                 ))}
