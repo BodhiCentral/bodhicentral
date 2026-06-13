@@ -10,9 +10,9 @@ import "@/styles/timelines.css";
 // Palette constants (matches Bodhi Central brand)
 // ─────────────────────────────────────────────────────────
 const LANE_HEADER_BG = "rgba(0, 0, 0, 0.7)"; // color-black
-const LANE_BODY_BG = "rgba(0, 0, 0, 0.5)"; // color-white
+const LANE_BODY_BG = "rgba(0, 0, 0, 0.4)"; // color-white
 const LANE_HEADER_TITLE = "oklch(0.411 0.051 77.18)"; // color-brand-800
-const ARTICLE_THEME_COLOR = "rgba(0, 0, 0, 0.2)"; // color-gray
+const ARTICLE_THEME_COLOR = "rgba(255, 255, 255, 1)"; // color-gray
 const MANUSCRIPT_STYLE_COLOR = "oklch(69.6% 0.17 162.48)"; // color-emerald-500
 const XYLOGRAPHS_STYLE_COLOR = "oklch(70.5% 0.213 47.604)"; // color-orange-500
 const EDITIONS_COLOR = "oklch(0.545 0.069 77.21)"; // color-brand-700
@@ -46,7 +46,7 @@ const buildStyleOptions = (): TimelineOptions["style"] => ({
         },
     },
     draggingHighlight: {
-        color: "rgba(241, 245, 249, 0.5)",
+        color: "rgba(241, 245, 249, 0.2)",
     },
 });
 
@@ -54,21 +54,21 @@ const buildStyleOptions = (): TimelineOptions["style"] => ({
 // Shared article style
 // ─────────────────────────────────────────────────────────
 const buildArticleDefaultStyle = () => ({
-    width: 220,
-    height: 200,
-    topRadius: 16,
-    bottomRadius: 8,
+    width: 250,
+    height: 186,
+    topRadius: 20,
+    bottomRadius: 12,
     backgroundColor: "#ffffff",
     distanceToBaseline: {
-        value: 40,
+        value: 20,
     },
     border: {
         color: ARTICLE_BORDER_LIGHT,
         width: 1,
     },
     shadow: {
-        x: 0, y: 2, amount: 8,
-        color: "rgba(0,0,0,0.04)",
+        x: 0, y: 1, amount: 20,
+        color: "rgba(0,0,0,0.2)",
     },
     connectorLine: {
         visible: true,
@@ -80,7 +80,7 @@ const buildArticleDefaultStyle = () => ({
         }
     },
     header: {
-        height: 60,
+        height: 68,
         text: {
             font: '700 14px Nunito',
             color: ARTICLE_HEADER_LIGHT,
@@ -92,7 +92,7 @@ const buildArticleDefaultStyle = () => ({
     },
     subheader: {
         color: "#f1f5f9",
-        height: 60,
+        height: 44,
         numberOfLines: 6,
         text: {
             font: '400 12px Nunito',
@@ -103,40 +103,9 @@ const buildArticleDefaultStyle = () => ({
 });
 
 // ─────────────────────────────────────────────────────────
-// Lane definitions (PEOPLE + KANGYUR EDITIONS)
+// Lane definitions (KANGYUR EDITIONS)
 // ─────────────────────────────────────────────────────────
 const buildLanes = (): LaneData[] => [
-    {
-        id: "people",
-        title: "PEOPLE",
-        layout: {
-            heightWeight: 1,
-            header: {
-                height: 36,
-            }
-        },
-        style: {
-            header: {
-                backgroundColor: LANE_HEADER_BG,
-            },
-            body: {
-                backgroundColor: LANE_BODY_BG,
-                borderColor: "rgba(37,37,37,0.12)",
-            },
-            title: {
-                color: LANE_HEADER_TITLE,
-                font: `700 18px Crimson Pro`,
-            },
-        },
-        article: {
-            defaultCardLayout: "portrait",
-            defaultStyle: {
-                color: ARTICLE_THEME_COLOR,
-                connectorLine: { thickness: 1 },
-            },
-            autoStacking: { active: true, rowSpacing: 40 },
-        },
-    },
 
     {
         id: "editions",
@@ -144,7 +113,7 @@ const buildLanes = (): LaneData[] => [
         layout: {
             heightWeight: 1,
             header: {
-                height: 36,
+                height: 56,
             }
         },
         style: {
@@ -158,16 +127,16 @@ const buildLanes = (): LaneData[] => [
             },
             title: {
                 color: LANE_HEADER_TITLE,
-                font: `700 18px Crimson Pro`,
+                font: `700 1.25rem Crimson Pro`,
             },
         },
         article: {
             defaultCardLayout: "portrait",
             defaultStyle: {
                 color: ARTICLE_THEME_COLOR,
-                connectorLine: { thickness: 1.5 },
+                connectorLine: { thickness: 1 },
             },
-            autoStacking: { active: true, rowSpacing: 40 },
+            autoStacking: { active: true, rowSpacing: 90 },
         },
     },
 ];
@@ -177,139 +146,6 @@ const buildLanes = (): LaneData[] => [
 // ─────────────────────────────────────────────────────────
 const LANE_ARTICLES: ArticleData[] = [
 
-    // ── People ──────────────────────────────
-    {
-        id: "songtsen-gampo",
-        title: "King Songtsen Gampo",
-        subtitle: "r. c. 618–650 CE",
-        lane: "people",
-        from: { year: 650 },
-        to: { year: 650 },
-        rank: 100,
-        imageUrl: "/placeholder-image-landscape.svg",
-        style: { color: ARTICLE_THEME_COLOR },
-    },
-    {
-        id: "trisong-detsen",
-        title: "King Trisong Detsen",
-        subtitle: "r. 755-circa 797",
-        lane: "people",
-        from: { year: 755 },
-        to: { year: 797 },
-        rank: 90,
-        imageUrl: "/placeholder-image-landscape.svg",
-        style: { color: ARTICLE_THEME_COLOR },
-    },
-    {
-        id: "yeshe-od",
-        title: "King of Purang, Yeshe-od",
-        subtitle: "c. 940 CE",
-        lane: "people",
-        from: { year: 940 },
-        to: { year: 940 },
-        rank: 90,
-        imageUrl: "/placeholder-image-landscape.svg",
-        style: { color: ARTICLE_THEME_COLOR },
-    },
-    {
-        id: "rinchen-zangpo",
-        title: "Rinchen Zangpo",
-        subtitle: "958-1055",
-        lane: "people",
-        from: { year: 958 },
-        to: { year: 1055 },
-        rank: 90,
-        imageUrl: "/placeholder-image-landscape.svg",
-        style: { color: ARTICLE_THEME_COLOR },
-    },
-    {
-        id: "atisha",
-        title: "Atiśa Dīpaṃkara Śrījñāna",
-        subtitle: "982–d.1055?",
-        lane: "people",
-        from: { year: 982 },
-        to: { year: 1054 },
-        rank: 90,
-        imageUrl: "/people/timeline-thumbnails/atisha.jpg",
-        style: { color: ARTICLE_THEME_COLOR },
-    },
-    {
-        id: "gampopa",
-        title: "Gampopa Sönam Rinchen",
-        subtitle: "1079–1153",
-        lane: "people",
-        from: { year: 1079 },
-        to: { year: 1153 },
-        rank: 90,
-        imageUrl: "/people/timeline-thumbnails/gampopa.jpg",
-        style: { color: ARTICLE_THEME_COLOR },
-    },
-    {
-        id: "chomden-rikpai-raldri",
-        title: "Chomden Rikpai Raldri",
-        subtitle: "circa 1270",
-        lane: "people",
-        from: { year: 1270 },
-        to: { year: 1280 },
-        rank: 90,
-        imageUrl: "/placeholder-image-landscape.svg",
-        style: { color: ARTICLE_THEME_COLOR },
-    },
-    {
-        id: "buton-rinchen-drup",
-        title: "Butön Rinchen Drup",
-        subtitle: "1290-1364",
-        lane: "people",
-        from: { year: 1290 },
-        to: { year: 1364 },
-        rank: 90,
-        imageUrl: "/people/timeline-thumbnails/buton-rinchen_thumb.jpg",
-        style: { color: ARTICLE_THEME_COLOR },
-    },
-    {
-        id: "tsongkhapa",
-        title: "Tsongkhapa",
-        subtitle: "1357-1419",
-        lane: "people",
-        from: { year: 1357 },
-        to: { year: 1419 },
-        rank: 90,
-        imageUrl: "/people/timeline-thumbnails/buton-rinchen_thumb.jpg",
-        style: { color: ARTICLE_THEME_COLOR },
-    },
-    {
-        id: "ratna-lingpa",
-        title: "Ratna Lingpa",
-        subtitle: "1403-1478 CE",
-        lane: "people",
-        from: { year: 1403 },
-        to: { year: 1478 },
-        rank: 90,
-        imageUrl: "/placeholder-image-landscape.svg",
-        style: { color: ARTICLE_THEME_COLOR },
-    },
-    {
-        id: "situ-panchen-chokyi-jungne",
-        title: "Situ Panchen Chökyi Jungne",
-        subtitle: "1700–1774 CE",
-        lane: "people",
-        from: { year: 1700 },
-        to: { year: 1774 },
-        rank: 90,
-        imageUrl: "/people/timeline-thumbnails/situ-panchen-chokyi-jungne.webp",
-        style: { color: ARTICLE_THEME_COLOR },
-    },
-    {
-        id: "gene-smith",
-        title: "Gene Smith",
-        subtitle: "1936-2010",
-        lane: "people",
-        from: { year: 1936 },
-        to: { year: 2010 },
-        rank: 90,
-        imageUrl: "/placeholder-image-landscape.svg",
-        style: { color: ARTICLE_THEME_COLOR },
-    },
 
     // ── Canonical Editions ───────────────────────────────
     {
@@ -318,7 +154,6 @@ const LANE_ARTICLES: ArticleData[] = [
         subtitle: "Circa 780 CE",
         lane: "editions",
         from: { year: 780 },
-        rank: 50,
         imageUrl: "/placeholder-image-landscape.svg",
         style: { color: ARTICLE_THEME_COLOR },
     },
@@ -328,7 +163,6 @@ const LANE_ARTICLES: ArticleData[] = [
         subtitle: "Circa 812 CE",
         lane: "editions",
         from: { year: 812 },
-        rank: 50,
         imageUrl: "/placeholder-image-landscape.svg",
         style: { color: ARTICLE_THEME_COLOR },
     },
@@ -338,7 +172,6 @@ const LANE_ARTICLES: ArticleData[] = [
         subtitle: "Circa 822 CE",
         lane: "editions",
         from: { year: 822 },
-        rank: 50,
         imageUrl: "/placeholder-image-landscape.svg",
         style: { color: ARTICLE_THEME_COLOR },
     },
@@ -349,7 +182,6 @@ const LANE_ARTICLES: ArticleData[] = [
         lane: "editions",
         from: { year: 1322 },
         to: { year: 1323 },
-        rank: 50,
         imageUrl: "/placeholder-image-landscape.svg",
         style: { color: ARTICLE_THEME_COLOR },
     },
@@ -360,7 +192,6 @@ const LANE_ARTICLES: ArticleData[] = [
         lane: "editions",
         from: { year: 1347 },
         to: { year: 1351 },
-        rank: 50,
         imageUrl: "/placeholder-image-landscape.svg",
         style: { color: ARTICLE_THEME_COLOR },
     },
@@ -370,7 +201,6 @@ const LANE_ARTICLES: ArticleData[] = [
         subtitle: "1410 CE",
         lane: "editions",
         from: { year: 1410 },
-        rank: 100,
         imageUrl: "/pecha-images/yong-le-wood-carved-kangyur--180px.webp",
         style: { color: XYLOGRAPHS_STYLE_COLOR },
     },
@@ -380,7 +210,6 @@ const LANE_ARTICLES: ArticleData[] = [
         subtitle: "1431 CE",
         lane: "editions",
         from: { year: 1431 },
-        rank: 100,
         imageUrl: "/placeholder-image-landscape.svg",
         style: { color: MANUSCRIPT_STYLE_COLOR },
     },
@@ -391,7 +220,6 @@ const LANE_ARTICLES: ArticleData[] = [
         lane: "editions",
         from: { year: 1450 },
         to: { year: 1460 },
-        rank: 10,
         imageUrl: "/placeholder-image-landscape.svg",
         style: { color: ARTICLE_THEME_COLOR },
     },
@@ -402,7 +230,6 @@ const LANE_ARTICLES: ArticleData[] = [
         lane: "editions",
         from: { year: 1609 },
         to: { year: 1614 },
-        rank: 85,
         imageUrl: "/placeholder-image-landscape.svg",
         style: { color: XYLOGRAPHS_STYLE_COLOR },
     },
@@ -412,7 +239,6 @@ const LANE_ARTICLES: ArticleData[] = [
         subtitle: "1671 CE",
         lane: "editions",
         from: { year: 1671 },
-        rank: 75,
         imageUrl: "/placeholder-image-landscape.svg",
         style: { color: MANUSCRIPT_STYLE_COLOR },
     },
@@ -423,7 +249,6 @@ const LANE_ARTICLES: ArticleData[] = [
         lane: "editions",
         from: { year: 1721 },
         to: { year: 1731 },
-        rank: 90,
         imageUrl: "/placeholder-image-landscape.svg",
         style: { color: XYLOGRAPHS_STYLE_COLOR },
     },
@@ -433,7 +258,6 @@ const LANE_ARTICLES: ArticleData[] = [
         subtitle: "1680 CE",
         lane: "editions",
         from: { year: 1680 },
-        rank: 70,
         imageUrl: "/placeholder-image-landscape.svg",
         style: { color: MANUSCRIPT_STYLE_COLOR },
     },
@@ -443,7 +267,6 @@ const LANE_ARTICLES: ArticleData[] = [
         subtitle: "c. 1712 CE",
         lane: "editions",
         from: { year: 1712 },
-        rank: 70,
         imageUrl: "/placeholder-image-landscape.svg",
         style: { color: MANUSCRIPT_STYLE_COLOR },
     },
@@ -453,7 +276,6 @@ const LANE_ARTICLES: ArticleData[] = [
         subtitle: "1729 CE",
         lane: "editions",
         from: { year: 1729 },
-        rank: 70,
         imageUrl: "/placeholder-image-landscape.svg",
         style: { color: MANUSCRIPT_STYLE_COLOR },
     },
@@ -463,7 +285,6 @@ const LANE_ARTICLES: ArticleData[] = [
         subtitle: "1730-1733 CE",
         lane: "editions",
         from: { year: 1730 },
-        rank: 90,
         imageUrl: "/placeholder-image-landscape.svg",
         style: { color: XYLOGRAPHS_STYLE_COLOR },
     },
@@ -474,7 +295,6 @@ const LANE_ARTICLES: ArticleData[] = [
         lane: "editions",
         from: { year: 1729 },
         to: { year: 1733 },
-        rank: 100,
         imageUrl: "/placeholder-image-landscape.svg",
         style: { color: XYLOGRAPHS_STYLE_COLOR },
     },
@@ -484,7 +304,6 @@ const LANE_ARTICLES: ArticleData[] = [
         subtitle: "1737 CE",
         lane: "editions",
         from: { year: 1737 },
-        rank: 95,
         imageUrl: "/placeholder-image-landscape.svg",
         style: { color: XYLOGRAPHS_STYLE_COLOR },
     },
@@ -495,7 +314,6 @@ const LANE_ARTICLES: ArticleData[] = [
         lane: "editions",
         from: { year: 1858 },
         to: { year: 1878 },
-        rank: 90,
         imageUrl: "/placeholder-image-landscape.svg",
         style: { color: MANUSCRIPT_STYLE_COLOR },
     },
@@ -506,7 +324,6 @@ const LANE_ARTICLES: ArticleData[] = [
         lane: "editions",
         from: { year: 1908 },
         to: { year: 1910 },
-        rank: 85,
         imageUrl: "/placeholder-image-landscape.svg",
         style: { color: XYLOGRAPHS_STYLE_COLOR },
     },
@@ -516,7 +333,6 @@ const LANE_ARTICLES: ArticleData[] = [
         subtitle: "1934 CE",
         lane: "editions",
         from: { year: 1934 },
-        rank: 80,
         imageUrl: "/placeholder-image-landscape.svg",
         style: { color: XYLOGRAPHS_STYLE_COLOR },
     },
@@ -527,29 +343,26 @@ const LANE_ARTICLES: ArticleData[] = [
         lane: "editions",
         from: { year: 1999 },
         to: { year: 2026 },
-        rank: 80,
         imageUrl: "/placeholder-image-landscape.svg",
         style: { color: ARTICLE_THEME_COLOR },
     },
     {
-        id: "adarshah-library",
-        title: "Adarshah Library",
+        id: "adarshah-digital-library",
+        title: "Adarshah Digital Library",
         subtitle: "2005-present",
         lane: "editions",
         from: { year: 2005 },
         to: { year: 2026 },
-        rank: 80,
         imageUrl: "/placeholder-image-landscape.svg",
         style: { color: ARTICLE_THEME_COLOR },
     },
     {
-        id: "84000",
-        title: "84000 Project",
+        id: "84000-translation-project",
+        title: "84000 Translation Project",
         subtitle: "2009-present",
         lane: "editions",
         from: { year: 2009 },
         to: { year: 2026 },
-        rank: 80,
         imageUrl: "/placeholder-image-landscape.svg",
         style: { color: ARTICLE_THEME_COLOR },
     },
@@ -636,7 +449,7 @@ const buildTimeBands = (): TimeBandData[] => [
     },
     {
         id: "buddhism-comes-to-the-west",
-        title: "Spread to the West",
+        title: "Buddhism Spread to the West",
         from: { year: 1850, precision: PRECISION_YEAR },
         to: { year: 1980, precision: PRECISION_YEAR },
         style: {
@@ -653,9 +466,9 @@ const buildTimeBands = (): TimeBandData[] => [
         from: { year: 1980, precision: PRECISION_YEAR },
         to: { year: 2026, precision: PRECISION_YEAR },
         style: {
-            backgroundColor: "rgba(219, 234, 254, 0.8)",
+            backgroundColor: "rgba(222, 247, 236, 0.8)",
             text: {
-                color: "#1d4ed8"
+                color: "#7C2D12"
 
             },
         },
@@ -684,7 +497,7 @@ const buildTimeBandDefaultStyle = (): TimeBandStyle => (
 // ─────────────────────────────────────────────────────────
 // Component
 // ─────────────────────────────────────────────────────────
-export function TimelineBaseTemplate01() {
+export function TimelineKangyurEditions() {
     const containerRef = useRef<HTMLDivElement>(null);
     const timelineRef = useRef<Timeline | null>(null);
 
@@ -710,12 +523,12 @@ export function TimelineBaseTemplate01() {
                     defaultStyle: buildArticleDefaultStyle(),
                     defaultHoverStyle: {
                         border: { color: EDITIONS_COLOR, width: 1 },
-                        shadow: { x: 0, y: 4, amount: 12, color: "rgba(0,0,0,0.1)" },
+                        shadow: { x: 0, y: 2, amount: 16, color: "rgba(0,0,0,0.05)" },
                     },
                     defaultActiveStyle: {
                         border: { color: "#ededed", width: 1 },
                     },
-                    autoStacking: { active: true, rowSpacing: 64 },
+                    autoStacking: { active: true, rowSpacing: 80 },
                     collectOngoing: true,
                 },
                 lane: {
@@ -743,7 +556,7 @@ export function TimelineBaseTemplate01() {
             // Fit to show the full span of Kangyur history
             tl.fitDateRange(
                 { year: 600 },
-                { year: 1800 },
+                { year: 2000 },
             );
 
             timelineRef.current = tl;
@@ -802,42 +615,47 @@ export function TimelineBaseTemplate01() {
             supportingText: "",
         },
         {
-            id: "block-prints",
-            label: "Block prints",
-            supportingText: "",
+            id: "xylographs",
+            label: "Xylographs",
+            supportingText: "(block prints)",
         },
         {
             id: "digital-sources",
-            label: "Digital",
-            supportingText: "Tibetan",
+            label: "Digital Sources",
+            supportingText: "(Tibetan)",
         },
         {
             id: "digital-translations",
-            label: "Digital",
-            supportingText: "Translations",
+            label: "Digital Translations",
+            supportingText: "",
         },
     ];
 
     const kangyur_traditions: SelectItemType[] = [
+                {
+            id: "al-traditions",
+            label: "All",
+            supportingText: "",
+        },
         {
             id: "early-inventories",
             label: "Early Inventories",
-            supportingText: "Cataloging",
+            supportingText: "(cataloging)",
         },
         {
             id: "thalpa-kangyur",
             label: "Thalpa Kangyur",
-            supportingText: "Blockprints mostly",
+            supportingText: "(mostly xylographs)",
         },
         {
             id: "thempangma-kangyur",
             label: "Tempangma Kangyur",
-            supportingText: "Manuscripts mostly",
+            supportingText: "(mostly manuscripts)",
         },
         {
             id: "conflations",
             label: "Conflations",
-            supportingText: "Later Kangyurs",
+            supportingText: "(most recent Kangyurs)",
         },
     ];
 
@@ -845,18 +663,11 @@ export function TimelineBaseTemplate01() {
         <div className="h-220">
             <div className="mx-auto w-full flex flex-col justify-between gap-6">
                 <div className="w-full flex flex-row justify-items-start gap-12">
-                    <Select.ComboBox className="w-86" size="sm" label="Search the timeline" tooltip="Search scriptures and people of the timeline" placeholder="Search scripture and people..." items={item_articles}>
-                        {(item) => (
-                            <Select.Item id={item.id} supportingText={item.supportingText}>
-                                {item.label}
-                            </Select.Item>
-                        )}
-                    </Select.ComboBox>
                     <Select className="w-50"
                         size="sm"
                         label="Edition Types"
                         tooltip="Filter by edition type (manuscripts, block-prints, digital, etc.)"
-                        placeholder="Select edition type"
+                        placeholder="Filter edition type"
                         items={items}
                     >
                         {(item) => (
@@ -865,11 +676,11 @@ export function TimelineBaseTemplate01() {
                             </Select.Item>
                         )}
                     </Select>
-                    <Select className="w-64"
+                    <Select className="w-76"
                         size="sm"
                         label="Kangyur Traditions"
                         tooltip="Filter by tradition (Tshalpa Kangyur, Thempangma Kangyur.)"
-                        placeholder="Select Kangyur tradition..."
+                        placeholder="Filter by Kangyur tradition and period"
                         items={kangyur_traditions}
                     >
                         {(item) => (

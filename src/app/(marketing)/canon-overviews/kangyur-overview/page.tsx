@@ -10,7 +10,7 @@ import { isReactComponent } from "@/utils/is-react-component";
 import { KangyurDivisionsSection } from '@/components/marketing/collection-sections/kangyur-divisions-section';
 import Image from 'next/image';
 import { ArticleHeaderSection } from "@/components-custom/blog/article-header-section"
-import { TimelineBaseTemplate01 } from '@/content/timelines/timeline-base-template-01';
+import { TimelineKangyurEditions } from '@/content/timelines/timeline-kangyur-editions';
 import { openKangyurNavigator } from "@/components-custom/navigation/canon-navigation/kangyur-navigation-modal-wrapper";
 
 const ArticleOverview = () => {
@@ -38,11 +38,11 @@ const ArticleOverview = () => {
                 article_ornament_image_alt="Article Ornament"
             />
 
-            {/* Main content */}
+            {/* Article Main Content */}
             <div className="mx-auto max-w-container px-4 pb-16 md:px-8 md:pb-24">
                 <div className="mx-auto flex justify-center gap-16">
                     {/* Table of contents */}
-                    <div className="sticky top-[120px] hidden h-fit w-80 self-start flex-col gap-8 md:flex">
+                    <div className="sticky top-30 hidden h-fit w-80 self-start flex-col gap-8 md:flex">
                         <div className="w-full border-t border-secondary" />
                         <div className="flex flex-col gap-4">
                             <p className="text-md font-semibold text-brand-secondary">Table of contents</p>
@@ -165,15 +165,12 @@ const ArticleOverview = () => {
                                 Most versions of the canon utilized today are "conflations"—complex hybrids that integrate the text-critical variants and structural classifications of both traditions. The most prominent examples of these conflated recensions are the Narthang (1730) and Degé (1733) editions.
                             </p>
                             <figure>
-                                <Image className="h-60 md:h-100" src="/content/kangyur-timeline-evolution-1280px.webp" alt="Timeline showing the evolution of the Kangyur canon." width={400} height={400} />
+                                <Image className="h-76 md:h-100 bg-cover" src="/content/kangyur-timeline-evolution-1280px.webp" alt="Timeline showing the evolution of the Kangyur canon." width={400} height={400} />
                                 <figcaption>
-                                    Infographic courtesy of Bodhi Central, generated with NotebookLM. Report mistakes at our
-                                    <a
+                                    Infographic by Bodhi Central Content team. Report mistakes at <a
                                         href="/support#contact-us"
                                         className="rounded-xs outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2"
-                                    >
-                                        Contact Us
-                                    </a> page.
+                                    >Contact Us.</a>
                                 </figcaption>
                             </figure>
 
@@ -208,7 +205,7 @@ const ArticleOverview = () => {
                                     <Image
                                         src="/placeholder-image-landscape.svg"
                                         className="size-12 rounded-full object-cover"
-                                        alt="Bhikkhu Sujato"
+                                        alt="Bodhi Central Team image"
                                         width={800} height={800} />
                                     <div>
                                         <p className="text-md font-semibold text-primary">Bhodi Central</p>
@@ -217,7 +214,7 @@ const ArticleOverview = () => {
                                 </figcaption>
                             </figure>
                             <div className="my-12 rounded-3xl bg-tertiary px-5 py-2 text-lg text-tertiary md:pt-1 md:pb-4 md:px-8 [&>p+p]:mt-4.5">
-                                <h2 id="sources-references-and-further-reading">Sources, References and Further Reading</h2>
+                                <h2 id="sources-references-and-further-reading">Sources, References, and Further Reading</h2>
                                 <ul>
                                     <li>Canti, John; <i>The Kangyur: An introduction to the Kangyur</i>, 84000 project. Canti's work is available in the 84000 Reading Room, and can be found <a href="https://brand.84000.co/post/an-overview-of-the-kangyur">here</a></li>
                                     <li><i>A Complete Catalogue of the Tibetan Buddhist Canons</i>. 1934: Sendai, Japan. Tōhoku Imperial University.</li>
@@ -227,7 +224,7 @@ const ArticleOverview = () => {
 
                         </div>
 
-                        <div className="mt-6 flex flex-col items-start justify-between gap-y-6 border-t border-secondary pt-6 md:flex-row">
+                        <div className="mt-6 flex flex-col items-start justify-between gap-y-6 border-t border-secondary pt-6 md:flex-row md:hidden">
 
                             <div className="flex gap-3 md:hidden">
                                 <Button color="secondary" size="md" onClick={() => copy("https://www.untitledui.com/")} iconLeading={copied ? Check : Copy01} />
@@ -275,13 +272,13 @@ const BlogPost05 = () => {
 
             <KangyurDivisionsSection />
 
-            <div className="mx-auto w-full flex flex-col gap-6 px-8 pt-8 pb-20 md:pt-12 md:pb-24 bg-linear-to-b from-brand-50 from-0% via-brand-100 via-30% to-brand-200 to-100% dark:bg-linear-to-b dark:from-brand-800/50 dark:from-0% dark:via-brand-800/30 dark:via-30% dark:to-brand-900/90">
+            <div className="mx-auto w-full flex flex-col gap-6 px-8 pt-8 pb-20 md:py-12 bg-linear-to-b from-brand-50 from-0% via-brand-100 via-30% to-brand-200 to-100% dark:bg-linear-to-b dark:from-brand-800/50 dark:from-0% dark:via-brand-800/30 dark:via-30% dark:to-brand-900/90">
                 {/* <!-- Kangyur Timeline Header --> */}
                 <div className="flex w-full flex-col justify-between md:flex-row">
                     <div className="flex flex-1 flex-col max-w-280 pr-4 md:pr-24">
                         <h2 className="text-display-md font-extralight text-brand-800 dark:text-brand-300 md:text-display-lg">Kangyur Timeline</h2>
                         <p className="mt-1 text-base text-tertiary md:mt-2 md:text-lg text-balance">
-                            This ephemeral space-and-time capsule traces the development of the scriptural collections that form the Kangyur across different periods and the people who preserved, transmitted, and translated them for us.
+                            Explore the historical timeline tracing the development of the scriptural collections that form the Kangyur across different periods and the people who preserved, transmitted, and translated them for us.
                         </p>
                     </div>
                     <div className="mt-8 flex flex-col gap-3 self-stretch md:mt-0 md:flex-row-reverse md:justify-center md:self-center">
@@ -290,7 +287,7 @@ const BlogPost05 = () => {
                         </Button>
                     </div>
                 </div>
-                <TimelineBaseTemplate01 />
+                <TimelineKangyurEditions />
             </div>
 
         </div>

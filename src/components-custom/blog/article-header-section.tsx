@@ -90,7 +90,7 @@ export const ArticleHeaderSection = (props: ArticleHeaderProps) => {
 
             {/* Article Image */}
             <Image
-                className="relative z-10 mt-10 h-80 w-full object-cover object-center rounded-2xl md:mt-0 md:ml-auto md:h-160 md:w-130 md:max-w-[45vw] drop-shadow-2xl"
+                className="relative z-10 mt-1 h-80 w-full object-cover object-center rounded-4xl md:mt-0 md:ml-auto md:h-160 md:w-130 md:max-w-[45vw] drop-shadow-2xl"
                 src={article_image}
                 alt={article_image_alt}
                 width={800} height={800} />

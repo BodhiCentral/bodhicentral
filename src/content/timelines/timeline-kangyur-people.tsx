@@ -9,8 +9,8 @@ import "@/styles/timelines.css";
 // ─────────────────────────────────────────────────────────
 // Palette constants (matches Bodhi Central brand)
 // ─────────────────────────────────────────────────────────
-const LANE_HEADER_BG = "rgba(0, 0, 0, 0.7)"; // color-black
-const LANE_BODY_BG = "rgba(0, 0, 0, 0.5)"; // color-white
+const LANE_HEADER_BG = "rgba(255, 255, 255, 0.75)"; // color-white
+const LANE_BODY_BG = "rgba(255, 255, 255, 0.70)"; // color-white
 const LANE_HEADER_TITLE = "oklch(0.411 0.051 77.18)"; // color-brand-800
 const ARTICLE_THEME_COLOR = "rgba(0, 0, 0, 0.2)"; // color-gray
 const MANUSCRIPT_STYLE_COLOR = "oklch(69.6% 0.17 162.48)"; // color-emerald-500
@@ -173,7 +173,7 @@ const buildLanes = (): LaneData[] => [
 ];
 
 // ─────────────────────────────────────────────────────────
-// Article data — Major Kangyur Editions
+// Article data — Kangyur People
 // ─────────────────────────────────────────────────────────
 const LANE_ARTICLES: ArticleData[] = [
 
@@ -684,7 +684,7 @@ const buildTimeBandDefaultStyle = (): TimeBandStyle => (
 // ─────────────────────────────────────────────────────────
 // Component
 // ─────────────────────────────────────────────────────────
-export function TimelineBaseTemplate01() {
+export function TimelineKangyurPeople() {
     const containerRef = useRef<HTMLDivElement>(null);
     const timelineRef = useRef<Timeline | null>(null);
 
@@ -842,17 +842,17 @@ export function TimelineBaseTemplate01() {
     ];
 
     return (
-        <div className="h-220">
+        <div className="h-[calc(100vh-100px)]">
             <div className="mx-auto w-full flex flex-col justify-between gap-6">
                 <div className="w-full flex flex-row justify-items-start gap-12">
-                    <Select.ComboBox className="w-86" size="sm" label="Search the timeline" tooltip="Search scriptures and people of the timeline" placeholder="Search scripture and people..." items={item_articles}>
+                    <Select.ComboBox className="w-[350px]" size="sm" label="Search the timeline" tooltip="Search scriptures and people of the timeline" placeholder="Search scripture and people..." items={item_articles}>
                         {(item) => (
                             <Select.Item id={item.id} supportingText={item.supportingText}>
                                 {item.label}
                             </Select.Item>
                         )}
                     </Select.ComboBox>
-                    <Select className="w-50"
+                    <Select className="w-[200px]"
                         size="sm"
                         label="Edition Types"
                         tooltip="Filter by edition type (manuscripts, block-prints, digital, etc.)"
@@ -865,7 +865,7 @@ export function TimelineBaseTemplate01() {
                             </Select.Item>
                         )}
                     </Select>
-                    <Select className="w-64"
+                    <Select className="w-[260px]"
                         size="sm"
                         label="Kangyur Traditions"
                         tooltip="Filter by tradition (Tshalpa Kangyur, Thempangma Kangyur.)"
@@ -887,7 +887,7 @@ export function TimelineBaseTemplate01() {
                     style={{
                         width: "100%",
                         minHeight: "760px",
-                        borderRadius: "16px",
+                        borderRadius: "8px",
                         overflow: "hidden",
                     }}
                 />
