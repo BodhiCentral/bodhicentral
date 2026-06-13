@@ -22,10 +22,11 @@ type HeaderNavItem = {
 };
 
 const headerNavItems: HeaderNavItem[] = [
-    { label: "My Desk", href: "/reader", menu: <DropdownMenuReader /> },
     { label: "Sources", href: "/scripture", menu: <DropdownMenuScripture /> },
     { label: "Paths", href: "/learning-paths", menu: <DropdownMenuLearningPaths /> },
     { label: "Community", href: "/resources", menu: <DropdownMenuResources /> },
+    { label: "My Desk", href: "/reader", menu: <DropdownMenuReader /> },
+    { label: "About", href: "/about" },
 ];
 
 const footerNavItems = [

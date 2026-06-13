@@ -13,11 +13,13 @@ const LANE_HEADER_BG = "rgba(0, 0, 0, 0.7)"; // color-black
 const LANE_BODY_BG = "rgba(0, 0, 0, 0.4)"; // color-white
 const LANE_HEADER_TITLE = "rgba(220, 220, 220, 1)"; // color-white
 const ARTICLE_THEME_COLOR = "rgba(255, 255, 255, 1)"; // color-gray
+const INVENTORIES_STYLE_COLOR = "oklch(0.724 0.07 78.26)"; // color-brand-500
 const MANUSCRIPT_STYLE_COLOR = "oklch(69.6% 0.17 162.48)"; // color-emerald-500
 const XYLOGRAPHS_STYLE_COLOR = "oklch(70.5% 0.213 47.604)"; // color-orange-500
+const DIGITAL_EDITIONS_STYLE_COLOR = "oklch(0.724 0.07 78.26)"; // color-brand-500
 const EDITIONS_COLOR = "oklch(0.545 0.069 77.21)"; // color-brand-700
 const MARKER_COLOR = "oklch(0.724 0.07 78.26)"; // color-brand-500
-const ARTICLE_BORDER_LIGHT = "oklch(92.2% 0 0)"; // color-neutral-200
+const ARTICLE_BORDER_LIGHT = "rgba(100, 100, 100, 0.6)"; // color-black
 const ARTICLE_HEADER_LIGHT = "#333333";
 const FONT_BASE = "var(--font-sans)";
 
@@ -155,7 +157,7 @@ const LANE_ARTICLES: ArticleData[] = [
         lane: "editions",
         from: { year: 780 },
         imageUrl: "/placeholder-image-landscape.svg",
-        style: { color: ARTICLE_THEME_COLOR },
+        style: { color: INVENTORIES_STYLE_COLOR },
     },
     {
         id: "denkarma",
@@ -164,7 +166,7 @@ const LANE_ARTICLES: ArticleData[] = [
         lane: "editions",
         from: { year: 812 },
         imageUrl: "/placeholder-image-landscape.svg",
-        style: { color: ARTICLE_THEME_COLOR },
+        style: { color: INVENTORIES_STYLE_COLOR },
     },
     {
         id: "phangthangma",
@@ -173,7 +175,7 @@ const LANE_ARTICLES: ArticleData[] = [
         lane: "editions",
         from: { year: 822 },
         imageUrl: "/placeholder-image-landscape.svg",
-        style: { color: ARTICLE_THEME_COLOR },
+        style: { color: INVENTORIES_STYLE_COLOR },
     },
     {
         id: "butons-compilation",
@@ -344,7 +346,7 @@ const LANE_ARTICLES: ArticleData[] = [
         from: { year: 1999 },
         to: { year: 2026 },
         imageUrl: "/placeholder-image-landscape.svg",
-        style: { color: ARTICLE_THEME_COLOR },
+        style: { color: DIGITAL_EDITIONS_STYLE_COLOR },
     },
     {
         id: "adarshah-digital-library",
@@ -354,7 +356,7 @@ const LANE_ARTICLES: ArticleData[] = [
         from: { year: 2005 },
         to: { year: 2026 },
         imageUrl: "/placeholder-image-landscape.svg",
-        style: { color: ARTICLE_THEME_COLOR },
+        style: { color: DIGITAL_EDITIONS_STYLE_COLOR },
     },
     {
         id: "84000-translation-project",
@@ -364,7 +366,7 @@ const LANE_ARTICLES: ArticleData[] = [
         from: { year: 2009 },
         to: { year: 2026 },
         imageUrl: "/placeholder-image-landscape.svg",
-        style: { color: ARTICLE_THEME_COLOR },
+        style: { color: DIGITAL_EDITIONS_STYLE_COLOR },
     },
 ];
 
@@ -487,7 +489,7 @@ const buildTimeBandDefaultStyle = (): TimeBandStyle => (
         text: {
             font: "normal 18px Crimson Pro",
             align: "left",
-            margin: 10,
+            margin: 12,
             offsetY: 2,
             verticalAlign: "bottom",
             baseline: "bottom"
@@ -515,7 +517,7 @@ export function TimelineKangyurEditions() {
             const tl = new Timeline(containerRef.current, {
                 width: containerRef.current.offsetWidth || 1440,
                 height: containerRef.current.offsetHeight || 760,
-                initialDate: { year: 600 },
+                initialDate: { year: 680 },
                 zoom: { initial: 30, minimum: 20, maximum: 50 },
                 style: buildStyleOptions(),
                 article: {
@@ -526,7 +528,7 @@ export function TimelineKangyurEditions() {
                         shadow: { x: 0, y: 2, amount: 16, color: "rgba(0,0,0,0.05)" },
                     },
                     defaultActiveStyle: {
-                        border: { color: "#ededed", width: 1 },
+                        border: { color: "#888888", width: 1 },
                     },
                     autoStacking: { active: true, rowSpacing: 80 },
                     collectOngoing: true,
@@ -541,7 +543,7 @@ export function TimelineKangyurEditions() {
                 timeBand: {
                     visible: true,
                     reserveSpace: true,
-                    reserveSpacePixels: 30,
+                    reserveSpacePixels: 48,
                     area: {
                         up: 0,
                         down: "edge",
@@ -555,7 +557,7 @@ export function TimelineKangyurEditions() {
 
             // Fit to show the full span of Kangyur history
             tl.fitDateRange(
-                { year: 600 },
+                { year: 650 },
                 { year: 2040 },
             );
 
