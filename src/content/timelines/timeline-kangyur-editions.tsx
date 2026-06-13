@@ -666,8 +666,8 @@ export function TimelineKangyurEditions() {
                     <Select className="w-50"
                         size="sm"
                         label="Edition Types"
-                        tooltip="Filter by edition type (manuscripts, block-prints, digital, etc.)"
-                        placeholder="Filter edition type"
+                        tooltip="Filter edition types (manuscripts, block-prints, digital, etc.)"
+                        placeholder="Filter edition types"
                         items={items}
                     >
                         {(item) => (
@@ -679,8 +679,8 @@ export function TimelineKangyurEditions() {
                     <Select className="w-76"
                         size="sm"
                         label="Kangyur Traditions"
-                        tooltip="Filter by tradition (Tshalpa Kangyur, Thempangma Kangyur.)"
-                        placeholder="Filter by Kangyur tradition and period"
+                        tooltip="Filter traditions (Tshalpa Kangyur, Thempangma Kangyur.)"
+                        placeholder="Filter Kangyur traditions and periods"
                         items={kangyur_traditions}
                     >
                         {(item) => (
