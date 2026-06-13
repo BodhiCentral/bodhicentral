@@ -118,7 +118,7 @@ const ArticleOverview = () => {
                             </ul>
                             {/* Kangyur Divisions */}
                             <figure>
-                                <div className="flex flex-col bg-secondary px-6 py-4 gap-2 rounded-2xl drop-shadow-sm">
+                                <div className="flex flex-col bg-secondary px-6 py-4 gap-4 rounded-3xl drop-shadow-sm">
                                     <div className="flex flex-row items-center justify-between gap-4">
                                         <h4 className="not-prose text-display-xs text-brand-700 dark:text-brand-700/80">Degé Kangyur Divisions</h4>
                                         <div className="flex flex-col gap-3 md:justify-center pb-1">
@@ -127,24 +127,24 @@ const ArticleOverview = () => {
                                             </Button>
                                         </div>
                                     </div>
-                                    <div className="mx-auto w-full flex flex-row flex-wrap md:flex-nowrap items-start justify-center gap-2 rounded-2xl">
-                                        <div className="mx-auto w-full h-full flex flex-col items-center justify-center gap-0 bg-emerald-100/60 dark:bg-emerald-950/80 px-2 py-4 rounded-2xl border border-emerald-200 dark:border-emerald-800">
+                                    <div className="mx-auto w-full flex flex-row flex-wrap md:flex-nowrap items-start justify-center gap-2">
+                                        <div className="mx-auto grow-4 h-full flex  flex-col items-center justify-center gap-0 bg-emerald-100/60 dark:bg-emerald-950/80 px-2 py-4 rounded-2xl border border-emerald-200 dark:border-emerald-800">
                                             <p className="not-prose text-md font-light text-primary/70 text-center">འདུལ་བ།</p>
-                                            <p className="not-prose text-md font-bold text-center text-secondary">Discipline</p>
+                                            <p className="not-prose text-md font-bold text-center text-secondary">Vinaya</p>
                                         </div>
-                                        <div className="mx-auto w-full h-full flex flex-col items-center justify-center gap-0 bg-cyan-100/60 dark:bg-cyan-950/80 px-2 py-4 rounded-2xl border border-cyan-200 dark:border-cyan-800">
+                                        <div className="mx-auto grow-4 h-full flex  flex-col items-center justify-center gap-0 bg-cyan-100/60 dark:bg-cyan-950/80 px-2 py-4 rounded-2xl border border-cyan-200 dark:border-cyan-800">
                                             <p className="not-prose text-md font-light text-primary/70 text-center">མདོ།</p>
-                                            <p className="not-prose text-md font-bold text-center text-secondary">Discourses</p>
+                                            <p className="not-prose text-md font-bold text-center text-secondary">Sūtra</p>
                                         </div>
-                                        <div className="mx-auto w-full h-full flex flex-col items-center justify-center gap-0 bg-blue-100/60 dark:bg-blue-950/80 px-2 py-4 rounded-2xl border border-blue-200 dark:border-blue-800">
+                                        <div className="mx-auto grow-4 h-full flex  flex-col items-center justify-center gap-0 bg-blue-100/60 dark:bg-blue-950/80 px-2 py-4 rounded-2xl border border-blue-200 dark:border-blue-800">
                                             <p className="not-prose text-md font-light text-primary/70 text-center">རྒྱུད།</p>
                                             <p className="not-prose text-md font-bold text-center text-secondary">Tantra</p>
                                         </div>
-                                        <div className="mx-auto w-full h-full flex flex-col items-center justify-center gap-0 bg-violet-100/60 dark:bg-violet-950/80 px-2 py-4 rounded-2xl border border-violet-200 dark:border-violet-800">
+                                        <div className="mx-auto grow-4 h-full flex flex-col items-center justify-center gap-0 bg-violet-100/60 dark:bg-violet-950/80 px-2 py-4 rounded-2xl border border-violet-200 dark:border-violet-800">
                                             <p className="not-prose text-md font-light text-primary/70 text-center">གཟུངས་འབུམ།</p>
                                             <p className="not-prose text-md font-bold text-center text-secondary">Dhāraṇī</p>
                                         </div>
-                                        <div className="mx-auto w-full h-auto flex flex-col items-center justify-center gap-0 bg-fuchsia-100/60 dark:bg-fuchsia-950/80 px-2 py-4 rounded-2xl border border-fuchsia-200 dark:border-fuchsia-800">
+                                        <div className="mx-auto grow-6  h-auto flex flex-col items-center justify-center gap-0 bg-fuchsia-100/60 dark:bg-fuchsia-950/80 px-2 py-4 rounded-2xl border border-fuchsia-200 dark:border-fuchsia-800">
                                             <p className="not-prose text-md font-light text-primary/70 text-center">བཀའ་འགྱུར་དཀར་ཆག
 
                                             </p>

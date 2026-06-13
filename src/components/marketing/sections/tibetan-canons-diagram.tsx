@@ -80,7 +80,7 @@ export const TibetanCanonsDiagram = () => {
                                 </div>
                                 <div className="mx-auto w-full col-span-2 h-full flex flex-col items-center justify-center gap-0 bg-yellow-100/60 dark:bg-yellow-800/40 px-2 py-2 rounded-2xl border border-yellow-300 dark:border-yellow-700">
                                     <p className="text-lg font-light text-primary/70 text-center tracking-tight">མདོ་སྡེ།</p>
-                                    <p className="text-md font-bold text-center text-secondary">Sūtra Collection</p>
+                                    <p className="text-md font-bold text-center text-secondary">Sūtra Section</p>
                                 </div>
                                 <div className="mx-auto w-full flex flex-col items-center justify-center gap-0 bg-red-100/60 dark:bg-red-800/40 px-2 py-2 rounded-2xl border border-red-200 dark:border-red-700">
                                     <p className="text-lg font-light text-primary/70 text-center tracking-tight">རྒྱུད་འབུམ།</p>
@@ -121,7 +121,7 @@ export const TibetanCanonsDiagram = () => {
                                 </div>
                                 <div className="w-full flex flex-col items-center justify-center gap-0 bg-red-100/60 dark:bg-red-800/40 px-2 py-2 rounded-2xl border border-red-200 dark:border-red-700">
                                     <p className="text-lg font-light text-primary/70 text-center">རྒྱུད།</p>
-                                    <p className="text-md font-bold text-center text-secondary">Tantra Treatises</p>
+                                    <p className="text-md font-bold text-center text-secondary">Tantra</p>
                                 </div>
                                 <div className="mx-auto w-full h-full flex flex-col items-center justify-center gap-0 bg-yellow-100/60 dark:bg-yellow-800/40 px-2 py-2 rounded-2xl border border-yellow-300 dark:border-yellow-700">
                                     <p className="text-lg font-light text-primary/70 text-center">ཤེས་ཕྱིན།</p>
@@ -214,7 +214,7 @@ export const TibetanCanonsDiagram = () => {
                                 </div>
                                 <div className="mx-auto w-full h-full md:col-span-2 flex flex-col items-center justify-center gap-0 bg-yellow-100/60 dark:bg-yellow-900/40 px-2 py-3 rounded-2xl border border-yellow-300 dark:border-yellow-800">
                                     <p className="text-lg font-light text-primary/70 text-center tracking-tight">མདོ་སྡེ།</p>
-                                    <p className="text-md font-bold text-center text-secondary">Sūtra Collection</p>
+                                    <p className="text-md font-bold text-center text-secondary">Sūtra Section</p>
                                 </div>
                                 <div className="mx-auto w-full h-full flex flex-col items-center justify-start gap-0 bg-red-100/60 dark:bg-red-900/40 px-2 py-3 rounded-2xl border border-red-200 dark:border-red-800">
                                     <p className="text-lg font-light text-primary/70 text-center tracking-tight">རྒྱུད་འབུམ།</p>
@@ -259,7 +259,7 @@ export const TibetanCanonsDiagram = () => {
                                 </div>
                                 <div className="mx-auto w-full h-full flex flex-col items-center justify-start gap-0 bg-red-100/60 dark:bg-red-900/40 px-2 py-3 rounded-2xl border border-red-200 dark:border-red-800">
                                     <p className="text-lg font-light text-primary/70 text-center">རྒྱུད།</p>
-                                    <p className="text-md font-bold text-center text-secondary">Tantra Treatises</p>
+                                    <p className="text-md font-bold text-center text-secondary">Tantra</p>
                                 </div>
                                 <div className="mx-auto w-full h-full flex flex-col items-center justify-start gap-0 bg-yellow-100/60 dark:bg-yellow-900/40 px-2 py-3 rounded-2xl border border-yellow-300 dark:border-yellow-800">
                                     <p className="text-lg font-light text-primary/70 text-center">ཤེས་ཕྱིན།</p>
