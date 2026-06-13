@@ -54,7 +54,7 @@ export const TibetanCanonsDiagram = () => {
                     /* Tibetan Canons COLUMNS LAYOUT */
                     <div className="mx-auto max-w-7xl px-4 md:px-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-start animate-in fade-in duration-500">
                         {/* The Kangyur */}
-                        <div className="flex flex-col gap-2 items-center justify-start bg-white/90 dark:bg-brand-950/80 p-4 rounded-2xl drop-shadow-sm h-full max-w-xl mx-auto w-full">
+                        <div className="flex flex-col gap-2 items-center justify-start bg-white/90 dark:bg-brand-950/80 p-4 rounded-4xl drop-shadow-sm h-full max-w-xl mx-auto w-full">
                             <h4 className="text-display-xs text-brand-800 dark:text-brand-400">The Degé Kangyur</h4>
                             <p className="text-sm text-tertiary text-center pb-4 px-4 whitespace-pre-wrap">Translations of Indian scriptures into Tibetan (102 vols.)</p>
                             <div className="mx-auto w-full grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-2 rounded-3xl p-2">
@@ -111,7 +111,7 @@ export const TibetanCanonsDiagram = () => {
                         </div>
 
                         {/* The Tengyur */}
-                        <div className="flex flex-col gap-2 items-center justify-start bg-white/90 dark:bg-brand-950/80 p-4 rounded-2xl drop-shadow-sm h-full max-w-xl mx-auto w-full">
+                        <div className="flex flex-col gap-2 items-center justify-start bg-white/90 dark:bg-brand-950/80 p-4 rounded-4xl drop-shadow-sm h-full max-w-xl mx-auto w-full">
                             <h4 className="text-display-xs text-brand-800 dark:text-brand-400">The Degé Tengyur</h4>
                             <p className="text-sm text-tertiary text-center pb-4 px-4 whitespace-pre-wrap">Translations of Indian Treatises in Tibetan (213 vols.)</p>
                             <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-2 rounded-3xl p-2">
@@ -179,7 +179,7 @@ export const TibetanCanonsDiagram = () => {
                     /* Tibetan Canons ROWS LAYOUT */
                     <div className="mx-auto max-w-container px-4 md:px-6 grid grid-cols-1 gap-8 items-start animate-in fade-in duration-500">
                         {/* The Degé Kangyur - Rows Layout */}
-                        <div className="flex flex-col bg-white/90 dark:bg-brand-950/80 p-6 gap-4 rounded-2xl drop-shadow-sm">
+                        <div className="flex flex-col bg-white/90 dark:bg-brand-950/80 p-6 gap-4 rounded-4xl drop-shadow-sm">
                             <div className="flex flex-row items-center justify-between gap-4">
                                 <div className="flex flex-col">
                                     <h4 className="text-display-xs text-brand-700 dark:text-brand-700/80">The Degé Kangyur</h4>
@@ -240,7 +240,7 @@ export const TibetanCanonsDiagram = () => {
                         </div>
 
                         {/* The Tengyur - Rows Layout */}
-                        <div className="flex flex-col bg-white/90 dark:bg-brand-950/80 p-6 gap-4 rounded-2xl drop-shadow-sm">
+                        <div className="flex flex-col bg-white/90 dark:bg-brand-950/80 p-6 gap-4 rounded-4xl drop-shadow-sm">
                             <div className="flex flex-row items-center justify-between gap-4">
                                 <div className="flex flex-col">
                                     <h4 className="text-display-xs text-brand-700 dark:text-brand-700/80">The Degé Tengyur</h4>

@@ -118,7 +118,7 @@ const ArticleOverview = () => {
                             </ul>
                             {/* Kangyur Divisions */}
                             <figure>
-                                <div className="flex flex-col bg-secondary px-6 py-4 gap-4 rounded-3xl drop-shadow-sm">
+                                <div className="flex flex-col bg-secondary p-6 gap-4 rounded-3xl drop-shadow-sm">
                                     <div className="flex flex-row items-center justify-between gap-4">
                                         <h4 className="not-prose text-display-xs text-brand-700 dark:text-brand-700/80">Degé Kangyur Divisions</h4>
                                         <div className="flex flex-col gap-3 md:justify-center pb-1">
