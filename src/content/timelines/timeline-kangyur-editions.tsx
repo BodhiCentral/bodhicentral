@@ -11,7 +11,7 @@ import "@/styles/timelines.css";
 // ─────────────────────────────────────────────────────────
 const LANE_HEADER_BG = "rgba(0, 0, 0, 0.7)"; // color-black
 const LANE_BODY_BG = "rgba(0, 0, 0, 0.4)"; // color-white
-const LANE_HEADER_TITLE = "oklch(0.411 0.051 77.18)"; // color-brand-800
+const LANE_HEADER_TITLE = "rgba(220, 220, 220, 1)"; // color-white
 const ARTICLE_THEME_COLOR = "rgba(255, 255, 255, 1)"; // color-gray
 const MANUSCRIPT_STYLE_COLOR = "oklch(69.6% 0.17 162.48)"; // color-emerald-500
 const XYLOGRAPHS_STYLE_COLOR = "oklch(70.5% 0.213 47.604)"; // color-orange-500
@@ -55,7 +55,7 @@ const buildStyleOptions = (): TimelineOptions["style"] => ({
 // ─────────────────────────────────────────────────────────
 const buildArticleDefaultStyle = () => ({
     width: 250,
-    height: 186,
+    height: 180,
     topRadius: 20,
     bottomRadius: 12,
     backgroundColor: "#ffffff",
@@ -113,7 +113,7 @@ const buildLanes = (): LaneData[] => [
         layout: {
             heightWeight: 1,
             header: {
-                height: 56,
+                height: 50,
             }
         },
         style: {
@@ -127,7 +127,7 @@ const buildLanes = (): LaneData[] => [
             },
             title: {
                 color: LANE_HEADER_TITLE,
-                font: `700 1.25rem Crimson Pro`,
+                font: `500 1.25rem Crimson Pro`,
             },
         },
         article: {
@@ -391,8 +391,8 @@ const buildTimeBands = (): TimeBandData[] => [
         },
     },
     {
-        id: "dark-period",
-        title: "Dark Period",
+        id: "empire-collapse",
+        title: "Tibetan Empire Collapse",
         from: {
             year: 840,
             precision: PRECISION_YEAR,
@@ -487,7 +487,7 @@ const buildTimeBandDefaultStyle = (): TimeBandStyle => (
         text: {
             font: "normal 18px Crimson Pro",
             align: "left",
-            margin: 8,
+            margin: 10,
             offsetY: 2,
             verticalAlign: "bottom",
             baseline: "bottom"
@@ -513,7 +513,7 @@ export function TimelineKangyurEditions() {
             if (!containerRef.current) return;
 
             const tl = new Timeline(containerRef.current, {
-                width: containerRef.current.offsetWidth || 1280,
+                width: containerRef.current.offsetWidth || 1440,
                 height: containerRef.current.offsetHeight || 760,
                 initialDate: { year: 600 },
                 zoom: { initial: 30, minimum: 20, maximum: 50 },
@@ -556,7 +556,7 @@ export function TimelineKangyurEditions() {
             // Fit to show the full span of Kangyur history
             tl.fitDateRange(
                 { year: 600 },
-                { year: 2000 },
+                { year: 2040 },
             );
 
             timelineRef.current = tl;

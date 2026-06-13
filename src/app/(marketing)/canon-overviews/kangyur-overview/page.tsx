@@ -272,13 +272,13 @@ const BlogPost05 = () => {
 
             <KangyurDivisionsSection />
 
-            <div className="mx-auto w-full flex flex-col gap-6 px-8 pt-8 pb-20 md:py-12 bg-linear-to-b from-brand-50 from-0% via-brand-100 via-30% to-brand-200 to-100% dark:bg-linear-to-b dark:from-brand-800/50 dark:from-0% dark:via-brand-800/30 dark:via-30% dark:to-brand-900/90">
+            <div className="mx-auto w-full flex flex-col gap-8 px-8 pt-8 pb-20 md:py-12 bg-linear-to-b from-brand-50 from-0% via-brand-100 via-30% to-brand-200 to-100% dark:bg-linear-to-b dark:from-brand-800/50 dark:from-0% dark:via-brand-800/30 dark:via-30% dark:to-brand-900/90">
                 {/* <!-- Kangyur Timeline Header --> */}
                 <div className="flex w-full flex-col justify-between md:flex-row">
                     <div className="flex flex-1 flex-col max-w-280 pr-4 md:pr-24">
                         <h2 className="text-display-md font-extralight text-brand-800 dark:text-brand-300 md:text-display-lg">Kangyur Timeline</h2>
                         <p className="mt-1 text-base text-tertiary md:mt-2 md:text-lg text-balance">
-                            Explore the historical timeline tracing the development of the scriptural collections that form the Kangyur across different periods and the people who preserved, transmitted, and translated them for us.
+                            Explore the historical development of the scriptural collections that form the Kangyur across different periods and the people who preserved, transmitted, and translated them for us.
                         </p>
                     </div>
                     <div className="mt-8 flex flex-col gap-3 self-stretch md:mt-0 md:flex-row-reverse md:justify-center md:self-center">
