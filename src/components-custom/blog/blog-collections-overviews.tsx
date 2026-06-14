@@ -4,7 +4,7 @@ import { type Article, Simple01Vertical } from "@/components/marketing/blog/base
 const articles: Article[] = [
     {
         id: "article-1",
-        title: "Buddhist Traditions: Buddha’s words adopted by the world",
+        title: "Traditions of the Awakening: Buddha’s words adopted by the world",
         summary: "The three great propagations of Buddha's words span over 2,5000 years across cultures and continents",
         href: "#",
         category: {
@@ -112,8 +112,8 @@ export const BlogSectionCollectionsOverviews = () => {
                 <div className="flex flex-col items-start justify-between lg:flex-row">
                     <div className="max-w-3xl">
                         <span className="text-sm font-light text-brand-600 dark:text-brand-700 md:text-md">Canonical Organization</span>
-                        <h2 className="mt-2 text-display-sm font-extralight text-brand-800 dark:text-brand-300 md:text-display-lg">The Collections of Scripture</h2>
-                        <p className="mt-4 text-lg text-tertiary md:mt-2 md:text-xl">Introductions to the collections of scriptures and relationships among them.</p>
+                        <h2 className="mt-2 text-display-sm font-extralight text-brand-800 dark:text-brand-300 md:text-display-lg">Collections of Buddhist Scriptures</h2>
+                        <p className="mt-4 text-lg text-tertiary md:mt-2 md:text-xl">Expert introductions to collections of scriptures, genres, connections and relationships among them.</p>
                     </div>
 
                     <div className="hidden gap-3 lg:flex">

@@ -5,7 +5,7 @@ import { ArrowRight } from "@untitledui/icons";
 
 export const CTACenteredPlansSignupFeaturedBgImage = () => {
     return (
-        <section className="relative bg-brand-section py-16 md:pt-32 md:pb-20 overflow-hidden bg-[url('/people-seating-on-lake-and-mountains.webp')] bg-cover bg-center h-[64vh]">
+        <section className="relative bg-brand-section py-16 md:pt-32 md:pb-20 overflow-hidden bg-[url('/people-seating-on-lake-and-mountains.webp')] bg-cover bg-center h-[78vh]">
 
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="hero-bg-grad"></div>
