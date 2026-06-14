@@ -83,7 +83,7 @@ export const ContactFormAndImage01 = () => {
                     </div>
 
                     <div className="max-lg:hidden lg:h-110">
-                        <Image src="/monk-seated-in-meditation-under-forest-tree-1920.webp" className="h-full w-full rounded-3xl object-cover shadow-xl" alt="Monk Meditating under Tree" width={800} height={800} />
+                        <Image src="/monk-seated-in-meditation-under-forest-tree-1920.webp" className="h-full w-full rounded-3xl object-cover shadow-xl shadow-brand-200 dark:shadow-brand-800/50" alt="Monk Meditating under Tree" width={800} height={800} />
                     </div>
                 </div>
             </div>

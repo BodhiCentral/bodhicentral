@@ -66,6 +66,7 @@ export const FAQAccordionSimple = () => {
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
                     <h2 className="text-display-md font-extralight text-brand-800 dark:text-brand-400 md:text-display-xl">Your Questions, Answered</h2>
+                    <p className="text-md font-light text-secondary py-2">Find more about our subscription plans and services.</p>
                 </div>
 
                 <div className="mx-auto mt-12 max-w-3xl md:mt-16">
