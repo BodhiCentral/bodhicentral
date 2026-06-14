@@ -5,7 +5,7 @@ import { ArrowRight } from "@untitledui/icons";
 
 export const CTACenteredPlansSignupFeaturedBgImage = () => {
     return (
-        <section className="relative bg-brand-section py-16 md:pt-32 md:pb-20 overflow-hidden bg-[url('/people-seating-on-lake-and-mountains.webp')] bg-cover bg-center h-[74vh]">
+        <section className="relative bg-brand-section py-16 md:pt-32 md:pb-20 overflow-hidden bg-[url('/people-seating-on-lake-and-mountains.webp')] bg-cover bg-center h-[64vh]">
 
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="hero-bg-grad"></div>
@@ -60,8 +60,8 @@ export const CTACenteredPlansSignupFeaturedBgImage = () => {
                     </g>
                 </svg>
                 <div className="relative z-10 flex flex-col justify-center text-center max-w-4xl mx-auto">
-                    <h2 className="text-display-md font-light text-white text-shadow-sm text-shadow-gray-800 md:text-display-3xl">Start reading, reflecting, and growing together.</h2>
-                    <p className="mt-4 text-lg font-medium text-tertiary_on-brand md:mt-5 md:text-xl text-shadow-xs text-shadow-neutral-950">Explore sutras and shastras from all traditions, highlight what matters, take personal notes, and build a study space that is entirely your own — all within a single, unified reader.</p>
+                    <h2 className="text-display-md font-light text-white text-shadow-sm text-shadow-gray-600 md:text-display-3xl">Start reading, reflecting, and growing together.</h2>
+                    <p className="mt-4 text-lg font-medium text-brand-100 md:mt-5 md:text-xl text-shadow-xs text-shadow-neutral-950">Explore sutras and shastras from all traditions, highlight what matters, take personal notes, and build a study space that is entirely your own — all within a single, unified reader.</p>
                     <div className="mt-8 flex flex-col-reverse gap-3 self-stretch md:mt-8 md:flex-row md:self-center">
                         <Button href="/reader" iconTrailing={ArrowRight} size="lg">Get started - it's free</Button>
                     </div>

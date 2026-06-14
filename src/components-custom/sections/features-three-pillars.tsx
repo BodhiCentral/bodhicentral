@@ -35,7 +35,7 @@ export const FeaturesThreePillars = () => {
             <div className="mx-auto w-full max-w-container px-4 md:px-8">
                 <div className="mx-auto flex w-full max-w-4xl flex-col items-center text-center">
                     <h2 className="mt-3 text-display-md font-extralight tracking-tight text-brand-600 dark:text-brand-400 lg:text-display-lg">Not a library. Not an app.</h2>
-                    <h2 className="text-display-lg font-extralight tracking-tight text-brand-600 dark:text-brand-400 lg:text-display-xl">A living doorway into the <span className="text-brand-800 dark:text-brand-800 font-extralight italic tracking-wide">dharma</span></h2>
+                    <h2 className="text-display-lg font-extralight tracking-tight text-brand-600 dark:text-brand-400 lg:text-display-xl">A living doorway into the <span className="text-brand-600 lg:text-display-2xl dark:text-white font-extralight italic tracking-wide">dharma</span></h2>
                 </div>
             </div>
             {/* Features Group: Scriptures, Paths, and Resources */}
@@ -50,9 +50,10 @@ export const FeaturesThreePillars = () => {
                         </p>
                         <ul className="mt-8 flex flex-col gap-4 pl-2 md:gap-5 md:pl-4">
                             {[
+                                
+                                "Clear presentation of original authentic Buddhist sources in Pali, Tibetan, and publicly available translations—a treasure trove of texts that are currently transmitted and practiced in modern mainstream Buddhist traditions",
+                                "A pragmatic approach to collections, genres, and other categories of texts, organized with clarity and authority for students and practitioners, regardless of your affiliation and tradition.",
                                 "State-of-the-art readers and personal workspaces to make your experience smooth and memorable",
-                                "Clear access to a treasure trove of texts that are currently transmitted and practiced in modern Buddhist transmissions",
-                                "With a pragmatic approach, collections, genres, and other categories of texts are organized in a way that makes sense to students and practitioners, regardless of their school or tradition."
 
                             ].map((feat) => (
                                 <CheckItemText key={feat} size="sm" iconStyle="outlined" color="primary" text={feat} />
@@ -152,9 +153,9 @@ export const FeaturesThreePillars = () => {
                 <div className="grid grid-cols-1 gap-10 md:gap-16 lg:grid-cols-3 lg:gap-22 lg:items-center lg:justify-center pb-30">
                     <div className="max-w-lg flex-1 self-center">
                         <FeaturedIcon icon={ChartBreakoutSquare} size="lg" color="gray" theme="modern-neue" />
-                        <h3 className="mt-5 text-display-xs text-brand-800 dark:text-brand-400 md:text-display-lg">Resources for Communities</h3>
+                        <h3 className="mt-5 text-display-xs text-brand-800 dark:text-brand-400 md:text-display-lg">Resources for Individuals and Communities</h3>
                         <p className="mt-2 text-md text-tertiary md:mt-4 md:text-lg">
-                            Find teachers and study centers worldwide through our curated directory. Deepen your understanding with articles written from within the living Buddhist traditions. Join practitioners in our forum and bring questions, reflections, and encouragement to a growing global sangha. All documentation and guidelines are openly available for contributors and curious minds alike.
+                            Find teachers and study centers worldwide through our curated directory. Deepen your understanding with articles written from within the living Buddhist traditions. Create your own personal study and reading spaces suited to your needs and preferences. All documentation and guidelines are openly available for contributors and curious minds alike.
                         </p>
                         <Button href="/resources" color="secondary" size="md" className="relative z-100 mt-8 cursor-pointer">
                             Explore resources
@@ -222,11 +223,11 @@ export const FeaturesThreePillars = () => {
                                 style={{
                                     gridArea: "12 / 8 / 12 / 12",
                                 }}
-                            >Open Forum</span>
+                            >Personal Spaces</span>
                             <img
                                 src="/placeholder-image-landscape.svg"
                                 className="size-full object-cover border-double border-5 border-gray-300 dark:border-gray-700 rounded-xl  -rotate-y-2 rotate-x-2 rotate-z-15 translate-y-39.5 translate-x-2.5"
-                                alt="BD open forum screenshot"
+                                alt="Personal Spaces screenshot"
                                 style={{
                                     gridArea: "7 / 8 / 11 / 13",
                                 }}

@@ -277,11 +277,11 @@ const FeaturesCenterMockup01 = () => {
                     <div className="flex h-full w-full items-center justify-center md:max-h-204 md:w-full">
                         <div
                             className={cx(
-                                "size-full rounded-[9.03px] bg-primary p-[0.9px] shadow-modern-mockup-outer-md ring-[0.56px] ring-utility-neutral-300 ring-inset md:rounded-[32px] md:p-1 md:shadow-modern-mockup-outer-lg md:ring-2",
+                                "size-full rounded-[9.03px] bg-primary p-[0.9px] shadow-modern-mockup-outer-md ring-[0.56px] ring-utility-neutral-300 ring-inset md:rounded-4xl md:p-1 md:shadow-modern-mockup-outer-lg md:ring-2",
                             )}
                         >
                             <div className="size-full rounded-[7.9px] bg-primary p-0.5 shadow-modern-mockup-inner-md md:rounded-[28px] md:p-[5.4px] md:shadow-modern-mockup-inner-lg">
-                                <div className="relative size-full overflow-hidden rounded-[6.77px] ring-[0.56px] ring-utility-neutral-200 md:rounded-[24px] md:ring-2">
+                                <div className="relative size-full overflow-hidden rounded-[6.77px] ring-[0.56px] ring-utility-neutral-200 md:rounded-3xl md:ring-2">
                                     {/* Light mode image (hidden in dark mode) */}
                                     <img
                                         alt="Dashboard mockup showing application interface"
@@ -291,7 +291,7 @@ const FeaturesCenterMockup01 = () => {
                                     {/* Dark mode image (hidden in light mode) */}
                                     <img
                                         alt="Dashboard mockup showing application interface"
-                                        src="theravada-tradition-dark-mode-1600.webp"
+                                        src="/theravada-tradition-dark-mode-1600.webp"
                                         className="size-full object-cover not-dark:hidden"
                                     />
                                 </div>
