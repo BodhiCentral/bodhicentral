@@ -1,111 +1,112 @@
-
 /* Hero Section */
 .hero {
     overflow: hidden;
-  }
- 
-  /* Background layers */
-  .hero-bg-grad {
-    position: absolute; inset: 0;
-    background: radial-gradient(ellipse 80% 70% at 68% 44%,
-      rgba(176,141,87,0.09) 0%,
-      rgba(26,23,20,0) 65%),
-      radial-gradient(ellipse 50% 60% at 15% 80%,
-      rgba(90,70,40,0.13) 0%,
-      rgba(26,23,20,0) 60%);
-  }
+}
 
+/* Background layers */
+.hero-bg-grad {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 80% 70% at 68% 44%, rgba(176, 141, 87, 0.09) 0%, rgba(26, 23, 20, 0) 65%),
+        radial-gradient(ellipse 50% 60% at 15% 80%, rgba(90, 70, 40, 0.13) 0%, rgba(26, 23, 20, 0) 60%);
+}
 
-  /* Mandala SVG ring – decorative right side Hero Section */
+/* Mandala SVG ring – decorative right side Hero Section */
 .hero-section-mandala {
     position: absolute;
-    right: -60px; top: 50%;
+    right: 2%;
+    top: 50%;
     transform: translateY(-50%);
-    width: 660px; height: 660px;
-    opacity: 0.25;
+    width: 720px;
+    height: 720px;
+    opacity: 0.3;
     animation: slowSpin 95s linear infinite;
-  }
+}
 
-    /* Fine grain overlay */
-  .hero-grain {
-    position: absolute; inset: 0;
+/* Fine grain overlay */
+.hero-grain {
+    position: absolute;
+    inset: 0;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
     opacity: 0.045;
     pointer-events: none;
-  }
- 
+}
 
-  /* Thin horizontal rule accent */
-  .hero-rule {
+/* Thin horizontal rule accent */
+.hero-rule {
     position: absolute;
-    left: 0; right: 0;
+    left: 0;
+    right: 0;
     top: 39%;
     height: 1px;
-    background: linear-gradient(90deg,
-      transparent 0%,
-      rgba(176,141,87,0.18) 20%,
-      rgba(176,141,87,0.08) 65%,
-      transparent 100%);
+    background: linear-gradient(90deg, transparent 0%, rgba(176, 141, 87, 0.18) 20%, rgba(176, 141, 87, 0.08) 65%, transparent 100%);
     transform: translateY(-120px);
     pointer-events: none;
-  }
- 
-  /* ── HERO CONTENT ── */
-  .hero-inner {
+}
+
+/* ── HERO CONTENT ── */
+.hero-inner {
     margin: 0 auto;
-  }
- 
-  .hero-left { max-width: 560px; }
- 
-  /* Eyebrow */
-  .eyebrow {
+}
+
+.hero-left {
+    max-width: 560px;
+}
+
+/* Eyebrow */
+.eyebrow {
     display: inline-flex;
     align-items: center;
     gap: 12px;
     margin-bottom: 32px;
     animation: fadeUp 1s ease both;
     animation-delay: 0.1s;
-  }
-  .eyebrow-line {
-    width: 32px; height: 1px; background: var(--color-gold-600);
-  }
-  .eyebrow-text {
+}
+.eyebrow-line {
+    width: 32px;
+    height: 1px;
+    background: var(--color-gold-600);
+}
+.eyebrow-text {
     font-family: var(--font-sans);
     font-size: 0.67rem;
     font-weight: 400;
     letter-spacing: 0.28em;
     text-transform: uppercase;
     color: var(--color-gold-600);
-  }
+}
 
-  /* Headline */
-  .hero-headline {
+/* Headline */
+.hero-headline {
     margin-bottom: 28px;
     animation: fadeUp 1s ease both;
     animation-delay: 0.25s;
-  }
+}
 
-  .hero-headline span {
-    text-shadow: 0 0 20px rgba(201, 169, 110, 0.35), 0 0 32px rgba(176, 141, 87, 0.15);
-    }
+.hero-headline span {
+    text-shadow:
+        0 0 20px rgba(201, 169, 110, 0.35),
+        0 0 32px rgba(176, 141, 87, 0.15);
+}
 
-  /* Sub */
-  .hero-sub {
-    color: rgba(245,240,232,0.52);
+/* Sub */
+.hero-sub {
+    color: rgba(245, 240, 232, 0.52);
     animation: fadeUp 1s ease both;
     animation-delay: 0.4s;
-  }
+}
 
-  /*  CTAs */
+/*  CTAs */
 
-  .hero-ctas {
+.hero-ctas {
     display: flex;
     align-items: center;
     gap: 28px;
     animation: fadeUp 1s ease both;
     animation-delay: 0.55s;
-  }
-  .cta-primary {
+}
+.cta-primary {
     font-size: 0.74rem;
     font-weight: 700;
     letter-spacing: 0.2em;
@@ -114,89 +115,104 @@
     background: var(--color-brand-600);
     text-decoration: none;
     padding: 14px 36px;
-    transition: all 0.3s, transform 0.2s;
-  }
-  .cta-primary:hover { background: var(--color-brand-400); transform: translateY(-1px); }
- 
-  .cta-secondary {
+    transition:
+        all 0.3s,
+        transform 0.2s;
+}
+.cta-primary:hover {
+    background: var(--color-brand-400);
+    transform: translateY(-1px);
+}
+
+.cta-secondary {
     font-size: 0.74rem;
     font-weight: 600;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: rgba(245,240,232,0.65);
+    color: rgba(245, 240, 232, 0.65);
     text-decoration: none;
     display: flex;
     align-items: center;
     gap: 8px;
     transition: color 0.3s;
-  }
-  .cta-secondary svg { opacity: 0.5; transition: transform 0.3s; }
-  .cta-secondary:hover { color: var(--color-cream-900); }
-  .cta-secondary:hover svg { transform: translateX(4px); opacity:1; }
-  
+}
+.cta-secondary svg {
+    opacity: 0.5;
+    transition: transform 0.3s;
+}
+.cta-secondary:hover {
+    color: var(--color-cream-900);
+}
+.cta-secondary:hover svg {
+    transform: translateX(4px);
+    opacity: 1;
+}
 
-  /* ── RIGHT SIDE: Mandala medallion ── */
-  .hero-right {
+/* ── RIGHT SIDE: Mandala medallion ── */
+.hero-right {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     animation: fadeIn 1.4s ease both;
     animation-delay: 0.5s;
-  }
- 
-  .medallion-wrap {
+}
+
+.medallion-wrap {
     position: relative;
-    width: 480px; height: 480px;
-  }
- 
-  /* Outer glow ring */
-  .medallion-wrap::before {
-    content: '';
+    width: 480px;
+    height: 480px;
+}
+
+/* Outer glow ring */
+.medallion-wrap::before {
+    content: "";
     position: absolute;
     inset: -6%;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(176,141,87,0.23) 0%, transparent 70%);
-  }
- 
-  .medallion-svg {
+    background: radial-gradient(circle, rgba(176, 141, 87, 0.23) 0%, transparent 70%);
+}
+
+.medallion-svg {
     position: absolute;
     top: 10%;
     transform: translateY(-50%);
     animation: slowSpin 80s linear infinite;
-  }
-  .medallion-inner {
+}
+.medallion-inner {
     position: absolute;
     inset: 15%;
     border-radius: 50%;
-    border: 1px solid rgba(176,141,87,0.25);
+    border: 1px solid rgba(176, 141, 87, 0.25);
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(26,23,20,0.5);
+    background: rgba(26, 23, 20, 0.5);
     backdrop-filter: blur(8px);
-    
-  }
- 
-  /* ── STATS strip ── */
-  .hero-stats {
+}
+
+/* ── STATS strip ── */
+.hero-stats {
     position: absolute;
     bottom: 48px;
-    left: 0; right: 0;
+    left: 0;
+    right: 0;
     z-index: 10;
     display: flex;
     justify-content: center;
     gap: 0;
     animation: fadeUp 1s ease both;
     animation-delay: 0.8s;
-  }
-  .stat-item {
+}
+.stat-item {
     text-align: center;
     padding: 0 40px;
-    border-right: 1px solid rgba(176,141,87,0.15);
-  }
-  .stat-item:last-child { border-right: none; }
-  .stat-num {
+    border-right: 1px solid rgba(176, 141, 87, 0.15);
+}
+.stat-item:last-child {
+    border-right: none;
+}
+.stat-num {
     font-family: var(--font-serif);
     font-size: 2rem;
     font-weight: 300;
@@ -204,14 +220,12 @@
     display: block;
     line-height: 1;
     margin-bottom: 6px;
-  }
-  .stat-label {
+}
+.stat-label {
     font-family: var(--font-sans);
     font-size: 0.62rem;
     font-weight: 400;
     letter-spacing: 0.22em;
     text-transform: uppercase;
     color: var(--color-muted-600);
-  }
-
- 
+}
