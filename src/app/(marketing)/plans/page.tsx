@@ -411,17 +411,17 @@ const FeaturesIconsAndImage03 = () => {
     );
 };
 
-const PricingPage08 = () => {
+const Plans = () => {
     return (
-        <div className="bg-primary">
+        <main className="bg-primary mt-16">
             <PricingSimpleBanner />
             <PlanFeaturesTable />
             <FeaturesCenterMockup01 />
             <FeaturesIconsAndImage03 />
             <FAQAccordion01 />
             <CTACenteredPlansSignupFeaturedBgImage />
-        </div>
+        </main>
     );
 };
 
-export default PricingPage08;
+export default Plans;

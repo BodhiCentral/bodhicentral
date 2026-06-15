@@ -26,7 +26,7 @@ const headerNavItems: HeaderNavItem[] = [
     { label: "Paths", href: "/learning-paths", menu: <DropdownMenuLearningPaths /> },
     { label: "Community", href: "/resources", menu: <DropdownMenuResources /> },
     { label: "Desk", href: "/reader", menu: <DropdownMenuReader /> },
-    { label: "About", href: "/about" },
+    { label: "Plans", href: "/plans" },
 ];
 
 const footerNavItems = [
