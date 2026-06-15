@@ -116,7 +116,7 @@ export const Header = ({ items = headerNavItems, isFullWidth, isFloating, classN
         <header
             ref={headerRef}
             className={cx(
-                "sticky top-0 z-500 flex h-15 w-full items-center justify-center border-ink-500/50 border-b bg-ink-600 backdrop-blur-md md:h-15 shadow-md shadow-ink-800/20 transform-gpu will-change-transform",
+                "fixed top-0 z-500 flex h-16 w-full items-center justify-center bg-linear-to-t from-brand-50/5 to-brand-900/10 backdrop-blur-2xl md:h-16 border-b border-brand-500/10 transform-gpu will-change-transform",
                 isFloating && "h-14 md:h-14 md:pt-2",
                 isFullWidth && !isFloating ? "has-aria-expanded:bg-primary" : "max-md:has-aria-expanded:bg-primary",
                 className,
@@ -131,24 +131,24 @@ export const Header = ({ items = headerNavItems, isFullWidth, isFloating, classN
                 >
                     <div className="flex items-center gap-8">
                         {/* LOGO */}
-                        <Link href="/" aria-label="Bodhicentral Home page" className="flex items-center outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2 gap-1">
-                            <span className="text-2xl font-serif font-light uppercase tracking-wide text-white">Bodhi</span>
-                            <span className="text-2xl font-serif font-light uppercase tracking-wide text-brand-600">Central</span>
+                        <Link href="/" aria-label="Bodhicentral Home page" className="flex items-center outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2 gap-2">
+                            <span className="text-3xl font-serif font-extralight uppercase tracking-tight text-fg-quaternary">Bodhi</span>
+                            <span className="text-3xl font-serif font-extralight uppercase tracking-tight text-brand-600">Central</span>
                         </Link>
 
 
                     </div>
                     {/* Desktop NAV MENU */}
                     <nav className="flex items-center max-md:hidden">
-                        <ul className="flex items-center gap-0.5">
+                        <ul className="flex items-center gap-2">
                             {items.map((navItem) => (
                                 <li key={navItem.label}>
                                     {navItem.menu ? (
                                         <AriaDialogTrigger>
-                                            <AriaButton className="relative flex cursor-pointer items-center gap-0.5 rounded-lg px-1.5 py-3.5 text-sm font-light uppercase tracking-[0.075em] text-brand-200 outline-focus-ring transition duration-100 ease-linear hover:text-fg-brand-secondary_hover aria-expanded:text-brand-secondary focus-visible:outline-2 focus-visible:outline-offset-2 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:rounded-full after:bg-brand-500 after:scale-x-0 after:transition-transform after:duration-200 aria-expanded:after:scale-x-100">
+                                            <AriaButton className="relative flex cursor-pointer items-center gap-0.5 rounded-lg px-1.5 py-3.5 text-sm font-medium uppercase tracking-normal text-fg-quaternary outline-focus-ring transition duration-100 ease-linear hover:text-fg-brand-secondary_hover aria-expanded:text-brand-secondary focus-visible:outline-2 focus-visible:outline-offset-2 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:rounded-full after:bg-brand-500 after:scale-x-0 after:transition-transform after:duration-200 aria-expanded:after:scale-x-100">
                                                 <span className="px-0.5">{navItem.label}</span>
 
-                                                <ChevronDown className="size-4 rotate-0 stroke-[2.625px] text-brand-800/90 hover:text-fg-brand-secondary_hover transition duration-100 ease-linear in-aria-expanded:-rotate-180 in-aria-expanded:text-brand-secondary" />
+                                                <ChevronDown className="size-4 rotate-0 stroke-[2.625px] text-fg-quaternary hover:text-fg-quaternary_hover_hover transition duration-100 ease-linear in-aria-expanded:-rotate-180 in-aria-expanded:text-fg-quaternary" />
                                             </AriaButton>
 
                                             <AriaPopover
@@ -187,7 +187,7 @@ export const Header = ({ items = headerNavItems, isFullWidth, isFloating, classN
                                     ) : (
                                         <Link
                                             href={navItem.href!}
-                                            className="flex cursor-pointer items-center gap-0.5 rounded-lg px-1.5 py-1 text-sm font-light uppercase tracking-[0.075em] text-brand-200 outline-focus-ring transition duration-100 ease-linear hover:text-fg-brand-secondary_hover  focus:outline-offset-2 focus-visible:outline-2"
+                                            className="flex cursor-pointer items-center gap-0.5 rounded-lg px-1.5 py-1 text-sm font-semibold uppercase tracking-tighter text-fg-quaternary outline-focus-ring transition duration-100 ease-linear hover:text-fg-brand-secondary_hover  focus:outline-offset-2 focus-visible:outline-2"
                                         >
                                             <span className="px-0.5">{navItem.label}</span>
                                         </Link>
@@ -203,10 +203,10 @@ export const Header = ({ items = headerNavItems, isFullWidth, isFloating, classN
                             <DropdownAvatar user={user} />
                         ) : (
                             <>
-                                <Button color="secondary" size={isFloating ? "md" : "md"} href="/sign-in">
+                                <Button color="secondary" size={isFloating ? "sm" : "sm"} href="/sign-in">
                                     Log in
                                 </Button>
-                                <Button color="primary" size={isFloating ? "md" : "md"} href="/sign-up">
+                                <Button color="primary" size={isFloating ? "sm" : "sm"} href="/sign-up">
                                     Sign up
                                 </Button>
                             </>

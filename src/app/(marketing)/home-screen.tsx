@@ -16,7 +16,8 @@ export const HomeScreen = () => {
     return (
         <main className="relative overflow-hidden">
 
-            <section className="hero relative flex flex-col items-center justify-center w-full pb-28 h-[calc(100vh-3.5rem)] bg-ink-700/65 bg-radial-[at_68%_50%] from-ink-800/30 via-brand-900/50 via-20% to-brand-950 dark:bg-linear-to-b dark:bg-radial-[at_68%_50%] dark:from-brand-950/95 dark:via-brand-900/90 dark:via-20% dark:to-black/15">
+            {/* Hero Section */}
+            <section className="hero relative flex flex-col items-center justify-center w-full pt-15 pb-28 h-[calc(100vh)] bg-brand-700/70 bg-radial-[at_68%_50%] from-ink-800/20 via-brand-900/40 via-15% to-brand-950 dark:bg-linear-to-b dark:bg-radial-[at_68%_50%] dark:from-brand-950/95 dark:via-brand-900/90 dark:via-20% dark:to-black/15">
                 <div className="hero-bg-grad"></div>
                 <div className="hero-grain"></div>
                 <div className="hero-rule"></div>
@@ -78,11 +79,11 @@ export const HomeScreen = () => {
                             <div className="eyebrow-line"></div>
                             <div className="eyebrow-text">Buddhist Paths & Scriptures</div>
                         </div>
-                        <h1 className="hero-headline text-display-lg md:text-display-xl lg:text-display-3xl font-extralight text-white text-shadow-md text-shadow-gray-700 dark:text-shadow-gray-950">
+                        <h1 className="hero-headline text-display-lg md:text-display-xl lg:text-display-3xl font-extralight text-white text-shadow-md text-shadow-gray-900 dark:text-shadow-gray-950">
                             Gateways to <br /> the <span className="text-brand-500 lg:text-display-5xl font-extralight italic">Awakening</span>
                         </h1>
                         <p className="hero-sub mt-4 max-w-xs sm:max-w-sm md:max-w-xl text-md text-balance text-brand-200 dark:text-brand-100 md:mt-6 md:text-lg">
-                            The great Buddhist traditions have illuminated the nature of mind for 2,500 years. Now, their most essential teachings — scriptures, paths, and living transmissions — are gathered in one place, for every sincere seeker.
+                            Buddha's message to humanity have illuminated the nature of mind for 2,500 years. Now, its most essential mainstream teachings — scriptures, paths, and living transmissions — are gathered in one place, for every sincere seeker.
                         </p>
                         <div className="hero-ctas mt-8 flex w-full gap-3 md:mt-12 md:flex-row lg:items-start">
                             <Button className="cta-primary" size="md" href="/reader">Open Reader</Button>

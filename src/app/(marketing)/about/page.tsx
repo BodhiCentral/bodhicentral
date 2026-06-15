@@ -3,7 +3,7 @@ import { CTACenteredPlansSignupFeaturedBgImage } from "@/components-custom/secti
 
 export default function AboutPage() {
     return (
-        <main className="relative flex flex-col max-w-full mx-auto gap-8">
+        <main className="relative flex flex-col max-w-full mx-auto gap-8 pt-16">
             {/* Decorative pattern at the bottom of the article */}
             <div className="absolute z-100 h-6 bottom-0 left-0 right-0 mx-auto bg-[url(/patterns/detailed-endless-band-gold-140px.png)] bg-contain bg-repeat dark:drop-shadow-black/50 opacity-30 dark:opacity-40">
             </div>
