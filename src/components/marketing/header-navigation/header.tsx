@@ -31,10 +31,8 @@ const headerNavItems: HeaderNavItem[] = [
 
 const footerNavItems = [
     { label: "About us", href: "/about" },
-    { label: "Project information", href: "/about/project-information" },
     { label: "Legal", href: "/about/legal" },
     { label: "Help and FAQ", href: "/support" },
-    { label: "Cookie settings", href: "/about/cookie-settings" },
 ];
 
 const MobileNavItem = (props: { className?: string; label: string; href?: string; children?: ReactNode }) => {
@@ -116,13 +114,13 @@ export const Header = ({ items = headerNavItems, isFullWidth, isFloating, classN
         <header
             ref={headerRef}
             className={cx(
-                "absolute top-0 z-500 flex h-16 w-full items-center justify-center bg-linear-to-t from-brand-50/5 to-brand-900/10 backdrop-blur-2xl md:h-16 border-b border-brand-500/10 transform-gpu will-change-transform",
+                "absolute top-0 z-500 flex h-16 w-full items-center justify-center transform-gpu will-change-transform",
                 isFloating && "h-14 md:h-14 md:pt-2",
                 isFullWidth && !isFloating ? "has-aria-expanded:bg-primary" : "max-md:has-aria-expanded:bg-primary",
                 className,
             )}
         >
-            <div className="flex size-full w-full flex-1 items-center pr-3 pl-4 md:px-8">
+            <div className="flex size-full w-full flex-1 items-center pr-3 pl-3 md:px-6">
                 <div
                     className={cx(
                         "flex w-full justify-between gap-4",
@@ -132,20 +130,20 @@ export const Header = ({ items = headerNavItems, isFullWidth, isFloating, classN
                     <div className="flex items-center gap-8">
                         {/* LOGO */}
                         <Link href="/" aria-label="Bodhicentral Home page" className="flex items-center outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2 gap-2">
-                            <span className="text-3xl font-serif font-extralight uppercase tracking-tight text-fg-quaternary">Bodhi</span>
-                            <span className="text-3xl font-serif font-extralight uppercase tracking-tight text-brand-600">Central</span>
+                            <span className="text-2xl font-serif font-extralight uppercase tracking-tight text-fg-quaternary">Bodhi</span>
+                            <span className="text-2xl font-serif font-extralight uppercase tracking-tight text-brand-600">Central</span>
                         </Link>
 
 
                     </div>
                     {/* Desktop NAV MENU */}
-                    <nav className="flex items-center max-md:hidden">
+                    <nav className="flex items-center max-md:hidden backdrop-blur-md px-6">
                         <ul className="flex items-center gap-2">
                             {items.map((navItem) => (
                                 <li key={navItem.label}>
                                     {navItem.menu ? (
                                         <AriaDialogTrigger>
-                                            <AriaButton className="relative flex cursor-pointer items-center gap-0.5 rounded-lg px-1.5 py-3.5 text-sm font-medium uppercase tracking-normal text-fg-quaternary outline-focus-ring transition duration-100 ease-linear hover:text-fg-brand-secondary_hover aria-expanded:text-brand-secondary focus-visible:outline-2 focus-visible:outline-offset-2 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:rounded-full after:bg-brand-500 after:scale-x-0 after:transition-transform after:duration-200 aria-expanded:after:scale-x-100">
+                                            <AriaButton className="relative flex cursor-pointer items-center gap-0.5 rounded-lg px-1.5 py-2 text-sm font-semibold uppercase text-fg-quaternary outline-focus-ring transition duration-100 ease-linear hover:text-fg-brand-secondary_hover aria-expanded:text-brand-secondary focus-visible:outline-2 focus-visible:outline-offset-2 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:rounded-full after:bg-brand-500 after:scale-x-0 after:transition-transform after:duration-200 aria-expanded:after:scale-x-100">
                                                 <span className="px-0.5">{navItem.label}</span>
 
                                                 <ChevronDown className="size-4 rotate-0 stroke-[2.625px] text-fg-quaternary hover:text-fg-quaternary_hover_hover transition duration-100 ease-linear in-aria-expanded:-rotate-180 in-aria-expanded:text-fg-quaternary" />
@@ -187,7 +185,7 @@ export const Header = ({ items = headerNavItems, isFullWidth, isFloating, classN
                                     ) : (
                                         <Link
                                             href={navItem.href!}
-                                            className="flex cursor-pointer items-center gap-0.5 rounded-lg px-1.5 py-1 text-sm font-semibold uppercase tracking-tighter text-fg-quaternary outline-focus-ring transition duration-100 ease-linear hover:text-fg-brand-secondary_hover  focus:outline-offset-2 focus-visible:outline-2"
+                                            className="flex cursor-pointer items-center gap-0.5 rounded-lg px-1.5 py-1 text-sm font-semibold uppercase text-fg-quaternary outline-focus-ring transition duration-100 ease-linear hover:text-fg-brand-secondary_hover  focus:outline-offset-2 focus-visible:outline-2"
                                         >
                                             <span className="px-0.5">{navItem.label}</span>
                                         </Link>
@@ -197,7 +195,7 @@ export const Header = ({ items = headerNavItems, isFullWidth, isFloating, classN
                         </ul>
                     </nav>
                     {/* DESKTOP LOGIN/SIGNUP BUTTONS */}
-                    <div className="hidden items-center gap-3 md:flex ml-10"> {/* 10px gap between nav menu items and buttons */}
+                    <div className="hidden items-center gap-3 md:flex">
                         <ThemeToggle />
                         {user ? (
                             <DropdownAvatar user={user} />

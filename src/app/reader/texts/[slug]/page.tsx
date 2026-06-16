@@ -297,7 +297,7 @@ export default function ReaderPage() {
     return (
         <>
             {/* The MAIN Reader wrapper */}
-            <main className="fixed top-12 bottom-0 w-full px-13 bg-tertiary">
+            <main className="fixed top-16 bottom-0 w-full px-13 bg-tertiary">
 
                 {/* TEXT READER CANVAS */}
 

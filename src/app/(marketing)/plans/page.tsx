@@ -199,9 +199,7 @@ const PricingSimpleBanner = () => {
     ];
 
     return (
-        <section className="relative bg-primary py-16 md:py-20">
-            <Image src="/ornaments/endless-knot-corner-gold.png" width={260} height={264.3} alt="Plans background" className="hidden lg:block absolute top-4 right-4 opacity-16 dark:opacity-25" />
-            <Image src="/ornaments/endless-knot-corner-gold.png" width={260} height={264.3} alt="Plans background" className="hidden lg:block absolute top-4 left-4 scale-x-[-1] opacity-16 dark:opacity-25" />
+        <section className="relative bg-primary pt-20 pb-16 md:pt-28 md:pb-20">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
                     <h2 className="text-display-md font-extralight text-brand-800 dark:text-brand-400 md:text-display-xl">Start free. Upgrade to unlock advanced study tools.</h2>
@@ -413,7 +411,7 @@ const FeaturesIconsAndImage03 = () => {
 
 const Plans = () => {
     return (
-        <main className="bg-primary mt-16">
+        <main className="bg-primary">
             <PricingSimpleBanner />
             <PlanFeaturesTable />
             <FeaturesCenterMockup01 />

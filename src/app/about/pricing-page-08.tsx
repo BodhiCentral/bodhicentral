@@ -467,7 +467,7 @@ const FeatureTextFeaturedIconLeft = ({ icon, title, subtitle, footer }: FeatureT
 const FeaturesIconsAndImage03 = () => {
     return (
         <section className="bg-primary">
-            <div className="bg-secondary pt-16 pb-[112px] md:pt-24 md:pb-40">
+            <div className="bg-secondary pt-16 pb-28 md:pt-24 md:pb-40">
                 <div className="mx-auto grid w-full max-w-container grid-cols-1 gap-12 px-4 md:gap-16 md:px-8 lg:grid-cols-2 lg:gap-24">
                     <div className="flex w-full flex-col">
                         <span className="text-sm font-semibold text-brand-secondary md:text-md">New feature</span>
