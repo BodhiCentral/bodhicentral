@@ -51,7 +51,7 @@ export default async function RootLayout({
 
     return (
         <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth" className={cx(nunito.variable, crimsonPro.variable, tibetan.variable)}>
-            <body className="bg-primary antialiased">
+            <body className="relative bg-primary antialiased">
                 <RouteProvider>
                     <Theme>
                         <Header user={user} />

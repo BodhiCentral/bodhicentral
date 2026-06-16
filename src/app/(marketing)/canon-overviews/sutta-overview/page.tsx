@@ -391,7 +391,7 @@ const RoundButton = ({ icon: Icon, ...props }: RoundButtonProps) => {
 
 const BlogPost05 = () => {
     return (
-        <div className="bg-primary">
+        <div className="bg-primary pt-16">
 
             <ArticleOverview />
 

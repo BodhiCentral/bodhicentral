@@ -218,14 +218,14 @@ const BlogHeaderSidebar02 = () => {
     const [selectedTabIndex, setSelectedTabIndex] = useState(1);
 
     return (
-        <div className="relative bg-primary">
+        <div className="relative bg-primary pt-12">
 
-            <section className="bg-primary py-16 md:py-20">
+            <section className="bg-primary py-16 md:py-24">
                 <div className="mx-auto max-w-container px-4 md:px-8">
                     <div className="flex w-full max-w-3xl flex-col">
                         <span className="text-sm font-semibold text-brand-secondary md:text-md">Our blog</span>
                         <h2 className="mt-3 text-display-lg font-extralight text-brand-800 dark:text-brand-400 md:text-display-xl">Articles and insights</h2>
-                        <p className="mt-4 text-lg text-tertiary md:mt-4 md:text-xl">Expert articles from within the traditions, reviews of public resources, and insights into Buddhist studies and practices.</p>
+                        <p className="mt-4 text-md text-tertiary md:mt-4 md:text-lg">Expert articles from within the traditions, reviews of public resources, and insights into Buddhist studies and practices.</p>
                     </div>
                 </div>
             </section>
@@ -320,7 +320,7 @@ const BlogHeaderSidebar02 = () => {
 const BlogPage04 = () => {
     return (
         <div className=" relative bg-primary">
-            <Image src="/ornaments/endless-knot-corner-gold.png" width={260} height={264.3} alt="Ornament Endless knot golden." className="hidden z-10 lg:block absolute top-4 right-4 opacity-16 dark:opacity-25" />
+            <Image src="/ornaments/endless-knot-corner-gold.png" width={260} height={264.3} alt="Ornament Endless knot golden." className="hidden z-10 lg:block absolute top-20 right-4 opacity-16 dark:opacity-25" />
 
 
             <BlogHeaderSidebar02 />
