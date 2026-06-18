@@ -114,7 +114,7 @@ export const Header = ({ items = headerNavItems, isFullWidth, isFloating, classN
         <header
             ref={headerRef}
             className={cx(
-                "absolute top-0 z-500 flex h-16 w-full items-center justify-center transform-gpu will-change-transform",
+                "fixed top-0 z-500 flex h-16 w-full items-center justify-center transform-gpu will-change-transform bg-linear-to-r from-transparent from-15% via-primary/15 via-50% to-transparent to-85% backdrop-blur-lg border-b border-b-utility-brand-400/10 drop-shadow-sm",
                 isFloating && "h-14 md:h-14 md:pt-2",
                 isFullWidth && !isFloating ? "has-aria-expanded:bg-primary" : "max-md:has-aria-expanded:bg-primary",
                 className,
@@ -137,7 +137,7 @@ export const Header = ({ items = headerNavItems, isFullWidth, isFloating, classN
 
                     </div>
                     {/* Desktop NAV MENU */}
-                    <nav className="flex items-center max-md:hidden backdrop-blur-md px-6">
+                    <nav className="flex items-center max-md:hidden px-6">
                         <ul className="flex items-center gap-2">
                             {items.map((navItem) => (
                                 <li key={navItem.label}>
