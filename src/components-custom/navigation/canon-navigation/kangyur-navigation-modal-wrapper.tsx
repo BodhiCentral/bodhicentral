@@ -55,7 +55,7 @@ export const KangyurNavigatorModal = () => {
                 <Dialog>
                     <div className="flex flex-row gap-0 w-full h-full shadow-lg">
                         {/* Kangyur Navigator */}
-                        <div className="relative w-140 sm:min-w-110 flex flex-col overflow-hidden bg-secondary border-r border-secondary">
+                        <div className="relative w-130 sm:min-w-110 flex flex-col overflow-hidden bg-secondary border-r border-secondary">
                             {/* Header */}
                             <div className="h-auto flex flex-col gap-0.5 px-4 pt-3 sm:px-6 sm:py-3 bg-secondary dark:bg-neutral-900 border-b border-secondary">
                                 <AriaHeading slot="title" className="text-display-xs font-light text-brand-primary">
