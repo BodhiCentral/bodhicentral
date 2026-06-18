@@ -29,21 +29,28 @@ const columns: MenuColumn[] = [
                 Icon: BookOpen01,
             },
             {
-                title: "Tibetan Studies",
-                subtitle: "The curricula of the four main schools of Tibetan Buddhism.",
-                href: "/scripture/tibetan-schools",
-                Icon: BookOpen01,
-            },
-            {
                 title: "Tibetan Canons",
                 subtitle: "The Kangyur and Tengyur, the Tibetan Buddhist canons.",
                 href: "/scripture/tibetan-canons",
                 Icon: BookOpen01,
             },
+                        {
+                title: "Buddhist Genres",
+                subtitle: "Important genres and doctrines among all Buddhist traditions.",
+                href: "/scripture/genres",
+                Icon: BookOpen01,
+            },
+            {
+                title: "Tibetan Studies",
+                subtitle: "The curricula of the four main schools of Tibetan Buddhism.",
+                href: "/scripture/tibetan-schools",
+                Icon: BookOpen01,
+            },
+
         ],
     },
     {
-        title: "Traditions and Connections",
+        title: "Canon Resources",
         items: [
             {
                 title: "Traditions at a glance",
@@ -55,6 +62,12 @@ const columns: MenuColumn[] = [
                 title: "Connections",
                 subtitle: "Scriptural connections and parallels.",
                 href: "/scripture/connections",
+                Icon: Link03,
+            },
+                        {
+                title: "Expert Articles",
+                subtitle: "Expert articles from within the traditions.",
+                href: "/resources/blog",
                 Icon: Link03,
             },
         ],
@@ -77,7 +90,6 @@ export const DropdownMenuScripture = ({ onClose }: { onClose?: () => void }) => 
                                 {[
 
                                     { title: "Collections", href: "/scripture/collections" },
-                                    { title: "Genres", href: "/scripture/genres" },
                                     { title: "Authors", href: "/scripture/authors" },
                                     { title: "Saved Searches", href: "#" },
                                     { title: "Bookmarks", href: "#" },
