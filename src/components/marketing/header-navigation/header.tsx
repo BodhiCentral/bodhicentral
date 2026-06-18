@@ -114,7 +114,7 @@ export const Header = ({ items = headerNavItems, isFullWidth, isFloating, classN
         <header
             ref={headerRef}
             className={cx(
-                "fixed top-0 z-500 flex h-16 w-full items-center justify-center transform-gpu will-change-transform bg-linear-to-r from-transparent from-15% via-primary/15 via-50% to-transparent to-85% backdrop-blur-lg border-b border-b-utility-brand-400/10 drop-shadow-sm",
+                "fixed top-0 z-500 flex h-16 w-full items-center justify-center transform-gpu will-change-transform bg-linear-to-r from-transparent from-0% via-primary/90 via-50% to-transparent to-100% backdrop-blur-lg border-b border-b-utility-brand-400/10 drop-shadow-sm",
                 isFloating && "h-14 md:h-14 md:pt-2",
                 isFullWidth && !isFloating ? "has-aria-expanded:bg-primary" : "max-md:has-aria-expanded:bg-primary",
                 className,
@@ -143,7 +143,7 @@ export const Header = ({ items = headerNavItems, isFullWidth, isFloating, classN
                                 <li key={navItem.label}>
                                     {navItem.menu ? (
                                         <AriaDialogTrigger>
-                                            <AriaButton className="relative flex cursor-pointer items-center gap-0.5 rounded-lg px-1.5 py-2 text-sm font-semibold uppercase text-fg-quaternary outline-focus-ring transition duration-100 ease-linear hover:text-fg-brand-secondary_hover aria-expanded:text-brand-secondary focus-visible:outline-2 focus-visible:outline-offset-2 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:rounded-full after:bg-brand-500 after:scale-x-0 after:transition-transform after:duration-200 aria-expanded:after:scale-x-100">
+                                            <AriaButton className="relative flex cursor-pointer items-center gap-0.5 rounded-lg px-1.5 py-2 text-sm font-semibold uppercase text-fg-primary outline-focus-ring transition duration-100 ease-linear hover:text-fg-brand-secondary_hover aria-expanded:text-brand-secondary focus-visible:outline-2 focus-visible:outline-offset-2 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:rounded-full after:bg-brand-500 after:scale-x-0 after:transition-transform after:duration-200 aria-expanded:after:scale-x-100">
                                                 <span className="px-0.5">{navItem.label}</span>
 
                                                 <ChevronDown className="size-4 rotate-0 stroke-[2.625px] text-fg-quaternary hover:text-fg-quaternary_hover_hover transition duration-100 ease-linear in-aria-expanded:-rotate-180 in-aria-expanded:text-fg-quaternary" />
