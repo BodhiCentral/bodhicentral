@@ -114,7 +114,7 @@ export const Header = ({ items = headerNavItems, isFullWidth, isFloating, classN
         <header
             ref={headerRef}
             className={cx(
-                "fixed top-0 z-500 flex h-16 w-full items-center justify-center transform-gpu will-change-transform bg-[linear-gradient(266deg,rgba(255,255,255,0.10)5%,rgba(255,255,255,0.85)35%,rgba(255,255,255,0.85)65%,rgba(255,255,255,0)95%)] dark:bg-[linear-gradient(266deg,rgba(5,5,5,0.10)5%,rgba(5,5,5,0.7)35%,rgba(5,5,5,0.7)65%,rgba(5,5,5,0)95%)] backdrop-blur-lg border-b border-b-utility-brand-400/20 drop-shadow-sm",
+                "fixed top-0 z-500 flex h-16 w-full items-center justify-center transform-gpu will-change-transform bg-[linear-gradient(266deg,rgba(255,255,255,0.05)5%,rgba(255,255,255,0.75)35%,rgba(255,255,255,0.75)65%,rgba(255,255,255,0.05)95%)] dark:bg-[linear-gradient(266deg,rgba(5,5,5,0.05)5%,rgba(5,5,5,0.7)35%,rgba(5,5,5,0.7)65%,rgba(5,5,5,0)95%)] backdrop-blur-lg border-b border-b-utility-brand-400/20 drop-shadow-sm",
                 isFloating && "h-14 md:h-14 md:pt-2",
                 isFullWidth && !isFloating ? "has-aria-expanded:bg-primary" : "max-md:has-aria-expanded:bg-primary",
                 className,
