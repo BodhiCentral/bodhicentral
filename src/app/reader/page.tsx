@@ -15,7 +15,7 @@ import { openCanonNavigator } from "@/components-custom/navigation/canon-navigat
 
 export const TableOfContents = () => {
     return (
-        <div className="sticky flex flex-col top-12 px-6 py-4 mx-auto z-45 border border-secondary max-h-full">
+        <div className="sticky flex flex-col top-12 px-6 py-4 mx-auto z-0 border-x border-secondary max-h-full">
             <div className="py-2">
                 <h5 className="text-display-xs text-brand-primary">Table of Contents</h5>
             </div>
@@ -296,7 +296,7 @@ interface AncillaryTab {
 const ANCILLARY_TABS: AncillaryTab[] = [
     {
         id: "segment",
-        label: "Selected Segment",
+        label: "Selected Text Segment",
         icon: CursorBox,
         requiredPlan: "free",
         tooltip: "Selected Segment — details for the currently selected passage",
@@ -397,9 +397,6 @@ const TabContent: Record<TabId, React.FC> = {
     ),
     "cross-references": () => (
         <div className="flex flex-col gap-3">
-            <h4 className="text-sm font-semibold text-primary flex items-center gap-2">
-                <Dataflow01 size={14} /> Connections and Parallels
-            </h4>
             <p className="text-sm text-secondary">
                 Parallels and connections with other texts and canon sections. See our{" "}
                 <Link
@@ -421,9 +418,6 @@ const TabContent: Record<TabId, React.FC> = {
     ),
     lexicon: () => (
         <div className="flex flex-col gap-3">
-            <h4 className="text-sm font-semibold text-primary flex items-center gap-2">
-                <BookOpen01 size={14} /> Lexicon
-            </h4>
             <p className="text-sm text-secondary">Select a word in the text to look it up in the canonical dictionary.</p>
         </div>
     ),
@@ -448,10 +442,10 @@ const TabContent: Record<TabId, React.FC> = {
     ),
     settings: () => (
         <div className="flex flex-col gap-3">
-            <h4 className="text-sm font-semibold text-primary flex items-center gap-2">
-                <Settings01 size={14} /> Reader Settings
-            </h4>
             <p className="text-sm text-secondary">Display preferences for the reader will appear here.</p>
+            <h4 className="text-md font-semibold text-primary flex items-center gap-2">
+                Reader Settings
+            </h4>
         </div>
     ),
 };
@@ -480,7 +474,7 @@ export const AncillaryPanel = ({
         <div className="flex flex-col h-full max-h-full bg-secondary border-l border-secondary overflow-hidden">
 
             {/* ── Tab rail ────────────────────────────────────────── */}
-            <div className="flex flex-row items-center justify-between border-b border-secondary px-1 py-1">
+            <div className="flex flex-row items-center justify-between border-b border-secondary px-2 py-2">
                 <div
                     role="tablist"
                     aria-label="Ancillary panel tabs"
@@ -533,7 +527,7 @@ export const AncillaryPanel = ({
                     title="Close panel"
                     className="flex items-center justify-center rounded-md p-2 text-fg-quaternary transition-colors hover:bg-tertiary hover:text-secondary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-400"
                 >
-                    <XIcon size={14} />
+                    <XIcon size={16} />
                 </button>
             </div>
 
@@ -576,24 +570,24 @@ export default function ReaderPage() {
     return (
         <>
             {/* The MAIN Reader wrapper */}
-            <main className="fixed top-14 bottom-0 w-full pl-13 bg-tertiary">
+            <main className="fixed top-16 bottom-0 w-full pl-13 bg-tertiary">
 
                 {/* TEXT READER CANVAS */}
                 <div
                     className={[
                         "relative top-0 bottom-0 mx-auto grid grid-rows-1 w-full h-full overflow-hidden transition-[grid-template-columns] duration-300",
                         ancillaryOpen
-                            ? "grid-cols-[20%_1fr_25%]"
+                            ? "grid-cols-[20%_1fr_26%]"
                             : "grid-cols-[20%_1fr_0px]",
                     ].join(" ")}
                 >
                     {/* Left Sidebar: Table of Contents */}
-                    <div className="hidden md:block min-w-70 max-w-110 max-h-auto bg-secondary">
+                    <div className="hidden md:block max-h-auto bg-secondary">
                         <TableOfContents />
                     </div>
 
                     {/* Central Reader Canvas */}
-                    <div className="relative top-0 bottom-0 mx-auto w-full px-2 md:px-4 lg:px-6 xl:px-16 min-w-96 max-w-full bg-primary max-h-auto border-t border-secondary">
+                    <div className="relative top-0 bottom-0 mx-auto w-full px-2 md:px-4 lg:px-6 xl:px-16 min-w-96 max-w-full bg-primary max-h-auto">
                         <TextCanvasSingle />
                     </div>
 

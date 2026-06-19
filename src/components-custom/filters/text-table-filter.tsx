@@ -24,7 +24,7 @@ export const TextTableFilter = () => {
                 icon={SearchLg}
                 placeholder="Search table"
                 aria-label="Search table"
-                className="w-80"
+                className="w-76"
             />
 
         </FilterBar.Root>

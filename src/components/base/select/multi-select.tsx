@@ -231,7 +231,7 @@ const MultiSelectRoot = ({
                             {hasSelection ? (
                                 <span className={cx("flex items-center", sizes[size].textContainer)}>
                                     <span className={cx("font-medium text-primary", sizes[size].text)}>
-                                        {selectedCountFormatter ? selectedCountFormatter(selectedCount) : `${selectedCount} selected`}
+                                        {selectedCountFormatter ? selectedCountFormatter(selectedCount) : `${selectedCount} items selected`}
                                     </span>
                                     {supportingText && <span className={cx("text-tertiary", sizes[size].text)}>{supportingText}</span>}
                                 </span>
