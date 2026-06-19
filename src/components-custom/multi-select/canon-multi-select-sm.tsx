@@ -2,22 +2,23 @@ import { useState } from "react";
 import type { Selection } from "react-aria-components";
 import { MultiSelect } from "@/components/base/select/multi-select";
 import { type SelectItemType } from "@/components/base/select/select";
-const teamItems: SelectItemType[] = [
-    { id: "vinaya", label: "Vinaya Pitaka", supportingText: "( 36 texts ~ Pali Canon )" },
-    { id: "sutta", label: "Sutta Pitaka", supportingText: "(840 texts ~ Pali Canon)" },
-    { id: "abhidhamma", label: "Abhidhamma Pitaka", supportingText: "(7 texts ~ Pali Canon)" },
-    { id: "dege-kangyur", label: "Degé Kangyur", supportingText: "( 900 texts ~ Tibetan Canon )" },
-    { id: "dege-tengyur", label: "Degé Tengyur", supportingText: "( 3332 texts ~ Tibetan Canon )" },
-    { id: "nyingma", label: "Nyingma Studies", supportingText: "( 13 texts )" },
-    { id: "kagyu", label: "Kagyu Studies", supportingText: "( 8 texts )" },
-    { id: "sakya", label: "Sakya Studies", supportingText: "( 18 texts )" },
-    { id: "gelug", label: "Gelug Studies", supportingText: "( 15 texts )" },
-    { id: "indian-masters", label: "Indian Masters", supportingText: "( 20+ texts - Indian Mahayana )" },
+const collectionItems: SelectItemType[] = [
+    { id: "vinaya", label: "Vinaya Pitaka", supportingText: "36 texts" },
+    { id: "sutta", label: "Sutta Pitaka", supportingText: "840 texts" },
+    { id: "abhidhamma", label: "Abhidhamma Pitaka", supportingText: "7 texts" },
+    { id: "dege-kangyur", label: "Degé Kangyur", supportingText: "900 texts" },
+    { id: "dege-tengyur", label: "Degé Tengyur", supportingText: "3332 texts" },
+    { id: "indian-mahayana", label: "Indian Mahayana", supportingText: "20 + texts" },
+    { id: "nyingma", label: "Nyingma Studies", supportingText: "13 texts" },
+    { id: "kagyu", label: "Kagyu Studies", supportingText: "8 texts" },
+    { id: "sakya", label: "Sakya Studies", supportingText: "18 texts" },
+    { id: "gelug", label: "Gelug Studies", supportingText: "15 tetxs" },
+    
 ];
 
 const getSelectedUserCount = (selectedKeys: Selection) => {
-    if (selectedKeys === "all") return teamItems.reduce((sum, t) => sum + parseInt(t.supportingText?.split(" ")[0] || "0"), 0);
-    const selected = teamItems.filter((t) => (selectedKeys as Set<string | number>).has(t.id));
+    if (selectedKeys === "all") return collectionItems.reduce((sum, t) => sum + parseInt(t.supportingText?.split(" ")[0] || "0"), 0);
+    const selected = collectionItems.filter((t) => (selectedKeys as Set<string | number>).has(t.id));
     return selected.reduce((sum, t) => sum + parseInt(t.supportingText?.split(" ")[0] || "0"), 0);
 };
 
@@ -26,18 +27,17 @@ export const CanonMultiSelectSm = () => {
 
     return (
         <MultiSelect
-            isRequired
             size="sm"
-            label="Select collections..."
+            label="Select collections"
             tooltip="Select the Collections you want to browse."
             hint=""
-            placeholder="Select Collections..."
-            items={teamItems}
+            placeholder="Select collections"
+            items={collectionItems}
             selectedKeys={selectedKeys}
             onSelectionChange={setSelectedKeys}
-            supportingText={`${getSelectedUserCount(selectedKeys)} texts`}
+            supportingText={`(${getSelectedUserCount(selectedKeys)} texts)`}
             onReset={() => setSelectedKeys(new Set())}
-            onSelectAll={() => setSelectedKeys(new Set(teamItems.map((t) => t.id)))}
+            onSelectAll={() => setSelectedKeys(new Set(collectionItems.map((t) => t.id)))}
         >
             {(item) => (
                 <MultiSelect.Item id={item.id} supportingText={item.supportingText} selectionIndicator="checkbox" selectionIndicatorAlign="left">

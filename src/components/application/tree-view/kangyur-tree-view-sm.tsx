@@ -23,11 +23,11 @@ const KangyurTree = ({ size }: { size: "sm" | "md" }) => {
                     size={size}
                     selectionMode="multiple"
                     showConnectors
-                    draggable
                     aria-label="Organization"
                     items={tree.items}
-                    defaultExpandedKeys={["sutras", "perfection-of-wisdom", "general-sutra-section", "tantra", "tantra-collection"]}
-                    defaultSelectedKeys={[]}
+                    draggable
+                    defaultExpandedKeys={["sutra", "perfection-of-wisdom", "general-sutra-section", "tantra", "tantra-collection"]}
+                    defaultSelectedKeys={[""]}
                     onReorder={(e) => {
                         if (e.target.dropPosition === "before") {
                             tree.moveBefore(e.target.key as string, e.keys as Set<string>);
@@ -115,8 +115,8 @@ const initialItems: TreeItemData[] = [
         ],
     },
     {
-        id: "sutras",
-        name: "SŪTRAS",
+        id: "sutra",
+        name: "SŪTRA",
         children: [
             {
                 id: "perfection-of-wisdom",

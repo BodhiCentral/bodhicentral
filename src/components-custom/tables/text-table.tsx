@@ -52,8 +52,8 @@ export const TextTableAlternatingFills = () => {
             />
             <Table aria-label="Texts" selectionMode="multiple" sortDescriptor={sortDescriptor} onSortChange={setSortDescriptor}>
                 <Table.Header className="bg-primary">
-                    <Table.Head key="textId" id="textId" label="Text ID" className="min-w-16 max-w-20" allowsSorting />
-                    <Table.Head key="englishTitle" id="englishTitle" label="Text / Discourse" isRowHeader allowsSorting />
+                    <Table.Head key="textId" id="textId" label="Text ID" className="min-w-14 max-w-20" allowsSorting />
+                    <Table.Head key="englishTitle" id="englishTitle" label="Text Title" isRowHeader allowsSorting />
                     <Table.Head key="shortDescription" id="shortDescription" label="Description" className="max-w-100" tooltip="This is a tooltip" />
                     <Table.Head key="translator" id="translator" label="Translator" allowsSorting />
                     <Table.Head key="section" id="section" label="In Section" className="md:hidden xl:table-cell" />
@@ -66,7 +66,7 @@ export const TextTableAlternatingFills = () => {
                         <Table.Row id={item.textId} className="odd:bg-secondary">
                             <Table.Cell>{item.textId}</Table.Cell>
                             <Table.Cell>
-                                <div className="whitespace-nowrap max-w-100">
+                                <div className="whitespace-nowrap max-w-90">
                                     <p className="text-sm font-medium text-primary">{item.englishTitle}</p>
                                     <p className="text-sm text-tertiary">{item.paliTitle}</p>
                                 </div>

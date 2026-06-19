@@ -53,9 +53,9 @@ export const KangyurNavigatorModal = () => {
         <ModalOverlay isOpen={isOpen} onOpenChange={setIsOpen} isDismissable={true}>
             <Modal>
                 <Dialog>
-                    <div className="flex flex-row gap-0 w-full h-full shadow-lg">
+                    <div className="flex flex-row gap-0 w-full h-full shadow-lg rounded-t-xl">
                         {/* Kangyur Navigator */}
-                        <div className="relative w-130 sm:min-w-110 flex flex-col overflow-hidden bg-secondary border-r border-secondary">
+                        <div className="relative w-120 sm:min-w-90 flex flex-col overflow-hidden bg-secondary border-r border-secondary rounded-tl-xl">
                             {/* Header */}
                             <div className="h-auto flex flex-col gap-0.5 px-4 pt-3 sm:px-6 sm:py-3 bg-secondary dark:bg-neutral-900 border-b border-secondary">
                                 <AriaHeading slot="title" className="text-display-xs font-light text-brand-primary">
@@ -77,8 +77,8 @@ export const KangyurNavigatorModal = () => {
                             </div>
                         </div>
                         {/* Text Listing from Canon Navigator Selections */}
-                        <div className="relative w-full flex flex-col  overflow-hidden bg-secondary">
-                            <CloseButton onClick={() => setIsOpen(false)} theme="light" size="sm" className="absolute top-3 right-3 sm:top-4 sm:right-4" />
+                        <div className="relative w-full flex flex-col  overflow-hidden bg-secondary rounded-tr-xl">
+                            <CloseButton onClick={() => setIsOpen(false)} theme="light" size="md" className="absolute top-3 right-3 sm:top-4 sm:right-4" />
                             <div className="h-auto flex flex-row gap-6 items-center justify-between pl-4 pr-20 pt-4 sm:pl-6 sm:pt-7 bg-secondary">
 
                                 <TextTableFilter />

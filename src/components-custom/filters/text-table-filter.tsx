@@ -22,9 +22,9 @@ export const TextTableFilter = () => {
         <FilterBar.Root>
             <Input
                 icon={SearchLg}
-                placeholder="Search"
-                aria-label="Search"
-                className="w-md"
+                placeholder="Search table"
+                aria-label="Search table"
+                className="w-80"
             />
 
         </FilterBar.Root>
