@@ -282,7 +282,7 @@ type TabId =
     | "apparatus"
     | "lexicon"
     | "downloads"
-    | "Reader Preferences";
+    | "settings";
 
 interface AncillaryTab {
     id: TabId;
@@ -352,7 +352,7 @@ const ANCILLARY_TABS: AncillaryTab[] = [
     },
     {
         id: "settings",
-        label: "Settings",
+        label: "Reader Preferences",
         icon: Settings01,
         requiredPlan: "free",
         tooltip: "Settings — reader display preferences",
