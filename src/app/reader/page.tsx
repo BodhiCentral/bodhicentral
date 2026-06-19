@@ -56,7 +56,7 @@ export const TextCanvasSingle = () => {
                 <ArrowLeft size={16} />
                 <ArrowRight size={16} />
             </div>
-            <div className="py-2 overflow-y-auto scrollbar-hide h-[calc(100dvh-6rem)]">
+            <div className="pb-6 overflow-y-auto scrollbar-hide h-[calc(100dvh-6rem)]">
 
                 <section className="relative mx-auto">
                     <div className="mx-auto grid max-w-container grid-cols-1 items-center justify-items-center gap-8 lg:grid-cols-[1.4fr_3fr] lg:justify-items-start">
@@ -282,7 +282,7 @@ type TabId =
     | "apparatus"
     | "lexicon"
     | "downloads"
-    | "settings";
+    | "Reader Preferences";
 
 interface AncillaryTab {
     id: TabId;
