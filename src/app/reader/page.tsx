@@ -52,7 +52,7 @@ export const TableOfContents = () => {
 export const TextCanvasSingle = () => {
     return (
         <div className="mx-auto prose-reader flex flex-col px-2">
-            <div className="flex justify-between py-4">
+            <div className="flex justify-between pt-8">
                 <ArrowLeft size={16} />
                 <ArrowRight size={16} />
             </div>
@@ -90,13 +90,13 @@ export const TextCanvasSingle = () => {
                 </section>
                 <h2 id="introduction-to-the-reader">A Word of Welcome</h2>
                 <p className="lead first-letter:float-left first-letter:text-7xl first-letter:leading-12 first-letter:mr-1 first-letter:font-serif first-letter:font-extralight first-letter:text-brand-400 dark:first-letter:text-brand-200">
-                    The Bodhi Central experience is a sanctuary of sources of wisdom, paths to awakening, and tools to support your journey, open to everyone, and without the financial pressures of modern spiritual industry. The platform's mission is to expose you to authentic Buddha's words and transmissions from the living traditions. We believe the teachings of the Dharma are a complete and self-validating response to human suffering — not because we say so, but because sincere practitioners across 2,500 years have found them to be so.
+                    The Bodhi Central experience is a sanctuary of sources of wisdom, paths to awakening, and tools to support your journey, open to everyone, and without the financial pressures of our modern spiritual industry. The platform's mission is to expose you to authentic Buddha's words and transmissions from the living traditions. We believe the teachings of the Dharma are a complete and self-validating response to human suffering — not because we say so, but because sincere practitioners across 2,500 years have found them to be so.
                 </p>
                 <p className="lead">
                     Bodhi Central exists to remove the distance between a serious seeker and the most important words ever spoken about the nature of mind. Our tools don't replace practice or transmission — they clear the path toward them.
                 </p>
                 <p className="lead">
-                    Whether you are beginning your journey or deepening your understanding, may this space of readership and learning inspire you and bring to everyone a positive difference.
+                    Whether you are beginning your journey or deepening your understanding and realizations, may this space of readership and learning inspire you and bring a positive difference to everyone.
                 </p>
                 <hr />
                 <h2 id="auspicious-sample-text">Auspicious Sample Text</h2>
@@ -577,7 +577,7 @@ export default function ReaderPage() {
                     className={[
                         "relative top-0 bottom-0 mx-auto grid grid-rows-1 w-full h-full overflow-hidden transition-[grid-template-columns] duration-300",
                         ancillaryOpen
-                            ? "grid-cols-[20%_1fr_26%]"
+                            ? "grid-cols-[20%_1fr_27%]"
                             : "grid-cols-[20%_1fr_0px]",
                     ].join(" ")}
                 >
