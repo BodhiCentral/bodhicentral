@@ -118,7 +118,7 @@ export const HomeScreen = () => {
                                     <polygon points="200,12 230,168 380,200 230,232 200,388 170,232 20,200 170,168" />
                                 </g>
                                 {/* Inner circle fill */}
-                                <circle cx="200" cy="200" r="88" fill="rgba(26,23,20,0.5)" stroke="#B08D57" strokeWidth="0.5" />
+                                <circle cx="200" cy="200" r="88" fill="rgba(26,23,20,0.25)" stroke="#B08D57" strokeWidth="0.5" />
                                 {/* Spoke lines */}
                                 <g stroke="#B08D57" strokeWidth="0.35" opacity="0.3">
                                     <line x1="200" y1="112" x2="200" y2="88" />

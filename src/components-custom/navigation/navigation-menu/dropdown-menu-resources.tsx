@@ -117,7 +117,7 @@ export const DropdownMenuResources = ({ onClose }: { onClose?: () => void }) => 
                 </div>
 
                 <div className="mx-auto flex max-w-container flex-col px-4 py-5 md:flex-row md:items-center md:justify-between md:px-6">
-                    <Button href="/plans"  color="secondary" size="md" iconLeading={BookOpen01} className="hidden md:flex" onPress={onClose}>
+                    <Button href="/plans"  color="secondary" size="md" className="hidden md:flex" onPress={onClose}>
                         Plans
                     </Button>
                     <Button href="/support" color="primary" size="md" iconLeading={LifeBuoy01} className="hidden md:flex" onPress={onClose}>
