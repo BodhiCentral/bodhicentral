@@ -36,7 +36,7 @@ const columns: MenuColumn[] = [
                 Icon: Building08,
             },
             {
-                title: "Help and support",
+                title: "Help & Support",
                 subtitle: "Need help with something? Our team is here to help.",
                 href: "/support",
                 Icon: LifeBuoy01,
@@ -48,17 +48,10 @@ const columns: MenuColumn[] = [
         title: "Resources",
         items: [
             {
-                title: "The Blog",
-                subtitle: "Read educational articles distilling wisdom and kindness",
+                title: "Articles & Blog",
+                subtitle: "Expert articles from within the traditions.",
                 href: "/resources/blog",
                 Icon: Certificate02,
-            },
-            {
-                title: "Join our Forum",
-                subtitle: "Engage in conversations and share knowledge with others.",
-                href: "https://bodhicentral.discourse.group",
-                target: "_blank",
-                Icon: UsersPlus,
             },
             {
                 title: "Documentation",
@@ -67,6 +60,14 @@ const columns: MenuColumn[] = [
                 target: "_blank",
                 Icon: FileQuestion01,
             },
+            {
+                title: "Join Our Forum",
+                subtitle: "Engage in conversations and share knowledge with others.",
+                href: "https://bodhicentral.discourse.group",
+                target: "_blank",
+                Icon: UsersPlus,
+            },
+
         ],
     },
 ];
@@ -85,9 +86,9 @@ export const DropdownMenuResources = ({ onClose }: { onClose?: () => void }) => 
                             <h3 className="text-md font-semibold text-brand-600 dark:text-brand-400">Quick Links</h3>
                             <ul className="flex flex-col gap-3">
                                 {[
-                                    { title: "Using your Desk", href: "#" },
-                                    { title: "Manage galleries", href: "#" },
-                                    { title: "Managa storage", href: "#" },
+                                    { title: "Using My Desk", href: "#" },
+                                    { title: "Manage custom galleries", href: "#" },
+                                    { title: "Manage storaged data", href: "#" },
                                 ].map((item) => (
                                     <li key={item.title}>
                                         <Button href={item.href} color="link-gray" size="md" onPress={onClose}>
@@ -116,14 +117,14 @@ export const DropdownMenuResources = ({ onClose }: { onClose?: () => void }) => 
                 </div>
 
                 <div className="mx-auto flex max-w-container flex-col px-4 py-5 md:flex-row md:items-center md:justify-between md:px-6">
-                    <Button href="https://bodhicentral-docs.vercel.app/documentation/introduction" target="_blank" color="secondary" size="md" iconLeading={BookOpen01} className="hidden md:flex" onPress={onClose}>
-                        Documentation
-                    </Button>
-                    <Button href="/plans" color="primary" size="md" className="hidden md:flex" onPress={onClose}>
+                    <Button href="/plans"  color="secondary" size="md" iconLeading={BookOpen01} className="hidden md:flex" onPress={onClose}>
                         Plans
                     </Button>
-                    <Button href="/plans" color="primary" size="sm" className="md:hidden" onPress={onClose}>
-                        Plans
+                    <Button href="/support" color="primary" size="md" iconLeading={LifeBuoy01} className="hidden md:flex" onPress={onClose}>
+                        Help & Support
+                    </Button>
+                    <Button href="/support" color="primary" size="sm" className="md:hidden" onPress={onClose}>
+                        Help & Support
                     </Button>
                 </div>
             </nav>

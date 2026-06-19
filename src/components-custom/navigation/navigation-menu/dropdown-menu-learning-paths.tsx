@@ -75,9 +75,9 @@ export const DropdownMenuLearningPaths = ({ onClose }: { onClose?: () => void })
                             <h3 className="text-md font-semibold text-brand-600 dark:text-brand-400">Quick Links</h3>
                             <ul className="flex flex-col gap-3">
                                 {[
-                                    { title: "New Additions", href: "#" },
-                                    { title: "Learning Paths Overview", href: "/learning-paths" },
-                                    { title: "My Desk Preferences", href: "/my-desk-preferences" },
+                                    { title: "New additions", href: "#" },
+                                    { title: "Paths overview", href: "/learning-paths" },
+                                    { title: "My Learning paths", href: "#" },
                                 ].map((item) => (
                                     <li key={item.title}>
                                         <Button href={item.href} color="link-gray" size="md" onPress={onClose}>
@@ -110,10 +110,10 @@ export const DropdownMenuLearningPaths = ({ onClose }: { onClose?: () => void })
                         Plans
                     </Button>
                     <Button href="/learning-paths" color="primary" size="md" iconLeading={GraduationHat01} className="hidden md:flex" onPress={onClose}>
-                        Last learning
+                        Continue learning
                     </Button>
                     <Button href="/learning-paths" color="primary" size="sm" iconLeading={GraduationHat01} className="md:hidden" onPress={onClose}>
-                        Last Learning
+                        Continue Learning
                     </Button>
                 </div>
             </nav>

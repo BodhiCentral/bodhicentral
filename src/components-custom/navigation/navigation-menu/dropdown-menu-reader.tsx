@@ -1,7 +1,7 @@
 "use client";
 
 import type { FC, ReactNode } from "react";
-import { BookOpen01, Link03, Hurricane01 } from "@untitledui/icons";
+import { BookOpen01, GraduationHat02 } from "@untitledui/icons";
 import { Button } from "@/components/base/buttons/button";
 import { NavMenuItemLink } from "@/components/marketing/header-navigation/base-components/nav-menu-item";
 
@@ -43,13 +43,13 @@ const columns: MenuColumn[] = [
                 title: "Continue Learning",
                 subtitle: "Continue learning where you left off.",
                 href: "#",
-                Icon: Hurricane01,
+                Icon: GraduationHat02,
             },
             {
                 title: "My Paths",
                 subtitle: "Learnings you have stored in your library.",
                 href: "#",
-                Icon: Link03,
+                Icon: GraduationHat02,
             },
         ],
     },
@@ -70,8 +70,7 @@ export const DropdownMenuReader = ({ onClose }: { onClose?: () => void }) => {
                             <ul className="flex flex-col gap-3">
                                 {[
 
-                                    { title: "Workspaces", href: "/dashboard" },
-                                    { title: "Lexicon", href: "#" },
+                                    { title: "Manage Workspaces", href: "/dashboard" },
                                     { title: "Advanced Tools", href: "#" },
                                 ].map((item) => (
                                     <li key={item.title}>
