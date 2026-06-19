@@ -58,31 +58,31 @@ export const TextCanvasSingle = () => {
             </div>
             <div className="py-2 overflow-y-auto scrollbar-hide h-[calc(100dvh-6rem)]">
 
-                <section className="relative mx-auto md:pb-6">
+                <section className="relative mx-auto">
                     <div className="mx-auto grid max-w-container grid-cols-1 items-center justify-items-center gap-8 lg:grid-cols-[1.4fr_3fr] lg:justify-items-start">
-                        <div className="relative lg:w-full lg:h-full lg:min-h-70">
+                        <div className="relative lg:w-full lg:h-auto lg:min-h-70">
                             {/* Light mode image (hidden in dark mode) */}
                             <img
                                 alt="Text Cover"
-                                className="inset-0 h-auto w-full cols- object-top dark:hidden md:h-70 md:w-auto lg:h-75 lg:object-cover"
+                                className="inset-0 h-auto w-full cols- object-top dark:hidden md:h-60 md:w-auto lg:h-70 lg:object-cover"
                                 src="/textCovers/buddha-sakyamuni-600px.jpg"
                             />
                             {/* Dark mode image (hidden in light mode) */}
                             <img
                                 alt="Text Cover"
-                                className="inset-0 h-auto w-full max-w-none object-cover not-dark:hidden md:h-70 md:w-auto lg:h-75 lg:object-cover"
+                                className="inset-0 h-auto w-full max-w-none object-cover not-dark:hidden md:h-65 md:w-auto lg:h-75 lg:object-cover"
                                 src="/textCovers/buddha-sakyamuni-600px.jpg"
                             />
                         </div>
                         <div id="title-page" className="flex max-w-3xl flex-col items-center text-center lg:items-start lg:text-left">
 
-                            <h1 className="mt-4 text-display-md font-semibold text-primary md:text-display-lg lg:text-display-xl">
+                            <h1 className="mt-2 text-display-md font-semibold text-primary md:text-display-lg lg:text-display-xl">
                                 Welcome to Bodhi Central <br />Readership and Learning
                             </h1>
-                            <p className="description mt-4 max-w-3xl text-lg text-tertiary md:mt-6 md:text-xl">
-                                We are delighted to invite you to explore this space of clear intent, offering you a treasure trove of texts and teachings to inspire your study and practice.
+                            <p className="description mt-2 max-w-3xl text-lg text-tertiary md:mt-3 md:text-xl">
+                                We are delighted to introduce this space of humanity-centered interations, offering you a treasure trove of texts and teachings to support your study and practice.
                             </p>
-                            <Button color="primary" size="md" className="mt-4" onClick={() => openCanonNavigator()}>
+                            <Button color="primary" size="sm" className="mt-2" onClick={() => openCanonNavigator()}>
                                 Find a text
                             </Button>
                         </div>
@@ -90,13 +90,13 @@ export const TextCanvasSingle = () => {
                 </section>
                 <h2 id="introduction-to-the-reader">A Word of Welcome</h2>
                 <p className="lead first-letter:float-left first-letter:text-7xl first-letter:leading-12 first-letter:mr-1 first-letter:font-serif first-letter:font-extralight first-letter:text-brand-400 dark:first-letter:text-brand-200">
-                    The Bodhi Central experience is a sanctuary of sources of wisdom, paths to awakening, and tools to support your journey, open to everyone, and without the financial pressures of modern times. The platform's mission is to expose you to authentic Buddha's words and transmissions from the living traditions. We believe the teachings of the Dharma are a complete and self-validating response to human suffering — not because we say so, but because sincere practitioners across 2,500 years have found them to be so.
+                    The Bodhi Central experience is a sanctuary of sources of wisdom, paths to awakening, and tools to support your journey, open to everyone, and without the financial pressures of modern spiritual industry. The platform's mission is to expose you to authentic Buddha's words and transmissions from the living traditions. We believe the teachings of the Dharma are a complete and self-validating response to human suffering — not because we say so, but because sincere practitioners across 2,500 years have found them to be so.
                 </p>
                 <p className="lead">
                     Bodhi Central exists to remove the distance between a serious seeker and the most important words ever spoken about the nature of mind. Our tools don't replace practice or transmission — they clear the path toward them.
                 </p>
                 <p className="lead">
-                    Whether you are beginning your journey or deepening your understanding, may this space of readership and learning inspire you and support your journey.
+                    Whether you are beginning your journey or deepening your understanding, may this space of readership and learning inspire you and bring to everyone a positive difference.
                 </p>
                 <hr />
                 <h2 id="auspicious-sample-text">Auspicious Sample Text</h2>
@@ -371,7 +371,7 @@ const TabContent: Record<TabId, React.FC> = {
     segment: () => (
         <div className="flex flex-col gap-3">
             <p className="text-sm text-secondary">
-                Select a passage in the reader to inspect its metadata, segment ID, and parallel references.
+                Select a passage in the reader to inspect its metadata, segment ID, and other available translations.
             </p>
         </div>
     ),
