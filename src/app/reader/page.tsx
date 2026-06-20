@@ -24,7 +24,7 @@ export const TableOfContents = () => {
                     {[
                         { title: "Text Title", href: "#title-page", indent: "ml-0" },
                         { title: "A Word of Welcome", href: "#introduction-to-the-reader", indent: "ml-0" },
-                        { title: "Auspicious Sample Text", href: "#auspicious-sample-text", indent: "ml-0" },
+                        { title: "Auspicious Introduction to Vinaya", href: "#auspicious-sample-text", indent: "ml-0" },
                         { title: "Textual Transmission and the Schools", href: "#textual-transmission-and-the-schools", indent: "ml-0" },
                         { title: "Content of the Vinaya Pitaka", href: "#content", indent: "ml-0" },
                         { title: "Suttavibhaṅga", href: "#suttavibhaṅga", indent: "ml-6" },
@@ -52,9 +52,10 @@ export const TableOfContents = () => {
 export const TextCanvasSingle = () => {
     return (
         <div className="mx-auto prose-reader flex flex-col px-2">
-            <div className="flex justify-between pt-8">
-                <ArrowLeft size={16} />
-                <ArrowRight size={16} />
+            
+            <div className="flex justify-between pt-6 pb-6">
+                <Button iconLeading={ArrowLeft} color="secondary" size="sm" >Previous</Button>
+                <Button iconTrailing={ArrowRight} color="secondary" size="sm" >Next</Button>
             </div>
             <div className="pb-6 overflow-y-auto scrollbar-hide h-[calc(100dvh-6rem)]">
 
@@ -83,7 +84,7 @@ export const TextCanvasSingle = () => {
                                 We are delighted to introduce this space of humanity-centered interations, offering you a treasure trove of texts and teachings to support your study and practice.
                             </p>
                             <Button color="primary" size="sm" className="mt-2" onClick={() => openCanonNavigator()}>
-                                Find a text
+                                Find another text
                             </Button>
                         </div>
                     </div>
@@ -99,7 +100,7 @@ export const TextCanvasSingle = () => {
                     Whether you are beginning your journey or deepening your understanding and realizations, may this space of readership and learning inspire you and bring a positive difference to everyone.
                 </p>
                 <hr />
-                <h2 id="auspicious-sample-text">Auspicious Sample Text</h2>
+                <h2 id="auspicious-sample-text">Auspicious Introduction to Vinaya</h2>
                 <p>
                     The word <i>vinaya</i>, here translated as “Monastic Law,” originally probably meant “training,” as can be seen from its usage in the Sutta Piṭaka, “the Basket of Discourses.” In this sense it complements the Dhamma, the doctrine or teaching, which provides the instructions on how the training is to be achieved. The compound <i>dhamma-vinaya</i> is a common one in the earliest literature and might be rendered as “theory and practice.” Gradually the meaning shifted to refer to the rules of conduct instead, thus referring to the training in a narrower sense. Although the former usage is more common in the suttas, it is this latter usage of vinaya which has become the dominant one and which has prevailed to the present day.
                 </p>
@@ -168,7 +169,7 @@ export const TextCanvasSingle = () => {
                     The Vinaya Piṭaka is divided into two main parts: the Suttavibhaṅga, “The Analysis of the Rules,” and The Khandhakas, “the Chapters.” The individual schools sometimes have additional texts, such as the Parivāra, “The Compendium,” belonging to the Theravāda tradition, and the Uttaragrantha belonging to the Mūlasarvāstivādins.
                 </p>
                 {/* Vinaya Piṭaka */}
-                <div className="flex flex-col bg-secondary px-4 pb-4 gap-2 rounded-xl border border-secondary drop-shadow-sm">
+                <div className="flex flex-col bg-secondary px-4 pb-4 gap-2 rounded-3xl border border-secondary drop-shadow-sm">
                     <div className="flex flex-row items-center justify-between gap-4">
                         <h3 className="text-display-xs text-brand-700 dark:text-brand-700/80">Vinaya Piṭaka</h3>
                         <div className="flex flex-col gap-3 md:justify-center pb-1">
@@ -177,7 +178,7 @@ export const TextCanvasSingle = () => {
                             </Button>
                         </div>
                     </div>
-                    <div className="mx-auto w-full flex flex-row flex-wrap md:flex-nowrap items-center justify-center gap-2 rounded-3xl">
+                    <div className="mx-auto w-full flex flex-row flex-wrap md:flex-nowrap items-start justify-center gap-2 rounded-3xl">
                         <div className="mx-auto w-full flex flex-col items-center justify-center gap-0 bg-red-100/60 dark:bg-red-950/80 px-2 py-4 rounded-2xl border border-red-200 dark:border-red-800">
                             <p className="not-prose text-md font-light text-primary/70 text-center">Suttavibhaṅga</p>
                             <p className="not-prose text-md font-bold text-center text-secondary">Rules and Their Analysis</p>
