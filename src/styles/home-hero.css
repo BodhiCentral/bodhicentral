@@ -38,7 +38,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: 39%;
+    top: 40%;
     height: 1px;
     background: linear-gradient(90deg, transparent 0%, rgba(176, 141, 87, 0.18) 20%, rgba(176, 141, 87, 0.08) 65%, transparent 100%);
     transform: translateY(-120px);
@@ -187,8 +187,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(26, 23, 20, 0.5);
-    backdrop-filter: blur(8px);
+    animation: fadeIn 1.6s ease both;
+    animation-delay: 0.8s;
 }
 
 /* ── STATS strip ── */
