@@ -108,7 +108,7 @@ export const FeaturesThreePillars = () => {
                             {[
                                 "Study the foundational paths for a solid understanding of the Buddhist core concepts and principles",
                                 "Go deeper with academic paths (systematic education), with trustworthy companions for in-depth study of the Dharma",
-                                "Engage in contemplative paths and practices (samatha, vipassana, mind-training, paramitas, etc.) brought to you by genuine Buddhist transmissions to support your progress",
+                                "Engage in contemplative paths and practices (samatha, vipassana, mind-training, paramitas, etc.) brought to you by genuine Buddhist transmissions to foster your progress in the journey",
                             ].map((feat) => (
                                 <CheckItemText key={feat} size="sm" iconStyle="outlined" color="primary" text={feat} />
                             ))}
@@ -156,7 +156,7 @@ export const FeaturesThreePillars = () => {
                         <FeaturedIcon icon={ChartBreakoutSquare} size="lg" color="gray" theme="modern-neue" />
                         <h3 className="mt-5 text-display-xs text-brand-800 dark:text-brand-400 md:text-display-lg">Resources for Individuals and Communities</h3>
                         <p className="mt-2 text-md text-tertiary md:mt-4 md:text-lg">
-                            Find teachers and study centers worldwide through our curated directories. Deepen your understanding with articles written from within the living Buddhist traditions. Create your own personal study and reading workspaces suited to your needs and preferences. All documentation and guidelines are openly available for contributors and curious minds alike.
+                            Find teachers and study centers worldwide through our curated directories. Deepen your understanding with articles written from within the living Buddhist traditions. Create your own personal study and reading workspaces suited to your needs and preferences. Our extensive documentation and guidelines are openly available for contributors and curious minds alike.
                         </p>
                         <Button href="/resources" color="secondary" size="md" className="relative z-100 mt-8 cursor-pointer">
                             Explore resources
