@@ -175,7 +175,7 @@
 
 .medallion-svg {
     position: absolute;
-    top: 10%;
+    top: 11%;
     transform: translateY(-50%);
     animation: slowSpin 80s linear infinite;
 }

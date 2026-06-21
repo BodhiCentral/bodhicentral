@@ -27,9 +27,9 @@ const AlternateImageMockup: FC<HTMLAttributes<HTMLDivElement>> = (props) => {
 
 export const FeaturesThreePillars = () => {
     return (
-        <section className="relative flex flex-col gap-12 overflow-hidden bg-primary py-16 sm:gap-16 md:gap-20 md:py-24 lg:gap-24">
+        <section className="relative flex flex-col gap-12 overflow-hidden bg-primary py-16 sm:gap-16 md:gap-20 md:py-28 lg:gap-24">
             {/* Top decorative band */}
-            <div className="absolute h-6 top-0 left-0 right-0 mx-auto bg-[url(/patterns/detailed-endless-band-gold-140px.webp)] bg-contain bg-repeat opacity-50 dark:opacity-40">
+            <div className="absolute h-6 top-0 left-0 right-0 mx-auto bg-[url(/patterns/detailed-endless-band-gold-140px.webp)] bg-contain bg-repeat opacity-40 dark:opacity-40">
             </div>
             {/* Header Title and Subtitle */}
             <div className="mx-auto w-full max-w-container px-4 md:px-8">
@@ -46,14 +46,14 @@ export const FeaturesThreePillars = () => {
                         <FeaturedIcon icon={BookOpen01} size="lg" color="gray" theme="modern-neue" />
                         <h3 className="mt-5 text-display-xs text-brand-800 dark:text-brand-400 md:text-display-lg">Sources of Wisdom</h3>
                         <p className="mt-2 text-md text-tertiary md:mt-4 md:text-lg">
-                            Buddhist sources were scattered and fragmented for too long. We've made it simple, organized, and beautiful:
+                            Buddhist sources were scattered and fragmented for centuries. We've made its access functional and joyfull, fostering your intrinsic motivation to:
                         </p>
                         <ul className="mt-8 flex flex-col gap-4 pl-2 md:gap-5 md:pl-4">
                             {[
                                 
-                                "Clear presentation of original authentic Buddhist sources in Pali, Tibetan, and publicly available translations—a treasure trove of texts that are currently transmitted and practiced in modern mainstream Buddhist traditions",
-                                "A pragmatic approach to collections, genres, and other categories of texts, organized with clarity and authority for students and practitioners, regardless of your affiliation and tradition.",
-                                "State-of-the-art readers and personal workspaces to make your experience smooth and memorable",
+                                "Engage with authentic Buddhist sources as they are, with publicly available translations and original texts in Pali and Tibetan languages currently transmitted and practiced in modern mainstream Buddhism",
+                                "Explore collections, genres, and other categories of texts, organized with clarity and authority for students and practitioners, regardless of your affiliation",
+                                "And enjoy state-of-the-art readers, advanced study tools, and personal workspaces to make your experience smooth and memorable",
 
                             ].map((feat) => (
                                 <CheckItemText key={feat} size="sm" iconStyle="outlined" color="primary" text={feat} />
@@ -65,11 +65,12 @@ export const FeaturesThreePillars = () => {
                     </div>
 
                     <div className="relative w-full flex-1 lg:h-128">
+                        {/* Rainbow Light Accent background image */}
                         <img
                             alt="Light Accent"
                             aria-hidden="true"
                             src="/patterns/light-accent.webp"
-                            className="absolute z-0 right-0 -bottom-14 max-w-160 opacity-60 mix-blend-multiple md:right-10 md:-bottom-1/3 md:max-w-7xl mask-b-from-90% mask-b-to-100%"
+                            className="absolute z-0 right-0 top-10 -bottom-12 max-w-170 opacity-60 mix-blend-multiple md:right-10 md:-bottom-60 md:max-w-7xl mask-b-from-90% mask-b-to-100% scale-x-[1.4]"
                         />
                         <AlternateImageMockup className="lg:left-0">
 
@@ -155,7 +156,7 @@ export const FeaturesThreePillars = () => {
                         <FeaturedIcon icon={ChartBreakoutSquare} size="lg" color="gray" theme="modern-neue" />
                         <h3 className="mt-5 text-display-xs text-brand-800 dark:text-brand-400 md:text-display-lg">Resources for Individuals and Communities</h3>
                         <p className="mt-2 text-md text-tertiary md:mt-4 md:text-lg">
-                            Find teachers and study centers worldwide through our curated directory. Deepen your understanding with articles written from within the living Buddhist traditions. Create your own personal study and reading spaces suited to your needs and preferences. All documentation and guidelines are openly available for contributors and curious minds alike.
+                            Find teachers and study centers worldwide through our curated directories. Deepen your understanding with articles written from within the living Buddhist traditions. Create your own personal study and reading workspaces suited to your needs and preferences. All documentation and guidelines are openly available for contributors and curious minds alike.
                         </p>
                         <Button href="/resources" color="secondary" size="md" className="relative z-100 mt-8 cursor-pointer">
                             Explore resources

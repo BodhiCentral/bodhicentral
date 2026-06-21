@@ -48,14 +48,14 @@ const columns: MenuColumn[] = [
         title: "Resources",
         items: [
             {
-                title: "Articles & Blog",
+                title: "Articles & Insights",
                 subtitle: "Expert articles from within the traditions.",
                 href: "/resources/blog",
                 Icon: Certificate02,
             },
             {
                 title: "Documentation",
-                subtitle: "In-depth articles about our platfrom, technologies, and research.",
+                subtitle: "In-depth articles about our platfrom and technologies.",
                 href: "https://bodhicentral-docs.vercel.app/",
                 target: "_blank",
                 Icon: FileQuestion01,
