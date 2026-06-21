@@ -9,7 +9,6 @@
     --font-serif--opsz: 100;
     --font-serif--ital: 0;
 
-
     /* FONT SIZE */
     --text-xs: calc(var(--spacing) * 3);
     --text-xs--line-height: calc(var(--spacing) * 4.5);
@@ -56,26 +55,26 @@
     --text-display-xs--line-height: calc(var(--spacing) * 8);
 
     --text-display-sm: calc(var(--spacing) * 7.5);
-    --text-display-sm--line-height: calc(var(--spacing) * 9.5);
+    --text-display-sm--line-height: calc(var(--spacing) * 9);
 
     --text-display-md: calc(var(--spacing) * 9);
-    --text-display-md--line-height: calc(var(--spacing) * 11);
+    --text-display-md--line-height: calc(var(--spacing) * 10.5);
     --text-display-md--letter-spacing: -0.72px;
 
     --text-display-lg: calc(var(--spacing) * 12);
-    --text-display-lg--line-height: calc(var(--spacing) * 14);
+    --text-display-lg--line-height: calc(var(--spacing) * 13);
     --text-display-lg--letter-spacing: -0.96px;
 
     --text-display-xl: calc(var(--spacing) * 15);
-    --text-display-xl--line-height: calc(var(--spacing) * 18);
+    --text-display-xl--line-height: calc(var(--spacing) * 17);
     --text-display-xl--letter-spacing: -1.2px;
 
     --text-display-2xl: calc(var(--spacing) * 18);
-    --text-display-2xl--line-height: calc(var(--spacing) * 22.5);
+    --text-display-2xl--line-height: calc(var(--spacing) * 22);
     --text-display-2xl--letter-spacing: -1.44px;
 
     --text-display-3xl: calc(var(--spacing) * 21);
-    --text-display-3xl--line-height: calc(var(--spacing) * 23.5);
+    --text-display-3xl--line-height: calc(var(--spacing) * 23);
     --text-display-3xl--letter-spacing: -1.68px;
 
     --text-display-4xl: calc(var(--spacing) * 24);
@@ -89,8 +88,6 @@
     --text-display-6xl: calc(var(--spacing) * 30);
     --text-display-6xl--line-height: calc(var(--spacing) * 39);
     --text-display-6xl--letter-spacing: -2.4px;
-
-
 
     /* MAX WIDTH */
     --max-width-container: 1280px;
@@ -152,7 +149,6 @@
     }
 
     @keyframes caret-blink {
-
         0%,
         50% {
             opacity: 1;
@@ -167,15 +163,8 @@
     /* Custom Hero Animation */
     --animate-pulse-slow: pulse 6s ease-in-out infinite;
 
-
     /* Custom Background Image */
-    --background-image-hero-glow: radial-gradient(
-        ellipse 55% 40% at 50% 50%, 
-        rgba(176,141,87,0.12) 0%, 
-        transparent 80%
-    );
-
-
+    --background-image-hero-glow: radial-gradient(ellipse 55% 40% at 50% 50%, rgba(176, 141, 87, 0.12) 0%, transparent 80%);
 
     /* BASE COLOR */
     --color-transparent: rgb(0 0 0 / 0);
@@ -233,21 +222,20 @@
 
     /* Gold Colors */
 
-  --color-gold-25: oklch(0.966 0.008 73.73);
-  --color-gold-50: oklch(0.973 0.007 88.55);
-  --color-gold-100: oklch(0.945 0.014 78.24);
-  --color-gold-200: oklch(0.89 0.028 78.17);
-  --color-gold-300: oklch(0.837 0.041 79.42);
-  --color-gold-400: oklch(0.781 0.055 78.86);
-  --color-gold-500: oklch(0.724 0.07 78.26);
-  --color-gold-600: oklch(0.664 0.083 77.4);
-  --color-gold-700: oklch(0.545 0.069 77.21);
-  --color-gold-800: oklch(0.411 0.051 77.18);
-  --color-gold-900: oklch(0.266 0.029 79.78);
-  --color-gold-950: oklch(0.177 0.014 71.76);
+    --color-gold-25: oklch(0.966 0.008 73.73);
+    --color-gold-50: oklch(0.973 0.007 88.55);
+    --color-gold-100: oklch(0.945 0.014 78.24);
+    --color-gold-200: oklch(0.89 0.028 78.17);
+    --color-gold-300: oklch(0.837 0.041 79.42);
+    --color-gold-400: oklch(0.781 0.055 78.86);
+    --color-gold-500: oklch(0.724 0.07 78.26);
+    --color-gold-600: oklch(0.664 0.083 77.4);
+    --color-gold-700: oklch(0.545 0.069 77.21);
+    --color-gold-800: oklch(0.411 0.051 77.18);
+    --color-gold-900: oklch(0.266 0.029 79.78);
+    --color-gold-950: oklch(0.177 0.014 71.76);
 
-
-    /* Brand Muted Colors */ 
+    /* Brand Muted Colors */
 
     --color-muted-50: oklch(0.965 0.003 67.83);
     --color-muted-100: oklch(0.922 0.009 62.61);
@@ -261,8 +249,7 @@
     --color-muted-900: oklch(0.242 0.007 67.47);
     --color-muted-950: oklch(0.188 0.005 67.51);
 
-
-    /* VARIABLE BRAND COLORS - From Gold */ 
+    /* VARIABLE BRAND COLORS - From Gold */
     --color-brand-25: var(--color-gold-25);
     --color-brand-50: var(--color-gold-50);
     --color-brand-100: var(--color-gold-100);
@@ -695,7 +682,6 @@
         --color-utility-warm-off-800: var(--color-warm-off-200);
         --color-utility-warm-off-900: var(--color-warm-off-100);
         --color-utility-warm-off-950: var(--color-warm-off-50);
-        
 
         --color-utility-brand-25: var(--color-brand-950);
         --color-utility-brand-50: var(--color-brand-950);

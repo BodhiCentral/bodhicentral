@@ -15,7 +15,7 @@ export const ContactFormAndImage01 = () => {
     const [selectedCountryPhone, setSelectedCountryPhone] = useState("US");
 
     return (
-        <section className="py-16 md:pt-16 md:pb-32">
+        <section className="py-16 md:pt-16 md:pb-28">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="grid gap-24 lg:grid-cols-2">
                     <div className="flex w-full flex-col gap-12 md:justify-self-center lg:py-6">
@@ -86,9 +86,6 @@ export const ContactFormAndImage01 = () => {
                         <Image src="/monk-seated-in-meditation-under-forest-tree-1920.webp" className="h-full w-full rounded-3xl object-cover shadow-xl shadow-brand-200 dark:shadow-brand-800/50" alt="Monk Meditating under Tree" width={800} height={800} />
                     </div>
                 </div>
-            </div>
-            {/* Bottom decorative band */}
-            <div className="absolute h-6 bottom-0 left-0 right-0 mx-auto bg-[url(/patterns/detailed-endless-band-gold-140px.webp)] bg-contain bg-repeat opacity-16 dark:opacity-12">
             </div>
         </section>
     );

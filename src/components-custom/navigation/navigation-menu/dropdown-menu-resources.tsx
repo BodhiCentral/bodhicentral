@@ -63,8 +63,8 @@ const columns: MenuColumn[] = [
             {
                 title: "Join Our Forum",
                 subtitle: "Engage in conversations and share knowledge with others.",
-                href: "https://bodhicentral.discourse.group",
-                target: "_blank",
+                href: "#",
+                target: "",
                 Icon: UsersPlus,
             },
 
