@@ -46,7 +46,7 @@ export const FeaturesThreePillars = () => {
                         <FeaturedIcon icon={BookOpen01} size="lg" color="gray" theme="modern-neue" />
                         <h3 className="mt-5 text-display-xs text-brand-800 dark:text-brand-400 md:text-display-lg">Sources of Wisdom</h3>
                         <p className="mt-2 text-md text-tertiary md:mt-4 md:text-lg">
-                            Buddhist sources were scattered and fragmented for centuries. We've made its access functional and joyfull, fostering your intrinsic motivation to:
+                            Buddhist sources were scattered and fragmented for centuries. Grounded on three decades of digital advancements, we've made access to Buddha's heritage a joyfull and functional experience, fostering your intrinsic motivation to:
                         </p>
                         <ul className="mt-8 flex flex-col gap-4 pl-2 md:gap-5 md:pl-4">
                             {[
