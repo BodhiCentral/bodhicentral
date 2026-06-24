@@ -81,23 +81,23 @@ export const TextCanvasSingle = () => {
                                 Welcome to Bodhi Central <br />Readership and Learning
                             </h1>
                             <p className="description mt-2 max-w-3xl text-lg text-tertiary md:mt-3 md:text-xl">
-                                We are delighted to introduce this space of humanity-centered interations, offering you a treasure trove of texts and teachings to support your study and practice.
+                                We are delighted to introduce this open space of humanity-centered interations with a treasure trove of texts and teachings to foster your intrinsic motivation to  study and practice.
                             </p>
                             <Button color="primary" size="sm" className="mt-2" onClick={() => openCanonNavigator()}>
-                                Find another text
+                                Navigate
                             </Button>
                         </div>
                     </div>
                 </section>
                 <h2 id="introduction-to-the-reader">A Word of Welcome</h2>
                 <p className="lead first-letter:float-left first-letter:text-7xl first-letter:leading-12 first-letter:mr-1 first-letter:font-serif first-letter:font-extralight first-letter:text-brand-400 dark:first-letter:text-brand-200">
-                    The Bodhi Central experience is a sanctuary of authientic sources of wisdom, paths to awakening, and tools to foster your journey. The platform's mission is to expose you to authentic Buddha's words and transmissions from the living traditions, open to everyone, and without the financial pressures of our modern spiritual industry. We believe the teachings of the Dharma are a complete and self-validating response to human suffering — not because we say so, but because sincere practitioners across 2,500 years have found them to be so.
+                    The Bodhi Central experience is a sanctuary of authentic sources of wisdom, paths to awakening, and advanced study tools to foster your journey. The platform's mission is to expose you to Buddha's message and its transmissions from the mainstream traditions, open to everyone, and without the financial pressure of spiritual-industry models. We believe the teachings of the Dharma are a complete and self-validating response to human suffering — not because we say so, but because sincere practitioners across 2,500 years have found them to be so.
                 </p>
                 <p className="lead">
                     Bodhi Central exists to remove the distance between a serious seeker and the most important words ever spoken about the nature of mind. Our tools don't replace practice or transmission — they clear the path toward them.
                 </p>
                 <p className="lead">
-                    Whether you are beginning your journey or deepening your understanding and realizations, may this space of readership and learning inspire you and bring a positive difference to everyone.
+                    Whether you are beginning your journey or deepening your understanding and realizations, may this offering of genuine readership and learning inspire you and bring a positive difference to everyone.
                 </p>
                 <hr />
                 <h2 id="auspicious-sample-text">Auspicious Introduction to Vinaya</h2>
