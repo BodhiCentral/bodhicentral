@@ -83,7 +83,7 @@ export const HomeScreen = () => {
                             Gateways to <br /> the <span className="text-brand-500 lg:text-display-5xl font-extralight italic">Awakening</span>
                         </h1>
                         <p className="hero-sub mt-4 max-w-xs sm:max-w-sm md:max-w-xl text-md text-balance text-brand-200 dark:text-brand-100 md:mt-6 md:text-lg">
-                            Buddha's message to humanity have illuminated the nature of mind for 2,500 years. Now, its most essential mainstream teachings — scriptures, paths, and living transmissions — are gathered in one place, for every sincere seeker.
+                            Buddha's message to humanity have illuminated the nature of mind for 2,500 years. Now, its most essential teachings — scriptures, paths, and mainstream transmissions — are gathered in one place, for every sincere seeker.
                         </p>
                         <div className="hero-ctas mt-8 flex w-full gap-3 md:mt-12 md:flex-row lg:items-start">
                             <Button className="cta-primary" size="md" href="/reader">Open Reader</Button>
@@ -113,8 +113,8 @@ export const HomeScreen = () => {
                                     <ellipse cx="200" cy="112" rx="22" ry="56" transform="rotate(270 200 200)" />
                                     <ellipse cx="200" cy="112" rx="22" ry="56" transform="rotate(315 200 200)" />
                                 </g>
-                                {/* Outer geometric star */}
-                                <g stroke="#B08D57" strokeWidth="0.4" fill="none" opacity="0.45">
+                                {/* Outer geometric star TODO: Experimatental radial background */}
+                                <g stroke="#B08D57" strokeWidth="0.4" fill="rgb(203, 180, 144,0.1)" opacity="0.45">
                                     <polygon points="200,12 230,168 380,200 230,232 200,388 170,232 20,200 170,168" />
                                 </g>
                                 {/* Inner circle fill */}

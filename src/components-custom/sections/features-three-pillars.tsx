@@ -51,9 +51,9 @@ export const FeaturesThreePillars = () => {
                         <ul className="mt-8 flex flex-col gap-4 pl-2 md:gap-5 md:pl-4">
                             {[
                                 
-                                "Engage with authentic Buddhist sources as they are, with publicly available translations and original texts in Pali and Tibetan languages currently transmitted and practiced in modern mainstream Buddhism",
-                                "Explore collections, genres, and other categories of texts, organized with clarity and authority for students and practitioners, regardless of your affiliation",
-                                "And enjoy state-of-the-art readers, advanced study tools, and personal workspaces to make your experience smooth and memorable",
+                                "Engage with authentic Buddhist sources as they are, with publicly available translations and original texts in Pali and Tibetan languages currently transmitted and practiced in modern mainstream Buddhism,",
+                                "explore collections, genres, and other categories of texts, organized with clarity and authority for students and practitioners, regardless of your affiliation,",
+                                "and enjoy state-of-the-art readers, advanced study tools, and personal environments to make your experience smooth and memorable",
 
                             ].map((feat) => (
                                 <CheckItemText key={feat} size="sm" iconStyle="outlined" color="primary" text={feat} />
