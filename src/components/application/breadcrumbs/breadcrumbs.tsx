@@ -3,6 +3,7 @@
 import React, { type ReactNode, createContext, useState } from "react";
 import { Breadcrumbs as AriaBreadcrumbs } from "react-aria-components";
 import { BreadcrumbItem } from "@/components/application/breadcrumbs/breadcrumb-item";
+import { BreadcrumbAccountItem } from "@/components/application/breadcrumbs/breadcrumb-account-item"
 import { cx } from "@/utils/cx";
 
 export type BreadcrumbType = "text" | "text-line" | "button";
@@ -58,5 +59,6 @@ const Breadcrumbs = ({ children, divider = "chevron", type = "text", className, 
 };
 
 Breadcrumbs.Item = BreadcrumbItem;
+Breadcrumbs.AccountItem = BreadcrumbAccountItem;
 
 export { Breadcrumbs };

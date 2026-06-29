@@ -10,6 +10,7 @@ import { Button } from "@/components/base/buttons/button";
 import { Facebook, LinkedIn, X } from "@/components/foundations/social-icons";
 import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumbs } from "@/components/application/breadcrumbs/breadcrumbs";
 import { openCanonNavigator } from "@/components-custom/navigation/canon-navigation/canon-navigation-modal-wrapper";
 
 
@@ -51,12 +52,9 @@ export const TableOfContents = () => {
 
 export const TextCanvasSingle = () => {
     return (
-        <div className="mx-auto prose-reader flex flex-col px-2">
+        <div className="mx-auto prose-reader flex flex-col px-2 md:px-4 lg:px-8 xl:px-16">
             
-            <div className="flex justify-between pt-6 pb-6">
-                <Button iconLeading={ArrowLeft} color="secondary" size="sm" >Previous</Button>
-                <Button iconTrailing={ArrowRight} color="secondary" size="sm" >Next</Button>
-            </div>
+           
             <div className="pb-6 overflow-y-auto scrollbar-hide h-[calc(100dvh-6rem)]">
 
                 <section className="relative mx-auto">
@@ -565,8 +563,33 @@ export const AncillaryPanel = ({
     );
 };
 
+const textLanguages = [
+    {
+        id: "pali",
+        name: "Text Title Pali",
+        email: "Pali Source",
+        avatar: "/placeholder-image-landscape.svg",
+        status: "Published",
+    },
+    {
+        id: "english",
+        name: "Text Title (Eng)",
+        email: "English Translation",
+        avatar: "/people/bhikku-sujato-close-up.jpg",
+        status: "In Progress",
+    },
+        {
+        id: "thai",
+        name: "Text Title (Thai)",
+        email: "Thai Translation",
+        avatar: "/placeholder-image-landscape.svg",
+        status: "In Progress",
+    },
+];
+
 export default function ReaderPage() {
     const [ancillaryOpen, setAncillaryOpen] = useState(true);
+    const [selectedAccountKey, setSelectedAccountKey] = useState<string>("english");
 
     return (
         <>
@@ -588,7 +611,20 @@ export default function ReaderPage() {
                     </div>
 
                     {/* Central Reader Canvas */}
-                    <div className="relative top-0 bottom-0 mx-auto w-full px-2 md:px-4 lg:px-6 xl:px-16 min-w-96 max-w-full bg-primary max-h-auto">
+                    <div className="relative top-0 bottom-0 mx-auto w-full min-w-96 max-w-full bg-primary max-h-auto">
+                        <div className="flex flex-row justify-between items-center p-2 md:p-2 lg:p-2 xl:p-4">
+                            <Breadcrumbs>
+                                <Breadcrumbs.Item href="#">Canon</Breadcrumbs.Item>
+                                <Breadcrumbs.Item href="#">Division</Breadcrumbs.Item>
+                                <Breadcrumbs.Item href="#">Section</Breadcrumbs.Item>
+                                <Breadcrumbs.Item href="#">Section</Breadcrumbs.Item>
+                                <Breadcrumbs.AccountItem items={textLanguages} selectedKey={selectedAccountKey} onSelectionChange={setSelectedAccountKey} />
+                            </Breadcrumbs> 
+                            <div className="flex gap-4 ">                   
+                                <Button iconLeading={ArrowLeft} color="secondary" size="xs"></Button>
+                                <Button iconTrailing={ArrowRight} color="secondary" size="xs"></Button>
+                            </div>
+                        </div>
                         <TextCanvasSingle />
                     </div>
 

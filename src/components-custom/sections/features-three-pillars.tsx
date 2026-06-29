@@ -106,7 +106,7 @@ export const FeaturesThreePillars = () => {
                         </p>
                         <ul className="mt-8 flex flex-col gap-4 pl-2 md:gap-5 md:pl-4">
                             {[
-                                "Study the foundational paths for a solid understanding of the Buddhist core concepts and principles",
+                                "Study the foundational paths for a solid understanding of the Buddhist core principles and benefits",
                                 "Go deeper with academic paths (systematic education), with trustworthy companions for in-depth study of the Dharma",
                                 "Engage in contemplative paths and practices (samatha, vipassana, mind-training, paramitas, etc.) brought to you by genuine Buddhist transmissions to foster your progress in the journey",
                             ].map((feat) => (
