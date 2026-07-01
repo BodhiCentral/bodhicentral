@@ -14,7 +14,7 @@ import { Breadcrumbs } from "@/components/application/breadcrumbs/breadcrumbs";
 import { openCanonNavigator } from "@/components-custom/navigation/canon-navigation/canon-navigation-modal-wrapper";
 
 
-export const TableOfContents = () => {
+const TableOfContents = () => {
     return (
         <div className="sticky flex flex-col top-12 px-6 py-4 mx-auto z-0 border-x border-secondary max-h-full">
             <div className="py-2">
@@ -50,7 +50,7 @@ export const TableOfContents = () => {
     );
 };
 
-export const TextCanvasSingle = () => {
+const TextCanvasSingle = () => {
     return (
         <div className="mx-auto prose-reader flex flex-col px-2 md:px-4 lg:px-8 xl:px-16">
             
@@ -461,7 +461,7 @@ interface AncillaryPanelProps {
     userPlan?: SubscriptionPlan;
 }
 
-export const AncillaryPanel = ({
+const AncillaryPanel = ({
     onClose,
     userPlan = "free",
 }: AncillaryPanelProps) => {

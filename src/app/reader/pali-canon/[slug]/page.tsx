@@ -3,7 +3,7 @@ import { createClient } from "@/utils/supabase/server";
 import { PaliSectionHeader } from "@/components/reader/pali-section/pali-section-header";
 import { PaliSectionChapterTabs } from "@/components/reader/pali-section/pali-section-chapter-tabs";
 
-export default async function PaliCanonSectionPage({ params }: { params: { slug: string } }) {
+export default async function PaliCanonSectionPage({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params;
     const supabase = await createClient();
 

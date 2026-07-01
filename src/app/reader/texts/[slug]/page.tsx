@@ -9,7 +9,7 @@ import Link from "next/link";
 import { openCanonNavigator } from "@/components-custom/navigation/canon-navigation/canon-navigation-modal-wrapper";
 
 
-export const TableOfContents = () => {
+const TableOfContents = () => {
     return (
         <div className="sticky flex flex-col top-12 px-6 py-4 mx-auto z-45 border border-secondary rounded-l-2xl max-h-full">
             <div className="py-2">
@@ -45,7 +45,7 @@ export const TableOfContents = () => {
     );
 };
 
-export const TextCanvasSingle = () => {
+const TextCanvasSingle = () => {
     return (
         <div className="mx-auto prose-reader flex flex-col px-2">
             <div className="flex justify-between py-4">
@@ -259,7 +259,7 @@ export const TextCanvasSingle = () => {
     );
 };
 
-export const AncillaryPanel = () => {
+const AncillaryPanel = () => {
     return (
         <div className="sticky prose-reader flex flex-col top-12 px-6 py-4 mx-auto z-45 border border-secondary rounded-r-2xl max-h-full">
             <div className="py-2">
