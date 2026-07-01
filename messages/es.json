@@ -1,0 +1,78 @@
+{
+    "header": {
+        "nav": {
+            "sources": "Fuentes",
+            "paths": "Caminos",
+            "community": "Comunidad",
+            "desk": "Escritorio",
+            "plans": "Planes"
+        },
+        "auth": {
+            "login": "Iniciar sesión",
+            "signup": "Registrarse"
+        },
+        "language": {
+            "toggle": "Seleccionar idioma",
+            "en": "English",
+            "th": "ภาษาไทย",
+            "zh": "中文",
+            "es": "Español"
+        },
+        "mobile": {
+            "toggle": "Toggle navigation menu"
+        }
+    },
+    "footer": {
+        "tagline": "Puertas al estudio y la práctica budista",
+        "description": "Una plataforma moderna de textos budistas universalmente venerados y caminos accesibles de estudio y práctica.",
+        "cta": {
+            "body": "Explora los caminos del despertar y conéctate con maestros y practicantes para que tu viaje cuente para ti y para los demás.",
+            "action": "Planes"
+        },
+        "copyright": "© 2026 Bodhi Central. Todos los derechos reservados.",
+        "categories": {
+            "sources": "Fuentes",
+            "paths": "Caminos",
+            "community": "Comunidad",
+            "about": "Acerca de",
+            "legal": "Legal"
+        },
+        "links": {
+            "sources": {
+                "collections": "Colecciones",
+                "theravada": "Tradición Theravada",
+                "tibetanStudies": "Estudios Tibetanos",
+                "tibetanCanons": "Cánones Tibetanos",
+                "genres": "Géneros",
+                "authors": "Autores"
+            },
+            "paths": {
+                "introduction": "Introducción",
+                "foundational": "Caminos Fundamentales",
+                "academic": "Caminos Académicos",
+                "practice": "Caminos de Práctica",
+                "curricula": "Currículos Budistas",
+                "studyCenters": "Dónde Estudiar"
+            },
+            "community": {
+                "blog": "El Blog",
+                "archives": "Archivos Digitales",
+                "groups": "Grupos Cerca de Ti",
+                "forum": "El Foro",
+                "docs": "Documentación"
+            },
+            "about": {
+                "about": "Sobre Nosotros",
+                "help": "Ayuda y Preguntas Frecuentes",
+                "acknowledgements": "Agradecimientos",
+                "plans": "Planes"
+            },
+            "legal": {
+                "terms": "Términos",
+                "privacy": "Privacidad",
+                "cookies": "Cookies",
+                "affiliations": "Afiliaciones"
+            }
+        }
+    }
+}

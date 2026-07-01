@@ -564,24 +564,31 @@ export const AncillaryPanel = ({
 };
 
 const textLanguages = [
-    {
-        id: "pali",
-        name: "Text Title Pali",
-        email: "Pali Source",
-        avatar: "/placeholder-image-landscape.svg",
-        status: "Published",
-    },
-    {
+        {
         id: "english",
         name: "Text Title (Eng)",
         email: "English Translation",
         avatar: "/people/bhikku-sujato-close-up.jpg",
         status: "In Progress",
     },
+    {
+        id: "pali",
+        name: "Text Title (Pl)",
+        email: "Pali Source",
+        avatar: "/placeholder-image-landscape.svg",
+        status: "Published",
+    },
         {
         id: "thai",
-        name: "Text Title (Thai)",
+        name: "Text Title (Th)",
         email: "Thai Translation",
+        avatar: "/placeholder-image-landscape.svg",
+        status: "In Progress",
+    },
+            {
+        id: "spanish",
+        name: "Título of the Text (Es)",
+        email: "Spanish Translation",
         avatar: "/placeholder-image-landscape.svg",
         status: "In Progress",
     },

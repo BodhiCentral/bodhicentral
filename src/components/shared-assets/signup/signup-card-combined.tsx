@@ -7,7 +7,7 @@ import { SocialButton } from "@/components/base/buttons/social-button";
 import { Form } from "@/components/base/form/form";
 import { Input } from "@/components/base/input/input";
 import { BodhicentralLogoMinimal } from "@/components/foundations/logo/bodhicentral-logo-minimal";
-import { signUp, signInWithGoogle } from "@/app/(marketing)/(login)/actions";
+import { signUp, signInWithGoogle } from "@/app/[locale]/(marketing)/(login)/actions";
 
 export const SignupCardCombined = () => {
     const searchParams = useSearchParams();

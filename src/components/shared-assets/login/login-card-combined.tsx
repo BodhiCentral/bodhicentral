@@ -8,7 +8,7 @@ import { Checkbox } from "@/components/base/checkbox/checkbox";
 import { Form } from "@/components/base/form/form";
 import { Input } from "@/components/base/input/input";
 import { BodhicentralLogoMinimal } from "@/components/foundations/logo/bodhicentral-logo-minimal";
-import { signIn, signInWithGoogle } from "@/app/(marketing)/(login)/actions";
+import { signIn, signInWithGoogle } from "@/app/[locale]/(marketing)/(login)/actions";
 
 export const LoginCardCombined = () => {
     const searchParams = useSearchParams();

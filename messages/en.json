@@ -1,0 +1,78 @@
+{
+    "header": {
+        "nav": {
+            "sources": "Sources",
+            "paths": "Paths",
+            "community": "Community",
+            "desk": "Desk",
+            "plans": "Plans"
+        },
+        "auth": {
+            "login": "Log in",
+            "signup": "Sign up"
+        },
+        "language": {
+            "toggle": "Select language",
+            "en": "English",
+            "th": "ภาษาไทย",
+            "zh": "中文",
+            "es": "Español"
+        },
+        "mobile": {
+            "toggle": "Toggle navigation menu"
+        }
+    },
+    "footer": {
+        "tagline": "Gateways to Buddhist study and practice",
+        "description": "A modern platform of universally revered Buddhist texts and accessible paths of study and practice.",
+        "cta": {
+            "body": "Explore paths of the awakening and connect with teachers and practitioners to make your journey count for yourself and others.",
+            "action": "Plans"
+        },
+        "copyright": "© 2026 Bodhi Central. All rights reserved.",
+        "categories": {
+            "sources": "Sources",
+            "paths": "Paths",
+            "community": "Community",
+            "about": "About",
+            "legal": "Legal"
+        },
+        "links": {
+            "sources": {
+                "collections": "Collections",
+                "theravada": "Theravada Tradition",
+                "tibetanStudies": "Tibetan Studies",
+                "tibetanCanons": "Tibetan Canons",
+                "genres": "Genres",
+                "authors": "Authors"
+            },
+            "paths": {
+                "introduction": "Introduction",
+                "foundational": "Foundational Paths",
+                "academic": "Academic Paths",
+                "practice": "Practice Paths",
+                "curricula": "Buddhist Curricula",
+                "studyCenters": "Where to Study"
+            },
+            "community": {
+                "blog": "The Blog",
+                "archives": "Digital Archives",
+                "groups": "Groups Around You",
+                "forum": "The Forum",
+                "docs": "Documentation"
+            },
+            "about": {
+                "about": "About Us",
+                "help": "Help and FAQ",
+                "acknowledgements": "Acknowledgements",
+                "plans": "Plans"
+            },
+            "legal": {
+                "terms": "Terms",
+                "privacy": "Privacy",
+                "cookies": "Cookies",
+                "affiliations": "Affiliations"
+            }
+        }
+    }
+}

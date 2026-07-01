@@ -14,7 +14,7 @@ import { Button } from "@/components/base/buttons/button";
 import { RadioButtonBase } from "@/components/base/radio-buttons/radio-buttons";
 import { useBreakpoint } from "@/hooks/use-breakpoint";
 import { cx } from "@/utils/cx";
-import { signOut } from "@/app/(marketing)/(login)/actions";
+import { signOut } from "@/app/[locale]/(marketing)/(login)/actions";
 
 type NavAccountType = {
     /** Unique identifier for the nav item. */

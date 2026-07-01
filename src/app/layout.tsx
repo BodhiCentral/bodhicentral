@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Crimson_Pro, Nunito, Noto_Serif_Tibetan } from "next/font/google";
+import { NextIntlClientProvider } from "next-intl";
+import { getLocale, getMessages } from "next-intl/server";
 import { RouteProvider } from "@/providers/router-provider";
 import { Theme } from "@/providers/theme";
 import "@/styles/globals.css";
@@ -43,23 +45,27 @@ export default async function RootLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
-
     const supabase = await createClient();
     const {
         data: { user },
     } = await supabase.auth.getUser();
 
+    const locale = await getLocale();
+    const messages = await getMessages();
+
     return (
-        <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth" className={cx(nunito.variable, crimsonPro.variable, tibetan.variable)}>
+        <html lang={locale} suppressHydrationWarning data-scroll-behavior="smooth" className={cx(nunito.variable, crimsonPro.variable, tibetan.variable)}>
             <body className="relative bg-primary antialiased">
-                <RouteProvider>
-                    <Theme>
-                        <Header user={user} />
-                        <CanonNavigationModal />
-                        <KangyurNavigatorModal />
-                        {children}
-                    </Theme>
-                </RouteProvider>
+                <NextIntlClientProvider locale={locale} messages={messages}>
+                    <RouteProvider>
+                        <Theme>
+                            <Header user={user} />
+                            <CanonNavigationModal />
+                            <KangyurNavigatorModal />
+                            {children}
+                        </Theme>
+                    </RouteProvider>
+                </NextIntlClientProvider>
             </body>
         </html>
     );

@@ -1,0 +1,78 @@
+{
+    "header": {
+        "nav": {
+            "sources": "资源",
+            "paths": "修行路径",
+            "community": "社区",
+            "desk": "书桌",
+            "plans": "方案"
+        },
+        "auth": {
+            "login": "登录",
+            "signup": "注册"
+        },
+        "language": {
+            "toggle": "选择语言",
+            "en": "English",
+            "th": "ภาษาไทย",
+            "zh": "中文",
+            "es": "Español"
+        },
+        "mobile": {
+            "toggle": "Toggle navigation menu"
+        }
+    },
+    "footer": {
+        "tagline": "佛教学习与修行的门户",
+        "description": "一个汇集广受尊崇的佛教典籍与可及修行路径的现代平台。",
+        "cta": {
+            "body": "探索觉悟之道，与导师和修行者建立联系，让您的旅程对自己和他人都有意义。",
+            "action": "方案"
+        },
+        "copyright": "© 2026 Bodhi Central. 保留所有权利。",
+        "categories": {
+            "sources": "资源",
+            "paths": "路径",
+            "community": "社区",
+            "about": "关于",
+            "legal": "法律"
+        },
+        "links": {
+            "sources": {
+                "collections": "藏经",
+                "theravada": "上座部传统",
+                "tibetanStudies": "藏传研究",
+                "tibetanCanons": "藏经",
+                "genres": "体裁",
+                "authors": "作者"
+            },
+            "paths": {
+                "introduction": "简介",
+                "foundational": "基础路径",
+                "academic": "学术路径",
+                "practice": "修行路径",
+                "curricula": "佛教课程",
+                "studyCenters": "学习场所"
+            },
+            "community": {
+                "blog": "博客",
+                "archives": "数字档案",
+                "groups": "附近团体",
+                "forum": "论坛",
+                "docs": "文档"
+            },
+            "about": {
+                "about": "关于我们",
+                "help": "帮助与常见问题",
+                "acknowledgements": "致谢",
+                "plans": "方案"
+            },
+            "legal": {
+                "terms": "条款",
+                "privacy": "隐私",
+                "cookies": "Cookie",
+                "affiliations": "隶属关系"
+            }
+        }
+    }
+}

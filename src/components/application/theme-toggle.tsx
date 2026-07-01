@@ -36,7 +36,7 @@ export const ThemeToggle = ({ className }: { className?: string }) => {
             >
                 <Icon className="size-5" />
             </AriaButton>
-            <Dropdown.Popover placement="bottom right" offset={8} className="w-36">
+            <Dropdown.Popover placement="bottom right" offset={8} className="w-28">
                 <Dropdown.Menu onAction={(key) => setTheme(key as string)} selectedKeys={[theme || "system"]}>
                     <Dropdown.Item id="light" label="Light" icon={Sun} />
                     <Dropdown.Item id="dark" label="Dark" icon={Moon01} />

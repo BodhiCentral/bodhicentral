@@ -1,0 +1,78 @@
+{
+    "header": {
+        "nav": {
+            "sources": "แหล่งข้อมูล",
+            "paths": "เส้นทาง",
+            "community": "ชุมชน",
+            "desk": "โต๊ะทำงาน",
+            "plans": "แผน"
+        },
+        "auth": {
+            "login": "เข้าสู่ระบบ",
+            "signup": "สมัครสมาชิก"
+        },
+        "language": {
+            "toggle": "เลือกภาษา",
+            "en": "English",
+            "th": "ภาษาไทย",
+            "zh": "中文",
+            "es": "Español"
+        },
+        "mobile": {
+            "toggle": "Toggle navigation menu"
+        }
+    },
+    "footer": {
+        "tagline": "ประตูสู่การศึกษาและการปฏิบัติทางพุทธศาสนา",
+        "description": "แพลตฟอร์มสมัยใหม่สำหรับคัมภีร์พุทธศาสนาที่ได้รับการยกย่องและเส้นทางการศึกษาที่เข้าถึงได้",
+        "cta": {
+            "body": "สำรวจเส้นทางแห่งการตื่นรู้และเชื่อมต่อกับครูและผู้ปฏิบัติ",
+            "action": "แผน"
+        },
+        "copyright": "© 2026 Bodhi Central. สงวนลิขสิทธิ์.",
+        "categories": {
+            "sources": "แหล่งข้อมูล",
+            "paths": "เส้นทาง",
+            "community": "ชุมชน",
+            "about": "เกี่ยวกับ",
+            "legal": "กฎหมาย"
+        },
+        "links": {
+            "sources": {
+                "collections": "คอลเลกชัน",
+                "theravada": "ประเพณีเถรวาท",
+                "tibetanStudies": "การศึกษาทิเบต",
+                "tibetanCanons": "พระคัมภีร์ทิเบต",
+                "genres": "ประเภท",
+                "authors": "ผู้แต่ง"
+            },
+            "paths": {
+                "introduction": "บทนำ",
+                "foundational": "เส้นทางพื้นฐาน",
+                "academic": "เส้นทางวิชาการ",
+                "practice": "เส้นทางปฏิบัติ",
+                "curricula": "หลักสูตรพุทธศาสนา",
+                "studyCenters": "สถานที่ศึกษา"
+            },
+            "community": {
+                "blog": "บล็อก",
+                "archives": "คลังดิจิทัล",
+                "groups": "กลุ่มใกล้คุณ",
+                "forum": "ฟอรั่ม",
+                "docs": "เอกสาร"
+            },
+            "about": {
+                "about": "เกี่ยวกับเรา",
+                "help": "ความช่วยเหลือและคำถามที่พบบ่อย",
+                "acknowledgements": "กิตติกรรมประกาศ",
+                "plans": "แผน"
+            },
+            "legal": {
+                "terms": "ข้อกำหนด",
+                "privacy": "ความเป็นส่วนตัว",
+                "cookies": "คุกกี้",
+                "affiliations": "สังกัด"
+            }
+        }
+    }
+}

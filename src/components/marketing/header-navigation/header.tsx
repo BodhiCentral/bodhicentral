@@ -4,13 +4,15 @@ import type { ReactNode } from "react";
 import React, { useRef, useState, isValidElement } from "react";
 import { ChevronDown } from "@untitledui/icons";
 import { Button as AriaButton, Dialog as AriaDialog, DialogTrigger as AriaDialogTrigger, Popover as AriaPopover } from "react-aria-components";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/base/buttons/button";
+import { Link } from "@/i18n/navigation";
 import { DropdownMenuResources } from "@/components-custom/navigation/navigation-menu/dropdown-menu-resources";
 import { DropdownMenuLearningPaths } from "@/components-custom/navigation/navigation-menu/dropdown-menu-learning-paths";
 import { DropdownMenuScripture } from "@/components-custom/navigation/navigation-menu/dropdown-menu-scripture";
 import { DropdownMenuReader } from "@/components-custom/navigation/navigation-menu/dropdown-menu-reader";
-import Link from "next/link";
 import { ThemeToggle } from "@/components/application/theme-toggle";
+import { LanguageToggle } from "@/components/application/language-toggle";
 import { cx } from "@/utils/cx";
 import { User } from "@supabase/supabase-js";
 import { DropdownAvatar } from "@/components/base/avatar/dropdown-avatar";
@@ -21,19 +23,10 @@ type HeaderNavItem = {
     menu?: ReactNode;
 };
 
-const headerNavItems: HeaderNavItem[] = [
-    { label: "Sources", href: "/scripture", menu: <DropdownMenuScripture /> },
-    { label: "Paths", href: "/learning-paths", menu: <DropdownMenuLearningPaths /> },
-    { label: "Community", href: "/resources", menu: <DropdownMenuResources /> },
-    { label: "Desk", href: "/reader", menu: <DropdownMenuReader /> },
-    { label: "Plans", href: "/plans" },
-];
-
-const footerNavItems = [
-    { label: "About us", href: "/about" },
-    { label: "Legal", href: "/about/legal" },
-    { label: "Help and FAQ", href: "/support" },
-];
+type FooterNavItem = {
+    label: string;
+    href: string;
+};
 
 const MobileNavItem = (props: { className?: string; label: string; href?: string; children?: ReactNode }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -65,7 +58,8 @@ const MobileNavItem = (props: { className?: string; label: string; href?: string
     );
 };
 
-const MobileFooter = ({ user }: { user?: User | null }) => {
+const MobileFooter = ({ user, footerNavItems }: { user?: User | null; footerNavItems: FooterNavItem[] }) => {
+    const t = useTranslations("header.auth");
     return (
         <div className="flex flex-col gap-8 border-t border-secondary px-4 py-6">
             <div>
@@ -87,10 +81,10 @@ const MobileFooter = ({ user }: { user?: User | null }) => {
                 ) : (
                     <>
                         <Button size="lg" href="/sign-up">
-                            Sign up
+                            {t("signup")}
                         </Button>
                         <Button color="secondary" size="lg" href="/sign-in">
-                            Log in
+                            {t("login")}
                         </Button>
                     </>
                 )}
@@ -107,8 +101,27 @@ interface HeaderProps {
     user?: User | null;
 }
 
-export const Header = ({ items = headerNavItems, isFullWidth, isFloating, className, user }: HeaderProps) => {
+export const Header = ({ isFullWidth, isFloating, className, user }: HeaderProps) => {
     const headerRef = useRef<HTMLElement>(null);
+    const t = useTranslations("header");
+    const tNav = useTranslations("header.nav");
+    const tAuth = useTranslations("header.auth");
+
+    const headerNavItems: HeaderNavItem[] = [
+        { label: tNav("sources"), href: "/scripture", menu: <DropdownMenuScripture /> },
+        { label: tNav("paths"), href: "/learning-paths", menu: <DropdownMenuLearningPaths /> },
+        { label: tNav("community"), href: "/resources", menu: <DropdownMenuResources /> },
+        { label: tNav("desk"), href: "/reader", menu: <DropdownMenuReader /> },
+        { label: tNav("plans"), href: "/plans" },
+    ];
+
+    const footerNavItems: FooterNavItem[] = [
+        { label: "About us", href: "/about" },
+        { label: "Legal", href: "/about/legal" },
+        { label: "Help and FAQ", href: "/support" },
+    ];
+
+    const items = headerNavItems;
 
     return (
         <header
@@ -133,9 +146,8 @@ export const Header = ({ items = headerNavItems, isFullWidth, isFloating, classN
                             <span className="text-2xl font-serif font-extralight uppercase tracking-tight text-fg-quaternary dark:text-fg-primary">Bodhi</span>
                             <span className="text-2xl font-serif font-extralight uppercase tracking-tight text-brand-600">Central</span>
                         </Link>
-
-
                     </div>
+
                     {/* Desktop NAV MENU */}
                     <nav className="flex items-center max-md:hidden px-6">
                         <ul className="flex items-center gap-2">
@@ -145,7 +157,6 @@ export const Header = ({ items = headerNavItems, isFullWidth, isFloating, classN
                                         <AriaDialogTrigger>
                                             <AriaButton className="relative flex cursor-pointer items-center gap-0.5 rounded-lg px-1.5 py-2 text-sm font-regular uppercase text-fg-primary outline-focus-ring transition duration-100 ease-linear hover:text-fg-brand-secondary_hover aria-expanded:text-brand-secondary focus-visible:outline-2 focus-visible:outline-offset-2 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:rounded-full after:bg-brand-500 after:scale-x-0 after:transition-transform after:duration-200 aria-expanded:after:scale-x-100">
                                                 <span className="px-0.5">{navItem.label}</span>
-
                                                 <ChevronDown className="size-4 rotate-0 stroke-[2.625px] text-fg-primary/50 hover:text-fg-brand-secondary transition duration-100 ease-linear in-aria-expanded:-rotate-180 in-aria-expanded:text-fg-quaternary" />
                                             </AriaButton>
 
@@ -167,8 +178,6 @@ export const Header = ({ items = headerNavItems, isFullWidth, isFloating, classN
                                                         className={cx(
                                                             "mx-auto origin-top outline-hidden",
                                                             isFloating && "max-w-7xl px-8 pt-3",
-                                                            // Have to use the scale animation inside the popover to avoid
-                                                            // miscalculating the popover's position when opening.
                                                             isEntering && !isFullWidth && "duration-200 ease-out animate-in zoom-in-95",
                                                             isExiting && !isFullWidth && "duration-150 ease-in animate-out zoom-out-95",
                                                         )}
@@ -185,7 +194,7 @@ export const Header = ({ items = headerNavItems, isFullWidth, isFloating, classN
                                     ) : (
                                         <Link
                                             href={navItem.href!}
-                                            className="flex cursor-pointer items-center gap-0.5 px-1.5 py-1 text-sm font-regular uppercase outline-focus-ring transition duration-100 ease-linear hover:text-fg-brand-secondary_hover  focus:outline-offset-2 focus-visible:outline-2"
+                                            className="flex cursor-pointer items-center gap-0.5 px-1.5 py-1 text-sm font-regular uppercase outline-focus-ring transition duration-100 ease-linear hover:text-fg-brand-secondary_hover focus:outline-offset-2 focus-visible:outline-2"
                                         >
                                             <span className="px-0.5">{navItem.label}</span>
                                         </Link>
@@ -194,27 +203,29 @@ export const Header = ({ items = headerNavItems, isFullWidth, isFloating, classN
                             ))}
                         </ul>
                     </nav>
-                    {/* DESKTOP LOGIN/SIGNUP BUTTONS */}
+
+                    {/* DESKTOP — Language, Theme toggles + auth */}
                     <div className="hidden items-center gap-3 md:flex">
+                        <LanguageToggle />
                         <ThemeToggle />
                         {user ? (
                             <DropdownAvatar user={user} />
                         ) : (
                             <>
                                 <Button color="secondary" size={isFloating ? "sm" : "sm"} href="/sign-in">
-                                    Log in
+                                    {tAuth("login")}
                                 </Button>
                                 <Button color="primary" size={isFloating ? "sm" : "sm"} href="/sign-up">
-                                    Sign up
+                                    {tAuth("signup")}
                                 </Button>
                             </>
                         )}
                     </div>
 
-                    {/* Mobile menu and menu trigger */}
+                    {/* Mobile menu trigger */}
                     <AriaDialogTrigger>
                         <AriaButton
-                            aria-label="Toggle navigation menu"
+                            aria-label={t("mobile.toggle")}
                             className={({ isFocusVisible, isHovered }) =>
                                 cx(
                                     "group ml-auto cursor-pointer rounded-lg p-2 md:hidden",
@@ -263,8 +274,7 @@ export const Header = ({ items = headerNavItems, isFullWidth, isFloating, classN
                                             ),
                                         )}
                                     </ul>
-
-                                    <MobileFooter user={user} />
+                                    <MobileFooter user={user} footerNavItems={footerNavItems} />
                                 </nav>
                             </AriaDialog>
                         </AriaPopover>

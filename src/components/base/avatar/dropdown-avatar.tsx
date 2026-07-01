@@ -8,7 +8,7 @@ import { Avatar } from "@/components/base/avatar/avatar";
 import { AvatarLabelGroup } from "@/components/base/avatar/avatar-label-group";
 import { Dropdown } from "@/components/base/dropdown/dropdown";
 import { cx } from "@/utils/cx";
-import { signOut } from "@/app/(marketing)/(login)/actions";
+import { signOut } from "@/app/[locale]/(marketing)/(login)/actions";
 import { User } from "@supabase/supabase-js";
 
 interface DropdownAvatarProps {
