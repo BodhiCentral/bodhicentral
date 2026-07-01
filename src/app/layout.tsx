@@ -1,8 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Crimson_Pro, Nunito, Noto_Serif_Tibetan } from "next/font/google";
-import { NextIntlClientProvider } from "next-intl";
-import { getLocale, getMessages } from "next-intl/server";
+import { getLocale } from "next-intl/server";
 import { RouteProvider } from "@/providers/router-provider";
+import { LocaleProvider } from "@/providers/locale-provider";
 import { Theme } from "@/providers/theme";
 import "@/styles/globals.css";
 import { cx } from "@/utils/cx";
@@ -10,6 +10,12 @@ import { Header } from "@/components/marketing/header-navigation/header";
 import { createClient } from "@/utils/supabase/server";
 import { CanonNavigationModal } from "@/components-custom/navigation/canon-navigation/canon-navigation-modal-wrapper";
 import { KangyurNavigatorModal } from "@/components-custom/navigation/canon-navigation/kangyur-navigation-modal-wrapper";
+import en from "../../messages/en.json";
+import th from "../../messages/th.json";
+import zh from "../../messages/zh.json";
+import es from "../../messages/es.json";
+
+const allMessages = { en, th, zh, es };
 
 const nunito = Nunito({
     subsets: ["latin"],
@@ -51,12 +57,11 @@ export default async function RootLayout({
     } = await supabase.auth.getUser();
 
     const locale = await getLocale();
-    const messages = await getMessages();
 
     return (
         <html lang={locale} suppressHydrationWarning data-scroll-behavior="smooth" className={cx(nunito.variable, crimsonPro.variable, tibetan.variable)}>
             <body className="relative bg-primary antialiased">
-                <NextIntlClientProvider locale={locale} messages={messages}>
+                <LocaleProvider messages={allMessages}>
                     <RouteProvider>
                         <Theme>
                             <Header user={user} />
@@ -65,7 +70,7 @@ export default async function RootLayout({
                             {children}
                         </Theme>
                     </RouteProvider>
-                </NextIntlClientProvider>
+                </LocaleProvider>
             </body>
         </html>
     );

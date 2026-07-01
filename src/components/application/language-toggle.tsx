@@ -1,8 +1,10 @@
 "use client";
 
 import { useTransition } from "react";
-import { useLocale, useTranslations } from "next-intl";
-import { useRouter, usePathname } from "@/i18n/navigation";
+import { usePathname as useNextPathname } from "next/navigation";
+import { useTranslations } from "next-intl";
+import { useRouter } from "@/i18n/navigation";
+import { routing } from "@/i18n/routing";
 import { Translate02 } from "@untitledui/icons";
 import { Button as AriaButton } from "react-aria-components";
 import type { Key } from "react-aria-components";
@@ -20,16 +22,36 @@ const locales = [
     { id: "es", icon: FlagSpain },
 ] as const;
 
+function getLocaleFromPath(pathname: string): string {
+    for (const locale of routing.locales) {
+        if (locale !== routing.defaultLocale) {
+            if (pathname === `/${locale}` || pathname.startsWith(`/${locale}/`)) {
+                return locale;
+            }
+        }
+    }
+    return routing.defaultLocale;
+}
+
+function stripLocalePrefix(pathname: string, locale: string): string {
+    if (locale === routing.defaultLocale) return pathname;
+    if (pathname === `/${locale}`) return "/";
+    if (pathname.startsWith(`/${locale}/`)) return pathname.slice(`/${locale}`.length);
+    return pathname;
+}
+
 export const LanguageToggle = ({ className }: { className?: string }) => {
-    const locale = useLocale();
+    const nextPathname = useNextPathname();
     const router = useRouter();
-    const pathname = usePathname();
     const t = useTranslations("header.language");
     const [isPending, startTransition] = useTransition();
 
+    const currentLocale = getLocaleFromPath(nextPathname);
+    const pathnameWithoutLocale = stripLocalePrefix(nextPathname, currentLocale);
+
     const handleLocaleChange = (key: Key) => {
         startTransition(() => {
-            router.replace(pathname, { locale: key as string });
+            router.replace(pathnameWithoutLocale, { locale: key as string });
         });
     };
 
@@ -50,7 +72,7 @@ export const LanguageToggle = ({ className }: { className?: string }) => {
                 }
             >
                 <Translate02 className="size-4 shrink-0" />
-                <span className="text-xs font-semibold uppercase">{locale}</span>
+                <span className="text-xs font-semibold uppercase">{currentLocale}</span>
             </AriaButton>
             <Dropdown.Popover placement="bottom right" offset={8} className="w-36">
                 <Dropdown.Menu
