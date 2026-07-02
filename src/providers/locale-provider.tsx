@@ -9,10 +9,8 @@ type Messages = Record<string, unknown>;
 
 function getLocaleFromPath(pathname: string): string {
     for (const locale of routing.locales) {
-        if (locale !== routing.defaultLocale) {
-            if (pathname === `/${locale}` || pathname.startsWith(`/${locale}/`)) {
-                return locale;
-            }
+        if (pathname === `/${locale}` || pathname.startsWith(`/${locale}/`)) {
+            return locale;
         }
     }
     return routing.defaultLocale;

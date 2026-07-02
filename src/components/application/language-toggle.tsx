@@ -24,17 +24,14 @@ const locales = [
 
 function getLocaleFromPath(pathname: string): string {
     for (const locale of routing.locales) {
-        if (locale !== routing.defaultLocale) {
-            if (pathname === `/${locale}` || pathname.startsWith(`/${locale}/`)) {
-                return locale;
-            }
+        if (pathname === `/${locale}` || pathname.startsWith(`/${locale}/`)) {
+            return locale;
         }
     }
     return routing.defaultLocale;
 }
 
 function stripLocalePrefix(pathname: string, locale: string): string {
-    if (locale === routing.defaultLocale) return pathname;
     if (pathname === `/${locale}`) return "/";
     if (pathname.startsWith(`/${locale}/`)) return pathname.slice(`/${locale}`.length);
     return pathname;
