@@ -114,7 +114,7 @@ export const FooterLarge10 = () => {
                 </div>
 
                 {/* Footer Nav */}
-                <div className="mt-12 flex flex-col gap-12 md:mt-16 md:gap-16 xl:flex-row">
+                <div className="mt-12 flex flex-col gap-12 md:mt-16 md:gap-20 xl:flex-row">
                     <div className="flex flex-col gap-3 md:w-64 md:gap-4">
                         <Link href="/" aria-label="Bodhicentral Home page" className="flex w-min items-center outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2 gap-2">
                             <span className="text-3xl font-serif font-extralight uppercase tracking-wide text-primary">Bodhi</span>
@@ -124,7 +124,7 @@ export const FooterLarge10 = () => {
                         <p className="text-md text-tertiary">{t("description")}</p>
                     </div>
                     <nav className="flex-1">
-                        <ul className="grid flex-1 grid-cols-2 gap-8 md:grid-cols-5">
+                        <ul className="grid flex-1 grid-cols-2 gap-8 md:grid-cols-5 md:gap-28">
                             {footerNavList.map((category) => (
                                 <li key={category.key}>
                                     <h3 className="text-xl text-fg-brand-primary">{category.label}</h3>
