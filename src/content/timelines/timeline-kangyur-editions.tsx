@@ -56,13 +56,13 @@ const buildStyleOptions = (): TimelineOptions["style"] => ({
 // Shared article style
 // ─────────────────────────────────────────────────────────
 const buildArticleDefaultStyle = () => ({
-    width: 250,
-    height: 180,
-    topRadius: 20,
-    bottomRadius: 12,
+    width: 200,
+    height: 140,
+    topRadius: 16,
+    bottomRadius: 8,
     backgroundColor: "#ffffff",
     distanceToBaseline: {
-        value: 20,
+        value: 16,
     },
     border: {
         color: ARTICLE_BORDER_LIGHT,
@@ -70,31 +70,31 @@ const buildArticleDefaultStyle = () => ({
     },
     shadow: {
         x: 0, y: 1, amount: 20,
-        color: "rgba(0,0,0,0.2)",
+        color: "rgba(0,0,0,0.15)",
     },
     connectorLine: {
         visible: true,
         thickness: 1,
-        offsetY: 1,
+        offsetY: 0,
         arrow: {
-            width: 8,
-            height: 10,
+            width: 6,
+            height: 8,
         }
     },
     header: {
-        height: 68,
+        height: 60,
         text: {
-            font: '700 14px Nunito',
+            font: '700 13px Nunito',
             color: ARTICLE_HEADER_LIGHT,
             align: "left" as const,
             numberOfLines: 2,
-            lineHeight: 20,
+            lineHeight: 18,
             margin: 10,
         },
     },
     subheader: {
         color: "#f1f5f9",
-        height: 44,
+        height: 40,
         numberOfLines: 6,
         text: {
             font: '400 12px Nunito',
@@ -115,7 +115,7 @@ const buildLanes = (): LaneData[] => [
         layout: {
             heightWeight: 1,
             header: {
-                height: 50,
+                height: 46,
             }
         },
         style: {
