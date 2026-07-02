@@ -1,7 +1,7 @@
 "use client";
 
 import { useTransition } from "react";
-import { usePathname as useNextPathname } from "next/navigation";
+import { usePathname as useNextPathname, useRouter as useNextRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { useRouter } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
@@ -40,6 +40,7 @@ function stripLocalePrefix(pathname: string, locale: string): string {
 export const LanguageToggle = ({ className }: { className?: string }) => {
     const nextPathname = useNextPathname();
     const router = useRouter();
+    const nextRouter = useNextRouter();
     const t = useTranslations("header.language");
     const [isPending, startTransition] = useTransition();
 
@@ -48,7 +49,15 @@ export const LanguageToggle = ({ className }: { className?: string }) => {
 
     const handleLocaleChange = (key: Key) => {
         startTransition(() => {
-            router.replace(pathnameWithoutLocale, { locale: key as string });
+            if (key === routing.defaultLocale) {
+                // next-intl's router.replace with an explicit locale option sets
+                // forcePrefix=true internally, which generates /en/ even with
+                // as-needed config. Use the native router instead so the URL stays
+                // clean (/) and the middleware sets the locale server-side.
+                nextRouter.replace(pathnameWithoutLocale);
+            } else {
+                router.replace(pathnameWithoutLocale, { locale: key as string });
+            }
         });
     };
 
