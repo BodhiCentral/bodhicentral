@@ -124,7 +124,7 @@ export const FooterLarge10 = () => {
                         <p className="text-md text-tertiary">{t("description")}</p>
                     </div>
                     <nav className="flex-1">
-                        <ul className="grid flex-1 grid-cols-2 gap-8 md:grid-cols-5 md:gap-28">
+                        <ul className="grid flex-1 grid-cols-2 gap-8 md:grid-cols-5 md:gap-10">
                             {footerNavList.map((category) => (
                                 <li key={category.key}>
                                     <h3 className="text-xl text-fg-brand-primary">{category.label}</h3>

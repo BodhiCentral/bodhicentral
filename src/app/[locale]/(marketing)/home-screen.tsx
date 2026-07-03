@@ -72,7 +72,7 @@ export const HomeScreen = () => {
                     </g>
                 </svg>
 
-                <div className="hero-inner relative grid grid-cols-[1fr_1fr] items-center gap-12 z-10 px-14 pt-15 mx-auto max-w-container">
+                <div className="hero-inner relative grid grid-cols-[1fr_1fr] items-center gap-12 z-10 px-14 pt-16 mx-auto max-w-container">
                     {/* Hero Left */}
                     <div className="hero-left">
                         <div className="eyebrow">
@@ -93,7 +93,7 @@ export const HomeScreen = () => {
 
                         </div>
                     </div>
-                    <div className="hero-right pt-10 lg:pt-0">
+                    <div className="hero-right pt-10 lg:pt-16">
                         <div className="medallion-wrap">
                             <svg className="medallion-svg" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 {/* Rings */}
