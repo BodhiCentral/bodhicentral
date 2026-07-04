@@ -83,7 +83,7 @@ export const HomeScreen = () => {
                             Gateways to <br /> the <span className="text-brand-500 lg:text-display-5xl font-extralight italic">Awakening</span>
                         </h1>
                         <p className="hero-sub mt-4 max-w-xs sm:max-w-sm md:max-w-xl text-md text-balance text-brand-200 dark:text-brand-100 md:mt-6 md:text-lg">
-                            Buddha's message to humanity have illuminated the nature of mind for 2,500 years. Now, its most essential mainstream teachings — scriptures, paths, and transmissions — are gathered in one place, for every sincere seeker.
+                            Buddha's message to humanity have illuminated the nature of mind for 2,500 years. Now, the complete mapping of its most essential mainstream teachings — scriptures, paths, and transmissions — are gathered in one place, for every sincere seeker.
                         </p>
                         <div className="hero-ctas mt-8 flex w-full gap-3 md:mt-12 md:flex-row lg:items-start">
                             <Button className="cta-primary" size="md" href="/reader">Open Reader</Button>
