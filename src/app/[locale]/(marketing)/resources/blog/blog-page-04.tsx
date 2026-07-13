@@ -220,11 +220,11 @@ const BlogHeaderSidebar02 = () => {
     return (
         <div className="relative bg-primary pt-12">
 
-            <section className="bg-primary py-16 md:py-24">
+            <section className="bg-primary pt-16 pb-10 md:pt-24 md:pb-16">
                 <div className="mx-auto max-w-container px-4 md:px-8">
                     <div className="flex w-full max-w-3xl flex-col">
                         <span className="text-sm font-semibold text-brand-secondary md:text-md">Our blog</span>
-                        <h2 className="mt-3 text-display-lg font-extralight text-brand-800 dark:text-brand-400 md:text-display-xl">Articles and insights</h2>
+                        <h1 className="mt-1 text-display-xl font-extralight text-brand-800 dark:text-brand-400 md:text-display-2xl">Articles and insights</h1>
                         <p className="mt-4 text-md text-tertiary md:mt-4 md:text-lg">Expert articles from within the traditions, reviews of public resources, and insights into Buddhist studies and practices.</p>
                     </div>
                 </div>
