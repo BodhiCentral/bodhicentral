@@ -48,9 +48,10 @@ export const FooterLarge10 = () => {
             items: [
                 { label: t("links.sources.collections"), href: "/scripture/collections" },
                 { label: t("links.sources.theravada"), href: "/scripture/theravada-tradition" },
-                { label: t("links.sources.tibetanStudies"), href: "/scripture/tibetan-schools" },
                 { label: t("links.sources.tibetanCanons"), href: "/scripture/tibetan-canons" },
                 { label: t("links.sources.genres"), href: "/scripture/genres" },
+                { label: t("links.sources.tibetanStudies"), href: "/scripture/tibetan-schools" },                
+                
                 { label: t("links.sources.authors"), href: "/scripture/authors" },
             ],
         },
