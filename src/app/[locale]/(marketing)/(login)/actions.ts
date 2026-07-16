@@ -2,6 +2,7 @@
 
 import { redirect } from "next/navigation";
 import { createClient } from "@/utils/supabase/server";
+import { getPostHogClient } from "@/lib/posthog-server";
 
 export async function signIn(formData: FormData) {
     const email = formData.get("email") as string;
@@ -9,14 +10,23 @@ export async function signIn(formData: FormData) {
 
     const supabase = await createClient();
 
-    const { error } = await supabase.auth.signInWithPassword({
+    const { data, error } = await supabase.auth.signInWithPassword({
         email,
         password,
     });
 
+    const posthog = getPostHogClient();
+
     if (error) {
+        posthog?.capture({ distinctId: email, event: "sign_in_failed", properties: { error: error.message } });
+        await posthog?.flush();
         return redirect("/sign-in?error=" + encodeURIComponent(error.message));
     }
+
+    const userId = data.user?.id ?? email;
+    posthog?.identify({ distinctId: userId, properties: { email } });
+    posthog?.capture({ distinctId: userId, event: "sign_in_completed", properties: { method: "email" } });
+    await posthog?.flush();
 
     return redirect("/settings");
 }
@@ -27,14 +37,23 @@ export async function signUp(formData: FormData) {
 
     const supabase = await createClient();
 
-    const { error } = await supabase.auth.signUp({
+    const { data, error } = await supabase.auth.signUp({
         email,
         password,
     });
 
+    const posthog = getPostHogClient();
+
     if (error) {
+        posthog?.capture({ distinctId: email, event: "sign_up_failed", properties: { error: error.message } });
+        await posthog?.flush();
         return redirect("/sign-up?error=" + encodeURIComponent(error.message));
     }
+
+    const userId = data.user?.id ?? email;
+    posthog?.identify({ distinctId: userId, properties: { email } });
+    posthog?.capture({ distinctId: userId, event: "sign_up_completed", properties: { method: "email" } });
+    await posthog?.flush();
 
     return redirect("/sign-up?message=Check your email to confirm your account");
 }

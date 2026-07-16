@@ -8,6 +8,7 @@ import { Form } from "@/components/base/form/form";
 import { Input } from "@/components/base/input/input";
 import { BodhicentralLogoMinimal } from "@/components/foundations/logo/bodhicentral-logo-minimal";
 import { signUp, signInWithGoogle } from "@/app/[locale]/(marketing)/(login)/actions";
+import posthog from "posthog-js";
 
 export const SignupCardCombined = () => {
     const searchParams = useSearchParams();
@@ -19,6 +20,7 @@ export const SignupCardCombined = () => {
         e.preventDefault();
         setIsLoading(true);
         const formData = new FormData(e.currentTarget);
+        posthog.capture("sign_up_submitted", { method: "email" });
         await signUp(formData);
         setIsLoading(false);
     };
@@ -74,7 +76,10 @@ export const SignupCardCombined = () => {
                             theme="color"
                             type="button"
                             className="w-full"
-                            onClick={() => signInWithGoogle()}
+                            onClick={() => {
+                                posthog.capture("sign_up_with_google_clicked");
+                                signInWithGoogle();
+                            }}
                         >
                             Sign up with Google
                         </SocialButton>

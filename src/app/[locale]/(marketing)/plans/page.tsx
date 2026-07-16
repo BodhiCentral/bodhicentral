@@ -17,6 +17,7 @@ import { CTACenteredPlansSignupFeaturedBgImage } from "@/components-custom/secti
 import PlanFeaturesTable from "@/components-custom/sections/plan-features-table";
 import { FAQAccordion01 } from "@/components/marketing/faq/faq-accordion-01";
 import Image from "next/image";
+import posthog from "posthog-js";
 
 const CheckItemText = (props: {
     size?: "sm" | "md" | "lg" | "xl";
@@ -114,7 +115,11 @@ const PricingTierCardBanner = (props: {
                     <p className="mt-1 text-md text-tertiary">{props.description}</p>
                 </div>
                 <div className="flex flex-col gap-3 px-6 py-6 md:px-8">
-                    <Button href={props.firstActionHref} size="xl">{props.firstAction}</Button>
+                    <Button
+                        href={props.firstActionHref}
+                        size="xl"
+                        onPress={() => posthog.capture("plan_get_started_clicked", { plan: props.title })}
+                    >{props.firstAction}</Button>
                     {props.secondAction && (
                         <Button className="hidden" href={props.secondActionHref} color="secondary" size="xl">
                             {props.secondAction}
@@ -206,7 +211,14 @@ const PricingSimpleBanner = () => {
                     <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
                         Bodhi Central provides free access to Scripture worldwide. No account required. Optional subscriptions unlock advanced study tools.
                     </p>
-                    <Tabs selectedKey={selectedPlan} onSelectionChange={(item) => setSelectedPlan(item as string)} className="w-full md:w-auto">
+                    <Tabs
+                        selectedKey={selectedPlan}
+                        onSelectionChange={(item) => {
+                            setSelectedPlan(item as string);
+                            posthog.capture("plan_billing_period_toggled", { billing_period: item });
+                        }}
+                        className="w-full md:w-auto"
+                    >
                         <TabList
                             type="button-border"
                             size="sm"

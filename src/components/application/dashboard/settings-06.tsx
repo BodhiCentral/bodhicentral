@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import posthog from "posthog-js";
 import {
     BarChartSquare02,
     Calendar,
@@ -53,14 +54,18 @@ export const Settings06 = () => {
 
         // Initial fetch
         supabase.auth.getUser().then(({ data: { user } }) => {
-            console.log("Settings06 - Initial user fetch:", user);
             setUser(user);
+            if (user) posthog.identify(user.id, { email: user.email });
         });
 
         // Listen for changes
         const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
-            console.log("Settings06 - Auth state change:", event, session?.user);
             setUser(session?.user ?? null);
+            if (event === "SIGNED_OUT") {
+                posthog.reset();
+            } else if (session?.user) {
+                posthog.identify(session.user.id, { email: session.user.email });
+            }
         });
 
         return () => subscription.unsubscribe();

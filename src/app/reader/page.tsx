@@ -12,6 +12,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/application/breadcrumbs/breadcrumbs";
 import { openCanonNavigator } from "@/components-custom/navigation/canon-navigation/canon-navigation-modal-wrapper";
+import posthog from "posthog-js";
 
 
 const TableOfContents = () => {
@@ -424,9 +425,9 @@ const TabContent: Record<TabId, React.FC> = {
         <div className="flex flex-col gap-4">
             <h4 className="text-sm font-semibold text-primary">Export this text</h4>
             <div className="flex gap-3 dark:opacity-90">
-                <Button color="secondary" size="sm" iconLeading={<FileIcon type="pdf" variant="gray" aria-label="Download PDF" />} />
-                <Button color="secondary" size="sm" iconLeading={<FileIcon type="txt" variant="gray" aria-label="Download TXT" />} />
-                <Button color="secondary" size="sm" iconLeading={<FileIcon type="html" variant="gray" aria-label="Download HTML" />} />
+                <Button color="secondary" size="sm" iconLeading={<FileIcon type="pdf" variant="gray" aria-label="Download PDF" />} onPress={() => posthog.capture("reader_text_download_clicked", { format: "pdf" })} />
+                <Button color="secondary" size="sm" iconLeading={<FileIcon type="txt" variant="gray" aria-label="Download TXT" />} onPress={() => posthog.capture("reader_text_download_clicked", { format: "txt" })} />
+                <Button color="secondary" size="sm" iconLeading={<FileIcon type="html" variant="gray" aria-label="Download HTML" />} onPress={() => posthog.capture("reader_text_download_clicked", { format: "html" })} />
             </div>
             <div className="border-t border-secondary pt-4">
                 <h5 className="text-xs font-semibold text-tertiary pb-2">Share</h5>
@@ -494,7 +495,14 @@ const AncillaryPanel = ({
                                 aria-label={tab.label}
                                 title={tab.tooltip}
                                 disabled={!accessible}
-                                onClick={() => accessible && setActiveTab(tab.id)}
+                                onClick={() => {
+                                if (accessible) {
+                                    setActiveTab(tab.id);
+                                    posthog.capture("reader_ancillary_tab_switched", { tab: tab.id });
+                                } else {
+                                    posthog.capture("reader_gated_feature_encountered", { tab: tab.id, required_plan: tab.requiredPlan });
+                                }
+                            }}
                                 className={[
                                     "relative flex items-center justify-center rounded-md p-2 transition-all duration-150 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-400",
                                     isActive
@@ -644,7 +652,10 @@ export default function ReaderPage() {
                     >
                         {ancillaryOpen && (
                             <AncillaryPanel
-                                onClose={() => setAncillaryOpen(false)}
+                                onClose={() => {
+                                    setAncillaryOpen(false);
+                                    posthog.capture("reader_ancillary_panel_toggled", { action: "closed" });
+                                }}
                                 userPlan="free"
                             />
                         )}
@@ -655,7 +666,10 @@ export default function ReaderPage() {
                 {!ancillaryOpen && (
                     <button
                         id="ancillary-panel-reopen"
-                        onClick={() => setAncillaryOpen(true)}
+                        onClick={() => {
+                            setAncillaryOpen(true);
+                            posthog.capture("reader_ancillary_panel_toggled", { action: "opened" });
+                        }}
                         aria-label="Open ancillary panel"
                         title="Open ancillary panel"
                         className="fixed bottom-6 right-4 z-50 flex items-center justify-center rounded-full bg-brand-600 p-2.5 text-white shadow-lg transition-all hover:bg-brand-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-400"
