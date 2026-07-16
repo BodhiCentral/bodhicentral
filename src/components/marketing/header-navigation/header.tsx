@@ -127,7 +127,7 @@ export const Header = ({ isFullWidth, isFloating, className, user }: HeaderProps
         <header
             ref={headerRef}
             className={cx(
-                "fixed top-0 z-500 flex h-16 w-full items-center justify-center transform-gpu will-change-transform bg-[linear-gradient(266deg,rgba(255,255,255,0)10%,rgba(248,246,241,0.8)35%,rgba(248,246,241,0.8)65%,rgba(255,255,255,0)90%)] dark:bg-[linear-gradient(266deg,rgba(0,0,0,0.05)10%,rgba(5,5,5,0.7)35%,rgba(5,5,5,0.7)65%,rgba(0,0,0,0)90%)] backdrop-blur-lg border-b border-b-utility-brand-400/20 drop-shadow-sm",
+                "fixed top-0 z-500 flex h-16 w-full items-center justify-center transform-gpu will-change-transform bg-[linear-gradient(266deg,rgba(255,255,255,1)10%,rgba(248,246,241,0.9)35%,rgba(248,246,241,0.9)65%,rgba(255,255,255,1)90%)] dark:bg-[linear-gradient(266deg,rgba(0,0,0,0.8)10%,rgba(0,0,0,0.7)35%,rgba(0,0,0,0.7)65%,rgba(0,0,0,0.9)90%)] backdrop-blur-lg border-b border-b-utility-brand-400/20 drop-shadow-sm",
                 isFloating && "h-14 md:h-14 md:pt-2",
                 isFullWidth && !isFloating ? "has-aria-expanded:bg-primary" : "max-md:has-aria-expanded:bg-primary",
                 className,
@@ -143,7 +143,7 @@ export const Header = ({ isFullWidth, isFloating, className, user }: HeaderProps
                     <div className="flex items-center gap-8">
                         {/* LOGO */}
                         <Link href="/" aria-label="Bodhicentral Home page" className="flex items-center outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2 gap-2">
-                            <span className="text-2xl font-serif font-extralight uppercase tracking-tight text-fg-quaternary dark:text-fg-primary">Bodhi</span>
+                            <span className="text-2xl font-serif font-extralight uppercase tracking-tight text-fg-primary dark:text-fg-primary">Bodhi</span>
                             <span className="text-2xl font-serif font-extralight uppercase tracking-tight text-brand-600">Central</span>
                         </Link>
                     </div>
@@ -155,7 +155,7 @@ export const Header = ({ isFullWidth, isFloating, className, user }: HeaderProps
                                 <li key={navItem.label}>
                                     {navItem.menu ? (
                                         <AriaDialogTrigger>
-                                            <AriaButton className="relative flex cursor-pointer items-center gap-0.5 rounded-lg px-1.5 py-2 text-sm font-regular uppercase text-fg-primary outline-focus-ring transition duration-100 ease-linear hover:text-fg-brand-secondary_hover aria-expanded:text-brand-secondary focus-visible:outline-2 focus-visible:outline-offset-2 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:rounded-full after:bg-brand-500 after:scale-x-0 after:transition-transform after:duration-200 aria-expanded:after:scale-x-100">
+                                            <AriaButton className="relative flex cursor-pointer items-center gap-0.5 rounded-lg px-1.5 py-2 text-md font-regular uppercase text-fg-primary outline-focus-ring transition duration-100 ease-linear hover:text-fg-brand-secondary_hover aria-expanded:text-brand-secondary focus-visible:outline-2 focus-visible:outline-offset-2 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:rounded-full after:bg-brand-500 after:scale-x-0 after:transition-transform after:duration-200 aria-expanded:after:scale-x-100">
                                                 <span className="px-0.5">{navItem.label}</span>
                                                 <ChevronDown className="size-4 rotate-0 stroke-[2.625px] text-fg-primary/50 hover:text-fg-brand-secondary transition duration-100 ease-linear in-aria-expanded:-rotate-180 in-aria-expanded:text-fg-quaternary" />
                                             </AriaButton>

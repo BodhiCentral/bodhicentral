@@ -325,7 +325,7 @@ const BlogPage04 = () => {
 
             <BlogHeaderSidebar02 />
             {/* Bottom decorative band */}
-            <div className="absolute h-6 bottom-0 left-0 right-0 mx-auto bg-[url(/patterns/detailed-endless-band-gold-140px.webp)] bg-contain bg-repeat opacity-16 dark:opacity-12">
+            <div className="hidden absolute h-6 bottom-0 left-0 right-0 mx-auto bg-[url(/patterns/detailed-endless-band-gold-140px.webp)] bg-contain bg-repeat opacity-16 dark:opacity-12">
             </div>
         </div>
     );
