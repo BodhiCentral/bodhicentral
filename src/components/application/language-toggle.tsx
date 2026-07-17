@@ -9,18 +9,9 @@ import { Translate02 } from "@untitledui/icons";
 import { Button as AriaButton } from "react-aria-components";
 import type { Key } from "react-aria-components";
 import { Dropdown } from "@/components/base/dropdown/dropdown";
-import { FlagUSA } from "@/components/shared-assets/flag-icons/flag-usa";
-import { FlagThailand } from "@/components/shared-assets/flag-icons/flag-thailand";
-import { FlagChina } from "@/components/shared-assets/flag-icons/flag-china";
-import { FlagSpain } from "@/components/shared-assets/flag-icons/flag-spain";
 import { cx } from "@/utils/cx";
 
-const locales = [
-    { id: "en", icon: FlagUSA },
-    { id: "th", icon: FlagThailand },
-    { id: "zh", icon: FlagChina },
-    { id: "es", icon: FlagSpain },
-] as const;
+const locales = routing.locales;
 
 function getLocaleFromPath(pathname: string): string {
     for (const locale of routing.locales) {
@@ -85,8 +76,8 @@ export const LanguageToggle = ({ className }: { className?: string }) => {
                     selectionMode="none"
                     onAction={handleLocaleChange}
                 >
-                    {locales.map(({ id, icon }) => (
-                        <Dropdown.Item key={id} id={id} label={t(id)} icon={icon} />
+                    {locales.map((id) => (
+                        <Dropdown.Item key={id} id={id} label={t(id)} />
                     ))}
                 </Dropdown.Menu>
             </Dropdown.Popover>
