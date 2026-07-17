@@ -84,13 +84,13 @@ const TibetanCanonDivisionsCard = ({ section }: { section: TibetanCanonDivision 
 
             <div className={`z-10 bg-linear-to-t from-black/30 to-black/0 pt-16 md:pt-20 lg:pt-24 rounded-b-sm ${isFlipped ? "opacity-0 invisible" : "group-hover:opacity-0 group-hover:invisible"}`}>
                 <div className={`relative bg-${section.color} dark:bg-${section.dark_color} px-5 pt-5 pb-4 text-white backdrop-blur-[10px] before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-alpha-white/30 md:px-5 rounded-b-sm`}>
-                    <h3 className="text-3xl text-brand-300">{section.english_title}</h3>
+                    <h3 className="text-3xl font-semibold text-brand-300">{section.english_title}</h3>
                     <p className="mt-2 text-xl">{section.tibetan_title}</p>
                     <p className="mt-1 text-md">{section.sanskrit_title}</p>
                     <div className="flex gap-2 mt-8 justify-between items-top">
                         <div className="flex flex-col gap-0">
                             <p className="text-sm text-brand-300 uppercase">{section.canon_division}</p>
-                            <p className="text-sm text-brand-200">{section.toh_numbers}</p>
+                            <p className="hidden text-sm text-brand-200">{section.toh_numbers}</p>
                         </div>
                     </div>
                 </div>
@@ -114,8 +114,8 @@ const TibetanCanonDivisionsCard = ({ section }: { section: TibetanCanonDivision 
                 </div>
 
                 <Button
-                    size="sm"
-                    className="bg-black/20 hover:bg-black/30 border-0.5 border-white/50 hover:border-white/50 text-white hover:text-white/60 dark:bg-gray-900/50 dark:border-gray-900/50 dark:text-gray-400"
+                    size="lg"
+                    className="bg-black/20 hover:bg-black/30 border-0.5 border-white/50 hover:border-white/50 text-white hover:text-white/60 dark:bg-gray-900/50 dark:border-gray-900/50 dark:text-white"
                 >
                     Open division
                 </Button>
