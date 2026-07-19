@@ -9,10 +9,10 @@ export default function TibetanCanonsPage() {
     return (
         <>
             {/* Hero Section */}
-            <section className="relative flex flex-col items-center justify-center gap-4 mx-auto h-[calc(100vh)] bg-[url(/tibetan-buddhist-library-01.jpg)] bg-cover bg-bottom bg-no-repeat pt-16">
+            <section className="relative flex flex-col items-center justify-center gap-4 mx-auto h-[calc(100vh)] bg-[url(/tibetan-buddhist-library-01.jpg)] bg-cover bg-bottom bg-no-repeat pt-16 overflow-hidden">
                 {/* Overlay layer for easy customization of color/transparency */}
                 <div className="absolute inset-0 bg-linear-to-b from-black/70 from-5% via-black/10 via-40% to-black/0 to-100% dark:bg-linear-to-b dark:from-brand-900/80 dark:via-black/40 dark:via-35% dark:to-brand-950/50 z-0" aria-hidden="true" />
-<svg className="hero-mandala-right absolute z-0 right-0 top-[50%] w-180 h-180 opacity-60" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg className="hero-mandala-right absolute z-0 right-0 w-140 h-140 opacity-60" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="200" cy="200" r="196" stroke="#B08D57" strokeWidth="0.5" />
                     <circle cx="200" cy="200" r="170" stroke="#B08D57" strokeWidth="0.3" />
                     <circle cx="200" cy="200" r="140" stroke="#B08D57" strokeWidth="0.5" />
