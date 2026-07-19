@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Dataflow01, Columns03, Rows03 } from "@untitledui/icons";
+import { Dataflow01, Columns03, Columns02, Rows03 } from "@untitledui/icons";
 import { Button } from "@/components/base/buttons/button";
 import { cx } from "@/utils/cx";
 import { openKangyurNavigator } from "@/components-custom/navigation/canon-navigation/kangyur-navigation-modal-wrapper";
@@ -12,18 +12,19 @@ export const TibetanCanonsDiagram = () => {
     return (
         <section className="relative py-10 md:py-24 bg-[url(/ornaments/golden-wheel.png)] bg-center bg-contain bg-no-repeat">
             {/* Overlay layer for easy customization of color/transparency */}
-            <div className="absolute inset-0 bg-brand-50/94 dark:bg-brand-800/94 z-0" aria-hidden="true" />
+            <div className="absolute inset-0 bg-brand-50/90 dark:bg-brand-800/92 z-0" aria-hidden="true" />
             {/* Section Header */}
             <div className="relative z-10 mx-auto max-w-container px-4 md:px-8 pb-4">
                 <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
                     <span className="text-sm font-light text-brand-secondary md:text-md">Tibetan Canons</span>
-                    <h2 className="text-display-md font-extralight text-brand-800 dark:text-brand-300 md:text-display-xl">The Tibetan Canon Divisions</h2>
+                    <h2 className="text-display-lg font-extralight text-brand-800 dark:text-brand-300 md:text-display-2xl">Tibetan Canon Divisions</h2>
                 </div>
             </div>
 
             {/* Toggle Switch */}
             <div className="relative z-20 mx-auto max-w-container px-4 md:px-6 pb-4">
-                <div className="flex justify-start items-center gap-3">
+                <div className="flex justify-start items-center gap-4">
+                    <p>Layout:</p>
                     <button
                         onClick={() => setIsRowsLayout(true)}
                         className={cx(
@@ -32,7 +33,7 @@ export const TibetanCanonsDiagram = () => {
                         )}
                         aria-label="Rows Layout"
                     >
-                        <Rows03 className="size-5" />
+                        <Rows03 className="size-6" />
                     </button>
                     <button
                         onClick={() => setIsRowsLayout(false)}
@@ -42,7 +43,7 @@ export const TibetanCanonsDiagram = () => {
                         )}
                         aria-label="Columns Layout"
                     >
-                        <Columns03 className="size-5" />
+                        <Columns02 className="size-6" />
                     </button>
 
 

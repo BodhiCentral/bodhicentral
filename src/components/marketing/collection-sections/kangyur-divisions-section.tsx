@@ -13,12 +13,12 @@ export const KangyurDivisionsSection = () => {
                 <div className="flex w-full flex-col justify-between md:flex-row">
                     <div className="flex flex-1 flex-col max-w-280 pr-4 md:pr-24">
                         <h2 className="text-display-md font-extralight text-brand-800 dark:text-brand-300 md:text-display-lg">Kangyur Divisions</h2>
-                        <p className="mt-1 text-base text-tertiary md:mt-2 md:text-lg text-balance">
+                        <p className="hidden md:block mt-1 text-base text-tertiary md:mt-2 md:text-lg text-balance">
                             The Kangyur is the principal collection of the Buddhist scriptures in Tibetan. It contains some 900 works in over 100 volumes, all translations into Tibetan of the Indian texts considered to record the words of the Buddha.
                         </p>
                     </div>
-                    <div className="mt-8 flex flex-col gap-3 self-stretch md:mt-0 md:flex-row-reverse md:justify-center md:self-center">
-                        <Button href="/canon-overviews/kangyur-overview" color="secondary" size="md">
+                    <div className="mt-8 flex flex-col gap-3 self-stretch md:mt-0 md:flex-row-reverse md:justify-center md:self-center pb-4 md:pb-0">
+                        <Button href="/canon-overviews/kangyur-overview" color="secondary" size="md" className="hidden md:block">
                             Overview
                         </Button>
                         <Button color="secondary" size="md" iconTrailing={Dataflow01} onClick={() => openKangyurNavigator()} >

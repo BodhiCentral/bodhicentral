@@ -142,8 +142,8 @@ export const Header = ({ isFullWidth, isFloating, className, user }: HeaderProps
                     <div className="flex items-center gap-8">
                         {/* LOGO */}
                         <Link href="/" aria-label="Bodhicentral Home page" className="flex items-center outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2 gap-2">
-                            <span className="text-2xl font-serif font-extralight uppercase tracking-tight text-fg-primary dark:text-fg-primary">Bodhi</span>
-                            <span className="text-2xl font-serif font-extralight uppercase tracking-tight text-brand-600">Central</span>
+                            <span className="text-3xl font-serif font-light uppercase tracking-tight text-fg-primary dark:text-fg-primary">Bodhi</span>
+                            <span className="text-3xl font-serif font-light uppercase tracking-tight text-brand-600">Central</span>
                         </Link>
                     </div>
 
