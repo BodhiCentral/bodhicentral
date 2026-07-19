@@ -126,7 +126,7 @@ export const Header = ({ isFullWidth, isFloating, className, user }: HeaderProps
         <header
             ref={headerRef}
             className={cx(
-                "fixed top-0 z-500 flex h-16 w-full items-center justify-center transform-gpu will-change-transform bg-[linear-gradient(266deg,rgba(255,255,255,0)15%,rgba(255,255,255,0.05)35%,rgba(255,255,255,0.05)65%,rgba(255,255,255,0)85%)] dark:bg-[linear-gradient(266deg,rgba(0,0,0,0.9)10%,rgba(0,0,0,0.8)35%,rgba(0,0,0,0.8)65%,rgba(0,0,0,0.9)90%)] backdrop-blur-lg border-b border-b-utility-brand-600/30",
+                "fixed top-0 z-500 flex h-16 w-full items-center justify-center transform-gpu will-change-transform bg-[linear-gradient(266deg,rgba(255,255,255,0)15%,rgba(255,255,255,0.03)35%,rgba(255,255,255,0.03)65%,rgba(255,255,255,0)85%)] dark:bg-[linear-gradient(266deg,rgba(0,0,0,0.9)10%,rgba(0,0,0,0.8)35%,rgba(0,0,0,0.8)65%,rgba(0,0,0,0.9)90%)] backdrop-blur-lg border-b border-b-utility-brand-600/20",
                 isFloating && "h-16 md:h-16 md:pt-2",
                 isFullWidth && !isFloating ? "has-aria-expanded:bg-primary" : "max-md:has-aria-expanded:bg-primary",
                 className,
@@ -143,7 +143,7 @@ export const Header = ({ isFullWidth, isFloating, className, user }: HeaderProps
                         {/* LOGO */}
                         <Link href="/" aria-label="Bodhicentral Home page" className="flex items-center outline-focus-ring focus-visible:outline-2 focus-visible:outline-offset-2 gap-2">
                             <span className="text-3xl font-serif font-light uppercase tracking-tight text-brand-600 dark:text-fg-secondary">Bodhi</span>
-                            <span className="text-3xl font-serif font-light uppercase tracking-tight text-fg-secondary">Central</span>
+                            <span className="text-3xl font-serif font-light uppercase tracking-tight text-fg-tertiary">Central</span>
                         </Link>
                     </div>
 
@@ -156,7 +156,7 @@ export const Header = ({ isFullWidth, isFloating, className, user }: HeaderProps
                                         <AriaDialogTrigger>
                                             <AriaButton className="relative flex cursor-pointer items-center gap-0.5 rounded-lg px-1.5 py-2 text-md font-semibold text-fg-quaternary outline-focus-ring transition duration-100 ease-linear hover:text-fg-brand-secondary_hover aria-expanded:text-brand-secondary focus-visible:outline-2 focus-visible:outline-offset-2 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:rounded-full after:bg-brand-500 after:scale-x-0 after:transition-transform after:duration-200 aria-expanded:after:scale-x-100">
                                                 <span className="px-0.5">{navItem.label}</span>
-                                                <ChevronDown className="size-4 rotate-0 stroke-[2.625px] text-fg-quaternary hover:text-fg-brand-secondary transition duration-100 ease-linear in-aria-expanded:-rotate-180 in-aria-expanded:text-fg-quaternary" />
+                                                <ChevronDown className="hidden size-4 rotate-0 stroke-[2.625px] text-fg-quaternary hover:text-fg-brand-secondary transition duration-100 ease-linear in-aria-expanded:-rotate-180 in-aria-expanded:text-fg-quaternary" />
                                             </AriaButton>
 
                                             <AriaPopover
@@ -193,7 +193,7 @@ export const Header = ({ isFullWidth, isFloating, className, user }: HeaderProps
                                     ) : (
                                         <Link
                                             href={navItem.href!}
-                                            className="flex cursor-pointer items-center gap-0.5 px-1.5 py-1 text-sm font-semibold outline-focus-ring transition duration-100 ease-linear hover:text-fg-brand-secondary_hover focus:outline-offset-2 focus-visible:outline-2"
+                                            className="flex cursor-pointer items-center gap-0.5 px-1.5 py-1 text-md font-semibold outline-focus-ring transition duration-100 ease-linear text-fg-quaternary hover:text-fg-brand-secondary_hover focus:outline-offset-2 focus-visible:outline-2"
                                         >
                                             <span className="px-0.5">{navItem.label}</span>
                                         </Link>
