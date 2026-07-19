@@ -12,7 +12,7 @@ export const TibetanCanonsDiagram = () => {
     return (
         <section className="relative py-10 md:py-24 bg-[url(/ornaments/golden-wheel.png)] bg-center bg-contain bg-no-repeat">
             {/* Overlay layer for easy customization of color/transparency */}
-            <div className="absolute inset-0 bg-brand-50/90 dark:bg-brand-800/92 z-0" aria-hidden="true" />
+            <div className="absolute inset-0 bg-brand-50/90 dark:bg-brand-800/90 z-0" aria-hidden="true" />
             {/* Section Header */}
             <div className="relative z-10 mx-auto max-w-container px-4 md:px-8 pb-4">
                 <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
