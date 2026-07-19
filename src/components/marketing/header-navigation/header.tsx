@@ -154,9 +154,9 @@ export const Header = ({ isFullWidth, isFloating, className, user }: HeaderProps
                                 <li key={navItem.label}>
                                     {navItem.menu ? (
                                         <AriaDialogTrigger>
-                                            <AriaButton className="relative flex cursor-pointer items-center gap-0.5 rounded-lg px-1.5 py-2 text-md font-semibold text-fg-primary outline-focus-ring transition duration-100 ease-linear hover:text-fg-brand-secondary_hover aria-expanded:text-brand-secondary focus-visible:outline-2 focus-visible:outline-offset-2 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:rounded-full after:bg-brand-500 after:scale-x-0 after:transition-transform after:duration-200 aria-expanded:after:scale-x-100">
+                                            <AriaButton className="relative flex cursor-pointer items-center gap-0.5 rounded-lg px-1.5 py-2 text-md font-semibold text-fg-quaternary outline-focus-ring transition duration-100 ease-linear hover:text-fg-brand-secondary_hover aria-expanded:text-brand-secondary focus-visible:outline-2 focus-visible:outline-offset-2 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:rounded-full after:bg-brand-500 after:scale-x-0 after:transition-transform after:duration-200 aria-expanded:after:scale-x-100">
                                                 <span className="px-0.5">{navItem.label}</span>
-                                                <ChevronDown className="size-4 rotate-0 stroke-[2.625px] text-fg-primary/50 hover:text-fg-brand-secondary transition duration-100 ease-linear in-aria-expanded:-rotate-180 in-aria-expanded:text-fg-quaternary" />
+                                                <ChevronDown className="size-4 rotate-0 stroke-[2.625px] text-fg-quaternary hover:text-fg-brand-secondary transition duration-100 ease-linear in-aria-expanded:-rotate-180 in-aria-expanded:text-fg-quaternary" />
                                             </AriaButton>
 
                                             <AriaPopover
@@ -204,17 +204,17 @@ export const Header = ({ isFullWidth, isFloating, className, user }: HeaderProps
                     </nav>
 
                     {/* DESKTOP — Language, Theme toggles + auth */}
-                    <div className="hidden items-center gap-3 md:flex">
+                    <div className="hidden items-center gap-4 md:flex">
                         <LanguageToggle />
                         <ThemeToggle />
                         {user ? (
                             <DropdownAvatar user={user} />
                         ) : (
                             <>
-                                <Button color="secondary" size={isFloating ? "sm" : "sm"} href="/sign-in">
+                                <Button color="secondary" size={isFloating ? "md" : "md"} href="/sign-in">
                                     {tAuth("login")}
                                 </Button>
-                                <Button color="primary" size={isFloating ? "sm" : "sm"} href="/sign-up">
+                                <Button color="primary" size={isFloating ? "md" : "md"} href="/sign-up">
                                     {tAuth("signup")}
                                 </Button>
                             </>
