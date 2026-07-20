@@ -204,10 +204,10 @@ const PricingSimpleBanner = () => {
     ];
 
     return (
-        <section className="relative bg-primary pt-20 pb-16 md:pt-28 md:pb-20">
+        <section className="relative bg-utility-neutral-100 pt-20 pb-16 md:pt-28 md:pb-20">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
-                    <h2 className="text-display-md font-extralight text-brand-800 dark:text-brand-400 md:text-display-xl">Start free. Upgrade to unlock advanced study tools.</h2>
+                    <h1 className="text-display-md font-extralight text-brand-800 dark:text-brand-400 md:text-display-2xl">Start free. Upgrade to unlock advanced study tools.</h1>
                     <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
                         Bodhi Central provides free access to Scripture worldwide. No account required. Optional subscriptions unlock advanced study tools.
                     </p>
@@ -372,7 +372,7 @@ const FeatureTextFeaturedIconLeft = ({ icon, title, subtitle, footer }: FeatureT
 const FeaturesIconsAndImage03 = () => {
     return (
         <section className="bg-primary">
-            <div className="bg-warm-off-400 dark:bg-warm-off-950 pt-16 pb-[112px] md:pt-24 md:pb-40">
+            <div className="bg-warm-off-400 dark:bg-warm-off-950 pt-16 pb-28 md:pt-24 md:pb-40">
                 <div className="mx-auto grid w-full max-w-container grid-cols-1 gap-12 px-4 md:gap-16 md:px-8 lg:grid-cols-2 lg:gap-24">
                     <div className="flex w-full flex-col">
                         <span className="text-sm font-light text-brand-600 dark:text-brand-700 md:text-md">Our Approach</span>

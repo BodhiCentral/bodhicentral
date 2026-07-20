@@ -205,8 +205,12 @@ export const Header = ({ isFullWidth, isFloating, className, user }: HeaderProps
 
                     {/* DESKTOP — Language, Theme toggles + auth */}
                     <div className="hidden items-center gap-4 md:flex">
+                        <div className="md:flex gap-2 px-4">
+                            <ThemeToggle />
                         <LanguageToggle />
-                        <ThemeToggle />
+                        </div>
+                        
+                        
                         {user ? (
                             <DropdownAvatar user={user} />
                         ) : (

@@ -74,16 +74,16 @@ export default function TibetanCanonsPage() {
                         <a href="#kangyur-divisions-gallery" className="cursor-pointer hover:scale-[1.06] transition-transform duration-400 h-full" aria-label="Go to Kangyur collection gallery">
                             <div className="flex flex-col h-full items-center justify-start bg-radial-[at_50%_36%] from-brand-50 via-brand-50/90 via-30% to-brand-200/60 dark:bg-linear-to-b dark:bg-radial-[at_50%_36%] dark:from-brand-800 dark:via-brand-800/80 dark:via-30% dark:to-brand-700/70 to-80% p-4 md:px-12 md:py-10 rounded-full drop-shadow-2xl border-b border-brand-500">
                                 <Image src="/ornaments/golden-wheel-280px.webp" alt="wheel of dharma" width={100} height={100} style={{ width: "auto", height: "auto" }} className="hidden md:block opacity-80 dark:opacity-100" />
-                                <h2 className="text-display-md font-normal text-brand-800 dark:text-brand-50 text-center py-2">Scriptures - Kangyur</h2>
-                                <p className="text-md text-secondary font-semibold text-center pb-4">Tibetan translations of Indian Scriptures with the words of the Buddha.</p>
+                                <h2 className="text-display-md font-normal text-brand-800 dark:text-brand-50 text-center py-2">The Kangyur</h2>
+                                <p className="text-md text-secondary font-semibold text-center pb-4">Tibetan translations of Indidan Scriptures, incorporating the teachings of the Buddha.</p>
                             </div>
                         </a>
                         {/* Tengyur Card */}
                         <a href="#tengyur-divisions-gallery" className="cursor-pointer hover:scale-[1.06] transition-transform duration-400 h-full" aria-label="Go to Tengyur collection gallery">
                             <div className="flex flex-col h-full items-center justify-start bg-radial-[at_50%_36%] from-brand-50 via-brand-50/90 via-30% to-brand-200/60 dark:bg-linear-to-b dark:bg-radial-[at_50%_36%] dark:from-brand-800 dark:via-brand-800/80 dark:via-30% dark:to-brand-700/70 to-80% p-4 md:px-10 md:py-8 rounded-full drop-shadow-2xl border-b border-brand-500">
                                 <Image src="/ornaments/golden-wheel-280px.webp" alt="wheel of dharma" width={100} height={100} style={{ width: "auto", height: "auto" }} className="hidden md:block opacity-80 dark:opacity-100" />
-                                <h2 className="text-display-md font-normal text-brand-800 dark:text-brand-50 text-center py-2">Treatises - Tengyur</h2>
-                                <p className="text-md text-secondary font-semibold text-center pb-4">Tibetan translations of Indian treatises elucidating the words of the Buddha.</p>
+                                <h2 className="text-display-md font-normal text-brand-800 dark:text-brand-50 text-center py-2">The Tengyur</h2>
+                                <p className="text-md text-secondary font-semibold text-center pb-4">Tibetan translations of Indian treatises that explain the Buddha's teachings.</p>
                             </div>
                         </a>
                     </div>

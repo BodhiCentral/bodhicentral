@@ -254,7 +254,7 @@ const sections: Section[] = [
 
 const PricingLargeTable01 = () => {
     return (
-        <section className="bg-primary">
+        <section className="bg-utility-neutral-100">
             <div className="mx-auto max-w-container px-4 py-6 md:px-8 md:py-8">
                 <div className="mx-auto flex w-full flex-col items-center text-center">
 
