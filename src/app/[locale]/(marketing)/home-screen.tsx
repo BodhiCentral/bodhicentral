@@ -17,7 +17,7 @@ export const HomeScreen = () => {
         <main className="relative overflow-hidden">
 
             {/* Hero Section */}
-            <section className="hero relative flex flex-col items-center justify-center w-full pt-16 pb-28 h-[calc(100vh)] bg-brand-700/70 bg-radial-[at_68%_50%] from-ink-800/20 via-brand-900/40 via-15% to-brand-950 dark:bg-linear-to-b dark:bg-radial-[at_68%_50%] dark:from-brand-950/95 dark:via-brand-900/90 dark:via-20% dark:to-black/15">
+            <section className="hero relative flex flex-col items-center justify-center w-full pt-16 pb-28 h-[calc(100vh)] bg-brand-800/90 bg-radial-[at_68%_50%] from-brand-600/70 via-brand-900/40 via-15% to-brand-950 to-95%">
                 <div className="hero-bg-grad"></div>
                 <div className="hero-grain"></div>
                 <div className="hero-rule"></div>
