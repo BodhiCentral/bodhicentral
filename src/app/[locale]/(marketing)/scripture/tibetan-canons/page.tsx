@@ -10,7 +10,7 @@ export default function TibetanCanonsPage() {
             {/* Hero Section */}
             <section className="relative flex flex-col gap-4 mx-auto h-[calc(100vh)] bg-[url(/tibetan-buddhist-library-01.jpg)] bg-cover bg-bottom bg-no-repeat pt-32 overflow-hidden">
                 {/* Overlay layer for easy customization of color/transparency */}
-                <div className="absolute inset-0 bg-linear-to-b from-black/80 from-10% via-black/10 via-40% to-black/50 to-100% z-0" aria-hidden="true" />
+                <div className="absolute inset-0 bg-linear-to-b from-black/80 from-15% via-black/20 via-40% to-black/60 to-100% z-0" aria-hidden="true" />
 <svg className="hero-mandala-tibetan-canons absolute z-0 top-0 right-0 w-100 h-100 opacity-50" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="200" cy="200" r="196" stroke="#B08D57" strokeWidth="0.5" />
                     <circle cx="200" cy="200" r="170" stroke="#B08D57" strokeWidth="0.3" />
