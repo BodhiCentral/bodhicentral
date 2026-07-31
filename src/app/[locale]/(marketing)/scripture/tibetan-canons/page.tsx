@@ -74,7 +74,7 @@ export default function TibetanCanonsPage() {
                             <div className="flex flex-col h-full">
                                 <Image src="/ornaments/golden-wheel-280px.webp" alt="wheel of dharma" width={62} height={62} style={{ width: "62px", height: "62px" }} className="hidden md:block opacity-100" />
                                 <h2 className="text-display-lg font-extralight text-brand-400 dark:text-brand-50 py-2">Explore the Kangyur</h2>
-                                <p className="text-lg text-white font-light pb-4">Tibetan translations of Indidan Scriptures, incorporating the teachings of the Buddha.</p>
+                                <p className="text-lg text-white font-light pb-4">Tibetan translations of Indian scriptures, incorporating the teachings of the Buddha.</p>
                             </div>
                         </a>
                         {/* Tengyur Card */}
