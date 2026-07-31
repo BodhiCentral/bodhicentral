@@ -9,10 +9,10 @@ export default function TibetanCanonsPage() {
     return (
         <>
             {/* Hero Section */}
-            <section className="relative flex flex-col items-center justify-center gap-4 mx-auto h-[calc(100vh)] bg-[url(/tibetan-buddhist-library-01.jpg)] bg-cover bg-bottom bg-no-repeat pt-16 overflow-hidden">
+            <section className="relative flex flex-col gap-4 mx-auto h-[calc(100vh)] bg-[url(/tibetan-buddhist-library-01.jpg)] bg-cover bg-bottom bg-no-repeat pt-24 overflow-hidden">
                 {/* Overlay layer for easy customization of color/transparency */}
-                <div className="absolute inset-0 bg-linear-to-b from-black/70 from-5% via-black/10 via-40% to-black/0 to-100% dark:bg-linear-to-b dark:from-brand-900/80 dark:via-black/40 dark:via-35% dark:to-brand-950/50 z-0" aria-hidden="true" />
-<svg className="hero-mandala-right absolute z-0 right-0 w-140 h-140 opacity-60" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <div className="absolute inset-0 bg-linear-to-b from-black/80 from-15% via-black/15 via-40% to-black/50 to-100% z-0" aria-hidden="true" />
+<svg className="hero-mandala-right absolute z-0 top-20 right-0 w-110 h-110 opacity-60" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="200" cy="200" r="196" stroke="#B08D57" strokeWidth="0.5" />
                     <circle cx="200" cy="200" r="170" stroke="#B08D57" strokeWidth="0.3" />
                     <circle cx="200" cy="200" r="140" stroke="#B08D57" strokeWidth="0.5" />
@@ -61,29 +61,29 @@ export default function TibetanCanonsPage() {
                     </g>
                     </svg>
                 {/* Hero Inner Content */}
-                <div className="relative flex flex-col items-center justify-center gap-12 z-10">
+                <div className="mx-24 relative max-w-container flex flex-col gap-12 z-10">
                     
                     {/* Hero Title & Subtitle */}
-                    <div className="md:flex flex-col items-center justify-center gap-1 px-4 md:px-6 animate-[fadeUp_1s_ease_both] delay-300 ">
-                        <h1 className="text-display-xl font-extralight text-center text-brand-300 dark:text-brand-300 md:text-display-3xl lg:text-display-4xl text-shadow-brand-950 text-shadow-sm">Tibetan Canon</h1>
-                        <p className="hero-subtitle text-center text-xl font-light text-white w-110">Buddhist Indian scriptures and treatises translated into Tibetan.</p>
+                    <div className="md:flex flex-col gap-1 animate-[fadeUp_1s_ease_both] delay-300 ">
+                        <h1 className="text-display-xl font-extralight text-brand-400 md:text-display-3xl lg:text-display-4xl text-shadow-brand-950 text-shadow-sm">Tibetan Canon</h1>
+                        <p className="hero-subtitle text-xl font-light text-white w-110">Buddhist Indian scriptures and treatises translated into Tibetan.</p>
                     </div>
                     {/* Tibetan Canons Cards */}
-                    <div className="mx-auto max-w-110 md:max-w-4xl px-6 md:pb-16 md:px-6 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 lg:gap-14 items-start animate-[fadeUp_1s_ease_both] delay-450">
+                    <div className="max-w-140 md:max-w-3xl md:pb-16 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 lg:gap-20 items-start animate-[fadeUp_1s_ease_both] delay-450">
                         {/* Kangyur Card */}
-                        <a href="#kangyur-divisions-gallery" className="cursor-pointer hover:scale-[1.06] transition-transform duration-400 h-full" aria-label="Go to Kangyur collection gallery">
-                            <div className="flex flex-col h-full items-center justify-start bg-radial-[at_50%_36%] from-brand-50 via-brand-50/90 via-30% to-brand-200/60 dark:bg-linear-to-b dark:bg-radial-[at_50%_36%] dark:from-brand-800 dark:via-brand-800/80 dark:via-30% dark:to-brand-700/70 to-80% p-4 md:px-12 md:py-10 rounded-full drop-shadow-2xl border-b border-brand-500">
-                                <Image src="/ornaments/golden-wheel-280px.webp" alt="wheel of dharma" width={100} height={100} style={{ width: "auto", height: "auto" }} className="hidden md:block opacity-80 dark:opacity-100" />
-                                <h2 className="text-display-md font-normal text-brand-800 dark:text-brand-50 text-center py-2">The Kangyur</h2>
-                                <p className="text-md text-secondary font-semibold text-center pb-4">Tibetan translations of Indidan Scriptures, incorporating the teachings of the Buddha.</p>
+                        <a href="#kangyur-divisions-gallery" className="cursor-pointer hover:scale-[1.04] transition-transform duration-400 h-full" aria-label="Go to Kangyur collection gallery">
+                            <div className="flex flex-col h-full">
+                                <Image src="/ornaments/golden-wheel-280px.webp" alt="wheel of dharma" width={80} height={80} style={{ width: "80px", height: "80px" }} className="hidden md:block opacity-100" />
+                                <h2 className="text-display-lg font-extralight text-brand-400 dark:text-brand-50 py-2">The Kangyur</h2>
+                                <p className="text-lg text-white font-light pb-4">Tibetan translations of Indidan Scriptures, incorporating the teachings of the Buddha.</p>
                             </div>
                         </a>
                         {/* Tengyur Card */}
-                        <a href="#tengyur-divisions-gallery" className="cursor-pointer hover:scale-[1.06] transition-transform duration-400 h-full" aria-label="Go to Tengyur collection gallery">
-                            <div className="flex flex-col h-full items-center justify-start bg-radial-[at_50%_36%] from-brand-50 via-brand-50/90 via-30% to-brand-200/60 dark:bg-linear-to-b dark:bg-radial-[at_50%_36%] dark:from-brand-800 dark:via-brand-800/80 dark:via-30% dark:to-brand-700/70 to-80% p-4 md:px-10 md:py-8 rounded-full drop-shadow-2xl border-b border-brand-500">
-                                <Image src="/ornaments/golden-wheel-280px.webp" alt="wheel of dharma" width={100} height={100} style={{ width: "auto", height: "auto" }} className="hidden md:block opacity-80 dark:opacity-100" />
-                                <h2 className="text-display-md font-normal text-brand-800 dark:text-brand-50 text-center py-2">The Tengyur</h2>
-                                <p className="text-md text-secondary font-semibold text-center pb-4">Tibetan translations of Indian treatises that explain the Buddha's teachings.</p>
+                        <a href="#tengyur-divisions-gallery" className="cursor-pointer hover:scale-[1.04] transition-transform duration-400 h-full" aria-label="Go to Tengyur collection gallery">
+                            <div className="flex flex-col h-full">
+                                <Image src="/ornaments/golden-wheel-280px.webp" alt="wheel of dharma" width={80} height={80} style={{ width: "80px", height: "80px" }} className="hidden md:block opacity-100" />
+                                <h2 className="text-display-lg font-extralight text-brand-400 dark:text-brand-50 py-2">The Tengyur</h2>
+                                <p className="text-md text-white font-light pb-4">Tibetan translations of Indian treatises that explain the Buddha's teachings.</p>
                             </div>
                         </a>
                     </div>

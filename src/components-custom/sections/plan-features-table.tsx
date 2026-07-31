@@ -255,10 +255,10 @@ const sections: Section[] = [
 const PricingLargeTable01 = () => {
     return (
         <section className="bg-utility-neutral-100">
-            <div className="mx-auto max-w-container px-4 py-6 md:px-8 md:py-8">
+            <div className="mx-auto max-w-container px-4 py-4 md:px-8 md:py-6">
                 <div className="mx-auto flex w-full flex-col items-center text-center">
 
-                    <h2 className="text-display-md font-extralight text-brand-800 dark:text-brand-400 md:text-display-lg self-start">Subscriptions and features overview</h2>
+                    <h2 className="text-display-md font-extralight text-brand-800 dark:text-brand-400 md:text-display-lg self-start">Subscriptions and Features Overview</h2>
                 </div>
             </div>
 
@@ -277,7 +277,7 @@ const PricingLargeTable01 = () => {
                                     )}
                                 </h3>
 
-                                <p className="mt-4 text-sm text-tertiary">{tier.description}</p>
+                                <p className="mt-4 text-md text-tertiary">{tier.description}</p>
                             </div>
 
                             {sections.map((section) => (
