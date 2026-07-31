@@ -78,11 +78,11 @@
 
 .hero-mandala-tibetan-canons {
     position: absolute;
-    right: -40px;
-    top: 48%;
+    right: 5%;
+    top: 60%;
     transform: translateY(-50%);
-    width: 740px;
-    height: 740px;
+    width: 660px;
+    height: 660px;
     opacity: 0.6;
     animation: slowSpin 90s linear infinite;
 }
