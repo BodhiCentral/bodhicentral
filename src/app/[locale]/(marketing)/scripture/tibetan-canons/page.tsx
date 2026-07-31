@@ -65,7 +65,7 @@ export default function TibetanCanonsPage() {
                     {/* Hero Title & Subtitle */}
                     <div className="md:flex flex-col gap-1 animate-[fadeUp_1s_ease_both] delay-300 ">
                         <h1 className="text-display-xl font-extralight text-brand-400 md:text-display-2xl lg:text-display-4xl text-shadow-brand-950 text-shadow-sm">Tibetan Canon</h1>
-                        <p className="hero-subtitle text-xl font-light text-white w-140">Explore the Buddhist Indian scriptures and treatises translated into Tibetan.</p>
+                        <p className="hero-subtitle text-xl font-light text-white w-130 text-balance">Explore the Buddhist Indian scriptures and treatises translated into Tibetan.</p>
                     </div>
                     {/* Tibetan Canons Cards */}
                     <div className="max-w-140 md:max-w-2xl lg:max-w-3xl md:pb-16 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 lg:gap-20 items-start animate-[fadeUp_1s_ease_both] delay-450">
@@ -74,7 +74,7 @@ export default function TibetanCanonsPage() {
                             <div className="flex flex-col h-full">
                                 <Image src="/ornaments/golden-wheel-280px.webp" alt="wheel of dharma" width={62} height={62} style={{ width: "62px", height: "62px" }} className="hidden md:block opacity-100" />
                                 <h2 className="text-display-lg font-extralight text-brand-400 py-2">The Kangyur</h2>
-                                <p className="text-lg text-white font-light pb-4">Tibetan translations of Indian scriptures, incorporating the teachings of the Buddha.</p>
+                                <p className="text-lg text-white font-light pb-4 text-balance">Tibetan translations of Indian scriptures, incorporating the teachings of the Buddha.</p>
                             </div>
                         </a>
                         {/* Tengyur Card */}
@@ -82,7 +82,7 @@ export default function TibetanCanonsPage() {
                             <div className="flex flex-col h-full">
                                 <Image src="/ornaments/golden-wheel-280px.webp" alt="wheel of dharma" width={62} height={62} style={{ width: "62px", height: "62px" }} className="hidden md:block opacity-100" />
                                 <h2 className="text-display-lg font-extralight text-brand-400 py-2">The Tengyur</h2>
-                                <p className="text-lg text-white font-light pb-4">Tibetan translations of Indian treatises that explain the Buddha's teachings.</p>
+                                <p className="text-lg text-white font-light pb-4 text-balance">Tibetan translations of Indian treatises that explain the Buddha's teachings.</p>
                             </div>
                         </a>
                     </div>
