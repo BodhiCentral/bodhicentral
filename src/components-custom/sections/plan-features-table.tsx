@@ -86,10 +86,10 @@ const sections: Section[] = [
                 tiers: { Community: false, Standard: true, Patron: true },
             },
                         {
-                name: "Historical Timelines and Visualizations",
+                name: "Historical Timelines",
                 tooltip: {
                     title: "Historical Timelines",
-                    description: "Visual access to historical timelines for all traditions and rich educational illustrations and curated graphics.",
+                    description: "Visual access to rich historical timelines for all traditions.",
                 },
                 tiers: { Community: false, Standard: true, Patron: true },
             },

@@ -19,7 +19,7 @@ const faqsExtended = [
     },
     {
         question: "Why does Bodhi Central charge for some features?",
-        answer: "Bodhi Central provides free access to Buddhist scripture worldwide, but operating the platform is not free. Optional subscriptions unlock advanced study tools that support deeper, more efficient study — while also sustaining the platform log-term. Paid plans focus on capabilities such as organization, analysis, and original-language tools, while the core canonical reading remains freely available to everyone.",
+        answer: "Bodhi Central provides free access to Buddhist scripture worldwide, but operating the platform is not free. Optional subscriptions unlock advanced study tools that support deeper, more efficient study — while also sustaining the platform long-term. Paid plans focus on capabilities such as organization, analysis, and original-language tools, while the core canonical reading remains freely available to everyone.",
         icon: SlashCircle01,
     },
     {
