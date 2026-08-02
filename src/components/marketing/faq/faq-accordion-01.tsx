@@ -13,7 +13,7 @@ const faqsExtended = [
         icon: Heart,
     },
     {
-        question: "What do I get by creating a free acccount?",
+        question: "What do I get by creating a free account?",
         answer: "A free account lets you personalize your experience across devices, including: Preferred canon galleries, font settings, light and dark mode selectors, default reading layout, and theme preferences. Creating a free account does not change which canon texts you can access — it simply lets Bodhi Central remember how you prefer to study.",
         icon: SwitchHorizontal01,
     },
@@ -29,7 +29,7 @@ const faqsExtended = [
     },
     {
         question: "What is included in the Standard plan?",
-        answer: "The Standard plan is designed for personal Buddhist study over time — helping you organize notes, highlights, and observations as you read and study regularly. It is also designed for deeper research — adding avanced research, cross-reference navigation, and original-language study tools. You can upgrade, downgrade, or cancel at any time.",
+        answer: "The Standard plan is designed for personal Buddhist study over time — helping you organize notes, highlights, and observations as you read and study regularly. It is also designed for deeper research — adding advanced research, cross-reference navigation, and original-language study tools. You can upgrade, downgrade, or cancel at any time.",
         icon: CreditCardRefresh,
     },
     {
@@ -39,7 +39,7 @@ const faqsExtended = [
     },
     {
         question: "Do you offer yearly billing?",
-        answer: "Yes. We offer both monthly and yearly billing for paid plans. Yearly billing is simply a convenient way to support the platform over a full year. The cost is equivalent to paying month-to-month, and you are not locked into a long-term contract. We intentionally keep pricing straightforward, so users can choose the billing option that fits their situation without pressure or penalties.",
+        answer: "Yes. We offer both monthly and yearly billing for paid plans. Yearly billing is a convenient way to support the platform over a full year offering a 20% discount over the monthly subscription. We intentionally keep pricing straightforward, so users can choose the billing option that fits their situation without pressure or penalties.",
         icon: Mail01,
     },
     {

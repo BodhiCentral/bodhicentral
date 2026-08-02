@@ -162,7 +162,7 @@ const PricingSimpleBanner = () => {
         },
         {
             title: "STANDARD",
-            subtitle: selectedPlan === "monthly" ? "$2/month" : "$20/year",
+            subtitle: selectedPlan === "monthly" ? "$4/month" : "$40/year",
             description: "Daily and advanced study tools for personal engagement.",
             firstAction: "Get started",
             firstActionHref: "/sign-up",
@@ -184,7 +184,7 @@ const PricingSimpleBanner = () => {
         },
         {
             title: "PATRON",
-            subtitle: selectedPlan === "monthly" ? "$10/month" : "$100/year",
+            subtitle: selectedPlan === "monthly" ? "$15/month" : "$150/year",
             description: "Support BodhiCentral's mission and help fund ongoing development.",
             firstAction: "Get started",
             firstActionHref: "/sign-up",
@@ -394,7 +394,7 @@ const FeaturesIconsAndImage03 = () => {
                             },
                             {
                                 title: "Connecting communities and living transmissions",
-                                subtitle: "Get truthfull and relevant guidance and support from genuine teachers and fellow practitioners.",
+                                subtitle: "Get truthful and relevant guidance and support from genuine teachers and fellow practitioners.",
                                 icon: GraduationHat02,
                                 cta: "Learn more",
                                 href: "#",

@@ -243,7 +243,7 @@ const sections: Section[] = [
             {
                 name: "Helps fund licensing, infrasture, and development",
                 tooltip: {
-                    title: "Helps funding, infrasture, and development",
+                    title: "Helps funding, infrastructure, and development",
                     description: "Your generosity helps us move forward with our mission.",
                 },
                 tiers: { Community: false, Standard: false, Patron: true },
