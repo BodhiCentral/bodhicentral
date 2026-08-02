@@ -150,12 +150,11 @@ const PricingSimpleBanner = () => {
             firstAction: "Get started",
             firstActionHref: "/sign-up",
             secondAction: "Have questions?",
-            secondActionHref: "/sign-up",
+            secondActionHref: "",
             shadow: "",
             features: [
                 "Canon preferences",
                 "Reading & display settings",
-                "Timelines & visualizations",
                 "Canon navigation and collections",
                 "Directories of communities and centers",
             ],
@@ -167,13 +166,14 @@ const PricingSimpleBanner = () => {
             firstAction: "Get started",
             firstActionHref: "/sign-up",
             secondAction: "Have questions?",
-            secondActionHref: "/plans#faq",
+            secondActionHref: "",
             shadow: "shadow-2xl shadow-ink-100 dark:shadow-ink-500",
             features: [
                 "All COMMUNITY-tier features",
                 "Scripture & Media Synchronization",
                 "Personal library and workspaces",
                 "Advanced search with filtering",
+                "Timelines & visualizations",
                 "Marginal notes",
                 "Categorized bookmarks",
                 "Multicolor highlights",
@@ -189,13 +189,11 @@ const PricingSimpleBanner = () => {
             firstAction: "Get started",
             firstActionHref: "/sign-up",
             secondAction: "Have questions?",
-            secondActionHref: "/plans#faq",
-            banner: "",
+            secondActionHref: "",
             shadow: "",
             features: [
                 "All STANDARD-Tier features",
-                "Early access to experimental and pre-release features",
-                "Preview new tools before general availability",
+                "Early access to experimental and pre-release features and new tools before general availability",
                 "Helps fund licensing, infrastructure, and development",
                 "Patron-exclusive digital gifts (when available)",
 
@@ -209,7 +207,7 @@ const PricingSimpleBanner = () => {
                 <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
                     <h1 className="text-display-md font-extralight text-brand-800 dark:text-brand-400 md:text-display-2xl">Start free. Upgrade to unlock advanced study tools.</h1>
                     <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
-                        Bodhi Central provides free access to Scripture worldwide. No account required. Optional subscriptions unlock advanced study tools.
+                        Bodhi Central provides access to Scripture worldwide and for everyone. No account required. Optional subscriptions unlock advanced study tools.
                     </p>
                     <Tabs
                         selectedKey={selectedPlan}

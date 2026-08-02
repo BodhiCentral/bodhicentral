@@ -14,7 +14,6 @@ const tiers: Tier[] = [
     {
         name: "Standard",
         highlighted: true,
-        badge: "Popular",
         href: "#",
         priceMonthly: 2,
         description: "Low-cost plan for long-term practitioners and dedicated students of the Dharma.",
@@ -71,14 +70,6 @@ const sections: Section[] = [
                 tiers: { Community: true, Standard: true, Patron: true },
             },
             {
-                name: "Historical Timelines",
-                tooltip: {
-                    title: "Historical Timelines",
-                    description: "Visual access to historical timelines for all traditions",
-                },
-                tiers: { Community: true, Standard: true, Patron: true },
-            },
-            {
                 name: "Learning Paths in the public domain",
                 tooltip: {
                     title: "Full access to all learning materials",
@@ -91,6 +82,14 @@ const sections: Section[] = [
                 tooltip: {
                     title: "Access to learning paths by commercial partners",
                     description: "This includes the learning paths that are created and licensed by our commercial partners.",
+                },
+                tiers: { Community: false, Standard: true, Patron: true },
+            },
+                        {
+                name: "Historical Timelines and Visualizations",
+                tooltip: {
+                    title: "Historical Timelines",
+                    description: "Visual access to historical timelines for all traditions and rich educational illustrations and curated graphics.",
                 },
                 tiers: { Community: false, Standard: true, Patron: true },
             },

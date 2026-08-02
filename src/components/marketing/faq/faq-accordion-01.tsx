@@ -39,7 +39,7 @@ const faqsExtended = [
     },
     {
         question: "Do you offer yearly billing?",
-        answer: "Yes. We offer both monthly and yearly billing for paid plans. Yearly billing is a convenient way to support the platform over a full year offering a 20% discount over the monthly subscription. We intentionally keep pricing straightforward, so users can choose the billing option that fits their situation without pressure or penalties.",
+        answer: "Yes. We offer both monthly and yearly billing for paid plans. Yearly billing is a convenient way to support the platform over a full year, offering a 20% discount of the monthly subscription. We intentionally keep pricing straightforward, so users can choose the billing option that fits their situation without pressure or penalties.",
         icon: Mail01,
     },
     {
@@ -48,7 +48,7 @@ const faqsExtended = [
         icon: Mail01,
     },
     {
-        question: "Do you charge for scriptural footnotes, cross-references, or other publisher-supplied metadata?",
+        question: "Do you charge for scriptural footnotes, cross-references, or other addon features?",
         answer: "No. For any Scripture version that includes footnotes, cross-references, or other publisher-supplied study metadata, that information is made freely available to all users directly within the reader view. This applies to all anonymous users worldwide regardless of registration or subscription status. Optional subscriptions do not restrict or modify basic access to this material at the bottom of each chapter. Paid plans may unlock additional tools that make it easier to view, navigate, study, or reference this information alongside the Scriptural texts, but the underlying content itself remains freely accessible to everyone.",
         icon: Mail01,
     },
@@ -78,7 +78,7 @@ export const FAQAccordion01 = () => {
                                         onClick={() => handleToggle(index)}
                                         className="flex w-full cursor-pointer items-start justify-between gap-2 rounded-md text-left outline-focus-ring select-none focus-visible:outline-2 focus-visible:outline-offset-2 md:gap-6"
                                     >
-                                        <span className="text-lg font-medium text-primary">{faq.question}</span>
+                                        <span className="text-xl font-medium text-primary">{faq.question}</span>
 
                                         <span aria-hidden="true" className="mt-0.5 flex size-5 items-center text-fg-brand-primary">
                                             <svg

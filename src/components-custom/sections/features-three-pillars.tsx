@@ -76,7 +76,7 @@ export const FeaturesThreePillars = () => {
 
                             {/* Light mode image (hidden in dark mode) */}
                             <Image
-                                alt="Scripture mockup showing Collections interface"
+                                alt="Screenshot of the Theravada tradition interface"
                                 src="/theravada-tradition-light-mode-912px.webp"
                                 className="size-full object-cover lg:w-auto lg:max-w-none dark:hidden"
                                 width={912}
@@ -85,7 +85,7 @@ export const FeaturesThreePillars = () => {
                             />
                             {/* Dark mode image (hidden in light mode) */}
                             <Image
-                                alt="Dashboard mockup showing application interface"
+                                alt="Screenshot of the Theravada tradition interface"
                                 src="/theravada-tradition-light-mode-912px.webp"
                                 className="size-full object-contain not-dark:hidden lg:w-auto lg:max-w-none"
                                 width={912}

@@ -92,9 +92,9 @@ export const FooterLarge10 = () => {
             key: "legal",
             label: t("categories.legal"),
             items: [
-                { label: t("links.legal.terms"), href: "#" },
-                { label: t("links.legal.privacy"), href: "#" },
-                { label: t("links.legal.cookies"), href: "#" },
+                { label: t("links.legal.terms"), href: "" },
+                { label: t("links.legal.privacy"), href: "" },
+                { label: t("links.legal.cookies"), href: "" },
                 { label: t("links.legal.affiliations"), href: "/affiliations-and-attributions" },
             ],
         },

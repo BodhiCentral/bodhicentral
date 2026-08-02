@@ -157,11 +157,11 @@ export const HomeScreen = () => {
                         <span className="stat-label">Canonical Traditions</span>
                     </div>
                     <div className="stat-item">
-                        <span className="stat-num">6+</span>
+                        <span className="stat-num">8+</span>
                         <span className="stat-label">Paths of Study & Practice</span>
                     </div>
                     <div className="stat-item">
-                        <span className="stat-num">∞</span>
+                        <span className="stat-num">30,000+</span>
                         <span className="stat-label">Open to Seekers</span>
                     </div>
                 </div>
