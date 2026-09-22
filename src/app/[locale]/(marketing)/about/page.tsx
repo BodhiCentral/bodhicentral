@@ -1,4 +1,3 @@
-import { ArrowRight } from "@untitledui/icons";
 import Image from "next/image";
 import { CTACenteredPlansSignupFeaturedBgImage } from "@/components-custom/sections/cta-centered-plans-signup-featured-bg-image";
 import { Button } from "@/components/base/buttons/button";
@@ -60,9 +59,9 @@ export default function AboutPage() {
                         One reading environment for the Buddhist canon, with the texts in their own languages beside modern translations.
                     </p>
                     <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
-                        At our first public release that means **the Pali Canon and the Tibetan Canon — the Degé Kangyur and Tengyur**. The Chinese Canon is
-                        designed into the same structure, and it is a horizon of years rather than months. We would rather say so plainly than let a roadmap
-                        read as a promise.
+                        At our first public release that means <strong>the Pali Canon and the Tibetan Canon — the Degé Kangyur and Tengyur</strong>. The
+                        Chinese Canon is designed into the same structure, and it is a horizon of years rather than months. We would rather say so plainly than
+                        let a roadmap read as a promise.
                     </p>
                     <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
                         Around the texts sits everything that makes close reading possible: alignment between a root text and its translations, passage by
@@ -95,9 +94,9 @@ export default function AboutPage() {
                         of what makes the rest worth trusting.
                     </p>
                     <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
-                        Neutrality is lost in small places — which canon opens first, which translation sits at the top of a page, whether a word is spelled
-                        *sutta*, *sūtra* or *sutra*. We treat those as editorial decisions with consequences, taken once and applied consistently, rather than
-                        as defaults that nobody chose.
+                        Neutrality is lost in small places — which canon opens first, which translation sits at the top of a page, whether a word is spelled{" "}
+                        <em>sutta</em>, <em>sūtra</em> or <em>sutra</em>. We treat those as editorial decisions with consequences, taken once and applied
+                        consistently, rather than as defaults that nobody chose.
                     </p>
                 </div>
             </section>
@@ -130,9 +129,9 @@ export default function AboutPage() {
                         A digital canon is only as good as what it can tell you about itself.
                     </p>
                     <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
-                        Every text we publish carries two records. A **rights record**: what the source is, under what licence, and what we are permitted to do
-                        with it. And a **provenance record**: who made this rendering and from what, by what method, who edited it, who reviewed it for
-                        doctrinal accuracy, and who put their name to publishing it. Not a team, not a role — a person.
+                        Every text we publish carries two records. A <strong>rights record</strong>: what the source is, under what licence, and what we are
+                        permitted to do with it. And a <strong>provenance record</strong>: who made this rendering and from what, by what method, who edited
+                        it, who reviewed it for doctrinal accuracy, and who put their name to publishing it. Not a team, not a role — a person.
                     </p>
                     <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
                         Machine assistance is part of how a canon this size reaches the readers who need it, and we would far rather show you that than hide it.
@@ -161,12 +160,14 @@ export default function AboutPage() {
                         funder periodically. That a livelihood can be both profitable and ethical is not a modern accommodation. It is Right Livelihood, held in
                         common by every tradition this platform serves, and we would rather be judged by it than invoke it.
                     </p>
-                    <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">So the boundary is a single rule: **texts free, tools paid.**</p>
+                    <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
+                        So the boundary is a single rule: <strong>texts free, tools paid.</strong>
+                    </p>
                     <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
                         Everything we publish is free to read — the canon, its translations, footnotes, cross-references, essays, timelines and Learning Paths.
-                        A subscription pays for the tools you study *with*: notes and highlights, categorised bookmarks, a personal library and workspaces,
-                        advanced search, and synchronised reading where a recording exists. Prices are published, they are the same for everyone in a region,
-                        and they are set to what people in that region can actually pay rather than to what a market will bear.
+                        A subscription pays for the tools you study <em>with</em>: notes and highlights, categorised bookmarks, a personal library and
+                        workspaces, advanced search, and synchronised reading where a recording exists. Prices are published, they are the same for everyone in
+                        a region, and they are set to what people in that region can actually pay rather than to what a market will bear.
                     </p>
                     <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
                         Patron is a supporter tier and we sell it as one. It pays for translation and editorial work on a corpus that stays free for everyone.
@@ -216,10 +217,10 @@ export default function AboutPage() {
                         and your library saved. Everything else can wait until you have read something.
                     </p>
                     <div className="mt-8 flex flex-col-reverse gap-3 self-stretch py-10 md:mt-8 md:flex-row md:self-center">
-                        <Button href="/reader" iconTrailing={ArrowRight} size="lg">
+                        <Button href="/reader" size="lg">
                             Start reading
                         </Button>
-                        <Button href="/plans" iconTrailing={ArrowRight} size="lg">
+                        <Button href="/plans" size="lg">
                             What a subscription includes
                         </Button>
                     </div>
