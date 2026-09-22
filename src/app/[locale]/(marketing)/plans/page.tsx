@@ -1,23 +1,17 @@
 "use client";
 
 import { type FC, type ReactNode, useState } from "react";
-import {
-    BookOpen01,
-    GraduationHat02,
-    ArrowRight,
-    CheckCircle,
-    File05,
-} from "@untitledui/icons";
+import { ArrowRight, BookOpen01, CheckCircle, File05, GraduationHat02 } from "@untitledui/icons";
+import Image from "next/image";
+import posthog from "posthog-js";
+import { CTACenteredPlansSignupFeaturedBgImage } from "@/components-custom/sections/cta-centered-plans-signup-featured-bg-image";
+import PlanFeaturesTable from "@/components-custom/sections/plan-features-table";
 import { TabList, Tabs } from "@/components/application/tabs/tabs";
 import { Button } from "@/components/base/buttons/button";
 import { VideoPlayer } from "@/components/base/video-player/video-player";
 import { FeaturedIcon } from "@/components/foundations/featured-icon/featured-icon";
-import { cx } from "@/utils/cx";
-import { CTACenteredPlansSignupFeaturedBgImage } from "@/components-custom/sections/cta-centered-plans-signup-featured-bg-image";
-import PlanFeaturesTable from "@/components-custom/sections/plan-features-table";
 import { FAQAccordion01 } from "@/components/marketing/faq/faq-accordion-01";
-import Image from "next/image";
-import posthog from "posthog-js";
+import { cx } from "@/utils/cx";
 
 const CheckItemText = (props: {
     size?: "sm" | "md" | "lg" | "xl";
@@ -100,7 +94,13 @@ const PricingTierCardBanner = (props: {
     shadow?: string;
 }) => {
     return (
-        <div className={cx("flex flex-col overflow-hidden h-full rounded-2xl bg-white dark:bg-muted-900 ring-1 ring-secondary_alt", props.shadow, props.className)}>
+        <div
+            className={cx(
+                "flex h-full flex-col overflow-hidden rounded-2xl bg-white ring-1 ring-secondary_alt dark:bg-muted-900",
+                props.shadow,
+                props.className,
+            )}
+        >
             {props.banner && (
                 <div className="w-full bg-brand-300 px-2 py-3 text-center">
                     <p className="text-sm font-semibold text-black">{props.banner}</p>
@@ -110,16 +110,14 @@ const PricingTierCardBanner = (props: {
             <div>
                 <div className="flex flex-col items-center px-6 pt-6 text-center">
                     <h2 className="text-3xl font-light text-brand-secondary">{props.title}</h2>
-                    <p className="text-display-md font-medium tracking-wide text-primary md:text-display-lg pt-2">{props.subtitle}</p>
+                    <p className="pt-2 text-display-md font-medium tracking-wide text-primary md:text-display-lg">{props.subtitle}</p>
 
                     <p className="mt-1 text-md text-tertiary">{props.description}</p>
                 </div>
                 <div className="flex flex-col gap-3 px-6 py-6 md:px-8">
-                    <Button
-                        href={props.firstActionHref}
-                        size="xl"
-                        onPress={() => posthog.capture("plan_get_started_clicked", { plan: props.title })}
-                    >{props.firstAction}</Button>
+                    <Button href={props.firstActionHref} size="xl" onPress={() => posthog.capture("plan_get_started_clicked", { plan: props.title })}>
+                        {props.firstAction}
+                    </Button>
                     {props.secondAction && (
                         <Button className="hidden" href={props.secondActionHref} color="secondary" size="xl">
                             {props.secondAction}
@@ -132,8 +130,6 @@ const PricingTierCardBanner = (props: {
                         <CheckItemText key={feat} iconStyle="outlined" color="success" text={feat} />
                     ))}
                 </ul>
-
-
             </div>
         </div>
     );
@@ -146,24 +142,21 @@ const PricingSimpleBanner = () => {
         {
             title: "COMMUNITY",
             subtitle: selectedPlan === "monthly" ? "Free" : "Free",
-            description: "Account personalization and community features.",
-            firstAction: "Get started",
+            description:
+                "An account, and what an account is for. Your place is kept in whatever you are reading, the texts you save are there on every device you read on, and your reading and display settings follow you.</br>Nothing is taken away from you to make this tier. It is the whole platform, with somewhere to put your own reading.",
+            firstAction: "Create a free account",
             firstActionHref: "/sign-up",
             secondAction: "Have questions?",
             secondActionHref: "",
             shadow: "",
-            features: [
-                "Canon preferences",
-                "Reading & display settings",
-                "Canon navigation and collections",
-                "Directories of communities and centers",
-            ],
+            features: ["Canon preferences", "Reading & display settings", "Canon navigation and collections", "Directories of Study Institutions"],
         },
         {
             title: "STANDARD",
             subtitle: selectedPlan === "monthly" ? "$4/month" : "$40/year",
-            description: "Daily and advanced study tools for personal engagement.",
-            firstAction: "Get started",
+            description:
+                "The tools you study with. Notes and highlights on any passage, categorised bookmarks, a personal library and workspaces of your own, advanced search and filtering, the study tools over a timeline, and reading synchronised to media wherever a recording exists.",
+            firstAction: "Start with Standard",
             firstActionHref: "/sign-up",
             secondAction: "Have questions?",
             secondActionHref: "",
@@ -185,8 +178,9 @@ const PricingSimpleBanner = () => {
         {
             title: "PATRON",
             subtitle: selectedPlan === "monthly" ? "$15/month" : "$150/year",
-            description: "Support BodhiCentral's mission and help fund ongoing development.",
-            firstAction: "Get started",
+            description:
+                "Support, with a receipt. Patron unlocks no study tool that Standard does not already have, and we would rather say so than invent one. What it does is pay for translation and editorial work on a corpus that stays free for everyone. In return: early access to new texts and features, your name on the supporters page if you want it there, and a written account, once a year, of what your support paid for.",
+            firstAction: "Become a Patron",
             firstActionHref: "/sign-up",
             secondAction: "Have questions?",
             secondActionHref: "",
@@ -196,7 +190,6 @@ const PricingSimpleBanner = () => {
                 "Early access to experimental and pre-release features and new tools before general availability",
                 "Helps fund licensing, infrastructure, and development",
                 "Patron-exclusive digital gifts (when available)",
-
             ],
         },
     ];
@@ -205,10 +198,34 @@ const PricingSimpleBanner = () => {
         <section className="relative bg-utility-neutral-100 pt-20 pb-16 md:pt-28 md:pb-20">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
-                    <h1 className="text-display-md font-extralight text-brand-800 dark:text-brand-400 md:text-display-2xl">Start free. Upgrade to unlock advanced study tools.</h1>
+                    <h1 className="text-display-md font-extralight text-brand-800 md:text-display-2xl dark:text-brand-400">Texts free, tools paid.</h1>
                     <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
-                        Bodhi Central provides access to Scripture worldwide and for everyone. No account required. Optional subscriptions unlock advanced study tools.
+                        Everything Bodhi Central publishes is free to read — the canon, its translations, the footnotes and cross-references a text carries,
+                        essays, timelines and Learning Paths. Most of it needs no account at all. A subscription pays for the tools you study{" "}
+                        <strong>with</strong>, and for nothing else.
                     </p>
+                    <section className="mx-auto w-3xl px-4 md:px-8">
+                        <div className="mx-auto flex flex-col">
+                            <h2 className="text-display-md font-extralight text-brand-800 md:text-display-lg dark:text-brand-400">What you never pay for</h2>
+                            <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
+                                The canon, in its own languages and in every translation we publish. The footnotes, variant readings and cross-references a text
+                                carries — those are part of the text rather than an addition to it, and they are free to everyone, account or no account.
+                                Essays, news and Learning Paths. Published timelines, including *Traditions at a Glance*. Search across all of it.
+                            </p>
+                            <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
+                                None of this sits behind a price now and none of it will later. A text's licence decides whether we are able to publish it at
+                                all; it never decides which tier it lands in. That is why nothing on this page sells something we published, and why no
+                                agreement we sign in future can move a line on it.
+                            </p>
+                        </div>
+                    </section>
+                    <section className="mx-auto w-3xl px-4 md:px-8">
+                        <div className="mx-auto flex flex-col">
+                            <h2 className="text-display-md font-extralight text-brand-800 md:text-display-lg dark:text-brand-400">
+                                Three ways to use Bodhi Central
+                            </h2>
+                        </div>
+                    </section>
                     <Tabs
                         selectedKey={selectedPlan}
                         onSelectionChange={(item) => {
@@ -229,7 +246,7 @@ const PricingSimpleBanner = () => {
                     </Tabs>
                 </div>
 
-                <div className="mt-8 grid w-full grid-cols-1 items-start  gap-4 md:mt-10 md:grid-cols-2 md:gap-10 xl:grid-cols-3">
+                <div className="mt-8 grid w-full grid-cols-1 items-start gap-4 md:mt-10 md:grid-cols-2 md:gap-10 xl:grid-cols-3">
                     {plans.map((plan) => (
                         <PricingTierCardBanner key={plan.title} {...plan} />
                     ))}
@@ -278,7 +295,9 @@ const FeaturesCenterMockup01 = () => {
         <section id="features" className="bg-primary py-16 md:pb-24">
             <div className="mx-auto w-full max-w-container px-4 md:px-8">
                 <div className="mx-auto flex w-full max-w-4xl flex-col items-center text-center">
-                    <h2 className="mt-4 text-display-md font-extralight text-brand-800 dark:text-brand-500 md:text-display-lg">Connecting scriptures, education, and transmissions of the awakening.</h2>
+                    <h2 className="mt-4 text-display-md font-extralight text-brand-800 md:text-display-lg dark:text-brand-500">
+                        Connecting scriptures, education, and transmissions of the awakening.
+                    </h2>
                 </div>
 
                 <div className="mt-12 flex flex-col gap-12 md:mt-14 md:gap-20 lg:items-center">
@@ -310,22 +329,23 @@ const FeaturesCenterMockup01 = () => {
                         {[
                             {
                                 title: "Sources of Wisdom",
-                                subtitle: "A comprehensive collection of illuminating sources, sutras and commentaries from genuine streams of Buddhist transmissions.",
+                                subtitle:
+                                    "A comprehensive collection of illuminating sources, sutras and commentaries from genuine streams of Buddhist transmissions.",
                                 icon: BookOpen01,
                                 cta: "Explore now",
                                 href: "/scriptures/collections",
                             },
                             {
                                 title: "Paths of Learning",
-                                subtitle: "Clear paths for every stage of your journey, from the fundamentals to advanced topics, accompanied by guided practices.",
+                                subtitle:
+                                    "Clear paths for every stage of your journey, from the fundamentals to advanced topics, accompanied by guided practices.",
                                 icon: GraduationHat02,
                                 cta: "Explore now",
                                 href: "/learning-paths",
                             },
                             {
                                 title: "Community & resources",
-                                subtitle:
-                                    "Tools and solutions to expand your learnings: directories, blogs, forums, and detailed documentation.",
+                                subtitle: "Tools and solutions to expand your learnings: directories, blogs, forums, and detailed documentation.",
                                 icon: File05,
                                 cta: "Explore now",
                                 href: "/resources",
@@ -370,14 +390,17 @@ const FeatureTextFeaturedIconLeft = ({ icon, title, subtitle, footer }: FeatureT
 const FeaturesIconsAndImage03 = () => {
     return (
         <section className="bg-primary">
-            <div className="bg-warm-off-400 dark:bg-warm-off-950 pt-16 pb-28 md:pt-24 md:pb-40">
+            <div className="bg-warm-off-400 pt-16 pb-28 md:pt-24 md:pb-40 dark:bg-warm-off-950">
                 <div className="mx-auto grid w-full max-w-container grid-cols-1 gap-12 px-4 md:gap-16 md:px-8 lg:grid-cols-2 lg:gap-24">
                     <div className="flex w-full flex-col">
-                        <span className="text-sm font-light text-brand-600 dark:text-brand-700 md:text-md">Our Approach</span>
+                        <span className="text-sm font-light text-brand-600 md:text-md dark:text-brand-700">Our Approach</span>
 
-                        <h2 className="mt-3 text-display-md font-light text-brand-800 dark:text-brand-500 md:text-display-lg">The intersection of readership, education, and community</h2>
+                        <h2 className="mt-3 text-display-md font-light text-brand-800 md:text-display-lg dark:text-brand-500">
+                            The intersection of readership, education, and community
+                        </h2>
                         <p className="mt-4 text-lg font-light text-tertiary md:mt-5 md:text-xl">
-                            Envisioning a platform that leverages modern and practical experiences with the best of readership and education, at the service of communities and the living transmissions of the awakening.
+                            Envisioning a platform that leverages modern and practical experiences with the best of readership and education, at the service of
+                            communities and the living transmissions of the awakening.
                         </p>
                     </div>
 

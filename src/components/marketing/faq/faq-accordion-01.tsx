@@ -8,48 +8,48 @@ import { StillHaveQuestions } from "./still-have-questions-01";
 
 const faqsExtended = [
     {
-        question: "What is included in the Community free plan?",
-        answer: "Anyone can read the Bodhi Central scriptures for free — no account or subscription required. Free access includes: Reading all available canon traditions, navigating the canon with intuitive browsing experiences, and reading display settings. Creating a Community free account is optional and only required to save personal preferences.",
+        question: "Do I need an account to read?",
+        answer: "No. Every text we publish, everything published around it, and search across all of it work without an account. An account is for keeping your own reading.",
         icon: Heart,
     },
     {
-        question: "What do I get by creating a free account?",
-        answer: "A free account lets you personalize your experience across devices, including: Preferred canon galleries, font settings, light and dark mode selectors, default reading layout, and theme preferences. Creating a free account does not change which canon texts you can access — it simply lets Bodhi Central remember how you prefer to study.",
+        question: "What does a free account add?",
+        answer: "Your place in whatever you are reading, the texts you save, and your reading and display settings — on every device you sign in on. Nothing about what you can read changes.",
         icon: SwitchHorizontal01,
     },
     {
-        question: "Why does Bodhi Central charge for some features?",
-        answer: "Bodhi Central provides free access to Buddhist scripture worldwide, but operating the platform is not free. Optional subscriptions unlock advanced study tools that support deeper, more efficient study — while also sustaining the platform long-term. Paid plans focus on capabilities such as organization, analysis, and original-language tools, while the core canonical reading remains freely available to everyone.",
+        question: "Do you charge for footnotes, cross-references or a text's apparatus?",
+        answer: "No. Where a text carries footnotes, variant readings, cross-references or an apparatus of its own, those are part of the text and are free to every reader, signed in or not. Paid tools can help you search and organise your own work across them; the material itself is never behind a price.",
         icon: SlashCircle01,
     },
     {
-        question: "Does Bodhi Central charge for access to the scripture itself?",
-        answer: "No. We do not charge for access to any Buddhist scripture. All available Canon traditions remain freely accessible, without paywalls or subscriptions. Subscriptions apply only to optional study tools and advanced features, not scripture.",
+        question: "What does Standard actually unlock?",
+        answer: "The tools you use on a text rather than anything in the text: notes and highlights, categorised bookmarks, a personal library and workspaces, advanced search and filtering, the study tools over a timeline, and reading synchronised to audio wherever a recording exists.",
         icon: File05,
     },
     {
-        question: "What is included in the Standard plan?",
-        answer: "The Standard plan is designed for personal Buddhist study over time — helping you organize notes, highlights, and observations as you read and study regularly. It is also designed for deeper research — adding advanced research, cross-reference navigation, and original-language study tools. You can upgrade, downgrade, or cancel at any time.",
+        question: "Can I change or cancel at any time?",
+        answer: "Yes. Upgrades take effect immediately. Downgrades and cancellations take effect at the end of the period you have already paid for, and you keep what you paid for until then.",
         icon: CreditCardRefresh,
     },
     {
-        question: "Can I upgrade, downgrade, or cancel anytime?",
-        answer: "Yes, you can change your plan at any time. Upgrades take effect immediately, unlocking additional features. Downgrades or cancellations take effect at the end of your current billing period, maintaining your access to the features you already paid for.",
+        question: "Do prices differ by country?",
+        answer: "Yes. Prices are published and are the same for everyone in a region, and in lower-income regions they are set lower — to what people there can reasonably pay rather than to what the market would bear. The price you see is the one for where you are.",
         icon: Mail01,
     },
     {
-        question: "Do you offer yearly billing?",
-        answer: "Yes. We offer both monthly and yearly billing for paid plans. Yearly billing is a convenient way to support the platform over a full year, offering a 20% discount of the monthly subscription. We intentionally keep pricing straightforward, so users can choose the billing option that fits their situation without pressure or penalties.",
+        question: "Why is there a Patron tier if it unlocks nothing extra?",
+        answer: "Because it is not a product tier. It pays for translation and editorial work on a corpus that stays free, and once a year we publish an account of what it funded. If it unlocked study tools it would be a purchase rather than support, and we would rather it stayed support.",
         icon: Mail01,
     },
     {
-        question: "What happens to my notes and highlights if I cancel?",
-        answer: "Your study data is not deleted when you cancel, unless you specifically request that we delete your account data through our Contact Us page. If you downgrade or cancel a paid plan, your notes, highlights, and bookmarks remain saved, but access to certain advanced tools may be limited based on your plan. For more details, see our official Privacy Policy.",
+        question: "Why does a Buddhist platform charge at all?",
+        answer: "Because a corpus that has to be here in twenty years is hard to promise on an annual appeal. We are a for-profit company doing work this field has usually funded by donation, and we think a company that earns its keep from the people it serves answers to them more continuously than to a funder. The full reasoning, and the commitments that make it checkable, are on our About page.",
         icon: Mail01,
     },
     {
-        question: "Do you charge for scriptural footnotes, cross-references, or other addon features?",
-        answer: "No. For any Scripture version that includes footnotes, cross-references, or other publisher-supplied study metadata, that information is made freely available to all users directly within the reader view. This applies to all anonymous users worldwide regardless of registration or subscription status. Optional subscriptions do not restrict or modify basic access to this material at the bottom of each chapter. Paid plans may unlock additional tools that make it easier to view, navigate, study, or reference this information alongside the Scriptural texts, but the underlying content itself remains freely accessible to everyone.",
+        question: "What happens to my notes and highlights if I stop paying?",
+        answer: "*Pending — see §8, question 1. This answer states a data-retention commitment and no document in the set owns one yet.*",
         icon: Mail01,
     },
 ];
@@ -63,10 +63,10 @@ export const FAQAccordion01 = () => {
     };
 
     return (
-        <section className="bg-warm-off-300 dark:bg-warm-off-950 py-16 md:py-20">
+        <section className="bg-warm-off-300 py-16 md:py-20 dark:bg-warm-off-950">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
-                    <h2 className="text-display-md font-extralight text-brand-800 dark:text-brand-400 md:text-display-xl">Your Questions, Answered</h2>
+                    <h2 className="text-display-md font-extralight text-brand-800 md:text-display-xl dark:text-brand-400">Your Questions, Answered</h2>
                 </div>
 
                 <div className="mx-auto mt-12 max-w-3xl md:mt-16">
