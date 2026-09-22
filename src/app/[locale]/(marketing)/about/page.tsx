@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { CTACenteredPlansSignupFeaturedBgImage } from "@/components-custom/sections/cta-centered-plans-signup-featured-bg-image";
+import { Button } from "@/components/base/buttons/button";
 
 export default function AboutPage() {
     return (
@@ -145,7 +146,7 @@ export default function AboutPage() {
                     </p>
                 </div>
             </section>
-            <section className="mx-auto w-3xl px-4 pb-20 md:px-8">
+            <section className="mx-auto w-3xl px-4 md:px-8">
                 <div className="mx-auto flex w-full flex-col">
                     <h2 className="text-display-md font-extralight text-brand-800 md:text-display-lg dark:text-brand-400">How this is paid for</h2>
                     <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
@@ -170,29 +171,6 @@ export default function AboutPage() {
                         Patron is a supporter tier and we sell it as one. It pays for translation and editorial work on a corpus that stays free for everyone.
                         It unlocks no study tool that Standard does not already have, and once a year we publish a written account of what it funded. A company
                         asking for support above the price of its own product owes that account.
-                    </p>
-
-                    <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
-                        As part of our commitment to users, we actively uphold strict standards and protocols to protect our data and infrastructure. For more
-                        details about the measures we take to protect your privacy, your data, your rights and the intellectual property we feature on our
-                        website, please see our{" "}
-                        <a href="/terms-of-use" className="hover:text-brand-tertiary-hover text-brand-tertiary">
-                            Terms of Use
-                        </a>{" "}
-                        &{" "}
-                        <a href="/privacy-policy" className="hover:text-brand-tertiary-hover text-brand-tertiary">
-                            Privacy Policy
-                        </a>
-                        .
-                    </p>
-                    <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
-                        Thank you for your interest in Bodhi Central. We look forward to providing you with groundbreaking features to enrich your Buddhist
-                        study and help you through a lifelong journey of learning and discovery. Please subscribe to our YouTube channel and sign up for a free
-                        account on our site to get early access to new features. If you have any questions or feedback, feel free to{" "}
-                        <a href="/support#contact-us" className="hover:text-brand-tertiary-hover text-brand-tertiary">
-                            contact us
-                        </a>
-                        .
                     </p>
                 </div>
             </section>
@@ -229,14 +207,21 @@ export default function AboutPage() {
                     </p>
                 </div>
             </section>
-            <section className="mx-auto w-3xl px-4 md:px-8">
+            <section className="mx-auto w-3xl px-4 pb-20 md:px-8">
                 <div className="mx-auto flex flex-col">
                     <h2 className="text-display-md font-extralight text-brand-800 md:text-display-lg dark:text-brand-400">Begin anywhere</h2>
                     <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
                         The canon is open and most of it needs nothing from you — no account, no trial, no card. Make an account when you want your place kept
                         and your library saved. Everything else can wait until you have read something.
                     </p>
-                    <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">**[ Start reading ]** **[ What a subscription includes ]**</p>
+                    <div className="mt-8 flex flex-col-reverse gap-3 self-stretch py-10 md:mt-8 md:flex-row md:self-center">
+                        <Button href="/reader" iconTrailing={ArrowRight} size="lg">
+                            Start reading
+                        </Button>
+                        <Button href="/plans" iconTrailing={ArrowRight} size="lg">
+                            What a subscription includes
+                        </Button>
+                    </div>
                     <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
                         How we handle your data and the material we serve is set out in our{" "}
                         <a href="/terms-of-use" className="hover:text-brand-tertiary-hover text-brand-tertiary">
@@ -249,8 +234,8 @@ export default function AboutPage() {
                         . The projects, translators and reviewers whose work is here are named in our{" "}
                         <a href="/privacy-policy" className="hover:text-brand-tertiary-hover text-brand-tertiary">
                             Acknoledgements
-                        </a>
-                        *
+                        </a>{" "}
+                        page.
                     </p>
                 </div>
             </section>
