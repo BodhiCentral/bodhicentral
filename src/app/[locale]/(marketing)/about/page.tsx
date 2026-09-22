@@ -1,3 +1,4 @@
+import { ArrowRight } from "@untitledui/icons";
 import Image from "next/image";
 import { CTACenteredPlansSignupFeaturedBgImage } from "@/components-custom/sections/cta-centered-plans-signup-featured-bg-image";
 import { Button } from "@/components/base/buttons/button";
