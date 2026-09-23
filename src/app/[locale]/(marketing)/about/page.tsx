@@ -59,9 +59,9 @@ export default function AboutPage() {
                         One reading environment for the Buddhist canon, with the texts in their own languages beside modern translations.
                     </p>
                     <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
-                        At our first public release that means <strong>the Pali Canon and the Tibetan Canon — the Degé Kangyur and Tengyur</strong>. The
-                        Chinese Canon is designed into the same structure, and it is a horizon of years rather than months. We would rather say so plainly than
-                        let a roadmap read as a promise.
+                        At our first public release that means <strong>the Pali Canon and the Tibetan Canon — the Degé Kangyur and Tengyur</strong>. The Chinese
+                        Canon is designed into the same structure, and it is a horizon of years rather than months. We would rather say so plainly than let a
+                        roadmap read as a promise.
                     </p>
                     <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
                         Around the texts sits everything that makes close reading possible: alignment between a root text and its translations, passage by
@@ -130,8 +130,8 @@ export default function AboutPage() {
                     </p>
                     <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
                         Every text we publish carries two records. A <strong>rights record</strong>: what the source is, under what licence, and what we are
-                        permitted to do with it. And a <strong>provenance record</strong>: who made this rendering and from what, by what method, who edited
-                        it, who reviewed it for doctrinal accuracy, and who put their name to publishing it. Not a team, not a role — a person.
+                        permitted to do with it. And a <strong>provenance record</strong>: who made this rendering and from what, by what method, who edited it,
+                        who reviewed it for doctrinal accuracy, and who put their name to publishing it. Not a team, not a role — a person.
                     </p>
                     <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
                         Machine assistance is part of how a canon this size reaches the readers who need it, and we would far rather show you that than hide it.
@@ -235,7 +235,7 @@ export default function AboutPage() {
                         </a>
                         . The projects, translators and reviewers whose work is here are named in our{" "}
                         <a href="/privacy-policy" className="hover:text-brand-tertiary-hover text-brand-tertiary">
-                            Acknoledgements
+                            Acknowledgements
                         </a>{" "}
                         page.
                     </p>
