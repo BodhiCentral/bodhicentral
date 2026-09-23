@@ -66,12 +66,12 @@ export default function AboutPage() {
                     <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
                         Around the texts sits everything that makes close reading possible: alignment between a root text and its translations, passage by
                         passage; footnotes and variant readings carried with the text rather than flattened out of it; cross-references between parallel
-                        passages across canons; catalogue identifiers mapped between the schemes scholars actually cite; and audio synchronised to the text
-                        wherever a recording exists.
+                        passages across canons; catalogue identifiers mapped between the schemes scholars actually cite; and multimedia synchronised to the text
+                        wherever a recording or asset exists.
                     </p>
                     <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
-                        The interface runs in English, Spanish, Thai, Traditional Chinese and Tibetan. Translating the canon itself is a separate and far slower
-                        undertaking, done by named translators rather than by interface tooling — and we keep the two clearly apart.
+                        The interface runs in English, Spanish, Traditional Chinese, Tibetan, and Thai. Translating the canon itself is a separate and far
+                        slower undertaking, done by named translators rather than by interface tooling — and we keep the two clearly apart.
                     </p>
                     <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
                         Alongside the reader are Learning Paths, curated routes through the material for readers who do not yet know where to begin, and
