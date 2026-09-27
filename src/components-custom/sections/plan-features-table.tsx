@@ -7,22 +7,34 @@ import { Button } from "@/components/base/buttons/button";
 import { Tooltip, TooltipTrigger } from "@/components/base/tooltip/tooltip";
 import { cx } from "@/utils/cx";
 
-type Tier = { name: string; canChatToSales?: boolean; highlighted?: boolean; badge?: string; href?: string; priceMonthly: number; description: string };
+type Tier = {
+    name: string;
+    canChatToSales?: boolean;
+    highlighted?: boolean;
+    badge?: string;
+    href?: string;
+    priceMonthly: number;
+    description: string;
+    primaryAction: string;
+};
 
 const tiers: Tier[] = [
-    { name: "Community", href: "#", priceMonthly: 0, description: "Free account for individual practitioners and students of the Dharma." },
+    { name: "Not Signed In", href: "#", priceMonthly: 0, description: "Visitors without a Bodhi Central account.", primaryAction: "Begin anywhere" },
+    { name: "Community", href: "#", priceMonthly: 0, description: "Free account to keep your place and library.", primaryAction: "Create a free account" },
     {
         name: "Standard",
         highlighted: true,
         href: "#",
-        priceMonthly: 2,
-        description: "Low-cost plan for long-term practitioners and dedicated students of the Dharma.",
+        priceMonthly: 4,
+        description: "Tools for serious reading and learning.",
+        primaryAction: "Start with Standard",
     },
     {
         name: "Patron",
         href: "#",
-        priceMonthly: 10,
-        description: "For generous supporters of our mission and patrons of the Dharma.",
+        priceMonthly: 15,
+        description: "Supporters of our mission and patrons of the Dharma.",
+        primaryAction: "Become a Patron",
     },
 ];
 
@@ -30,84 +42,68 @@ type Section = { name: string; features: { name: string; tooltip: { title: strin
 
 const sections: Section[] = [
     {
-        name: "Personalization and preferences",
+        name: "Reading",
         features: [
             {
-                name: "Bodhi Central preferences",
+                name: "The canon — every text we have published, in every language we publish it in",
                 tooltip: {
-                    title: "Bodhi Central preferences",
-                    description: "Access to essential tools required to manage your workspace and start using the platform.",
+                    title: "The Canon",
+                    description: "The canon — every text we have published, in every language we publish it in",
                 },
-                tiers: { Community: true, Standard: true, Patron: true },
+                tiers: { "Not Signed In": true, Community: true, Standard: true, Patron: true },
             },
             {
-                name: "Reading & display settings",
+                name: "Footnotes, variant readings and cross-references, wherever a text carries them",
                 tooltip: {
-                    title: "Reading & display settings",
-                    description: "Manage your reading and display preferences, including font size, line spacing, and color options.",
+                    title: "Footnotes, variant readings and cross-references.",
+                    description: "Footnotes, variant readings and cross-references, wherever a text carries them",
                 },
-                tiers: { Community: true, Standard: true, Patron: true },
+                tiers: { "Not Signed In": true, Community: true, Standard: true, Patron: true },
+            },
+            {
+                name: "Essays, news and Learning Paths",
+                tooltip: {
+                    title: "Essays, news and Learning Paths browsing",
+                    description: "Essays, news and Learning Paths catalogue browsing",
+                },
+                tiers: { "Not Signed In": true, Community: true, Standard: true, Patron: true },
+            },
+            {
+                name: "Published timelines, including Traditions at a Glance",
+                tooltip: {
+                    title: "Published timelines",
+                    description: "Published timelines, including Traditions at a Glance",
+                },
+                tiers: { "Not Signed In": true, Community: true, Standard: true, Patron: true },
+            },
+            {
+                name: "Search",
+                tooltip: {
+                    title: "Search",
+                    description: "Search everything withing the canon and the public site.",
+                },
+                tiers: { "Not Signed In": true, Community: true, Standard: true, Patron: true },
             },
         ],
     },
     {
-        name: "Content features",
+        name: "Your Reading",
         features: [
             {
-                name: "Full Canon navigation",
+                name: "Your place kept, and the texts you save — Continue Reading, My Library",
                 tooltip: {
-                    title: "Canon navigation for all traditions",
-                    description: "Access to all canon traditions, with full navigation.",
+                    title: "Your place kept, and the texts you save",
+                    description: "Your place kept, and the texts you save — Continue Reading, My Library.",
                 },
                 tiers: { Community: true, Standard: true, Patron: true },
             },
             {
-                name: "Full access to all texts",
+                name: "My Spaces",
                 tooltip: {
-                    title: "Full access to all texts",
-                    description: "Access to all canon traditions, including pali, and tibetan texts.",
+                    title: "My Spaces",
+                    description: "Build your own workspaces and organize layouts the way you need.",
                 },
                 tiers: { Community: true, Standard: true, Patron: true },
-            },
-            {
-                name: "Learning Paths in the public domain",
-                tooltip: {
-                    title: "Full access to all learning materials",
-                    description: "Access to all learning paths and materials in the public domain",
-                },
-                tiers: { Community: true, Standard: true, Patron: true },
-            },
-            {
-                name: "Learning Paths licensed by commercial partners",
-                tooltip: {
-                    title: "Access to learning paths by commercial partners",
-                    description: "This includes the learning paths that are created and licensed by our commercial partners.",
-                },
-                tiers: { Community: false, Standard: true, Patron: true },
-            },
-                        {
-                name: "Historical Timelines",
-                tooltip: {
-                    title: "Historical Timelines",
-                    description: "Visual access to rich historical timelines for all traditions.",
-                },
-                tiers: { Community: false, Standard: true, Patron: true },
-            },
-            {
-                name: "Advanced Media synchronization",
-                tooltip: {
-                    title: "Advanced Media synchronization",
-                    description: "State-of-the-art multimedia experiences combining the best of scripture and education.",
-                },
-                tiers: { Community: false, Standard: true, Patron: true },
-            },
-            {
-                name: "Quizzes, infographics, and educational materials",
-                tooltip: {
-                    title: "Quizzes, infographics, and educational materials",
-                    description: "Curated educational materials produced by expert educators and qualified Buddhist teachers and instructors.",
-                },
-                tiers: { Community: false, Standard: true, Patron: true },
             },
         ],
     },
@@ -115,12 +111,12 @@ const sections: Section[] = [
         name: "Study tools for personal engagement.",
         features: [
             {
-                name: "Marginal notes",
+                name: "Notes and highlights",
                 tooltip: {
-                    title: "Marginal notes",
-                    description: "Add personal notes in the margin of the texts for quick reference.",
+                    title: "Notes and highlights",
+                    description: "Your personal notes anchored to text and color-coded highlights ",
                 },
-                tiers: { Community: false, Standard: true, Patron: true },
+                tiers: { "Not Signed In": false, Community: false, Standard: true, Patron: true },
             },
             {
                 name: "Categorized bookmarks",
@@ -131,119 +127,63 @@ const sections: Section[] = [
                 tiers: { Community: false, Standard: true, Patron: true },
             },
             {
-                name: "Multi-color highlights",
+                name: "A personal library and workspaces",
                 tooltip: {
-                    title: "Multi-color highlights",
-                    description: "Highlight the texts in different colors to organize them by categories.",
+                    title: "A personal library and workspaces",
+                    description: "Your personal library and workspaces to help your readings close to you and easy to retreive.",
                 },
                 tiers: { Community: false, Standard: true, Patron: true },
             },
             {
-                name: "Footnotes (where provided by the publisher)",
+                name: "Advanced search and filtering",
                 tooltip: {
-                    title: "Footnotes (where provided by the publisher)",
-                    description: "View in context footnotes and other publisher-supplied metadata where available.",
+                    title: "Advanced search and filtering",
+                    description: "Advanced search and filtering expanding navigational capabilitites.",
                 },
                 tiers: { Community: false, Standard: true, Patron: true },
             },
             {
-                name: "Cross-references (static lists)",
+                name: "Study tools over a timeline",
                 tooltip: {
-                    title: "Cross-references (static lists)",
-                    description: "View cross-references to other texts where available.",
+                    title: "Study tools over a timeline",
+                    description: "Study tools developed specifically to enhance your experience built over a timeline",
                 },
                 tiers: { Community: false, Standard: true, Patron: true },
             },
             {
-                name: "Textual apparatus",
+                name: "Reading synchronised to multimedia, wherever a recording or asset exists",
                 tooltip: {
-                    title: "Textual apparatus",
-                    description: "View textual apparatus to compare different versions of the texts.",
+                    title: "Reading synchronised to media",
+                    description: "Reading synchronised to multimedia, wherever a recording or asset exists.",
                 },
                 tiers: { Community: false, Standard: true, Patron: true },
-            },
-            {
-                name: "Beginner-friendly introductions to specific traditions",
-                tooltip: {
-                    title: "Beginner-friendly introductions to specific traditions",
-                    description: "Access guided introductions and foundational materials for specific Buddhist traditions and practices.",
-                },
-                tiers: { Community: false, Standard: true, Patron: true },
-            },
-            {
-                name: "Lexicon",
-                tooltip: {
-                    title: "Lexicon",
-                    description: "Access the lexicon to look up terms and definitions.",
-                },
-                tiers: { Community: false, Standard: true, Patron: true },
-            },
-            {
-                name: "Clickable cross-reference navigation",
-                tooltip: {
-                    title: "Clickable cross-reference navigation",
-                    description: "Clickable cross-reference navigation for easy access to related texts and verses.",
-                },
-                tiers: { Community: false, Standard: true, Patron: true },
-            },
-            {
-                name: "Open referenced passages in full context",
-                tooltip: {
-                    title: "Open referenced passages in full context",
-                    description: "Open referenced passages in full context (in addition to showing them inline where they appear).",
-                },
-                tiers: { Community: false, Standard: true, Patron: true },
-            },
-            {
-                name: "Advance Canon search",
-                tooltip: {
-                    title: "Advance Canon search",
-                    description: "Filter Canon texts by title, section, keyword, and more.",
-                },
-                tiers: { Community: false, Standard: true, Patron: true },
-            },
-            {
-                name: "Priority access to beta study tools",
-                tooltip: {
-                    title: "Priority access to beta study tools",
-                    description: "Get early access to new study tools before they are released to the public.",
-                },
-                tiers: { Community: false, Standard: false, Patron: true },
             },
         ],
     },
     {
-        name: "Support Bodhi Central's mission and ongoing development.",
+        name: "Support our mission",
         features: [
             {
-                name: "Early access to experimental features",
+                name: "Early access to new texts and features",
                 tooltip: {
                     title: "Early access",
-                    description: "Early access to experimental and pre-release features",
+                    description: "We will share with you early access to new texts and features coming to the platform.",
                 },
                 tiers: { Community: false, Standard: false, Patron: true },
             },
             {
-                name: "Preview new tools before general availability",
+                name: "Your name on the supporters page, if you want it there",
                 tooltip: {
-                    title: "Preview new tools",
-                    description: "Lorem ipsum",
+                    title: "Your name on the supporters page",
+                    description: "Your name will be listed on the supporters page, if you want it there.",
                 },
                 tiers: { Community: false, Standard: false, Patron: true },
             },
             {
-                name: "Supporter recognition in select YouTube content",
+                name: "A yearly written account of what your support paid for",
                 tooltip: {
-                    title: "Supporter recognition on Media",
-                    description: "With your Patron subscription, we are adding your name to all our Media presence.",
-                },
-                tiers: { Community: false, Standard: false, Patron: true },
-            },
-            {
-                name: "Helps fund licensing, infrasture, and development",
-                tooltip: {
-                    title: "Helps funding, infrastructure, and development",
-                    description: "Your generosity helps us move forward with our mission.",
+                    title: "A yearly written account",
+                    description: "You will receive a yearly written account of what your support paid for.",
                 },
                 tiers: { Community: false, Standard: false, Patron: true },
             },
@@ -256,8 +196,9 @@ const PricingLargeTable01 = () => {
         <section className="bg-utility-neutral-100">
             <div className="mx-auto max-w-container px-4 py-4 md:px-8 md:py-6">
                 <div className="mx-auto flex w-full flex-col items-center text-center">
-
-                    <h2 className="text-display-md font-extralight text-brand-800 dark:text-brand-400 md:text-display-lg self-start">Subscriptions and Features Overview</h2>
+                    <h2 className="self-start text-display-md font-extralight text-brand-800 md:text-display-lg dark:text-brand-400">
+                        Everything, side by side
+                    </h2>
                 </div>
             </div>
 
@@ -343,10 +284,12 @@ const PricingLargeTable01 = () => {
                                     <span className="sr-only">Feature by plans</span>
                                 </th>
                                 {tiers.map((tier) => (
-                                    <th key={tier.name} className="w-1/4 px-6 pt-2 pb-3 text-center text-display-xs uppercase font-light text-brand-700 border-b border-secondary" scope="col">
-                                        <h3 className="inline-flex items-center gap-2">
-                                            {tier.name}
-                                        </h3>
+                                    <th
+                                        key={tier.name}
+                                        className="w-1/5 border-b border-secondary px-6 pt-2 pb-3 text-center text-display-xs font-light text-brand-700 uppercase"
+                                        scope="col"
+                                    >
+                                        <h3 className="inline-flex items-center gap-2">{tier.name}</h3>
                                     </th>
                                 ))}
                             </tr>
@@ -357,7 +300,7 @@ const PricingLargeTable01 = () => {
                                 {tiers.map((tier) => (
                                     <td key={tier.name} className="h-full px-6 py-4 align-top md:pb-4">
                                         <div className="flex h-full flex-col justify-between">
-                                            <p className="mt-0.5 text-sm text-tertiary text-center">{tier.description}</p>
+                                            <p className="mt-0.5 text-center text-sm text-tertiary">{tier.description}</p>
                                         </div>
                                     </td>
                                 ))}
@@ -366,8 +309,11 @@ const PricingLargeTable01 = () => {
                                 <Fragment key={section.name}>
                                     <tr>
                                         <th
-                                            className={cx(index > 0 ? "pt-8" : "pt-8 border-t border-secondary", "px-6 pb-4 text-left text-md font-extrabold text-brand-600 tracking-wide bg-brand-50 dark:bg-muted-900 rounded-b-xl")}
-                                            colSpan={4}
+                                            className={cx(
+                                                index > 0 ? "pt-8" : "border-t border-secondary pt-8",
+                                                "rounded-b-xl bg-brand-50 px-6 pb-4 text-left text-lg font-extrabold tracking-wide text-brand-600 dark:bg-muted-900",
+                                            )}
+                                            colSpan={5}
                                             scope="colgroup"
                                         >
                                             {section.name}
@@ -423,7 +369,7 @@ const PricingLargeTable01 = () => {
                                 {tiers.map((tier) => (
                                     <td key={tier.name} className="px-6 pt-10 pb-4">
                                         <div className="flex flex-col gap-3">
-                                            <Button size="sm">Get started</Button>
+                                            <Button size="sm">{tier.primaryAction}</Button>
                                         </div>
                                     </td>
                                 ))}

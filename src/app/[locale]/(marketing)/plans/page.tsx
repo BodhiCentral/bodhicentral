@@ -96,7 +96,7 @@ const PricingTierCardBanner = (props: {
     return (
         <div
             className={cx(
-                "flex h-full flex-col overflow-hidden rounded-2xl bg-white ring-1 ring-secondary_alt dark:bg-muted-900",
+                "flex h-full flex-col overflow-hidden rounded-3xl bg-white ring-1 ring-secondary_alt dark:bg-muted-900",
                 props.shadow,
                 props.className,
             )}
@@ -112,19 +112,18 @@ const PricingTierCardBanner = (props: {
                     <h2 className="text-3xl font-light text-brand-secondary">{props.title}</h2>
                     <p className="pt-2 text-display-md font-medium tracking-wide text-primary md:text-display-lg">{props.subtitle}</p>
 
-                    <p className="mt-1 text-md text-tertiary">{props.description}</p>
+                    <p className="mt-4 text-md text-tertiary">{props.description}</p>
                 </div>
                 <div className="flex flex-col gap-3 px-6 py-6 md:px-8">
                     <Button href={props.firstActionHref} size="xl" onPress={() => posthog.capture("plan_get_started_clicked", { plan: props.title })}>
                         {props.firstAction}
                     </Button>
                     {props.secondAction && (
-                        <Button className="hidden" href={props.secondActionHref} color="secondary" size="xl">
+                        <Button className="" href={props.secondActionHref} color="secondary" size="xl">
                             {props.secondAction}
                         </Button>
                     )}
                 </div>
-                <p className="px-6 md:px-8">Includes:</p>
                 <ul className="flex flex-col gap-4 px-6 py-4 md:px-8 md:pb-8">
                     {props.features.map((feat) => (
                         <CheckItemText key={feat} iconStyle="outlined" color="success" text={feat} />
@@ -146,10 +145,10 @@ const PricingSimpleBanner = () => {
                 "An account, and what an account is for. Your place is kept in whatever you are reading, the texts you save are there on every device you read on, and your reading and display settings follow you.</br>Nothing is taken away from you to make this tier. It is the whole platform, with somewhere to put your own reading.",
             firstAction: "Create a free account",
             firstActionHref: "/sign-up",
-            secondAction: "Have questions?",
+            secondAction: "",
             secondActionHref: "",
             shadow: "",
-            features: ["Canon preferences", "Reading & display settings", "Canon navigation and collections", "Directories of Study Institutions"],
+            features: [],
         },
         {
             title: "STANDARD",
@@ -158,22 +157,10 @@ const PricingSimpleBanner = () => {
                 "The tools you study with. Notes and highlights on any passage, categorised bookmarks, a personal library and workspaces of your own, advanced search and filtering, the study tools over a timeline, and reading synchronised to media wherever a recording exists.",
             firstAction: "Start with Standard",
             firstActionHref: "/sign-up",
-            secondAction: "Have questions?",
+            secondAction: "",
             secondActionHref: "",
             shadow: "shadow-2xl shadow-ink-100 dark:shadow-ink-500",
-            features: [
-                "All COMMUNITY-tier features",
-                "Scripture & Media Synchronization",
-                "Personal library and workspaces",
-                "Advanced search with filtering",
-                "Timelines & visualizations",
-                "Marginal notes",
-                "Categorized bookmarks",
-                "Multicolor highlights",
-                "Footnotes",
-                "Cross references",
-                "Search personal notes, bookmarks, and highlights",
-            ],
+            features: [],
         },
         {
             title: "PATRON",
@@ -182,46 +169,41 @@ const PricingSimpleBanner = () => {
                 "Support, with a receipt. Patron unlocks no study tool that Standard does not already have, and we would rather say so than invent one. What it does is pay for translation and editorial work on a corpus that stays free for everyone. In return: early access to new texts and features, your name on the supporters page if you want it there, and a written account, once a year, of what your support paid for.",
             firstAction: "Become a Patron",
             firstActionHref: "/sign-up",
-            secondAction: "Have questions?",
-            secondActionHref: "",
+            secondAction: "Give once instead",
+            secondActionHref: "/sign-up",
             shadow: "",
-            features: [
-                "All STANDARD-Tier features",
-                "Early access to experimental and pre-release features and new tools before general availability",
-                "Helps fund licensing, infrastructure, and development",
-                "Patron-exclusive digital gifts (when available)",
-            ],
+            features: [],
         },
     ];
 
     return (
         <section className="relative bg-utility-neutral-100 pt-20 pb-16 md:pt-28 md:pb-20">
             <div className="mx-auto max-w-container px-4 md:px-8">
-                <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
+                <div className="mx-auto flex w-full max-w-4xl flex-col items-center text-center">
                     <h1 className="text-display-md font-extralight text-brand-800 md:text-display-2xl dark:text-brand-400">Texts free, tools paid.</h1>
-                    <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
+                    <p className="mt-4 max-w-4xl text-lg text-tertiary md:mt-6 md:text-xl">
                         Everything Bodhi Central publishes is free to read — the canon, its translations, the footnotes and cross-references a text carries,
                         essays, timelines and Learning Paths. Most of it needs no account at all. A subscription pays for the tools you study{" "}
                         <strong>with</strong>, and for nothing else.
                     </p>
-                    <section className="mx-auto w-3xl px-4 md:px-8">
+                    <section className="mx-auto mt-12 w-full px-4 md:px-8">
                         <div className="mx-auto flex flex-col">
-                            <h2 className="text-display-md font-extralight text-brand-800 md:text-display-lg dark:text-brand-400">What you never pay for</h2>
-                            <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
+                            <h2 className="text-display-md font-extralight text-brand-800 md:text-display-md dark:text-brand-400">What you never pay for</h2>
+                            <p className="mt-4 w-full text-md text-tertiary md:mt-6 md:text-md">
                                 The canon, in its own languages and in every translation we publish. The footnotes, variant readings and cross-references a text
                                 carries — those are part of the text rather than an addition to it, and they are free to everyone, account or no account.
-                                Essays, news and Learning Paths. Published timelines, including *Traditions at a Glance*. Search across all of it.
+                                Essays, news and Learning Paths browsing. Published timelines. Search across all of it.
                             </p>
-                            <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
+                            <p className="mt-4 w-full text-md text-tertiary md:mt-6 md:text-md">
                                 None of this sits behind a price now and none of it will later. A text's licence decides whether we are able to publish it at
                                 all; it never decides which tier it lands in. That is why nothing on this page sells something we published, and why no
                                 agreement we sign in future can move a line on it.
                             </p>
                         </div>
                     </section>
-                    <section className="mx-auto w-3xl px-4 md:px-8">
+                    <section className="mx-auto mt-16 w-full px-4 md:px-8">
                         <div className="mx-auto flex flex-col">
-                            <h2 className="text-display-md font-extralight text-brand-800 md:text-display-lg dark:text-brand-400">
+                            <h2 className="text-display-lg font-extralight text-brand-800 md:text-display-xl dark:text-brand-400">
                                 Three ways to use Bodhi Central
                             </h2>
                         </div>
@@ -241,12 +223,12 @@ const PricingSimpleBanner = () => {
                                 { id: "monthly", label: "Monthly billing" },
                                 { id: "annually", label: "Annual billing" },
                             ]}
-                            className="mt-6 w-full md:mt-10 md:w-auto **:[[role=tab]]:flex-1"
+                            className="mt-4 w-full md:mt-6 md:w-auto **:[[role=tab]]:flex-1"
                         />
                     </Tabs>
                 </div>
 
-                <div className="mt-8 grid w-full grid-cols-1 items-start gap-4 md:mt-10 md:grid-cols-2 md:gap-10 xl:grid-cols-3">
+                <div className="mt-6 grid w-full grid-cols-1 items-start gap-4 md:mt-10 md:grid-cols-2 md:gap-10 xl:grid-cols-3">
                     {plans.map((plan) => (
                         <PricingTierCardBanner key={plan.title} {...plan} />
                     ))}
@@ -393,29 +375,28 @@ const FeaturesIconsAndImage03 = () => {
             <div className="bg-warm-off-400 pt-16 pb-28 md:pt-24 md:pb-40 dark:bg-warm-off-950">
                 <div className="mx-auto grid w-full max-w-container grid-cols-1 gap-12 px-4 md:gap-16 md:px-8 lg:grid-cols-2 lg:gap-24">
                     <div className="flex w-full flex-col">
-                        <span className="text-sm font-light text-brand-600 md:text-md dark:text-brand-700">Our Approach</span>
+                        <span className="text-sm font-light text-brand-600 md:text-md dark:text-brand-700">Our Approach to Subscriptions</span>
 
-                        <h2 className="mt-3 text-display-md font-light text-brand-800 md:text-display-lg dark:text-brand-500">
-                            The intersection of readership, education, and community
-                        </h2>
+                        <h2 className="mt-3 text-display-md font-light text-brand-800 md:text-display-lg dark:text-brand-500">What a subscription is not</h2>
                         <p className="mt-4 text-lg font-light text-tertiary md:mt-5 md:text-xl">
-                            Envisioning a platform that leverages modern and practical experiences with the best of readership and education, at the service of
-                            communities and the living transmissions of the awakening.
+                            It is not the access to the platform. There is nothing you can read with a subscription that you cannot read without one.
                         </p>
                     </div>
 
                     <ul className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-12 lg:grid-cols-1">
                         {[
                             {
-                                title: "The best of readership and education",
-                                subtitle: "Enter a sanctuary of wisdom, with a treasure trove of texts, overviews, and practical expositions of the awakening.",
+                                title: "Three sources of revenue",
+                                subtitle:
+                                    "And it is not the only thing we could have sold, which is worth saying plainly. Bodhi Central has three sources of revenue and they are all of them: subscriptions from readers, subscriptions from organisations that run their own study environments here, and services to those organisations.",
                                 icon: BookOpen01,
                                 cta: "Learn more",
                                 href: "#",
                             },
                             {
-                                title: "Connecting communities and living transmissions",
-                                subtitle: "Get truthful and relevant guidance and support from genuine teachers and fellow practitioners.",
+                                title: "No adds, no user data sold",
+                                subtitle:
+                                    "There is no advertising, and no record of what you read is sold, brokered or handed on to anyone. That is a limit on what this business is permitted to become, written down now rather than when somebody is in a position to be tempted.",
                                 icon: GraduationHat02,
                                 cta: "Learn more",
                                 href: "#",
