@@ -61,9 +61,9 @@ const sections: Section[] = [
                 tiers: { "Not Signed In": true, Community: true, Standard: true, Patron: true },
             },
             {
-                name: "Essays, news and Learning Paths",
+                name: "Essays, learning paths, and blog",
                 tooltip: {
-                    title: "Essays, news and Learning Paths browsing",
+                    title: "Essays, Learning Paths browsing and the blog",
                     description: "Essays, news and Learning Paths catalogue browsing",
                 },
                 tiers: { "Not Signed In": true, Community: true, Standard: true, Patron: true },
@@ -87,7 +87,7 @@ const sections: Section[] = [
         ],
     },
     {
-        name: "Your Reading",
+        name: "Your reading",
         features: [
             {
                 name: "Your place kept, and the texts you save",
@@ -108,7 +108,7 @@ const sections: Section[] = [
         ],
     },
     {
-        name: "Study tools for personal engagement.",
+        name: "Study tools for personal engagement",
         features: [
             {
                 name: "Notes and highlights",

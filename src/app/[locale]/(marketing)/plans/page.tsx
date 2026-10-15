@@ -1,7 +1,7 @@
 "use client";
 
 import { type FC, type ReactNode, useState } from "react";
-import { ArrowRight, BookOpen01, CheckCircle, File05, GraduationHat02 } from "@untitledui/icons";
+import { ArrowRight, BookOpen01, CheckCircle, CoinsHand, File05, GraduationHat02, ImageUserX } from "@untitledui/icons";
 import Image from "next/image";
 import posthog from "posthog-js";
 import { CTACenteredPlansSignupFeaturedBgImage } from "@/components-custom/sections/cta-centered-plans-signup-featured-bg-image";
@@ -390,7 +390,7 @@ const FeaturesIconsAndImage03 = () => {
                                 title: "Three sources of revenue",
                                 subtitle:
                                     "And it is not the only thing we could have sold, which is worth saying plainly. Bodhi Central has three sources of revenue and they are all of them: subscriptions from readers, subscriptions from organisations that run their own study environments here, and services to those organisations.",
-                                icon: BookOpen01,
+                                icon: CoinsHand,
                                 cta: "Learn more",
                                 href: "#",
                             },
@@ -398,7 +398,7 @@ const FeaturesIconsAndImage03 = () => {
                                 title: "No adds, no user data sold",
                                 subtitle:
                                     "There is no advertising, and no record of what you read is sold, brokered or handed on to anyone. That is a limit on what this business is permitted to become, written down now rather than when somebody is in a position to be tempted.",
-                                icon: GraduationHat02,
+                                icon: ImageUserX,
                                 cta: "Learn more",
                                 href: "#",
                             },
