@@ -154,7 +154,7 @@ export default function AboutPage() {
                         rather than a footnote.
                     </p>
                     <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
-                        The organisations that have carried this work — SuttaCentral, 84000, the translation projects and the digital archives — have done it on
+                        The organisations that have carried this work — SuttaCentral, BDRC, the translation projects and the digital archives — have done it on
                         donation, and done it well. We have taken a different route to the same end. A corpus meant to be here in twenty years is hard to
                         promise on an annual appeal; and a company that earns its keep from the people it serves answers to them continuously, rather than to a
                         funder periodically. That a livelihood can be both profitable and ethical is not a modern accommodation. It is Right Livelihood, held in
@@ -164,15 +164,15 @@ export default function AboutPage() {
                         So the boundary is a single rule: <strong>texts free, tools paid.</strong>
                     </p>
                     <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
-                        Everything we publish is free to read — the canon, its translations, footnotes, cross-references, essays, timelines and Learning Paths.
-                        A subscription pays for the tools you study <em>with</em>: notes and highlights, categorised bookmarks, a personal library and
-                        workspaces, advanced search, and synchronised reading where a recording exists. Prices are published, they are the same for everyone in
-                        a region, and they are set to what people in that region can actually pay rather than to what a market will bear.
+                        Everything we publish is free to read — the canon, its translations, footnotes, cross-references, essays, timelines and learning paths.
+                        A subscription pays for the tools you study with: notes and highlights, categorised bookmarks, a personal library and workspaces,
+                        advanced search, and multimedia synchronised to the text wherever a recording or asset exists. Prices are published, they are the same
+                        for everyone in a region, and they are set to what people in that region can actually pay rather than to what a market will bear.
                     </p>
                     <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
-                        Patron is a supporter tier and we sell it as one. It pays for translation and editorial work on a corpus that stays free for everyone.
-                        It unlocks no study tool that Standard does not already have, and once a year we publish a written account of what it funded. A company
-                        asking for support above the price of its own product owes that account.
+                        <strong>Patron</strong> is a supporter tier and we sell it as one. It pays for translation and editorial work on a corpus that stays
+                        free for everyone. It unlocks no study tool that <strong>Standard</strong> does not already have, and once a year we publish a written
+                        account of what it funded. A company asking for support above the price of its own product owes that account.
                     </p>
                 </div>
             </section>
@@ -180,7 +180,7 @@ export default function AboutPage() {
                 <div className="mx-auto flex flex-col">
                     <h2 className="text-display-md font-extralight text-brand-800 md:text-display-lg dark:text-brand-400">What we will not do</h2>
                     <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
-                        TWe have three lines of revenue and they are exhaustive: subscriptions from readers, subscriptions from organisations running their own
+                        We have three lines of revenue and they are exhaustive: subscriptions from readers, subscriptions from organisations running their own
                         study environments, and services to those organisations. There is no fourth.
                     </p>
                     <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
