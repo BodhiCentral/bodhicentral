@@ -320,8 +320,8 @@ const PricingLargeTable01 = () => {
                                         </th>
                                     </tr>
                                     {section.features.map((feature, index) => (
-                                        <tr key={feature.name} className={cx(index === section.features.length - 1 && "border-b border-secondary pb-4")}>
-                                            <th className="py-2 pr-2 pl-6 text-left text-sm font-medium text-primary" scope="row">
+                                        <tr key={feature.name} className={cx(index === section.features.length - 1 && "pb-4")}>
+                                            <th className="py-2 pr-2 pl-6 text-left text-sm font-normal text-primary font-stretch-condensed" scope="row">
                                                 {feature.name}
                                                 <Tooltip title={feature.tooltip.title} description={feature.tooltip.description} delay={0} closeDelay={0}>
                                                     <TooltipTrigger className="cursor-pointer text-fg-quaternary transition duration-100 hover:text-fg-quaternary_hover focus:text-fg-quaternary_hover">
@@ -337,9 +337,9 @@ const PricingLargeTable01 = () => {
                                                         ) : (
                                                             <>
                                                                 {feature.tiers[tier.name] === true ? (
-                                                                    <CheckCircle className="size-5 text-fg-success-primary" />
+                                                                    <CheckCircle className="size-4 text-fg-success-primary" />
                                                                 ) : (
-                                                                    <Minus className="mx-auto size-5 text-fg-quaternary" aria-hidden="true" />
+                                                                    <Minus className="mx-auto size-4 text-fg-quaternary" aria-hidden="true" />
                                                                 )}
 
                                                                 <span className="sr-only">
