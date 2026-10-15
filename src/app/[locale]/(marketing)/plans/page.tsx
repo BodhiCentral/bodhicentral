@@ -124,7 +124,7 @@ const PricingTierCardBanner = (props: {
                         </Button>
                     )}
                 </div>
-                <ul className="flex flex-col gap-4 px-6 py-4 md:px-8 md:pb-8">
+                <ul className="flex flex-col gap-4 px-6 py-4 md:px-8 md:pb-4">
                     {props.features.map((feat) => (
                         <CheckItemText key={feat} iconStyle="outlined" color="success" text={feat} />
                     ))}
@@ -376,7 +376,7 @@ const FeaturesIconsAndImage03 = () => {
             <div className="bg-warm-off-400 pt-16 pb-28 md:pt-24 md:pb-40 dark:bg-warm-off-950">
                 <div className="mx-auto grid w-full max-w-container grid-cols-1 gap-12 px-4 md:gap-16 md:px-8 lg:grid-cols-2 lg:gap-24">
                     <div className="flex w-full flex-col">
-                        <span className="text-sm font-light text-brand-600 md:text-md dark:text-brand-700">Our Approach to Subscriptions</span>
+                        <span className="text-sm font-light text-balance text-brand-600 md:text-md dark:text-brand-700">Our Approach to Subscriptions</span>
 
                         <h2 className="mt-3 text-display-lg font-light text-brand-800 md:text-display-xl dark:text-brand-500">What a subscription is not</h2>
                         <p className="mt-4 text-lg font-light text-tertiary md:mt-5 md:text-xl">
