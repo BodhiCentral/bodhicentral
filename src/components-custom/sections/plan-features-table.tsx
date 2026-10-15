@@ -45,7 +45,7 @@ const sections: Section[] = [
         name: "Reading",
         features: [
             {
-                name: "The canon — every text we have published, in every language we publish it in",
+                name: "The canon — every text we have published",
                 tooltip: {
                     title: "The Canon",
                     description: "The canon — every text we have published, in every language we publish it in",
@@ -53,7 +53,7 @@ const sections: Section[] = [
                 tiers: { "Not Signed In": true, Community: true, Standard: true, Patron: true },
             },
             {
-                name: "Footnotes, variant readings and cross-references, wherever a text carries them",
+                name: "Footnotes, variant readings and cross-references",
                 tooltip: {
                     title: "Footnotes, variant readings and cross-references.",
                     description: "Footnotes, variant readings and cross-references, wherever a text carries them",
@@ -69,7 +69,7 @@ const sections: Section[] = [
                 tiers: { "Not Signed In": true, Community: true, Standard: true, Patron: true },
             },
             {
-                name: "Published timelines, including Traditions at a Glance",
+                name: "Published timelines",
                 tooltip: {
                     title: "Published timelines",
                     description: "Published timelines, including Traditions at a Glance",
@@ -90,7 +90,7 @@ const sections: Section[] = [
         name: "Your Reading",
         features: [
             {
-                name: "Your place kept, and the texts you save — Continue Reading, My Library",
+                name: "Your place kept, and the texts you save",
                 tooltip: {
                     title: "Your place kept, and the texts you save",
                     description: "Your place kept, and the texts you save — Continue Reading, My Library.",
@@ -151,7 +151,7 @@ const sections: Section[] = [
                 tiers: { Community: false, Standard: true, Patron: true },
             },
             {
-                name: "Multimedia synchronized to text, wherever a recording or asset exists",
+                name: "Multimedia synchronized to text",
                 tooltip: {
                     title: "Media synchronised to text",
                     description: "Multimedia synchronized to text, wherever a recording or asset exists.",
@@ -172,7 +172,7 @@ const sections: Section[] = [
                 tiers: { Community: false, Standard: false, Patron: true },
             },
             {
-                name: "Your name on the supporters page, if you want it there",
+                name: "Your name on the supporters page",
                 tooltip: {
                     title: "Your name on the supporters page",
                     description: "Your name will be listed on the supporters page, if you want it there.",
@@ -310,8 +310,8 @@ const PricingLargeTable01 = () => {
                                     <tr>
                                         <th
                                             className={cx(
-                                                index > 0 ? "pt-8" : "border-t border-secondary pt-8",
-                                                "rounded-b-xl bg-brand-50 px-6 pb-4 text-left text-lg font-extrabold tracking-wide text-brand-600 dark:bg-muted-900",
+                                                index > 0 ? "pt-6" : "border-b border-secondary pt-6",
+                                                "rounded-b-xl bg-primary px-6 pb-4 text-left text-lg font-extrabold tracking-wide text-brand-600 dark:bg-muted-900",
                                             )}
                                             colSpan={5}
                                             scope="colgroup"
@@ -321,7 +321,7 @@ const PricingLargeTable01 = () => {
                                     </tr>
                                     {section.features.map((feature, index) => (
                                         <tr key={feature.name} className={cx(index === section.features.length - 1 && "border-b border-secondary pb-4")}>
-                                            <th className="px-6 py-2 text-left text-sm font-medium text-primary" scope="row">
+                                            <th className="py-2 pr-2 pl-6 text-left text-sm font-medium text-primary" scope="row">
                                                 {feature.name}
                                                 <Tooltip title={feature.tooltip.title} description={feature.tooltip.description} delay={0} closeDelay={0}>
                                                     <TooltipTrigger className="cursor-pointer text-fg-quaternary transition duration-100 hover:text-fg-quaternary_hover focus:text-fg-quaternary_hover">
