@@ -151,10 +151,10 @@ const sections: Section[] = [
                 tiers: { Community: false, Standard: true, Patron: true },
             },
             {
-                name: "Reading synchronised to multimedia, wherever a recording or asset exists",
+                name: "Multimedia synchronized to text, wherever a recording or asset exists",
                 tooltip: {
-                    title: "Reading synchronised to media",
-                    description: "Reading synchronised to multimedia, wherever a recording or asset exists.",
+                    title: "Media synchronised to text",
+                    description: "Multimedia synchronized to text, wherever a recording or asset exists.",
                 },
                 tiers: { Community: false, Standard: true, Patron: true },
             },
@@ -320,14 +320,8 @@ const PricingLargeTable01 = () => {
                                         </th>
                                     </tr>
                                     {section.features.map((feature, index) => (
-                                        <tr
-                                            key={feature.name}
-                                            className={cx(
-                                                index % 2 === 0 && "bg-primary",
-                                                index === section.features.length - 1 && "border-b border-secondary pb-4",
-                                            )}
-                                        >
-                                            <th className="px-6 py-3 text-left text-sm font-medium text-primary" scope="row">
+                                        <tr key={feature.name} className={cx(index === section.features.length - 1 && "border-b border-secondary pb-4")}>
+                                            <th className="px-6 py-2 text-left text-sm font-medium text-primary" scope="row">
                                                 {feature.name}
                                                 <Tooltip title={feature.tooltip.title} description={feature.tooltip.description} delay={0} closeDelay={0}>
                                                     <TooltipTrigger className="cursor-pointer text-fg-quaternary transition duration-100 hover:text-fg-quaternary_hover focus:text-fg-quaternary_hover">

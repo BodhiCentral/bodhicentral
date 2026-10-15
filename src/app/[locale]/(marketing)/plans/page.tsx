@@ -378,7 +378,7 @@ const FeaturesIconsAndImage03 = () => {
                     <div className="flex w-full flex-col">
                         <span className="text-sm font-light text-balance text-brand-600 md:text-md dark:text-brand-700">Our Approach to Subscriptions</span>
 
-                        <h2 className="mt-3 text-display-lg font-light text-brand-800 md:text-display-xl dark:text-brand-500">What a subscription is not</h2>
+                        <h2 className="mt-3 text-display-lg font-light text-brand-800 md:text-display-2xl dark:text-brand-500">What a subscription is not</h2>
                         <p className="mt-4 text-lg font-light text-tertiary md:mt-5 md:text-xl">
                             It is not the access to the platform. There is nothing you can read with a subscription that you cannot read without one.
                         </p>
