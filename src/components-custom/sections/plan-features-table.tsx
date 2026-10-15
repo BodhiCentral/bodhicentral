@@ -310,8 +310,8 @@ const PricingLargeTable01 = () => {
                                     <tr>
                                         <th
                                             className={cx(
-                                                index > 0 ? "pt-6" : "border-b border-secondary pt-6",
-                                                "rounded-b-xl bg-primary px-6 pb-4 text-left text-lg font-extrabold tracking-wide text-brand-600 dark:bg-muted-900",
+                                                index > 0 ? "pt-6" : "pt-6",
+                                                "bg-neutral-100 px-6 pb-4 text-left text-lg font-extrabold tracking-wide text-brand-600 dark:bg-muted-900",
                                             )}
                                             colSpan={5}
                                             scope="colgroup"
