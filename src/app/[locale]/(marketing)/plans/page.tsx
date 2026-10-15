@@ -142,7 +142,7 @@ const PricingSimpleBanner = () => {
             title: "COMMUNITY",
             subtitle: selectedPlan === "monthly" ? "Free" : "Free",
             description:
-                "An account, and what an account is for. Your place is kept in whatever you are reading, the texts you save are there on every device you read on, and your reading and display settings follow you.</br>Nothing is taken away from you to make this tier. It is the whole platform, with somewhere to put your own reading.",
+                "An account, and what an account is for. Your place is kept in whatever you are reading, the texts you save are there on every device you read on, and your reading and display settings follow you. Nothing is taken away from you to make this tier. It is the whole platform, with somewhere to put your own reading.",
             firstAction: "Create a free account",
             firstActionHref: "/sign-up",
             secondAction: "",
@@ -154,7 +154,7 @@ const PricingSimpleBanner = () => {
             title: "STANDARD",
             subtitle: selectedPlan === "monthly" ? "$4/month" : "$40/year",
             description:
-                "The tools you study with. Notes and highlights on any passage, categorised bookmarks, a personal library and workspaces of your own, advanced search and filtering, the study tools over a timeline, and reading synchronised to media wherever a recording exists.",
+                "The tools you study with. Personal notes and highlights on any passage, categorised bookmarks, a personal library and workspaces of your own, advanced search and filtering, the study tools over a timeline, and multimedia synchronised to the text wherever a recording or asset exists.",
             firstAction: "Start with Standard",
             firstActionHref: "/sign-up",
             secondAction: "",
@@ -166,7 +166,7 @@ const PricingSimpleBanner = () => {
             title: "PATRON",
             subtitle: selectedPlan === "monthly" ? "$15/month" : "$150/year",
             description:
-                "Support, with a receipt. Patron unlocks no study tool that Standard does not already have, and we would rather say so than invent one. What it does is pay for translation and editorial work on a corpus that stays free for everyone. In return: early access to new texts and features, your name on the supporters page if you want it there, and a written account, once a year, of what your support paid for.",
+                "Support, with a receipt. Patron unlocks no study tool that Standard does not already have. What it does is pay for translation and editorial work on a corpus that stays free for everyone. In return: early access to new texts and features, your name on the supporters page if you want it there, and a written account, once a year, of what your support paid for.",
             firstAction: "Become a Patron",
             firstActionHref: "/sign-up",
             secondAction: "Give once instead",
@@ -180,6 +180,7 @@ const PricingSimpleBanner = () => {
         <section className="relative bg-utility-neutral-100 pt-20 pb-16 md:pt-28 md:pb-20">
             <div className="mx-auto max-w-container px-4 md:px-8">
                 <div className="mx-auto flex w-full max-w-4xl flex-col items-center text-center">
+                    <span className="text-sm font-semibold text-brand-secondary md:text-md">Our Plans</span>
                     <h1 className="text-display-md font-extralight text-brand-800 md:text-display-2xl dark:text-brand-400">Texts free, tools paid.</h1>
                     <p className="mt-4 max-w-4xl text-lg text-tertiary md:mt-6 md:text-xl">
                         Everything Bodhi Central publishes is free to read — the canon, its translations, the footnotes and cross-references a text carries,
