@@ -275,7 +275,7 @@ const FeatureTextFeaturedIconTopCentered = ({
 
 const FeaturesCenterMockup01 = () => {
     return (
-        <section id="features" className="bg-primary py-16 md:pb-24">
+        <section id="features" className="hidden bg-primary py-16 md:pb-24">
             <div className="mx-auto w-full max-w-container px-4 md:px-8">
                 <div className="mx-auto flex w-full max-w-4xl flex-col items-center text-center">
                     <h2 className="mt-4 text-display-md font-extralight text-brand-800 md:text-display-lg dark:text-brand-500">
@@ -361,8 +361,8 @@ const FeatureTextFeaturedIconLeft = ({ icon, title, subtitle, footer }: FeatureT
 
         <div className="flex flex-col items-start gap-4">
             <div>
-                <h3 className="mt-1 text-xl font-medium text-primary md:mt-1">{title}</h3>
-                <p className="mt-2 text-md text-tertiary">{subtitle}</p>
+                <h3 className="mt-1 text-2xl font-medium text-primary">{title}</h3>
+                <p className="mt-4 text-md text-tertiary">{subtitle}</p>
             </div>
 
             {footer}
@@ -378,7 +378,7 @@ const FeaturesIconsAndImage03 = () => {
                     <div className="flex w-full flex-col">
                         <span className="text-sm font-light text-brand-600 md:text-md dark:text-brand-700">Our Approach to Subscriptions</span>
 
-                        <h2 className="mt-3 text-display-md font-light text-brand-800 md:text-display-lg dark:text-brand-500">What a subscription is not</h2>
+                        <h2 className="mt-3 text-display-lg font-light text-brand-800 md:text-display-xl dark:text-brand-500">What a subscription is not</h2>
                         <p className="mt-4 text-lg font-light text-tertiary md:mt-5 md:text-xl">
                             It is not the access to the platform. There is nothing you can read with a subscription that you cannot read without one.
                         </p>
