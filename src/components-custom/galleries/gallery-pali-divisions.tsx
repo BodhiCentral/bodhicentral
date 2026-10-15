@@ -59,7 +59,7 @@ const PaliSectionCard = ({ section }: { section: PaliSection }) => {
     return (
         <Carousel.Item
             key={section.id_volumen || section.english_title}
-            className={`group relative flex aspect-[.5625] w-full max-w-56 cursor-pointer flex-col justify-end overflow-hidden rounded-3xl border border-olive-500 drop-shadow-xl drop-shadow-brand-600/30 transition-all duration-500 hover:scale-[1.05] md:aspect-[.5625] md:max-w-64 dark:border-olive-950 dark:drop-shadow-brand-700/20`}
+            className={`group relative flex aspect-[.5625] w-full max-w-68 cursor-pointer flex-col justify-end overflow-hidden rounded-2xl border border-olive-500 drop-shadow-xl drop-shadow-brand-600/30 transition-all duration-500 hover:scale-[1.05] md:aspect-[.5625] md:max-w-68 dark:border-olive-950 dark:drop-shadow-brand-700/20`}
             onClick={() => setIsFlipped(!isFlipped)}
         >
             <Image
@@ -80,7 +80,7 @@ const PaliSectionCard = ({ section }: { section: PaliSection }) => {
                 <div
                     className={`relative ${section.color} ${section.dark_color} rounded-b-sm px-5 pt-5 pb-4 text-white backdrop-blur-[10px] before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-alpha-white/30 md:px-5`}
                 >
-                    <h3 className="pb-1 text-3xl font-medium text-brand-300">{section.english_title}</h3>
+                    <h3 className="pb-1 text-2xl font-medium text-brand-300">{section.english_title}</h3>
                     <p className="mt-1 text-lg">{section.pali_title}</p>
 
                     <div className="items-top mt-2 flex justify-between">
@@ -102,12 +102,12 @@ const PaliSectionCard = ({ section }: { section: PaliSection }) => {
                 }}
             >
                 {/* Card Reversed Side */}
-                <div className="items-top mt-1 flex flex-col gap-2">
+                <div className="items-top mt-0.5 flex flex-col gap-2">
                     <div className="flex flex-col gap-0">
-                        <p className="pb-2 text-sm font-normal">{section.pali_title}</p>
+                        <p className="pb-1 text-sm font-normal">{section.pali_title}</p>
                         <h3 className="text-lg font-medium text-brand-300">{section.english_title}</h3>
                     </div>
-                    <p className="md:text-regular mt-2 pb-4 text-sm text-balance">{section.short_description}</p>
+                    <p className="md:text-light mt-1 pb-3 text-xs text-balance">{section.short_description}</p>
                 </div>
 
                 <Button

@@ -194,7 +194,7 @@ const sections: Section[] = [
 const PricingLargeTable01 = () => {
     return (
         <section className="bg-utility-neutral-100">
-            <div className="mx-auto max-w-container px-4 py-4 md:px-8 md:py-6">
+            <div className="mx-auto max-w-container px-4 py-4 md:px-8 md:py-8">
                 <div className="mx-auto flex w-full flex-col items-center text-center">
                     <h2 className="self-start text-display-md font-extralight text-brand-800 md:text-display-lg dark:text-brand-400">
                         Everything, side by side
@@ -202,7 +202,7 @@ const PricingLargeTable01 = () => {
                 </div>
             </div>
 
-            <div className="w-full pb-12 md:px-8 md:pb-14 lg:mx-auto lg:max-w-container">
+            <div className="w-full pb-12 md:px-4 md:pb-12 lg:mx-auto lg:max-w-container">
                 {/* xs to lg */}
                 <div className="space-y-16 lg:hidden">
                     {tiers.map((tier) => (
@@ -298,7 +298,7 @@ const PricingLargeTable01 = () => {
                             <tr>
                                 <th scope="row"></th>
                                 {tiers.map((tier) => (
-                                    <td key={tier.name} className="h-full px-6 py-4 align-top md:pb-4">
+                                    <td key={tier.name} className="h-full px-4 py-4 align-top md:pb-4">
                                         <div className="flex h-full flex-col justify-between">
                                             <p className="mt-0.5 text-center text-sm text-tertiary">{tier.description}</p>
                                         </div>
@@ -311,7 +311,7 @@ const PricingLargeTable01 = () => {
                                         <th
                                             className={cx(
                                                 index > 0 ? "pt-6" : "pt-6",
-                                                "bg-neutral-100 px-6 pb-4 text-left text-lg font-extrabold tracking-wide text-brand-600 dark:bg-muted-900",
+                                                "bg-neutral-100 px-4 pb-4 text-left text-lg font-extrabold tracking-wide text-brand-600 dark:bg-muted-900",
                                             )}
                                             colSpan={5}
                                             scope="colgroup"
@@ -321,7 +321,7 @@ const PricingLargeTable01 = () => {
                                     </tr>
                                     {section.features.map((feature, index) => (
                                         <tr key={feature.name} className={cx(index === section.features.length - 1 && "pb-4")}>
-                                            <th className="py-2 pr-2 pl-6 text-left text-sm font-normal text-primary font-stretch-condensed" scope="row">
+                                            <th className="py-2 pr-2 pl-4 text-left text-sm font-normal text-primary font-stretch-condensed" scope="row">
                                                 {feature.name}
                                                 <Tooltip title={feature.tooltip.title} description={feature.tooltip.description} delay={0} closeDelay={0}>
                                                     <TooltipTrigger className="cursor-pointer text-fg-quaternary transition duration-100 hover:text-fg-quaternary_hover focus:text-fg-quaternary_hover">

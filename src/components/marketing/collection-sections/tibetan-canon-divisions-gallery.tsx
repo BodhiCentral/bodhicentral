@@ -2,11 +2,11 @@
 
 import { useEffect, useState } from "react";
 import { ArrowLeft, ArrowRight } from "@untitledui/icons";
+import Image from "next/image";
 import { Carousel } from "@/components/application/carousel/carousel-base";
 import { Button } from "@/components/base/buttons/button";
 import { RoundButton } from "@/components/marketing/testimonials/round-button";
 import { createClient } from "@/utils/supabase/client";
-import Image from "next/image";
 
 interface TibetanCanonDivision {
     id_sorting: string;
@@ -31,34 +31,35 @@ interface TibetanCanonDivisionsGalleryProps {
 }
 
 const TAILWIND_COLOR_SAFELIST = [
-    "bg-cyan-950/80", "dark:bg-cyan-950/80",
+    "bg-cyan-950/80",
+    "dark:bg-cyan-950/80",
 
-    "bg-blue-950/75", "dark:bg-blue-950/75",
+    "bg-blue-950/75",
+    "dark:bg-blue-950/75",
 
+    "bg-violet-950/80",
+    "dark:bg-violet-950/80",
 
-    "bg-violet-950/80", "dark:bg-violet-950/80",
+    "bg-red-900/75",
+    "dark:bg-red-900/75",
 
+    "bg-orange-900/75",
+    "dark:bg-orange-900/75",
 
-    "bg-red-900/75", "dark:bg-red-900/75",
+    "bg-yellow-950/70",
+    "dark:bg-yellow-950/70",
 
+    "bg-fuchsia-950/70",
+    "dark:bg-fuchsia-950/70",
 
-    "bg-orange-900/75", "dark:bg-orange-900/75",
+    "bg-green-950/75",
+    "dark:bg-green-950/75",
 
+    "bg-gray-900/75",
+    "dark:bg-gray-900/75",
 
-    "bg-yellow-950/70", "dark:bg-yellow-950/70",
-
-
-    "bg-fuchsia-950/70", "dark:bg-fuchsia-950/70",
-
-
-    "bg-green-950/75", "dark:bg-green-950/75",
-
-
-    "bg-gray-900/75", "dark:bg-gray-900/75",
-
-
-    "bg-olive-800/80", "dark:bg-olive-800/80",
-
+    "bg-olive-800/80",
+    "dark:bg-olive-800/80",
 ];
 
 const TibetanCanonDivisionsCard = ({ section }: { section: TibetanCanonDivision }) => {
@@ -67,7 +68,7 @@ const TibetanCanonDivisionsCard = ({ section }: { section: TibetanCanonDivision 
     return (
         <Carousel.Item
             key={section.toh_numbers || section.english_title}
-            className={`group relative flex aspect-[.5625] w-full max-w-68 flex-col justify-end md:aspect-[.5625] md:max-w-76 bg-${section.color} dark:bg-${section.dark_color} drop-shadow-xl drop-shadow-brand-600/30 dark:drop-shadow-brand-700/20 border-2 border-olive-500 dark:border-olive-950 rounded-3xl overflow-hidden hover:scale-[1.05] transition-all duration-500 cursor-pointer`}
+            className={`group relative flex aspect-[.5625] w-full max-w-68 flex-col justify-end md:aspect-[.5625] md:max-w-72 bg-${section.color} dark:bg-${section.dark_color} cursor-pointer overflow-hidden rounded-2xl border-2 border-olive-500 drop-shadow-xl drop-shadow-brand-600/30 transition-all duration-700 hover:scale-[1.08] dark:border-olive-950 dark:drop-shadow-brand-700/20`}
             onClick={() => setIsFlipped(!isFlipped)}
         >
             <Image
@@ -76,18 +77,24 @@ const TibetanCanonDivisionsCard = ({ section }: { section: TibetanCanonDivision 
                 width={100}
                 height={100}
                 style={{ width: "100%", height: "100%" }}
-                className={`absolute inset-0 z-0 size-full top-0 cursor-grab object-cover mix-blend-luminosity grayscale rounded-sm ${isFlipped ? "opacity-0 invisible" : "group-hover:opacity-0 group-hover:invisible"}`}
+                className={`absolute inset-0 top-0 z-0 size-full cursor-grab rounded-sm object-cover mix-blend-luminosity grayscale ${isFlipped ? "invisible opacity-0" : "group-hover:invisible group-hover:opacity-0"}`}
             />
-            <div className={`absolute flex items-end justify-center z-200 w-auto h-16 top-[-34px] right-[12px] px-3.5 pb-1 bg-${section.color} rounded-2xl drop-shadow-md drop-shadow-dark/80 `}>
-                <h6 className=" text-brand-200">{section.texts_count}</h6>
+            <div
+                className={`absolute top-[-34px] right-[12px] z-200 flex h-16 w-auto items-end justify-center px-3.5 pb-1 bg-${section.color} drop-shadow-dark/80 rounded-2xl drop-shadow-md`}
+            >
+                <h6 className="text-brand-200">{section.texts_count}</h6>
             </div>
 
-            <div className={`z-10 bg-linear-to-t from-black/30 to-black/0 pt-16 md:pt-20 lg:pt-24 rounded-b-sm ${isFlipped ? "opacity-0 invisible" : "group-hover:opacity-0 group-hover:invisible"}`}>
-                <div className={`relative bg-${section.color} dark:bg-${section.dark_color} px-5 pt-5 pb-4 text-white backdrop-blur-[10px] before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-alpha-white/30 md:px-5 rounded-b-sm`}>
-                    <h3 className="text-3xl font-semibold text-brand-300">{section.english_title}</h3>
+            <div
+                className={`z-10 rounded-b-sm bg-linear-to-t from-black/30 to-black/0 pt-16 md:pt-20 lg:pt-24 ${isFlipped ? "invisible opacity-0" : "group-hover:invisible group-hover:opacity-0"}`}
+            >
+                <div
+                    className={`relative bg-${section.color} dark:bg-${section.dark_color} rounded-b-sm px-5 pt-5 pb-4 text-white backdrop-blur-[10px] before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-alpha-white/30 md:px-5`}
+                >
+                    <h3 className="text-2xl font-semibold text-brand-300">{section.english_title}</h3>
                     <p className="mt-2 text-xl">{section.tibetan_title}</p>
                     <p className="mt-1 text-lg font-light">{section.sanskrit_title}</p>
-                    <div className="flex gap-2 mt-8 justify-between items-top">
+                    <div className="items-top mt-8 flex justify-between gap-2">
                         <div className="flex flex-col gap-0">
                             <p className="text-md text-brand-300 uppercase">{section.canon_division}</p>
                             <p className="hidden text-sm text-brand-200">{section.toh_numbers}</p>
@@ -96,26 +103,26 @@ const TibetanCanonDivisionsCard = ({ section }: { section: TibetanCanonDivision 
                 </div>
             </div>
             <div
-                className={`absolute inset-0 z-20 flex flex-col justify-between bg-${section.color} dark:bg-${section.dark_color} backdrop-blur-[10px] h-full transition-all duration-300 text-white p-5 overflow-y-auto ${isFlipped ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto"}`}
+                className={`absolute inset-0 z-20 flex flex-col justify-between bg-${section.color} dark:bg-${section.dark_color} h-full overflow-y-auto p-5 text-white backdrop-blur-[10px] transition-all duration-300 ${isFlipped ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0 group-hover:pointer-events-auto group-hover:opacity-100"}`}
                 onClick={(e) => {
                     // Prevent flipping back when clicking the button inside the reversed side
-                    if ((e.target as HTMLElement).closest('button')) {
+                    if ((e.target as HTMLElement).closest("button")) {
                         e.stopPropagation();
                     }
                 }}
             >
                 {/* Card Reversed Side */}
-                <div className="flex flex-col gap-2 mt-1 items-top">
+                <div className="items-top flex flex-col gap-2">
                     <div className="flex flex-col gap-0">
-                        <p className="text-md font-normal pb-2">{section.tibetan_title}</p>
-                        <h3 className="text-xl font-medium text-brand-300">{section.english_title}</h3>
+                        <p className="pb-1 text-sm font-normal">{section.tibetan_title}</p>
+                        <h3 className="text-lg font-medium text-brand-300">{section.english_title}</h3>
                     </div>
-                    <p className="mt-2 text-sm md:text-regular text-balance pb-4">{section.short_description}</p>
+                    <p className="md:text-light pb-2 text-xs text-balance">{section.short_description}</p>
                 </div>
 
                 <Button
                     size="lg"
-                    className="bg-black/20 hover:bg-black/30 border-0.5 border-white/50 hover:border-white/50 text-white hover:text-white/60 dark:bg-gray-900/50 dark:border-gray-900/50 dark:text-white"
+                    className="border-0.5 border-white/50 bg-black/20 text-white hover:border-white/50 hover:bg-black/30 hover:text-white/60 dark:border-gray-900/50 dark:bg-gray-900/50 dark:text-white"
                 >
                     Open division
                 </Button>
@@ -163,11 +170,7 @@ export const TibetanCanonDivisionsGallery = ({ canonType }: TibetanCanonDivision
     }
 
     if (error) {
-        return (
-            <div className="flex h-64 items-center justify-center text-red-500">
-                Error loading sections: {error}
-            </div>
-        );
+        return <div className="flex h-64 items-center justify-center text-red-500">Error loading sections: {error}</div>;
     }
 
     if (sections.length === 0) {

@@ -124,7 +124,7 @@ const PricingTierCardBanner = (props: {
                         </Button>
                     )}
                 </div>
-                <ul className="flex flex-col gap-4 px-6 py-4 md:px-8 md:pb-4">
+                <ul className="flex flex-col gap-4 px-6 py-4 md:px-8 md:pb-2">
                     {props.features.map((feat) => (
                         <CheckItemText key={feat} iconStyle="outlined" color="success" text={feat} />
                     ))}
@@ -187,15 +187,15 @@ const PricingSimpleBanner = () => {
                         essays, timelines and Learning Paths. Most of it needs no account at all. A subscription pays for the tools you study{" "}
                         <strong>with</strong>, and for nothing else.
                     </p>
-                    <section className="mx-auto mt-12 w-full px-4 md:px-8">
-                        <div className="mx-auto flex flex-col">
-                            <h2 className="text-display-md font-extralight text-brand-800 md:text-display-md dark:text-brand-400">What you never pay for</h2>
-                            <p className="mt-4 w-full text-md text-tertiary md:mt-6 md:text-md">
+                    <section className="mx-auto mt-12 px-4 md:px-8">
+                        <div className="mx-auto flex flex-col rounded-2xl border border-secondary bg-primary/40 p-6">
+                            <h2 className="text-display-md font-extralight text-brand-700 md:text-display-md dark:text-brand-400">What you never pay for</h2>
+                            <p className="mt-4 w-full text-md text-tertiary md:mt-6 md:text-sm">
                                 The canon, in its own languages and in every translation we publish. The footnotes, variant readings and cross-references a text
                                 carries — those are part of the text rather than an addition to it, and they are free to everyone, account or no account.
                                 Essays, news and Learning Paths browsing. Published timelines. Search across all of it.
                             </p>
-                            <p className="mt-4 w-full text-md text-tertiary md:mt-6 md:text-md">
+                            <p className="mt-4 w-full text-md text-tertiary md:mt-6 md:text-sm">
                                 None of this sits behind a price now and none of it will later. A text's licence decides whether we are able to publish it at
                                 all; it never decides which tier it lands in. That is why nothing on this page sells something we published, and why no
                                 agreement we sign in future can move a line on it.
@@ -378,7 +378,7 @@ const FeaturesIconsAndImage03 = () => {
                     <div className="flex w-full flex-col">
                         <span className="text-sm font-light text-balance text-brand-600 md:text-md dark:text-brand-700">Our Approach to Subscriptions</span>
 
-                        <h2 className="mt-3 text-display-lg font-light text-brand-800 md:text-display-2xl dark:text-brand-500">What a subscription IS NOT</h2>
+                        <h2 className="mt-3 text-display-lg font-medium text-brand-800 md:text-display-lg dark:text-brand-500">What a subscription is not</h2>
                         <p className="mt-4 text-lg font-light text-tertiary md:mt-5 md:text-xl">
                             It is not the access to the platform. There is nothing you can read with a subscription that you cannot read without one.
                         </p>
