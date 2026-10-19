@@ -1,13 +1,12 @@
 "use client";
 
-
 import { ArrowRight } from "@untitledui/icons";
+import Image from "next/image";
+import { AttributionsAffiliationsBanner } from "@/components-custom/sections/attributions-affiliations-banner";
+import { CTACenteredPlansSignupFeaturedBgImage } from "@/components-custom/sections/cta-centered-plans-signup-featured-bg-image";
+import { FeaturesThreePillars } from "@/components-custom/sections/features-three-pillars";
 import { Button } from "@/components/base/buttons/button";
 import { useClipboard } from "@/hooks/use-clipboard";
-import { FeaturesThreePillars } from "@/components-custom/sections/features-three-pillars";
-import { CTACenteredPlansSignupFeaturedBgImage } from "@/components-custom/sections/cta-centered-plans-signup-featured-bg-image";
-import { AttributionsAffiliationsBanner } from "@/components-custom/sections/attributions-affiliations-banner";
-import Image from 'next/image';
 import "@/styles/home-hero.css";
 
 export const HomeScreen = () => {
@@ -15,9 +14,8 @@ export const HomeScreen = () => {
 
     return (
         <main className="relative overflow-hidden">
-
             {/* Hero Section */}
-            <section className="hero relative flex flex-col items-center justify-center w-full pt-16 pb-28 h-[calc(100vh)] bg-brand-800/90 bg-radial-[at_68%_50%] from-brand-600/70 via-brand-900/40 via-15% to-brand-950 to-95%">
+            <section className="hero relative flex h-[calc(100vh)] w-full flex-col items-center justify-center bg-brand-800/90 bg-radial-[at_68%_50%] from-brand-600/70 via-brand-900/40 via-15% to-brand-950 to-95% pt-16 pb-28">
                 <div className="hero-bg-grad"></div>
                 <div className="hero-grain"></div>
                 <div className="hero-rule"></div>
@@ -72,25 +70,27 @@ export const HomeScreen = () => {
                     </g>
                 </svg>
 
-                <div className="hero-inner relative grid grid-cols-[1fr_1fr] items-center gap-12 z-10 px-14 pt-16 mx-auto max-w-container">
+                <div className="hero-inner relative z-10 mx-auto grid max-w-container grid-cols-[1fr_1fr] items-center gap-12 px-14 pt-16">
                     {/* Hero Left */}
                     <div className="hero-left">
                         <div className="eyebrow">
                             <div className="eyebrow-line"></div>
                             <div className="eyebrow-text">Buddhist Paths & Scriptures</div>
                         </div>
-                        <h1 className="hero-headline text-display-lg md:text-display-xl lg:text-display-3xl font-extralight text-white text-shadow-md text-shadow-gray-900 dark:text-shadow-gray-950">
-                            Gateways to <br /> the <span className="text-brand-500 lg:text-display-5xl font-extralight italic">Awakening</span>
+                        <h1 className="hero-headline text-display-lg font-extralight text-white text-shadow-gray-900 text-shadow-md md:text-display-xl lg:text-display-3xl dark:text-shadow-gray-950">
+                            Gateways to <br /> the <span className="font-extralight text-brand-500 italic lg:text-display-5xl">Awakening</span>
                         </h1>
-                        <p className="hero-sub mt-4 max-w-xs sm:max-w-sm md:max-w-xl text-md text-balance text-brand-200 dark:text-brand-100 md:mt-6 md:text-lg">
-                            Buddha's message to humanity has illuminated the nature of mind for 2,500 years. Now, the complete mapping of its most essential mainstream teachings — scriptures, paths, and transmissions — are gathered in one place, for every sincere seeker.
+                        <p className="hero-sub mt-4 max-w-xs text-md text-balance text-brand-100 sm:max-w-sm md:mt-6 md:max-w-xl md:text-lg dark:text-brand-100">
+                            For 2,500 years, the Buddha&apos;s teachings have illuminated the nature of mind. Now their essential scriptures, paths, and
+                            transmissions are gathered in one place, open to all.
                         </p>
                         <div className="hero-ctas mt-8 flex w-full gap-3 md:mt-12 md:flex-row lg:items-start">
-                            <Button className="cta-primary" size="md" href="/reader">Open Reader</Button>
+                            <Button className="cta-primary" size="md" href="/reader">
+                                Open Reader
+                            </Button>
                             <Button className="cta-secondary" color="tertiary" size="md" href="/learning-paths" iconTrailing={ArrowRight}>
                                 Discover the Paths
                             </Button>
-
                         </div>
                     </div>
                     <div className="hero-right pt-10 lg:pt-16">
@@ -143,8 +143,14 @@ export const HomeScreen = () => {
                                 </g>
                             </svg>
                             {/* Center symbol */}
-                            <div className="medallion-inner bg-radial from-white from-0% via-brand-400 via-57%  to-brand-50/75 to-76%">
-                                <Image src="/ornaments/golden-wheel-280px.webp" style={{ width: "290px", height: "290px" }} alt="Medallion Inner" width={290} height={290} />
+                            <div className="medallion-inner bg-radial from-white from-0% via-brand-400 via-57% to-brand-50/75 to-76%">
+                                <Image
+                                    src="/ornaments/golden-wheel-280px.webp"
+                                    style={{ width: "290px", height: "290px" }}
+                                    alt="Medallion Inner"
+                                    width={290}
+                                    height={290}
+                                />
                             </div>
                         </div>
                     </div>
@@ -174,8 +180,6 @@ export const HomeScreen = () => {
             <FeaturesThreePillars />
             <CTACenteredPlansSignupFeaturedBgImage />
             <AttributionsAffiliationsBanner />
-        </main >
-
-
+        </main>
     );
 };
