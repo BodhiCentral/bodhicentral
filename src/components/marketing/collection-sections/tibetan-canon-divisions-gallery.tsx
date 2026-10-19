@@ -102,8 +102,9 @@ const TibetanCanonDivisionsCard = ({ section }: { section: TibetanCanonDivision 
                     </div>
                 </div>
             </div>
+            {/* Card Reversed Side On Hover */}
             <div
-                className={`absolute inset-0 z-20 flex flex-col justify-between bg-${section.color} dark:bg-${section.dark_color} h-full overflow-y-auto p-5 text-white backdrop-blur-[10px] transition-all duration-300 ${isFlipped ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0 group-hover:pointer-events-auto group-hover:opacity-100"}`}
+                className={`absolute inset-0 z-20 flex flex-col justify-between ${section.color} ${section.dark_color} h-full overflow-y-auto p-5 text-white backdrop-blur-[10px] transition-all duration-500 ${isFlipped ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0 group-hover:pointer-events-auto group-hover:opacity-100"}`}
                 onClick={(e) => {
                     // Prevent flipping back when clicking the button inside the reversed side
                     if ((e.target as HTMLElement).closest("button")) {
@@ -111,7 +112,7 @@ const TibetanCanonDivisionsCard = ({ section }: { section: TibetanCanonDivision 
                     }
                 }}
             >
-                {/* Card Reversed Side */}
+                {/* Card Reversed Side Text */}
                 <div className="items-top flex flex-col gap-2">
                     <div className="flex flex-col gap-0">
                         <p className="pb-1 text-sm font-normal">{section.tibetan_title}</p>

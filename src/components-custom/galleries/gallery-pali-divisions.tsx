@@ -92,8 +92,9 @@ const PaliSectionCard = ({ section }: { section: PaliSection }) => {
                     </div>
                 </div>
             </div>
+            {/* Card Reversed Side On Hover */}
             <div
-                className={`absolute inset-0 z-20 flex flex-col justify-between ${section.color} ${section.dark_color} h-full overflow-y-auto p-5 text-white backdrop-blur-[10px] transition-all duration-300 ${isFlipped ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0 group-hover:pointer-events-auto group-hover:opacity-100"}`}
+                className={`absolute inset-0 z-20 flex flex-col justify-between ${section.color} ${section.dark_color} h-full overflow-y-auto p-5 text-white backdrop-blur-[10px] transition-all duration-500 ${isFlipped ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0 group-hover:pointer-events-auto group-hover:opacity-100"}`}
                 onClick={(e) => {
                     // Prevent flipping back when clicking the button inside the reversed side
                     if ((e.target as HTMLElement).closest("button")) {
@@ -107,7 +108,7 @@ const PaliSectionCard = ({ section }: { section: PaliSection }) => {
                         <p className="pb-1 text-sm font-normal">{section.pali_title}</p>
                         <h3 className="text-lg font-medium text-brand-300">{section.english_title}</h3>
                     </div>
-                    <p className="md:text-light mt-1 pb-3 text-xs text-balance">{section.short_description}</p>
+                    <p className="md:text-light mt-1 pb-2 text-xs text-balance">{section.short_description}</p>
                 </div>
 
                 <Button

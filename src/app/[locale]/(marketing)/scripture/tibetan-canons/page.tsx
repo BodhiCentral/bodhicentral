@@ -8,11 +8,11 @@ export default function TibetanCanonsPage() {
     return (
         <>
             {/* Hero Section */}
-            <section className="relative mx-auto flex h-[calc(100vh)] flex-col gap-4 overflow-hidden bg-[url(/tibetan-buddhist-library-01.jpg)] bg-cover bg-bottom bg-no-repeat pt-32">
+            <section className="relative mx-auto flex h-[calc(100vh)] flex-col items-center justify-center gap-4 overflow-hidden bg-[url(/tibetan-buddhist-library-01.jpg)] bg-cover bg-bottom bg-no-repeat">
                 {/* Overlay layer for easy customization of color/transparency */}
                 <div className="absolute inset-0 z-0 bg-linear-to-b from-black/80 from-15% via-black/20 via-40% to-black/60 to-100%" aria-hidden="true" />
                 <svg
-                    className="hero-mandala-tibetan-canons absolute top-0 right-0 z-0 h-100 w-100"
+                    className="hero-mandala-tibetan-canons absolute top-0 right-0 z-0 hidden h-100 w-100"
                     viewBox="0 0 400 400"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -65,25 +65,25 @@ export default function TibetanCanonsPage() {
                     </g>
                 </svg>
                 {/* Hero Inner Content */}
-                <div className="relative z-10 mx-24 flex max-w-container flex-col gap-10">
+                <div className="relative z-10 flex flex-col items-center justify-center gap-14 px-8 md:px-12">
                     {/* Hero Title & Subtitle */}
-                    <div className="animate-[fadeUp_1s_ease_both] flex-col gap-1 delay-300 md:flex">
-                        <h1 className="text-display-xl font-extralight text-brand-400 text-shadow-brand-950 text-shadow-sm md:text-display-2xl lg:text-display-4xl">
+                    <div className="animate-[fadeUp_1s_ease_both] flex-col items-center justify-center delay-300 md:flex">
+                        <h1 className="text-center text-display-lg font-extralight text-brand-300 text-shadow-brand-950 text-shadow-sm md:text-display-2xl lg:text-display-4xl">
                             Tibetan Canon
                         </h1>
-                        <p className="hero-subtitle w-130 text-xl font-light text-white">
-                            The Buddhist Indian scriptures and treatises translated into Tibetan.
+                        <p className="hero-subtitle text-center text-xl font-light text-white">
+                            Tibetan translations of the Buddhist Indian scriptures and treatises.
                         </p>
                     </div>
                     {/* Tibetan Canons Cards */}
-                    <div className="grid max-w-140 animate-[fadeUp_1s_ease_both] grid-cols-1 items-start gap-10 delay-450 md:max-w-2xl md:grid-cols-2 md:gap-14 md:pb-16 lg:max-w-3xl lg:gap-20">
+                    <div className="mx-auto grid h-full max-w-4xl animate-[fadeUp_1s_ease_both] grid-cols-1 items-start gap-6 px-4 pb-20 delay-450 md:grid-cols-2 md:gap-8 md:px-6 lg:gap-10">
                         {/* Kangyur Card */}
                         <a
                             href="#kangyur-divisions-gallery"
-                            className="h-full cursor-pointer transition-transform duration-400 hover:scale-[1.04]"
+                            className="h-full cursor-pointer transition-transform duration-400 hover:scale-[1.06]"
                             aria-label="Go to Kangyur collection gallery"
                         >
-                            <div className="flex h-full flex-col">
+                            <div className="flex h-full flex-col items-center justify-start rounded-full bg-radial-[at_50%_46%] from-brand-50/90 via-brand-200/95 via-32% to-brand-600/2 p-4 md:p-6 dark:bg-linear-to-b dark:bg-radial-[at_50%_46%] dark:from-brand-950/95 dark:via-brand-900/90 dark:via-30% dark:to-black/15">
                                 <Image
                                     src="/ornaments/golden-wheel-280px.webp"
                                     alt="wheel of dharma"
@@ -92,19 +92,19 @@ export default function TibetanCanonsPage() {
                                     style={{ width: "62px", height: "62px" }}
                                     className="hidden opacity-100 md:block"
                                 />
-                                <h2 className="py-2 text-display-lg font-extralight text-brand-400">The Kangyur</h2>
-                                <p className="pb-4 text-lg font-light text-balance text-white">
-                                    Tibetan translations of Indian scriptures attributed to the Buddha.
+                                <h2 className="py-2 text-center text-display-md text-brand-800 dark:text-brand-200">The Kangyur</h2>
+                                <p className="pb-4 text-center text-md font-semibold text-tertiary">
+                                    Tibetan translations of Indian scriptures containing the words of the Buddha.
                                 </p>
                             </div>
                         </a>
                         {/* Tengyur Card */}
                         <a
                             href="#tengyur-divisions-gallery"
-                            className="h-full cursor-pointer transition-transform duration-400 hover:scale-[1.04]"
+                            className="h-full cursor-pointer transition-transform duration-400 hover:scale-[1.06]"
                             aria-label="Go to Tengyur collection gallery"
                         >
-                            <div className="flex h-full flex-col">
+                            <div className="flex h-full flex-col items-center justify-start rounded-full bg-radial-[at_50%_46%] from-brand-50/90 via-brand-200/95 via-32% to-brand-600/2 p-4 md:p-6 dark:bg-linear-to-b dark:bg-radial-[at_50%_46%] dark:from-brand-950/95 dark:via-brand-900/90 dark:via-30% dark:to-black/15">
                                 <Image
                                     src="/ornaments/golden-wheel-280px.webp"
                                     alt="wheel of dharma"
@@ -113,9 +113,9 @@ export default function TibetanCanonsPage() {
                                     style={{ width: "62px", height: "62px" }}
                                     className="hidden opacity-100 md:block"
                                 />
-                                <h2 className="py-2 text-display-lg font-extralight text-brand-400">The Tengyur</h2>
-                                <p className="pb-4 text-lg font-light text-balance text-white">
-                                    Tibetan translations of Indian treatises that elaborate on the Buddha's words.
+                                <h2 className="py-2 text-center text-display-md text-brand-800 dark:text-brand-200">The Tengyur</h2>
+                                <p className="pb-4 text-center text-md font-semibold text-tertiary">
+                                    Tibetan translations of Indian treatises and commentaries on the Buddha's words.
                                 </p>
                             </div>
                         </a>
