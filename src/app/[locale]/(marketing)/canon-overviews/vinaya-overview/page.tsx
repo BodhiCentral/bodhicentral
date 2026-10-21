@@ -2,6 +2,7 @@
 
 import type { ComponentPropsWithRef, FC } from "react";
 import { ArrowLeft, ArrowRight, ArrowUpRight, Check, Copy01, Link01, Dataflow01 } from "@untitledui/icons";
+import { Avatar } from "@/components/base/avatar/avatar";
 import { BadgeGroup } from "@/components/base/badges/badge-groups";
 import { Badge, type BadgeColor } from "@/components/base/badges/badges";
 import { Button } from "@/components/base/buttons/button";
@@ -31,10 +32,9 @@ const ArticleOverview = () => {
                 article_headline="The Monastic Law:"
                 article_headline_span="How Monastic Communities Should Live"
                 article_subheadline="The Vinaya Piṭaka, the “Basket of Monastic Law”, contains the rules that are binding on monastics and the regulations that apply to monastic communities."
-                author_name="Bhikkhu Sujato"
+                author_name="Bhikkhu Brahmali"
                 author_caption="Article courtesy of SuttaCentral"
-                author_image="/people/bhikku-sujato-close-up.jpg"
-                author_image_alt="Bhikkhu Sujato"
+                author_image_alt="Bhikkhu Brahmali"
                 article_image="/monk-seated-in-meditation-under-forest-tree-1920.webp"
                 article_image_alt="Monk meditating under a tree"
                 article_ornament_image="/ornaments/golden-wheel.png"
@@ -116,14 +116,10 @@ const ArticleOverview = () => {
                                     </p>
                                 </blockquote>
                                 <figcaption className="not-prose mt-6 flex gap-3 text-md md:mt-8">
-                                    <Image
-                                        src="/people/bhikku-sujato-close-up.jpg"
-                                        className="size-12 rounded-full object-cover"
-                                        alt="Bhikkhu Sujato"
-                                        width={800} height={800} />
+                                    <Avatar size="lg" alt="Bhikkhu Brahmali" initials="BB" />
                                     <div>
-                                        <p className="text-md font-semibold text-primary">Bhikkhu Sujato</p>
-                                        <cite className="text-md text-tertiary not-italic">Co-founder of SuttaCentral</cite>
+                                        <p className="text-md font-semibold text-primary">Bhikkhu Brahmali</p>
+                                        <cite className="text-md text-tertiary not-italic">Translator of the Vinaya for SuttaCentral</cite>
                                     </div>
                                 </figcaption>
                             </figure>

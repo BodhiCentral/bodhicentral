@@ -1,5 +1,7 @@
 "use client";
 
+import { Avatar } from "@/components/base/avatar/avatar";
+import { getInitials } from "@/components/base/avatar/utils";
 import { BadgeGroup } from "@/components/base/badges/badge-groups";
 import { Button } from "@/components/base/buttons/button";
 import { ArrowLeft } from "@untitledui/icons";
@@ -11,10 +13,10 @@ const ArticleHeader = {
     article_headline: "The Monastic Law:",
     article_headline_span: "How Monastic Communities Should Live",
     article_subheadline: "The Vinaya Piṭaka, the “Basket of Monastic Law”, contains the rules that are binding on monastics and the regulations that apply to monastic communities.",
-    author_name: "Bhikkhu Sujato",
+    author_name: "Bhikkhu Brahmali",
     author_caption: "Article courtesy of SuttaCentral",
-    author_image: "/people/bhikku-sujato-close-up.jpg",
-    author_image_alt: "Bhikkhu Sujato",
+    author_image: "",
+    author_image_alt: "Bhikkhu Brahmali",
     article_image: "/monk-seated-in-meditation-under-forest-tree-1920.webp",
     article_image_alt: "Monk meditating under a tree",
     article_ornament_image: "/ornaments/golden-wheel.png",
@@ -76,11 +78,16 @@ export const ArticleHeaderSection = (props: ArticleHeaderProps) => {
 
                 {/* Author */}
                 <div className="mt-8 flex items-center gap-3 md:mt-12">
-                    <Image
-                        src={author_image}
-                        className="size-12 rounded-full object-cover"
-                        alt={author_image_alt}
-                        width={800} height={800} />
+                    {/* No author photo yet: show initials rather than borrowing someone else's portrait */}
+                    {author_image ? (
+                        <Image
+                            src={author_image}
+                            className="size-12 rounded-full object-cover"
+                            alt={author_image_alt}
+                            width={800} height={800} />
+                    ) : (
+                        <Avatar size="lg" alt={author_image_alt} initials={getInitials(author_name)} />
+                    )}
                     <div>
                         <p className="text-md font-semibold text-primary">{author_name}</p>
                         <p className="text-md text-tertiary">{author_caption}</p>

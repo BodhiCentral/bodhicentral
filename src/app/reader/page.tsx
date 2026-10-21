@@ -23,6 +23,7 @@ import Link from "next/link";
 import posthog from "posthog-js";
 import { openCanonNavigator } from "@/components-custom/navigation/canon-navigation/canon-navigation-modal-wrapper";
 import { Breadcrumbs } from "@/components/application/breadcrumbs/breadcrumbs";
+import { Avatar } from "@/components/base/avatar/avatar";
 import { Button } from "@/components/base/buttons/button";
 import { Facebook, LinkedIn, X } from "@/components/foundations/social-icons";
 
@@ -161,16 +162,10 @@ const TextCanvasSingle = () => {
                         </p>
                     </blockquote>
                     <figcaption className="not-prose mt-6 flex gap-3 text-md md:mt-8">
-                        <Image
-                            src="/people/bhikku-sujato-close-up.jpg"
-                            className="size-12 rounded-full object-cover"
-                            alt="Bhikkhu Sujato"
-                            width={800}
-                            height={800}
-                        />
+                        <Avatar size="lg" alt="Bhikkhu Brahmali" initials="BB" />
                         <div>
-                            <p className="text-md font-semibold text-primary">Bhikkhu Sujato</p>
-                            <cite className="text-md text-tertiary not-italic">Co-founder of SuttaCentral</cite>
+                            <p className="text-md font-semibold text-primary">Bhikkhu Brahmali</p>
+                            <cite className="text-md text-tertiary not-italic">Translator of the Vinaya for SuttaCentral</cite>
                         </div>
                     </figcaption>
                 </figure>

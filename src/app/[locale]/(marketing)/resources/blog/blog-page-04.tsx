@@ -100,7 +100,7 @@ const articles: Article[] = [
         thumbnailUrl: "/monk-seated-in-meditation-under-forest-tree-1920.webp",
         publishedAt: "17 Jan 2026",
         readingTime: "8 min read",
-        author: { name: "Bhikkhu Sujato", href: "#", avatarUrl: "/people/bhikku-sujato-close-up.jpg" },
+        author: { name: "Bhikkhu Brahmali", href: "#", avatarUrl: "" },
         tags: [
             { name: "Pali Canon", color: "sky", href: "#" },
             { name: "Buddhism", color: "pink", href: "#" },

@@ -82,7 +82,7 @@ export const HomeScreen = () => {
                         </h1>
                         <p className="hero-sub mt-4 max-w-xs text-md text-balance text-brand-100 sm:max-w-sm md:mt-6 md:max-w-xl md:text-lg dark:text-brand-100">
                             For 2,500 years, the Buddha&apos;s teachings have illuminated the nature of mind. Now their essential scriptures, paths, and
-                            transmissions are gathered in one place, open to all.
+                            transmissions are gathered in a shared place, open to all.
                         </p>
                         <div className="hero-ctas mt-8 flex w-full gap-3 md:mt-12 md:flex-row lg:items-start">
                             <Button className="cta-primary" size="md" href="/reader">

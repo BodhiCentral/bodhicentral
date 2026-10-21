@@ -15,9 +15,9 @@ const articles: Article[] = [
         publishedAt: "20 Feb 2026",
         readingTime: "8 min read",
         author: {
-            name: "Bhikkhu Sujato",
+            name: "Bhikkhu Brahmali",
             href: "#",
-            avatarUrl: "/people/bhikku-sujato-close-up.jpg",
+            avatarUrl: "",
         },
         tags: [
             {
