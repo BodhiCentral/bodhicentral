@@ -43,16 +43,21 @@ const auth = new Proxy(
     },
 );
 
-export const createOfflineClient = () =>
-    new Proxy(
-        { auth },
-        {
-            get(target, prop) {
-                // Not awaitable itself: an async createClient() resolving to an
-                // object with a `then` would treat the client as a promise and hang.
-                if (typeof prop === "symbol" || prop === "then") return undefined;
-                if (prop === "auth") return target.auth;
-                return emptyQuery;
-            },
+// One shared instance, like createBrowserClient's own singleton. Components call
+// createClient() during render and list the result in useEffect dependencies
+// (`[pitakaType, supabase]`); a fresh object per call re-ran those effects on
+// every render, an infinite render loop that froze the page behind preloaders.
+const offlineClient = new Proxy(
+    { auth },
+    {
+        get(target, prop) {
+            // Not awaitable itself: an async createClient() resolving to an
+            // object with a `then` would treat the client as a promise and hang.
+            if (typeof prop === "symbol" || prop === "then") return undefined;
+            if (prop === "auth") return target.auth;
+            return emptyQuery;
         },
-    ) as unknown as SupabaseClient;
+    },
+) as unknown as SupabaseClient;
+
+export const createOfflineClient = () => offlineClient;
