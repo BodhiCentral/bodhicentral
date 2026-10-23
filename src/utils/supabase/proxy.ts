@@ -1,10 +1,14 @@
 import { createServerClient } from '@supabase/ssr'
 import { NextResponse, type NextRequest } from 'next/server'
+import { isSupabaseConfigured } from '@/utils/supabase/offline'
 
 export async function updateSession(request: NextRequest) {
     let supabaseResponse = NextResponse.next({
         request,
     })
+
+    // Disconnected from Supabase (see offline.ts): there is no session to refresh.
+    if (!isSupabaseConfigured()) return supabaseResponse
 
     const supabase = createServerClient(
         process.env.NEXT_PUBLIC_SUPABASE_URL!,

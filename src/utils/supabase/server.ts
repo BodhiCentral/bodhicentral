@@ -1,11 +1,14 @@
 
 import { createServerClient, type CookieOptions } from "@supabase/ssr";
 import { cookies } from "next/headers";
+import { createOfflineClient, isSupabaseConfigured } from "@/utils/supabase/offline";
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_DEFAULT_KEY;
 
 export const createClient = async () => {
+    if (!isSupabaseConfigured()) return createOfflineClient();
+
     const cookieStore = await cookies();
 
     return createServerClient(
