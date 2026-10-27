@@ -164,10 +164,10 @@ const sections: Section[] = [
         name: "Support our mission",
         features: [
             {
-                name: "Early access to new texts and features",
+                name: "Early access to new features",
                 tooltip: {
                     title: "Early access",
-                    description: "We will share with you early access to new texts and features coming to the platform.",
+                    description: "We will share with you early access to new features coming to the platform.",
                 },
                 tiers: { Community: false, Standard: false, Patron: true },
             },

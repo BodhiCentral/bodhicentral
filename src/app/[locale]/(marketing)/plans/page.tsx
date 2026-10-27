@@ -166,7 +166,7 @@ const PricingSimpleBanner = () => {
             title: "PATRON",
             subtitle: selectedPlan === "monthly" ? "$15/month" : "$150/year",
             description:
-                "Support, with a receipt. Patron unlocks no study tool that Standard does not already have. What it does is pay for translation and editorial work on a corpus that stays free for everyone. In return: early access to new texts and features, your name on the supporters page if you want it there, and a written account, once a year, of what your support paid for.",
+                "Support, with a receipt. Patron unlocks no study tool that Standard does not already have. What it does is pay for translation and editorial work on a corpus that stays free for everyone. In return: early access to new features, your name on the supporters page if you want it there, and a written account, once a year, of what your support paid for.",
             firstAction: "Become a Patron",
             firstActionHref: "/sign-up",
             secondAction: "Give once instead",
