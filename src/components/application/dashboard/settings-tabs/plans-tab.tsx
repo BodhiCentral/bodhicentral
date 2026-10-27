@@ -79,7 +79,7 @@ export const PlansTab = () => {
             features: [
                 "All Free-tier features",
                 "Marginal notes",
-                "Categorized bookmarks",
+                "Categorised bookmarks",
                 "Multicolor-highlights",
                 "Footnotes",
                 "Search personal notes, bookmarks, and highlights",

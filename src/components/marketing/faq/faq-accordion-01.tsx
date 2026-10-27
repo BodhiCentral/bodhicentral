@@ -24,7 +24,7 @@ const faqsExtended = [
     },
     {
         question: "What does Standard actually unlock?",
-        answer: "The tools you use on a text rather than anything in the text: notes and highlights, categorised bookmarks, a personal library and workspaces, advanced search and filtering, the study tools over a timeline, and reading synchronised to media wherever a recording exists.",
+        answer: "The tools you use on a text rather than anything in the text: notes and highlights, categorised bookmarks, a personal library and workspaces, advanced search and filtering, the study tools over a timeline, and multimedia synchronised to the text wherever a recording or asset exists.",
         icon: File05,
     },
     {
@@ -49,7 +49,15 @@ const faqsExtended = [
     },
     {
         question: "What happens to my notes and highlights if I stop paying?",
-        answer: "They stay. Cancelling a subscription stops the paid tools; it does not remove anything you have already written, and your notes, highlights, bookmarks and saved texts remain visible, and downloadable, on the free tier. What we do not do is keep them for ever if you never come back: if an account goes twelve months without anyone signing in to it, we write to you first — telling you what will be removed, on what date, and giving you a link to download all of it — and only then remove it from our databases. **The clock runs on whether you are using Bodhi Central, not on whether you are paying for it.**",
+        answer: (
+            <>
+                They stay. Cancelling a subscription stops the paid tools; it does not remove anything you have already written, and your notes, highlights,
+                bookmarks and saved texts remain visible, and downloadable, on the free tier. What we do not do is keep them for ever if you never come back: if
+                an account goes twelve months without anyone signing in to it, we write to you first — telling you what will be removed, on what date, and
+                giving you a link to download all of it — and only then remove it from our databases.{" "}
+                <strong>The clock runs on whether you are using Bodhi Central, not on whether you are paying for it.</strong>
+            </>
+        ),
         icon: Mail01,
     },
 ];

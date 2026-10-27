@@ -164,7 +164,7 @@ export default function AboutPage() {
                         So the boundary is a single rule: <strong>texts free, tools paid.</strong>
                     </p>
                     <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
-                        Everything we publish is free to read — the canon, its translations, footnotes, cross-references, essays, timelines and learning paths.
+                        Everything we publish is free to read — the canon, its translations, footnotes, cross-references, essays, timelines and Learning Paths.
                         A subscription pays for the tools you study with: notes and highlights, categorised bookmarks, a personal library and workspaces,
                         advanced search, and multimedia synchronised to the text wherever a recording or asset exists. Prices are published, they are the same
                         for everyone in a region, and they are set to what people in that region can actually pay rather than to what a market will bear.

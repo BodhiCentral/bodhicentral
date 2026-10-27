@@ -380,7 +380,7 @@ const FeaturesIconsAndImage03 = () => {
 
                         <h2 className="mt-3 text-display-lg font-medium text-brand-800 md:text-display-lg dark:text-brand-500">What a subscription is not</h2>
                         <p className="mt-4 text-lg font-light text-tertiary md:mt-5 md:text-xl">
-                            It is not the access to the platform. There is nothing you can read with a subscription that you cannot read without one.
+                            It is not access to the platform. There is nothing you can read with a subscription that you cannot read without one.
                         </p>
                     </div>
 
@@ -395,7 +395,7 @@ const FeaturesIconsAndImage03 = () => {
                                 href: "#",
                             },
                             {
-                                title: "No adds, no user data sold",
+                                title: "No ads, no user data sold",
                                 subtitle:
                                     "There is no advertising, and no record of what you read is sold, brokered or handed on to anyone. That is a limit on what this business is permitted to become, written down now rather than when somebody is in a position to be tempted.",
                                 icon: ImageUserX,
