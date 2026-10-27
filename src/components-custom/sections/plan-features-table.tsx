@@ -119,9 +119,9 @@ const sections: Section[] = [
                 tiers: { "Not Signed In": false, Community: false, Standard: true, Patron: true },
             },
             {
-                name: "Categorized bookmarks",
+                name: "Categorised bookmarks",
                 tooltip: {
-                    title: "Categorized bookmarks",
+                    title: "Categorised bookmarks",
                     description: "Bookmark the texts and organize them by categories.",
                 },
                 tiers: { Community: false, Standard: true, Patron: true },
@@ -151,10 +151,10 @@ const sections: Section[] = [
                 tiers: { Community: false, Standard: true, Patron: true },
             },
             {
-                name: "Multimedia synchronized to text",
+                name: "Multimedia synchronised to text",
                 tooltip: {
                     title: "Media synchronised to text",
-                    description: "Multimedia synchronized to text, wherever a recording or asset exists.",
+                    description: "Multimedia synchronised to text, wherever a recording or asset exists.",
                 },
                 tiers: { Community: false, Standard: true, Patron: true },
             },
@@ -164,10 +164,10 @@ const sections: Section[] = [
         name: "Support our mission",
         features: [
             {
-                name: "Early access to new texts and features",
+                name: "Early access to new features",
                 tooltip: {
                     title: "Early access",
-                    description: "We will share with you early access to new texts and features coming to the platform.",
+                    description: "We will share with you early access to new features coming to the platform.",
                 },
                 tiers: { Community: false, Standard: false, Patron: true },
             },

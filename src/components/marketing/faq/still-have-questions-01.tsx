@@ -32,7 +32,7 @@ export const StillHaveQuestions = () => {
                     </div>
                     <div>
                         <h4 className="text-xl font-semibold text-primary">Still have questions?</h4>
-                        <p className="mt-2 text-md text-tertiary md:text-lg">Can't find the answer you're looking for? Please chat to our friendly team.</p>
+                        <p className="mt-2 text-md text-tertiary md:text-lg">Can't find the answer you're looking for?</p>
                     </div>
                     <Button href="/support#contact-us" size="md">Get in touch</Button>
                 </div>
