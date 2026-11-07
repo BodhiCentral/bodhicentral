@@ -25,7 +25,8 @@ export default function AboutPage() {
                 <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
                     <span className="text-sm font-semibold text-brand-secondary md:text-md">About Us</span>
                     <h1 className="text-center text-display-md font-extralight text-brand-800 md:text-display-xl dark:text-brand-400">
-                        Open to read.<br> Held by the living traditions.
+                        Open to read.
+                        <br /> Held by the living traditions.
                     </h1>
                     <p className="mt-2 text-lg text-tertiary md:mt-8 md:text-xl">
                         Bodhi Central is a study platform for the Buddhist canon: the Pali Canon with its modern translations, and the Tibetan Kangyur and
