@@ -25,7 +25,7 @@ export default function AboutPage() {
                 <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
                     <span className="text-sm font-semibold text-brand-secondary md:text-md">About Us</span>
                     <h1 className="text-center text-display-md font-extralight text-brand-800 md:text-display-xl dark:text-brand-400">
-                        Open to read. Held by the living traditions.
+                        Open to read.<br> Held by the living traditions.
                     </h1>
                     <p className="mt-2 text-lg text-tertiary md:mt-8 md:text-xl">
                         Bodhi Central is a study platform for the Buddhist canon: the Pali Canon with its modern translations, and the Tibetan Kangyur and
@@ -63,11 +63,11 @@ export default function AboutPage() {
                         it.
                     </p>
                     <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
-                        At our first public release that means **the Pali Canon, and the Tibetan Kangyur and Tengyur in the Degé edition** — the edition most
-                        widely used in academic study. Beginning with one edition is not a judgement between editions, and other editions, the Lhasa Kangyur
-                        among them, are not in our near plans. Translations of the Tibetan texts join them as they are reviewed and cleared for publication, so
-                        many works will open in Tibetan first. The Chinese Canon is designed into the same structure, and it is a horizon of years rather than
-                        months.
+                        At our first public release that means <strong>the Pali Canon, and the Tibetan Kangyur and Tengyur in the Degé edition</strong> — the
+                        edition most widely used in academic study. Beginning with one edition is not a judgement between editions, and other editions, the
+                        Lhasa Kangyur among them, are not in our near plans. Translations of the Tibetan texts join them as they are reviewed and cleared for
+                        publication, so many works will open in Tibetan first. The Chinese Canon is designed into the same structure, and it is a horizon of
+                        years rather than months.
                     </p>
                     <p className="mt-4 max-w-2xl text-md text-tertiary md:mt-6 md:text-lg">
                         Around the texts sits what close study needs: alignment between a root text and its translations, passage by passage; footnotes and
